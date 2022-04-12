@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[v-cloak] {
+    display: none;
+}
+
+html {
+    @apply bg-sky-700 text-white;
+}
+
+h1 {
+    font-family: Bangers, system-ui, sans-serif;
+    font-weight: 500;
+}
+
+.heading {
+    @apply bg-sky-900
+        text-center
+        text-sm
+        uppercase
+        text-slate-100
+        mb-1
+        mt-2;
+}
+
+.is-download-complete .accomplishment-does-not-have-games {
+    @apply bg-slate-400
+        text-white;
+}
+
+.is-download-complete .accomplishment-does-not-have-games div {
+    @apply bg-[#7c8ca3];
+}
