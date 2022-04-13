@@ -290,12 +290,6 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Triple Double Pawns"
-                        :games="pointsByAccomplishment['tripleDoublePawns']"
-                        gameLink="https://lichess.org/kASuBCou/black#38"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
                         title="Pawn Cube"
                         desc="Is your pawn cube indestructible?"
                         :games="pointsByAccomplishment['pawnCube']"
@@ -340,17 +334,24 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Pawn Trapezoid"
-                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :games="pointsByAccomplishment['pawnTrapezoid']"
-                        gameLink="https://lichess.org/38zR9IeJ#57"
-                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
+                        title="Triple Double Pawns"
+                        desc="3 files with doubled pawns"
+                        :games="pointsByAccomplishment['tripleDoublePawns']"
+                        gameLink="https://lichess.org/kASuBCou/black#38"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="6 Pawns on the Same File"
                         :games="pointsByAccomplishment['sixPawnsInTheSameFile']"
                         gameLink="https://lichess.org/JCD2jmRs#91"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Pawn Trapezoid"
+                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
+                        :games="pointsByAccomplishment['pawnTrapezoid']"
+                        gameLink="https://lichess.org/38zR9IeJ#57"
+                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
                     ></accomplishment-score>
                 </div>
 
