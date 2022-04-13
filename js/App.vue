@@ -787,39 +787,12 @@ export default {
         onRegisterNewGoal: function () {
             this.totalAccomplishmentsPossible++
         },
-        getCacheUpdateCommand: function () {
-            let gameIds = []
-
-            for (const accomplishment in this.pointsByAccomplishment) {
-                gameIds.push(Object.keys(this.pointsByAccomplishment[accomplishment]))
-            }
-
-            let uniqueGameIds = [...new Set(gameIds.flat().sort())]
-
-            let chunks = []
-
-            var i,
-                j,
-                chunk = 250
-            for (i = 0, j = uniqueGameIds.length; i < j; i += chunk) {
-                chunks.push(uniqueGameIds.slice(i, i + chunk))
-            }
-
-            let curls = chunks.map(function (chunk) {
-                return `curl -X POST -H "Accept: application/x-ndjson" "https://lichess.org/games/export/_ids?pgnInJson=true&clocks=true" -d '${chunk.join(
-                    ','
-                )}'`
-            })
-
-            let cmd = `rm -f cache/eric.txt && (${curls.join(' && ')}) >> cache/eric.txt`
-
-            console.log(cmd)
-        },
 
         formFillEricRosen: function () {
             this.formInputValue = 'EricRosen'
             this.startDownload()
         },
+
         formInputValueEntered: function () {
             this.formInputValue = cleanupLichessUsername(this.formInputValue)
 
@@ -830,9 +803,11 @@ export default {
              */
             window.sessionStorage.setItem('savedFormInputValue', this.formInputValue)
         },
+
         setLichessOauthToken: function (data) {
             this.lichessOauthToken = data
         },
+
         fetchJsonEndpoint: function (url) {
             return fetch(url, {
                 headers: {
@@ -840,6 +815,7 @@ export default {
                 },
             }).then((response) => response.json())
         },
+
         startDownload: function () {
             if (this.formInputValue.includes('/tournament/')) {
                 // Arena tournament
@@ -980,10 +956,12 @@ export default {
 
             stream.then(readStream(this.processGame)).then(this.streamComplete)
         },
+
         streamComplete: function () {
             this.isDownloading = false
             this.isDownloadComplete = true
         },
+
         processGame: function (gameInfoJson) {
             this.counts.downloaded++
 
@@ -1304,6 +1282,35 @@ export default {
                     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
                 }
             }
+        },
+
+        getCacheUpdateCommand: function () {
+            let gameIds = []
+
+            for (const accomplishment in this.pointsByAccomplishment) {
+                gameIds.push(Object.keys(this.pointsByAccomplishment[accomplishment]))
+            }
+
+            let uniqueGameIds = [...new Set(gameIds.flat().sort())]
+
+            let chunks = []
+
+            var i,
+                j,
+                chunk = 250
+            for (i = 0, j = uniqueGameIds.length; i < j; i += chunk) {
+                chunks.push(uniqueGameIds.slice(i, i + chunk))
+            }
+
+            let curls = chunks.map(function (chunk) {
+                return `curl -X POST -H "Accept: application/x-ndjson" "https://lichess.org/games/export/_ids?pgnInJson=true&clocks=true" -d '${chunk.join(
+                    ','
+                )}'`
+            })
+
+            let cmd = `rm -f cache/eric.txt && (${curls.join(' && ')}) >> cache/eric.txt`
+
+            console.log(cmd)
         },
     },
 }
