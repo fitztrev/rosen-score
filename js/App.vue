@@ -290,6 +290,12 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
+                        title="Triple Double Pawns"
+                        :games="pointsByAccomplishment['tripleDoublePawns']"
+                        gameLink="https://lichess.org/kASuBCou/black#38"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
                         title="Pawn Cube"
                         desc="Is your pawn cube indestructible?"
                         :games="pointsByAccomplishment['pawnCube']"
@@ -1124,6 +1130,13 @@ export default {
                     pieceStructures.quadrupledPawns(position),
                     1,
                     'quadrupledPawns',
+                    gameInfoJson,
+                    move
+                )
+                this.checkForAccomplishment(
+                    pieceStructures.tripleDoublePawns(position),
+                    1,
+                    'tripleDoublePawns',
                     gameInfoJson,
                     move
                 )
