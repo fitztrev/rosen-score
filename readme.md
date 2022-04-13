@@ -89,7 +89,7 @@ FENs are converted to a 64-character string representing the position:
 // Starting position FEN
 let fen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR'
 
-// Convert the FEN to a 64-character string that starts at A8 and ends at H1
+// Convert the FEN to a 64-character string that starts at a8 and ends at h1
 let position = fenToPosition(fen)
 // rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR
 ```
@@ -103,7 +103,7 @@ position.match(/PP([A-Za-z\.]{6})PP/) // 2 white pawns, 6 squares, then 2 white 
 
 ## Known Issues
 
-1. `premovesWithOneSecondLeft` trophy:
+1. Avoid-the-Flag trophy:
 
     Lichess does not include tenths of seconds. So if a PGN shows 1 second remaining, it might actually be 1.4.
 
