@@ -188,9 +188,9 @@
             <h2 class="text-2xl">
                 {{ reportObject.data.username || reportObject.data.fullName }}
                 has
-                <strong class="font-bold">{{ score.trophyCount.toLocaleString() }}</strong>
+                <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
-                <template v-if="score.trophyCount === 1"> trophy </template>
+                <template v-if="trophyCount === 1"> trophy </template>
                 <template v-else> trophies </template>
             </h2>
 
@@ -202,7 +202,7 @@
                 {{ totalAccomplishmentsPossible }})
             </div>
 
-            <trophy-collection :count="score.trophyCount" size="large"></trophy-collection>
+            <trophy-collection :count="trophyCount" size="large"></trophy-collection>
 
             <div class="text-sm mt-2">
                 <template v-if="usingCachedData && isDownloadComplete">
@@ -633,14 +633,6 @@
                         :games="pointsByAccomplishment['megaFork']"
                         gameLink="https://lichess.org/VNAD1RDx#47"
                     ></accomplishment-score>
-                    <!-- <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Win Tic-Tac-Toe"
-                        desc="3x3 cube of pieces, you win tic&#8209;tac&#8209;toe, and then win the game"
-                        :games="pointsByAccomplishment['winTicTacToe']"
-                        gameLink="https://lichess.org/0CKLmwjC/black#23"
-                        youtubeLink="https://youtu.be/vSPxtspv57Q?t=10666"
-                    ></accomplishment-score> -->
                 </div>
 
                 <h3 class="heading">I feel so dirty</h3>
@@ -762,15 +754,11 @@ export default {
         totalAccomplishmentsCompletedPercentage: function () {
             return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
         },
-        score: function () {
-            let points = Object.values(this.pointsByAccomplishment)
-                .map((o) => Object.values(o).map((o) => o.points))
+        trophyCount: function () {
+            return Object.values(this.pointsByAccomplishment)
+                .map((o) => Object.values(o))
                 .flat()
-
-            return {
-                trophyCount: points.length,
-                score: points.reduce((a, b) => a + b, 0),
-            }
+                .length
         },
 
         lichessOauthTokenString: function () {
@@ -920,18 +908,16 @@ export default {
             }
         },
 
-        addPointsForColor: function (color, points, label, game, onMoveNumber) {
+        addTrophyForColor: function (color, label, game, onMoveNumber) {
             if (color === 'w') {
                 color = 'white'
             } else if (color === 'b') {
                 color = 'black'
             }
 
-            // console.log(`${label}: adding ${points} points for ${color}`, `https://lichess.org/${game.id}`)
+            // console.log(`${label}: adding for ${color}`, `https://lichess.org/${game.id}`)
 
-            let logRecord = {
-                points: points,
-            }
+            let logRecord = {}
 
             let anchorLink
             if (onMoveNumber) {
@@ -962,16 +948,16 @@ export default {
                 this.pointsByAccomplishment[label] = {}
             }
 
-            // console.log(`${label}: adding ${points} points for ${color}`, logRecord.link, logRecord)
+            // console.log(`${label}: adding for ${color}`, logRecord.link, logRecord)
 
             if (!this.pointsByAccomplishment[label][game.id]) {
                 this.pointsByAccomplishment[label][game.id] = logRecord
             }
         },
 
-        checkForAccomplishment: function (color, points, label, game, onMoveNumber) {
+        checkForAccomplishment: function (color, label, game, onMoveNumber) {
             if (color) {
-                this.addPointsForColor(color, points, label, game, onMoveNumber)
+                this.addTrophyForColor(color, label, game, onMoveNumber)
             }
         },
 
@@ -1035,28 +1021,25 @@ export default {
                 position = fenToPosition(chessJS.fen())
 
                 if (moveChecks.noCapturesBeforeMove30(move, position)) {
-                    this.addPointsForColor('white', 1, 'noCapturesBeforeMove30', gameInfoJson, move)
-                    this.addPointsForColor('black', 1, 'noCapturesBeforeMove30', gameInfoJson, move)
+                    this.addTrophyForColor('white', 'noCapturesBeforeMove30', gameInfoJson, move)
+                    this.addTrophyForColor('black', 'noCapturesBeforeMove30', gameInfoJson, move)
                 }
 
                 this.checkForAccomplishment(
                     moveChecks.castleAfterMove40(moveInfo, move),
-                    5,
                     'castleAfterMove40',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.pawnCheckmate(moveInfo, move),
-                    1,
                     'pawnCheckmate',
                     gameInfoJson,
                     move
                 )
-                this.checkForAccomplishment(moveChecks.g5mate(moveInfo, move), 1, 'g5mate', gameInfoJson, move)
+                this.checkForAccomplishment(moveChecks.g5mate(moveInfo, move), 'g5mate', gameInfoJson, move)
                 this.checkForAccomplishment(
                     moveChecks.knightCornerMate(moveInfo, move),
-                    1,
                     'knightCornerMate',
                     gameInfoJson,
                     move
@@ -1064,42 +1047,36 @@ export default {
 
                 this.checkForAccomplishment(
                     moveChecks.enPassantCheckmate(moveInfo, move, true),
-                    1,
                     'enPassantCheckmate',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.castleKingsideWithCheckmate(moveInfo, move),
-                    1,
                     'castleKingsideWithCheckmate',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.castleQueensideWithCheckmate(moveInfo, move),
-                    1,
                     'castleQueensideWithCheckmate',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.checkmateWithKing(moveInfo, move),
-                    1,
                     'checkmateWithKing',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.promoteToBishopCheckmate(moveInfo, move),
-                    1,
                     'promoteToBishopCheckmate',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     moveChecks.promoteToKnightCheckmate(moveInfo, move),
-                    1,
                     'promoteToKnightCheckmate',
                     gameInfoJson,
                     move
@@ -1107,128 +1084,79 @@ export default {
 
                 this.checkForAccomplishment(
                     moveChecks.promotePawnBeforeMoveNumber(moveInfo, move, 8),
-                    1,
                     'promotePawnBeforeMoveNumber',
                     gameInfoJson,
                     move
                 )
 
-                // this.checkForAccomplishment(pieceStructures.tripledPawns(position), 1, 'tripledPawns', gameInfoJson)
-
-                // tic-tac-toe
-                // let threeByThreeCubes = pieceStructures.threeByThreeCubes(position)
-
-                // for (let cube of threeByThreeCubes) {
-                //     let ticTacToeWinner = ticTacToe(cube, gameInfoJson.id)
-
-                //     // Must win the game to get a trophy
-                //     if (ticTacToeWinner && ticTacToeWinner === gameInfoJson.winner) {
-                //         this.addPointsForColor(ticTacToeWinner, 1, 'winTicTacToe', gameInfoJson, move)
-                //     }
-                // }
-
                 this.checkForAccomplishment(
                     pieceStructures.quadrupledPawns(position),
-                    1,
                     'quadrupledPawns',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     pieceStructures.tripleDoublePawns(position),
-                    1,
                     'tripleDoublePawns',
                     gameInfoJson,
                     move
                 )
-                this.checkForAccomplishment(pieceStructures.pawnCube(position), 1, 'pawnCube', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.pawnCube(position), 'pawnCube', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.pawnCubeCenter(position),
-                    1,
                     'pawnCubeCenter',
                     gameInfoJson,
                     move
                 )
-                this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 1, 'pawnDiamond', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.knightCube(position), 1, 'knightCube', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.knightRectangle(position),
-                    1,
                     'knightRectangle',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     pieceStructures.connectEightOnRank4(position),
-                    1,
                     'connectEightOnRank4',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     pieceStructures.connectEightOnRank5(position),
-                    1,
                     'connectEightOnRank5',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     pieceStructures.connectEightOnRank6(position),
-                    1,
                     'connectEightOnRank6',
                     gameInfoJson,
                     move
                 )
                 this.checkForAccomplishment(
                     pieceStructures.connectEightOnRank7(position),
-                    1,
                     'connectEightOnRank7',
                     gameInfoJson,
                     move
                 )
-                // this.checkForAccomplishment(pieceStructures.connectFour(position), 1, 'connectFour', gameInfoJson)
-                this.checkForAccomplishment(pieceStructures.connectFive(position), 1, 'connectFive', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.connectSix(position), 1, 'connectSix', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.connectFive(position), 'connectFive', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.connectSix(position), 'connectSix', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.pawnTrapezoid(position),
-                    1,
                     'pawnTrapezoid',
                     gameInfoJson,
                     move
                 )
 
-                // if (pieceStructures.verticalConnect8(position)) {
-                //     this.addPointsForColor(
-                //         'white',
-                //         1,
-                //         'verticalConnect8',
-                //         gameInfoJson
-                //     )
-                //     this.addPointsForColor(
-                //         'black',
-                //         1,
-                //         'verticalConnect8',
-                //         gameInfoJson
-                //     )
-                // }
-
-                // these ones have not found any Lichess games yet:
-                // this.checkForAccomplishment(
-                //     pieceStructures.pawnSmile(position),
-                //     1,
-                //     'pawnSmile',
-                //     gameInfoJson
-                // )
-
                 if (pieceStructures.sixPawnsInTheSameFile(position)) {
-                    this.addPointsForColor('white', 1, 'sixPawnsInTheSameFile', gameInfoJson, move)
-                    this.addPointsForColor('black', 1, 'sixPawnsInTheSameFile', gameInfoJson, move)
+                    this.addTrophyForColor('white', 'sixPawnsInTheSameFile', gameInfoJson, move)
+                    this.addTrophyForColor('black', 'sixPawnsInTheSameFile', gameInfoJson, move)
                 }
 
-                this.checkForAccomplishment(smotheredMate(chessJS, moveInfo), 1, 'smotheredMate', gameInfoJson, move)
+                this.checkForAccomplishment(smotheredMate(chessJS, moveInfo), 'smotheredMate', gameInfoJson, move)
                 this.checkForAccomplishment(
                     smotheredPorkMate(chessJS, moveInfo),
-                    1,
                     'smotheredPorkMate',
                     gameInfoJson,
                     move
@@ -1236,7 +1164,6 @@ export default {
 
                 this.checkForAccomplishment(
                     megaFork(chessJS, moveInfo, gameInfoJson),
-                    1,
                     'megaFork',
                     gameInfoJson,
                     move
@@ -1252,21 +1179,16 @@ export default {
                 'egg',
                 'eggegg',
                 'headache',
-                // 'cabbagehead',
-                // 'chacha',
-                // 'egghead',
             ]) {
                 if (gameInfoJson.winner === 'white') {
                     this.checkForAccomplishment(
                         alphabetOpenings.checkWord(word, moves, 'white'),
-                        1,
                         `alphabet:${word}`,
                         gameInfoJson
                     )
                 } else if (gameInfoJson.winner === 'black') {
                     this.checkForAccomplishment(
                         alphabetOpenings.checkWord(word, moves, 'black'),
-                        1,
                         `alphabet:${word}`,
                         gameInfoJson
                     )
@@ -1274,7 +1196,6 @@ export default {
             }
             this.checkForAccomplishment(
                 gameChecks.stalemateTricks(gameInfoJson, position, moves.length % 2 ? 'black' : 'white'),
-                1,
                 'stalemateTricks',
                 gameInfoJson,
                 moves.length
@@ -1282,14 +1203,12 @@ export default {
 
             this.checkForAccomplishment(
                 gameChecks.bishopAndKnightMate(gameInfoJson, position),
-                1,
                 'bishopAndKnightMate',
                 gameInfoJson,
                 moves.length
             )
             this.checkForAccomplishment(
                 gameChecks.fourKnightMate(gameInfoJson, position),
-                1,
                 'fourKnightMate',
                 gameInfoJson,
                 moves.length
@@ -1297,14 +1216,12 @@ export default {
 
             this.checkForAccomplishment(
                 gameChecks.fourKnightCubeMate(gameInfoJson, position),
-                1,
                 'fourKnightCubeMate',
                 gameInfoJson,
                 moves.length
             )
             this.checkForAccomplishment(
                 gameChecks.sixKnightRectangleMate(gameInfoJson, position),
-                1,
                 'sixKnightRectangleMate',
                 gameInfoJson,
                 moves.length
@@ -1314,17 +1231,15 @@ export default {
 
             this.checkForAccomplishment(
                 rosenTrap(gameInfoJson, allMoves),
-                1,
                 'rosenTrap',
                 gameInfoJson,
                 allMoves.length
             )
 
-            this.checkForAccomplishment(lefongTrap(allMoves), 1, 'lefongTrap', gameInfoJson)
+            this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
 
             this.checkForAccomplishment(
                 dirtyWins.winInsufficientMaterial(gameInfoJson, position),
-                1,
                 'winInsufficientMaterial',
                 gameInfoJson,
                 allMoves.length
@@ -1332,7 +1247,6 @@ export default {
 
             this.checkForAccomplishment(
                 dirtyWins.clutchPawn(gameInfoJson, position),
-                1,
                 'clutchPawn',
                 gameInfoJson,
                 allMoves.length
@@ -1345,38 +1259,34 @@ export default {
             //     )
             // }
 
-            this.checkForAccomplishment(castleFork(allMoves), 1, 'castleFork', gameInfoJson)
+            this.checkForAccomplishment(castleFork(allMoves), 'castleFork', gameInfoJson)
 
-            this.checkForAccomplishment(ohNoMyQueen.checkMoves(allMoves, position), 1, 'ohNoMyQueen', gameInfoJson)
+            this.checkForAccomplishment(ohNoMyQueen.checkMoves(allMoves, position), 'ohNoMyQueen', gameInfoJson)
 
             this.checkForAccomplishment(
                 blockCheckWithCheckmate(allMoves, gameInfoJson),
-                1,
                 'blockCheckWithCheckmate',
                 gameInfoJson
             )
 
             this.checkForAccomplishment(
                 premovesWithOneSecondLeft(gameInfoJson),
-                1,
                 'premovesWithOneSecondLeft',
                 gameInfoJson
             )
 
-            this.checkForAccomplishment(pawnStormOpening(allMoves, gameInfoJson), 1, 'pawnStormOpening', gameInfoJson)
+            this.checkForAccomplishment(pawnStormOpening(allMoves, gameInfoJson), 'pawnStormOpening', gameInfoJson)
 
             let consecutiveCapturesResult = consecutiveCaptures.sameSquare(allMoves)
             if (consecutiveCapturesResult.consecutiveCaptures >= 10) {
-                this.addPointsForColor(
+                this.addTrophyForColor(
                     'white',
-                    1,
                     'consecutiveCaptures:sameSquare',
                     gameInfoJson,
                     consecutiveCapturesResult.onMoveNumber
                 )
-                this.addPointsForColor(
+                this.addTrophyForColor(
                     'black',
-                    1,
                     'consecutiveCaptures:sameSquare',
                     gameInfoJson,
                     consecutiveCapturesResult.onMoveNumber
@@ -1387,11 +1297,11 @@ export default {
                 let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
 
                 if (numberOfMovesForWinningSide === 2) {
-                    this.addPointsForColor(gameInfoJson.winner, 1, 'quickCheckmate:2', gameInfoJson)
+                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:2', gameInfoJson)
                 } else if (numberOfMovesForWinningSide === 3) {
-                    this.addPointsForColor(gameInfoJson.winner, 1, 'quickCheckmate:3', gameInfoJson)
+                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:3', gameInfoJson)
                 } else if (numberOfMovesForWinningSide === 4) {
-                    this.addPointsForColor(gameInfoJson.winner, 1, 'quickCheckmate:4', gameInfoJson)
+                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
                 }
             }
         },
