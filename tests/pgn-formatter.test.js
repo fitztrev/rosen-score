@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const pgnFormatter = require('../js/utils/pgn-formatter.js')
 
 describe('remove move # from pgn', () => {

@@ -1,5 +1,3 @@
-const { Chess } = require('chess.js')
-
 module.exports = function (allMoves) {
     for (let moveNum in allMoves) {
         moveNum = parseInt(moveNum)
