@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 
@@ -8,8 +7,7 @@ describe('test not connect 4/5', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.connectFour(fenToPosition(chessJsInstance))).toBe(false)
+            expect(pieceStructures.connectFour(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -23,8 +21,7 @@ describe('test connect 4', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.connectFour(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.connectFour(fenToPosition(fen))).toBe(color)
         }
     )
 })
@@ -38,8 +35,7 @@ describe('test connect 5', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.connectFive(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.connectFive(fenToPosition(fen))).toBe(color)
         }
     )
 })
@@ -53,8 +49,7 @@ describe('test connect 6', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.connectSix(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.connectSix(fenToPosition(fen))).toBe(color)
         }
     )
 })

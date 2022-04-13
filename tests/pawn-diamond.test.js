@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 
@@ -9,8 +8,7 @@ describe('test no pawn diamond', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.pawnDiamond(fenToPosition(chessJsInstance))).toBe(false)
+            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -22,8 +20,7 @@ describe('test pawn diamond', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.pawnDiamond(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toBe(color)
         }
     )
 })

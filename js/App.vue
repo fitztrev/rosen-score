@@ -1032,7 +1032,7 @@ export default {
 
             for (const move in moves) {
                 let moveInfo = chessJS.move(moves[move])
-                position = fenToPosition(chessJS)
+                position = fenToPosition(chessJS.fen())
 
                 if (moveChecks.noCapturesBeforeMove30(move, position)) {
                     this.addPointsForColor('white', 1, 'noCapturesBeforeMove30', gameInfoJson, move)

@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const calculateMaterialImbalance = require('../js/utils/calculate-material-imbalance.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 
@@ -23,11 +22,7 @@ describe('test material imbalance calculations', () => {
     ])(
         'test FEN: %p',
         (fen, value) => {
-            let chessJsInstance = new Chess(fen)
-
-            let position = fenToPosition(chessJsInstance)
-
-            expect(calculateMaterialImbalance(position)).toEqual(value)
+            expect(calculateMaterialImbalance(fenToPosition(fen))).toEqual(value)
         }
     )
 })

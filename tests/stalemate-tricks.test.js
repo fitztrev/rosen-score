@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const gameChecks = require('../js/goals/game-checks.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
@@ -9,9 +8,7 @@ describe('test no stalemate tricks', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            // console.log(fen)
-            let chessJsInstance = new Chess(fen)
-            expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(chessJsInstance), 'white')).toBe(false)
+            expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), 'white')).toBe(false)
         }
     )
 })
@@ -23,9 +20,7 @@ describe('test no stalemate tricks', () => {
 //     ])(
 //         'test FEN: %p',
 //         (color, fen) => {
-//             // console.log(fen)
-//             let chessJsInstance = new Chess(fen)
-//             expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(chessJsInstance), color)).toBe(false)
+//             expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), color)).toBe(false)
 //         }
 //     )
 // })

@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 
@@ -27,8 +26,7 @@ describe('test no pawn cube', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.pawnCube(fenToPosition(chessJsInstance))).toBe(false)
+            expect(pieceStructures.pawnCube(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -57,8 +55,7 @@ describe('test pawn cubes', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.pawnCube(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.pawnCube(fenToPosition(fen))).toBe(color)
         }
     )
 })
@@ -70,8 +67,7 @@ describe('test center pawn cubes', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.pawnCubeCenter(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toBe(color)
         }
     )
 })

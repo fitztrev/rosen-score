@@ -15,7 +15,7 @@ describe('test oh-no-my-queen', () => {
             let chessJsInstance = new Chess()
             chessJsInstance.load_pgn(moves)
 
-            let finalPosition = fenToPosition(chessJsInstance)
+            let finalPosition = fenToPosition(chessJsInstance.fen())
 
             expect(
                 ohNoMyQueen.checkMoves(chessJsInstance.history({ verbose: true }), finalPosition)
@@ -35,7 +35,7 @@ describe('test not oh-no-my-queen', () => {
             let chessJsInstance = new Chess()
             chessJsInstance.load_pgn(moves)
 
-            let finalPosition = fenToPosition(chessJsInstance)
+            let finalPosition = fenToPosition(chessJsInstance.fen())
 
             expect(
                 ohNoMyQueen.checkMoves(chessJsInstance.history({ verbose: true }), finalPosition)

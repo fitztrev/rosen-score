@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 
@@ -12,8 +11,7 @@ describe('test no knight cube', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.knightCube(fenToPosition(chessJsInstance))).toBe(false)
+            expect(pieceStructures.knightCube(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -44,8 +42,7 @@ describe('test knight cube', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.knightCube(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.knightCube(fenToPosition(fen))).toBe(color)
         }
     )
 })
@@ -67,8 +64,7 @@ describe('test no knight rectangle', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.knightRectangle(fenToPosition(chessJsInstance))).toBe(false)
+            expect(pieceStructures.knightRectangle(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -119,8 +115,7 @@ describe('test knight rectangle', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.knightRectangle(fenToPosition(chessJsInstance))).toBe(color)
+            expect(pieceStructures.knightRectangle(fenToPosition(fen))).toBe(color)
         }
     )
 })

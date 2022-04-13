@@ -1,4 +1,3 @@
-const { Chess } = require('chess.js')
 const fenToPosition = require('../js/utils/fen-to-position.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 const ticTacToe = require('../js/goals/tic-tac-toe.js')
@@ -15,9 +14,7 @@ describe('test 3x3 cube', () => {
     ])(
         'test FEN: %p',
         (fen, result) => {
-            let chessJsInstance = new Chess(fen)
-
-            expect(pieceStructures.threeByThreeCubes(fenToPosition(chessJsInstance))).toStrictEqual(result)
+            expect(pieceStructures.threeByThreeCubes(fenToPosition(fen))).toStrictEqual(result)
         }
     )
 })
@@ -31,8 +28,7 @@ describe('test not a 3x3 cube', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            let chessJsInstance = new Chess(fen)
-            expect(pieceStructures.threeByThreeCubes(fenToPosition(chessJsInstance))).toStrictEqual([])
+            expect(pieceStructures.threeByThreeCubes(fenToPosition(fen))).toStrictEqual([])
         }
     )
 })
