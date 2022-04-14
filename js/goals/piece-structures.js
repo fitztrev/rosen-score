@@ -1,19 +1,11 @@
 module.exports = {
-    tripledPawns: function (position) {
-        if (position.match(/P([A-Za-z\.]{7})P([A-Za-z\.]{7})P/)) {
-            return 'white'
-        } else if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/)) {
-            return 'black'
-        }
-
-        return false
-    },
-
-    quadrupledPawns: function (position) {
-        if (position.match(/P([A-Za-z\.]{7})P([A-Za-z\.]{7})P([A-Za-z\.]{7})P/)) {
-            return 'white'
-        } else if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/)) {
-            return 'black'
+    quadrupledPawns: function (files) {
+        for (let file of files) {
+            if ((file.match(/P/g) || []).length >= 4) {
+                return 'white'
+            } else if ((file.match(/p/g) || []).length >= 4) {
+                return 'black'
+            }
         }
 
         return false

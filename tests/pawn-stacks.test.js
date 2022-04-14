@@ -1,31 +1,38 @@
 const fenToPosition = require('../js/utils/fen-to-position.js')
+const getPiecesOnFiles = require('../js/utils/position-to-files.js')
 const pieceStructures = require('../js/goals/piece-structures.js')
 
 test('test no pawn stacks', () => {
     let fen = '1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1'
-    expect(pieceStructures.tripledPawns(fenToPosition(fen))).toBe(false)
     expect(pieceStructures.quadrupledPawns(fenToPosition(fen))).toBe(false)
     expect(pieceStructures.tripleDoublePawns(fenToPosition(fen))).toBe(false)
 })
 
-test('test triple pawns for white', () => {
-    let fen = 'rnbqkbnr/pppppppp/8/8/5P2/5P2/PPPP1P1P/RNBQKBNR w KQkq - 0 1'
-    expect(pieceStructures.tripledPawns(fenToPosition(fen))).toBe('white')
-})
-
-test('test triple pawns for black', () => {
-    let fen = 'rnbqkbnr/pppp1p1p/5p2/5p2/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
-    expect(pieceStructures.tripledPawns(fenToPosition(fen))).toBe('black')
-})
-
-test('test quad pawns for white', () => {
-    let fen = 'rnbqkbnr/pppppppp/8/3P4/3P4/3P4/PP1P2PP/RNBQKBNR w KQkq - 0 1'
-    expect(pieceStructures.quadrupledPawns(fenToPosition(fen))).toBe('white')
-})
-
-test('test quad pawns for black', () => {
-    let fen = 'rnbqkbnr/pp1p2pp/3p4/3p4/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'
-    expect(pieceStructures.quadrupledPawns(fenToPosition(fen))).toBe('black')
+describe('test quad pawns', () => {
+    test.each([
+        [
+            'rnbqkbnr/pppppppp/8/3P4/3P4/3P4/PP1P2PP/RNBQKBNR w KQkq - 0 1',
+            'white',
+        ],
+        [
+            'rnbqkbnr/pp1p2pp/3p4/3p4/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+            'black',
+        ],
+        [
+            'k7/8/6P1/8/6P1/6P1/6P1/K7 w - - 0 1',
+            'white',
+        ],
+        [
+            'k7/3p4/3p4/8/3p4/8/3p4/K7 w - - 0 1',
+            'black',
+        ],
+    ])(
+        'test FEN: %p',
+        (fen, color) => {
+            let files = getPiecesOnFiles(fenToPosition(fen))
+            expect(pieceStructures.quadrupledPawns(files)).toBe(color)
+        }
+    )
 })
 
 test('test triple double pawns for white', () => {
@@ -52,4 +59,3 @@ test('test only 5 pawns in the same file', () => {
     let fen = 'k7/8/3p4/3p4/3P4/3P4/3P4/K7 w - - 0 1'
     expect(pieceStructures.sixPawnsInTheSameFile(fenToPosition(fen))).toBe(false)
 })
-

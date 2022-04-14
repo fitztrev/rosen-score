@@ -683,6 +683,7 @@ import { Chess as ChessJS } from 'chess.js'
 import alphabetOpeningSearch from './utils/alphabet-opening-search.js'
 import cleanupLichessUsername from './utils/cleanup-lichess-username.js'
 import fenToPosition from './utils/fen-to-position.js'
+import getPiecesOnFiles from './utils/position-to-files.js'
 import pgnFormatter from './utils/pgn-formatter.js'
 import scoring from './utils/scoring.js'
 
@@ -997,6 +998,7 @@ export default {
             for (const move in moves) {
                 let moveInfo = chessJS.move(moves[move])
                 position = fenToPosition(chessJS.fen())
+                let piecesOnFiles = getPiecesOnFiles(position)
 
                 if (moveChecks.noCapturesBeforeMove30(move, position)) {
                     this.addTrophyForColor('white', 'noCapturesBeforeMove30', gameInfoJson, move)
@@ -1068,7 +1070,7 @@ export default {
                 )
 
                 this.checkForAccomplishment(
-                    pieceStructures.quadrupledPawns(position),
+                    pieceStructures.quadrupledPawns(piecesOnFiles),
                     'quadrupledPawns',
                     gameInfoJson,
                     move

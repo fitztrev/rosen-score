@@ -1,4 +1,5 @@
 const fenToPosition = require('../js/utils/fen-to-position.js')
+const getPiecesOnFiles = require('../js/utils/position-to-files.js')
 
 describe('convert fens to position strings', () => {
     test.each([
@@ -20,4 +21,18 @@ describe('convert fens to position strings', () => {
             expect(fenToPosition(fen)).toEqual(position)
         }
     )
+})
+
+test('test getting pieces on files', () => {
+    let position = 'abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefgh'
+    expect(getPiecesOnFiles(position)).toStrictEqual([
+        'aaaaaaaa',
+        'bbbbbbbb',
+        'cccccccc',
+        'dddddddd',
+        'eeeeeeee',
+        'ffffffff',
+        'gggggggg',
+        'hhhhhhhh',
+    ])
 })
