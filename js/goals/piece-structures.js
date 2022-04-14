@@ -12,18 +12,19 @@ module.exports = {
     },
 
     tripleDoublePawns: function (position) {
-        // Fast check for any kind of doubled pawns to quickly eliminate most positions
-        if (!/P[A-Za-z.]{7}P|p[A-Za-z.]{7}p/.test(position)) {
-            return false
-        }
-
         for (const piece of ['P', 'p']) {
-            const inFile = new Set()
-            const re = new RegExp(`${piece}(?=[A-Za-z.]{7}${piece})`, 'g')
-            for (const m of position.matchAll(re)) {
-                inFile.add(m.index % 8)
+            let doublePawnCount = 0
+            for (let file = 0; file < 8; file++) {
+                let pawnsOnFile = 0
+                for (let rank = 1; rank < 7; rank++) {
+                    if (position[file + rank * 8] === piece) {
+                        pawnsOnFile++
+                    }
+                }
+                if (pawnsOnFile >= 2) doublePawnCount++
             }
-            if (inFile.size > 2) {
+
+            if (doublePawnCount >= 3) {
                 return piece === 'P' ? 'white' : 'black'
             }
         }

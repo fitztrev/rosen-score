@@ -50,6 +50,16 @@ test('test quad pawns do not count for triple double pawns', () => {
     expect(pieceStructures.tripleDoublePawns(fenToPosition(fen))).toBe(false)
 })
 
+test('triple double pawns with spaces in between', () => {
+    let fen = '4k3/6P1/5n2/1N1P2P1/1P1q4/3P4/1P6/4K3 w - - 0 1'
+    expect(pieceStructures.tripleDoublePawns(fenToPosition(fen))).toBe('white')
+})
+
+test('realistic position of triple double pawns with spaces in between', () => {
+    let fen = '4k3/q2p3p/p6p/P6p/P1P3Qp/7P/2P4P/4K3 w - - 0 1'
+    expect(pieceStructures.tripleDoublePawns(fenToPosition(fen))).toBe('white')
+})
+
 test('test 6 pawns in the same file', () => {
     let fen = 'k7/3p4/3p4/3p4/3P4/3P4/3P4/K7 w - - 0 1'
     expect(pieceStructures.sixPawnsInTheSameFile(fenToPosition(fen))).toBe(true)
