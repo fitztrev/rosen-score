@@ -332,13 +332,13 @@
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
                     ></accomplishment-score>
-                    <accomplishment-score
+<!--                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Triple Double Pawns"
                         desc="3 files with doubled pawns"
                         :games="pointsByAccomplishment['tripleDoublePawns']"
                         gameLink="https://lichess.org/kASuBCou/black#38"
-                    ></accomplishment-score>
+                    ></accomplishment-score> -->
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="6 Pawns on the Same File"
@@ -1075,12 +1075,12 @@ export default {
                     gameInfoJson,
                     move
                 )
-                this.checkForAccomplishment(
-                    pieceStructures.tripleDoublePawns(position),
-                    'tripleDoublePawns',
-                    gameInfoJson,
-                    move
-                )
+                // this.checkForAccomplishment(
+                //     pieceStructures.tripleDoublePawns(position),
+                //     'tripleDoublePawns',
+                //     gameInfoJson,
+                //     move
+                // )
                 this.checkForAccomplishment(pieceStructures.pawnCube(position), 'pawnCube', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.pawnCubeCenter(position),
