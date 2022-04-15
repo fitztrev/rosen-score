@@ -176,7 +176,7 @@
 
         <download-progress
             v-if="isDownloading && reportObject.data"
-            :title="reportObject.data.username || reportObject.data.fullName"
+            :title="reportObject.data.username || reportObject.data.fullName || reportObject.data.name"
             :positions="counts.totalMoves"
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
@@ -186,7 +186,7 @@
 
         <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
-                {{ reportObject.data.username || reportObject.data.fullName }}
+                {{ reportObject.data.username || reportObject.data.fullName || reportObject.data.name }}
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
@@ -821,8 +821,8 @@ export default {
             if (this.formInputValue.includes('/tournament/')) {
                 // Arena tournament
                 this.reportObject.type = 'arena'
-                let arenaId = this.formInputValue.split('/').pop()
-                this.fetchJsonEndpoint(`https://lichess.org/api/tournament/${arenaId}`)
+                let tournamentId = this.formInputValue.split('/').pop()
+                this.fetchJsonEndpoint(`https://lichess.org/api/tournament/${tournamentId}`)
                     .then(
                         function (data) {
                             if (!data.isFinished) {
@@ -840,7 +840,7 @@ export default {
 
                             window.document.title = `${window.document.title} - ${data.fullName}`
 
-                            let url = `https://lichess.org/api/tournament/${arenaId}/games?pgnInJson=true&clocks=true`
+                            let url = `https://lichess.org/api/tournament/${tournamentId}/games?pgnInJson=true&clocks=true`
 
                             this.fetchGames(url)
                         }.bind(this)
@@ -849,7 +849,30 @@ export default {
                         this.errorMsg = 'Tournament not found.'
                     })
             } else if (this.formInputValue.includes('/swiss/')) {
-                this.errorMsg = 'Swiss tournaments not accepted yet'
+                // Swiss tournament
+                this.reportObject.type = 'swiss'
+                let tournamentId = this.formInputValue.split('/').pop()
+                this.fetchJsonEndpoint(`https://lichess.org/api/swiss/${tournamentId}`)
+                    .then(
+                        function (data) {
+                            if (data.status !== 'finished') {
+                                this.errorMsg = 'Tournament not over yet.'
+                                return
+                            }
+
+                            this.counts.totalGames = data.stats.games
+                            this.reportObject.data = data
+
+                            window.document.title = `${window.document.title} - ${data.name}`
+
+                            let url = `https://lichess.org/api/swiss/${tournamentId}/games?pgnInJson=true&clocks=true`
+
+                            this.fetchGames(url)
+                        }.bind(this)
+                    )
+                    .catch((e) => {
+                        this.errorMsg = 'Tournament not found.'
+                    })
             } else {
                 // User
                 this.reportObject.type = 'user'
