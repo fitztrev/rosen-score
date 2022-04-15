@@ -51,11 +51,22 @@
                             Or
                             <span
                                 class="text-sky-900 underline decoration-dotted underline-offset-1 hover:decoration-dashed cursor-pointer"
-                                @click.prevent="formFillEricRosen"
+                                @click.prevent="formFill('EricRosen')"
                             >
                                 click here to see EricRosen's
                             </span>
                         </p>
+
+                        <div class="text-sm mt-3 bg-indigo-200 p-2 rounded-lg text-sky-800">
+                            <span class="uppercase font-bold">New:</span>
+                            Enter the URL of an arena to see all the trophies awarded during a tournament. For example,
+                            <span
+                                class="text-sky-900 underline decoration-dotted underline-offset-1 hover:decoration-dashed cursor-pointer"
+                                @click.prevent="formFill('https://lichess.org/swiss/48jrx3m6')"
+                            >
+                                click here to see the trophies from Eric's Ukraine Charity Swiss tournament
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -588,7 +599,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">More Fun</h3>
+                <h3 class="heading">More Fun Achievements</h3>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -711,6 +722,7 @@ const { signal } = controller
 
 import ericCachedGames from '../cache/eric.js'
 import ericLastUpdated from '../cache/eric-last-updated.js'
+import tournamentCachedGames from '../cache/swiss-48jrx3m6.js'
 
 const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
@@ -789,8 +801,8 @@ export default {
             this.totalAccomplishmentsPossible++
         },
 
-        formFillEricRosen: function () {
-            this.formInputValue = 'EricRosen'
+        formFill: function (value) {
+            this.formInputValue = value
             this.startDownload()
         },
 
@@ -854,7 +866,7 @@ export default {
                 let tournamentId = this.formInputValue.split('/').pop()
                 this.fetchJsonEndpoint(`https://lichess.org/api/swiss/${tournamentId}`)
                     .then(
-                        function (data) {
+                        async function (data) {
                             if (data.status !== 'finished') {
                                 this.errorMsg = 'Tournament not over yet.'
                                 return
@@ -865,8 +877,22 @@ export default {
 
                             window.document.title = `${window.document.title} - ${data.name}`
 
-                            let url = `https://lichess.org/api/swiss/${tournamentId}/games?pgnInJson=true&clocks=true`
+                            // The example tournament is cached so we don't
+                            // have to request from the Lichess API
+                            if (tournamentId === '48jrx3m6') {
+                                this.isDownloading = true
 
+                                for (const gameJson of tournamentCachedGames) {
+                                    this.processGame(gameJson)
+                                    await wait(2)
+                                }
+
+                                this.streamComplete()
+
+                                return
+                            }
+
+                            let url = `https://lichess.org/api/swiss/${tournamentId}/games?pgnInJson=true&clocks=true`
                             this.fetchGames(url)
                         }.bind(this)
                     )
