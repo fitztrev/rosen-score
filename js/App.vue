@@ -295,6 +295,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Quadrupled Pawns"
+                        desc="4 pawns on the same file"
                         :games="pointsByAccomplishment['quadrupledPawns']"
                         gameLink="https://lichess.org/aqADXuJT#85"
                         youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
@@ -661,7 +662,7 @@
                         title="Win with Insufficient Material"
                         desc="Flag with only a knight or bishop"
                         :games="pointsByAccomplishment['winInsufficientMaterial']"
-                        gameLink="https://lichess.org/GCA2MyRN#161"
+                        gameLink="https://lichess.org/nYz9xUgc#141"
                         youtubeLink="https://www.youtube.com/watch?v=vBf4rA4j8_w&t=15468s"
                     ></accomplishment-score>
                     <accomplishment-score
