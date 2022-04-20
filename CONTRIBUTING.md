@@ -15,11 +15,13 @@ Looking for contributors who can...
     - When a new trophy is added, I test it by running the app against this local copy instead of fetching from Lichess API
     - How can I make this easier instead of changing the `url` of where it fetches from?
 
-1. Fix false positives
+1. Incorrect Trophies
     1. "Stalemate Tricks"
-        - https://lichess.org/ifDX76Su#128
+        - https://lichess.org/ifDX76Su#128 - awarded, but should not be
+        - https://lichess.org/7SXEmbld/black#109 - not awarded, but should be
     1. "Lefong Trap"
-        - https://lichess.org/juNVZaHK (white bishop was protected)
+        - https://lichess.org/juNVZaHK awarded, but should not be
+            - white bishop was protected
     1. "Oh no my queen"
         - Some are blunders where the person just gets lucky afterwards
 
