@@ -1067,7 +1067,7 @@ export default {
                     gameInfoJson,
                     move
                 )
-                this.checkForAccomplishment(moveChecks.g5mate(moveInfo, move), 'g5mate', gameInfoJson, move)
+                this.checkForAccomplishment(moveChecks.g5mate(moveInfo), 'g5mate', gameInfoJson, move)
                 this.checkForAccomplishment(
                     moveChecks.knightCornerMate(moveInfo, move),
                     'knightCornerMate',

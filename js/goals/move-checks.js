@@ -23,9 +23,9 @@ module.exports = {
         }
     },
 
-    g5mate: function (moveInfo, move) {
-        if (moveInfo && moveInfo.san === 'g5#') {
-            return move % 2 ? 'black' : 'white'
+    g5mate: function (moveInfo) {
+        if (moveInfo && moveInfo.san.endsWith('#') && moveInfo.to === 'g5' && moveInfo.piece === 'p') {
+            return moveInfo.color
         }
     },
 
