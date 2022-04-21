@@ -721,8 +721,8 @@ import windmill from './goals/windmill.js'
 const controller = new AbortController()
 const { signal } = controller
 
-import ericCachedGames from '../cache/eric.js'
-import ericLastUpdated from '../cache/eric-last-updated.js'
+import ericCachedGames from '../cache/eric.json'
+import ericLastUpdated from '../cache/eric-last-updated.json'
 import tournamentCachedGames from '../cache/swiss-48jrx3m6.js'
 
 const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
