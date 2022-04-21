@@ -660,7 +660,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Win with Insufficient Material"
-                        desc="Flag with only a knight or bishop"
+                        desc="Flag your opponent with only a knight or bishop"
                         :games="pointsByAccomplishment['winInsufficientMaterial']"
                         gameLink="https://lichess.org/nYz9xUgc#141"
                         youtubeLink="https://www.youtube.com/watch?v=vBf4rA4j8_w&t=15468s"
