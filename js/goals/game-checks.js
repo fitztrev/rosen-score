@@ -1,16 +1,17 @@
+const calculateMaterialImbalance = require('../utils/calculate-material-imbalance.js')
 const pieceStructures = require('./piece-structures.js')
 
 module.exports = {
     stalemateTricks: function (gameInfoJson, position, whoseTurn) {
         if (gameInfoJson.status === 'stalemate') {
-            let piecesRemaining = position.replace(/[k\.]/gi, '')
-
             // if there was only a bishop, call it a draw
-            if (piecesRemaining.replace(/[bp]/gi, '') === '') {
+            if (position.match(/b/i) && position.replace(/[kbp\.]/gi, '') === '') {
                 return false
             }
 
-            if (piecesRemaining.length > 2) {
+            let materialImbalance = Math.abs(calculateMaterialImbalance(position))
+
+            if (materialImbalance >= 2) {
                 return whoseTurn
             }
         }

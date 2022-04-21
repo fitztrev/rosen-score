@@ -18,7 +18,6 @@ Looking for contributors who can...
 1. Incorrect Trophies
     1. "Stalemate Tricks"
         - https://lichess.org/ifDX76Su#128 - awarded, but should not be
-        - https://lichess.org/7SXEmbld/black#109 - not awarded, but should be
     1. "Lefong Trap"
         - https://lichess.org/juNVZaHK awarded, but should not be
             - white bishop was protected
