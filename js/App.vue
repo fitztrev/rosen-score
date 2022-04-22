@@ -280,7 +280,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Pawn Diamond"
-                        desc="Does your pawn diamond last forever?"
+                        desc="Pawn diamond past the 2nd rank"
                         :games="pointsByAccomplishment['pawnDiamond']"
                         gameLink="https://lichess.org/d43FgnVj/black#32"
                         youtubeLink="https://youtu.be/J3TSlTZpBfc?t=456"
