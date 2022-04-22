@@ -8,7 +8,7 @@
     >
         <div class="text-center">
             <h1 class="text-6xl md:text-8xl mb-4">
-                <a href="">Rosen Score</a>
+                <a href="/">Rosen Score</a>
             </h1>
             <p class="md:text-2xl">How many of these chess accomplishments have you completed?</p>
         </div>
@@ -232,7 +232,7 @@
 
         <div class="md:flex md:flex-row md:space-x-4">
             <div class="basis-1/2">
-                <h3 class="heading">Make Eric Proud</h3>
+                <h2 class="heading">Make Eric Proud</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -268,7 +268,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">Pawn Structures</h3>
+                <h2 class="heading">Pawn Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -367,7 +367,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">Piece Structures</h3>
+                <h2 class="heading">Piece Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -384,7 +384,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">Alphabet Openings</h3>
+                <h2 class="heading">Alphabet Openings</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -452,7 +452,7 @@
                 </div>
             </div>
             <div class="basis-1/2">
-                <h3 class="heading">Checkmates</h3>
+                <h2 class="heading">Checkmates</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -600,7 +600,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">More Fun Achievements</h3>
+                <h2 class="heading">More Fun Achievements</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -647,7 +647,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h3 class="heading">I feel so dirty</h3>
+                <h2 class="heading">I feel so dirty</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
