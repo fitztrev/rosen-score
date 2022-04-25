@@ -6,7 +6,7 @@ module.exports = {
     },
 
     promotePawnBeforeMoveNumber: function (moveInfo, move, beforeMove) {
-        if (move < beforeMove * 2 && moveInfo.promotion && moveInfo.promotion === 'q') {
+        if (move < beforeMove * 2 && moveInfo.promotion) {
             return move % 2 ? 'black' : 'white'
         }
     },
