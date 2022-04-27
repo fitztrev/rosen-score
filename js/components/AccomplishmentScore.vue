@@ -67,10 +67,10 @@
                 <div class="grid grid-cols-2 gap-x-2 text-left">
                     <div v-for="game in gamesArray" class="overflow-hidden">
                         <a :href="game.gameLink" class="hover:underline whitespace-nowrap" target="_blank">
-                            <strong v-if="game.opponent.title" class="text-yellow-400">
-                                {{ game.opponent.title }}
-                            </strong>
-                            {{ game.opponent.name }}
+                            <lichess-username
+                                :title="game.opponent.title"
+                                :name="game.opponent.name"
+                            ></lichess-username>
                         </a>
                     </div>
                 </div>
@@ -80,6 +80,7 @@
 </template>
 
 <script>
+import LichessUsername from './LichessUsername.vue'
 import TrophyCollection from './TrophyCollection.vue'
 
 export default {
@@ -97,6 +98,7 @@ export default {
         youtubeLink: String,
     },
     components: {
+        LichessUsername,
         TrophyCollection,
     },
     mounted: function () {

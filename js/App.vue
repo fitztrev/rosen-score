@@ -197,7 +197,15 @@
 
         <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
-                {{ reportObject.data.username || reportObject.data.fullName || reportObject.data.name }}
+                <template v-if="reportObject.type === 'user'">
+                    <lichess-username
+                        :title="reportObject.data.title"
+                        :name="reportObject.data.username"
+                    ></lichess-username>
+                </template>
+                <template v-else>
+                    {{ reportObject.data.fullName || reportObject.data.name }}
+                </template>
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
@@ -727,17 +735,19 @@ import tournamentCachedGames from '../cache/swiss-48jrx3m6.js'
 
 const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
-import LichessLogin from './components/LichessLogin.vue'
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
-import TrophyCollection from './components/TrophyCollection.vue'
 import DownloadProgress from './components/DownloadProgress.vue'
+import LichessLogin from './components/LichessLogin.vue'
+import LichessUsername from './components/LichessUsername.vue'
+import TrophyCollection from './components/TrophyCollection.vue'
 
 export default {
     components: {
         AccomplishmentScore,
-        TrophyCollection,
-        LichessLogin,
         DownloadProgress,
+        LichessLogin,
+        LichessUsername,
+        TrophyCollection,
     },
     data() {
         return {
