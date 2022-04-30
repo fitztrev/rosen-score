@@ -15,6 +15,13 @@ h1 {
     font-weight: 500;
 }
 
+.dotted-underline {
+    @apply decoration-dotted
+        hover:decoration-dashed
+        underline
+        underline-offset-1;
+}
+
 .heading {
     @apply bg-sky-900
         text-center

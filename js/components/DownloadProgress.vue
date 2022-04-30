@@ -5,7 +5,7 @@
             {{ title }}&rsquo;s games
         </div>
 
-        <template v-if="usingCache">
+        <template v-if="hideProgressBar">
             <svg
                 class="animate-spin my-2 mx-auto h-10 w-10 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@
 
 <script>
 export default {
-    props: ['title', 'positions', 'downloaded', 'total', 'usingCache'],
+    props: ['title', 'positions', 'downloaded', 'total', 'hideProgressBar'],
 
     computed: {
         percentDownloaded: function () {

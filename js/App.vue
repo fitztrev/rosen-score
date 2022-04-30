@@ -45,23 +45,24 @@
                             placeholder="Lichess Username Here"
                             spellcheck="false"
                             v-model="formInputValue"
-                            @blur="formInputValueEntered"
+                            @change="formInputValueEntered"
                         />
-                        <p class="text-sm">
+
+                        <div class="text-sm">
                             Or
                             <span
-                                class="text-sky-900 underline decoration-dotted underline-offset-1 hover:decoration-dashed cursor-pointer"
+                                class="dotted-underline text-sky-900 cursor-pointer"
                                 @click.prevent="formFill('EricRosen')"
                             >
                                 click here to see EricRosen's
                             </span>
-                        </p>
+                        </div>
 
                         <div class="text-sm mt-3 bg-indigo-200 p-2 rounded-lg text-sky-800">
                             <span class="uppercase font-bold">New:</span>
                             Enter the URL of an arena to see all the trophies awarded during a tournament. For example,
                             <span
-                                class="text-sky-900 underline decoration-dotted underline-offset-1 hover:decoration-dashed cursor-pointer"
+                                class="dotted-underline text-sky-900 cursor-pointer"
                                 @click.prevent="formFill('https://lichess.org/swiss/48jrx3m6')"
                             >
                                 click here to see the trophies from Eric's Ukraine Charity Swiss tournament
@@ -89,37 +90,7 @@
                         </svg>
                     </div>
                     <div class="basis-3/4">
-                        <span class="uppercase text-xs">Optional:</span>
-
                         <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login>
-
-                        <p class="mt-2 text-xs">
-                            Lichess allows much faster download of games if you login.
-                            <br />
-                            <strong>3x</strong> faster when downloading your own games, <strong>1.5x</strong> faster for
-                            all others
-                            <br />
-                            You can learn more about this
-                            <a
-                                href="https://lichess.org/api#operation/apiGamesUser"
-                                target="_blank"
-                                class="text-sky-900 underline decoration-dotted underline-offset-1 hover:decoration-dashed"
-                                >here
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="inline h-3 w-3"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                    /></svg
-                            ></a>
-                        </p>
                     </div>
                 </div>
 
@@ -142,6 +113,19 @@
                         </svg>
                     </div>
                     <div class="basis-3/4">
+                        <div class="text-sm mt-1 mb-2" v-if="!formInputValue.includes('lichess.org')">
+                            Check games since
+                            <select v-model.number="filter.sinceHoursAgo"
+                                class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 w-28"
+                            >
+                                <option :value="6">6 hours ago</option>
+                                <option :value="24">yesterday</option>
+                                <option :value="24*7">last week</option>
+                                <option :value="24*31">last month</option>
+                                <option :value="0">forever</option>
+                            </select>
+                        </div>
+
                         <button
                             type="submit"
                             class="px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
@@ -191,7 +175,7 @@
             :positions="counts.totalMoves"
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
-            :usingCache="usingCachedData"
+            :hideProgressBar="usingCachedData || filter.sinceHoursAgo"
             @cancel-download="cancelFetch"
         ></download-progress>
 
@@ -219,6 +203,10 @@
                 of the goals ({{ totalAccomplishmentsCompleted }}
                 out of
                 {{ totalAccomplishmentsPossible }})
+            </div>
+
+            <div class="mb-1" v-if="sinceDateFormatted">
+                since {{ sinceDateFormatted }}
             </div>
 
             <trophy-collection :count="trophyCount" size="large"></trophy-collection>
@@ -687,7 +675,7 @@
 
         <div class="text-sm text-center text-slate-400 mt-8">
             Not affiliated with Eric Rosen. Find a bug? Have a comment? Fill out
-            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="underline">this form</a>.
+            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
         </div>
 
         <div class="text-sm text-center text-slate-400 mt-8" v-if="isLocalEnv">
@@ -703,6 +691,7 @@ import { Chess as ChessJS } from 'chess.js'
 import alphabetOpeningSearch from './utils/alphabet-opening-search.js'
 import cleanupLichessUsername from './utils/cleanup-lichess-username.js'
 import fenToPosition from './utils/fen-to-position.js'
+import formatSinceDate from './utils/format-since-date.js'
 import getPiecesOnFiles from './utils/position-to-files.js'
 import pgnFormatter from './utils/pgn-formatter.js'
 import scoring from './utils/scoring.js'
@@ -754,6 +743,7 @@ export default {
             lichessOauthToken: null,
 
             formInputValue: '',
+            filter: {},
             reportObject: {},
 
             isDownloading: false,
@@ -772,6 +762,18 @@ export default {
     },
 
     computed: {
+        sinceTimestamp: function () {
+            if (this.filter.sinceHoursAgo) {
+                let now = new Date().getTime()
+                return now - (this.filter.sinceHoursAgo * 60 * 60 * 1000)
+            }
+        },
+        sinceDateFormatted: function () {
+            if (this.sinceTimestamp) {
+                return formatSinceDate(this.sinceTimestamp)
+            }
+        },
+
         totalAccomplishmentsCompleted: function () {
             return Object.keys(this.pointsByAccomplishment).length
         },
@@ -793,17 +795,27 @@ export default {
             }
         },
         usingCachedData: function () {
-            return this.reportObject.data.username === 'EricRosen'
+            return this.reportObject.data.username === 'EricRosen' && this.filter.sinceHoursAgo === 0
         },
         isLocalEnv: function () {
             return window.location.href.includes('localhost')
         },
     },
 
+    watch: {
+        filter: {
+            handler: function(value) {
+                window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
+            },
+            deep: true,
+        },
+    },
+
     mounted: function () {
-        let savedFormInputValue = window.sessionStorage.getItem('savedFormInputValue')
-        if (savedFormInputValue) {
-            this.formInputValue = savedFormInputValue
+        this.formInputValue = window.sessionStorage.getItem('savedFormInputValue') || ''
+        this.filter = {
+            sinceHoursAgo: 0,
+            ...JSON.parse(window.sessionStorage.getItem('savedFilter')),
         }
     },
 
@@ -814,7 +826,7 @@ export default {
 
         formFill: function (value) {
             this.formInputValue = value
-            this.startDownload()
+            this.formInputValueEntered()
         },
 
         formInputValueEntered: function () {
@@ -925,7 +937,7 @@ export default {
                             let url = `https://lichess.org/api/games/user/${data.id}?pgnInJson=true&clocks=true`
 
                             // EricRosen's games are pre-downloaded and filtered to only include matching games
-                            if (data.id === 'ericrosen') {
+                            if (this.usingCachedData) {
                                 this.isDownloading = true
 
                                 for (const gameJson of ericCachedGames) {
@@ -934,6 +946,8 @@ export default {
                                 }
 
                                 url += '&since=' + ericLastUpdated
+                            } else {
+                                url += '&since=' + this.sinceTimestamp
                             }
 
                             this.fetchGames(url)
