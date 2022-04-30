@@ -116,7 +116,7 @@
                         <div class="text-sm mt-1 mb-2" v-if="!formInputValue.includes('lichess.org')">
                             Check games since
                             <select v-model.number="filter.sinceHoursAgo"
-                                class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 w-28"
+                                class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 md:w-28"
                             >
                                 <option :value="6">6 hours ago</option>
                                 <option :value="24">yesterday</option>
