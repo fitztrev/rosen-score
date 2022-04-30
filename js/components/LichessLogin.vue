@@ -43,8 +43,7 @@
             <p class="mt-2 text-xs">
                 Lichess allows much faster download of games if you login.
                 <br />
-                <strong>3x</strong> faster when downloading your own games, <strong>1.5x</strong> faster for
-                all others
+                <strong>3x</strong> faster when downloading your own games, <strong>1.5x</strong> faster for all others
                 <br />
                 You can learn more about this
                 <a
