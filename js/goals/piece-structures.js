@@ -116,9 +116,15 @@ module.exports = {
     },
 
     pawnDiamond: function (position) {
-        if (position.substr(16, 32).match(/P([A-Za-z\.]{6})P([A-Za-z\.]{1})P([A-Za-z\.]{6})P/)) {
+        let match
+
+        match = position.match(/P([A-Za-z\.]{6})P([A-Za-z\.]{1})P([A-Za-z\.]{6})P/)
+        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
             return 'white'
-        } else if (position.substr(16, 32).match(/p([A-Za-z\.]{6})p([A-Za-z\.]{1})p([A-Za-z\.]{6})p/)) {
+        }
+
+        match = position.match(/p([A-Za-z\.]{6})p([A-Za-z\.]{1})p([A-Za-z\.]{6})p/)
+        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
             return 'black'
         }
 

@@ -9,6 +9,7 @@ Looking for contributors who can...
     1. In the final position, you have N number of mate-in-one's available?
     1. Your opponent had N mate-in-one's throughout the game but you end up winning?
     1. Use a pinned piece to help deliver mate?
+    1. Double pawn diamond
 
 1. Improve development process
     - I keep a local copy of all of Eric's games as well as other notable players (Chess-Network, etc)
