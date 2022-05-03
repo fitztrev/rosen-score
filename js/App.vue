@@ -940,15 +940,12 @@ export default {
                             if (this.usingCachedData) {
                                 this.isDownloading = true
 
-                                // for (const gameJson of ericCachedGames) {
-                                //     this.processGame(gameJson)
-                                //     await wait(2)
-                                // }
+                                for (const gameJson of ericCachedGames) {
+                                    this.processGame(gameJson)
+                                    await wait(2)
+                                }
 
                                 url += '&since=' + ericLastUpdated
-
-url = new URL('../scripts/EricRosen-AllGames.txt', import.meta.url)
-
                             } else {
                                 url += '&since=' + this.sinceTimestamp
                             }
