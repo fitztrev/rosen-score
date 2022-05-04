@@ -4,6 +4,7 @@ Looking for contributors who can...
 
 1. Add possible trophies for consideration (but it will depend on what the games look like):
     1. "Windmill" trophy
+    1. Pork / Pork Dork (https://www.youtube.com/watch?v=H1_GSx8jPG8)
     1. "Double-Check Checkmate" trophy
     1. "Setup for the next game" trophy - 1st rank is restored late in the game?
     1. In the final position, you have N number of mate-in-one's available?
