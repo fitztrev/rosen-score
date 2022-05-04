@@ -60,8 +60,8 @@
             <template v-if="hasGames">
                 <h4 class="font-bold">
                     {{ gamesArray.length }}
-                    <template v-if="gamesArray.length === 1"> Game </template>
-                    <template v-else> Games </template>
+                    <template v-if="gamesArray.length === 1"> {{ units[0] }} </template>
+                    <template v-else> {{ units[1] }} </template>
                 </h4>
 
                 <div class="grid grid-cols-2 gap-x-2 text-left">
@@ -91,9 +91,10 @@ export default {
         },
         desc: String,
         games: Object,
-        gameLink: {
-            type: String,
-            required: true,
+        gameLink: String,
+        units: {
+            type: Array,
+            default: ['Game', 'Games'],
         },
         youtubeLink: String,
     },

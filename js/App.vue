@@ -536,7 +536,7 @@
                         @register-new-goal="onRegisterNewGoal"
                         title="Promote to Knight Checkmate"
                         :games="pointsByAccomplishment['promoteToKnightCheckmate']"
-                        gameLink="https://lichess.org/jzDdcPdk#61"
+                        gameLink="https://lichess.org/xwj83zQe/black#108"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -643,6 +643,24 @@
                     ></accomplishment-score>
                 </div>
 
+                <h2 class="heading">Adoption Matches</h2>
+                <div class="grid grid-cols-2 gap-2">
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Adoption"
+                        desc="Win 10 consecutive games against the same opponent"
+                        :units="['Match', 'Matches']"
+                        :games="pointsByAccomplishment['adoptionMatch:10']"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Double Adoption"
+                        desc="Win 20 consecutive games against the same opponent"
+                        :units="['Match', 'Matches']"
+                        :games="pointsByAccomplishment['adoptionMatch:20']"
+                    ></accomplishment-score>
+                </div>
+
                 <h2 class="heading">I feel so dirty</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
@@ -696,6 +714,7 @@ import getPiecesOnFiles from './utils/position-to-files.js'
 import pgnFormatter from './utils/pgn-formatter.js'
 import scoring from './utils/scoring.js'
 
+import adoptionMatch from './goals/adoption-match.js'
 import alphabetOpenings from './goals/alphabet-openings.js'
 import blockCheckWithCheckmate from './goals/block-check-with-checkmate.js'
 import castleFork from './goals/castle-fork.js'
@@ -1347,6 +1366,20 @@ export default {
                 )
             }
 
+            adoptionMatch.processGame(gameInfoJson)
+
+            this.checkForAccomplishment(
+                adoptionMatch.checkForAdoption(gameInfoJson, 10),
+                'adoptionMatch:10',
+                gameInfoJson
+            )
+
+            this.checkForAccomplishment(
+                adoptionMatch.checkForAdoption(gameInfoJson, 20),
+                'adoptionMatch:20',
+                gameInfoJson
+            )
+
             if (gameInfoJson.status === 'mate') {
                 let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
 
@@ -1361,7 +1394,7 @@ export default {
         },
 
         getCacheUpdateCommand: function () {
-            let gameIds = []
+            let gameIds = adoptionMatch.allAdoptionMatchGameids
 
             for (const accomplishment in this.pointsByAccomplishment) {
                 gameIds.push(Object.keys(this.pointsByAccomplishment[accomplishment]))
