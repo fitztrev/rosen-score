@@ -37,12 +37,12 @@
                         </svg>
                     </div>
                     <div class="basis-3/4">
-                        Enter Lichess.org username:
+                        Enter Lichess.org username or arena URL:
 
                         <input
                             type="text"
                             class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Lichess Username Here"
+                            placeholder="Lichess username or arena URL here"
                             spellcheck="false"
                             v-model="formInputValue"
                             @change="formInputValueEntered"
@@ -58,7 +58,7 @@
                             </span>
                         </div>
 
-                        <div class="text-sm mt-3 bg-indigo-200 p-2 rounded-lg text-sky-800">
+                        <!-- <div class="text-sm mt-3 bg-indigo-200 p-2 rounded-lg text-sky-800">
                             <span class="uppercase font-bold">New:</span>
                             Enter the URL of an arena to see all the trophies awarded during a tournament. For example,
                             <span
@@ -67,7 +67,7 @@
                             >
                                 click here to see the trophies from Eric's Ukraine Charity Swiss tournament
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -437,6 +437,13 @@
                         :games="pointsByAccomplishment['alphabet:chad']"
                         gameLink="https://lichess.org/AaNGZKcj/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1305"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Dab"
+                        desc="Win after spelling &ldquo;dab&rdquo; with pawn moves in the opening"
+                        :games="pointsByAccomplishment['alphabet:dab']"
+                        gameLink="https://lichess.org/QOLTCDMH"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -872,6 +879,11 @@ export default {
         },
 
         startDownload: function () {
+            if (! this.formInputValue) {
+                this.errorMsg = 'Enter a username or arena URL in Step #1'
+                return
+            }
+
             if (this.formInputValue.includes('/tournament/')) {
                 // Arena tournament
                 this.reportObject.type = 'arena'
@@ -1249,6 +1261,7 @@ export default {
                 'beef',
                 'cabbage',
                 'chad',
+                'dab',
                 'egg',
                 'eggegg',
                 'headache',
