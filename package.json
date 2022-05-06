@@ -9,7 +9,7 @@
   "dependencies": {
     "@bity/oauth2-auth-code-pkce": "^2.13.0",
     "chess.js": "^0.12.0",
-    "jest": "^27.4.7",
+    "jest": "^28.0.3",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "vue": "^3.2.31"
