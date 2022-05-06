@@ -377,6 +377,7 @@
                         title="Knight Rectangle"
                         :games="pointsByAccomplishment['knightRectangle']"
                         gameLink="https://lichess.org/zqOlQeBs#207"
+                        youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5587"
                     ></accomplishment-score>
                 </div>
 
@@ -578,6 +579,7 @@
                         title="6-Knight Rectangle Checkmate"
                         :games="pointsByAccomplishment['sixKnightRectangleMate']"
                         gameLink="https://lichess.org/zqOlQeBs#207"
+                        youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5611"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
