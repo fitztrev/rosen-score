@@ -28,10 +28,7 @@ module.exports = {
 
     checkForAdoption: function (game, atCount) {
         if (this.winStreak === atCount) {
-            this.allAdoptionMatchGameids = [
-                ...this.allAdoptionMatchGameids,
-                ...this.currentMatchGameIds,
-            ]
+            this.allAdoptionMatchGameids = [...this.allAdoptionMatchGameids, ...this.currentMatchGameIds]
             return game.winner
         }
     },
