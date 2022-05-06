@@ -441,13 +441,6 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Dab"
-                        desc="Win after spelling &ldquo;dab&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:dab']"
-                        gameLink="https://lichess.org/QOLTCDMH"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
                         title="Headache"
                         desc="Win after spelling &ldquo;headache&rdquo; with pawn moves in the opening"
                         :games="pointsByAccomplishment['alphabet:headache']"
@@ -1263,7 +1256,6 @@ export default {
                 'beef',
                 'cabbage',
                 'chad',
-                'dab',
                 'egg',
                 'eggegg',
                 'headache',
