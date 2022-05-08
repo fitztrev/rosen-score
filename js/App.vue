@@ -497,19 +497,18 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
+                        title="Double-Check Checkmate"
+                        desc="2 pieces are attacking the king and it's checkmate"
+                        :games="pointsByAccomplishment['doubleCheckCheckmate']"
+                        gameLink="https://lichess.org/OtlF3AfG#27"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
                         title="Block a Check with Checkmate"
                         desc="Call an ambulance... but not for me"
                         :games="pointsByAccomplishment['blockCheckWithCheckmate']"
                         gameLink="https://lichess.org/DrC87aK3#81"
                         youtubeLink="https://youtu.be/kDGY77nkZHc?t=276"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Avoid-the-Flag Checkmate"
-                        desc="Make 20+ moves with 1 second left + checkmate"
-                        :games="pointsByAccomplishment['premovesWithOneSecondLeft']"
-                        gameLink="https://lichess.org/Wi5bzNTB#110"
-                        youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -573,6 +572,14 @@
                         :games="pointsByAccomplishment['sixKnightRectangleMate']"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5611"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Avoid-the-Flag Checkmate"
+                        desc="Make 20+ moves with 1 second left + checkmate"
+                        :games="pointsByAccomplishment['premovesWithOneSecondLeft']"
+                        gameLink="https://lichess.org/Wi5bzNTB#110"
+                        youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -722,6 +729,7 @@ import blockCheckWithCheckmate from './goals/block-check-with-checkmate.js'
 import castleFork from './goals/castle-fork.js'
 import consecutiveCaptures from './goals/consecutive-captures.js'
 import dirtyWins from './goals/dirty-wins.js'
+import doubleCheckCheckmate from './goals/double-check-checkmate.js'
 import gameChecks from './goals/game-checks.js'
 import lefongTrap from './goals/lefong-trap.js'
 import megaFork from './goals/mega-fork.js'
@@ -1274,6 +1282,14 @@ export default {
                     )
                 }
             }
+
+            this.checkForAccomplishment(
+                doubleCheckCheckmate(chessJS.fen(), gameInfoJson),
+                'doubleCheckCheckmate',
+                gameInfoJson,
+                moves.length
+            )
+
             this.checkForAccomplishment(
                 gameChecks.stalemateTricks(gameInfoJson, position, moves.length % 2 ? 'black' : 'white'),
                 'stalemateTricks',
