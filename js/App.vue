@@ -169,18 +169,24 @@
             </form>
 
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
-            <ul>
+            <ul class="text-sm">
                 <li>
                     <changelog-date :year="2022" :month="5" :day="8"></changelog-date>
-                    - Added "Double-Check Checkmate" trophy
+                    - Added <a href="https://lichess.org/OtlF3AfG#27" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Double-Check Checkmate" trophy</a>
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="5" :day="5"></changelog-date>
-                    - Added Adoption Match trophies
+                    - Added <a href="https://twitter.com/lichess/status/1521874769288876033" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">Adoption Match trophies</a>
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="4" :day="15"></changelog-date>
-                    - View arena trophies by entering a tournament URL
+                    - View arena trophies by
+                    <span
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        @click.prevent="formFill('https://lichess.org/swiss/48jrx3m6')"
+                    >
+                        entering a tournament URL
+                    </span>
                 </li>
             </ul>
         </div>
