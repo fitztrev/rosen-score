@@ -167,6 +167,22 @@
                     </div>
                 </div>
             </form>
+
+            <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
+            <ul>
+                <li>
+                    <changelog-date :year="2022" :month="5" :day="8"></changelog-date>
+                    - Added "Double-Check Checkmate" trophy
+                </li>
+                <li>
+                    <changelog-date :year="2022" :month="5" :day="5"></changelog-date>
+                    - Added Adoption Match trophies
+                </li>
+                <li>
+                    <changelog-date :year="2022" :month="4" :day="15"></changelog-date>
+                    - View arena trophies by entering a tournament URL
+                </li>
+            </ul>
         </div>
 
         <download-progress
@@ -754,6 +770,7 @@ import tournamentCachedGames from '../cache/swiss-48jrx3m6.js'
 const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
+import ChangelogDate from './components/ChangelogDate.vue'
 import DownloadProgress from './components/DownloadProgress.vue'
 import LichessLogin from './components/LichessLogin.vue'
 import LichessUsername from './components/LichessUsername.vue'
@@ -762,6 +779,7 @@ import TrophyCollection from './components/TrophyCollection.vue'
 export default {
     components: {
         AccomplishmentScore,
+        ChangelogDate,
         DownloadProgress,
         LichessLogin,
         LichessUsername,
