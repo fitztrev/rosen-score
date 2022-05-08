@@ -517,6 +517,7 @@
                         desc="2 pieces are attacking the king and it's checkmate"
                         :games="pointsByAccomplishment['doubleCheckCheckmate']"
                         gameLink="https://lichess.org/OtlF3AfG#27"
+                        youtubeLink="https://youtu.be/8ly5yA6tiEY?t=1082"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
