@@ -648,7 +648,7 @@
                         @register-new-goal="onRegisterNewGoal"
                         title="No Captures before Move 30"
                         desc="All the pieces survive till move 30"
-                        :games="pointsByAccomplishment['noCapturesBeforeMove30']"
+                        :games="pointsByAccomplishment['noCapturesBeforeMove:30']"
                         gameLink="https://lichess.org/iZCR89Dt#65"
                     ></accomplishment-score>
                     <accomplishment-score
@@ -753,6 +753,7 @@ import castleFork from './goals/castle-fork.js'
 import consecutiveCaptures from './goals/consecutive-captures.js'
 import dirtyWins from './goals/dirty-wins.js'
 import doubleCheckCheckmate from './goals/double-check-checkmate.js'
+import firstCapture from './goals/first-capture.js'
 import gameChecks from './goals/game-checks.js'
 import lefongTrap from './goals/lefong-trap.js'
 import megaFork from './goals/mega-fork.js'
@@ -1133,11 +1134,6 @@ export default {
                 position = fenToPosition(chessJS.fen())
                 let piecesOnFiles = getPiecesOnFiles(position)
 
-                if (moveChecks.noCapturesBeforeMove30(move, position)) {
-                    this.addTrophyForColor('white', 'noCapturesBeforeMove30', gameInfoJson, move)
-                    this.addTrophyForColor('black', 'noCapturesBeforeMove30', gameInfoJson, move)
-                }
-
                 this.checkForAccomplishment(
                     moveChecks.castleAfterMove40(moveInfo, move),
                     'castleAfterMove40',
@@ -1349,6 +1345,12 @@ export default {
             )
 
             let allMoves = chessJS.history({ verbose: true })
+
+            let firstCaptureAfterMove30 = firstCapture.noCapturesBeforeMoveNumber(allMoves, 30)
+            if (firstCaptureAfterMove30) {
+                this.addTrophyForColor('white', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
+                this.addTrophyForColor('black', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
+            }
 
             this.checkForAccomplishment(
                 rosenTrap(gameInfoJson, allMoves),

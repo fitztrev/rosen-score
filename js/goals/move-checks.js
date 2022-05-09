@@ -1,10 +1,4 @@
 module.exports = {
-    noCapturesBeforeMove30: function (moveNumber, position) {
-        if (moveNumber == 30 * 2) {
-            return position.replace(/\./g, '').length === 16 * 2
-        }
-    },
-
     promotePawnBeforeMoveNumber: function (moveInfo, move, beforeMove) {
         if (move < beforeMove * 2 && moveInfo.promotion) {
             return move % 2 ? 'black' : 'white'
