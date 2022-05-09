@@ -5,12 +5,22 @@ Looking for contributors who can...
 1. Add possible trophies for consideration (but it will depend on what the games look like):
     1. "Windmill" trophy
     1. Pork / Pork Dork (https://www.youtube.com/watch?v=H1_GSx8jPG8)
-    1. "Double-Check Checkmate" trophy
     1. "Setup for the next game" trophy - 1st rank is restored late in the game?
     1. In the final position, you have N number of mate-in-one's available?
     1. Your opponent had N mate-in-one's throughout the game but you end up winning?
-    1. Use a pinned piece to help deliver mate?
     1. Double pawn diamond
+    1. Ideas from Chess Compositions:
+        1. Pachman mate? https://chess.stackexchange.com/questions/39656/shortest-game-to-elegant-mate
+        1. Pure mate? https://chess.stackexchange.com/questions/24485/what-is-a-pure-checkmate/24491#24491
+        1. https://chess.stackexchange.com/questions/19207/what-is-the-highest-number-of-pieces-from-one-side-that-can-be-involved-in-a-che?rq=1
+    1. Only legal move is checkmate? https://chess.stackexchange.com/a/32287
+    1. Avoid adoption - Lost 9 in a row but won/drew the 10th
+    1. 2 en-passant captures in a row?
+    1. https://twitter.com/agadmator/status/1523276457543446528?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet
+    1. Win 1+0 with no premoves (your clock goes down by at least 0.1 each turn)?
+    1. Win a game in each variant consecutively?
+    1. position from Searching for Bobby Fischer https://www.youtube.com/watch?v=W6poPAiBsLc
+    1. something to do with both players having less than 1 second and playing N moves? https://www.youtube.com/watch?v=kMj0tBELSd8
 
 1. Improve development process
     - I keep a local copy of all of Eric's games as well as other notable players (Chess-Network, etc)
@@ -28,8 +38,6 @@ Looking for contributors who can...
 
 1. Add an "update results" button after the report has been run
     - If someone is speedrunning, let them download only the new games and add to existing report instead of re-running the entire report
-
-1. Option to only download games from last N days (to easily check for newly received trophies)
 
 1. Make it quicker and easier to run on popular players (Magnus, Naroditsky, Agadmator, etc). Cache the results.
 
