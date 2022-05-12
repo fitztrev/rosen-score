@@ -4,10 +4,11 @@ Looking for contributors who can...
 
 1. Add possible trophies for consideration (but it will depend on what the games look like):
     1. "Windmill" trophy
+    1. Knight promotion fork
+        - Promote to knight, fork K+Q
     1. Pork / Pork Dork (https://www.youtube.com/watch?v=H1_GSx8jPG8)
-    1. "Setup for the next game" trophy - 1st rank is restored late in the game?
-    1. In the final position, you have N number of mate-in-one's available?
     1. Your opponent had N mate-in-one's throughout the game but you end up winning?
+    1. In the final position, you have N number of mate-in-one's available?
     1. Double pawn diamond
     1. Ideas from Chess Compositions:
         1. Pachman mate? https://chess.stackexchange.com/questions/39656/shortest-game-to-elegant-mate
@@ -21,6 +22,11 @@ Looking for contributors who can...
     1. Win a game in each variant consecutively?
     1. position from Searching for Bobby Fischer https://www.youtube.com/watch?v=W6poPAiBsLc
     1. something to do with both players having less than 1 second and playing N moves? https://www.youtube.com/watch?v=kMj0tBELSd8
+    1. Opponent fails to checkmate with Bishop+Knight. Game ends in 50 move rule draw
+    1. Traps like the Englund Gambit trap or Tennison Gambit trap where you win the queen
+    1. From feedback form:
+        1. suggestion: crazy time scramble: both players have less than 1 second and after 30 moves I win by time
+        1. "Setup for the next game" trophy - 1st rank is restored late in the game?
 
 1. Improve development process
     - I keep a local copy of all of Eric's games as well as other notable players (Chess-Network, etc)
