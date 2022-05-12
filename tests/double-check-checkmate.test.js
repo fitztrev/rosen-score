@@ -1,4 +1,6 @@
-const doubleCheckCheckmate = require ('../js/goals/double-check-checkmate.js')
+import { describe, expect, test } from 'vitest'
+
+import doubleCheckCheckmate from '../js/goals/double-check-checkmate.js'
 
 describe('test double-check checkmate', () => {
     test.each([

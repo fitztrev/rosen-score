@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     quadrupledPawns: function (files) {
         for (let file of files) {
             if ((file.match(/P/g) || []).length >= 4) {

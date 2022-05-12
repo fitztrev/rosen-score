@@ -2,9 +2,9 @@
 https://chess.stackexchange.com/questions/14795/how-many-windmills-types-exist-in-chess
  */
 
-const { Chess } = require('chess.js')
+import { Chess } from 'chess.js'
 
-module.exports = function (allMoves) {
+export default function (allMoves) {
     for (let moveNum in allMoves) {
         moveNum = parseInt(moveNum)
 

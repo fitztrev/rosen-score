@@ -1,4 +1,6 @@
-const formatSinceDate = require('../js/utils/format-since-date.js')
+import { describe, expect, test } from 'vitest'
+
+import formatSinceDate from '../js/utils/format-since-date.js'
 
 describe('format since date', () => {
     test.each([

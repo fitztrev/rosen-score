@@ -1,4 +1,4 @@
-module.exports = function (square) {
+export default function (square) {
     let neighbors = [
         [-1, -1],
         [-1, 0],

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     getMoveNumberOfFirstCapture: function (allMoves) {
         return allMoves.findIndex((move) => move.captured)
     },

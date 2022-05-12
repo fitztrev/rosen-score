@@ -1,4 +1,6 @@
-const cleanupLichessUsername = require('../js/utils/cleanup-lichess-username.js')
+import { describe, expect, test } from 'vitest'
+
+import cleanupLichessUsername from '../js/utils/cleanup-lichess-username.js'
 
 describe('test cleanup usernames', () => {
     test.each([

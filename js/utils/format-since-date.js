@@ -1,4 +1,4 @@
-module.exports = function (timestamp) {
+export default function (timestamp) {
     let dateInstance = new Date(timestamp)
 
     let date = dateInstance.toLocaleDateString(undefined, {

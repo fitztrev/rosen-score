@@ -1,5 +1,7 @@
-const fenToPosition = require('../js/utils/fen-to-position.js')
-const getPiecesOnFiles = require('../js/utils/position-to-files.js')
+import { describe, expect, test } from 'vitest'
+
+import fenToPosition from '../js/utils/fen-to-position.js'
+import getPiecesOnFiles from '../js/utils/position-to-files.js'
 
 describe('convert fens to position strings', () => {
     test.each([

@@ -1,5 +1,7 @@
-const fenToPosition = require('../js/utils/fen-to-position.js')
-const pieceStructures = require('../js/goals/piece-structures.js')
+import { describe, expect, test } from 'vitest'
+
+import fenToPosition from '../js/utils/fen-to-position.js'
+import pieceStructures from '../js/goals/piece-structures.js'
 
 describe('test no pawn cube', () => {
     test.each([

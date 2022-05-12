@@ -1,4 +1,6 @@
-const scoring = require('../js/utils/scoring.js')
+import { describe, expect, test } from 'vitest'
+
+import scoring from '../js/utils/scoring.js'
 
 test('test scoring by player accomplishment 2', () => {
     let playerScores = [

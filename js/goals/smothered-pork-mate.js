@@ -1,9 +1,9 @@
-const knightMoves = require('../utils/knight-moves.js')
-const pawnCaptures = require('../utils/pawn-captures.js')
+import knightMoves from '../utils/knight-moves.js'
+import pawnCaptures from '../utils/pawn-captures.js'
 
-const smotheredMate = require('./smothered-mate.js')
+import smotheredMate from './smothered-mate.js'
 
-module.exports = function (chessJS, moveInfo) {
+export default function (chessJS, moveInfo) {
     /*
         knight delivers checkmate
         knight attacks both the King and queen

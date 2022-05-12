@@ -2,7 +2,7 @@
  * Modified from https://stackoverflow.com/a/46794337
  */
 
-module.exports = {
+export default {
     byPlayerAccomplishmentWithGames: function (playerScores) {
         var helper = {}
         var result = playerScores.reduce(function (r, o) {

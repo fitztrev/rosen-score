@@ -1,4 +1,4 @@
-module.exports = function (allMoves, gameInfoJson) {
+export default function (allMoves, gameInfoJson) {
     if (!gameInfoJson.winner) {
         return
     }

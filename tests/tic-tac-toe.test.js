@@ -1,6 +1,8 @@
-const fenToPosition = require('../js/utils/fen-to-position.js')
-const pieceStructures = require('../js/goals/piece-structures.js')
-const ticTacToe = require('../js/goals/tic-tac-toe.js')
+import { describe, expect, test } from 'vitest'
+
+import fenToPosition from '../js/utils/fen-to-position.js'
+import pieceStructures from '../js/goals/piece-structures.js'
+import ticTacToe from '../js/goals/tic-tac-toe.js'
 
 describe('test 3x3 cube', () => {
     test.each([

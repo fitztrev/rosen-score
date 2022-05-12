@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     checkWord: function (word, moves, color) {
         if (typeof moves === 'string') {
             moves = moves.split(' ')

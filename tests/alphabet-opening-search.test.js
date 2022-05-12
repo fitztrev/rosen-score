@@ -1,5 +1,7 @@
-const alphabetOpeningSearch = require('../js/utils/alphabet-opening-search.js')
-const { Chess } = require('chess.js')
+import { describe, expect, test } from 'vitest'
+import { Chess } from 'chess.js'
+
+import alphabetOpeningSearch from '../js/utils/alphabet-opening-search.js'
 
 describe('test alphabet opening search', () => {
     test.each([

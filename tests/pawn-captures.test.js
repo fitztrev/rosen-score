@@ -1,4 +1,6 @@
-const pawnCaptures = require('../js/utils/pawn-captures.js')
+import { describe, expect, test } from 'vitest'
+
+import pawnCaptures from '../js/utils/pawn-captures.js'
 
 test('test pawn captures', () => {
     expect(pawnCaptures('black', 'g6')).toStrictEqual([

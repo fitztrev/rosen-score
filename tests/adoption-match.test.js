@@ -1,4 +1,6 @@
-const adoptionMatch = require('../js/goals/adoption-match.js')
+import { describe, expect, test } from 'vitest'
+
+import adoptionMatch from '../js/goals/adoption-match.js'
 
 test('test adoption match (single adoption)', () => {
     adoptionMatch.reset()

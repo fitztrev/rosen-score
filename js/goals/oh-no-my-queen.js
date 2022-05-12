@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     hasPromotedQueen: function (color, moves) {
         return moves.filter((move) => move.color === color[0]).filter((move) => move.promotion).length > 0
     },

@@ -1,6 +1,6 @@
-const { Chess } = require('chess.js')
+import { Chess } from 'chess.js'
 
-module.exports = function (gameInfo, allMoves) {
+export default function (gameInfo, allMoves) {
     if (gameInfo.status !== 'stalemate') {
         return
     }

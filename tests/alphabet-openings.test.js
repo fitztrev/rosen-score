@@ -1,4 +1,6 @@
-const alphabetOpenings = require('../js/goals/alphabet-openings.js')
+import { describe, expect, test } from 'vitest'
+
+import alphabetOpenings from '../js/goals/alphabet-openings.js'
 
 describe('test not alphabet opening', () => {
     test.each([

@@ -1,4 +1,6 @@
-const knightMoves = require('../js/utils/knight-moves.js')
+import { describe, expect, test } from 'vitest'
+
+import knightMoves from '../js/utils/knight-moves.js'
 
 test('test knight moves', () => {
     expect(knightMoves('a1')).toStrictEqual([

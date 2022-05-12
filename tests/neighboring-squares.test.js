@@ -1,4 +1,6 @@
-const neighboringSquares = require('../js/utils/neighboring-squares.js')
+import { describe, expect, test } from 'vitest'
+
+import neighboringSquares from '../js/utils/neighboring-squares.js'
 
 test('test neighboring squares', () => {
     expect(neighboringSquares('a1')).toStrictEqual([

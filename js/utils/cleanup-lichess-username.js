@@ -1,4 +1,4 @@
-module.exports = function (username) {
+export default function (username) {
     if (!username.match(/swiss|tournament/)) {
         username = username.split('/').pop()
     }

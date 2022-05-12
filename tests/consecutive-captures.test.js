@@ -1,5 +1,7 @@
-const { Chess } = require('chess.js')
-const consecutiveCaptures = require('../js/goals/consecutive-captures.js')
+import { describe, expect, test } from 'vitest'
+import { Chess } from 'chess.js'
+
+import consecutiveCaptures from '../js/goals/consecutive-captures.js'
 
 describe('test consecutive captures - any square', () => {
     test.each([

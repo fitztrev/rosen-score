@@ -1,5 +1,7 @@
-const { Chess } = require('chess.js')
-const lefongTrap = require ('../js/goals/lefong-trap.js')
+import { describe, expect, test } from 'vitest'
+import { Chess } from 'chess.js'
+
+import lefongTrap from '../js/goals/lefong-trap.js'
 
 describe('test lefong trap', () => {
     test.each([

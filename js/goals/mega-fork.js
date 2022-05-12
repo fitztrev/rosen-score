@@ -1,6 +1,6 @@
-const knightMoves = require('../utils/knight-moves.js')
+import knightMoves from '../utils/knight-moves.js'
 
-module.exports = function (chessJS, moveInfo, gameInfo) {
+export default function (chessJS, moveInfo, gameInfo) {
     /*
         you move the knight with check
         your knight cannot be captured

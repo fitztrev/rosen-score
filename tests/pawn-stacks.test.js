@@ -1,6 +1,8 @@
-const fenToPosition = require('../js/utils/fen-to-position.js')
-const getPiecesOnFiles = require('../js/utils/position-to-files.js')
-const pieceStructures = require('../js/goals/piece-structures.js')
+import { describe, expect, test } from 'vitest'
+
+import fenToPosition from '../js/utils/fen-to-position.js'
+import getPiecesOnFiles from '../js/utils/position-to-files.js'
+import pieceStructures from '../js/goals/piece-structures.js'
 
 test('test no pawn stacks', () => {
     let fen = '1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1'

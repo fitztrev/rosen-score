@@ -1,5 +1,5 @@
-const neighboringSquares = require('../utils/neighboring-squares.js')
-const knightMoves = require('../utils/knight-moves.js')
+import neighboringSquares from '../utils/neighboring-squares.js'
+import knightMoves from '../utils/knight-moves.js'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
 const get_piece_positions = (game, piece) => {
@@ -18,7 +18,7 @@ const get_piece_positions = (game, piece) => {
         })
 }
 
-module.exports = function (chessJS, moveInfo) {
+export default function (chessJS, moveInfo) {
     /*
         knight delivers checkmate
         and the King is fully surrounded by his own pieces

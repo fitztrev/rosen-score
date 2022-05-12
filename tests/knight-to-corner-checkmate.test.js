@@ -1,5 +1,7 @@
-const { Chess } = require('chess.js')
-const moveChecks = require ('../js/goals/move-checks.js')
+import { describe, expect, test } from 'vitest'
+import { Chess } from 'chess.js'
+
+import moveChecks from '../js/goals/move-checks.js'
 
 describe('knight to the corner checkmate', () => {
     test.each([

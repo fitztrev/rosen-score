@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     promotePawnBeforeMoveNumber: function (moveInfo, move, beforeMove) {
         if (move < beforeMove * 2 && moveInfo.promotion) {
             return move % 2 ? 'black' : 'white'

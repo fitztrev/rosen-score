@@ -1,4 +1,4 @@
-module.exports = function (allMoves) {
+export default function (allMoves) {
     for (let moveNum in allMoves) {
         moveNum = parseInt(moveNum)
 

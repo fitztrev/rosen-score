@@ -19,8 +19,6 @@ Run the test suite:
 
 ```bash
 npm run test
-## or
-npx jest --watchAll ## to automatically run on any change
 ```
 
 ### Frameworks/Libraries Used

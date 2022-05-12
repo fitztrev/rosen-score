@@ -1,4 +1,4 @@
-module.exports = function (fen) {
+export default function (fen) {
     fen = fen.split(' ')[0]
 
     return fen

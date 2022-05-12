@@ -1,4 +1,4 @@
-module.exports = function (moves) {
+export default function (moves) {
     let getPawnPushes = function (moves, color) {
         moves = moves
             .filter((move) => move.color === color)

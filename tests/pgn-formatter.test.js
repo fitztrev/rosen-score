@@ -1,4 +1,6 @@
-const pgnFormatter = require('../js/utils/pgn-formatter.js')
+import { describe, expect, test } from 'vitest'
+
+import pgnFormatter from '../js/utils/pgn-formatter.js'
 
 describe('remove move # from pgn', () => {
     test.each([

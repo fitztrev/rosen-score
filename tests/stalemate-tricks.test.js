@@ -1,6 +1,8 @@
-const fenToPosition = require('../js/utils/fen-to-position.js')
-const gameChecks = require('../js/goals/game-checks.js')
-const pieceStructures = require('../js/goals/piece-structures.js')
+import { describe, expect, test } from 'vitest'
+
+import fenToPosition from '../js/utils/fen-to-position.js'
+import gameChecks from '../js/goals/game-checks.js'
+import pieceStructures from '../js/goals/piece-structures.js'
 
 describe('test no stalemate tricks', () => {
     test.each([

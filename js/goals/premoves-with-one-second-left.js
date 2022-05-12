@@ -1,4 +1,4 @@
-module.exports = function (gameInfoJson) {
+export default function (gameInfoJson) {
     if (gameInfoJson.status !== 'mate') {
         return
     }

@@ -1,4 +1,4 @@
-module.exports = function (colorToMove, squareToAttack) {
+export default function (colorToMove, squareToAttack) {
     let pawnsAttackFrom
 
     if (colorToMove[0] === 'w') {

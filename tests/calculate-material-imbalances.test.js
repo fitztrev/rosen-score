@@ -1,5 +1,7 @@
-const calculateMaterialImbalance = require('../js/utils/calculate-material-imbalance.js')
-const fenToPosition = require('../js/utils/fen-to-position.js')
+import { describe, expect, test } from 'vitest'
+
+import calculateMaterialImbalance from '../js/utils/calculate-material-imbalance.js'
+import fenToPosition from '../js/utils/fen-to-position.js'
 
 describe('test material imbalance calculations', () => {
     test.each([

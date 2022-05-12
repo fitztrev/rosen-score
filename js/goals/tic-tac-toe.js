@@ -1,6 +1,6 @@
 let alreadyAwardedForGameIds = []
 
-module.exports = function (cubeString, gameId) {
+export default function (cubeString, gameId) {
     // based on approach from this blog post:
     // https://dev.to/thetomy/check-for-a-tic-tac-toe-winner-with-regular-expressions-2nch
 

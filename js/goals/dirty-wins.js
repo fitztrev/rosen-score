@@ -1,6 +1,6 @@
-const calculateMaterialImbalance = require('../utils/calculate-material-imbalance.js')
+import calculateMaterialImbalance from '../utils/calculate-material-imbalance.js'
 
-module.exports = {
+export default {
     winInsufficientMaterial: function (gameInfo, position) {
         let piecesRemaining = ''
 

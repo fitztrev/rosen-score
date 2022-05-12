@@ -1,7 +1,7 @@
-const calculateMaterialImbalance = require('../utils/calculate-material-imbalance.js')
-const pieceStructures = require('./piece-structures.js')
+import calculateMaterialImbalance from '../utils/calculate-material-imbalance.js'
+import pieceStructures from './piece-structures.js'
 
-module.exports = {
+export default {
     stalemateTricks: function (gameInfoJson, position, whoseTurn) {
         if (gameInfoJson.status === 'stalemate') {
             // if there was only a bishop, call it a draw

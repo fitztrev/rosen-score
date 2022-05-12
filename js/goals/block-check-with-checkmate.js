@@ -1,4 +1,4 @@
-module.exports = function (allMoves, gameInfoJson) {
+export default function (allMoves, gameInfoJson) {
     for (let moveNum in allMoves) {
         moveNum = parseInt(moveNum)
 

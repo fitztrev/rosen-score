@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     winner: null,
     loser: null,
     winStreak: 1,

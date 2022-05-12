@@ -1,4 +1,4 @@
-module.exports = function (position) {
+export default function (position) {
     let values = position.split('').map(function (piece) {
         if (piece === 'p') return -1
         else if (piece === 'n' || piece === 'b') return -3

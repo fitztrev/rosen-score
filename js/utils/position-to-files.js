@@ -1,4 +1,4 @@
-module.exports = function (position) {
+export default function (position) {
     let files = []
 
     for (let piece in position) {

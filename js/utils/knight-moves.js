@@ -1,4 +1,4 @@
-module.exports = function (square) {
+export default function (square) {
     let knightMoves = [
         [-2, -1],
         [-2, +1],

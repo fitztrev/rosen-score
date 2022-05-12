@@ -1,6 +1,6 @@
-const { Ic } = require('isepic-chess')
+import { Ic } from 'isepic-chess'
 
-module.exports = function (fen, gameInfo) {
+export default function (fen, gameInfo) {
     if (gameInfo.status !== 'mate') {
         return
     }
