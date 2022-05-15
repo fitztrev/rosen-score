@@ -274,7 +274,7 @@
                         desc="King goes to the corner instead of capturing the queen"
                         :games="pointsByAccomplishment['rosenTrap']"
                         gameLink="https://lichess.org/fBcFhVs4#90"
-                        youtubeLink="https://www.youtube.com/watch?v=9kUhcuNauo0"
+                        youtubeLink="https://youtu.be/ixAw0ED-Sfs"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
