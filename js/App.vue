@@ -57,17 +57,6 @@
                                 click here to see EricRosen's
                             </span>
                         </div>
-
-                        <!-- <div class="text-sm mt-3 bg-indigo-200 p-2 rounded-lg text-sky-800">
-                            <span class="uppercase font-bold">New:</span>
-                            Enter the URL of an arena to see all the trophies awarded during a tournament. For example,
-                            <span
-                                class="dotted-underline text-sky-900 cursor-pointer"
-                                @click.prevent="formFill('https://lichess.org/swiss/48jrx3m6')"
-                            >
-                                click here to see the trophies from Eric's Ukraine Charity Swiss tournament
-                            </span>
-                        </div> -->
                     </div>
                 </div>
 
@@ -180,7 +169,7 @@
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="4" :day="15"></changelog-date>
-                    - View arena trophies by
+                    - See who got trophies in an arena by
                     <span
                         class="dotted-underline text-sky-900 cursor-pointer"
                         @click.prevent="formFill('https://lichess.org/swiss/48jrx3m6')"
