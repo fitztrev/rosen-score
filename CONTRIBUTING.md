@@ -3,10 +3,21 @@
 Looking for contributors who can...
 
 1. Add possible trophies for consideration (but it will depend on what the games look like):
+    1. Crazy Rook
     1. "Windmill" trophy
     1. Knight promotion fork
         - Promote to knight, fork K+Q
+    1. https://www.youtube.com/watch?v=8zzbuQQD0jM
+    1. Tactics trophies
+        1. Queen takes a piece, queen takes queen, knight fork wins back queen?
     1. Pork / Pork Dork (https://www.youtube.com/watch?v=H1_GSx8jPG8)
+    1. En passant is the only legal move? https://chess.stackexchange.com/questions/13239/when-en-passant-is-the-only-legal-move
+    1. 8+ pawn moves on the same file?
+        - https://chess.stackexchange.com/questions/35460/how-many-times-can-the-same-pawn-move-be-made-in-a-game/35469#35469
+    1. 3+ pins?
+        - https://chess.stackexchange.com/questions/31871/most-pins-in-a-chess-game/31874#31874
+    1. Quick pawn endgame?
+        - All pieces captured before move N?
     1. Your opponent had N mate-in-one's throughout the game but you end up winning?
     1. In the final position, you have N number of mate-in-one's available?
     1. Double pawn diamond
@@ -17,6 +28,7 @@ Looking for contributors who can...
     1. Only legal move is checkmate? https://chess.stackexchange.com/a/32287
     1. Avoid adoption - Lost 9 in a row but won/drew the 10th
     1. 2 en-passant captures in a row?
+        - https://chess.stackexchange.com/questions/30431/games-with-consecutive-en-passants
     1. https://twitter.com/agadmator/status/1523276457543446528?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet
     1. Win 1+0 with no premoves (your clock goes down by at least 0.1 each turn)?
     1. Win a game in each variant consecutively?
@@ -52,9 +64,6 @@ Looking for contributors who can...
 
 1. Shareable links
     - Generate a shareable link so others can see results and games
-
-1. Upgrade to latest chess.js (0.13)
-    - Tests fail after https://github.com/jhlywa/chess.js/pull/318
 
 1. Setup Github workflows
     - Run tests
