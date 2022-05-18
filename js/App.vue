@@ -559,7 +559,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Knight-to-the-Corner Checkmate"
-                        desc="Knight delivers checkmate from a corner of the board"
+                        desc="Knight moves to a corner of the board with checkmate"
                         :games="pointsByAccomplishment['knightCornerMate']"
                         gameLink="https://lichess.org/mBaVt3Hy#61"
                     ></accomplishment-score>

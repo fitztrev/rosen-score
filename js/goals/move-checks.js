@@ -1,19 +1,19 @@
 export default {
     promotePawnBeforeMoveNumber: function (moveInfo, move, beforeMove) {
         if (move < beforeMove * 2 && moveInfo.promotion) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     castleAfterMove40: function (moveInfo, move) {
         if (move >= 40 * 2 && moveInfo.san.includes('O-O')) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     pawnCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.piece === 'p' && !moveInfo.promotion && moveInfo.san.endsWith('#')) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
@@ -32,43 +32,43 @@ export default {
             moveInfo.san.endsWith('#') &&
             corners.includes(moveInfo.to)
         ) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     enPassantCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.piece === 'p' && moveInfo.san.endsWith('#') && moveInfo.flags === 'e') {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     castleKingsideWithCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.san === 'O-O#') {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     castleQueensideWithCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.san === 'O-O-O#') {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     checkmateWithKing: function (moveInfo, move) {
         if (moveInfo && moveInfo.piece == 'k' && moveInfo.san.endsWith('#')) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     promoteToBishopCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.promotion && moveInfo.promotion === 'b' && moveInfo.san.endsWith('#')) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 
     promoteToKnightCheckmate: function (moveInfo, move) {
         if (moveInfo && moveInfo.promotion && moveInfo.promotion === 'n' && moveInfo.san.endsWith('#')) {
-            return move % 2 ? 'black' : 'white'
+            return moveInfo.color
         }
     },
 }
