@@ -23,6 +23,7 @@ describe('test double-check checkmate', () => {
         'test fen: %p',
         (fen, color) => {
             expect(doubleCheckCheckmate(fen, {status: 'mate', winner: color})).toBe(color)
+            expect(doubleCheckCheckmate(fen, {status: 'draw', winner: color})).toBeFalsy()
         }
     )
 })

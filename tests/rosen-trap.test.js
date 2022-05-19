@@ -17,6 +17,7 @@ describe('test rosen trap', () => {
             chessJsInstance.load_pgn(moves)
 
             expect(rosenTrap({ status: 'stalemate' }, chessJsInstance.history({ verbose: true }))).toBe(color)
+            expect(rosenTrap({ status: 'checkmate' }, chessJsInstance.history({ verbose: true }))).toBeFalsy()
         }
     )
 })

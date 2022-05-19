@@ -8,7 +8,7 @@ describe('test smothered pork', () => {
         [
             // https://lichess.org/39vtGApM#47
             'd4 Nf6 Bf4 g6 Nc3 d5 e3 a6 h4 Bg7 h5 Nxh5 Rxh5 gxh5 Qxh5 c6 Qh2 e5 Bxe5 O-O Qg3 f6 Bxb8 Bf5 Bd6 Re8 Bd3 Bg6 Bf4 f5 Nf3 Qb6 O-O-O c5 Nxd5 Qc6 Bc4 Kh8 Ne5 Qe6 Rh1 Bf7 Qh3 Bg8 Ne7 Qxe7 Ng6#',
-            'white',
+            'w',
         ],
     ])(
         'test moves: %p',

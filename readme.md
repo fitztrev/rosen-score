@@ -15,10 +15,11 @@ npm install
 npm run start
 ```
 
-Run the test suite:
+Run the test suite + code coverage:
 
 ```bash
 npm run test
+npm run coverage
 ```
 
 ### Frameworks/Libraries Used

@@ -41,7 +41,7 @@ export default function (chessJS, moveInfo) {
             }
         }
 
-        return moveInfo.color === 'w' ? 'white' : 'black'
+        return moveInfo.color
     }
 
     return false
