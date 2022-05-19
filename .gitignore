@@ -1,11 +1,9 @@
+node_modules
+
 /.parcel-cache
 /dist
-/node_modules
 
-/scripts/EricRosen-AllGames.js
-/scripts/EricRosen-AllGames.txt
-
-/cache/eric.txt
+/cache/*.txt
 
 /coverage
 /data/*
