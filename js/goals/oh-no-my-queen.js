@@ -25,19 +25,16 @@ export default {
                     let whiteQueensRemaining = (position.match(/Q/) || []).length
 
                     if (
-                        winningColor === 'white' &&
-                        whiteQueensRemaining === 0 &&
-                        blackQueensRemaining >= 1 &&
-                        !this.hasPromotedQueen('white', allMoves)
+                        (winningColor === 'white' &&
+                            whiteQueensRemaining === 0 &&
+                            blackQueensRemaining >= 1 &&
+                            !this.hasPromotedQueen('white', allMoves)) ||
+                        (winningColor === 'black' &&
+                            whiteQueensRemaining >= 1 &&
+                            blackQueensRemaining === 0 &&
+                            !this.hasPromotedQueen('black', allMoves))
                     ) {
-                        return 'white'
-                    } else if (
-                        winningColor === 'black' &&
-                        blackQueensRemaining === 0 &&
-                        whiteQueensRemaining >= 1 &&
-                        !this.hasPromotedQueen('black', allMoves)
-                    ) {
-                        return 'black'
+                        return winningColor
                     }
                 }
             }

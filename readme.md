@@ -15,11 +15,13 @@ npm install
 npm run start
 ```
 
-Run the test suite + code coverage:
-
 ```bash
+## Run the test suite
 npm run test
+
+## Check code coverage
 npm run coverage
+open coverage/index.html
 ```
 
 ### Frameworks/Libraries Used

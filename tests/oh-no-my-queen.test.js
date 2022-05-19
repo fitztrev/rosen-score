@@ -11,6 +11,11 @@ describe('test oh-no-my-queen', () => {
             'e4 e5 Nf3 Nc6 c3 Nf6 d4 exd4 e5 Ng4 cxd4 d6 h3 dxe5 hxg4 exd4 Bb5 Bd7 Bf4 Be7 Nbd2 O-O Qc2 h6 g5 f5 Bc4+ Kh8 gxh6 gxh6 Bxh6 Kh7 Bxf8+ Kg6 Nh4+ Kf6 Bh6 Ne5 Qe4 fxe4 Nxe4#',
             'white',
         ],
+        [
+            // https://lichess.org/MJ8rhTBt/black#29
+            'd4 d5 e3 c5 dxc5 e5 Bb5+ Nc6 Bxc6+ bxc6 Nc3 Bxc5 Bd2 Nf6 Na4 Bd6 Nf3 e4 Nd4 Qc7 Nc3 O-O g3 Bg4 Nce2 Nd7 c3 c5 Nb5 Ne5 Nxc7 Nf3+ Kf1 Bh3#',
+            'black',
+        ],
     ])(
         'test moves: %p',
         (moves, color) => {

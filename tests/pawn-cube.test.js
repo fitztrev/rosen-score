@@ -29,6 +29,7 @@ describe('test no pawn cube', () => {
         'test FEN: %p',
         (fen) => {
             expect(pieceStructures.pawnCube(fenToPosition(fen))).toBe(false)
+            expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toBe(false)
         }
     )
 })
@@ -58,6 +59,7 @@ describe('test pawn cubes', () => {
         'test FEN: %p %p',
         (color, fen) => {
             expect(pieceStructures.pawnCube(fenToPosition(fen))).toBe(color)
+            expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toBe(false)
         }
     )
 })

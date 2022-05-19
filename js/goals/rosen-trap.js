@@ -36,7 +36,7 @@ export default function (gameInfo, allMoves) {
                     for (const kingMove of chessJs.moves({ verbose: true })) {
                         // if king could move to the square the queen captured on...
                         if (kingMove.to === allMoves[moveNum].to) {
-                            return allMoves.length % 2 ? 'black' : 'white'
+                            return kingMove.color
                         }
                     }
                 }
