@@ -812,6 +812,7 @@ export default {
                 return now - (this.filter.sinceHoursAgo * 60 * 60 * 1000)
             }
         },
+
         sinceDateFormatted: function () {
             if (this.sinceTimestamp) {
                 return formatSinceDate(this.sinceTimestamp)
@@ -821,9 +822,11 @@ export default {
         totalAccomplishmentsCompleted: function () {
             return Object.keys(this.pointsByAccomplishment).length
         },
+
         totalAccomplishmentsCompletedPercentage: function () {
             return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
         },
+
         trophyCount: function () {
             return Object.values(this.pointsByAccomplishment)
                 .map((o) => Object.values(o))
@@ -838,9 +841,11 @@ export default {
                 return ''
             }
         },
+
         usingCachedData: function () {
             return this.reportObject.data.username === 'EricRosen' && this.filter.sinceHoursAgo === 0
         },
+
         isLocalEnv: function () {
             return window.location.href.includes('localhost')
         },
