@@ -1,7 +1,49 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
+import smotheredMate from '../js/goals/smothered-mate.js'
 import smotheredPorkMate from '../js/goals/smothered-pork-mate.js'
+
+describe('test smothered mate', () => {
+    test.each([
+        [
+            // https://lichess.org/YOdmkxyk#59
+            'd4 Nf6 Bf4 d5 e3 e6 Nd2 c5 Ngf3 Nc6 c3 Bd6 Bg3 O-O Bb5 Ne7 Bd3 Nf5 Ne5 Nxg3 hxg3 g6 g4 Ne8 f4 Bxe5 dxe5 f6 exf6 Nxf6 g5 Nh5 Rxh5 gxh5 Qxh5 Qe7 Nf3 Bd7 Ne5 Be8 Qh6 Qg7 Qxe6+ Kh8 O-O-O Bf7 Qd6 c4 Bc2 Rad8 Qc5 Rfe8 Qd4 Bg8 Rh1 Rd6 Bg6 Rxg6 Nxg6#',
+            'w',
+        ],
+        [
+            // https://lichess.org/ZGrQDhcf/black#56
+            'c4 e6 g3 d5 Bg2 Nf6 Nf3 dxc4 O-O Nbd7 Qa4 c6 Qxc4 Be7 Qc2 O-O b3 c5 Bb2 b5 d4 Bb7 dxc5 Nxc5 Rd1 Qb6 Nc3 Rac8 Rac1 a6 Qb1 Nce4 Nxe4 Nxe4 Qa1 Qxf2+ Kh1 Qe3 Bd4 Nf2+ Kg1 Nh3+ Kh1 Rxc1 Rxc1 Nf2+ Kg1 Nh3+ Kh1 Qh6 Qb2 Ng5 Rf1 Ne4 Bg1 Nxg3#',
+            'b',
+        ],
+    ])(
+        'test moves: %p',
+        (moves, color) => {
+            let chessJsInstance = new Chess()
+            chessJsInstance.load_pgn(moves)
+            let lastMove = chessJsInstance.history({ verbose: true }).pop()
+
+            expect(smotheredMate(chessJsInstance, lastMove)).toBe(color)
+        }
+    )
+})
+
+describe('test not smothered mate', () => {
+    test.each([
+        // https://lichess.org/cZkFvnql#35
+        // king is not smothered
+        'e4 e5 Nf3 Nc6 Bc4 Bc5 c3 d6 d4 Bb6 Ng5 Nh6 Qh5 Qe7 h3 O-O O-O Kh8 Kh1 f6 Nf3 Nd8 Nh4 Ne6 Bxh6 gxh6 f4 exd4 f5 dxc3 Nxc3 Ng5 Qxh6 Nxe4 Ng6#',
+    ])(
+        'test moves: %p',
+        (moves) => {
+            let chessJsInstance = new Chess()
+            chessJsInstance.load_pgn(moves)
+            let lastMove = chessJsInstance.history({ verbose: true }).pop()
+
+            expect(smotheredPorkMate(chessJsInstance, lastMove)).toBe(false)
+        }
+    )
+})
 
 describe('test smothered pork', () => {
     test.each([
@@ -17,6 +59,7 @@ describe('test smothered pork', () => {
             chessJsInstance.load_pgn(moves)
             let lastMove = chessJsInstance.history({ verbose: true }).pop()
 
+            expect(smotheredMate(chessJsInstance, lastMove)).toBe(color)
             expect(smotheredPorkMate(chessJsInstance, lastMove)).toBe(color)
         }
     )

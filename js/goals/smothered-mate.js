@@ -43,6 +43,4 @@ export default function (chessJS, moveInfo) {
 
         return moveInfo.color
     }
-
-    return false
 }
