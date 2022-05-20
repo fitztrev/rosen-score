@@ -401,7 +401,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Egg"
-                        desc="Win after spelling &ldquo;egg&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;egg&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:egg']"
                         gameLink="https://lichess.org/1SHm5hr6/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
@@ -409,7 +409,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Double Egg (EggEgg)"
-                        desc="Win after spelling &ldquo;eggegg&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;eggegg&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:eggegg']"
                         gameLink="https://lichess.org/f2zcFx6P/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
@@ -417,7 +417,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Bad Egg"
-                        desc="Win after spelling &ldquo;badegg&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;badegg&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:badegg']"
                         gameLink="https://lichess.org/mu679bhr/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1472"
@@ -425,7 +425,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="BeachCaf&eacute;"
-                        desc="Win after spelling &ldquo;beachcafe&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;beachcafe&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:beachcafe']"
                         gameLink="https://lichess.org/p5Ldb6wA"
                         youtubeLink="https://www.youtube.com/watch?v=kGYOzdBsjcg"
@@ -433,7 +433,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Beef"
-                        desc="Win after spelling &ldquo;beef&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;beef&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:beef']"
                         gameLink="https://lichess.org/dUkHbvOR"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1583"
@@ -441,7 +441,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Cabbage"
-                        desc="Win after spelling &ldquo;cabbage&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;cabbage&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:cabbage']"
                         gameLink="https://lichess.org/LMpwnmLz"
                         youtubeLink="https://www.youtube.com/watch?v=GDhtMqBk9M4"
@@ -449,7 +449,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Chad"
-                        desc="Win after spelling &ldquo;chad&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;chad&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:chad']"
                         gameLink="https://lichess.org/AaNGZKcj/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1305"
@@ -457,7 +457,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Headache"
-                        desc="Win after spelling &ldquo;headache&rdquo; with pawn moves in the opening"
+                        desc="Win after spelling &ldquo;headache&rdquo; with pawn pushes in the opening"
                         :games="pointsByAccomplishment['alphabet:headache']"
                         gameLink="https://lichess.org/SdbD4znE"
                     ></accomplishment-score>

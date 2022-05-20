@@ -7,6 +7,9 @@ describe('test not alphabet opening', () => {
         ['egg', 'a3 a6 b3 b6 c3 c6'],
         ['egg', 'x3 x6 e3 Nf6 g3 a6 g4'],
         ['egg', 'e3 x1 g3 x1 Bg2'],
+
+        // captures don't count, only pawn pushes
+        ['egg', 'e3 x1 g3 x1 gxf4'],
     ])(
         'test alphabet opening: %p',
         (word, moves) => {
