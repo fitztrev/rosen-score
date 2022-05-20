@@ -111,6 +111,23 @@ export default {
         return colors
     },
 
+    pawnDiamondSolid: function (position) {
+        let colors = []
+        let match
+
+        match = position.match(/P([A-Za-z\.]{6})PPP([A-Za-z\.]{6})P/)
+        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+            colors.push('white')
+        }
+
+        match = position.match(/p([A-Za-z\.]{6})ppp([A-Za-z\.]{6})p/)
+        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+            colors.push('black')
+        }
+
+        return colors
+    },
+
     _connectEightOnRank: function (position, rank) {
         let colors = []
 

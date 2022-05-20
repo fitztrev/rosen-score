@@ -160,6 +160,10 @@
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
             <ul class="text-sm">
                 <li>
+                    <changelog-date :year="2022" :month="5" :day="20"></changelog-date>
+                    - Added <a href="https://lichess.org/Ak0Bhmx8/black#46" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Solid Pawn Diamond" trophy</a>
+                </li>
+                <li>
                     <changelog-date :year="2022" :month="5" :day="8"></changelog-date>
                     - Added <a href="https://lichess.org/OtlF3AfG#27" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Double-Check Checkmate" trophy</a>
                 </li>
@@ -301,11 +305,10 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Quadrupled Pawns"
-                        desc="4 pawns on the same file"
-                        :games="pointsByAccomplishment['quadrupledPawns']"
-                        gameLink="https://lichess.org/aqADXuJT#85"
-                        youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
+                        title="Solid Pawn Diamond"
+                        desc="A 5 carat pawn diamond"
+                        :games="pointsByAccomplishment['pawnDiamondSolid']"
+                        gameLink="https://lichess.org/Ak0Bhmx8/black#46"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -351,13 +354,14 @@
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
                     ></accomplishment-score>
-<!--                     <accomplishment-score
+                    <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Triple Double Pawns"
-                        desc="3 files with doubled pawns"
-                        :games="pointsByAccomplishment['tripleDoublePawns']"
-                        gameLink="https://lichess.org/kASuBCou/black#38"
-                    ></accomplishment-score> -->
+                        title="Quadrupled Pawns"
+                        desc="4 pawns on the same file"
+                        :games="pointsByAccomplishment['quadrupledPawns']"
+                        gameLink="https://lichess.org/aqADXuJT#85"
+                        youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
+                    ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="6 Pawns on the Same File"
@@ -1214,7 +1218,10 @@ export default {
                     gameInfoJson,
                     move
                 )
+
                 this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.pawnDiamondSolid(position), 'pawnDiamondSolid', gameInfoJson, move)
+
                 this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.knightRectangle(position),
