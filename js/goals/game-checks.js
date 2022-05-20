@@ -35,6 +35,7 @@ export default {
         return false
     },
 
+    // https://lichess.org/study/e7RNJTUp
     // twoKnightsVsPawnMate: function (gameInfoJson, position) {
     //     let piecesRemaining = position
     //         .replace(/[k\.]/gi, '')
@@ -58,21 +59,27 @@ export default {
     // },
 
     fourKnightMate: function (gameInfoJson, position) {
+        if (gameInfoJson.status !== 'mate') {
+            return
+        }
+
         let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
-        if (gameInfoJson.status === 'mate') {
-            if (piecesRemaining === 'NNNN') {
-                return 'white'
-            } else if (piecesRemaining === 'nnnn') {
-                return 'black'
-            }
+        if (piecesRemaining === 'NNNN') {
+            return 'white'
+        } else if (piecesRemaining === 'nnnn') {
+            return 'black'
         }
 
         return false
     },
 
     fourKnightCubeMate: function (gameInfoJson, position) {
-        if (gameInfoJson.status === 'mate' && pieceStructures.knightCube(position).length) {
+        if (gameInfoJson.status !== 'mate') {
+            return
+        }
+
+        if (pieceStructures.knightCube(position).length) {
             let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
             if (piecesRemaining === 'NNNN') {
