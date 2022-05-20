@@ -754,7 +754,6 @@ import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left.js'
 import rosenTrap from './goals/rosen-trap.js'
 import smotheredMate from './goals/smothered-mate.js'
 import smotheredPorkMate from './goals/smothered-pork-mate.js'
-import ticTacToe from './goals/tic-tac-toe.js'
 import windmill from './goals/windmill.js'
 
 const controller = new AbortController()
@@ -1061,7 +1060,11 @@ export default {
         },
 
         checkForAccomplishment: function (color, label, game, onMoveNumber) {
-            if (color) {
+            if (typeof color === 'object') {
+                for(const c of color) {
+                    this.addTrophyForColor(c, label, game, onMoveNumber)
+                }
+            } else if (color) {
                 this.addTrophyForColor(color, label, game, onMoveNumber)
             }
         },
@@ -1251,11 +1254,12 @@ export default {
                     gameInfoJson,
                     move
                 )
-
-                if (pieceStructures.sixPawnsInTheSameFile(position)) {
-                    this.addTrophyForColor('white', 'sixPawnsInTheSameFile', gameInfoJson, move)
-                    this.addTrophyForColor('black', 'sixPawnsInTheSameFile', gameInfoJson, move)
-                }
+                this.checkForAccomplishment(
+                    pieceStructures.sixPawnsInTheSameFile(position),
+                    'sixPawnsInTheSameFile',
+                    gameInfoJson,
+                    move
+                )
 
                 this.checkForAccomplishment(smotheredMate(chessJS, moveInfo), 'smotheredMate', gameInfoJson, move)
                 this.checkForAccomplishment(

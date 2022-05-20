@@ -72,7 +72,7 @@ export default {
     },
 
     fourKnightCubeMate: function (gameInfoJson, position) {
-        if (gameInfoJson.status === 'mate' && pieceStructures.knightCube(position)) {
+        if (gameInfoJson.status === 'mate' && pieceStructures.knightCube(position).length) {
             let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
             if (piecesRemaining === 'NNNN') {

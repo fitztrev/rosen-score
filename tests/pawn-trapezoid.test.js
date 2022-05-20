@@ -26,7 +26,7 @@ describe('test pawn trapezoid', () => {
     ])(
         'test FEN: %p %p',
         (color, fen) => {
-            expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toBe(color)
+            expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toStrictEqual([color])
         }
     )
 })
@@ -54,7 +54,7 @@ describe('test no pawn trapezoid', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toBe(false)
+            expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toStrictEqual([])
         }
     )
 })

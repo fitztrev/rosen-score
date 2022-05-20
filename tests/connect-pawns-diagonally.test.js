@@ -9,7 +9,9 @@ describe('test not connect 4/5', () => {
     ])(
         'test FEN: %p',
         (fen) => {
-            expect(pieceStructures.connectFour(fenToPosition(fen))).toBe(false)
+            expect(pieceStructures.connectFour(fenToPosition(fen))).toStrictEqual([])
+            expect(pieceStructures.connectFive(fenToPosition(fen))).toStrictEqual([])
+            expect(pieceStructures.connectSix(fenToPosition(fen))).toStrictEqual([])
         }
     )
 })
@@ -23,7 +25,7 @@ describe('test connect 4', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            expect(pieceStructures.connectFour(fenToPosition(fen))).toBe(color)
+            expect(pieceStructures.connectFour(fenToPosition(fen))).toStrictEqual([color])
         }
     )
 })
@@ -37,7 +39,7 @@ describe('test connect 5', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            expect(pieceStructures.connectFive(fenToPosition(fen))).toBe(color)
+            expect(pieceStructures.connectFive(fenToPosition(fen))).toStrictEqual([color])
         }
     )
 })
@@ -51,7 +53,7 @@ describe('test connect 6', () => {
     ])(
         'test FEN: %p',
         (color, fen) => {
-            expect(pieceStructures.connectSix(fenToPosition(fen))).toBe(color)
+            expect(pieceStructures.connectSix(fenToPosition(fen))).toStrictEqual([color])
         }
     )
 })
