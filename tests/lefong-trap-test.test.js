@@ -16,6 +16,11 @@ describe('test lefong trap', () => {
             'b',
         ],
         [
+            // https://lichess.org/grYgSoUq/black
+            '1. d4 Nf6 2. Nf3 d5 3. g3 Bh3 4. Bg2 Bxg2',
+            'b',
+        ],
+        [
             // https://lichess.org/0Gc7xOLO#5
             'e4 g6 d4 Bg7 Bh6 e6 Bxg7 Ne7 Bxh8 d6 Qg4 Bd7 Bc4 Nbc6 Nf3 Na5 Qh4 Nxc4 Qh6 c5 Qxh7 Qa5+ c3 O-O-O Qxf7 Nc6 Bf6 Re8 Ng5 Nxb2 Nxe6 Rxe6 Qf8+ Re8 Qxd6 Nd3+ Ke2 cxd4 Kxd3 dxc3 Nxc3 Qa6+ Kc2 Qc4 Rab1 Nb4+ Kd2 Nc6 Qa3 Re6 Rxb7 Kxb7 Qb2+ Ka8 Rb1',
             'w',
@@ -40,6 +45,15 @@ describe('test no lefong trap', () => {
         // https://lichess.org/4ktfWlOv#11
         // bishop recaptured
         'd4 Nf6 Bf4 d6 Nc3 Nbd7 Nf3 g6 Qd2 Bg7 Bh6 O-O Bxg7 Kxg7 e4 Ne5 dxe5 Nd7 exd6 cxd6 h4 h6 O-O-O a6 Bc4 Qa5 Bb3 Nc5 h5 g5 Nd4 Bd7 f4 f6 Rhe1 gxf4 Qxf4 Nxb3+ Nxb3 Qxh5 Nd5 Rae8 Kb1 Qg5 Qf3 Bc6 Rh1 e6 Nf4 f5 Nh5+ Kh7 Qc3 Bxe4 Nd4 e5 Nf3 Qe7 Rde1 Rg8 Qe3 Rg6 Ng3 d5 Nh4 Rf6 Nxe4 fxe4 Nf5 Qe6 Nxh6 Rxh6 Rhf1 Rh8 Qa3 Rg8 Qb3 Rg7 a4 d4 Qxe6 Rxe6 Rh1+ Kg6 Rxe4 Kf5 Ree1 Rxg2 Rhf1+ Kg5 Rd1 e4 Rc1 e3 Rg1 Rxg1 Rxg1+ Kf4 Re1 Kf3 Kc1 Kf2 Rh1 e2 Rh2+ Kg1 Rxe2 Rxe2 Kd1 Re3 Kd2 Kf2 c3 dxc3+',
+
+        // resign before bishop captured
+        '1. d4 Nf6 2. Nf3 d5 3. g3 Bh3 4. Bg2',
+
+        // early termination
+        '1. d4 d5',
+
+        // a failed lefong
+        '1. d4 Nf6 2. Nf3 d5 3. g3 Bh3 4. Bxh3',
 
         // https://lichess.org/juNVZaHK#11
         // white bishop was protected

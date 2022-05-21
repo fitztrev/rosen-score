@@ -93,7 +93,11 @@ export default {
     },
 
     sixKnightRectangleMate: function (gameInfoJson, position) {
-        if (gameInfoJson.status === 'mate' && pieceStructures.knightRectangle(position)) {
+        if (gameInfoJson.status !== 'mate') {
+            return
+        }
+
+        if (pieceStructures.knightRectangle(position)) {
             let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
             if (piecesRemaining === 'NNNNNN') {
