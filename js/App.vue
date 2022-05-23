@@ -758,7 +758,6 @@ import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left.js'
 import rosenTrap from './goals/rosen-trap.js'
 import smotheredMate from './goals/smothered-mate.js'
 import smotheredPorkMate from './goals/smothered-pork-mate.js'
-import windmill from './goals/windmill.js'
 
 const controller = new AbortController()
 const { signal } = controller
@@ -1205,12 +1204,7 @@ export default {
                     gameInfoJson,
                     move
                 )
-                // this.checkForAccomplishment(
-                //     pieceStructures.tripleDoublePawns(position),
-                //     'tripleDoublePawns',
-                //     gameInfoJson,
-                //     move
-                // )
+
                 this.checkForAccomplishment(pieceStructures.pawnCube(position), 'pawnCube', gameInfoJson, move)
                 this.checkForAccomplishment(
                     pieceStructures.pawnCubeCenter(position),
@@ -1379,13 +1373,6 @@ export default {
                 gameInfoJson,
                 allMoves.length
             )
-
-            // if (windmill(allMoves)) {
-            //     console.log('windmill found',
-            //         gameInfoJson.id,
-            //         gameInfoJson
-            //     )
-            // }
 
             this.checkForAccomplishment(castleFork(allMoves), 'castleFork', gameInfoJson)
 
