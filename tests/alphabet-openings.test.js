@@ -7,14 +7,10 @@ describe('test not alphabet opening', () => {
         ['egg', 'a3 a6 b3 b6 c3 c6'],
         ['egg', 'x3 x6 e3 Nf6 g3 a6 g4'],
         ['egg', 'e3 x1 g3 x1 Bg2'],
-
-        // captures don't count, only pawn pushes
-        ['egg', 'e3 x1 g3 x1 gxf4'],
     ])(
         'test alphabet opening: %p',
         (word, moves) => {
-            expect(alphabetOpenings.checkWord(word, moves, 'white')).toBe(false)
-            expect(alphabetOpenings.checkWord(word, moves, 'black')).toBe(false)
+            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual([])
         }
     )
 })
@@ -29,14 +25,28 @@ describe('test alphabet openings', () => {
         ['decade', 'd3 d6 e3 e6 c3 c6 a3 b6 d4 d5 e4 f6'],
         ['eggegg', 'e3 Nf6 g3 a6 g4 b6 e4 c6 g5 Nxe4 g6 hxg6'],
         ['egghead', 'e3 Nf6 g3 a6 g4 b6 h3 c6 e4 d6 a3 e6 d3 h6'],
+
+        // captures
+        ['egg', 'e3 x1 g3 x1 gxf4'],
     ])(
         'test alphabet opening: %p',
         (word, moves) => {
             // test for white
-            expect(alphabetOpenings.checkWord(word, moves, 'white')).toBe('white')
+            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
 
             // test for black
-            expect(alphabetOpenings.checkWord(word, 'XX ' + moves, 'black')).toBe('black')
+            expect(alphabetOpenings.checkWord(word, 'XX ' + moves)).toStrictEqual(['black'])
+        }
+    )
+})
+
+describe('test both colors play it', () => {
+    test.each([
+        ['egg', 'e3 e6 g3 g6 g4 g5'],
+    ])(
+        'test alphabet opening: %p',
+        (word, moves) => {
+            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white', 'black'])
         }
     )
 })
@@ -47,8 +57,8 @@ describe('test move input as array', () => {
     ])(
         'test move input types: %p',
         (word, moves) => {
-            expect(alphabetOpenings.checkWord(word, moves, 'white')).toBe('white')
-            expect(alphabetOpenings.checkWord(word, ['XX', ...moves], 'black')).toBe('black')
+            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
+            expect(alphabetOpenings.checkWord(word, ['XX', ...moves])).toStrictEqual(['black'])
         }
     )
 })

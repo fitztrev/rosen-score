@@ -1,32 +1,29 @@
 export default {
-    checkWord: function (word, moves, color) {
+    checkWord: function (word, moves) {
         if (typeof moves === 'string') {
             moves = moves.split(' ')
         }
 
-        let whitesMoves = moves
+        let whitePieceMoves = moves
             .filter((_, index) => index % 2 === 0)
-            .slice(0, word.length)
-            .join('')
-        let blacksMoves = moves
-            .filter((_, index) => index % 2 !== 0)
-            .slice(0, word.length)
+            .map((move) => move[0])
             .join('')
 
-        if (
-            color === 'white' &&
-            whitesMoves.length === word.length * 2 &&
-            whitesMoves.replace(/[^a-z]/g, '') === word
-        ) {
-            return 'white'
-        } else if (
-            color === 'black' &&
-            blacksMoves.length === word.length * 2 &&
-            blacksMoves.replace(/[^a-z]/g, '') === word
-        ) {
-            return 'black'
+        let blackPieceMoves = moves
+            .filter((_, index) => index % 2 !== 0)
+            .map((move) => move[0])
+            .join('')
+
+        let colors = []
+
+        if (whitePieceMoves.indexOf(word) === 0) {
+            colors.push('white')
         }
 
-        return false
+        if (blackPieceMoves.indexOf(word) === 0) {
+            colors.push('black')
+        }
+
+        return colors
     },
 }
