@@ -505,7 +505,7 @@
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="g5#"
-                        desc="The G pawn delivers checkmate on g5"
+                        desc="Pawn checkmate on g5"
                         :games="pointsByAccomplishment['g5mate']"
                         gameLink="https://lichess.org/UbOofpwX/black#74"
                         youtubeLink="https://youtu.be/3l6BeM45ay8?t=898"
