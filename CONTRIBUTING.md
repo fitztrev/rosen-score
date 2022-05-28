@@ -3,12 +3,17 @@
 Looking for contributors who can...
 
 1. Add possible trophies for consideration (but it will depend on what the games look like):
+
     1. Crazy Rook
     1. "Windmill" trophy
     1. Knight promotion fork
         - Promote to knight, fork K+Q
     1. https://www.youtube.com/watch?v=8zzbuQQD0jM
+    1. pawn rectangle https://lichess.org/editor/8/8/8/8/2PPP3/2PPP3/8/8_w_-_-_0_1
+    1. dah alphabet opening
+    1. 2 knight vs pawn mate
     1. Tactics trophies
+        1. double rook sacrifice - Rh8+ Kxh8 Rh1+ Kg8 Rh8+ Kxh8 Qh1+ Kg8 Qh7+ Kf8 Qh8#
         1. Queen takes a piece, queen takes queen, knight fork wins back queen?
     1. Pork / Pork Dork (https://www.youtube.com/watch?v=H1_GSx8jPG8)
     1. En passant is the only legal move? https://chess.stackexchange.com/questions/13239/when-en-passant-is-the-only-legal-move
