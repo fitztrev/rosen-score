@@ -97,7 +97,7 @@ export default {
             return
         }
 
-        if (pieceStructures.knightRectangle(position)) {
+        if (pieceStructures.knightRectangle(position).length) {
             let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
             if (piecesRemaining === 'NNNNNN') {

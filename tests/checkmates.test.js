@@ -76,6 +76,9 @@ describe('test not 6-knight rectangle mate', () => {
     test.each([
         // white has an extra piece
         '3k4/8/2NNN3/2NNN3/8/3Q4/8/3K4 w - - 0 1',
+
+        // https://lichess.org/hNHKL89Z
+        '8/8/8/3K4/1NNNNN2/3Nk3/8/8 b - - 35 105',
     ])(
         'test FEN: %p %p',
         (fen) => {
