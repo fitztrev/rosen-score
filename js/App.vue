@@ -726,6 +726,7 @@
                     <!-- <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="Queen Fork Uno Reverse"
+                        desc="Block a Queen check by hanging a forked piece, then capture the Queen"
                         :games="pointsByAccomplishment['queenForkReverse']"
                         gameLink="https://lichess.org/r4TFHZev#100"
                         youtubeLink="https://youtu.be/6oSCJJlFQUA?t=580"
