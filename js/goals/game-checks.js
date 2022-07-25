@@ -35,6 +35,23 @@ export default {
         return false
     },
 
+    twoBishopMate: function (gameInfoJson, position) {
+        if (gameInfoJson.status === 'mate') {
+            let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
+            let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
+            let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
+
+            if (
+                (whitePiecesRemaining === 'BB' && gameInfoJson.winner === 'white') ||
+                (blackPiecesRemaining === 'bb' && gameInfoJson.winner === 'black')
+            ) {
+                return gameInfoJson.winner
+            }
+        }
+
+        return false
+    },
+
     // https://lichess.org/study/e7RNJTUp
     // twoKnightsVsPawnMate: function (gameInfoJson, position) {
     //     let piecesRemaining = position

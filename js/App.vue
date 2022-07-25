@@ -160,6 +160,10 @@
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
             <ul class="text-sm">
                 <li>
+                    <changelog-date :year="2022" :month="7" :day="25"></changelog-date>
+                    - Added <a href="https://lichess.org/FuPe9gyS/black#128" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"2-Bishop Checkmate" trophy</a>
+                </li>
+                <li>
                     <changelog-date :year="2022" :month="5" :day="20"></changelog-date>
                     - Added <a href="https://lichess.org/Ak0Bhmx8/black#46" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Solid Pawn Diamond" trophy</a>
                 </li>
@@ -562,10 +566,17 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
+                        title="2-Bishop Checkmate"
+                        desc="Checkmate when you only have 2 bishops"
+                        :games="pointsByAccomplishment['twoBishopMate']"
+                        gameLink="https://lichess.org/FuPe9gyS/black#128"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
                         title="Knight-to-the-Corner Checkmate"
                         desc="Knight moves to a corner of the board with checkmate"
                         :games="pointsByAccomplishment['knightCornerMate']"
-                        gameLink="https://lichess.org/mBaVt3Hy#61"
+                        gameLink="https://lichess.org/s01MVu7c/black#82"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -621,7 +632,7 @@
                     ></accomplishment-score>
                 </div>
 
-                <h2 class="heading">More Fun Achievements</h2>
+                <h2 class="heading">There's a Funny Line</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -712,6 +723,13 @@
                         gameLink="https://lichess.org/ix4lZu8Q/black#6"
                         youtubeLink="https://youtu.be/vBf4rA4j8_w?t=2671"
                     ></accomplishment-score>
+                    <!-- <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Queen Fork Uno Reverse"
+                        :games="pointsByAccomplishment['queenForkReverse']"
+                        gameLink="https://lichess.org/r4TFHZev#100"
+                        youtubeLink="https://youtu.be/6oSCJJlFQUA?t=580"
+                    ></accomplishment-score> -->
                 </div>
             </div>
         </div>
@@ -749,6 +767,7 @@ import doubleCheckCheckmate from './goals/double-check-checkmate.js'
 import firstCapture from './goals/first-capture.js'
 import gameChecks from './goals/game-checks.js'
 import lefongTrap from './goals/lefong-trap.js'
+import queenForkReverse from './goals/queen-fork-reverse.js'
 import megaFork from './goals/mega-fork.js'
 import moveChecks from './goals/move-checks.js'
 import ohNoMyQueen from './goals/oh-no-my-queen.js'
@@ -1005,6 +1024,8 @@ export default {
                             } else {
                                 url += '&since=' + this.sinceTimestamp
                             }
+
+                            // url = new URL('../cache/ericrosen.txt', import.meta.url)
 
                             this.fetchGames(url)
                         }.bind(this)
@@ -1318,6 +1339,13 @@ export default {
                 moves.length
             )
             this.checkForAccomplishment(
+                gameChecks.twoBishopMate(gameInfoJson, position),
+                'twoBishopMate',
+                gameInfoJson,
+                moves.length
+            )
+            
+            this.checkForAccomplishment(
                 gameChecks.fourKnightMate(gameInfoJson, position),
                 'fourKnightMate',
                 gameInfoJson,
@@ -1353,6 +1381,16 @@ export default {
             )
 
             this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
+
+            // let queenForkReverseResult = queenForkReverse(allMoves)
+            // if (queenForkReverseResult) {
+            //     this.addTrophyForColor(
+            //         queenForkReverseResult.color,
+            //         'queenForkReverse',
+            //         gameInfoJson,
+            //         queenForkReverseResult.onMoveNumber
+            //     )
+            // }
 
             this.checkForAccomplishment(
                 dirtyWins.winInsufficientMaterial(gameInfoJson, position),

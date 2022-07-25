@@ -3,6 +3,24 @@ import { describe, expect, test } from 'vitest'
 import fenToPosition from '../js/utils/fen-to-position.js'
 import gameChecks from '../js/goals/game-checks.js'
 
+describe('2-bishop mate', () => {
+    test.each([
+        ['white', 'k7/8/1K6/3BB3/8/8/8/8 b - - 0 1'],
+        ['black', '8/8/8/4b3/4b3/1k6/8/K7 w - - 0 1'],
+
+        ['white', 'k7/8/1K6/3BB3/8/8/8/5q2 b - - 0 1'],
+        ['black', '8/1P6/8/4b3/4b3/1k6/8/K7 w - - 0 1'],
+    ])(
+        'test FEN: %p %p',
+        (color, fen) => {
+            expect(gameChecks.twoBishopMate({
+                status: 'mate',
+                winner: color,
+            }, fenToPosition(fen))).toStrictEqual(color)
+        }
+    )
+})
+
 describe('test 4-knight mate', () => {
     test.each([
         ['white', '8/8/8/6K1/4NN2/3NN3/8/4k3 w - - 16 91'],
