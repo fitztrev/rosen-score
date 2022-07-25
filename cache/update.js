@@ -3,6 +3,8 @@ import prependFile from 'prepend-file'
 
 let username = process.argv[2].toLowerCase()
 
+console.log('Fetching games for ' + username)
+
 let filename = `${username}.txt`
 
 let lastDownloadedGameAt = fs.existsSync(filename) ? fs.readFileSync(filename)
