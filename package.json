@@ -1,11 +1,12 @@
 {
   "scripts": {
-    "format": "prettier --no-semi --single-quote --tab-width=4 --print-width 120 --write {js,styles}/**/*",
-    "start": "parcel index.html --open",
-    "prebuild": "rm -rf dist",
     "build": "parcel build index.html --no-source-maps",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "format": "prettier --no-semi --single-quote --tab-width=4 --print-width 120 --write {js,styles}/**/*",
+    "prebuild": "rm -rf dist",
+    "start": "parcel index.html --open",
+    "test": "vitest run",
+    "watch": "vitest"
   },
   "dependencies": {
     "@bity/oauth2-auth-code-pkce": "^2.13.0",
