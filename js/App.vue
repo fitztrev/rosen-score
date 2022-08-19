@@ -556,7 +556,8 @@
                         @register-new-goal="onRegisterNewGoal"
                         title="Promote to Knight Checkmate"
                         :games="pointsByAccomplishment['promoteToKnightCheckmate']"
-                        gameLink="https://lichess.org/xwj83zQe/black#108"
+                        gameLink="https://lichess.org/USOysGtc#77"
+                        youtubeLink="https://youtu.be/RUJk3N6yF4g?t=3055"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
