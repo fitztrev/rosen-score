@@ -160,6 +160,10 @@
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
             <ul class="text-sm">
                 <li>
+                    <changelog-date :year="2022" :month="8" :day="21"></changelog-date>
+                    - Eric gets <a href="https://www.youtube.com/watch?v=mx9SCz4yDdE" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">his 1,000th Rosen Trophy</a>
+                </li>
+                <li>
                     <changelog-date :year="2022" :month="7" :day="25"></changelog-date>
                     - Added <a href="https://lichess.org/FuPe9gyS/black#128" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"2-Bishop Checkmate" trophy</a>
                 </li>
@@ -476,6 +480,7 @@
                         desc="A pawn delivers mate"
                         :games="pointsByAccomplishment['pawnCheckmate']"
                         gameLink="https://lichess.org/52RAfF6v#99"
+                        youtubeLink="https://www.youtube.com/watch?v=mx9SCz4yDdE"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
