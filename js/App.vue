@@ -160,6 +160,10 @@
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
             <ul class="text-sm">
                 <li>
+                    <changelog-date :year="2022" :month="10" :day="2"></changelog-date>
+                    - Added <a href="https://lichess.org/V0NGitnD/black#66" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Double Pawn Diamond" trophy</a>
+                </li>
+                <li>
                     <changelog-date :year="2022" :month="8" :day="21"></changelog-date>
                     - Eric gets <a href="https://www.youtube.com/watch?v=mx9SCz4yDdE" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">his 1,000th Rosen Trophy</a>
                 </li>
@@ -313,6 +317,20 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
+                        title="Double Pawn Diamond"
+                        :games="pointsByAccomplishment['doublePawnDiamond']"
+                        gameLink="https://lichess.org/V0NGitnD/black#66"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Pawn Trapezoid"
+                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
+                        :games="pointsByAccomplishment['pawnTrapezoid']"
+                        gameLink="https://lichess.org/38zR9IeJ#57"
+                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
                         title="Solid Pawn Diamond"
                         desc="A 5 carat pawn diamond"
                         :games="pointsByAccomplishment['pawnDiamondSolid']"
@@ -375,14 +393,6 @@
                         title="6 Pawns on the Same File"
                         :games="pointsByAccomplishment['sixPawnsInTheSameFile']"
                         gameLink="https://lichess.org/JCD2jmRs#91"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Pawn Trapezoid"
-                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :games="pointsByAccomplishment['pawnTrapezoid']"
-                        gameLink="https://lichess.org/38zR9IeJ#57"
-                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
                     ></accomplishment-score>
                 </div>
 
@@ -1243,6 +1253,7 @@ export default {
 
                 this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
                 this.checkForAccomplishment(pieceStructures.pawnDiamondSolid(position), 'pawnDiamondSolid', gameInfoJson, move)
+                this.checkForAccomplishment(pieceStructures.doublePawnDiamond(position), 'doublePawnDiamond', gameInfoJson, move)
 
                 this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
                 this.checkForAccomplishment(
