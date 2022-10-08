@@ -21,6 +21,10 @@ describe('2-bishop mate', () => {
             )
         ).toStrictEqual(color)
     })
+
+    test('game did not end in checkmate', () => {
+        expect(gameChecks.twoBishopMate({ status: 'draw' })).toStrictEqual(false)
+    })
 })
 
 describe('test 4-knight mate', () => {
