@@ -104,13 +104,14 @@
                     <div class="basis-3/4">
                         <div class="text-sm mt-1 mb-2" v-if="!formInputValue.includes('lichess.org')">
                             Check games since
-                            <select v-model.number="filter.sinceHoursAgo"
+                            <select
+                                v-model.number="filter.sinceHoursAgo"
                                 class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 md:w-28"
                             >
                                 <option :value="6">6 hours ago</option>
                                 <option :value="24">yesterday</option>
-                                <option :value="24*7">last week</option>
-                                <option :value="24*31">last month</option>
+                                <option :value="24 * 7">last week</option>
+                                <option :value="24 * 31">last month</option>
                                 <option :value="0">forever</option>
                             </select>
                         </div>
@@ -161,27 +162,63 @@
             <ul class="text-sm">
                 <li>
                     <changelog-date :year="2022" :month="10" :day="2"></changelog-date>
-                    - Added <a href="https://lichess.org/V0NGitnD/black#66" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Double Pawn Diamond" trophy</a>
+                    - Added
+                    <a
+                        href="https://lichess.org/V0NGitnD/black#66"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >"Double Pawn Diamond" trophy</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="8" :day="21"></changelog-date>
-                    - Eric gets <a href="https://www.youtube.com/watch?v=mx9SCz4yDdE" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">his 1,000th Rosen Trophy</a>
+                    - Eric gets
+                    <a
+                        href="https://www.youtube.com/watch?v=mx9SCz4yDdE"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >his 1,000th Rosen Trophy</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="7" :day="25"></changelog-date>
-                    - Added <a href="https://lichess.org/FuPe9gyS/black#128" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"2-Bishop Checkmate" trophy</a>
+                    - Added
+                    <a
+                        href="https://lichess.org/FuPe9gyS/black#128"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >"2-Bishop Checkmate" trophy</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="5" :day="20"></changelog-date>
-                    - Added <a href="https://lichess.org/Ak0Bhmx8/black#46" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Solid Pawn Diamond" trophy</a>
+                    - Added
+                    <a
+                        href="https://lichess.org/Ak0Bhmx8/black#46"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >"Solid Pawn Diamond" trophy</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="5" :day="8"></changelog-date>
-                    - Added <a href="https://lichess.org/OtlF3AfG#27" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">"Double-Check Checkmate" trophy</a>
+                    - Added
+                    <a
+                        href="https://lichess.org/OtlF3AfG#27"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >"Double-Check Checkmate" trophy</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="5" :day="5"></changelog-date>
-                    - Added <a href="https://twitter.com/lichess/status/1521874769288876033" target="_blank" class="dotted-underline text-sky-900 cursor-pointer">Adoption Match trophies</a>
+                    - Added
+                    <a
+                        href="https://twitter.com/lichess/status/1521874769288876033"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >Adoption Match trophies</a
+                    >
                 </li>
                 <li>
                     <changelog-date :year="2022" :month="4" :day="15"></changelog-date>
@@ -232,9 +269,7 @@
                 {{ totalAccomplishmentsPossible }})
             </div>
 
-            <div class="mb-1" v-if="sinceDateFormatted">
-                since {{ sinceDateFormatted }}
-            </div>
+            <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div>
 
             <trophy-collection :count="trophyCount" size="large"></trophy-collection>
 
@@ -847,7 +882,7 @@ export default {
         sinceTimestamp: function () {
             if (this.filter.sinceHoursAgo) {
                 let now = new Date().getTime()
-                return now - (this.filter.sinceHoursAgo * 60 * 60 * 1000)
+                return now - this.filter.sinceHoursAgo * 60 * 60 * 1000
             }
         },
 
@@ -868,8 +903,7 @@ export default {
         trophyCount: function () {
             return Object.values(this.pointsByAccomplishment)
                 .map((o) => Object.values(o))
-                .flat()
-                .length
+                .flat().length
         },
 
         lichessOauthTokenString: function () {
@@ -891,7 +925,7 @@ export default {
 
     watch: {
         filter: {
-            handler: function(value) {
+            handler: function (value) {
                 window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
             },
             deep: true,
@@ -940,7 +974,7 @@ export default {
         },
 
         startDownload: function () {
-            if (! this.formInputValue) {
+            if (!this.formInputValue) {
                 this.errorMsg = 'Enter a username or arena URL in Step #1'
                 return
             }
@@ -1102,7 +1136,7 @@ export default {
 
         checkForAccomplishment: function (color, label, game, onMoveNumber) {
             if (typeof color === 'object') {
-                for(const c of color) {
+                for (const c of color) {
                     this.addTrophyForColor(c, label, game, onMoveNumber)
                 }
             } else if (color) {
@@ -1252,8 +1286,18 @@ export default {
                 )
 
                 this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.pawnDiamondSolid(position), 'pawnDiamondSolid', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.doublePawnDiamond(position), 'doublePawnDiamond', gameInfoJson, move)
+                this.checkForAccomplishment(
+                    pieceStructures.pawnDiamondSolid(position),
+                    'pawnDiamondSolid',
+                    gameInfoJson,
+                    move
+                )
+                this.checkForAccomplishment(
+                    pieceStructures.doublePawnDiamond(position),
+                    'doublePawnDiamond',
+                    gameInfoJson,
+                    move
+                )
 
                 this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
                 this.checkForAccomplishment(
@@ -1309,28 +1353,12 @@ export default {
                     move
                 )
 
-                this.checkForAccomplishment(
-                    megaFork(chessJS, moveInfo, gameInfoJson),
-                    'megaFork',
-                    gameInfoJson,
-                    move
-                )
+                this.checkForAccomplishment(megaFork(chessJS, moveInfo, gameInfoJson), 'megaFork', gameInfoJson, move)
             }
 
-            for (let word of [
-                'badegg',
-                'beachcafe',
-                'beef',
-                'cabbage',
-                'chad',
-                'egg',
-                'eggegg',
-                'headache',
-            ]) {
+            for (let word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
                 this.checkForAccomplishment(
-                    alphabetOpenings
-                        .checkWord(word, moves)
-                        .filter(color => gameInfoJson.winner === color),
+                    alphabetOpenings.checkWord(word, moves).filter((color) => gameInfoJson.winner === color),
                     `alphabet:${word}`,
                     gameInfoJson
                 )
@@ -1362,7 +1390,7 @@ export default {
                 gameInfoJson,
                 moves.length
             )
-            
+
             this.checkForAccomplishment(
                 gameChecks.fourKnightMate(gameInfoJson, position),
                 'fourKnightMate',
@@ -1391,12 +1419,7 @@ export default {
                 this.addTrophyForColor('black', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
             }
 
-            this.checkForAccomplishment(
-                rosenTrap(gameInfoJson, allMoves),
-                'rosenTrap',
-                gameInfoJson,
-                allMoves.length
-            )
+            this.checkForAccomplishment(rosenTrap(gameInfoJson, allMoves), 'rosenTrap', gameInfoJson, allMoves.length)
 
             this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
 
