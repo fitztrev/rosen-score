@@ -835,7 +835,7 @@ const { signal } = controller
 
 import ericCachedGames from '../cache/eric.json'
 import ericLastUpdated from '../cache/eric-last-updated.json'
-import tournamentCachedGames from '../cache/swiss-48jrx3m6.js'
+import tournamentCachedGames from '../cache/swiss-48jrx3m6.json'
 
 const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
