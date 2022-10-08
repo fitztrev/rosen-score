@@ -70,10 +70,6 @@ Looking for contributors who can...
 1. Shareable links
     - Generate a shareable link so others can see results and games
 
-1. Setup Github workflows
-    - Run tests
-    - Run prettier
-
 1. Improve test coverage
     - Add tests for `moveChecks` or anything else missing tests
 
