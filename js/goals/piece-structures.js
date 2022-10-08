@@ -132,16 +132,21 @@ export default {
         let colors = []
         let matches
 
-        for(let color of ['P', 'p']) {
-            const regex = new RegExp(`(?=${color}([A-Za-z\.]{6})${color}([A-Za-z\.]{1})${color}([A-Za-z\.]{6})${color})`, 'g')
+        for (let color of ['P', 'p']) {
+            const regex = new RegExp(
+                `(?=${color}([A-Za-z\.]{6})${color}([A-Za-z\.]{1})${color}([A-Za-z\.]{6})${color})`,
+                'g'
+            )
             matches = position.matchAll(regex)
-    
+
             const diamonds = Array.from(matches)
 
             if (
                 diamonds.length === 2 &&
-                diamonds[0].index % 8 !== 0 && diamonds[0].index % 8 !== 7 &&
-                diamonds[1].index % 8 !== 0 && diamonds[1].index % 8 !== 7
+                diamonds[0].index % 8 !== 0 &&
+                diamonds[0].index % 8 !== 7 &&
+                diamonds[1].index % 8 !== 0 &&
+                diamonds[1].index % 8 !== 7
             ) {
                 colors.push(color === 'P' ? 'white' : 'black')
             }
