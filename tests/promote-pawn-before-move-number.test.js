@@ -26,24 +26,21 @@ describe('test promote pawn before move number', () => {
             '1. a4 h5 2. a5 h4 3. a6 h3 4. b4 g5 5. b5 g4 6. b6 g3 7. axb7 hxg2 8. c4 gxh1=Q',
             'b',
         ],
-    ])(
-        'test moves: %p',
-        (moves, color) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves, color) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            let allMoves = chessJsInstance.history({ verbose: true })
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            let result
+        let result
 
-            for (let moveNum in allMoves) {
-                result = moveChecks.promotePawnBeforeMoveNumber(allMoves[moveNum], moveNum, 8)
-                if (result) {
-                    break
-                }
+        for (let moveNum in allMoves) {
+            result = moveChecks.promotePawnBeforeMoveNumber(allMoves[moveNum], moveNum, 8)
+            if (result) {
+                break
             }
-
-            expect(result).toBe(color)
         }
-    )
+
+        expect(result).toBe(color)
+    })
 })

@@ -1,13 +1,14 @@
 import fs from 'fs'
 
-let games = fs.readFileSync('eric.txt')
+let games = fs
+    .readFileSync('eric.txt')
     .toString()
-    .split("\n")
+    .split('\n')
     .filter(Boolean)
-    .map(game => JSON.parse(game))
-    .sort((a, b) => (a.createdAt > b.createdAt) ? -1 : 1)
-    .map(game => '  ' + JSON.stringify(game) + ',')
-    .join("\n")
+    .map((game) => JSON.parse(game))
+    .sort((a, b) => (a.createdAt > b.createdAt ? -1 : 1))
+    .map((game) => '  ' + JSON.stringify(game) + ',')
+    .join('\n')
 
 fs.writeFileSync('./eric.json', `[\n${games}\n]`)
 

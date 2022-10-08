@@ -7,12 +7,9 @@ describe('test not alphabet opening', () => {
         ['egg', 'a3 a6 b3 b6 c3 c6'],
         ['egg', 'x3 x6 e3 Nf6 g3 a6 g4'],
         ['egg', 'e3 x1 g3 x1 Bg2'],
-    ])(
-        'test alphabet opening: %p',
-        (word, moves) => {
-            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual([])
-        }
-    )
+    ])('test alphabet opening: %p', (word, moves) => {
+        expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual([])
+    })
 })
 
 describe('test alphabet openings', () => {
@@ -28,37 +25,24 @@ describe('test alphabet openings', () => {
 
         // captures
         ['egg', 'e3 x1 g3 x1 gxf4'],
-    ])(
-        'test alphabet opening: %p',
-        (word, moves) => {
-            // test for white
-            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
+    ])('test alphabet opening: %p', (word, moves) => {
+        // test for white
+        expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
 
-            // test for black
-            expect(alphabetOpenings.checkWord(word, 'XX ' + moves)).toStrictEqual(['black'])
-        }
-    )
+        // test for black
+        expect(alphabetOpenings.checkWord(word, 'XX ' + moves)).toStrictEqual(['black'])
+    })
 })
 
 describe('test both colors play it', () => {
-    test.each([
-        ['egg', 'e3 e6 g3 g6 g4 g5'],
-    ])(
-        'test alphabet opening: %p',
-        (word, moves) => {
-            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white', 'black'])
-        }
-    )
+    test.each([['egg', 'e3 e6 g3 g6 g4 g5']])('test alphabet opening: %p', (word, moves) => {
+        expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white', 'black'])
+    })
 })
 
 describe('test move input as array', () => {
-    test.each([
-        ['egg', ['e3', 'Nf6', 'g3', 'a6', 'g4']],
-    ])(
-        'test move input types: %p',
-        (word, moves) => {
-            expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
-            expect(alphabetOpenings.checkWord(word, ['XX', ...moves])).toStrictEqual(['black'])
-        }
-    )
+    test.each([['egg', ['e3', 'Nf6', 'g3', 'a6', 'g4']]])('test move input types: %p', (word, moves) => {
+        expect(alphabetOpenings.checkWord(word, moves)).toStrictEqual(['white'])
+        expect(alphabetOpenings.checkWord(word, ['XX', ...moves])).toStrictEqual(['black'])
+    })
 })

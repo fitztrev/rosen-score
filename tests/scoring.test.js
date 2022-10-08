@@ -21,9 +21,9 @@ test('test scoring by player accomplishment 2', () => {
 
     expect(scoring.byPlayerAccomplishmentWithGames(playerScores)).toStrictEqual([
         { player: 'Bob', accomplishment: 'foo', points: 4, games: ['A', 'B', 'H'] },
-        { player: 'Bob', accomplishment: 'bar', points: 4, games: ['A', 'C']  },
-        { player: 'Sue', accomplishment: 'foo', points: 1, games: ['D']  },
-        { player: 'Sue', accomplishment: 'bar', points: 6, games: ['E', 'F', 'G']  },
+        { player: 'Bob', accomplishment: 'bar', points: 4, games: ['A', 'C'] },
+        { player: 'Sue', accomplishment: 'foo', points: 1, games: ['D'] },
+        { player: 'Sue', accomplishment: 'bar', points: 6, games: ['E', 'F', 'G'] },
     ])
 })
 

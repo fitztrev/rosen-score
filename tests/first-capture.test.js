@@ -29,17 +29,14 @@ describe('test first capture on move number', () => {
             57,
             false,
         ],
-    ])(
-        'test moves: %p',
-        (moves, captureOnMove, beforeMove30) => {
-            expect(true).toBe(true)
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves, captureOnMove, beforeMove30) => {
+        expect(true).toBe(true)
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            let allMoves = chessJsInstance.history({ verbose: true })
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            expect(firstCapture.getMoveNumberOfFirstCapture(allMoves)).toBe(captureOnMove)
-            expect(firstCapture.noCapturesBeforeMoveNumber(allMoves, 30)).toBe(beforeMove30)
-        }
-    )
+        expect(firstCapture.getMoveNumberOfFirstCapture(allMoves)).toBe(captureOnMove)
+        expect(firstCapture.noCapturesBeforeMoveNumber(allMoves, 30)).toBe(beforeMove30)
+    })
 })

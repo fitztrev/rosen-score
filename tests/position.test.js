@@ -17,12 +17,9 @@ describe('convert fens to position strings', () => {
             '1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1',
             '.r...rk..b..q.bp.pnppnp.p.p..p..P.P....P.PNP.PPN.B.QP.B...R..RK.',
         ],
-    ])(
-        'test FEN: %p',
-        (fen, position) => {
-            expect(fenToPosition(fen)).toEqual(position)
-        }
-    )
+    ])('test FEN: %p', (fen, position) => {
+        expect(fenToPosition(fen)).toEqual(position)
+    })
 })
 
 test('test getting pieces on files', () => {

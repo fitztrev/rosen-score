@@ -11,33 +11,15 @@ test('test no pawn stacks', () => {
 
 describe('test quad pawns', () => {
     test.each([
-        [
-            'rnbqkbnr/pppppppp/8/3P4/3P4/3P4/PP1P2PP/RNBQKBNR w KQkq - 0 1',
-            ['white'],
-        ],
-        [
-            'rnbqkbnr/pp1p2pp/3p4/3p4/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
-            ['black'],
-        ],
-        [
-            'k7/8/6P1/8/6P1/6P1/6P1/K7 w - - 0 1',
-            ['white'],
-        ],
-        [
-            'k7/3p4/3p4/8/3p4/8/3p4/K7 w - - 0 1',
-            ['black'],
-        ],
-        [
-            'k7/5p2/5p2/3P1p2/3P1p2/3P4/3P4/K7 w - - 0 1',
-            ['white', 'black'],
-        ],
-    ])(
-        'test FEN: %p',
-        (fen, color) => {
-            let files = getPiecesOnFiles(fenToPosition(fen))
-            expect(pieceStructures.quadrupledPawns(files)).toStrictEqual(color)
-        }
-    )
+        ['rnbqkbnr/pppppppp/8/3P4/3P4/3P4/PP1P2PP/RNBQKBNR w KQkq - 0 1', ['white']],
+        ['rnbqkbnr/pp1p2pp/3p4/3p4/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', ['black']],
+        ['k7/8/6P1/8/6P1/6P1/6P1/K7 w - - 0 1', ['white']],
+        ['k7/3p4/3p4/8/3p4/8/3p4/K7 w - - 0 1', ['black']],
+        ['k7/5p2/5p2/3P1p2/3P1p2/3P4/3P4/K7 w - - 0 1', ['white', 'black']],
+    ])('test FEN: %p', (fen, color) => {
+        let files = getPiecesOnFiles(fenToPosition(fen))
+        expect(pieceStructures.quadrupledPawns(files)).toStrictEqual(color)
+    })
 })
 
 test('test 6 pawns in the same file', () => {

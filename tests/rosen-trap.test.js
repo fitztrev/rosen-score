@@ -15,16 +15,13 @@ describe('test rosen trap', () => {
             'Nf3 Nf6 d4 d5 e3 c5 Be2 cxd4 exd4 Nc6 O-O Bf5 Bg5 e6 Nbd2 Bd6 c3 Bg6 Re1 O-O Nf1 Qb8 h3 Nd7 b4 a6 a4 Re8 Qb3 b5 axb5 axb5 Rxa8 Qxa8 Bxb5 Qb7 Qa4 Rc8 Ba6 Qa8 Ra1 Nb6 Qd1 Rc7 Bb5 Ra7 Rxa7 Nxa7 Bd3 Qc8 Bxg6 hxg6 Qd3 Qc4 Qxc4 Nxc4 N1d2 Nb5 Nxc4 dxc4 Bd2 f6 Kf1 g5 Ke2 Kf7 Kd1 Kg6 Kc2 Kf5 Ng1 Ke4 f3+ Kd5 Ne2 e5 dxe5 Bxe5 Be3 Nd6 Bd4 Bh2 Kb2 Nb5 Kc2 f5 Kd2 g6 Be3 g4 fxg4 fxg4 hxg4 Be5 Bf4 Bf6 Be3 Be7 g5 Bd8 Bf4 Be7 Be3 Bf8 Nf4+ Ke4 Nxg6 Bg7 Bd4 Bxd4 cxd4 Kxd4 Nf4 c3+ Kc1 Nd6 g6 Nf5 Ne2+ Kc4 Nxc3 Ng7 b5 Kxc3 b6 Ne6 b7 Nd4 b8=Q Ne2+ Kd1 Nd4 Ke1 Nb3 Qc7+ Kb2 Qb6 Ka2 Qxb3+ Ka1 g7',
             'b',
         ],
-    ])(
-        'test moves: %p',
-        (moves, color) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves, color) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            expect(rosenTrap({ status: 'stalemate' }, chessJsInstance.history({ verbose: true }))).toBe(color)
-            expect(rosenTrap({ status: 'checkmate' }, chessJsInstance.history({ verbose: true }))).toBeFalsy()
-        }
-    )
+        expect(rosenTrap({ status: 'stalemate' }, chessJsInstance.history({ verbose: true }))).toBe(color)
+        expect(rosenTrap({ status: 'checkmate' }, chessJsInstance.history({ verbose: true }))).toBeFalsy()
+    })
 })
 
 describe('test no rosen trap', () => {
@@ -36,13 +33,10 @@ describe('test no rosen trap', () => {
         // https://lichess.org/dpFJKkas#84
         // king cannot capture queen
         'e4 Nf6 Nc3 d5 exd5 Nxd5 Bc4 Nxc3 bxc3 g6 Nf3 Bg7 O-O O-O d4 c5 Qe2 Nc6 Rd1 Bg4 d5 Ne5 Bf4 Nxf3+ gxf3 Bf5 Qe3 b6 Re1 Bf6 Be5 Bxc2 Re2 Bf5 Rae1 Qd7 Kh1 Rad8 Qf4 Qa4 d6 Bxe5 Bxf7+ Rxf7 Qxa4 exd6 f4 Bxc3 Re8+ Rxe8 Rxe8+ Kg7 h4 h5 Qb3 Bf6 Qg3 d5 a4 d4 Qf3 d3 Qa8 c4 Rg8+ Kh7 Rc8 Bxc8 Qxc8 d2 Qd8 Bxd8 Kg2 d1=Q a5 Qd4 a6 Qxf4 Kg1 Qf3 Kh2 Qxf2+ Kh1 Qg3',
-    ])(
-        'test moves: %p',
-        (moves) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            expect(rosenTrap({ status: 'stalemate' }, chessJsInstance.history({ verbose: true }))).toBe(false)
-        }
-    )
+        expect(rosenTrap({ status: 'stalemate' }, chessJsInstance.history({ verbose: true }))).toBe(false)
+    })
 })

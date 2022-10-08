@@ -25,15 +25,12 @@ describe('test lefong trap', () => {
             'e4 g6 d4 Bg7 Bh6 e6 Bxg7 Ne7 Bxh8 d6 Qg4 Bd7 Bc4 Nbc6 Nf3 Na5 Qh4 Nxc4 Qh6 c5 Qxh7 Qa5+ c3 O-O-O Qxf7 Nc6 Bf6 Re8 Ng5 Nxb2 Nxe6 Rxe6 Qf8+ Re8 Qxd6 Nd3+ Ke2 cxd4 Kxd3 dxc3 Nxc3 Qa6+ Kc2 Qc4 Rab1 Nb4+ Kd2 Nc6 Qa3 Re6 Rxb7 Kxb7 Qb2+ Ka8 Rb1',
             'w',
         ],
-    ])(
-        'test moves: %p',
-        (moves, color) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves, color) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBe(color)
-        }
-    )
+        expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBe(color)
+    })
 })
 
 describe('test no lefong trap', () => {
@@ -58,13 +55,10 @@ describe('test no lefong trap', () => {
         // https://lichess.org/juNVZaHK#11
         // white bishop was protected
         // 'd4 c5 Nf3 cxd4 Qxd4 Nf6 Nc3 Nc6 Qh4 g6 Bh6 Bg7 Bxg7 Rg8 Bxf6 exf6 O-O-O Qb6 Qxh7 Rf8 Nd5 Qa5 Nxf6+ Ke7 Qg7 Qxa2 Nd5+ Ke6 Ng5+ Kf5 e4+ Kxg5 h4+',
-    ])(
-        'test moves: %p',
-        (moves) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBeFalsy()
-        }
-    )
+        expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBeFalsy()
+    })
 })

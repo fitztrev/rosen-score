@@ -11,31 +11,28 @@ describe('test consecutive captures - any square', () => {
             {
                 consecutiveCaptures: 30,
                 onMoveNumber: 3,
-            }
+            },
         ],
         [
             '1.e4 e5 2.Nf3 d6 3.d4 Bg4 4.dxe5 Bxf3 5.Qxf3 dxe5 6.Bc4 Nf6 7.Qb3 Qe7 8.Nc3 c6 9.Bg5 b5 10.Nxb5 cxb5 11.Bxb5+ Nbd7 12.O-O-O Rd8 13.Rxd7 Rxd7 14.Rd1 Qe6 15.Bxd7+ Nxd7 16.Qb8+ Nxb8 17.Rd8#',
             {
                 consecutiveCaptures: 4,
                 onMoveNumber: 5,
-            }
+            },
         ],
         [
             // this game was causing an issue because there were no captures
             // https://lichess.org/75MDeuSm
             'Nf3 e5 g3 e4 Ng1 Bc5 d3 Qf6 f3 Qb6 Nc3 Bf2+ Kd2 e3#',
-            false
+            false,
         ],
-    ])(
-        'test',
-        (moves, expected) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
-            let allMoves = chessJsInstance.history({ verbose: true })
+    ])('test', (moves, expected) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            expect(consecutiveCaptures.anySquare(allMoves)).toStrictEqual(expected)
-        }
-    )
+        expect(consecutiveCaptures.anySquare(allMoves)).toStrictEqual(expected)
+    })
 })
 
 describe('test consecutive captures - same square', () => {
@@ -47,29 +44,26 @@ describe('test consecutive captures - same square', () => {
             {
                 consecutiveCaptures: 12,
                 onMoveNumber: 71,
-            }
+            },
         ],
         [
             '1.e4 e5 2.Nf3 d6 3.d4 Bg4 4.dxe5 Bxf3 5.Qxf3 dxe5 6.Bc4 Nf6 7.Qb3 Qe7 8.Nc3 c6 9.Bg5 b5 10.Nxb5 cxb5 11.Bxb5+ Nbd7 12.O-O-O Rd8 13.Rxd7 Rxd7 14.Rd1 Qe6 15.Bxd7+ Nxd7 16.Qb8+ Nxb8 17.Rd8#',
             {
                 consecutiveCaptures: 3,
                 onMoveNumber: 17,
-            }
+            },
         ],
         [
             // this game was causing an issue because there were no captures
             // https://lichess.org/75MDeuSm
             'Nf3 e5 g3 e4 Ng1 Bc5 d3 Qf6 f3 Qb6 Nc3 Bf2+ Kd2 e3#',
-            false
+            false,
         ],
-    ])(
-        'test',
-        (moves, expected) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
-            let allMoves = chessJsInstance.history({ verbose: true })
+    ])('test', (moves, expected) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            expect(consecutiveCaptures.sameSquare(allMoves)).toStrictEqual(expected)
-        }
-    )
+        expect(consecutiveCaptures.sameSquare(allMoves)).toStrictEqual(expected)
+    })
 })

@@ -19,43 +19,37 @@ describe('test castle after move 40', () => {
             '1. a4 a5 2. b4 b5 3. c4 c5 4. d4 d5 5. e4 e5 6. f4 f5 7. g4 g5 8. h4 h5 9. Nc3 Nc6 10. Nf3 Nf6 11. Bb2 Bb7 12. Bg2 Bg7 13. Qc2 Qc7 14. Qd2 Qd7 15. Qc2 Qc7 16. Qd2 Qd7 17. Qc2 Qc7 18. Qd2 Qd7 19. Qc2 Qc7 20. Qd2 Qd7 21. Qc2 Qc7 22. Qd2 Qd7 23. Qc2 Qc7 24. Qd2 Qd7 25. Qc2 Qc7 26. Qd2 Qd7 27. Qc2 Qc7 28. Qd2 Qd7 29. Qc2 Qc7 30. Qd2 Qd7 31. Qc2 Qc7 32. Qd2 Qd7 33. Qc2 Qc7 34. Qd2 Qd7 35. Qc2 Qc7 36. Qd2 Qd7 37. Qc2 Qc7 38. Qd2 Qd7 39. Qc2 Qc7 40. Qd2 Qd7 41. Qc2 O-O-O',
             'b',
         ],
-    ])(
-        'test moves: %p',
-        (moves, color) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves, color) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            let allMoves = chessJsInstance.history({ verbose: true })
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            let result
+        let result
 
-            for (let moveNum in allMoves) {
-                result = moveChecks.castleAfterMove40(allMoves[moveNum], moveNum)
-                if (result) {
-                    break
-                }
+        for (let moveNum in allMoves) {
+            result = moveChecks.castleAfterMove40(allMoves[moveNum], moveNum)
+            if (result) {
+                break
             }
-
-            expect(result).toBe(color)
         }
-    )
+
+        expect(result).toBe(color)
+    })
 })
 
 describe('test not castle after move 40', () => {
     test.each([
         // each side castles on exactly move 40
         '1. a4 a5 2. b4 b5 3. c4 c5 4. d4 d5 5. e4 e5 6. f4 f5 7. g4 g5 8. h4 h5 9. Nc3 Nc6 10. Nf3 Nf6 11. Bb2 Bb7 12. Bg2 Bg7 13. Qc2 Qc7 14. Qd2 Qd7 15. Qc2 Qc7 16. Qd2 Qd7 17. Qc2 Qc7 18. Qd2 Qd7 19. Qc2 Qc7 20. Qd2 Qd7 21. Qc2 Qc7 22. Qd2 Qd7 23. Qc2 Qc7 24. Qd2 Qd7 25. Qc2 Qc7 26. Qd2 Qd7 27. Qc2 Qc7 28. Qd2 Qd7 29. Qc2 Qc7 30. Qd2 Qd7 31. Qc2 Qc7 32. Qd2 Qd7 33. Qc2 Qc7 34. Qd2 Qd7 35. Qc2 Qc7 36. Qd2 Qd7 37. Qc2 Qc7 38. Qd2 Qd7 39. Qc2 Qc7 40. O-O-O O-O',
-    ])(
-        'test moves: %p',
-        (moves) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+    ])('test moves: %p', (moves) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-            let allMoves = chessJsInstance.history({ verbose: true })
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            for (let moveNum of allMoves) {
-                expect(moveChecks.castleAfterMove40(allMoves[moveNum], moveNum)).toBeFalsy()
-            }
+        for (let moveNum of allMoves) {
+            expect(moveChecks.castleAfterMove40(allMoves[moveNum], moveNum)).toBeFalsy()
         }
-    )
+    })
 })

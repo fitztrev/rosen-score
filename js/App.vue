@@ -257,8 +257,8 @@
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
-                <template v-if="trophyCount === 1"> trophy </template>
-                <template v-else> trophies </template>
+                <template v-if="trophyCount === 1"> Trophy </template>
+                <template v-else> Trophies </template>
             </h2>
 
             <div class="mb-1">

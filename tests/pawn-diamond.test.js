@@ -25,15 +25,12 @@ describe('test pawn diamond', () => {
         [['black'], 'k7/2p5/1p1p4/2p5/8/8/8/K7 w - - 0 1'],
         [['black'], 'k7/1p6/p1p5/1p6/8/8/8/K7 w - - 0 1'],
 
-        [['white',  'black'], 'k7/5p2/4p1p1/2P2p2/1P1P4/2P5/8/K7 w - - 0 1'],
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-            expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-            expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
-        }
-    )
+        [['white', 'black'], 'k7/5p2/4p1p1/2P2p2/1P1P4/2P5/8/K7 w - - 0 1'],
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
+        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
+        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+    })
 })
 
 describe('test no pawn diamond', () => {
@@ -46,14 +43,11 @@ describe('test no pawn diamond', () => {
 
         ['k7/8/8/7p/6pp/p6p/8/K7 w - - 0 1'],
         ['k7/8/8/p6p/pp6/p7/8/K7 w - - 0 1'],
-    ])(
-        'test FEN: %p',
-        (fen) => {
-            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual([])
-            expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-            expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
-        }
-    )
+    ])('test FEN: %p', (fen) => {
+        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual([])
+        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
+        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+    })
 })
 
 describe('test solid pawn diamond', () => {
@@ -72,15 +66,12 @@ describe('test solid pawn diamond', () => {
         [['black'], 'k7/2p5/1ppp4/2p5/8/8/8/K7 w - - 0 1'],
         [['black'], 'k7/1p6/ppp5/1p6/8/8/8/K7 w - - 0 1'],
 
-        [['white',  'black'], 'k7/5p2/4ppp1/2P2p2/1PPP4/2P5/8/K7 w - - 0 1'],
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-            expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual(color)
-            expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
-        }
-    )
+        [['white', 'black'], 'k7/5p2/4ppp1/2P2p2/1PPP4/2P5/8/K7 w - - 0 1'],
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
+        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual(color)
+        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+    })
 })
 
 describe('test double pawn diamond', () => {
@@ -98,12 +89,9 @@ describe('test double pawn diamond', () => {
         // conjoined (with 1 pawn)
         [['white'], '8/8/8/8/2P1P3/1P1P1P2/2P1P3/8 w - - 0 1'],
         [['black'], '8/3p1p2/2p1p1p1/3p1p2/8/8/8/8 w - - 0 1'],
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-            expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-            expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-        }
-    )
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
+        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
+        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual(color)
+    })
 })

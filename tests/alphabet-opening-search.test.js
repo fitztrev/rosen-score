@@ -42,16 +42,12 @@ describe('test alphabet opening search', () => {
                 black: 'decfg',
             },
         ],
+    ])('test alphabet opening search: %p', (moves, expected) => {
+        let chessJsInstance = new Chess()
+        chessJsInstance.load_pgn(moves)
 
-    ])(
-        'test alphabet opening search: %p',
-        (moves, expected) => {
-            let chessJsInstance = new Chess()
-            chessJsInstance.load_pgn(moves)
+        let allMoves = chessJsInstance.history({ verbose: true })
 
-            let allMoves = chessJsInstance.history({ verbose: true })
-
-            expect(alphabetOpeningSearch(allMoves)).toStrictEqual(expected)
-        }
-    )
+        expect(alphabetOpeningSearch(allMoves)).toStrictEqual(expected)
+    })
 })

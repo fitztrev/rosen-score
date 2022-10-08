@@ -10,12 +10,9 @@ describe('test no knight cube', () => {
         'k7/2nn4/1nn5/8/8/8/8/K7 w - - 0 1',
         'k7/8/8/7N/N6N/N7/8/K7 w - - 0 1',
         'k7/8/7n/n6n/n7/8/8/K7 w - - 0 1',
-    ])(
-        'test FEN: %p',
-        (fen) => {
-            expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual([])
-        }
-    )
+    ])('test FEN: %p', (fen) => {
+        expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual([])
+    })
 })
 
 describe('test knight cube', () => {
@@ -43,12 +40,9 @@ describe('test knight cube', () => {
         [['white'], 'k7/6NN/6NN/8/8/8/8/K7 w - - 0 1'],
 
         [['white', 'black'], 'k7/8/4nn2/4nn2/8/2NN4/2NN4/K7 w - - 0 1'],
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual(color)
-        }
-    )
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual(color)
+    })
 })
 
 describe('test no knight rectangle', () => {
@@ -65,12 +59,9 @@ describe('test no knight rectangle', () => {
 
         'k7/7n/n6n/n6n/n7/8/8/K7 w - - 0 1',
         'k7/7N/N6N/N6N/N7/8/8/K7 w - - 0 1',
-    ])(
-        'test FEN: %p',
-        (fen) => {
-            expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual([])
-        }
-    )
+    ])('test FEN: %p', (fen) => {
+        expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual([])
+    })
 })
 
 describe('test knight rectangle', () => {
@@ -119,11 +110,7 @@ describe('test knight rectangle', () => {
         [['white'], 'k7/8/6NN/6NN/6NN/8/8/K7 w - - 0 1'],
 
         [['white', 'black'], 'k7/3nn3/3nn3/3nn3/3NN3/3NN3/3NN3/K7 w - - 0 1'],
-
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual(color)
-        }
-    )
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual(color)
+    })
 })

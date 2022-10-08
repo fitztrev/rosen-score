@@ -19,13 +19,10 @@ describe('test double-check checkmate', () => {
             'r4rRk/pp5p/1bp5/1n2Q3/3q4/1B3N2/P5PP/1R5K b - - 2 2',
             'white',
         ],
-    ])(
-        'test fen: %p',
-        (fen, color) => {
-            expect(doubleCheckCheckmate(fen, {status: 'mate', winner: color})).toBe(color)
-            expect(doubleCheckCheckmate(fen, {status: 'draw', winner: color})).toBeFalsy()
-        }
-    )
+    ])('test fen: %p', (fen, color) => {
+        expect(doubleCheckCheckmate(fen, { status: 'mate', winner: color })).toBe(color)
+        expect(doubleCheckCheckmate(fen, { status: 'draw', winner: color })).toBeFalsy()
+    })
 })
 
 describe('test not double-check checkmate', () => {
@@ -37,10 +34,7 @@ describe('test not double-check checkmate', () => {
         'rn1k1b1r/pp2ppp1/5n1p/B3q2b/4N3/6N1/PPP3PP/2KR1B1R b K - 1 2',
         'r4r2/4npkp/1q1bp1p1/p1np1N2/1pp1P3/1P1P2P1/PBP2PBP/1NK4R b K - 1 2',
         'r1r1n3/1pqbbkpp/p2pP3/4n1P1/P2NP3/2N1B3/1PP1Q2P/R4RK1 b - - 0 2',
-    ])(
-        'test fen: %p',
-        (fen) => {
-            expect(doubleCheckCheckmate(fen, {status: 'mate'})).toBeFalsy()
-        }
-    )
+    ])('test fen: %p', (fen) => {
+        expect(doubleCheckCheckmate(fen, { status: 'mate' })).toBeFalsy()
+    })
 })

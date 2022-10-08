@@ -12,12 +12,9 @@ describe('test no stalemate tricks', () => {
         // '1k6/1P6/1K6/2P5/8/8/8/8 b - - 0 61', // https://lichess.org/Pp12QY72#121
         // '8/8/5R2/8/8/8/7p/5K1k b - - 0 90', // https://lichess.org/t5kHhAuR#179
         // '8/8/8/8/8/5p2/5K1p/7k b - - 1 61', // https://lichess.org/iaGKskaV#121
-    ])(
-        'test FEN: %p',
-        (fen) => {
-            expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), 'white')).toBe(false)
-        }
-    )
+    ])('test FEN: %p', (fen) => {
+        expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), 'white')).toBe(false)
+    })
 })
 
 describe('test stalemate tricks', () => {
@@ -32,10 +29,7 @@ describe('test stalemate tricks', () => {
         ['black', '8/8/8/8/2N1K3/8/2Q5/k7 b - - 24 80'], // https://lichess.org/a0hS2yEI#159
         ['black', '7k/5P2/6KP/8/8/8/8/8 b - - 0 86'], // https://lichess.org/nu7gNPvZ#171
         ['white', '3K4/8/3kq3/8/8/8/8/8 w - - 17 91'], // https://lichess.org/oRsGcDax#180
-    ])(
-        'test FEN: %p %p',
-        (color, fen) => {
-            expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), color)).toBe(color)
-        }
-    )
+    ])('test FEN: %p %p', (color, fen) => {
+        expect(gameChecks.stalemateTricks({ status: 'stalemate' }, fenToPosition(fen), color)).toBe(color)
+    })
 })
