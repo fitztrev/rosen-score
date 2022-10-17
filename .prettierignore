@@ -1,7 +1,3 @@
-cache/eric.json
-cache/swiss-48jrx3m6.json
-
-package*.json
-cache/package*.json
+*.json
 
 coverage
