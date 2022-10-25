@@ -4,20 +4,24 @@ on: [push, pull_request]
 
 jobs:
     test-suite:
-        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node: [18, 19, 'latest']
+                os: [ubuntu-latest, macos-latest]
+        runs-on: ${{ matrix.os }}
         timeout-minutes: 1
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
               with:
-                  node-version: 'latest'
+                  node-version: ${{ matrix.node }}
             - run: npm ci
             - run: npm test
 
     check-formatting:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: actionsx/prettier@v2
-              with:
-                  args: --check .
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+            - run: npm ci
+            - run: npx prettier --check .
