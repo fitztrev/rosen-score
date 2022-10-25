@@ -9,7 +9,6 @@ jobs:
                 node: [18, 19, 'latest']
                 os: [ubuntu-latest, macos-latest]
         runs-on: ${{ matrix.os }}
-        timeout-minutes: 1
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
