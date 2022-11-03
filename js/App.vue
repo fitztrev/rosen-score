@@ -44,6 +44,7 @@
                             class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             placeholder="Lichess username or arena URL here"
                             spellcheck="false"
+                            data-lpignore="true"
                             v-model="formInputValue"
                             @change="formInputValueEntered"
                         />
@@ -785,7 +786,7 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Lefong Trap"
+                        title="Lefong"
                         desc="Capture a premoved fianchettoed bishop"
                         :games="pointsByAccomplishment['lefongTrap']"
                         gameLink="https://lichess.org/ix4lZu8Q/black#6"
