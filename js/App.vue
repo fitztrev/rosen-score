@@ -161,6 +161,16 @@
             <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
             <ul class="text-sm">
                 <li>
+                    <changelog-date :year="2022" :month="11" :day="3"></changelog-date>
+                    - Added
+                    <a
+                        href="https://lichess.org/2gQ8HOw1#65"
+                        target="_blank"
+                        class="dotted-underline text-sky-900 cursor-pointer"
+                        >"Pawn X" trophy</a
+                    >
+                </li>
+                <li>
                     <changelog-date :year="2022" :month="10" :day="2"></changelog-date>
                     - Added
                     <a
@@ -358,11 +368,10 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="Pawn Trapezoid"
-                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :games="pointsByAccomplishment['pawnTrapezoid']"
-                        gameLink="https://lichess.org/38zR9IeJ#57"
-                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
+                        title="Pawn X"
+                        desc="X-formation with pawns"
+                        :games="pointsByAccomplishment['pawnX']"
+                        gameLink="https://lichess.org/2gQ8HOw1#65"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -386,6 +395,22 @@
                         :games="pointsByAccomplishment['pawnCubeCenter']"
                         gameLink="https://lichess.org/EXwOWSu5/black#48"
                         youtubeLink="https://youtu.be/x8t-MlIWE3w?t=573"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Quadrupled Pawns"
+                        desc="4 pawns on the same file"
+                        :games="pointsByAccomplishment['quadrupledPawns']"
+                        gameLink="https://lichess.org/aqADXuJT#85"
+                        youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Pawn Trapezoid"
+                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
+                        :games="pointsByAccomplishment['pawnTrapezoid']"
+                        gameLink="https://lichess.org/38zR9IeJ#57"
+                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -414,14 +439,6 @@
                         :games="pointsByAccomplishment['connectEightOnRank7']"
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Quadrupled Pawns"
-                        desc="4 pawns on the same file"
-                        :games="pointsByAccomplishment['quadrupledPawns']"
-                        gameLink="https://lichess.org/aqADXuJT#85"
-                        youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -1284,6 +1301,8 @@ export default {
                     gameInfoJson,
                     move
                 )
+
+                this.checkForAccomplishment(pieceStructures.pawnX(position), 'pawnX', gameInfoJson, move)
 
                 this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
                 this.checkForAccomplishment(

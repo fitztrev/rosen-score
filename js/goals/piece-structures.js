@@ -48,6 +48,23 @@ export default {
         return colors
     },
 
+    pawnX: function (position) {
+        let colors = []
+        let match
+
+        match = position.match(/P([A-Za-z\.]{1})P([A-Za-z\.]{6})P([A-Za-z\.]{6})P([A-Za-z\.]{1})P/)
+        if (match && match.index % 8 < 6) {
+            colors.push('white')
+        }
+
+        match = position.match(/p([A-Za-z\.]{1})p([A-Za-z\.]{6})p([A-Za-z\.]{6})p([A-Za-z\.]{1})p/)
+        if (match && match.index % 8 < 6) {
+            colors.push('black')
+        }
+
+        return colors
+    },
+
     knightCube: function (position) {
         let colors = []
         let match
