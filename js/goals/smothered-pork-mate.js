@@ -17,7 +17,7 @@ export default function (chessJS, moveInfo) {
         for (const knightDestination of knightMoves(moveInfo.to)) {
             let pieceOnSquare = chessJS.get(knightDestination)
 
-            if (pieceOnSquare && pieceOnSquare.color === whoseTurn && ['q', 'r'].includes(pieceOnSquare.type )) {
+            if (pieceOnSquare && pieceOnSquare.color === whoseTurn && ['q', 'r'].includes(pieceOnSquare.type)) {
                 isQueenOrRookForked = true
             }
         }
