@@ -6,19 +6,19 @@ import smotheredMate from './smothered-mate.js'
 export default function (chessJS, moveInfo) {
     /*
         knight delivers checkmate
-        knight attacks both the King and queen
+        knight forks king + queen/rook
         there is a pawn that could recapture the knight but it is pinned
         the king is smothered
     */
     if (moveInfo && moveInfo.piece === 'n' && moveInfo.san.endsWith('#')) {
         let whoseTurn = moveInfo.color === 'w' ? 'b' : 'w'
 
-        let isRoyalFork = false
+        let isQueenOrRookForked = false
         for (const knightDestination of knightMoves(moveInfo.to)) {
             let pieceOnSquare = chessJS.get(knightDestination)
 
-            if (pieceOnSquare && pieceOnSquare.color === whoseTurn && pieceOnSquare.type === 'q') {
-                isRoyalFork = true
+            if (pieceOnSquare && pieceOnSquare.color === whoseTurn && ['q', 'r'].includes(pieceOnSquare.type )) {
+                isQueenOrRookForked = true
             }
         }
 
@@ -32,7 +32,7 @@ export default function (chessJS, moveInfo) {
             }
         }
 
-        if (isRoyalFork && isPawnPinned) {
+        if (isQueenOrRookForked && isPawnPinned) {
             return smotheredMate(chessJS, moveInfo)
         }
     }
