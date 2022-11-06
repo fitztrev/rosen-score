@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "06c8294c-aa70-4b37-9bc9-5707e6247b48",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://lichess.org/game/export/Bc7Zyr8T",
+    "url": "https://lichess.org/game/export/Bc7Zyr8T",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-06T18:51:13.395Z",
+    "modified": "2022-11-06T18:51:13.820Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      },
+      {
+        "name": "Content-Type",
+        "value": "",
+        "isDisabled": true
+      }
+    ],
+    "params": [],
+    "tests": []
+  }
+]
