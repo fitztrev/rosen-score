@@ -635,17 +635,23 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
-                        title="2-Bishop Checkmate"
-                        desc="Checkmate when you only have 2 bishops"
-                        :games="pointsByAccomplishment['twoBishopMate']"
-                        gameLink="https://lichess.org/FuPe9gyS/black#128"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
                         title="Knight-to-the-Corner Checkmate"
                         desc="Knight moves to a corner of the board with checkmate"
                         :games="pointsByAccomplishment['knightCornerMate']"
                         gameLink="https://lichess.org/s01MVu7c/black#82"
+                    ></accomplishment-score>
+                    <!-- <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="Single Bishop Checkmate"
+                        desc="Checkmate when your only piece is a bishop"
+                        :games="pointsByAccomplishment['singleBishopMate']"
+                    ></accomplishment-score> -->
+                    <accomplishment-score
+                        @register-new-goal="onRegisterNewGoal"
+                        title="2-Bishop Checkmate"
+                        desc="Checkmate when you only have 2 bishops"
+                        :games="pointsByAccomplishment['twoBishopMate']"
+                        gameLink="https://lichess.org/FuPe9gyS/black#128"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
@@ -1404,6 +1410,12 @@ export default {
                 gameInfoJson,
                 moves.length
             )
+            // this.checkForAccomplishment(
+            //     gameChecks.singleBishopMate(gameInfoJson, position),
+            //     'singleBishopMate',
+            //     gameInfoJson,
+            //     moves.length
+            // )
             this.checkForAccomplishment(
                 gameChecks.twoBishopMate(gameInfoJson, position),
                 'twoBishopMate',

@@ -35,6 +35,23 @@ export default {
         return false
     },
 
+    singleBishopMate: function (gameInfoJson, position) {
+        if (gameInfoJson.status === 'mate') {
+            let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
+            let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
+            let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
+
+            if (
+                (whitePiecesRemaining === 'B' && gameInfoJson.winner === 'white') ||
+                (blackPiecesRemaining === 'b' && gameInfoJson.winner === 'black')
+            ) {
+                return gameInfoJson.winner
+            }
+        }
+
+        return false
+    },
+
     twoBishopMate: function (gameInfoJson, position) {
         if (gameInfoJson.status === 'mate') {
             let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')

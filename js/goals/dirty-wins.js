@@ -2,6 +2,10 @@ import calculateMaterialImbalance from '../utils/calculate-material-imbalance.js
 
 export default {
     winInsufficientMaterial: function (gameInfo, position) {
+        if (gameInfo.status !== 'outoftime') {
+            return
+        }
+
         let piecesRemaining = ''
 
         if (gameInfo.winner === 'white') {
