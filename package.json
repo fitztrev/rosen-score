@@ -19,12 +19,12 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0",
     "@parcel/transformer-vue": "^2.4.0",
-    "@vitest/coverage-c8": "^0.24.0",
+    "@vitest/coverage-c8": "^0.25.0",
     "autoprefixer": "^10.4.2",
     "parcel": "^2.0.0",
     "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "tailwindcss": "^3.0.18",
-    "vitest": "^0.24.0"
+    "vitest": "^0.25.0"
   }
 }
