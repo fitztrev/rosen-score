@@ -10,7 +10,7 @@ export default function (timestamp) {
     let time = dateInstance.toLocaleTimeString([], {
         hour: 'numeric',
         minute: '2-digit',
-    })
+    }).replace("\u202f", " ")
 
     return date + ' at ' + time
 }
