@@ -76,7 +76,7 @@ import Cookies from 'js-cookie'
 import { AccessContext, HttpClient, OAuth2AuthCodePKCE } from '@bity/oauth2-auth-code-pkce'
 
 export const lichessHost = 'https://lichess.org'
-export const clientId = 'example.com'
+export const clientId = 'rosen-score'
 export const clientUrl = (() => {
     const url = new URL(location.href)
     url.search = ''
