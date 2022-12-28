@@ -1,30 +1,26 @@
 {
   "scripts": {
-    "prebuild": "rm -rf dist",
-    "build": "parcel build index.html --no-source-maps",
+    "build": "vite build",
     "coverage": "vitest run --coverage",
+    "dev": "vite",
     "format": "prettier --write .",
-    "start": "parcel index.html --open",
+    "preview": "vite preview",
     "test": "vitest run",
     "watch": "vitest"
   },
   "dependencies": {
     "@bity/oauth2-auth-code-pkce": "^2.13.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-c8": "^0.26.2",
+    "autoprefixer": "^10.4.2",
     "chess.js": "^0.13.2",
     "isepic-chess": "^8.4.6",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
-    "vue": "^3.2.31"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0",
-    "@parcel/transformer-vue": "^2.4.0",
-    "@vitest/coverage-c8": "^0.25.0",
-    "autoprefixer": "^10.4.2",
-    "parcel": "^2.0.0",
     "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "tailwindcss": "^3.0.18",
-    "vitest": "^0.25.0"
+    "vitest": "^0.26.2",
+    "vue": "^3.2.31"
   }
 }

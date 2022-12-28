@@ -12,7 +12,7 @@ Your browser makes the request directly to the Lichess API to get the games. The
 git clone https://github.com/fitztrev/rosen-score.git
 cd rosen-score
 npm install
-npm run start
+npm run dev
 ```
 
 ```bash
