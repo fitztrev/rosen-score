@@ -79,7 +79,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import LichessUsername from './LichessUsername.vue'
 import TrophyCollection from './TrophyCollection.vue'
 
