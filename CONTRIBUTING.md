@@ -25,7 +25,6 @@ Looking for contributors who can...
         - All pieces captured before move N?
     1. Your opponent had N mate-in-one's throughout the game but you end up winning?
     1. In the final position, you have N number of mate-in-one's available?
-    1. Double pawn diamond
     1. Ideas from Chess Compositions:
         1. Pachman mate? https://chess.stackexchange.com/questions/39656/shortest-game-to-elegant-mate
         1. Pure mate? https://chess.stackexchange.com/questions/24485/what-is-a-pure-checkmate/24491#24491
@@ -36,7 +35,6 @@ Looking for contributors who can...
         - https://chess.stackexchange.com/questions/30431/games-with-consecutive-en-passants
     1. https://twitter.com/agadmator/status/1523276457543446528?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet
     1. Win 1+0 with no premoves (your clock goes down by at least 0.1 each turn)?
-    1. Win a game in each variant consecutively?
     1. position from Searching for Bobby Fischer https://www.youtube.com/watch?v=W6poPAiBsLc
     1. something to do with both players having less than 1 second and playing N moves? https://www.youtube.com/watch?v=kMj0tBELSd8
     1. Opponent fails to checkmate with Bishop+Knight. Game ends in 50 move rule draw
@@ -76,8 +74,6 @@ Looking for contributors who can...
     - Generate a shareable link so others can see results and games
 
 1. Improve test coverage
-
-    - Add tests for `moveChecks` or anything else missing tests
 
 1. Some way to sort trophies by (1) date, (2) opponent rating?
 
