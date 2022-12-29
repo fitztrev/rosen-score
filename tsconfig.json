@@ -8,6 +8,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "skipLibCheck": true,
-    "lib": ["es2018"]
+    "lib": ["DOM", "es2018"]
   }
 }
