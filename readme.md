@@ -29,7 +29,6 @@ open coverage/index.html
 -   [chess.js](https://github.com/jhlywa/chess.js) - JS chess library to handle chess logic
 -   Vue.js - Framework for building the app
 -   Tailwind - CSS framework for the UI
--   Parcel.js - Build tool and local dev server
 
 ## Want to contribute?
 
@@ -56,38 +55,3 @@ And now you can do regex to look for pawn/piece structures:
 // To look for a white pawn cube, it is essentially:
 position.match(/PP([A-Za-z\.]{6})PP/) // 2 white pawns, 6 squares, then 2 white pawns
 ```
-
-## Known Issues
-
-1. Avoid-the-Flag trophy:
-
-    Lichess does not include tenths of seconds. So if a PGN shows 1 second remaining, it might actually be 1.4.
-
-    ```diff
-    - 20. Rxd8+ { [%clk 0:00:01] }
-    + 20. Rxd8+ { [%clk 0:00:01.4] }
-    ```
-
-    [Lichess source that rounds the values](https://github.com/lichess-org/lila/blob/b71a1eccea476562db283df97d6586fe6ca640da/modules/game/src/main/PgnDump.scala#L166-L177)
-
-    One idea that I'd like to possibly PR to Lichess:
-
-    ```
-    - /export/{gameId}?clocks=true
-    -     => [%clk 0:00:06]
-    + /export/{gameId}?clocks=true&withCentiseconds=true
-    +     => [%clk 0:00:06.43]
-    ```
-
-    Would allow for more premove-type trophies.
-
-1. "Oh No My Queen"
-
-    1. False positives
-        - It doesn't use engine evaluation, so if you drop your queen but then 2 moves later luck into a mate, it will award the trophy
-    1. It includes forced "oh no my queens" (like back rank or smothers) as well as the nicer "oh no my queens" where the opponent doesn't need to capture -- but if they do, then it leads to mate.
-
-1. Castle Forks
-    - These games are technically Castle Forks but the game ended before the king captured the piece.
-        - https://lichess.org/CGDXG6IT/black#44
-        - https://lichess.org/YBINNkURODmT
