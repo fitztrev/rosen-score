@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import moveChecks from '../js/goals/move-checks.js'
+import moveChecks from '../js/goals/move-checks'
 
 describe('knight to the corner checkmate', () => {
     test.each([
@@ -22,7 +22,7 @@ describe('knight to the corner checkmate', () => {
         ],
     ])('test moves: %p', (moves, color) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         let allMoves = chessJsInstance.history({ verbose: true })
 

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import fenToPosition from '../js/utils/fen-to-position.js'
-import pieceStructures from '../js/goals/piece-structures.js'
+import fenToPosition from '../js/utils/fen-to-position'
+import pieceStructures from '../js/goals/piece-structures'
 
 describe('test pawn X', () => {
     test.each([

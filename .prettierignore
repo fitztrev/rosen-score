@@ -1,3 +1,4 @@
 *.json
 
 coverage
+dist

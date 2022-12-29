@@ -2,7 +2,7 @@
     <span class="italic">{{ date }}</span>
 </template>
 
-<script>
+<script lang="ts">
 export default {
     props: ['year', 'month', 'day'],
     computed: {

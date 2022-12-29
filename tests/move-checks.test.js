@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import moveChecks from '../js/goals/move-checks.js'
+import moveChecks from '../js/goals/move-checks'
 
 describe('test g5#', () => {
     test.each([
@@ -23,7 +23,7 @@ describe('test g5#', () => {
         ],
     ])('test moves: %p', (moves, color) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         let allMoves = chessJsInstance.history({ verbose: true })
 
@@ -48,7 +48,7 @@ describe('test en passant mate', () => {
         ],
     ])('test moves: %p', (moves, color) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         let allMoves = chessJsInstance.history({ verbose: true })
 

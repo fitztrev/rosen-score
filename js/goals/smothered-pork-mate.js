@@ -1,7 +1,7 @@
-import knightMoves from '../utils/knight-moves.js'
-import pawnCaptures from '../utils/pawn-captures.js'
+import knightMoves from '../utils/knight-moves'
+import pawnCaptures from '../utils/pawn-captures'
 
-import smotheredMate from './smothered-mate.js'
+import smotheredMate from './smothered-mate'
 
 export default function (chessJS, moveInfo) {
     /*

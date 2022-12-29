@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import lefongTrap from '../js/goals/lefong-trap.js'
+import lefongTrap from '../js/goals/lefong-trap'
 
 describe('test lefong trap', () => {
     test.each([
@@ -27,7 +27,7 @@ describe('test lefong trap', () => {
         ],
     ])('test moves: %p', (moves, color) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBe(color)
     })
@@ -57,7 +57,7 @@ describe('test no lefong trap', () => {
         // 'd4 c5 Nf3 cxd4 Qxd4 Nf6 Nc3 Nc6 Qh4 g6 Bh6 Bg7 Bxg7 Rg8 Bxf6 exf6 O-O-O Qb6 Qxh7 Rf8 Nd5 Qa5 Nxf6+ Ke7 Qg7 Qxa2 Nd5+ Ke6 Ng5+ Kf5 e4+ Kxg5 h4+',
     ])('test moves: %p', (moves) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         expect(lefongTrap(chessJsInstance.history({ verbose: true }))).toBeFalsy()
     })

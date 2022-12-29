@@ -1,8 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import fenToPosition from '../js/utils/fen-to-position.js'
-import gameChecks from '../js/goals/game-checks.js'
-import pieceStructures from '../js/goals/piece-structures.js'
+import fenToPosition from '../js/utils/fen-to-position'
+import gameChecks from '../js/goals/game-checks'
 
 describe('test no stalemate tricks', () => {
     test.each([

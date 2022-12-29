@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import doubleCheckCheckmate from '../js/goals/double-check-checkmate.js'
+import doubleCheckCheckmate from '../js/goals/double-check-checkmate'
 
 describe('test double-check checkmate', () => {
     test.each([

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import firstCapture from '../js/goals/first-capture.js'
+import firstCapture from '../js/goals/first-capture'
 
 describe('test first capture on move number', () => {
     test.each([
@@ -51,7 +51,7 @@ describe('test first capture on move number', () => {
     ])('test moves: %p', (moves, captureOnMove, beforeMove30) => {
         expect(true).toBe(true)
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         let allMoves = chessJsInstance.history({ verbose: true })
 

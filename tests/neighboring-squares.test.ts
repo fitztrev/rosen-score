@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 
-import neighboringSquares from '../js/utils/neighboring-squares.js'
+import neighboringSquares from '../js/utils/neighboring-squares'
 
 test('test neighboring squares', () => {
     expect(neighboringSquares('a1')).toStrictEqual(['a2', 'b1', 'b2'])

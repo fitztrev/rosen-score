@@ -10,7 +10,7 @@ describe('disco fork', () => {
         ],
     ])('test moves: %p', (moves, color) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         expect(discoFork(chessJsInstance.history({ verbose: true }))).toBe(color)
     })

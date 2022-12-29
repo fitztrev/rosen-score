@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import { Chess } from 'chess.js'
+import { Chess, Move } from 'chess.js'
 
-import alphabetOpeningSearch from '../js/utils/alphabet-opening-search.js'
+import alphabetOpeningSearch from '../js/utils/alphabet-opening-search'
 
 describe('test alphabet opening search', () => {
     test.each([
@@ -44,9 +44,9 @@ describe('test alphabet opening search', () => {
         ],
     ])('test alphabet opening search: %p', (moves, expected) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
-        let allMoves = chessJsInstance.history({ verbose: true })
+        let allMoves = chessJsInstance.history({ verbose: true }) as Move[]
 
         expect(alphabetOpeningSearch(allMoves)).toStrictEqual(expected)
     })

@@ -1,5 +1,4 @@
-import neighboringSquares from '../utils/neighboring-squares.js'
-import knightMoves from '../utils/knight-moves.js'
+import neighboringSquares from '../utils/neighboring-squares'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
 const get_piece_positions = (game, piece) => {

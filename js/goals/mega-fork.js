@@ -1,4 +1,4 @@
-import knightMoves from '../utils/knight-moves.js'
+import knightMoves from '../utils/knight-moves'
 
 export default function (chessJS, moveInfo, gameInfo) {
     /*

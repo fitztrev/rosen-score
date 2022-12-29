@@ -1,4 +1,4 @@
-export default function (timestamp) {
+export default function (timestamp: number) {
     let dateInstance = new Date(timestamp)
 
     let date = dateInstance.toLocaleDateString(undefined, {

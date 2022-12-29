@@ -1,5 +1,5 @@
-import calculateMaterialImbalance from '../utils/calculate-material-imbalance.js'
-import pieceStructures from './piece-structures.js'
+import calculateMaterialImbalance from '../utils/calculate-material-imbalance'
+import pieceStructures from './piece-structures'
 
 export default {
     stalemateTricks: function (gameInfoJson, position, whoseTurn) {

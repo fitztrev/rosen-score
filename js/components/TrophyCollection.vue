@@ -20,7 +20,7 @@
                 'h-10': size === 'large',
                 'h-5': size !== 'large',
             }"
-            v-for="n in count"
+            v-for="_n in count"
         >
             <path
                 style="fill: #f7b239"
@@ -64,8 +64,11 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-    props: ['count', 'size'],
+    props: {
+        count: Number,
+        size: String,
+    },
 }
 </script>

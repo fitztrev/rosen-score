@@ -1,5 +1,5 @@
 export default {
-    quadrupledPawns: function (files) {
+    quadrupledPawns: function (files: string[]) {
         let colors = []
 
         for (let file of files) {
@@ -13,30 +13,30 @@ export default {
         return colors
     },
 
-    sixPawnsInTheSameFile: function (position) {
+    sixPawnsInTheSameFile: function (position: string) {
         if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/i)) {
             return ['white', 'black']
         }
     },
 
-    pawnCube: function (position) {
+    pawnCube: function (position: string) {
         let colors = []
         let match
 
         match = position.match(/PP([A-Za-z\.]{6})PP/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('white')
         }
 
         match = position.match(/pp([A-Za-z\.]{6})pp/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('black')
         }
 
         return colors
     },
 
-    pawnCubeCenter: function (position) {
+    pawnCubeCenter: function (position: string) {
         let colors = []
 
         if (position.match(/^([A-Za-z\.]{27})PP([A-Za-z\.]{6})PP/)) {
@@ -48,104 +48,104 @@ export default {
         return colors
     },
 
-    pawnX: function (position) {
+    pawnX: function (position: string) {
         let colors = []
         let match
 
         match = position.match(/P([A-Za-z\.]{1})P([A-Za-z\.]{6})P([A-Za-z\.]{6})P([A-Za-z\.]{1})P/)
-        if (match && match.index % 8 < 6) {
+        if (match && match.index! % 8 < 6) {
             colors.push('white')
         }
 
         match = position.match(/p([A-Za-z\.]{1})p([A-Za-z\.]{6})p([A-Za-z\.]{6})p([A-Za-z\.]{1})p/)
-        if (match && match.index % 8 < 6) {
+        if (match && match.index! % 8 < 6) {
             colors.push('black')
         }
 
         return colors
     },
 
-    knightCube: function (position) {
+    knightCube: function (position: string) {
         let colors = []
         let match
 
         match = position.match(/NN([A-Za-z\.]{6})NN/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('white')
         }
 
         match = position.match(/nn([A-Za-z\.]{6})nn/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('black')
         }
 
         return colors
     },
 
-    knightRectangle: function (position) {
+    knightRectangle: function (position: string) {
         let colors = []
         let match
 
         // check for 3x2 rectangle
         match = position.match(/NNN([A-Za-z\.]{5})NNN/)
-        if (match && match.index % 8 < 6) {
+        if (match && match.index! % 8 < 6) {
             colors.push('white')
         }
 
         match = position.match(/nnn([A-Za-z\.]{5})nnn/)
-        if (match && match.index % 8 < 6) {
+        if (match && match.index! % 8 < 6) {
             colors.push('black')
         }
 
         // check for 2x3 rectangle
         match = position.match(/NN([A-Za-z\.]{6})NN([A-Za-z\.]{6})NN/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('white')
         }
 
         match = position.match(/nn([A-Za-z\.]{6})nn([A-Za-z\.]{6})nn/)
-        if (match && match.index % 8 < 7) {
+        if (match && match.index! % 8 < 7) {
             colors.push('black')
         }
 
         return colors
     },
 
-    pawnDiamond: function (position) {
+    pawnDiamond: function (position: string) {
         let colors = []
         let match
 
         match = position.match(/P([A-Za-z\.]{6})P([A-Za-z\.]{1})P([A-Za-z\.]{6})P/)
-        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+        if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
             colors.push('white')
         }
 
         match = position.match(/p([A-Za-z\.]{6})p([A-Za-z\.]{1})p([A-Za-z\.]{6})p/)
-        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+        if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
             colors.push('black')
         }
 
         return colors
     },
 
-    pawnDiamondSolid: function (position) {
+    pawnDiamondSolid: function (position: string) {
         let colors = []
         let match
 
         match = position.match(/P([A-Za-z\.]{6})PPP([A-Za-z\.]{6})P/)
-        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+        if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
             colors.push('white')
         }
 
         match = position.match(/p([A-Za-z\.]{6})ppp([A-Za-z\.]{6})p/)
-        if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
+        if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
             colors.push('black')
         }
 
         return colors
     },
 
-    doublePawnDiamond: function (position) {
+    doublePawnDiamond: function (position: string) {
         let colors = []
         let matches
 
@@ -160,10 +160,10 @@ export default {
 
             if (
                 diamonds.length === 2 &&
-                diamonds[0].index % 8 !== 0 &&
-                diamonds[0].index % 8 !== 7 &&
-                diamonds[1].index % 8 !== 0 &&
-                diamonds[1].index % 8 !== 7
+                diamonds[0].index! % 8 !== 0 &&
+                diamonds[0].index! % 8 !== 7 &&
+                diamonds[1].index! % 8 !== 0 &&
+                diamonds[1].index! % 8 !== 7
             ) {
                 colors.push(color === 'P' ? 'white' : 'black')
             }
@@ -172,7 +172,7 @@ export default {
         return colors
     },
 
-    _connectEightOnRank: function (position, rank) {
+    _connectEightOnRank: function (position: string, rank: number) {
         let colors = []
 
         if (position.substr(64 - 8 * rank, 8) === 'PPPPPPPP') {
@@ -184,23 +184,23 @@ export default {
         return colors
     },
 
-    connectEightOnRank4: function (position) {
+    connectEightOnRank4: function (position: string) {
         return this._connectEightOnRank(position, 4)
     },
 
-    connectEightOnRank5: function (position) {
+    connectEightOnRank5: function (position: string) {
         return this._connectEightOnRank(position, 5)
     },
 
-    connectEightOnRank6: function (position) {
+    connectEightOnRank6: function (position: string) {
         return this._connectEightOnRank(position, 6)
     },
 
-    connectEightOnRank7: function (position) {
+    connectEightOnRank7: function (position: string) {
         return this._connectEightOnRank(position, 7)
     },
 
-    _convertPositionToDiagonalStringA1toH8(position) {
+    _convertPositionToDiagonalStringA1toH8(position: string) {
         return (
             position[0] +
             position[8] +
@@ -269,7 +269,7 @@ export default {
         )
     },
 
-    _convertPositionToDiagonalStringH1toA8(position) {
+    _convertPositionToDiagonalStringH1toA8(position: string) {
         return (
             position[7] +
             position[15] +
@@ -338,45 +338,45 @@ export default {
         )
     },
 
-    _connectDiagonally: function (position, number) {
+    _connectDiagonally: function (position: string, times: number) {
         let colors = []
 
-        if (this._convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(number))) {
+        if (this._convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(times))) {
             colors.push('white')
-        } else if (this._convertPositionToDiagonalStringH1toA8(position).includes('P'.repeat(number))) {
+        } else if (this._convertPositionToDiagonalStringH1toA8(position).includes('P'.repeat(times))) {
             colors.push('white')
-        } else if (this._convertPositionToDiagonalStringA1toH8(position).includes('p'.repeat(number))) {
+        } else if (this._convertPositionToDiagonalStringA1toH8(position).includes('p'.repeat(times))) {
             colors.push('black')
-        } else if (this._convertPositionToDiagonalStringH1toA8(position).includes('p'.repeat(number))) {
+        } else if (this._convertPositionToDiagonalStringH1toA8(position).includes('p'.repeat(times))) {
             colors.push('black')
         }
 
         return colors
     },
 
-    connectFour: function (position) {
+    connectFour: function (position: string) {
         return this._connectDiagonally(position, 4)
     },
 
-    connectFive: function (position) {
+    connectFive: function (position: string) {
         return this._connectDiagonally(position, 5)
     },
 
-    connectSix: function (position) {
+    connectSix: function (position: string) {
         return this._connectDiagonally(position, 6)
     },
 
-    pawnTrapezoid: function (position) {
+    pawnTrapezoid: function (position: string) {
         let colors = []
         let match
 
         match = position.substr(0, 40).match(/PP([A-Za-z\.]{5})P([A-Za-z\.]{2})P([A-Za-z\.]{3})P([A-Za-z\.]{4})P/)
-        if (match && match.index % 8 >= 2 && match.index % 8 <= 4) {
+        if (match && match.index! % 8 >= 2 && match.index! % 8 <= 4) {
             colors.push('white')
         }
 
         match = position.substr(24, 64).match(/p([A-Za-z\.]{4})p([A-Za-z\.]{3})p([A-Za-z\.]{2})p([A-Za-z\.]{5})pp/)
-        if (match && match.index % 8 <= 2) {
+        if (match && match.index! % 8 <= 2) {
             colors.push('black')
         }
 

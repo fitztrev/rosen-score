@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import calculateMaterialImbalance from '../js/utils/calculate-material-imbalance.js'
-import fenToPosition from '../js/utils/fen-to-position.js'
+import calculateMaterialImbalance from '../js/utils/calculate-material-imbalance'
+import fenToPosition from '../js/utils/fen-to-position'
 
 describe('test material imbalance calculations', () => {
     test.each([

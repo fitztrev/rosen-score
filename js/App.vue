@@ -640,12 +640,6 @@
                         :games="pointsByAccomplishment['knightCornerMate']"
                         gameLink="https://lichess.org/s01MVu7c/black#82"
                     ></accomplishment-score>
-                    <!-- <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Single Bishop Checkmate"
-                        desc="Checkmate when your only piece is a bishop"
-                        :games="pointsByAccomplishment['singleBishopMate']"
-                    ></accomplishment-score> -->
                     <accomplishment-score
                         @register-new-goal="onRegisterNewGoal"
                         title="2-Bishop Checkmate"
@@ -798,14 +792,6 @@
                         gameLink="https://lichess.org/ix4lZu8Q/black#6"
                         youtubeLink="https://youtu.be/vBf4rA4j8_w?t=2671"
                     ></accomplishment-score>
-                    <!-- <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
-                        title="Queen Fork Uno Reverse"
-                        desc="Block a Queen check by hanging a forked piece, then capture the Queen"
-                        :games="pointsByAccomplishment['queenForkReverse']"
-                        gameLink="https://lichess.org/r4TFHZev#100"
-                        youtubeLink="https://youtu.be/6oSCJJlFQUA?t=580"
-                    ></accomplishment-score> -->
                 </div>
             </div>
         </div>
@@ -822,37 +808,34 @@
 </template>
 
 <script>
-import readStream from './browser-ndjson-stream-reader.js'
+import readStream from './browser-ndjson-stream-reader'
 import { Chess as ChessJS } from 'chess.js'
 
-import alphabetOpeningSearch from './utils/alphabet-opening-search.js'
-import cleanupLichessUsername from './utils/cleanup-lichess-username.js'
-import fenToPosition from './utils/fen-to-position.js'
-import formatSinceDate from './utils/format-since-date.js'
-import getPiecesOnFiles from './utils/position-to-files.js'
-import pgnFormatter from './utils/pgn-formatter.js'
-import scoring from './utils/scoring.js'
+import cleanupLichessUsername from './utils/cleanup-lichess-username'
+import fenToPosition from './utils/fen-to-position'
+import formatSinceDate from './utils/format-since-date'
+import getPiecesOnFiles from './utils/position-to-files'
+import pgnFormatter from './utils/pgn-formatter'
 
-import adoptionMatch from './goals/adoption-match.js'
-import alphabetOpenings from './goals/alphabet-openings.js'
-import blockCheckWithCheckmate from './goals/block-check-with-checkmate.js'
-import castleFork from './goals/castle-fork.js'
-import consecutiveCaptures from './goals/consecutive-captures.js'
-import dirtyWins from './goals/dirty-wins.js'
-import doubleCheckCheckmate from './goals/double-check-checkmate.js'
-import firstCapture from './goals/first-capture.js'
-import gameChecks from './goals/game-checks.js'
-import lefongTrap from './goals/lefong-trap.js'
-import queenForkReverse from './goals/queen-fork-reverse.js'
-import megaFork from './goals/mega-fork.js'
-import moveChecks from './goals/move-checks.js'
-import ohNoMyQueen from './goals/oh-no-my-queen.js'
-import pawnStormOpening from './goals/pawn-storm-opening.js'
-import pieceStructures from './goals/piece-structures.js'
-import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left.js'
-import rosenTrap from './goals/rosen-trap.js'
-import smotheredMate from './goals/smothered-mate.js'
-import smotheredPorkMate from './goals/smothered-pork-mate.js'
+import adoptionMatch from './goals/adoption-match'
+import alphabetOpenings from './goals/alphabet-openings'
+import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
+import castleFork from './goals/castle-fork'
+import consecutiveCaptures from './goals/consecutive-captures'
+import dirtyWins from './goals/dirty-wins'
+import doubleCheckCheckmate from './goals/double-check-checkmate'
+import firstCapture from './goals/first-capture'
+import gameChecks from './goals/game-checks'
+import lefongTrap from './goals/lefong-trap'
+import megaFork from './goals/mega-fork'
+import moveChecks from './goals/move-checks'
+import ohNoMyQueen from './goals/oh-no-my-queen'
+import pawnStormOpening from './goals/pawn-storm-opening'
+import pieceStructures from './goals/piece-structures'
+import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
+import rosenTrap from './goals/rosen-trap'
+import smotheredMate from './goals/smothered-mate'
+import smotheredPorkMate from './goals/smothered-pork-mate'
 
 const controller = new AbortController()
 const { signal } = controller
@@ -1410,12 +1393,6 @@ export default {
                 gameInfoJson,
                 moves.length
             )
-            // this.checkForAccomplishment(
-            //     gameChecks.singleBishopMate(gameInfoJson, position),
-            //     'singleBishopMate',
-            //     gameInfoJson,
-            //     moves.length
-            // )
             this.checkForAccomplishment(
                 gameChecks.twoBishopMate(gameInfoJson, position),
                 'twoBishopMate',
@@ -1454,16 +1431,6 @@ export default {
             this.checkForAccomplishment(rosenTrap(gameInfoJson, allMoves), 'rosenTrap', gameInfoJson, allMoves.length)
 
             this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
-
-            // let queenForkReverseResult = queenForkReverse(allMoves)
-            // if (queenForkReverseResult) {
-            //     this.addTrophyForColor(
-            //         queenForkReverseResult.color,
-            //         'queenForkReverse',
-            //         gameInfoJson,
-            //         queenForkReverseResult.onMoveNumber
-            //     )
-            // }
 
             this.checkForAccomplishment(
                 dirtyWins.winInsufficientMaterial(gameInfoJson, position),

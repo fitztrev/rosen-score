@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import consecutiveCaptures from '../js/goals/consecutive-captures.js'
+import consecutiveCaptures from '../js/goals/consecutive-captures'
 
 describe('test consecutive captures - any square', () => {
     test.each([
@@ -28,7 +28,7 @@ describe('test consecutive captures - any square', () => {
         ],
     ])('test', (moves, expected) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
         let allMoves = chessJsInstance.history({ verbose: true })
 
         expect(consecutiveCaptures.anySquare(allMoves)).toStrictEqual(expected)
@@ -61,7 +61,7 @@ describe('test consecutive captures - same square', () => {
         ],
     ])('test', (moves, expected) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
         let allMoves = chessJsInstance.history({ verbose: true })
 
         expect(consecutiveCaptures.sameSquare(allMoves)).toStrictEqual(expected)

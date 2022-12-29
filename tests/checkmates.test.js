@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import fenToPosition from '../js/utils/fen-to-position.js'
-import gameChecks from '../js/goals/game-checks.js'
+import fenToPosition from '../js/utils/fen-to-position'
+import gameChecks from '../js/goals/game-checks'
 
 describe('single bishop mate', () => {
     test.each([['black', 'K7/P1k5/8/8/8/8/6b1/8 w - - 1 74']])('test FEN: %p %p', (color, fen) => {

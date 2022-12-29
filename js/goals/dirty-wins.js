@@ -1,4 +1,4 @@
-import calculateMaterialImbalance from '../utils/calculate-material-imbalance.js'
+import calculateMaterialImbalance from '../utils/calculate-material-imbalance'
 
 export default {
     winInsufficientMaterial: function (gameInfo, position) {

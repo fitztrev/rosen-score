@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import cleanupLichessUsername from '../js/utils/cleanup-lichess-username.js'
+import cleanupLichessUsername from '../js/utils/cleanup-lichess-username'
 
 describe('test cleanup usernames', () => {
     test.each([

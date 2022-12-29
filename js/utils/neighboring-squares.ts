@@ -1,4 +1,6 @@
-export default function (square) {
+import { Square } from 'chess.js'
+
+export default function (square: Square) {
     let neighbors = [
         [-1, -1],
         [-1, 0],

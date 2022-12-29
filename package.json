@@ -13,13 +13,15 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.26.2",
     "autoprefixer": "^10.4.2",
-    "chess.js": "^0.13.2",
+    "chess-fetcher": "^0.2.3",
+    "chess.js": "1.0.0-alpha.0",
     "isepic-chess": "^8.4.6",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "tailwindcss": "^3.0.18",
+    "typescript": "^4.9.4",
     "vitest": "^0.26.2",
     "vue": "^3.2.31"
   }

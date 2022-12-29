@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 
-import adoptionMatch from '../js/goals/adoption-match.js'
+import adoptionMatch from '../js/goals/adoption-match'
 
 test('test adoption match (single adoption)', () => {
     adoptionMatch.reset()

@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 
-import knightMoves from '../js/utils/knight-moves.js'
+import knightMoves from '../js/utils/knight-moves'
 
 test('test knight moves', () => {
     expect(knightMoves('a1')).toStrictEqual(['b3', 'c2'])

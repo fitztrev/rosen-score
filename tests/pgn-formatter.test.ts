@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import pgnFormatter from '../js/utils/pgn-formatter.js'
+import pgnFormatter from '../js/utils/pgn-formatter'
 
 describe('remove move # from pgn', () => {
     test.each([

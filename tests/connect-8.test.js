@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
-import fenToPosition from '../js/utils/fen-to-position.js'
-import pieceStructures from '../js/goals/piece-structures.js'
+import fenToPosition from '../js/utils/fen-to-position'
+import pieceStructures from '../js/goals/piece-structures'
 
 test('test no connect 8', () => {
     let fen = '1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1'

@@ -30,7 +30,7 @@ export default function (allMoves) {
                 .join(' ')
 
             let chessJs = new Chess()
-            chessJs.load_pgn(movesUntilQueenTriesToCapture)
+            chessJs.loadPgn(movesUntilQueenTriesToCapture)
             chessJs.move('Qx' + allMoves[moveNum + 1].to)
             let canBeRecaptured =
                 chessJs.moves({ verbose: true }).filter((move) => move.to === allMoves[moveNum + 1].to).length > 0

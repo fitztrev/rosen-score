@@ -1,4 +1,4 @@
-export default function (fen) {
+export default function (fen: string): string {
     fen = fen.split(' ')[0]
 
     return fen

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
-import queenForkReverse from '../js/goals/queen-fork-reverse.js'
+import queenForkReverse from '../js/goals/queen-fork-reverse'
 
 describe('test rook block trick', () => {
     test.each([
@@ -22,7 +22,7 @@ describe('test rook block trick', () => {
         ],
     ])('test moves: %p', (moves, result) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         expect(queenForkReverse(chessJsInstance.history({ verbose: true }))).toStrictEqual(result)
     })
@@ -44,7 +44,7 @@ describe('test no rook block trap', () => {
         'e4 c6 Nc3 d5 h3 dxe4 Nxe4 Bf5 Ng3 Bg6 h4 Nf6 Nf3 Nh5 Ne5 Nxg3 Nxg6 hxg6 fxg3 e6 Qf3 Bd6 d3 Qf6 Bf4 Bxf4 gxf4 Qxb2 Rc1 Qc3+ Kd1 Qc5 Qe3 Qf5 Qd2 Qd5 g4 Qd7 Be2 Na6 Rf1 Nc5 f5 exf5 gxf5 gxf5 Bf3 O-O-O Re1 Ne6 c4 Nd4 Be2 Nxe2 Rxe2 f4 Kc2 f3 d4 fxe2 Qxe2 Qxd4 Qd3 Qxd3+ Kb2 Qd2+ Rc2 Qc1+ Rxc1 Rd3 c5 Rd2+ Rc2 Rd4 Rd2 Rd5 Kc2 Rxc5+ Kb3 Rd5 Rc2 Rd2 Rc3 Rd5 Rd3 Rb5+ Kc4 Rd5 Kb4 Rxd3 Ka5 Rd5+',
     ])('test moves: %p', (moves) => {
         let chessJsInstance = new Chess()
-        chessJsInstance.load_pgn(moves)
+        chessJsInstance.loadPgn(moves)
 
         expect(queenForkReverse(chessJsInstance.history({ verbose: true }))).toBeFalsy()
     })

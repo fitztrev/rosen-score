@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 
-import alphabetOpenings from '../js/goals/alphabet-openings.js'
+import alphabetOpenings from '../js/goals/alphabet-openings'
 
 describe('test not alphabet opening', () => {
     test.each([

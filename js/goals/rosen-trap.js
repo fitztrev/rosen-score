@@ -31,7 +31,7 @@ export default function (gameInfo, allMoves) {
                         .join(' ')
 
                     let chessJs = new Chess()
-                    chessJs.load_pgn(movesUntilKingGoesToCorner)
+                    chessJs.loadPgn(movesUntilKingGoesToCorner)
 
                     for (const kingMove of chessJs.moves({ verbose: true })) {
                         // if king could move to the square the queen captured on...
