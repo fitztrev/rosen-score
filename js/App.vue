@@ -735,6 +735,7 @@ import { smotheredMate, smotheredPorkMate } from './goals/smothered-mate'
 import adoptionMatch from './goals/adoption-match'
 import { blockCheckWithCheckmate } from './goals/block-check-with-checkmate'
 import royalFamilyFork from './goals/royal-family-fork'
+import { checkmateAtMoveNumber } from './goals/checkmate-at-move-number'
 
 export default {
     components: {
@@ -925,59 +926,18 @@ export default {
             blockCheckWithCheckmate(game.moves)
             royalFamilyFork(game.moves)
 
-            adoptionMatch.processGame(game)
-            adoptionMatch.checkForAdoption(game, 10)
-            adoptionMatch.checkForAdoption(game, 20)
+            // doubleCheckCheckmate(chessJs.fen(), game)
+            // gameChecks.stalemateTricks(game, position, game.moves.length % 2 ? 'b' : 'w'),
+            // gameChecks.bishopAndKnightMate(game, position)
+            // gameChecks.twoBishopMate(game, position)
+            // gameChecks.fourKnightMate(game, position)
+            // gameChecks.fourKnightCubeMate(game, position)
+            // gameChecks.sixKnightRectangleMate(game, position)
+            // firstCapture.noCapturesBeforeMoveNumber(game.moves, 30)
+            // dirtyWins.winInsufficientMaterial(game, position)
+            // dirtyWins.clutchPawn(game, position)
 
-            let chessJs = new ChessJS()
-            let position: string
-
-            for (const move in game.moves) {
-                position = fenToPosition(chessJs.fen())
-                let moveNumber = parseInt(move)
-
-                pieceStructures.quadrupledPawns(position)
-                pieceStructures.pawnCube(position)
-                pieceStructures.pawnCubeCenter(position)
-                pieceStructures.pawnX(position)
-                pieceStructures.pawnDiamond(position)
-                pieceStructures.pawnDiamondSolid(position)
-                pieceStructures.doublePawnDiamond(position)
-                pieceStructures.knightCube(position)
-                pieceStructures.knightRectangle(position)
-                pieceStructures.connectEightOnRank4(position)
-                pieceStructures.connectEightOnRank5(position)
-                pieceStructures.connectEightOnRank6(position)
-                pieceStructures.connectEightOnRank7(position)
-                pieceStructures.connectFive(position)
-                pieceStructures.connectSix(position)
-                pieceStructures.pawnTrapezoid(position)
-                pieceStructures.sixPawnsInTheSameFile(position)
-            }
-
-            for (let word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                alphabetOpenings.checkWord(word, game.moves).filter((color) => game.result.winner === color)
-            }
-
-            position = fenToPosition(chessJs.fen())
-
-            this.checkForTrophy('doubleCheckCheckmate', doubleCheckCheckmate(chessJs.fen(), game), game, game.moves.length)
-            this.checkForTrophy(
-                'stalemateTricks',
-                gameChecks.stalemateTricks(game, position, game.moves.length % 2 ? 'b' : 'w'),
-                game,
-                game.moves.length
-            )
-            this.checkForTrophy('bishopAndKnightMate', gameChecks.bishopAndKnightMate(game, position), game, game.moves.length)
-            this.checkForTrophy('twoBishopMate', gameChecks.twoBishopMate(game, position), game, game.moves.length)
-            this.checkForTrophy('fourKnightMate', gameChecks.fourKnightMate(game, position), game, game.moves.length)
-            this.checkForTrophy('fourKnightCubeMate', gameChecks.fourKnightCubeMate(game, position), game, game.moves.length)
-            this.checkForTrophy('sixKnightRectangleMate', gameChecks.sixKnightRectangleMate(game, position), game, game.moves.length)
-            this.checkForTrophy('noCapturesBeforeMoveNumber', firstCapture.noCapturesBeforeMoveNumber(game.moves, 30), game, game.moves.length)
-            this.checkForTrophy('winInsufficientMaterial', dirtyWins.winInsufficientMaterial(game, position), game, game.moves.length)
-            this.checkForTrophy('clutchPawn', dirtyWins.clutchPawn(game, position), game, game.moves.length)
-
-            rosenTrap(game, game.moves)
+            // rosenTrap(game, game.moves)
             // lefongTrap(allMoves)
             // castleFork(game.moves),
             // ohNoMyQueen.checkMoves(allMoves, position),
@@ -985,14 +945,42 @@ export default {
             // pawnStormOpening(allMoves, game)
             // consecutiveCaptures.sameSquare(allMoves),
 
-            // let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
-            // if (numberOfMovesForWinningSide === 2) {
-            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:2', gameInfoJson)
-            // } else if (numberOfMovesForWinningSide === 3) {
-            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:3', gameInfoJson)
-            // } else if (numberOfMovesForWinningSide === 4) {
-            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
-            // }
+            checkmateAtMoveNumber(game.moves, 2)
+            checkmateAtMoveNumber(game.moves, 3)
+            checkmateAtMoveNumber(game.moves, 4)
+
+            adoptionMatch.processGame(game)
+            adoptionMatch.checkForAdoption(game, 10)
+            adoptionMatch.checkForAdoption(game, 20)
+
+            let chessJs = new ChessJS()
+
+            for (const move of game.moves) {
+                chessJs.move(move.notation.notation)
+                const fen = chessJs.fen()
+
+                pieceStructures.quadrupledPawns(fen)
+                pieceStructures.pawnCube(fen)
+                pieceStructures.pawnCubeCenter(fen)
+                pieceStructures.pawnX(fen)
+                pieceStructures.pawnDiamond(fen)
+                pieceStructures.pawnDiamondSolid(fen)
+                pieceStructures.doublePawnDiamond(fen)
+                pieceStructures.knightCube(fen)
+                pieceStructures.knightRectangle(fen)
+                pieceStructures.connectEightOnRank4(fen)
+                pieceStructures.connectEightOnRank5(fen)
+                pieceStructures.connectEightOnRank6(fen)
+                pieceStructures.connectEightOnRank7(fen)
+                pieceStructures.connectFive(fen)
+                pieceStructures.connectSix(fen)
+                pieceStructures.pawnTrapezoid(fen)
+                pieceStructures.sixPawnsInTheSameFile(fen)
+            }
+
+            for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
+                alphabetOpenings.checkWord(word, game.moves).filter((color) => game.result.winner === color)
+            }
         },
     },
 }

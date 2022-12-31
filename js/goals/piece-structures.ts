@@ -1,7 +1,9 @@
+import fenToPosition from '../utils/fen-to-position'
 import getPiecesOnFiles from '../utils/position-to-files'
 
 export default {
-    quadrupledPawns: function (position: string) {
+    quadrupledPawns: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
 
         for (let file of getPiecesOnFiles(position)) {
@@ -15,7 +17,8 @@ export default {
         return colors
     },
 
-    sixPawnsInTheSameFile: function (position: string) {
+    sixPawnsInTheSameFile: function (fen: string) {
+        const position = fenToPosition(fen)
         if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/i)) {
             return ['white', 'black']
         }
@@ -23,7 +26,8 @@ export default {
         return []
     },
 
-    pawnCube: function (position: string) {
+    pawnCube: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -40,7 +44,8 @@ export default {
         return colors
     },
 
-    pawnCubeCenter: function (position: string) {
+    pawnCubeCenter: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
 
         if (position.match(/^([A-Za-z\.]{27})PP([A-Za-z\.]{6})PP/)) {
@@ -52,7 +57,8 @@ export default {
         return colors
     },
 
-    pawnX: function (position: string) {
+    pawnX: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -69,7 +75,8 @@ export default {
         return colors
     },
 
-    knightCube: function (position: string) {
+    knightCube: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -86,7 +93,8 @@ export default {
         return colors
     },
 
-    knightRectangle: function (position: string) {
+    knightRectangle: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -115,7 +123,8 @@ export default {
         return colors
     },
 
-    pawnDiamond: function (position: string) {
+    pawnDiamond: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -132,7 +141,8 @@ export default {
         return colors
     },
 
-    pawnDiamondSolid: function (position: string) {
+    pawnDiamondSolid: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let match
 
@@ -149,7 +159,8 @@ export default {
         return colors
     },
 
-    doublePawnDiamond: function (position: string) {
+    doublePawnDiamond: function (fen: string) {
+        const position = fenToPosition(fen)
         let colors = []
         let matches
 
@@ -173,7 +184,8 @@ export default {
         return colors
     },
 
-    _connectEightOnRank: function (position: string, rank: number) {
+    _connectEightOnRank: function (fen: string, rank: number) {
+        const position = fenToPosition(fen)
         let colors = []
 
         if (position.substr(64 - 8 * rank, 8) === 'PPPPPPPP') {
@@ -185,20 +197,20 @@ export default {
         return colors
     },
 
-    connectEightOnRank4: function (position: string) {
-        return this._connectEightOnRank(position, 4)
+    connectEightOnRank4: function (fen: string) {
+        return this._connectEightOnRank(fen, 4)
     },
 
-    connectEightOnRank5: function (position: string) {
-        return this._connectEightOnRank(position, 5)
+    connectEightOnRank5: function (fen: string) {
+        return this._connectEightOnRank(fen, 5)
     },
 
-    connectEightOnRank6: function (position: string) {
-        return this._connectEightOnRank(position, 6)
+    connectEightOnRank6: function (fen: string) {
+        return this._connectEightOnRank(fen, 6)
     },
 
-    connectEightOnRank7: function (position: string) {
-        return this._connectEightOnRank(position, 7)
+    connectEightOnRank7: function (fen: string) {
+        return this._connectEightOnRank(fen, 7)
     },
 
     _convertPositionToDiagonalStringA1toH8(position: string) {
@@ -339,7 +351,8 @@ export default {
         )
     },
 
-    _connectDiagonally: function (position: string, times: number) {
+    _connectDiagonally: function (fen: string, times: number) {
+        const position = fenToPosition(fen)
         let colors = []
 
         if (this._convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(times))) {
@@ -355,19 +368,21 @@ export default {
         return colors
     },
 
-    connectFour: function (position: string) {
-        return this._connectDiagonally(position, 4)
+    connectFour: function (fen: string) {
+        return this._connectDiagonally(fen, 4)
     },
 
-    connectFive: function (position: string) {
-        return this._connectDiagonally(position, 5)
+    connectFive: function (fen: string) {
+        return this._connectDiagonally(fen, 5)
     },
 
-    connectSix: function (position: string) {
-        return this._connectDiagonally(position, 6)
+    connectSix: function (fen: string) {
+        return this._connectDiagonally(fen, 6)
     },
 
-    pawnTrapezoid: function (position: string) {
+    pawnTrapezoid: function (fen: string) {
+        const position = fenToPosition(fen)
+
         let colors = []
         let match
 
