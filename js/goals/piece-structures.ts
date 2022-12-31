@@ -1,8 +1,10 @@
+import getPiecesOnFiles from '../utils/position-to-files'
+
 export default {
-    quadrupledPawns: function (files: string[]) {
+    quadrupledPawns: function (position: string) {
         let colors = []
 
-        for (let file of files) {
+        for (let file of getPiecesOnFiles(position)) {
             if ((file.match(/P/g) || []).length >= 4) {
                 colors.push('white')
             } else if ((file.match(/p/g) || []).length >= 4) {
@@ -17,6 +19,8 @@ export default {
         if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/i)) {
             return ['white', 'black']
         }
+
+        return []
     },
 
     pawnCube: function (position: string) {
@@ -150,10 +154,7 @@ export default {
         let matches
 
         for (let color of ['P', 'p']) {
-            const regex = new RegExp(
-                `(?=${color}([A-Za-z\.]{6})${color}([A-Za-z\.]{1})${color}([A-Za-z\.]{6})${color})`,
-                'g'
-            )
+            const regex = new RegExp(`(?=${color}([A-Za-z\.]{6})${color}([A-Za-z\.]{1})${color}([A-Za-z\.]{6})${color})`, 'g')
             matches = position.matchAll(regex)
 
             const diamonds = Array.from(matches)

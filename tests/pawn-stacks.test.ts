@@ -1,13 +1,11 @@
 import { describe, expect, test } from 'vitest'
 
 import fenToPosition from '../js/utils/fen-to-position'
-import getPiecesOnFiles from '../js/utils/position-to-files'
 import pieceStructures from '../js/goals/piece-structures'
 
 test('test no pawn stacks', () => {
     let fen = '1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1'
-    let files = getPiecesOnFiles(fenToPosition(fen))
-    expect(pieceStructures.quadrupledPawns(files)).toStrictEqual([])
+    expect(pieceStructures.quadrupledPawns(fenToPosition(fen))).toStrictEqual([])
 })
 
 describe('test quad pawns', () => {
@@ -18,8 +16,7 @@ describe('test quad pawns', () => {
         ['k7/3p4/3p4/8/3p4/8/3p4/K7 w - - 0 1', ['black']],
         ['k7/5p2/5p2/3P1p2/3P1p2/3P4/3P4/K7 w - - 0 1', ['white', 'black']],
     ])('test FEN: %p', (fen, color) => {
-        let files = getPiecesOnFiles(fenToPosition(fen))
-        expect(pieceStructures.quadrupledPawns(files)).toStrictEqual(color)
+        expect(pieceStructures.quadrupledPawns(fenToPosition(fen))).toStrictEqual(color)
     })
 })
 
@@ -30,5 +27,5 @@ test('test 6 pawns in the same file', () => {
 
 test('test only 5 pawns in the same file', () => {
     let fen = 'k7/8/3p4/3p4/3P4/3P4/3P4/K7 w - - 0 1'
-    expect(pieceStructures.sixPawnsInTheSameFile(fenToPosition(fen))).toBeFalsy()
+    expect(pieceStructures.sixPawnsInTheSameFile(fenToPosition(fen))).toStrictEqual([])
 })

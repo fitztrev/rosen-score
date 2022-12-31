@@ -11,9 +11,7 @@
                 </svg>
                 Logged in as
                 <strong>{{ username }}</strong>
-                <span class="dotted-underline text-xs text-sky-900 cursor-pointer" @click.prevent="logout">
-                    (Logout)
-                </span>
+                <span class="dotted-underline text-xs text-sky-900 cursor-pointer" @click.prevent="logout"> (Logout) </span>
             </div>
         </template>
         <template v-else>
@@ -24,13 +22,7 @@
                 class="block px-4 py-2 bg-slate-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-500 hover:shadow-lg focus:bg-slate-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-600 active:shadow-lg transition duration-150 ease-in-out"
                 @click="login"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="inline h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -46,31 +38,13 @@
                 <strong>3x</strong> faster when downloading your own games, <strong>1.5x</strong> faster for all others
                 <br />
                 You can learn more about this
-                <a
-                    href="https://lichess.org/api#operation/apiGamesUser"
-                    target="_blank"
-                    class="text-sky-900 dotted-underline"
-                    >here
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="inline h-3 w-3"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        /></svg
-                ></a>
+                <a href="https://lichess.org/api#operation/apiGamesUser" target="_blank" class="text-sky-900 dotted-underline">here</a>
             </p>
         </template>
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import Cookies from 'js-cookie'
 
 import { AccessContext, HttpClient, OAuth2AuthCodePKCE } from '@bity/oauth2-auth-code-pkce'

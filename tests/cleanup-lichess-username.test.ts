@@ -16,11 +16,10 @@ describe('test cleanup usernames', () => {
 })
 
 describe('keep arena links unchanged', () => {
-    test.each([
-        'https://lichess.org/swiss/48jrx3m6',
-        'https://lichess.org/tournament/winter21',
-        'https://lichess.org/tournament/2oEh6hZw',
-    ])('test input: %p', (input) => {
-        expect(cleanupLichessUsername(input)).toBe(input)
-    })
+    test.each(['https://lichess.org/swiss/48jrx3m6', 'https://lichess.org/tournament/winter21', 'https://lichess.org/tournament/2oEh6hZw'])(
+        'test input: %p',
+        (input) => {
+            expect(cleanupLichessUsername(input)).toBe(input)
+        }
+    )
 })

@@ -1,50 +1,53 @@
 import calculateMaterialImbalance from '../utils/calculate-material-imbalance'
+import { Game } from 'chess-fetcher'
 
 export default {
-    winInsufficientMaterial: function (gameInfo, position) {
-        if (gameInfo.status !== 'outoftime') {
-            return
+    winInsufficientMaterial: function (game: Game, position: string): string[] {
+        if (game.result.via !== 'timeout') {
+            return []
         }
 
         let piecesRemaining = ''
 
-        if (gameInfo.winner === 'white') {
+        if (game.result.winner === 'white') {
             piecesRemaining = position.replace(/[Kk\.a-z]/g, '')
-        } else if (gameInfo.winner === 'black') {
+        } else if (game.result.winner === 'black') {
             piecesRemaining = position.replace(/[Kk\.A-Z]/g, '')
         }
 
         piecesRemaining = piecesRemaining.toLowerCase()
 
         if (piecesRemaining === 'b' || piecesRemaining === 'n') {
-            return gameInfo.winner
+            return [game.result.winner === 'white' ? 'w' : 'b']
         }
 
-        return false
+        return []
     },
 
-    clutchPawn: function (gameInfo, position) {
-        if (gameInfo.status !== 'outoftime') {
-            return
+    clutchPawn: function (game: Game, position: string): string[] {
+        if (game.result.via !== 'timeout') {
+            return []
         }
 
         let winnerPiecesRemaining = ''
 
-        if (gameInfo.winner === 'white') {
+        if (game.result.winner === 'white') {
             winnerPiecesRemaining = position.replace(/[\.Ka-z]/g, '')
-        } else if (gameInfo.winner === 'black') {
+        } else if (game.result.winner === 'black') {
             winnerPiecesRemaining = position.replace(/[\.kA-Z]/g, '')
         }
 
         // the winner can only have exactly 1 pawn remaining
         if (winnerPiecesRemaining.toLowerCase() !== 'p') {
-            return
+            return []
         }
 
         let materialImbalance = Math.abs(calculateMaterialImbalance(position))
 
         if (materialImbalance >= 10) {
-            return gameInfo.winner
+            return [game.result.winner === 'white' ? 'w' : 'b']
         }
+
+        return []
     },
 }

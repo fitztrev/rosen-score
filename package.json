@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@bity/oauth2-auth-code-pkce": "^2.13.0",
+    "@mliebelt/pgn-parser": "^1.4.5",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.26.2",
     "autoprefixer": "^10.4.2",
-    "chess-fetcher": "^0.2.3",
+    "chess-fetcher": "^0.3.0",
     "chess.js": "1.0.0-alpha.0",
     "isepic-chess": "^8.4.6",
     "js-cookie": "^3.0.1",

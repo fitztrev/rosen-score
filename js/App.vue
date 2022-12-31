@@ -3,7 +3,7 @@
         v-cloak
         class="container mx-auto my-8 w-11/12"
         :class="{
-            'is-download-complete': isDownloadComplete,
+            'is-download-complete': false,
         }"
     >
         <div class="text-center">
@@ -15,102 +15,70 @@
 
         <div
             class="my-8 bg-indigo-100 border border-indigo-200 drop-shadow-2xl mx-auto p-4 rounded-lg shadow-indigo-500/50 shadow-lg text-sky-600 md:w-1/2"
-            v-if="!isDownloading && !reportObject.data"
         >
             <form @submit.prevent="startDownload">
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        1
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        Enter Lichess.org username or arena URL:
+                        Select which site:
+
+                        <div class="text-sky-900 mt-1">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="site" value="lichess" v-model="form.type" />
+                                Lichess
+                            </label>
+                            <label class="cursor-pointer ml-4">
+                                <input type="radio" name="site" value="chesscom" v-model="form.type" />
+                                Chess.com
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row mb-4">
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">2 <ArrowIcon /></div>
+                    <div class="basis-3/4">
+                        Enter username:
 
                         <input
                             type="text"
                             class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Lichess username or arena URL here"
+                            placeholder="Username here"
                             spellcheck="false"
                             data-lpignore="true"
-                            v-model="formInputValue"
-                            @change="formInputValueEntered"
+                            v-model="form.value"
                         />
 
                         <div class="text-sm">
                             Or
                             <span
                                 class="dotted-underline text-sky-900 cursor-pointer"
-                                @click.prevent="formFill('EricRosen')"
+                                @click.prevent="formFill(form.type === 'lichess' ? 'EricRosen' : 'IMRosen')"
                             >
-                                click here to see EricRosen's
+                                click here to see Eric Rosen's
                             </span>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        2
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">3 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login>
+                        <!-- <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login> -->
                     </div>
                 </div>
 
                 <div class="flex flex-row">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        3
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">4 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <div class="text-sm mt-1 mb-2" v-if="!formInputValue.includes('lichess.org')">
+                        <div class="text-sm mt-1 mb-2">
                             Check games since
                             <select
-                                v-model.number="filter.sinceHoursAgo"
+                                v-model.number="form.filters.sinceHoursAgo"
                                 class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 md:w-28"
                             >
                                 <option :value="6">6 hours ago</option>
-                                <option :value="24">yesterday</option>
+                                <option :value="24">24 hours ago</option>
                                 <option :value="24 * 7">last week</option>
                                 <option :value="24 * 31">last month</option>
                                 <option :value="0">forever</option>
@@ -121,13 +89,7 @@
                             type="submit"
                             class="px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="inline h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -139,13 +101,7 @@
                         </button>
 
                         <div v-if="errorMsg" class="mt-2 font-bold text-red-500">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="inline h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -162,7 +118,7 @@
             <RecentUpdates @form-fill="formFill" />
         </div>
 
-        <download-progress
+        <!-- <download-progress
             v-if="isDownloading && reportObject.data"
             :title="reportObject.data.username || reportObject.data.fullName || reportObject.data.name"
             :positions="counts.totalMoves"
@@ -170,9 +126,9 @@
             :total="counts.totalGames"
             :hideProgressBar="usingCachedData || filter.sinceHoursAgo"
             @cancel-download="cancelFetch"
-        ></download-progress>
+        ></download-progress> -->
 
-        <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
+        <!-- <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
                 <template v-if="reportObject.type === 'user'">
                     <lichess-username
@@ -215,9 +171,9 @@
                     games analyzed
                 </template>
             </div>
-        </div>
+        </div> -->
 
-        <div class="md:flex md:flex-row md:space-x-4">
+        <!-- <div class="md:flex md:flex-row md:space-x-4">
             <div class="basis-1/2">
                 <h2 class="heading">Make Eric Proud</h2>
                 <div class="grid grid-cols-2 gap-2">
@@ -712,69 +668,78 @@
                     ></accomplishment-score>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="text-sm text-center text-slate-400 mt-8">
-            Not affiliated with Eric Rosen. Find a bug? Have a comment? Fill out
+            Not affiliated with Eric Rosen, Lichess, or Chess.com. Find a bug? Have a comment? Fill out
             <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
         </div>
 
-        <div class="text-sm text-center text-slate-400 mt-8" v-if="isLocalEnv">
+        <!-- <div class="text-sm text-center text-slate-400 mt-8" v-if="isLocalEnv">
             <a href="" @click.prevent="getCacheUpdateCommand">getCacheUpdateCommand</a>
-        </div>
+        </div> -->
     </div>
 </template>
 
-<script>
-import readStream from './browser-ndjson-stream-reader'
+<script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-import cleanupLichessUsername from './utils/cleanup-lichess-username'
-import fenToPosition from './utils/fen-to-position'
-import formatSinceDate from './utils/format-since-date'
-import getPiecesOnFiles from './utils/position-to-files'
-import pgnFormatter from './utils/pgn-formatter'
+// import cleanupLichessUsername from './utils/cleanup-lichess-username'
+// import fenToPosition from './utils/fen-to-position'
+// import formatSinceDate from './utils/format-since-date'
+// import getPiecesOnFiles from './utils/position-to-files'
+// import pgnFormatter from './utils/pgn-formatter'
 
-import adoptionMatch from './goals/adoption-match'
+// import adoptionMatch from './goals/adoption-match'
 import alphabetOpenings from './goals/alphabet-openings'
-import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
-import castleFork from './goals/castle-fork'
-import consecutiveCaptures from './goals/consecutive-captures'
+// import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
+// import castleFork from './goals/castle-fork'
+// import consecutiveCaptures from './goals/consecutive-captures'
 import dirtyWins from './goals/dirty-wins'
 import doubleCheckCheckmate from './goals/double-check-checkmate'
 import firstCapture from './goals/first-capture'
 import gameChecks from './goals/game-checks'
-import lefongTrap from './goals/lefong-trap'
-import megaFork from './goals/mega-fork'
+// import lefongTrap from './goals/lefong-trap'
 import moveChecks from './goals/move-checks'
-import ohNoMyQueen from './goals/oh-no-my-queen'
-import pawnStormOpening from './goals/pawn-storm-opening'
 import pieceStructures from './goals/piece-structures'
-import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
-import rosenTrap from './goals/rosen-trap'
-import smotheredMate from './goals/smothered-mate'
-import smotheredPorkMate from './goals/smothered-pork-mate'
+// import ohNoMyQueen from './goals/oh-no-my-queen'
+// import pawnStormOpening from './goals/pawn-storm-opening'
+// import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
+// import rosenTrap from './goals/rosen-trap'
+// import smotheredMate from './goals/smothered-mate'
+// import smotheredPorkMate from './goals/smothered-pork-mate'
+// import megaFork from './goals/mega-fork'
 
-const controller = new AbortController()
-const { signal } = controller
+// const controller = new AbortController()
+// const { signal } = controller
 
-import ericCachedGames from '../cache/eric.json'
-import ericLastUpdated from '../cache/eric-last-updated.json'
-import tournamentCachedGames from '../cache/swiss-48jrx3m6.json'
+// import ericCachedGames from '../cache/eric.json'
+// import ericLastUpdated from '../cache/eric-last-updated.json'
+// import tournamentCachedGames from '../cache/swiss-48jrx3m6.json'
 
-const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
+// const wait = (timeToDelay: number) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
+
+import { games, player, Game, Profile } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
+import ArrowIcon from './components/ArrowIcon.vue'
 import ChangelogDate from './components/ChangelogDate.vue'
 import DownloadProgress from './components/DownloadProgress.vue'
 import LichessLogin from './components/LichessLogin.vue'
 import LichessUsername from './components/LichessUsername.vue'
 import RecentUpdates from './components/RecentUpdates.vue'
 import TrophyCollection from './components/TrophyCollection.vue'
+import fenToPosition from './utils/fen-to-position'
+import rosenTrap from './goals/rosen-trap'
+import { smotheredMate, smotheredPorkMate } from './goals/smothered-mate'
+import adoptionMatch from './goals/adoption-match'
+import { blockCheckWithCheckmate } from './goals/block-check-with-checkmate'
+import royalFamilyFork from './goals/royal-family-fork'
 
 export default {
     components: {
         AccomplishmentScore,
+        ArrowIcon,
         ChangelogDate,
         DownloadProgress,
         LichessLogin,
@@ -784,676 +749,250 @@ export default {
     },
     data() {
         return {
-            lichessOauthToken: null,
+            form: {
+                type: 'lichess',
+                value: 'EricRosen',
+                filters: {
+                    sinceHoursAgo: 0,
+                },
+            },
 
-            formInputValue: '',
-            filter: {},
-            reportObject: {},
+            // lichessOauthToken: null,
 
-            isDownloading: false,
-            isDownloadComplete: false,
+            // isDownloading: false,
+            // isDownloadComplete: false,
             errorMsg: '',
 
-            totalAccomplishmentsPossible: 0,
-            pointsByAccomplishment: {},
+            // totalAccomplishmentsPossible: 0,
+            // pointsByAccomplishment: {},
 
-            counts: {
-                totalGames: 0,
-                downloaded: 0,
-                totalMoves: 0,
-            },
+            // counts: {
+            //     totalGames: 0,
+            //     downloaded: 0,
+            //     totalMoves: 0,
+            // },
         }
     },
 
     computed: {
-        sinceTimestamp: function () {
-            if (this.filter.sinceHoursAgo) {
-                let now = new Date().getTime()
-                return now - this.filter.sinceHoursAgo * 60 * 60 * 1000
-            }
-        },
-
-        sinceDateFormatted: function () {
-            if (this.sinceTimestamp) {
-                return formatSinceDate(this.sinceTimestamp)
-            }
-        },
-
-        totalAccomplishmentsCompleted: function () {
-            return Object.keys(this.pointsByAccomplishment).length
-        },
-
-        totalAccomplishmentsCompletedPercentage: function () {
-            return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
-        },
-
-        trophyCount: function () {
-            return Object.values(this.pointsByAccomplishment)
-                .map((o) => Object.values(o))
-                .flat().length
-        },
-
-        lichessOauthTokenString: function () {
-            if (this.lichessOauthToken) {
-                return this.lichessOauthToken.token.value
-            } else {
-                return ''
-            }
-        },
-
-        usingCachedData: function () {
-            return this.reportObject.data.username === 'EricRosen' && this.filter.sinceHoursAgo === 0
-        },
-
-        isLocalEnv: function () {
-            return window.location.href.includes('localhost')
-        },
+        // sinceTimestamp: function () {
+        //     if (this.form.filters.sinceHoursAgo) {
+        //         let now = new Date().getTime()
+        //         return now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000
+        //     }
+        // },
+        // sinceDateFormatted: function () {
+        //     if (this.sinceTimestamp) {
+        //         return formatSinceDate(this.sinceTimestamp)
+        //     }
+        // },
+        // totalAccomplishmentsCompleted: function () {
+        //     return Object.keys(this.pointsByAccomplishment).length
+        // },
+        // totalAccomplishmentsCompletedPercentage: function () {
+        //     return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
+        // },
+        // trophyCount: function () {
+        //     return Object.values(this.pointsByAccomplishment)
+        //         .map((o) => Object.values(o))
+        //         .flat().length
+        // },
+        // lichessOauthTokenString: function () {
+        //     if (this.lichessOauthToken) {
+        //         return this.lichessOauthToken.token.value
+        //     } else {
+        //         return ''
+        //     }
+        // },
+        // usingCachedData: function () {
+        //     return this.reportObject.data.username === 'EricRosen' && this.form.filters.sinceHoursAgo === 0
+        // },
+        // isLocalEnv: function () {
+        //     return window.location.href.includes('localhost')
+        // },
     },
 
-    watch: {
-        filter: {
-            handler: function (value) {
-                window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
-            },
-            deep: true,
-        },
-    },
+    // watch: {
+    //     filter: {
+    //         handler: function (value) {
+    //             window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
+    //         },
+    //         deep: true,
+    //     },
+    // },
 
-    mounted: function () {
-        this.formInputValue = window.sessionStorage.getItem('savedFormInputValue') || ''
-        this.filter = {
-            sinceHoursAgo: 0,
-            ...JSON.parse(window.sessionStorage.getItem('savedFilter')),
-        }
-    },
+    // mounted: function () {
+    //     this.formInputValue = window.sessionStorage.getItem('savedFormInputValue') || ''
+    //     this.form.filters = {
+    //         sinceHoursAgo: 0,
+    //         ...JSON.parse(window.sessionStorage.getItem('savedFilter')),
+    //     }
+    // },
 
     methods: {
-        onRegisterNewGoal: function () {
-            this.totalAccomplishmentsPossible++
+        // onRegisterNewGoal: function () {
+        //     this.totalAccomplishmentsPossible++
+        // },
+
+        formFill: function (value: string) {
+            this.form.value = value
         },
 
-        formFill: function (value) {
-            this.formInputValue = value
-            this.formInputValueEntered()
-        },
+        // formInputValueEntered: function () {
+        //     this.formInputValue = cleanupLichessUsername(this.formInputValue)
 
-        formInputValueEntered: function () {
-            this.formInputValue = cleanupLichessUsername(this.formInputValue)
+        //     /*
+        //      * Save the username form value to the session because
+        //      * if they "Login to Lichess" it will be gone when the
+        //      * page reloads.
+        //      */
+        //     window.sessionStorage.setItem('savedFormInputValue', this.formInputValue)
+        // },
 
-            /*
-             * Save the username form value to the session because
-             * if they "Login to Lichess" it will be gone when the
-             * page reloads.
-             */
-            window.sessionStorage.setItem('savedFormInputValue', this.formInputValue)
-        },
-
-        setLichessOauthToken: function (data) {
-            this.lichessOauthToken = data
-        },
-
-        fetchJsonEndpoint: function (url) {
-            return fetch(url, {
-                headers: {
-                    Authorization: `Bearer ${this.lichessOauthTokenString}`,
-                },
-            }).then((response) => response.json())
-        },
+        // setLichessOauthToken: function (data) {
+        //     this.lichessOauthToken = data
+        // },
 
         startDownload: function () {
-            if (!this.formInputValue) {
+            if (!this.form.value) {
                 this.errorMsg = 'Enter a username or arena URL in Step #1'
                 return
             }
 
-            if (this.formInputValue.includes('/tournament/')) {
-                // Arena tournament
-                this.reportObject.type = 'arena'
-                let tournamentId = this.formInputValue.split('/').pop()
-                this.fetchJsonEndpoint(`https://lichess.org/api/tournament/${tournamentId}`)
-                    .then(
-                        function (data) {
-                            if (!data.isFinished) {
-                                this.errorMsg = 'Tournament not over yet.'
-                                return
-                            }
-
-                            if (data.stats.games > 50000) {
-                                this.errorMsg = 'Marathon tournaments are a little too big.'
-                                return
-                            }
-
-                            this.counts.totalGames = data.stats.games
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.fullName}`
-
-                            let url = `https://lichess.org/api/tournament/${tournamentId}/games?pgnInJson=true&clocks=true`
-
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Tournament not found.'
-                    })
-            } else if (this.formInputValue.includes('/swiss/')) {
-                // Swiss tournament
-                this.reportObject.type = 'swiss'
-                let tournamentId = this.formInputValue.split('/').pop()
-                this.fetchJsonEndpoint(`https://lichess.org/api/swiss/${tournamentId}`)
-                    .then(
-                        async function (data) {
-                            if (data.status !== 'finished') {
-                                this.errorMsg = 'Tournament not over yet.'
-                                return
-                            }
-
-                            this.counts.totalGames = data.stats.games
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.name}`
-
-                            // The example tournament is cached so we don't
-                            // have to request from the Lichess API
-                            if (tournamentId === '48jrx3m6') {
-                                this.isDownloading = true
-
-                                for (const gameJson of tournamentCachedGames) {
-                                    this.processGame(gameJson)
-                                    await wait(2)
-                                }
-
-                                this.streamComplete()
-
-                                return
-                            }
-
-                            let url = `https://lichess.org/api/swiss/${tournamentId}/games?pgnInJson=true&clocks=true`
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Tournament not found.'
-                    })
-            } else {
-                // User
-                this.reportObject.type = 'user'
-
-                this.fetchJsonEndpoint(`https://lichess.org/api/user/${this.formInputValue}`)
-                    .then(
-                        async function (data) {
-                            this.counts.totalGames = data.count.all
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.username}`
-
-                            let url = `https://lichess.org/api/games/user/${data.id}?pgnInJson=true&clocks=true`
-
-                            // EricRosen's games are pre-downloaded and filtered to only include matching games
-                            if (this.usingCachedData) {
-                                this.isDownloading = true
-
-                                for (const gameJson of ericCachedGames) {
-                                    this.processGame(gameJson)
-                                    await wait(2)
-                                }
-
-                                url += '&since=' + ericLastUpdated
-                            } else {
-                                url += '&since=' + this.sinceTimestamp
-                            }
-
-                            // url = new URL('../cache/ericrosen.txt', import.meta.url)
-
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Lichess user not found'
-                    })
-            }
-        },
-
-        addTrophyForColor: function (color, label, game, onMoveNumber) {
-            if (color === 'w') {
-                color = 'white'
-            } else if (color === 'b') {
-                color = 'black'
+            let url = ''
+            if (this.form.type === 'lichess') {
+                url = `https://lichess.org/@/${this.form.value}`
+            } else if (this.form.type === 'chesscom') {
+                url = `https://www.chess.com/member/${this.form.value}`
             }
 
-            // console.log(`${label}: adding for ${color}`, `https://lichess.org/${game.id}`)
-
-            let logRecord = {}
-
-            let anchorLink
-            if (onMoveNumber) {
-                onMoveNumber = parseInt(onMoveNumber) + 1
-                anchorLink = '#' + onMoveNumber
-            } else {
-                anchorLink = ''
-            }
-
-            if (this.reportObject.type === 'user') {
-                if (this.reportObject.data.id !== game.players[color].user.id) {
-                    return
-                }
-
-                if (this.reportObject.data.id === game.players.white.user.id) {
-                    logRecord.opponent = game.players.black.user
-                    logRecord.gameLink = `https://lichess.org/${game.id}${anchorLink}`
-                } else {
-                    logRecord.opponent = game.players.white.user
-                    logRecord.gameLink = `https://lichess.org/${game.id}/black${anchorLink}`
-                }
-            } else {
-                logRecord.opponent = game.players[color].user
-                logRecord.gameLink = `https://lichess.org/${game.id}/${color}${anchorLink}`
-            }
-
-            if (!this.pointsByAccomplishment[label]) {
-                this.pointsByAccomplishment[label] = {}
-            }
-
-            // console.log(`${label}: adding for ${color}`, logRecord.link, logRecord)
-
-            if (!this.pointsByAccomplishment[label][game.id]) {
-                this.pointsByAccomplishment[label][game.id] = logRecord
-            }
-        },
-
-        checkForAccomplishment: function (color, label, game, onMoveNumber) {
-            if (typeof color === 'object') {
-                for (const c of color) {
-                    this.addTrophyForColor(c, label, game, onMoveNumber)
-                }
-            } else if (color) {
-                this.addTrophyForColor(color, label, game, onMoveNumber)
-            }
-        },
-
-        cancelFetch: function () {
-            controller.abort()
-
-            this.isDownloading = false
-        },
-
-        fetchGames: function (url) {
-            this.isDownloading = true
-
-            const stream = fetch(url, {
-                headers: {
-                    Accept: 'application/x-ndjson',
-                    Authorization: `Bearer ${this.lichessOauthTokenString}`,
-                },
-                signal,
+            player(url).then((player: Profile) => {
+                console.log(player)
+                window.document.title += ` - ${player.title} ${player.username}`
             })
 
-            stream.then(readStream(this.processGame)).then(this.streamComplete)
+            games(url, this.checkGameForTrophies, {
+                max: 5,
+                pgnInJson: true,
+                clocks: true,
+            })
         },
 
-        streamComplete: function () {
-            this.isDownloading = false
-            this.isDownloadComplete = true
+        checkForTrophy(name: string, colors: string[], game: Game, onMoveNumber: number) {
+            for (const color of colors) {
+                console.log(name, color, game, onMoveNumber)
+            }
         },
 
-        processGame: function (gameInfoJson) {
-            this.counts.downloaded++
+        checkGameForTrophies: function (game: Game) {
+            console.log(game)
 
             // only standard chess starting position games
-            if (gameInfoJson.variant !== 'standard') {
+            if (!game.isStandard) {
                 return
             }
 
-            // ignore games against stockfish or anonymous users
+            // ignore games against stockfish, anonymous users, and bots
             if (
-                typeof gameInfoJson.players.white.user === 'undefined' ||
-                typeof gameInfoJson.players.black.user === 'undefined'
+                typeof game.players.white.username === 'undefined' ||
+                typeof game.players.black.username === 'undefined' ||
+                game.players.white.title === 'BOT' ||
+                game.players.black.title === 'BOT'
             ) {
                 return
             }
 
-            // ignore games against bots
-            if (gameInfoJson.players.white.user.title === 'BOT' || gameInfoJson.players.black.user.title === 'BOT') {
+            if (game.moves.length === 0) {
                 return
             }
 
-            let moves = pgnFormatter(gameInfoJson.moves).split(' ').filter(Boolean)
+            moveChecks.castleAfterMove40(game.moves)
+            moveChecks.pawnCheckmate(game.moves)
+            moveChecks.g5mate(game.moves)
 
-            if (!moves.length) {
-                return
-            }
+            moveChecks.knightCornerMate(game.moves)
+            moveChecks.enPassantCheckmate(game.moves)
+            moveChecks.castleKingsideWithCheckmate(game.moves)
+            moveChecks.castleQueensideWithCheckmate(game.moves)
+            moveChecks.checkmateWithKing(game.moves)
+            moveChecks.promoteToBishopCheckmate(game.moves)
+            moveChecks.promoteToKnightCheckmate(game.moves)
+            moveChecks.promotePawnBeforeMoveNumber(game.moves, 8)
 
-            let chessJS = new ChessJS()
-            let position
+            smotheredMate(game.moves)
+            smotheredPorkMate(game.moves)
 
-            this.counts.totalMoves += moves.length
+            blockCheckWithCheckmate(game.moves)
+            royalFamilyFork(game.moves)
 
-            for (const move in moves) {
-                let moveInfo = chessJS.move(moves[move])
-                position = fenToPosition(chessJS.fen())
-                let piecesOnFiles = getPiecesOnFiles(position)
+            adoptionMatch.processGame(game)
+            adoptionMatch.checkForAdoption(game, 10)
+            adoptionMatch.checkForAdoption(game, 20)
 
-                this.checkForAccomplishment(
-                    moveChecks.castleAfterMove40(moveInfo, move),
-                    'castleAfterMove40',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.pawnCheckmate(moveInfo, move),
-                    'pawnCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(moveChecks.g5mate(moveInfo), 'g5mate', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    moveChecks.knightCornerMate(moveInfo, move),
-                    'knightCornerMate',
-                    gameInfoJson,
-                    move
-                )
+            let chessJs = new ChessJS()
+            let position: string
 
-                this.checkForAccomplishment(
-                    moveChecks.enPassantCheckmate(moveInfo, move, true),
-                    'enPassantCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.castleKingsideWithCheckmate(moveInfo, move),
-                    'castleKingsideWithCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.castleQueensideWithCheckmate(moveInfo, move),
-                    'castleQueensideWithCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.checkmateWithKing(moveInfo, move),
-                    'checkmateWithKing',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.promoteToBishopCheckmate(moveInfo, move),
-                    'promoteToBishopCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.promoteToKnightCheckmate(moveInfo, move),
-                    'promoteToKnightCheckmate',
-                    gameInfoJson,
-                    move
-                )
+            for (const move in game.moves) {
+                position = fenToPosition(chessJs.fen())
+                let moveNumber = parseInt(move)
 
-                this.checkForAccomplishment(
-                    moveChecks.promotePawnBeforeMoveNumber(moveInfo, move, 8),
-                    'promotePawnBeforeMoveNumber',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(
-                    pieceStructures.quadrupledPawns(piecesOnFiles),
-                    'quadrupledPawns',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.pawnCube(position), 'pawnCube', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnCubeCenter(position),
-                    'pawnCubeCenter',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.pawnX(position), 'pawnX', gameInfoJson, move)
-
-                this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnDiamondSolid(position),
-                    'pawnDiamondSolid',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.doublePawnDiamond(position),
-                    'doublePawnDiamond',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.knightRectangle(position),
-                    'knightRectangle',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank4(position),
-                    'connectEightOnRank4',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank5(position),
-                    'connectEightOnRank5',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank6(position),
-                    'connectEightOnRank6',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank7(position),
-                    'connectEightOnRank7',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(pieceStructures.connectFive(position), 'connectFive', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.connectSix(position), 'connectSix', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnTrapezoid(position),
-                    'pawnTrapezoid',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.sixPawnsInTheSameFile(position),
-                    'sixPawnsInTheSameFile',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(smotheredMate(chessJS, moveInfo), 'smotheredMate', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    smotheredPorkMate(chessJS, moveInfo),
-                    'smotheredPorkMate',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(megaFork(chessJS, moveInfo, gameInfoJson), 'megaFork', gameInfoJson, move)
+                pieceStructures.quadrupledPawns(position)
+                pieceStructures.pawnCube(position)
+                pieceStructures.pawnCubeCenter(position)
+                pieceStructures.pawnX(position)
+                pieceStructures.pawnDiamond(position)
+                pieceStructures.pawnDiamondSolid(position)
+                pieceStructures.doublePawnDiamond(position)
+                pieceStructures.knightCube(position)
+                pieceStructures.knightRectangle(position)
+                pieceStructures.connectEightOnRank4(position)
+                pieceStructures.connectEightOnRank5(position)
+                pieceStructures.connectEightOnRank6(position)
+                pieceStructures.connectEightOnRank7(position)
+                pieceStructures.connectFive(position)
+                pieceStructures.connectSix(position)
+                pieceStructures.pawnTrapezoid(position)
+                pieceStructures.sixPawnsInTheSameFile(position)
             }
 
             for (let word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                this.checkForAccomplishment(
-                    alphabetOpenings.checkWord(word, moves).filter((color) => gameInfoJson.winner === color),
-                    `alphabet:${word}`,
-                    gameInfoJson
-                )
+                alphabetOpenings.checkWord(word, game.moves).filter((color) => game.result.winner === color)
             }
 
-            this.checkForAccomplishment(
-                doubleCheckCheckmate(chessJS.fen(), gameInfoJson),
-                'doubleCheckCheckmate',
-                gameInfoJson,
-                moves.length
-            )
+            position = fenToPosition(chessJs.fen())
 
-            this.checkForAccomplishment(
-                gameChecks.stalemateTricks(gameInfoJson, position, moves.length % 2 ? 'black' : 'white'),
+            this.checkForTrophy('doubleCheckCheckmate', doubleCheckCheckmate(chessJs.fen(), game), game, game.moves.length)
+            this.checkForTrophy(
                 'stalemateTricks',
-                gameInfoJson,
-                moves.length
+                gameChecks.stalemateTricks(game, position, game.moves.length % 2 ? 'b' : 'w'),
+                game,
+                game.moves.length
             )
+            this.checkForTrophy('bishopAndKnightMate', gameChecks.bishopAndKnightMate(game, position), game, game.moves.length)
+            this.checkForTrophy('twoBishopMate', gameChecks.twoBishopMate(game, position), game, game.moves.length)
+            this.checkForTrophy('fourKnightMate', gameChecks.fourKnightMate(game, position), game, game.moves.length)
+            this.checkForTrophy('fourKnightCubeMate', gameChecks.fourKnightCubeMate(game, position), game, game.moves.length)
+            this.checkForTrophy('sixKnightRectangleMate', gameChecks.sixKnightRectangleMate(game, position), game, game.moves.length)
+            this.checkForTrophy('noCapturesBeforeMoveNumber', firstCapture.noCapturesBeforeMoveNumber(game.moves, 30), game, game.moves.length)
+            this.checkForTrophy('winInsufficientMaterial', dirtyWins.winInsufficientMaterial(game, position), game, game.moves.length)
+            this.checkForTrophy('clutchPawn', dirtyWins.clutchPawn(game, position), game, game.moves.length)
 
-            this.checkForAccomplishment(
-                gameChecks.bishopAndKnightMate(gameInfoJson, position),
-                'bishopAndKnightMate',
-                gameInfoJson,
-                moves.length
-            )
-            this.checkForAccomplishment(
-                gameChecks.twoBishopMate(gameInfoJson, position),
-                'twoBishopMate',
-                gameInfoJson,
-                moves.length
-            )
+            rosenTrap(game, game.moves)
+            // lefongTrap(allMoves)
+            // castleFork(game.moves),
+            // ohNoMyQueen.checkMoves(allMoves, position),
+            // premovesWithOneSecondLeft(game),
+            // pawnStormOpening(allMoves, game)
+            // consecutiveCaptures.sameSquare(allMoves),
 
-            this.checkForAccomplishment(
-                gameChecks.fourKnightMate(gameInfoJson, position),
-                'fourKnightMate',
-                gameInfoJson,
-                moves.length
-            )
-
-            this.checkForAccomplishment(
-                gameChecks.fourKnightCubeMate(gameInfoJson, position),
-                'fourKnightCubeMate',
-                gameInfoJson,
-                moves.length
-            )
-            this.checkForAccomplishment(
-                gameChecks.sixKnightRectangleMate(gameInfoJson, position),
-                'sixKnightRectangleMate',
-                gameInfoJson,
-                moves.length
-            )
-
-            let allMoves = chessJS.history({ verbose: true })
-
-            let firstCaptureAfterMove30 = firstCapture.noCapturesBeforeMoveNumber(allMoves, 30)
-            if (firstCaptureAfterMove30) {
-                this.addTrophyForColor('white', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
-                this.addTrophyForColor('black', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
-            }
-
-            this.checkForAccomplishment(rosenTrap(gameInfoJson, allMoves), 'rosenTrap', gameInfoJson, allMoves.length)
-
-            this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
-
-            this.checkForAccomplishment(
-                dirtyWins.winInsufficientMaterial(gameInfoJson, position),
-                'winInsufficientMaterial',
-                gameInfoJson,
-                allMoves.length
-            )
-
-            this.checkForAccomplishment(
-                dirtyWins.clutchPawn(gameInfoJson, position),
-                'clutchPawn',
-                gameInfoJson,
-                allMoves.length
-            )
-
-            this.checkForAccomplishment(castleFork(allMoves), 'castleFork', gameInfoJson)
-
-            this.checkForAccomplishment(ohNoMyQueen.checkMoves(allMoves, position), 'ohNoMyQueen', gameInfoJson)
-
-            this.checkForAccomplishment(
-                blockCheckWithCheckmate(allMoves, gameInfoJson),
-                'blockCheckWithCheckmate',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(
-                premovesWithOneSecondLeft(gameInfoJson),
-                'premovesWithOneSecondLeft',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(pawnStormOpening(allMoves, gameInfoJson), 'pawnStormOpening', gameInfoJson)
-
-            let consecutiveCapturesResult = consecutiveCaptures.sameSquare(allMoves)
-            if (consecutiveCapturesResult.consecutiveCaptures >= 10) {
-                this.addTrophyForColor(
-                    'white',
-                    'consecutiveCaptures:sameSquare',
-                    gameInfoJson,
-                    consecutiveCapturesResult.onMoveNumber
-                )
-                this.addTrophyForColor(
-                    'black',
-                    'consecutiveCaptures:sameSquare',
-                    gameInfoJson,
-                    consecutiveCapturesResult.onMoveNumber
-                )
-            }
-
-            adoptionMatch.processGame(gameInfoJson)
-
-            this.checkForAccomplishment(
-                adoptionMatch.checkForAdoption(gameInfoJson, 10),
-                'adoptionMatch:10',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(
-                adoptionMatch.checkForAdoption(gameInfoJson, 20),
-                'adoptionMatch:20',
-                gameInfoJson
-            )
-
-            if (gameInfoJson.status === 'mate') {
-                let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
-
-                if (numberOfMovesForWinningSide === 2) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:2', gameInfoJson)
-                } else if (numberOfMovesForWinningSide === 3) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:3', gameInfoJson)
-                } else if (numberOfMovesForWinningSide === 4) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
-                }
-            }
-        },
-
-        getCacheUpdateCommand: function () {
-            let gameIds = adoptionMatch.allAdoptionMatchGameids
-
-            for (const accomplishment in this.pointsByAccomplishment) {
-                gameIds.push(Object.keys(this.pointsByAccomplishment[accomplishment]))
-            }
-
-            let uniqueGameIds = [...new Set(gameIds.flat().sort())]
-
-            let chunks = []
-
-            var i,
-                j,
-                chunk = 250
-            for (i = 0, j = uniqueGameIds.length; i < j; i += chunk) {
-                chunks.push(uniqueGameIds.slice(i, i + chunk))
-            }
-
-            let curls = chunks.map(function (chunk) {
-                return `curl -X POST -H "Accept: application/x-ndjson" "https://lichess.org/games/export/_ids?pgnInJson=true&clocks=true" -d '${chunk.join(
-                    ','
-                )}'`
-            })
-
-            let cmd = `rm -f cache/eric.txt && (${curls.join(' && ')}) >> cache/eric.txt`
-
-            console.log(cmd)
+            // let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
+            // if (numberOfMovesForWinningSide === 2) {
+            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:2', gameInfoJson)
+            // } else if (numberOfMovesForWinningSide === 3) {
+            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:3', gameInfoJson)
+            // } else if (numberOfMovesForWinningSide === 4) {
+            //     this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
+            // }
         },
     },
 }

@@ -1,5 +1,5 @@
 export default function (gameInfoJson) {
-    if (gameInfoJson.status !== 'mate') {
+    if (gameInfoJson.status !== 'checkmate') {
         return
     }
 

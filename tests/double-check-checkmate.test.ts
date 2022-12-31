@@ -20,8 +20,8 @@ describe('test double-check checkmate', () => {
             'white',
         ],
     ])('test fen: %p', (fen, color) => {
-        expect(doubleCheckCheckmate(fen, { status: 'mate', winner: color })).toBe(color)
-        expect(doubleCheckCheckmate(fen, { status: 'draw', winner: color })).toBeFalsy()
+        expect(doubleCheckCheckmate(fen, { result: { via: 'checkmate', winner: color } })).toStrictEqual([color])
+        expect(doubleCheckCheckmate(fen, { result: { via: 'draw', winner: color } })).toStrictEqual([])
     })
 })
 
@@ -35,6 +35,6 @@ describe('test not double-check checkmate', () => {
         'r4r2/4npkp/1q1bp1p1/p1np1N2/1pp1P3/1P1P2P1/PBP2PBP/1NK4R b K - 1 2',
         'r1r1n3/1pqbbkpp/p2pP3/4n1P1/P2NP3/2N1B3/1PP1Q2P/R4RK1 b - - 0 2',
     ])('test fen: %p', (fen) => {
-        expect(doubleCheckCheckmate(fen, { status: 'mate' })).toBeFalsy()
+        expect(doubleCheckCheckmate(fen, { result: { via: 'checkmate' } })).toStrictEqual([])
     })
 })
