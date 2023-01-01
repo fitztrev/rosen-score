@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { knightCube, knightRectangle } from '../js/goals/piece-structures'
 
 describe('test no knight cube', () => {
     test.each([
@@ -11,7 +9,7 @@ describe('test no knight cube', () => {
         'k7/8/8/7N/N6N/N7/8/K7 w - - 0 1',
         'k7/8/7n/n6n/n7/8/8/K7 w - - 0 1',
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual([])
+        expect(knightCube(fen)).toStrictEqual([])
     })
 })
 
@@ -41,7 +39,7 @@ describe('test knight cube', () => {
 
         [['white', 'black'], 'k7/8/4nn2/4nn2/8/2NN4/2NN4/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.knightCube(fenToPosition(fen))).toStrictEqual(color)
+        expect(knightCube(fen)).toStrictEqual(color)
     })
 })
 
@@ -60,7 +58,7 @@ describe('test no knight rectangle', () => {
         'k7/7n/n6n/n6n/n7/8/8/K7 w - - 0 1',
         'k7/7N/N6N/N6N/N7/8/8/K7 w - - 0 1',
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual([])
+        expect(knightRectangle(fen)).toStrictEqual([])
     })
 })
 
@@ -111,6 +109,6 @@ describe('test knight rectangle', () => {
 
         [['white', 'black'], 'k7/3nn3/3nn3/3nn3/3NN3/3NN3/3NN3/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.knightRectangle(fenToPosition(fen))).toStrictEqual(color)
+        expect(knightRectangle(fen)).toStrictEqual(color)
     })
 })

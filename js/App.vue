@@ -671,7 +671,9 @@
         </div> -->
 
         <div class="text-sm text-center text-slate-400 mt-8">
-            Not affiliated with Eric Rosen, Lichess, or Chess.com. Find a bug? Have a comment? Fill out
+            Not affiliated with Eric Rosen, Lichess, or Chess.com.
+            <br />
+            Find a bug? Have a comment? Fill out
             <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
         </div>
 
@@ -695,13 +697,10 @@ import alphabetOpenings from './goals/alphabet-openings'
 // import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
 // import castleFork from './goals/castle-fork'
 // import consecutiveCaptures from './goals/consecutive-captures'
-import dirtyWins from './goals/dirty-wins'
-import doubleCheckCheckmate from './goals/double-check-checkmate'
-import firstCapture from './goals/first-capture'
-import gameChecks from './goals/game-checks'
+// import dirtyWins from './goals/dirty-wins'
+// import firstCapture from './goals/first-capture'
 // import lefongTrap from './goals/lefong-trap'
 import moveChecks from './goals/move-checks'
-import pieceStructures from './goals/piece-structures'
 // import ohNoMyQueen from './goals/oh-no-my-queen'
 // import pawnStormOpening from './goals/pawn-storm-opening'
 // import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
@@ -729,13 +728,33 @@ import LichessLogin from './components/LichessLogin.vue'
 import LichessUsername from './components/LichessUsername.vue'
 import RecentUpdates from './components/RecentUpdates.vue'
 import TrophyCollection from './components/TrophyCollection.vue'
-import fenToPosition from './utils/fen-to-position'
-import rosenTrap from './goals/rosen-trap'
 import { smotheredMate, smotheredPorkMate } from './goals/smothered-mate'
 import adoptionMatch from './goals/adoption-match'
 import { blockCheckWithCheckmate } from './goals/block-check-with-checkmate'
-import royalFamilyFork from './goals/royal-family-fork'
 import { checkmateAtMoveNumber } from './goals/checkmate-at-move-number'
+import { doubleCheckCheckmate } from './goals/double-check-checkmate'
+import {
+    quadrupledPawns,
+    pawnCube,
+    pawnCubeCenter,
+    pawnX,
+    pawnDiamond,
+    pawnDiamondSolid,
+    doublePawnDiamond,
+    knightCube,
+    knightRectangle,
+    connectEightOnRank4,
+    connectEightOnRank5,
+    connectEightOnRank6,
+    connectEightOnRank7,
+    connectFive,
+    connectSix,
+    pawnTrapezoid,
+    sixPawnsInTheSameFile,
+} from './goals/piece-structures'
+import { royalFamilyFork } from './goals/royal-family-fork'
+import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
+import { winInsufficientMaterial, clutchPawn } from './goals/dirty-wins'
 
 export default {
     components: {
@@ -926,16 +945,9 @@ export default {
             blockCheckWithCheckmate(game.moves)
             royalFamilyFork(game.moves)
 
-            // doubleCheckCheckmate(chessJs.fen(), game)
-            // gameChecks.stalemateTricks(game, position, game.moves.length % 2 ? 'b' : 'w'),
-            // gameChecks.bishopAndKnightMate(game, position)
-            // gameChecks.twoBishopMate(game, position)
-            // gameChecks.fourKnightMate(game, position)
-            // gameChecks.fourKnightCubeMate(game, position)
-            // gameChecks.sixKnightRectangleMate(game, position)
+            doubleCheckCheckmate(game.moves)
+
             // firstCapture.noCapturesBeforeMoveNumber(game.moves, 30)
-            // dirtyWins.winInsufficientMaterial(game, position)
-            // dirtyWins.clutchPawn(game, position)
 
             // rosenTrap(game, game.moves)
             // lefongTrap(allMoves)
@@ -944,6 +956,8 @@ export default {
             // premovesWithOneSecondLeft(game),
             // pawnStormOpening(allMoves, game)
             // consecutiveCaptures.sameSquare(allMoves),
+
+            // en passant checkmate
 
             checkmateAtMoveNumber(game.moves, 2)
             checkmateAtMoveNumber(game.moves, 3)
@@ -959,23 +973,33 @@ export default {
                 chessJs.move(move.notation.notation)
                 const fen = chessJs.fen()
 
-                pieceStructures.quadrupledPawns(fen)
-                pieceStructures.pawnCube(fen)
-                pieceStructures.pawnCubeCenter(fen)
-                pieceStructures.pawnX(fen)
-                pieceStructures.pawnDiamond(fen)
-                pieceStructures.pawnDiamondSolid(fen)
-                pieceStructures.doublePawnDiamond(fen)
-                pieceStructures.knightCube(fen)
-                pieceStructures.knightRectangle(fen)
-                pieceStructures.connectEightOnRank4(fen)
-                pieceStructures.connectEightOnRank5(fen)
-                pieceStructures.connectEightOnRank6(fen)
-                pieceStructures.connectEightOnRank7(fen)
-                pieceStructures.connectFive(fen)
-                pieceStructures.connectSix(fen)
-                pieceStructures.pawnTrapezoid(fen)
-                pieceStructures.sixPawnsInTheSameFile(fen)
+                quadrupledPawns(fen)
+                pawnCube(fen)
+                pawnCubeCenter(fen)
+                pawnX(fen)
+                pawnDiamond(fen)
+                pawnDiamondSolid(fen)
+                doublePawnDiamond(fen)
+                knightCube(fen)
+                knightRectangle(fen)
+                connectEightOnRank4(fen)
+                connectEightOnRank5(fen)
+                connectEightOnRank6(fen)
+                connectEightOnRank7(fen)
+                connectFive(fen)
+                connectSix(fen)
+                pawnTrapezoid(fen)
+                sixPawnsInTheSameFile(fen)
+
+                stalemateTricks(game, fen)
+                bishopAndKnightMate(game, fen)
+                twoBishopMate(game, fen)
+                fourKnightMate(game, fen)
+                fourKnightCubeMate(game, fen)
+                sixKnightRectangleMate(game, fen)
+
+                winInsufficientMaterial(game, fen)
+                clutchPawn(game, fen)
             }
 
             for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {

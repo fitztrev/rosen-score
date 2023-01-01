@@ -1,15 +1,19 @@
 import { Ic } from 'isepic-chess'
-import { Game } from 'chess-fetcher'
+import { PgnMove } from 'chess-fetcher'
 
-export default function (fen: string, game: Game): string[] {
-    if (game.result.via !== 'checkmate') {
+export function doubleCheckCheckmate(moves: PgnMove[]) {
+    const lastMove = moves[moves.length - 1]
+
+    if (lastMove.notation.check !== '#') {
         return []
     }
 
-    let board = Ic.initBoard({ fen })
+    const pgn = moves.map((move) => move.notation.notation).join(' ')
+
+    const board = Ic.initBoard({ pgn })
 
     if (board.isCheckmate && board.checks === 2) {
-        return [game.result.winner]
+        return [lastMove.turn]
     }
 
     return []

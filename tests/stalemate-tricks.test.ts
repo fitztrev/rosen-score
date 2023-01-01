@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import gameChecks from '../js/goals/game-checks'
+import { stalemateTricks } from '../js/goals/game-checks'
 
 describe('test no stalemate tricks', () => {
     test.each([
@@ -12,7 +10,7 @@ describe('test no stalemate tricks', () => {
         // '8/8/5R2/8/8/8/7p/5K1k b - - 0 90', // https://lichess.org/t5kHhAuR#179
         // '8/8/8/8/8/5p2/5K1p/7k b - - 1 61', // https://lichess.org/iaGKskaV#121
     ])('test FEN: %p', (fen) => {
-        expect(gameChecks.stalemateTricks({ result: { via: 'stalemate' } }, fenToPosition(fen), 'w')).toStrictEqual([])
+        expect(stalemateTricks({ result: { via: 'stalemate' } }, fen)).toStrictEqual([])
     })
 })
 
@@ -29,6 +27,6 @@ describe('test stalemate tricks', () => {
         ['b', '7k/5P2/6KP/8/8/8/8/8 b - - 0 86'], // https://lichess.org/nu7gNPvZ#171
         ['w', '3K4/8/3kq3/8/8/8/8/8 w - - 17 91'], // https://lichess.org/oRsGcDax#180
     ])('test FEN: %p %p', (color, fen) => {
-        expect(gameChecks.stalemateTricks({ result: { via: 'stalemate' } }, fenToPosition(fen), color)).toStrictEqual([color])
+        expect(stalemateTricks({ result: { via: 'stalemate' } }, fen)).toStrictEqual([color])
     })
 })

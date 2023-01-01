@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { pawnDiamond, pawnDiamondSolid, doublePawnDiamond } from '../js/goals/piece-structures'
 
 describe('test pawn diamond', () => {
     test.each([
@@ -27,9 +25,9 @@ describe('test pawn diamond', () => {
 
         [['white', 'black'], 'k7/5p2/4p1p1/2P2p2/1P1P4/2P5/8/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnDiamond(fen)).toStrictEqual(color)
+        expect(pawnDiamondSolid(fen)).toStrictEqual([])
+        expect(doublePawnDiamond(fen)).toStrictEqual([])
     })
 })
 
@@ -44,9 +42,9 @@ describe('test no pawn diamond', () => {
         ['k7/8/8/7p/6pp/p6p/8/K7 w - - 0 1'],
         ['k7/8/8/p6p/pp6/p7/8/K7 w - - 0 1'],
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnDiamond(fen)).toStrictEqual([])
+        expect(pawnDiamondSolid(fen)).toStrictEqual([])
+        expect(doublePawnDiamond(fen)).toStrictEqual([])
     })
 })
 
@@ -68,9 +66,9 @@ describe('test solid pawn diamond', () => {
 
         [['white', 'black'], 'k7/5p2/4ppp1/2P2p2/1PPP4/2P5/8/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual(color)
-        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnDiamond(fen)).toStrictEqual(color)
+        expect(pawnDiamondSolid(fen)).toStrictEqual(color)
+        expect(doublePawnDiamond(fen)).toStrictEqual([])
     })
 })
 
@@ -90,8 +88,8 @@ describe('test double pawn diamond', () => {
         [['white'], '8/8/8/8/2P1P3/1P1P1P2/2P1P3/8 w - - 0 1'],
         [['black'], '8/3p1p2/2p1p1p1/3p1p2/8/8/8/8 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnDiamond(fenToPosition(fen))).toStrictEqual(color)
-        expect(pieceStructures.pawnDiamondSolid(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.doublePawnDiamond(fenToPosition(fen))).toStrictEqual(color)
+        expect(pawnDiamond(fen)).toStrictEqual(color)
+        expect(pawnDiamondSolid(fen)).toStrictEqual([])
+        expect(doublePawnDiamond(fen)).toStrictEqual(color)
     })
 })

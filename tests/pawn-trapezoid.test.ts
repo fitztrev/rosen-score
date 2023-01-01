@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { pawnTrapezoid } from '../js/goals/piece-structures'
 
 describe('test pawn trapezoid', () => {
     test.each([
@@ -24,7 +22,7 @@ describe('test pawn trapezoid', () => {
         ['black', '7k/8/8/8/1p4p1/2p2p2/3pp3/7K w - - 0 1'],
         ['black', '7k/8/8/8/p4p2/1p2p3/2pp4/7K w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toStrictEqual([color])
+        expect(pawnTrapezoid(fen)).toStrictEqual([color])
     })
 })
 
@@ -49,6 +47,6 @@ describe('test no pawn trapezoid', () => {
         '7k/8/8/4p3/1p3p2/p5pp/8/7K w - - 0 1',
         '7k/8/8/3p4/p3p2p/5pp1/8/7K w - - 0 1',
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.pawnTrapezoid(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnTrapezoid(fen)).toStrictEqual([])
     })
 })

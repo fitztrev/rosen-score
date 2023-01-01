@@ -1,13 +1,11 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { connectFour, connectFive, connectSix } from '../js/goals/piece-structures'
 
 describe('test not connect 4/5', () => {
     test.each([['1r3rk1/1b2q1bp/1pnppnp1/p1p2p2/P1P4P/1PNP1PPN/1B1QP1B1/2R2RK1 w - - 0 1']])('test FEN: %p', (fen) => {
-        expect(pieceStructures.connectFour(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.connectFive(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.connectSix(fenToPosition(fen))).toStrictEqual([])
+        expect(connectFour(fen)).toStrictEqual([])
+        expect(connectFive(fen)).toStrictEqual([])
+        expect(connectSix(fen)).toStrictEqual([])
     })
 })
 
@@ -18,7 +16,7 @@ describe('test connect 4', () => {
         ['black', 'rnbqkbnr/ppp3pp/5p2/4p3/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
         ['black', 'rnbqkbnr/p3pppp/1p6/2p5/3p4/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
     ])('test FEN: %p', (color, fen) => {
-        expect(pieceStructures.connectFour(fenToPosition(fen))).toStrictEqual([color])
+        expect(connectFour(fen)).toStrictEqual([color])
     })
 })
 
@@ -29,7 +27,7 @@ describe('test connect 5', () => {
         ['black', 'rnbqkbnr/ppp3pp/5p2/4p3/3p4/2p5/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
         ['black', 'rnbqkbnr/p4ppp/1p6/2p5/3p4/4p3/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
     ])('test FEN: %p', (color, fen) => {
-        expect(pieceStructures.connectFive(fenToPosition(fen))).toStrictEqual([color])
+        expect(connectFive(fen)).toStrictEqual([color])
     })
 })
 
@@ -40,6 +38,6 @@ describe('test connect 6', () => {
         ['black', 'rnbqkbnr/ppp3pp/5p2/4p3/3p4/2p5/PpPPPPPP/RNBQKBNR w KQkq - 0 1'],
         ['black', 'rnbqkbnr/p4ppp/1p6/2p5/3p4/4p3/PPPPPpPP/RNBQKBNR w KQkq - 0 1'],
     ])('test FEN: %p', (color, fen) => {
-        expect(pieceStructures.connectSix(fenToPosition(fen))).toStrictEqual([color])
+        expect(connectSix(fen)).toStrictEqual([color])
     })
 })

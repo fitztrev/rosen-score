@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { pawnCube, pawnCubeCenter } from '../js/goals/piece-structures'
 
 describe('test no pawn cube', () => {
     test.each([
@@ -26,8 +24,8 @@ describe('test no pawn cube', () => {
         ['8/8/8/8/P7/P6P/7P/8 w - - 0 1'],
         ['8/8/8/P7/P6P/7P/8/8 w - - 0 1'],
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.pawnCube(fenToPosition(fen))).toStrictEqual([])
-        expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnCube(fen)).toStrictEqual([])
+        expect(pawnCubeCenter(fen)).toStrictEqual([])
     })
 })
 
@@ -55,8 +53,8 @@ describe('test pawn cubes', () => {
 
         [['white', 'black'], 'k7/8/4pp2/4pp2/8/2PP4/2PP4/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnCube(fenToPosition(fen))).toStrictEqual(color)
-        expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnCube(fen)).toStrictEqual(color)
+        expect(pawnCubeCenter(fen)).toStrictEqual([])
     })
 })
 
@@ -65,6 +63,6 @@ describe('test center pawn cubes', () => {
         ['white', 'k7/8/8/3PP3/3PP3/8/8/K7 w - - 0 1'],
         ['black', 'k7/8/8/3pp3/3pp3/8/8/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnCubeCenter(fenToPosition(fen))).toStrictEqual([color])
+        expect(pawnCubeCenter(fen)).toStrictEqual([color])
     })
 })

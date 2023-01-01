@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import fenToPosition from '../js/utils/fen-to-position'
-import pieceStructures from '../js/goals/piece-structures'
+import { pawnX } from '../js/goals/piece-structures'
 
 describe('test pawn X', () => {
     test.each([
@@ -19,7 +17,7 @@ describe('test pawn X', () => {
         [['black'], 'k7/8/8/4p1p1/5p2/4p1p1/8/K7 w - - 0 1'],
         [['black'], 'k7/8/8/5p1p/6p1/5p1p/8/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
-        expect(pieceStructures.pawnX(fenToPosition(fen))).toStrictEqual(color)
+        expect(pawnX(fen)).toStrictEqual(color)
     })
 })
 
@@ -33,6 +31,6 @@ describe('test no pawn X', () => {
         ['k7/8/6p1/p6p/6p1/p7/8/K7 w - - 0 1'],
         ['k7/8/7p/1p6/p6p/1p6/8/K7 w - - 0 1'],
     ])('test FEN: %p', (fen) => {
-        expect(pieceStructures.pawnX(fenToPosition(fen))).toStrictEqual([])
+        expect(pawnX(fen)).toStrictEqual([])
     })
 })
