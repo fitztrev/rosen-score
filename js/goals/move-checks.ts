@@ -1,4 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
+import { Chess } from 'chess.js'
 
 export function castleAfterMove40(moves: PgnMove[]) {
     let result = []
@@ -55,7 +56,18 @@ export function knightCornerMate(moves: PgnMove[]) {
 
 export function enPassantCheckmate(moves: PgnMove[]) {
     const lastMove = moves[moves.length - 1]
-    if (!lastMove.notation.fig && lastMove.notation.check === '#' && lastMove.notation.flags === 'e') {
+
+    // last move has to be a pawn capture checkmate
+    if (lastMove.notation.fig || lastMove.notation.strike !== 'x' || lastMove.notation.check !== '#') {
+        return []
+    }
+
+    const chessJs = new Chess()
+    chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
+
+    const chessJsLastMove = chessJs.history({ verbose: true })[moves.length - 1]
+
+    if (chessJsLastMove.flags.includes('e')) {
         return [lastMove.turn]
     }
 

@@ -1,4 +1,4 @@
-export function fenToPosition (fen: string): string {
+export function fenToPosition(fen: string): string {
     fen = fen.split(' ')[0]
 
     return fen

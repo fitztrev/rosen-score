@@ -755,7 +755,20 @@ import { royalFamilyFork } from './goals/royal-family-fork'
 import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
 import { winInsufficientMaterial, clutchPawn } from './goals/dirty-wins'
 import { noCapturesBeforeMoveNumber } from './goals/first-capture'
-import { castleAfterMove40, pawnCheckmate, g5mate, knightCornerMate, enPassantCheckmate, castleKingsideWithCheckmate, castleQueensideWithCheckmate, checkmateWithKing, promoteToBishopCheckmate, promoteToKnightCheckmate, promotePawnBeforeMoveNumber } from './goals/move-checks'
+import {
+    castleAfterMove40,
+    pawnCheckmate,
+    g5mate,
+    knightCornerMate,
+    enPassantCheckmate,
+    castleKingsideWithCheckmate,
+    castleQueensideWithCheckmate,
+    checkmateWithKing,
+    promoteToBishopCheckmate,
+    promoteToKnightCheckmate,
+    promotePawnBeforeMoveNumber,
+} from './goals/move-checks'
+import { pawnStormOpening } from './goals/pawn-storm-opening'
 
 export default {
     components: {
@@ -955,10 +968,9 @@ export default {
             // castleFork(game.moves),
             // ohNoMyQueen.checkMoves(allMoves, position),
             // premovesWithOneSecondLeft(game),
-            // pawnStormOpening(allMoves, game)
             // consecutiveCaptures.sameSquare(allMoves),
 
-            // en passant checkmate
+            pawnStormOpening(game, game.moves)
 
             checkmateAtMoveNumber(game.moves, 2)
             checkmateAtMoveNumber(game.moves, 3)
