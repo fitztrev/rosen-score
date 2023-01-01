@@ -1,14 +1,16 @@
-export default function (allMoves) {
+import { PgnMove } from 'chess-fetcher'
+
+export function lefongTrap(moves: PgnMove[]) {
     for (let moveNum in allMoves) {
         moveNum = parseInt(moveNum)
 
         // has to be within 10 moves?
         if (moveNum > 10 * 2) {
-            return
+            return []
         }
 
         if (allMoves[moveNum + 2] === undefined) {
-            return
+            return []
         }
 
         let lefongSequences
@@ -34,7 +36,7 @@ export default function (allMoves) {
         }
 
         if (allMoves[moveNum + 3] === undefined) {
-            return
+            return []
         }
 
         // they move their bishop first

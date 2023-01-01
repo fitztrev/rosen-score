@@ -769,6 +769,8 @@ import {
     promotePawnBeforeMoveNumber,
 } from './goals/move-checks'
 import { pawnStormOpening } from './goals/pawn-storm-opening'
+import rosenTrap from './goals/rosen-trap'
+import { castleFork } from './goals/castle-fork'
 
 export default {
     components: {
@@ -963,12 +965,13 @@ export default {
 
             noCapturesBeforeMoveNumber(game.moves, 30)
 
-            // rosenTrap(game, game.moves)
+            rosenTrap(game, game.moves)
+            castleFork(game.moves)
+
             // lefongTrap(allMoves)
-            // castleFork(game.moves),
-            // ohNoMyQueen.checkMoves(allMoves, position),
-            // premovesWithOneSecondLeft(game),
-            // consecutiveCaptures.sameSquare(allMoves),
+            // ohNoMyQueen.checkMoves(allMoves, position)
+            // premovesWithOneSecondLeft(game)
+            // consecutiveCaptures.sameSquare(allMoves)
 
             pawnStormOpening(game, game.moves)
 
