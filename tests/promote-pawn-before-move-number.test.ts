@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
-
-import moveChecks from '../js/goals/move-checks'
+import { promotePawnBeforeMoveNumber } from '../js/goals/move-checks'
 
 describe('test promote pawn before move number', () => {
     test.each([
@@ -28,6 +27,6 @@ describe('test promote pawn before move number', () => {
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(moveChecks.promotePawnBeforeMoveNumber(game.moves, 8)).toStrictEqual(expected)
+        expect(promotePawnBeforeMoveNumber(game.moves, 8)).toStrictEqual(expected)
     })
 })

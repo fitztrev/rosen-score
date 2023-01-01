@@ -1,4 +1,4 @@
-import fenToPosition from '../utils/fen-to-position'
+import { fenToPosition } from '../utils/fen-to-position'
 import getPiecesOnFiles from '../utils/position-to-files'
 
 export function quadrupledPawns(fen: string) {

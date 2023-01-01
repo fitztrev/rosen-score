@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
+import { fenToPosition } from '../js/utils/fen-to-position'
 
-import fenToPosition from '../js/utils/fen-to-position'
 import getPiecesOnFiles from '../js/utils/position-to-files'
 
 describe('convert fens to position strings', () => {

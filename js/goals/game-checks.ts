@@ -1,7 +1,7 @@
 import calculateMaterialImbalance from '../utils/calculate-material-imbalance'
 import { Game } from 'chess-fetcher'
-import fenToPosition from '../utils/fen-to-position'
 import { knightCube, knightRectangle } from './piece-structures'
+import { fenToPosition } from '../utils/fen-to-position'
 
 export function stalemateTricks(game: Game, fen: string) {
     if (game.result.via !== 'stalemate') {

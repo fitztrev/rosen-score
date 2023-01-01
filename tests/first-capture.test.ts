@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
 
-import firstCapture from '../js/goals/first-capture'
+import { getMoveNumberOfFirstCapture, noCapturesBeforeMoveNumber } from '../js/goals/first-capture'
 
 describe('test first capture on move number', () => {
     test.each([
@@ -51,7 +51,7 @@ describe('test first capture on move number', () => {
     ])('test moves: %p', (moves, captureOnMove, beforeMove30) => {
         let game = parse(moves, { startRule: 'game' })
 
-        expect(firstCapture.getMoveNumberOfFirstCapture(game.moves)).toBe(captureOnMove)
-        expect(firstCapture.noCapturesBeforeMoveNumber(game.moves, 30)).toStrictEqual(beforeMove30)
+        expect(getMoveNumberOfFirstCapture(game.moves)).toBe(captureOnMove)
+        expect(noCapturesBeforeMoveNumber(game.moves, 30)).toStrictEqual(beforeMove30)
     })
 })

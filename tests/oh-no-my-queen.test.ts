@@ -2,7 +2,7 @@ import { describe, expect, test } from 'vitest'
 import { Chess } from 'chess.js'
 
 import ohNoMyQueen from '../js/goals/oh-no-my-queen'
-import fenToPosition from '../js/utils/fen-to-position'
+import { fenToPosition } from '../js/utils/fen-to-position'
 
 describe('test oh-no-my-queen', () => {
     test.each([

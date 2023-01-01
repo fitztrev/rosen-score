@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
-
-import moveChecks from '../js/goals/move-checks'
+import { pawnCheckmate, g5mate } from '../js/goals/move-checks'
 
 describe('test pawn checkmate', () => {
     test.each([
@@ -11,7 +10,7 @@ describe('test pawn checkmate', () => {
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(moveChecks.pawnCheckmate(game.moves)).toStrictEqual(expected)
+        expect(pawnCheckmate(game.moves)).toStrictEqual(expected)
     })
 })
 
@@ -35,8 +34,8 @@ describe('test g5#', () => {
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(moveChecks.pawnCheckmate(game.moves)).toStrictEqual(expected)
-        expect(moveChecks.g5mate(game.moves)).toStrictEqual(expected)
+        expect(pawnCheckmate(game.moves)).toStrictEqual(expected)
+        expect(g5mate(game.moves)).toStrictEqual(expected)
     })
 })
 
@@ -55,7 +54,7 @@ describe('test g5#', () => {
 //         let result
 
 //         for (let moveNum in allMoves) {
-//             result = moveChecks.enPassantCheckmate(allMoves[moveNum])
+//             result = enPassantCheckmate(allMoves[moveNum])
 //             if (result) {
 //                 break
 //             }

@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
-
-import moveChecks from '../js/goals/move-checks'
+import { knightCornerMate } from '../js/goals/move-checks'
 
 describe('knight to the corner checkmate', () => {
     test.each([
@@ -22,6 +21,6 @@ describe('knight to the corner checkmate', () => {
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(moveChecks.knightCornerMate(game.moves)).toStrictEqual(expected)
+        expect(knightCornerMate(game.moves)).toStrictEqual(expected)
     })
 })

@@ -700,7 +700,6 @@ import alphabetOpenings from './goals/alphabet-openings'
 // import dirtyWins from './goals/dirty-wins'
 // import firstCapture from './goals/first-capture'
 // import lefongTrap from './goals/lefong-trap'
-import moveChecks from './goals/move-checks'
 // import ohNoMyQueen from './goals/oh-no-my-queen'
 // import pawnStormOpening from './goals/pawn-storm-opening'
 // import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
@@ -755,6 +754,8 @@ import {
 import { royalFamilyFork } from './goals/royal-family-fork'
 import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
 import { winInsufficientMaterial, clutchPawn } from './goals/dirty-wins'
+import { noCapturesBeforeMoveNumber } from './goals/first-capture'
+import { castleAfterMove40, pawnCheckmate, g5mate, knightCornerMate, enPassantCheckmate, castleKingsideWithCheckmate, castleQueensideWithCheckmate, checkmateWithKing, promoteToBishopCheckmate, promoteToKnightCheckmate, promotePawnBeforeMoveNumber } from './goals/move-checks'
 
 export default {
     components: {
@@ -926,18 +927,18 @@ export default {
                 return
             }
 
-            moveChecks.castleAfterMove40(game.moves)
-            moveChecks.pawnCheckmate(game.moves)
-            moveChecks.g5mate(game.moves)
+            castleAfterMove40(game.moves)
+            pawnCheckmate(game.moves)
+            g5mate(game.moves)
 
-            moveChecks.knightCornerMate(game.moves)
-            moveChecks.enPassantCheckmate(game.moves)
-            moveChecks.castleKingsideWithCheckmate(game.moves)
-            moveChecks.castleQueensideWithCheckmate(game.moves)
-            moveChecks.checkmateWithKing(game.moves)
-            moveChecks.promoteToBishopCheckmate(game.moves)
-            moveChecks.promoteToKnightCheckmate(game.moves)
-            moveChecks.promotePawnBeforeMoveNumber(game.moves, 8)
+            knightCornerMate(game.moves)
+            enPassantCheckmate(game.moves)
+            castleKingsideWithCheckmate(game.moves)
+            castleQueensideWithCheckmate(game.moves)
+            checkmateWithKing(game.moves)
+            promoteToBishopCheckmate(game.moves)
+            promoteToKnightCheckmate(game.moves)
+            promotePawnBeforeMoveNumber(game.moves, 8)
 
             smotheredMate(game.moves)
             smotheredPorkMate(game.moves)
@@ -947,7 +948,7 @@ export default {
 
             doubleCheckCheckmate(game.moves)
 
-            // firstCapture.noCapturesBeforeMoveNumber(game.moves, 30)
+            noCapturesBeforeMoveNumber(game.moves, 30)
 
             // rosenTrap(game, game.moves)
             // lefongTrap(allMoves)
