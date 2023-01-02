@@ -773,6 +773,7 @@ import rosenTrap from './goals/rosen-trap'
 import { castleFork } from './goals/castle-fork'
 import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
 import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'
+import { ohNoMyQueen } from './goals/oh-no-my-queen'
 
 export default {
     components: {
@@ -972,8 +973,9 @@ export default {
             avoidTheFlagCheckmate(game, game.moves)
             consecutiveCapturesSameSquare(game.moves, 10)
 
+            ohNoMyQueen(game.moves)
+
             // lefongTrap(allMoves)
-            // ohNoMyQueen.checkMoves(allMoves, position)
 
             pawnStormOpening(game, game.moves)
 
