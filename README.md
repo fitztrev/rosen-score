@@ -18,6 +18,8 @@ npm run dev
 ```bash
 ## Run the test suite
 npm run test
+## or
+npm run watch
 
 ## Check code coverage
 npm run coverage

@@ -11,7 +11,7 @@ describe('avoid the flag', () => {
         ],
     ])('test pgn: %p', (pgn, expected) => {
         let game = parse(pgn, { startRule: 'game' })
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 }}, game.moves)).toStrictEqual(expected)
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 }}, game.moves)).toStrictEqual([])
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } }, game.moves)).toStrictEqual(expected)
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } }, game.moves)).toStrictEqual([])
     })
 })
