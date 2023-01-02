@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
 
-import moveChecks from '../js/goals/move-checks'
 import { royalFamilyFork } from '../js/goals/royal-family-fork'
 
 describe('royal family fork', () => {
