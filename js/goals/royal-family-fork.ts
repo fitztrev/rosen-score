@@ -1,6 +1,6 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess } from 'chess.js'
-import knightMoves from '../utils/knight-moves'
+import { knightMoves } from '../utils/knight-moves'
 
 export function royalFamilyFork(moves: PgnMove[]) {
     let chessJS = new Chess()

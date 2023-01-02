@@ -1,7 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { fenToPosition } from '../js/utils/fen-to-position'
-
-import getPiecesOnFiles from '../js/utils/position-to-files'
+import { fenToPosition, positionToFiles } from '../js/utils/fen-to-position'
 
 describe('convert fens to position strings', () => {
     test.each([
@@ -18,5 +16,5 @@ describe('convert fens to position strings', () => {
 
 test('test getting pieces on files', () => {
     let position = 'abcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefghabcdefgh'
-    expect(getPiecesOnFiles(position)).toStrictEqual(['aaaaaaaa', 'bbbbbbbb', 'cccccccc', 'dddddddd', 'eeeeeeee', 'ffffffff', 'gggggggg', 'hhhhhhhh'])
+    expect(positionToFiles(position)).toStrictEqual(['aaaaaaaa', 'bbbbbbbb', 'cccccccc', 'dddddddd', 'eeeeeeee', 'ffffffff', 'gggggggg', 'hhhhhhhh'])
 })

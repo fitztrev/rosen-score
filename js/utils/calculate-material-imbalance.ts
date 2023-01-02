@@ -1,4 +1,4 @@
-export default function (position: string): number {
+export function calculateMaterialImbalance(position: string): number {
     let values: number[] = position.split('').map(function (piece) {
         if (piece === 'p') return -1
         else if (piece === 'n' || piece === 'b') return -3

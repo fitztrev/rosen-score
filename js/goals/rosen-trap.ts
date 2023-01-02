@@ -1,7 +1,7 @@
 import { Game, PgnMove } from 'chess-fetcher'
 import { Chess } from 'chess.js'
 
-export default function (game: Game, moves: PgnMove[]) {
+export function rosenTrap(game: Game, moves: PgnMove[]) {
     if (game.result.via !== 'stalemate') {
         return []
     }

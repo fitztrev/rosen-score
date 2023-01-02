@@ -1,11 +1,10 @@
-import { fenToPosition } from '../utils/fen-to-position'
-import getPiecesOnFiles from '../utils/position-to-files'
+import { fenToPosition, positionToFiles } from '../utils/fen-to-position'
 
 export function quadrupledPawns(fen: string) {
     const position = fenToPosition(fen)
     let colors = []
 
-    for (let file of getPiecesOnFiles(position)) {
+    for (let file of positionToFiles(position)) {
         if ((file.match(/P/g) || []).length >= 4) {
             colors.push('white')
         } else if ((file.match(/p/g) || []).length >= 4) {

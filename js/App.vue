@@ -686,11 +686,8 @@
 <script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-// import cleanupLichessUsername from './utils/cleanup-lichess-username'
 // import fenToPosition from './utils/fen-to-position'
 // import formatSinceDate from './utils/format-since-date'
-// import getPiecesOnFiles from './utils/position-to-files'
-// import pgnFormatter from './utils/pgn-formatter'
 
 // const controller = new AbortController()
 // const { signal } = controller
@@ -754,7 +751,6 @@ import {
     promotePawnBeforeMoveNumber,
 } from './goals/move-checks'
 import { pawnStormOpening } from './goals/pawn-storm-opening'
-import rosenTrap from './goals/rosen-trap'
 import { castleFork } from './goals/castle-fork'
 import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
 import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'

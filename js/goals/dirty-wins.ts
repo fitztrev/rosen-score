@@ -1,5 +1,5 @@
-import calculateMaterialImbalance from '../utils/calculate-material-imbalance'
 import { Game } from 'chess-fetcher'
+import { calculateMaterialImbalance } from '../utils/calculate-material-imbalance'
 import { fenToPosition } from '../utils/fen-to-position'
 
 export function winInsufficientMaterial(game: Game, fen: string): string[] {

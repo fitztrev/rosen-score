@@ -1,6 +1,6 @@
 import { Color, Square } from 'chess.js'
 
-export default function (colorToMove: Color, squareToAttack: Square) {
+export function pawnCaptures(colorToMove: Color, squareToAttack: Square) {
     let pawnsAttackFrom
 
     if (colorToMove[0] === 'w') {

@@ -1,8 +1,8 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess, Square } from 'chess.js'
-import knightMoves from '../utils/knight-moves'
-import neighboringSquares from '../utils/neighboring-squares'
-import pawnCaptures from '../utils/pawn-captures'
+import { knightMoves } from '../utils/knight-moves'
+import { neighboringSquares } from '../utils/neighboring-squares'
+import { pawnCaptures } from '../utils/pawn-captures'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
 const get_piece_positions = (chessJs: Chess, piece) => {

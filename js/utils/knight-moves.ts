@@ -1,6 +1,6 @@
 import { Square } from 'chess.js'
 
-export default function (square: Square) {
+export function knightMoves(square: Square) {
     let knightMoves = [
         [-2, -1],
         [-2, +1],

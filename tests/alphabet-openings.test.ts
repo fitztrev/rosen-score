@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
-
-import alphabetOpenings from '../js/goals/alphabet-openings'
+import { alphabetOpening } from '../js/goals/alphabet-openings'
 
 describe('test not alphabet opening', () => {
     test.each([
@@ -10,7 +9,7 @@ describe('test not alphabet opening', () => {
         ['egg', '1. e3 a6 2. g4 b6 3. Bc4'], // "egB"
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpenings.checkWord(word, game.moves)).toStrictEqual([])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual([])
     })
 })
 
@@ -29,7 +28,7 @@ describe('test alphabet openings', () => {
         ['egg', '1. e4 b6 2. g4 f5 3. gxf5'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpenings.checkWord(word, game.moves)).toStrictEqual(['w'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual(['w'])
     })
 
     test.each([
@@ -39,13 +38,13 @@ describe('test alphabet openings', () => {
         ['egg', '1. a3 e6 2. f4 g5 3. b3 gxf4'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpenings.checkWord(word, game.moves)).toStrictEqual(['b'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual(['b'])
     })
 })
 
 describe('test both colors play it', () => {
     test.each([['egg', '1. e3 e6 2. g3 g6 3. g4 g5']])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpenings.checkWord(word, game.moves)).toStrictEqual(['w', 'b'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual(['w', 'b'])
     })
 })

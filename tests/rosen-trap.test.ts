@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { parse } from '@mliebelt/pgn-parser'
-
-import rosenTrap from '../js/goals/rosen-trap'
+import { rosenTrap } from '../js/goals/rosen-trap'
 
 describe('test rosen trap', () => {
     test.each([

@@ -1,6 +1,6 @@
 import { Color, Move } from 'chess.js'
 
-export default function (moves: Move[]) {
+export function alphabetOpeningSearch(moves: Move[]) {
     let getPawnPushes = function (moves: Move[], color: Color) {
         let moveString = moves
             .filter((move) => move.color === color)

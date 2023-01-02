@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
+import { calculateMaterialImbalance } from '../js/utils/calculate-material-imbalance'
 
-import calculateMaterialImbalance from '../js/utils/calculate-material-imbalance'
 import { fenToPosition } from '../js/utils/fen-to-position'
 
 describe('test material imbalance calculations', () => {
