@@ -700,7 +700,6 @@ import { Chess as ChessJS } from 'chess.js'
 
 import { games, player, Game, Profile } from 'chess-fetcher'
 
-import alphabetOpenings from './goals/alphabet-openings'
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
 import ChangelogDate from './components/ChangelogDate.vue'
@@ -756,6 +755,8 @@ import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
 import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'
 import { ohNoMyQueen } from './goals/oh-no-my-queen'
 import { lefongTrap } from './goals/lefong-trap'
+import { rosenTrap } from './goals/rosen-trap'
+import { alphabetOpening } from './goals/alphabet-openings'
 
 export default {
     components: {
@@ -1003,7 +1004,7 @@ export default {
             }
 
             for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                alphabetOpenings.checkWord(word, game.moves).filter((color) => game.result.winner === color)
+                alphabetOpening(word, game.moves).filter((color) => game.result.winner === color)
             }
         },
     },
