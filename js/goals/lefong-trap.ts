@@ -1,15 +1,26 @@
 import { PgnMove } from 'chess-fetcher'
+import { Chess } from 'chess.js'
 
 export function lefongTrap(moves: PgnMove[]) {
-    for (let moveNum in allMoves) {
-        moveNum = parseInt(moveNum)
+    // game must contain a Bishop capture on 1 of the fianchetto squares
+    if (!moves.some((move) => ['Bxg7', 'Bxg2', 'Bxb7', 'Bxb2'].includes(move.notation.notation))) {
+        return []
+    }
 
-        // has to be within 10 moves?
-        if (moveNum > 10 * 2) {
+    const chessJs = new Chess()
+    chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
+
+    const chessJsMoves = chessJs.history({ verbose: true })
+
+    for (let moveNum in chessJsMoves) {
+        const moveNumber = parseInt(moveNum)
+
+        // only consider the first 10 moves
+        if (moveNumber > 10 * 2) {
             return []
         }
 
-        if (allMoves[moveNum + 2] === undefined) {
+        if (chessJsMoves[moveNumber + 2] === undefined) {
             return []
         }
 
@@ -25,17 +36,17 @@ export function lefongTrap(moves: PgnMove[]) {
 
         for (let sequence of lefongSequences) {
             if (
-                allMoves[moveNum].san === sequence[0] &&
-                allMoves[moveNum + 1].from === sequence[1][0] &&
-                allMoves[moveNum + 1].san === sequence[1][1] &&
-                allMoves[moveNum + 2].san === sequence[2] &&
-                (allMoves[moveNum + 3] === undefined || allMoves[moveNum + 3].to !== allMoves[moveNum + 2].to)
+                chessJsMoves[moveNumber].san === sequence[0] &&
+                chessJsMoves[moveNumber + 1].from === sequence[1][0] &&
+                chessJsMoves[moveNumber + 1].san === sequence[1][1] &&
+                chessJsMoves[moveNumber + 2].san === sequence[2] &&
+                (chessJsMoves[moveNumber + 3] === undefined || chessJsMoves[moveNumber + 3].to !== chessJsMoves[moveNumber + 2].to)
             ) {
-                return allMoves[moveNum].color
+                return [chessJsMoves[moveNumber].color]
             }
         }
 
-        if (allMoves[moveNum + 3] === undefined) {
+        if (chessJsMoves[moveNumber + 3] === undefined) {
             return []
         }
 
@@ -50,13 +61,13 @@ export function lefongTrap(moves: PgnMove[]) {
 
         for (let sequence of lefongSequences) {
             if (
-                allMoves[moveNum].from === sequence[0][0] &&
-                allMoves[moveNum].san === sequence[0][1] &&
-                allMoves[moveNum + 1].san === sequence[1] &&
-                allMoves[moveNum + 3].san === sequence[2] &&
-                (allMoves[moveNum + 4] === undefined || allMoves[moveNum + 4].to !== allMoves[moveNum + 3].to)
+                chessJsMoves[moveNumber].from === sequence[0][0] &&
+                chessJsMoves[moveNumber].san === sequence[0][1] &&
+                chessJsMoves[moveNumber + 1].san === sequence[1] &&
+                chessJsMoves[moveNumber + 3].san === sequence[2] &&
+                (chessJsMoves[moveNumber + 4] === undefined || chessJsMoves[moveNumber + 4].to !== chessJsMoves[moveNumber + 3].to)
             ) {
-                return allMoves[moveNum + 1].color
+                return [chessJsMoves[moveNumber + 1].color]
             }
         }
     }

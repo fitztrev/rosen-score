@@ -692,22 +692,6 @@ import { Chess as ChessJS } from 'chess.js'
 // import getPiecesOnFiles from './utils/position-to-files'
 // import pgnFormatter from './utils/pgn-formatter'
 
-// import adoptionMatch from './goals/adoption-match'
-import alphabetOpenings from './goals/alphabet-openings'
-// import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
-// import castleFork from './goals/castle-fork'
-// import consecutiveCaptures from './goals/consecutive-captures'
-// import dirtyWins from './goals/dirty-wins'
-// import firstCapture from './goals/first-capture'
-// import lefongTrap from './goals/lefong-trap'
-// import ohNoMyQueen from './goals/oh-no-my-queen'
-// import pawnStormOpening from './goals/pawn-storm-opening'
-// import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
-// import rosenTrap from './goals/rosen-trap'
-// import smotheredMate from './goals/smothered-mate'
-// import smotheredPorkMate from './goals/smothered-pork-mate'
-// import megaFork from './goals/mega-fork'
-
 // const controller = new AbortController()
 // const { signal } = controller
 
@@ -719,6 +703,7 @@ import alphabetOpenings from './goals/alphabet-openings'
 
 import { games, player, Game, Profile } from 'chess-fetcher'
 
+import alphabetOpenings from './goals/alphabet-openings'
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
 import ChangelogDate from './components/ChangelogDate.vue'
@@ -774,6 +759,7 @@ import { castleFork } from './goals/castle-fork'
 import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
 import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'
 import { ohNoMyQueen } from './goals/oh-no-my-queen'
+import { lefongTrap } from './goals/lefong-trap'
 
 export default {
     components: {
@@ -974,9 +960,7 @@ export default {
             consecutiveCapturesSameSquare(game.moves, 10)
 
             ohNoMyQueen(game.moves)
-
-            // lefongTrap(allMoves)
-
+            lefongTrap(game.moves)
             pawnStormOpening(game, game.moves)
 
             checkmateAtMoveNumber(game.moves, 2)
