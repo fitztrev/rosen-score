@@ -7,7 +7,7 @@ export function pawnStormOpening(game: Game, moves: PgnMove[]) {
 
     let winnersMoves = moves
         .filter(function (move) {
-            return move.turn === game.result.winner[0]
+            return move.turn === game.result.winner![0]
         })
         .slice(0, 12)
         .filter(function (move) {

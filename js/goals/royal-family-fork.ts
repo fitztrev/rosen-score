@@ -1,5 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
-import { Chess } from 'chess.js'
+import { Chess, Move, Square } from 'chess.js'
 import { knightMoves } from '../utils/knight-moves'
 
 export function royalFamilyFork(moves: PgnMove[]) {
@@ -8,7 +8,7 @@ export function royalFamilyFork(moves: PgnMove[]) {
     let result = []
 
     for (const move of moves) {
-        let destinationSquare = move.notation.col + move.notation.row
+        let destinationSquare = (move.notation.col + move.notation.row) as Square
 
         chessJS.move(move.notation.notation)
 
@@ -22,7 +22,8 @@ export function royalFamilyFork(moves: PgnMove[]) {
         }
 
         // the knight cannot be captured
-        for (const legalMove of chessJS.moves({ verbose: true })) {
+        const legalMoves = chessJS.moves({ verbose: true }) as Move[]
+        for (const legalMove of legalMoves) {
             if (legalMove.to === destinationSquare) {
                 continue
             }

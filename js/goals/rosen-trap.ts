@@ -1,5 +1,5 @@
 import { Game, PgnMove } from 'chess-fetcher'
-import { Chess } from 'chess.js'
+import { Chess, Move } from 'chess.js'
 
 export function rosenTrap(game: Game, moves: PgnMove[]) {
     if (game.result.via !== 'stalemate') {
@@ -31,8 +31,9 @@ export function rosenTrap(game: Game, moves: PgnMove[]) {
 
                     let chessJs = new Chess()
                     chessJs.loadPgn(movesUntilKingGoesToCorner)
+                    const chessJsMoves = chessJs.moves({ verbose: true }) as Move[]
 
-                    for (const kingMove of chessJs.moves({ verbose: true })) {
+                    for (const kingMove of chessJsMoves) {
                         // if king could move to the square the queen captured on...
                         if (kingMove.to === destinationSquare) {
                             return [kingMove.color]

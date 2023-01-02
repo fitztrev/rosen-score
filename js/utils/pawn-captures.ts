@@ -1,6 +1,6 @@
 import { Color, Square } from 'chess.js'
 
-export function pawnCaptures(colorToMove: Color, squareToAttack: Square) {
+export function pawnCaptures(colorToMove: Color, squareToAttack: Square): Square[] {
     let pawnsAttackFrom
 
     if (colorToMove[0] === 'w') {
@@ -32,5 +32,7 @@ export function pawnCaptures(colorToMove: Color, squareToAttack: Square) {
         }
     }
 
-    return destinations.sort()
+    destinations = destinations.sort()
+
+    return destinations as Square[]
 }

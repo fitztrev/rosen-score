@@ -1,5 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
-import { Chess } from 'chess.js'
+import { Chess, Move } from 'chess.js'
 import { fenToPosition } from '../utils/fen-to-position'
 
 export function ohNoMyQueen(moves: PgnMove[]) {
@@ -18,7 +18,7 @@ export function ohNoMyQueen(moves: PgnMove[]) {
     const chessJs = new Chess()
     chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
 
-    const chessJsMoves = chessJs.history({ verbose: true })
+    const chessJsMoves = chessJs.history({ verbose: true }) as Move[]
 
     for (let moveNum in chessJsMoves) {
         const moveNumber = parseInt(moveNum)

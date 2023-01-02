@@ -5,8 +5,8 @@ export default {
     loser: '',
     winStreak: 1,
 
-    currentMatchGameIds: [],
-    allAdoptionMatchGameids: [],
+    currentMatchGameIds: <string[]>[],
+    allAdoptionMatchGameids: <string[]>[],
 
     processGame: function (game: Game) {
         if (!game.result.winner) {
@@ -28,7 +28,7 @@ export default {
         }
     },
 
-    checkForAdoption: function (game, atCount) {
+    checkForAdoption: function (game: Game, atCount: number) {
         if (this.winStreak === atCount) {
             this.allAdoptionMatchGameids = [...this.allAdoptionMatchGameids, ...this.currentMatchGameIds]
             return game.result.winner
@@ -36,13 +36,13 @@ export default {
     },
 
     reset: function () {
-        this.winner = null
-        this.loser = null
+        this.winner = ''
+        this.loser = ''
         this.winStreak = 1
         this.currentMatchGameIds = []
     },
 
-    oppositeColor: function (color) {
+    oppositeColor: function (color: string) {
         return color === 'white' ? 'black' : 'white'
     },
 }

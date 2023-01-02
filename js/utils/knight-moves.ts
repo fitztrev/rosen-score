@@ -1,6 +1,6 @@
 import { Square } from 'chess.js'
 
-export function knightMoves(square: Square) {
+export function knightMoves(square: Square): Square[] {
     let knightMoves = [
         [-2, -1],
         [-2, +1],
@@ -29,5 +29,7 @@ export function knightMoves(square: Square) {
         }
     }
 
-    return destinations.sort()
+    destinations = destinations.sort()
+
+    return destinations as Square[]
 }

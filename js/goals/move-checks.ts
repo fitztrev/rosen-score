@@ -1,5 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
-import { Chess } from 'chess.js'
+import { Chess, Move } from 'chess.js'
 
 export function castleAfterMove40(moves: PgnMove[]) {
     let result = []
@@ -65,7 +65,7 @@ export function enPassantCheckmate(moves: PgnMove[]) {
     const chessJs = new Chess()
     chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
 
-    const chessJsLastMove = chessJs.history({ verbose: true })[moves.length - 1]
+    const chessJsLastMove = chessJs.history({ verbose: true })[moves.length - 1] as Move
 
     if (chessJsLastMove.flags.includes('e')) {
         return [lastMove.turn]

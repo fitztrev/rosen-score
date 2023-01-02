@@ -1,5 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
-import { Chess } from 'chess.js'
+import { Chess, Move } from 'chess.js'
 
 export function lefongTrap(moves: PgnMove[]) {
     // game must contain a Bishop capture on 1 of the fianchetto squares
@@ -10,7 +10,7 @@ export function lefongTrap(moves: PgnMove[]) {
     const chessJs = new Chess()
     chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
 
-    const chessJsMoves = chessJs.history({ verbose: true })
+    const chessJsMoves = chessJs.history({ verbose: true }) as Move[]
 
     for (let moveNum in chessJsMoves) {
         const moveNumber = parseInt(moveNum)

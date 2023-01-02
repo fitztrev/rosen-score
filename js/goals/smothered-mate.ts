@@ -1,11 +1,11 @@
 import { PgnMove } from 'chess-fetcher'
-import { Chess, Square } from 'chess.js'
+import { Chess, Color, Piece, Square } from 'chess.js'
 import { knightMoves } from '../utils/knight-moves'
 import { neighboringSquares } from '../utils/neighboring-squares'
 import { pawnCaptures } from '../utils/pawn-captures'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
-const get_piece_positions = (chessJs: Chess, piece) => {
+const get_piece_positions = (chessJs: Chess, piece: Piece) => {
     return chessJs
         .board()
         .flat()
@@ -15,7 +15,8 @@ const get_piece_positions = (chessJs: Chess, piece) => {
             }
         })
         .filter(Number.isInteger)
-        .map((piece_index) => {
+        .map((index) => {
+            const piece_index = index as number
             const row = 'abcdefgh'[piece_index % 8]
             const column = Math.ceil((64 - piece_index) / 8)
             return row + column
@@ -29,7 +30,7 @@ export function smotheredMate(moves: PgnMove[]) {
         and the King is fully surrounded by his own pieces
     */
     if (lastMove.notation.fig === 'N' && lastMove.notation.check === '#') {
-        let losingColor = lastMove.turn === 'w' ? 'b' : 'w'
+        let losingColor = lastMove.turn === 'w' ? 'b' : ('w' as Color)
 
         let chessJs = new Chess()
         chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
@@ -64,7 +65,7 @@ export function smotheredPorkMate(moves: PgnMove[]) {
         the king is smothered
     */
     if (lastMove.notation.fig === 'N' && lastMove.notation.check === '#') {
-        let losingColor = lastMove.turn === 'w' ? 'b' : 'w'
+        let losingColor = lastMove.turn === 'w' ? 'b' : ('w' as Color)
 
         let chessJs = new Chess()
         chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))

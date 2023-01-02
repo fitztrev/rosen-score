@@ -18,7 +18,7 @@ export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]) {
             return move.turn + ' - ' + move.commentDiag.clk
         })
         .slice(-40)
-        .filter(function (value, index) {
+        .filter(function (_value, index) {
             return index % 2 !== 0
         })
 
