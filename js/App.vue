@@ -780,7 +780,7 @@ export default {
             errorMsg: '',
 
             trophyTypeCount: 0,
-            trophiesByType: <{ [key: string]: object }>{},
+            trophiesByType: <{ [key: string]: [] }>{},
 
             // counts: {
             //     totalGames: 0,
@@ -888,16 +888,28 @@ export default {
             })
 
             games(url, this.checkGameForTrophies, {
-                max: 1000,
+                max: 50,
                 pgnInJson: true,
                 clocks: true,
+            }).then(() => {
+                console.log('DONE ############################')
             })
         },
 
         checkForTrophy(game: Game, name: string, result: TrophyCheckResult, onMoveNumber?: number) {
             for (const color of result) {
                 console.log(name, color, game, onMoveNumber)
+
+                // this.trophiesByType[name] = this.trophiesByType[name] || []
+                // this.trophiesByType[name].push({
+                //     game,
+                //     result.onMoveNumber || onMoveNumber,
+                // })
             }
+        },
+
+        addTrophyForPlayer() {
+
         },
 
         checkGameForTrophies: function (game: Game) {
