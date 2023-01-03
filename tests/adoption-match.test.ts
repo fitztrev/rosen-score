@@ -24,7 +24,11 @@ test('test adoption match (single adoption)', () => {
         adoptionMatch.processGame(game)
     }
 
-    expect(adoptionMatch.checkForAdoption(game, 10)).toBe('black')
+    expect(adoptionMatch.checkForAdoption(game, 10)).toStrictEqual([
+        {
+            color: 'b',
+        },
+    ])
 })
 
 test('test adoption match (double adoption)', () => {
@@ -59,7 +63,11 @@ test('test adoption match (double adoption)', () => {
         adoptionMatch.processGame(game)
     }
 
-    expect(adoptionMatch.checkForAdoption(game, 20)).toBe('black')
+    expect(adoptionMatch.checkForAdoption(game, 20)).toStrictEqual([
+        {
+            color: 'b',
+        },
+    ])
 })
 
 test('test with a draw in the middle', () => {
@@ -85,5 +93,5 @@ test('test with a draw in the middle', () => {
         adoptionMatch.processGame(game)
     }
 
-    expect(adoptionMatch.checkForAdoption(game, 10)).toBeFalsy()
+    expect(adoptionMatch.checkForAdoption(game, 10)).toStrictEqual([])
 })

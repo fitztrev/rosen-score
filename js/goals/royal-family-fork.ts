@@ -1,11 +1,12 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess, Move, Square } from 'chess.js'
+import { TrophyCheckResult } from '../types/types'
 import { knightMoves } from '../utils/knight-moves'
 
-export function royalFamilyFork(moves: PgnMove[]) {
+export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
     let chessJS = new Chess()
 
-    let result = []
+    let result: TrophyCheckResult = []
 
     for (const move of moves) {
         let destinationSquare = (move.notation.col + move.notation.row) as Square
@@ -47,7 +48,10 @@ export function royalFamilyFork(moves: PgnMove[]) {
         // king is included to make sure the knight is attacking the king
         // (as opposed to a discovered check)
         if (piecesAttacked.length >= 4 && piecesAttacked.includes('k') && piecesAttacked.includes('q') && piecesAttacked.includes('r')) {
-            result.push(move.turn)
+            result.push({
+                color: move.turn,
+                onMoveNumber: moves.indexOf(move),
+            })
         }
     }
 

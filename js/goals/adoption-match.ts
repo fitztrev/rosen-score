@@ -1,4 +1,5 @@
 import { Game } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
 export default {
     winner: '',
@@ -28,11 +29,17 @@ export default {
         }
     },
 
-    checkForAdoption: function (game: Game, atCount: number) {
+    checkForAdoption: function (game: Game, atCount: number): TrophyCheckResult {
         if (this.winStreak === atCount) {
             this.allAdoptionMatchGameids = [...this.allAdoptionMatchGameids, ...this.currentMatchGameIds]
-            return game.result.winner
+            return [
+                {
+                    color: game.result.winner === 'white' ? 'w' : 'b',
+                },
+            ]
         }
+
+        return []
     },
 
     reset: function () {

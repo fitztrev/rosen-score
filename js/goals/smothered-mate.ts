@@ -1,5 +1,6 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess, Color, Piece, Square } from 'chess.js'
+import { TrophyCheckResult } from '../types/types'
 import { knightMoves } from '../utils/knight-moves'
 import { neighboringSquares } from '../utils/neighboring-squares'
 import { pawnCaptures } from '../utils/pawn-captures'
@@ -23,7 +24,7 @@ const get_piece_positions = (chessJs: Chess, piece: Piece) => {
         })
 }
 
-export function smotheredMate(moves: PgnMove[]) {
+export function smotheredMate(moves: PgnMove[]): TrophyCheckResult {
     const lastMove = moves[moves.length - 1]
     /*
         knight delivers checkmate
@@ -49,13 +50,18 @@ export function smotheredMate(moves: PgnMove[]) {
             }
         }
 
-        return [lastMove.turn]
+        return [
+            {
+                color: lastMove.turn,
+                onMoveNumber: moves.length - 1,
+            },
+        ]
     }
 
     return []
 }
 
-export function smotheredPorkMate(moves: PgnMove[]) {
+export function smotheredPorkMate(moves: PgnMove[]): TrophyCheckResult {
     const lastMove = moves[moves.length - 1]
     const toSquare = (lastMove.notation.col + lastMove.notation.row) as Square
     /*

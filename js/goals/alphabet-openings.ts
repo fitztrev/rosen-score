@@ -1,6 +1,7 @@
 import { PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
-export function alphabetOpening(word: string, moves: PgnMove[]) {
+export function alphabetOpening(word: string, moves: PgnMove[]): TrophyCheckResult {
     let whitePieceMoves = moves
         .filter((move) => move.turn === 'w')
         .map((move) => move.notation.notation[0])
@@ -11,15 +12,21 @@ export function alphabetOpening(word: string, moves: PgnMove[]) {
         .map((move) => move.notation.notation[0])
         .join('')
 
-    let colors = []
+    let result: TrophyCheckResult = []
 
     if (whitePieceMoves.indexOf(word) === 0) {
-        colors.push('w')
+        result.push({
+            color: 'w',
+            onMoveNumber: word.length,
+        })
     }
 
     if (blackPieceMoves.indexOf(word) === 0) {
-        colors.push('b')
+        result.push({
+            color: 'b',
+            onMoveNumber: word.length,
+        })
     }
 
-    return colors
+    return result
 }

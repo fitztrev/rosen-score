@@ -1,8 +1,9 @@
 import { Game, PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
-export function pawnStormOpening(game: Game, moves: PgnMove[]) {
+export function pawnStormOpening(game: Game, moves: PgnMove[]): TrophyCheckResult {
     if (!game.result.winner) {
-        return
+        return []
     }
 
     let winnersMoves = moves
@@ -15,6 +16,13 @@ export function pawnStormOpening(game: Game, moves: PgnMove[]) {
         })
 
     if (winnersMoves.length === 12) {
-        return game.result.winner === 'white' ? ['w'] : ['b']
+        return [
+            {
+                color: game.result.winner === 'white' ? 'w' : 'b',
+                onMoveNumber: moves.length,
+            },
+        ]
     }
+
+    return []
 }

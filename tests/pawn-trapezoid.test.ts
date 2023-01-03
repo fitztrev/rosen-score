@@ -3,26 +3,26 @@ import { pawnTrapezoid } from '../js/goals/piece-structures'
 
 describe('test pawn trapezoid', () => {
     test.each([
-        ['white', 'rnbqkbnr/pppppppp/3PP3/2P2P2/1P4P1/8/P6P/RNBQKBNR w KQkq - 0 1'],
-        ['black', 'rnbqkbnr/p6p/8/1p4p1/2p2p2/3pp3/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
+        [[{ color: 'w' }], 'rnbqkbnr/pppppppp/3PP3/2P2P2/1P4P1/8/P6P/RNBQKBNR w KQkq - 0 1'],
+        [[{ color: 'b' }], 'rnbqkbnr/p6p/8/1p4p1/2p2p2/3pp3/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
 
-        ['white', 'k7/8/2PP4/1P2P3/P4P2/8/8/K7 w - - 0 1'],
-        ['white', 'k7/8/3PP3/2P2P2/1P4P1/8/8/K7 w - - 0 1'],
-        ['white', 'k7/8/4PP2/3P2P1/2P4P/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/8/2PP4/1P2P3/P4P2/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/8/3PP3/2P2P2/1P4P1/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/8/4PP2/3P2P1/2P4P/8/8/K7 w - - 0 1'],
 
-        ['white', 'k7/2PP4/1P2P3/P4P2/8/8/8/K7 w - - 0 1'],
-        ['white', 'k7/3PP3/2P2P2/1P4P1/8/8/8/K7 w - - 0 1'],
-        ['white', 'k7/4PP2/3P2P1/2P4P/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/2PP4/1P2P3/P4P2/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/3PP3/2P2P2/1P4P1/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/4PP2/3P2P1/2P4P/8/8/8/K7 w - - 0 1'],
 
-        ['black', '7k/8/8/2p4p/3p2p1/4pp2/8/7K w - - 0 1'],
-        ['black', '7k/8/8/1p4p1/2p2p2/3pp3/8/7K w - - 0 1'],
-        ['black', '7k/8/8/p4p2/1p2p3/2pp4/8/7K w - - 0 1'],
+        [[{ color: 'b' }], '7k/8/8/2p4p/3p2p1/4pp2/8/7K w - - 0 1'],
+        [[{ color: 'b' }], '7k/8/8/1p4p1/2p2p2/3pp3/8/7K w - - 0 1'],
+        [[{ color: 'b' }], '7k/8/8/p4p2/1p2p3/2pp4/8/7K w - - 0 1'],
 
-        ['black', '7k/8/8/8/2p4p/3p2p1/4pp2/7K w - - 0 1'],
-        ['black', '7k/8/8/8/1p4p1/2p2p2/3pp3/7K w - - 0 1'],
-        ['black', '7k/8/8/8/p4p2/1p2p3/2pp4/7K w - - 0 1'],
-    ])('test FEN: %p %p', (color, fen) => {
-        expect(pawnTrapezoid(fen)).toStrictEqual([color])
+        [[{ color: 'b' }], '7k/8/8/8/2p4p/3p2p1/4pp2/7K w - - 0 1'],
+        [[{ color: 'b' }], '7k/8/8/8/1p4p1/2p2p2/3pp3/7K w - - 0 1'],
+        [[{ color: 'b' }], '7k/8/8/8/p4p2/1p2p3/2pp4/7K w - - 0 1'],
+    ])('test FEN: %p %p', (expected, fen) => {
+        expect(pawnTrapezoid(fen)).toStrictEqual(expected)
     })
 })
 

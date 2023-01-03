@@ -1,7 +1,8 @@
 import { Game, PgnMove } from 'chess-fetcher'
 import { Chess, Move } from 'chess.js'
+import { TrophyCheckResult } from '../types/types'
 
-export function rosenTrap(game: Game, moves: PgnMove[]) {
+export function rosenTrap(game: Game, moves: PgnMove[]): TrophyCheckResult {
     if (game.result.via !== 'stalemate') {
         return []
     }
@@ -36,7 +37,12 @@ export function rosenTrap(game: Game, moves: PgnMove[]) {
                     for (const kingMove of chessJsMoves) {
                         // if king could move to the square the queen captured on...
                         if (kingMove.to === destinationSquare) {
-                            return [kingMove.color]
+                            return [
+                                {
+                                    color: kingMove.color,
+                                    onMoveNumber: moveNumber,
+                                },
+                            ]
                         }
                     }
                 }

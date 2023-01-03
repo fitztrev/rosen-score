@@ -151,7 +151,7 @@
                 <strong> {{ totalAccomplishmentsCompletedPercentage }}% </strong>
                 of the goals ({{ totalAccomplishmentsCompleted }}
                 out of
-                {{ totalAccomplishmentsPossible }})
+                {{ trophyTypeCount }})
             </div>
 
             <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div>
@@ -173,39 +173,39 @@
             </div>
         </div> -->
 
-        <!-- <div class="md:flex md:flex-row md:space-x-4">
+        <div class="md:flex md:flex-row md:space-x-4">
             <div class="basis-1/2">
                 <h2 class="heading">Make Eric Proud</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Oh No My Queen"
                         desc="Sacrifice your Queen for mate"
-                        :games="pointsByAccomplishment['ohNoMyQueen']"
+                        :games="trophiesByType['ohNoMyQueen']"
                         gameLink="https://lichess.org/heNcmap1#39"
                         youtubeLink="https://youtu.be/x24BFszZ5Zw?t=189"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Stalemate Tricks"
                         desc="Stalemate from a losing position"
-                        :games="pointsByAccomplishment['stalemateTricks']"
+                        :games="trophiesByType['stalemateTricks']"
                         gameLink="https://lichess.org/LahQPSJt#134"
                         youtubeLink="https://www.youtube.com/watch?v=aNDNwB2nruA"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Rosen Trap"
                         desc="King goes to the corner instead of capturing the queen"
-                        :games="pointsByAccomplishment['rosenTrap']"
+                        :games="trophiesByType['rosenTrap']"
                         gameLink="https://lichess.org/fBcFhVs4#90"
                         youtubeLink="https://youtu.be/ixAw0ED-Sfs"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Castle Fork"
                         desc="Castle with check and then your king captures a piece"
-                        :games="pointsByAccomplishment['castleFork']"
+                        :games="trophiesByType['castleFork']"
                         gameLink="https://lichess.org/xEjSVeYp#41"
                         youtubeLink="https://www.youtube.com/watch?v=_nvoEbgzsb0"
                     ></accomplishment-score>
@@ -214,111 +214,111 @@
                 <h2 class="heading">Pawn Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 5"
                         desc="Connect 5 of your pawns diagonally"
-                        :games="pointsByAccomplishment['connectFive']"
+                        :games="trophiesByType['connectFive']"
                         gameLink="https://lichess.org/FL2vDAZL#37"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Pawn Diamond"
                         desc="Does your pawn diamond last forever?"
-                        :games="pointsByAccomplishment['pawnDiamond']"
+                        :games="trophiesByType['pawnDiamond']"
                         gameLink="https://lichess.org/d43FgnVj/black#32"
                         youtubeLink="https://youtu.be/J3TSlTZpBfc?t=456"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 6"
                         desc="Connect 6 of your pawns diagonally"
-                        :games="pointsByAccomplishment['connectSix']"
+                        :games="trophiesByType['connectSix']"
                         gameLink="https://lichess.org/CXvrZTzL#73"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Double Pawn Diamond"
-                        :games="pointsByAccomplishment['doublePawnDiamond']"
+                        :games="trophiesByType['doublePawnDiamond']"
                         gameLink="https://lichess.org/V0NGitnD/black#66"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Pawn X"
                         desc="X-formation with pawns"
-                        :games="pointsByAccomplishment['pawnX']"
+                        :games="trophiesByType['pawnX']"
                         gameLink="https://lichess.org/2gQ8HOw1#65"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Solid Pawn Diamond"
                         desc="A 5 carat pawn diamond"
-                        :games="pointsByAccomplishment['pawnDiamondSolid']"
+                        :games="trophiesByType['pawnDiamondSolid']"
                         gameLink="https://lichess.org/Ak0Bhmx8/black#46"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Pawn Cube"
                         desc="Is your pawn cube indestructible?"
-                        :games="pointsByAccomplishment['pawnCube']"
+                        :games="trophiesByType['pawnCube']"
                         gameLink="https://lichess.org/lhkF3hJB/black#22"
                         youtubeLink="https://www.youtube.com/watch?v=Q7fQQB1bgxQ"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Center Pawn Cube"
                         desc="Pawn cube in the exact center of the board"
-                        :games="pointsByAccomplishment['pawnCubeCenter']"
+                        :games="trophiesByType['pawnCubeCenter']"
                         gameLink="https://lichess.org/EXwOWSu5/black#48"
                         youtubeLink="https://youtu.be/x8t-MlIWE3w?t=573"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Quadrupled Pawns"
                         desc="4 pawns on the same file"
-                        :games="pointsByAccomplishment['quadrupledPawns']"
+                        :games="trophiesByType['quadrupledPawns']"
                         gameLink="https://lichess.org/aqADXuJT#85"
                         youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Pawn Trapezoid"
                         desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :games="pointsByAccomplishment['pawnTrapezoid']"
+                        :games="trophiesByType['pawnTrapezoid']"
                         gameLink="https://lichess.org/38zR9IeJ#57"
                         youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 8 on 4th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank4']"
+                        :games="trophiesByType['connectEightOnRank4']"
                         gameLink="https://lichess.org/ZRXFIlZI#87"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=537"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 8 on 5th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank5']"
+                        :games="trophiesByType['connectEightOnRank5']"
                         gameLink="https://lichess.org/ZRXFIlZI#109"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=594"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 8 on 6th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank6']"
+                        :games="trophiesByType['connectEightOnRank6']"
                         gameLink="https://lichess.org/ZRXFIlZI#129"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=612"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Connect 8 on 7th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank7']"
+                        :games="trophiesByType['connectEightOnRank7']"
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="6 Pawns on the Same File"
-                        :games="pointsByAccomplishment['sixPawnsInTheSameFile']"
+                        :games="trophiesByType['sixPawnsInTheSameFile']"
                         gameLink="https://lichess.org/JCD2jmRs#91"
                     ></accomplishment-score>
                 </div>
@@ -326,16 +326,16 @@
                 <h2 class="heading">Piece Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Knight Cube"
-                        :games="pointsByAccomplishment['knightCube']"
+                        :games="trophiesByType['knightCube']"
                         gameLink="https://lichess.org/KFZm4x4A/black#176"
                         youtubeLink="https://www.youtube.com/watch?v=FqAako5iZN4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Knight Rectangle"
-                        :games="pointsByAccomplishment['knightRectangle']"
+                        :games="trophiesByType['knightRectangle']"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5587"
                     ></accomplishment-score>
@@ -344,66 +344,66 @@
                 <h2 class="heading">Alphabet Openings</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Egg"
                         desc="Win after spelling &ldquo;egg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:egg']"
+                        :games="trophiesByType['alphabet:egg']"
                         gameLink="https://lichess.org/1SHm5hr6/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Double Egg (EggEgg)"
                         desc="Win after spelling &ldquo;eggegg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:eggegg']"
+                        :games="trophiesByType['alphabet:eggegg']"
                         gameLink="https://lichess.org/f2zcFx6P/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Bad Egg"
                         desc="Win after spelling &ldquo;badegg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:badegg']"
+                        :games="trophiesByType['alphabet:badegg']"
                         gameLink="https://lichess.org/mu679bhr/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1472"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="BeachCaf&eacute;"
                         desc="Win after spelling &ldquo;beachcafe&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:beachcafe']"
+                        :games="trophiesByType['alphabet:beachcafe']"
                         gameLink="https://lichess.org/p5Ldb6wA"
                         youtubeLink="https://www.youtube.com/watch?v=kGYOzdBsjcg"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Beef"
                         desc="Win after spelling &ldquo;beef&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:beef']"
+                        :games="trophiesByType['alphabet:beef']"
                         gameLink="https://lichess.org/dUkHbvOR"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1583"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Cabbage"
                         desc="Win after spelling &ldquo;cabbage&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:cabbage']"
+                        :games="trophiesByType['alphabet:cabbage']"
                         gameLink="https://lichess.org/LMpwnmLz"
                         youtubeLink="https://www.youtube.com/watch?v=GDhtMqBk9M4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Chad"
                         desc="Win after spelling &ldquo;chad&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:chad']"
+                        :games="trophiesByType['alphabet:chad']"
                         gameLink="https://lichess.org/AaNGZKcj/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1305"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Headache"
                         desc="Win after spelling &ldquo;headache&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:headache']"
+                        :games="trophiesByType['alphabet:headache']"
                         gameLink="https://lichess.org/SdbD4znE"
                     ></accomplishment-score>
                 </div>
@@ -412,165 +412,165 @@
                 <h2 class="heading">Checkmates</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Checkmate with a Pawn"
                         desc="A pawn delivers mate"
-                        :games="pointsByAccomplishment['pawnCheckmate']"
+                        :games="trophiesByType['pawnCheckmate']"
                         gameLink="https://lichess.org/52RAfF6v#99"
                         youtubeLink="https://www.youtube.com/watch?v=mx9SCz4yDdE"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Checkmate with King"
                         desc="Move your king with a discovery or by castling"
-                        :games="pointsByAccomplishment['checkmateWithKing']"
+                        :games="trophiesByType['checkmateWithKing']"
                         gameLink="https://lichess.org/JCR11y6i/black#148"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Smothered Mate"
-                        :games="pointsByAccomplishment['smotheredMate']"
+                        :games="trophiesByType['smotheredMate']"
                         gameLink="https://lichess.org/YOdmkxyk#59"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Smothered Pork Checkmate"
                         desc="Smother + Pin + Fork"
-                        :games="pointsByAccomplishment['smotheredPorkMate']"
+                        :games="trophiesByType['smotheredPorkMate']"
                         gameLink="https://lichess.org/39vtGApM#47"
                         youtubeLink="https://www.youtube.com/watch?v=OAnC3gt_DqE"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="En Passant Checkmate"
                         desc="Checkmate by capturing en passant"
-                        :games="pointsByAccomplishment['enPassantCheckmate']"
+                        :games="trophiesByType['enPassantCheckmate']"
                         gameLink="https://lichess.org/LY5WQjXL/black#72"
                         youtubeLink="https://youtu.be/6zT83p6pMHg?t=390"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="g5#"
                         desc="Pawn checkmate on g5"
-                        :games="pointsByAccomplishment['g5mate']"
+                        :games="trophiesByType['g5mate']"
                         gameLink="https://lichess.org/UbOofpwX/black#74"
                         youtubeLink="https://youtu.be/3l6BeM45ay8?t=898"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Double-Check Checkmate"
                         desc="2 pieces are attacking the king and it's checkmate"
-                        :games="pointsByAccomplishment['doubleCheckCheckmate']"
+                        :games="trophiesByType['doubleCheckCheckmate']"
                         gameLink="https://lichess.org/OtlF3AfG#27"
                         youtubeLink="https://youtu.be/8ly5yA6tiEY?t=1082"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Block a Check with Checkmate"
                         desc="Call an ambulance... but not for me"
-                        :games="pointsByAccomplishment['blockCheckWithCheckmate']"
+                        :games="trophiesByType['blockCheckWithCheckmate']"
                         gameLink="https://lichess.org/DrC87aK3#81"
                         youtubeLink="https://youtu.be/kDGY77nkZHc?t=276"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="O-O#"
                         desc="Castle kingside with mate"
-                        :games="pointsByAccomplishment['castleKingsideWithCheckmate']"
+                        :games="trophiesByType['castleKingsideWithCheckmate']"
                         gameLink="https://lichess.org/BJvbtS9B#49"
                         youtubeLink="https://youtu.be/UxZc7ZF2uOY?t=207"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="O-O-O#"
                         desc="Castle queenside with mate"
-                        :games="pointsByAccomplishment['castleQueensideWithCheckmate']"
+                        :games="trophiesByType['castleQueensideWithCheckmate']"
                         gameLink="https://lichess.org/7fmGBmKz/black#28"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Promote to Bishop Checkmate"
-                        :games="pointsByAccomplishment['promoteToBishopCheckmate']"
+                        :games="trophiesByType['promoteToBishopCheckmate']"
                         gameLink="https://lichess.org/9jkxqDKV#95"
                         youtubeLink="https://youtu.be/vSPxtspv57Q?t=11974"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Promote to Knight Checkmate"
-                        :games="pointsByAccomplishment['promoteToKnightCheckmate']"
+                        :games="trophiesByType['promoteToKnightCheckmate']"
                         gameLink="https://lichess.org/USOysGtc#77"
                         youtubeLink="https://youtu.be/RUJk3N6yF4g?t=3055"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Bishop + Knight Checkmate"
-                        :games="pointsByAccomplishment['bishopAndKnightMate']"
+                        :games="trophiesByType['bishopAndKnightMate']"
                         gameLink="https://lichess.org/PDfvROnh#205"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Knight-to-the-Corner Checkmate"
                         desc="Knight moves to a corner of the board with checkmate"
-                        :games="pointsByAccomplishment['knightCornerMate']"
+                        :games="trophiesByType['knightCornerMate']"
                         gameLink="https://lichess.org/s01MVu7c/black#82"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="2-Bishop Checkmate"
                         desc="Checkmate when you only have 2 bishops"
-                        :games="pointsByAccomplishment['twoBishopMate']"
+                        :games="trophiesByType['twoBishopMate']"
                         gameLink="https://lichess.org/FuPe9gyS/black#128"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="4-Knight Checkmate"
-                        :games="pointsByAccomplishment['fourKnightMate']"
+                        :games="trophiesByType['fourKnightMate']"
                         gameLink="https://lichess.org/KFZm4x4A/black#180"
                         youtubeLink="https://www.youtube.com/watch?v=FqAako5iZN4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="4-Knight Cube Checkmate"
                         desc="You have 4 knights and checkmate from a cube"
-                        :games="pointsByAccomplishment['fourKnightCubeMate']"
+                        :games="trophiesByType['fourKnightCubeMate']"
                         gameLink="https://lichess.org/Rggdy0rY/black#152"
                         youtubeLink="https://youtu.be/FqAako5iZN4?t=50"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="6-Knight Rectangle Checkmate"
-                        :games="pointsByAccomplishment['sixKnightRectangleMate']"
+                        :games="trophiesByType['sixKnightRectangleMate']"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5611"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Avoid-the-Flag Checkmate"
                         desc="Make 20+ moves with 1 second left + checkmate"
-                        :games="pointsByAccomplishment['premovesWithOneSecondLeft']"
+                        :games="trophiesByType['premovesWithOneSecondLeft']"
                         gameLink="https://lichess.org/Wi5bzNTB#110"
                         youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Checkmate in 2 Moves"
                         desc="Deliver checkmate in 2 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:2']"
+                        :games="trophiesByType['quickCheckmate:2']"
                         gameLink="https://lichess.org/Fnb8yHd2/black"
                         youtubeLink="https://www.youtube.com/watch?v=broDeIZMGto"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Checkmate in 3 Moves"
                         desc="Deliver checkmate in 3 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:3']"
+                        :games="trophiesByType['quickCheckmate:3']"
                         gameLink="https://lichess.org/BIklhPjL"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Checkmate in 4 Moves"
                         desc="Deliver checkmate in 4 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:4']"
+                        :games="trophiesByType['quickCheckmate:4']"
                         gameLink="https://lichess.org/u0SKphmW/black"
                     ></accomplishment-score>
                 </div>
@@ -578,46 +578,46 @@
                 <h2 class="heading">There's a Funny Line</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Castle after Move 40"
                         desc="It's never too late to castle"
-                        :games="pointsByAccomplishment['castleAfterMove40']"
+                        :games="trophiesByType['castleAfterMove40']"
                         gameLink="https://lichess.org/o2rO7Vcj#95"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Promote a Pawn within 8 Moves"
-                        :games="pointsByAccomplishment['promotePawnBeforeMoveNumber']"
+                        :games="trophiesByType['promotePawnBeforeMoveNumber']"
                         gameLink="https://lichess.org/jBC2lZJt#13"
                         youtubeLink="https://youtu.be/F-UG_xAJmPo?t=47"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="No Captures before Move 30"
                         desc="All the pieces survive till move 30"
-                        :games="pointsByAccomplishment['noCapturesBeforeMove:30']"
+                        :games="trophiesByType['noCapturesBeforeMove:30']"
                         gameLink="https://lichess.org/iZCR89Dt#65"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="10+ Consecutive Captures on the Same Square"
                         desc="&ldquo;We have captures, captures, captures, captures, captures...&rdquo; &#8288;&#8211;&#8288;Agadmator"
-                        :games="pointsByAccomplishment['consecutiveCaptures:sameSquare']"
+                        :games="trophiesByType['consecutiveCaptures:sameSquare']"
                         gameLink="https://lichess.org/UIMR4eJL/black#56"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="12 Pawn Move Opening Win"
                         desc="Win a game after 12+ consecutive pawn moves in the opening"
-                        :games="pointsByAccomplishment['pawnStormOpening']"
+                        :games="trophiesByType['pawnStormOpening']"
                         gameLink="https://lichess.org/eplysicB"
                         youtubeLink="https://www.youtube.com/watch?v=jr-r-0UU-WQ"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Royal Family Fork"
                         desc="Knight forks K+Q+R and 1 other piece"
-                        :games="pointsByAccomplishment['megaFork']"
+                        :games="trophiesByType['megaFork']"
                         gameLink="https://lichess.org/VNAD1RDx#47"
                     ></accomplishment-score>
                 </div>
@@ -625,50 +625,50 @@
                 <h2 class="heading">Adoption Matches</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Adoption"
                         desc="Win 10 consecutive games against the same opponent"
                         :units="['Match', 'Matches']"
-                        :games="pointsByAccomplishment['adoptionMatch:10']"
+                        :games="trophiesByType['adoptionMatch:10']"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Double Adoption"
                         desc="Win 20 consecutive games against the same opponent"
                         :units="['Match', 'Matches']"
-                        :games="pointsByAccomplishment['adoptionMatch:20']"
+                        :games="trophiesByType['adoptionMatch:20']"
                     ></accomplishment-score>
                 </div>
 
                 <h2 class="heading">I feel so dirty</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Clutch Pawn"
                         desc="Win with 1 pawn while down 10+ points in material"
-                        :games="pointsByAccomplishment['clutchPawn']"
+                        :games="trophiesByType['clutchPawn']"
                         gameLink="https://lichess.org/tgMQgOSk#149"
                         youtubeLink="https://youtu.be/ihBnAuO7AtM?t=459"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Win with Insufficient Material"
                         desc="Flag your opponent with only a knight or bishop"
-                        :games="pointsByAccomplishment['winInsufficientMaterial']"
+                        :games="trophiesByType['winInsufficientMaterial']"
                         gameLink="https://lichess.org/nYz9xUgc#141"
                         youtubeLink="https://www.youtube.com/watch?v=vBf4rA4j8_w&t=15468s"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-goal="onRegisterNewTrophy"
                         title="Lefong"
                         desc="Capture a premoved fianchettoed bishop"
-                        :games="pointsByAccomplishment['lefongTrap']"
+                        :games="trophiesByType['lefongTrap']"
                         gameLink="https://lichess.org/ix4lZu8Q/black#6"
                         youtubeLink="https://youtu.be/vBf4rA4j8_w?t=2671"
                     ></accomplishment-score>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="text-sm text-center text-slate-400 mt-8">
             Not affiliated with Eric Rosen, Lichess, or Chess.com.
@@ -723,14 +723,10 @@ import {
     doublePawnDiamond,
     knightCube,
     knightRectangle,
-    connectEightOnRank4,
-    connectEightOnRank5,
-    connectEightOnRank6,
-    connectEightOnRank7,
-    connectFive,
-    connectSix,
     pawnTrapezoid,
     sixPawnsInTheSameFile,
+    connectEightOnRank,
+    connectDiagonally,
 } from './goals/piece-structures'
 import { royalFamilyFork } from './goals/royal-family-fork'
 import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
@@ -757,6 +753,7 @@ import { ohNoMyQueen } from './goals/oh-no-my-queen'
 import { lefongTrap } from './goals/lefong-trap'
 import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
+import { TrophyCheckResult } from './types/types'
 
 export default {
     components: {
@@ -785,8 +782,8 @@ export default {
             // isDownloadComplete: false,
             errorMsg: '',
 
-            // totalAccomplishmentsPossible: 0,
-            // pointsByAccomplishment: {},
+            trophyTypeCount: 0,
+            trophiesByType: <{ [key: string]: object }>{},
 
             // counts: {
             //     totalGames: 0,
@@ -809,13 +806,13 @@ export default {
         //     }
         // },
         // totalAccomplishmentsCompleted: function () {
-        //     return Object.keys(this.pointsByAccomplishment).length
+        //     return Object.keys(this.trophiesByType).length
         // },
         // totalAccomplishmentsCompletedPercentage: function () {
-        //     return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
+        //     return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
         // },
         // trophyCount: function () {
-        //     return Object.values(this.pointsByAccomplishment)
+        //     return Object.values(this.trophiesByType)
         //         .map((o) => Object.values(o))
         //         .flat().length
         // },
@@ -852,9 +849,9 @@ export default {
     // },
 
     methods: {
-        // onRegisterNewGoal: function () {
-        //     this.totalAccomplishmentsPossible++
-        // },
+        onRegisterNewTrophy: function () {
+            this.trophyTypeCount++
+        },
 
         formFill: function (value: string) {
             this.form.value = value
@@ -900,9 +897,9 @@ export default {
             })
         },
 
-        checkForTrophy(name: string, colors: string[], game: Game, onMoveNumber: number) {
-            for (const color of colors) {
-                console.log(name, color, game, onMoveNumber)
+        checkForTrophy(game: Game, name: string, result: TrophyCheckResult) {
+            for (const color of result) {
+                console.log(name, color, game)
             }
         },
 
@@ -928,45 +925,50 @@ export default {
                 return
             }
 
-            castleAfterMove40(game.moves)
-            pawnCheckmate(game.moves)
-            g5mate(game.moves)
+            this.checkForTrophy(game, 'castleAfterMove40', castleAfterMove40(game.moves))
+            this.checkForTrophy(game, 'pawnCheckmate', pawnCheckmate(game.moves))
+            this.checkForTrophy(game, 'g5mate', g5mate(game.moves))
 
-            knightCornerMate(game.moves)
-            enPassantCheckmate(game.moves)
-            castleKingsideWithCheckmate(game.moves)
-            castleQueensideWithCheckmate(game.moves)
-            checkmateWithKing(game.moves)
-            promoteToBishopCheckmate(game.moves)
-            promoteToKnightCheckmate(game.moves)
-            promotePawnBeforeMoveNumber(game.moves, 8)
+            this.checkForTrophy(game, 'knightCornerMate', knightCornerMate(game.moves))
+            this.checkForTrophy(game, 'enPassantCheckmate', enPassantCheckmate(game.moves))
 
-            smotheredMate(game.moves)
-            smotheredPorkMate(game.moves)
+            this.checkForTrophy(game, 'castleKingsideWithCheckmate', castleKingsideWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'castleQueensideWithCheckmate', castleQueensideWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'checkmateWithKing', checkmateWithKing(game.moves))
+            this.checkForTrophy(game, 'promoteToBishopCheckmate', promoteToBishopCheckmate(game.moves))
+            this.checkForTrophy(game, 'promoteToKnightCheckmate', promoteToKnightCheckmate(game.moves))
+            this.checkForTrophy(game, 'promotePawnBeforeMoveNumber', promotePawnBeforeMoveNumber(game.moves, 8))
 
-            blockCheckWithCheckmate(game.moves)
-            royalFamilyFork(game.moves)
+            this.checkForTrophy(game, 'smotheredMate', smotheredMate(game.moves))
+            this.checkForTrophy(game, 'smotheredPorkMate', smotheredPorkMate(game.moves))
 
-            doubleCheckCheckmate(game.moves)
+            this.checkForTrophy(game, 'blockCheckWithCheckmate', blockCheckWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'royalFamilyFork', royalFamilyFork(game.moves))
+            this.checkForTrophy(game, 'doubleCheckCheckmate', doubleCheckCheckmate(game.moves))
+            this.checkForTrophy(game, 'noCapturesBeforeMoveNumber', noCapturesBeforeMoveNumber(game.moves, 30))
 
-            noCapturesBeforeMoveNumber(game.moves, 30)
+            this.checkForTrophy(game, 'rosenTrap', rosenTrap(game, game.moves))
+            this.checkForTrophy(game, 'castleFork', castleFork(game.moves))
+            this.checkForTrophy(game, 'avoidTheFlagCheckmate', avoidTheFlagCheckmate(game, game.moves))
+            this.checkForTrophy(game, 'consecutiveCapturesSameSquare', consecutiveCapturesSameSquare(game.moves, 10))
+            this.checkForTrophy(game, 'ohNoMyQueen', ohNoMyQueen(game.moves))
+            this.checkForTrophy(game, 'lefongTrap', lefongTrap(game.moves))
+            this.checkForTrophy(game, 'pawnStormOpening', pawnStormOpening(game, game.moves))
 
-            rosenTrap(game, game.moves)
-            castleFork(game.moves)
-            avoidTheFlagCheckmate(game, game.moves)
-            consecutiveCapturesSameSquare(game.moves, 10)
-
-            ohNoMyQueen(game.moves)
-            lefongTrap(game.moves)
-            pawnStormOpening(game, game.moves)
-
-            checkmateAtMoveNumber(game.moves, 2)
-            checkmateAtMoveNumber(game.moves, 3)
-            checkmateAtMoveNumber(game.moves, 4)
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:2', checkmateAtMoveNumber(game.moves, 2))
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:3', checkmateAtMoveNumber(game.moves, 3))
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:4', checkmateAtMoveNumber(game.moves, 4))
 
             adoptionMatch.processGame(game)
-            adoptionMatch.checkForAdoption(game, 10)
-            adoptionMatch.checkForAdoption(game, 20)
+            this.checkForTrophy(game, 'adoptionMatch:10', adoptionMatch.checkForAdoption(game, 10))
+            this.checkForTrophy(game, 'adoptionMatch:20', adoptionMatch.checkForAdoption(game, 20))
+
+            for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
+                this.checkForTrophy(game, `alphabet:${word}`, alphabetOpening(word, game.moves))
+            }
+
+            this.checkForTrophy(game, 'xxx', xxx(game.moves))
+            this.checkForTrophy(game, 'xxx', xxx(game.moves))
 
             let chessJs = new ChessJS()
 
@@ -983,12 +985,12 @@ export default {
                 doublePawnDiamond(fen)
                 knightCube(fen)
                 knightRectangle(fen)
-                connectEightOnRank4(fen)
-                connectEightOnRank5(fen)
-                connectEightOnRank6(fen)
-                connectEightOnRank7(fen)
-                connectFive(fen)
-                connectSix(fen)
+                connectEightOnRank(fen, 4)
+                connectEightOnRank(fen, 5)
+                connectEightOnRank(fen, 6)
+                connectEightOnRank(fen, 7)
+                connectDiagonally(fen, 5)
+                connectDiagonally(fen, 6)
                 pawnTrapezoid(fen)
                 sixPawnsInTheSameFile(fen)
 
@@ -1001,10 +1003,6 @@ export default {
 
                 winInsufficientMaterial(game, fen)
                 clutchPawn(game, fen)
-            }
-
-            for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                alphabetOpening(word, game.moves).filter((color) => game.result.winner === color)
             }
         },
     },

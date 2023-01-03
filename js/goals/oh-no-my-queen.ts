@@ -1,8 +1,9 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess, Move } from 'chess.js'
+import { TrophyCheckResult } from '../types/types'
 import { fenToPosition } from '../utils/fen-to-position'
 
-export function ohNoMyQueen(moves: PgnMove[]) {
+export function ohNoMyQueen(moves: PgnMove[]): TrophyCheckResult {
     const lastMove = moves[moves.length - 1]
 
     // game must end in checkmate
@@ -40,7 +41,12 @@ export function ohNoMyQueen(moves: PgnMove[]) {
                 let blackHasQueen = position.includes('q')
 
                 if ((lastMove.turn === 'w' && !whiteHasQueen && blackHasQueen) || (lastMove.turn === 'b' && whiteHasQueen && !blackHasQueen)) {
-                    return [lastMove.turn]
+                    return [
+                        {
+                            color: lastMove.turn,
+                            onMoveNumber: moveNumber,
+                        },
+                    ]
                 }
             }
         }

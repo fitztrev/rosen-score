@@ -1,6 +1,7 @@
 import { PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
-export function castleFork(moves: PgnMove[]) {
+export function castleFork(moves: PgnMove[]): TrophyCheckResult {
     // game must have a castle with check to be considered
     let castleWithCheck = moves.findIndex((move) => {
         return move.notation.notation.endsWith('O-O+')
@@ -25,7 +26,12 @@ export function castleFork(moves: PgnMove[]) {
             moves[moveNumber + 2].notation.fig === 'K' &&
             moves[moveNumber + 2].notation.strike === 'x'
         ) {
-            return [moves[moveNumber].turn]
+            return [
+                {
+                    color: moves[moveNumber].turn,
+                    onMoveNumber: moveNumber,
+                },
+            ]
         }
     }
 

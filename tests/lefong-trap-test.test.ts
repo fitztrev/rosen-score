@@ -7,22 +7,42 @@ describe('test lefong trap', () => {
         [
             // https://lichess.org/h3SFNcuA
             'd4 d5 c4 c5 cxd5 cxd4 Nf3 f6 Nxd4 g6 Nc3 Nh6 e4 Nf7 Bh6 Bg7 Bxg7 Rg8 Bxf6 exf6 Bb5+ Bd7 Qa4 a6 Bxd7+ Nxd7 Ne6 Qe7 Nc7+ Kf8 Nxa8 Kg7 Nb6 Nfe5 Nxd7 Qxd7 Qc2 Rc8 Qe2 b6 f4 b5 fxe5 fxe5 O-O b4 Nd1 Rf8 Ne3 Rf2 Nf5+ Qxf5 Rxf2 Qxe4 Qxe4',
-            ['w'],
+            [
+                {
+                    color: 'w',
+                    onMoveNumber: 14,
+                },
+            ],
         ],
         [
             // https://lichess.org/grYgSoUq/black
             'd4 Nf6 Nf3 d5 g3 Bh3 Bg2 Bxg2 Rg1 Bxf3',
-            ['b'],
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 5,
+                },
+            ],
         ],
         [
             // https://lichess.org/grYgSoUq/black
             '1. d4 Nf6 2. Nf3 d5 3. g3 Bh3 4. Bg2 Bxg2',
-            ['b'],
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 5,
+                },
+            ],
         ],
         [
             // https://lichess.org/0Gc7xOLO#5
             'e4 g6 d4 Bg7 Bh6 e6 Bxg7 Ne7 Bxh8 d6 Qg4 Bd7 Bc4 Nbc6 Nf3 Na5 Qh4 Nxc4 Qh6 c5 Qxh7 Qa5+ c3 O-O-O Qxf7 Nc6 Bf6 Re8 Ng5 Nxb2 Nxe6 Rxe6 Qf8+ Re8 Qxd6 Nd3+ Ke2 cxd4 Kxd3 dxc3 Nxc3 Qa6+ Kc2 Qc4 Rab1 Nb4+ Kd2 Nc6 Qa3 Re6 Rxb7 Kxb7 Qb2+ Ka8 Rb1',
-            ['w'],
+            [
+                {
+                    color: 'w',
+                    onMoveNumber: 4,
+                },
+            ],
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })

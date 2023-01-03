@@ -7,12 +7,22 @@ describe('test rosen trap', () => {
         [
             // https://lichess.org/fBcFhVs4
             'd4 Nf6 Bf4 d6 Nc3 c6 Nf3 g6 e4 Bg7 Qd2 O-O O-O-O Qa5 Kb1 b5 Bd3 b4 Ne2 Be6 Nc1 Nbd7 Bh6 Nb6 h4 Nc4 Bxc4 Bxc4 Rdg1 Nxe4 Qe3 Nc3+ bxc3 bxc3 Bxg7 Qa3 Qxc3 Qxc3 Bxf8 Rb8+ Nb3 Kxf8 Rh3 a5 Ne5 Qd2 Nd7+ Kg7 Nxb8 Qxf2 Rc1 a4 Nxc6 axb3 axb3 Be6 Nxe7 Bxh3 gxh3 Qxh4 Nd5 Qxd4 Ne7 Qe3 Nd5 Qxh3 c4 Qxb3+ Ka1 Qa3+ Kb1 h5 Rc2 Qb3+ Kc1 Qd3 Ne3 Qxe3+ Kb1 h4 c5 dxc5 Kb2 h3 Kb1 Qd3 Kb2 Qxc2+ Ka1 h2',
-            ['w'],
+            [
+                {
+                    color: 'w',
+                    onMoveNumber: 87,
+                },
+            ],
         ],
         [
             // https://lichess.org/ky6pPEdI/black
             'Nf3 Nf6 d4 d5 e3 c5 Be2 cxd4 exd4 Nc6 O-O Bf5 Bg5 e6 Nbd2 Bd6 c3 Bg6 Re1 O-O Nf1 Qb8 h3 Nd7 b4 a6 a4 Re8 Qb3 b5 axb5 axb5 Rxa8 Qxa8 Bxb5 Qb7 Qa4 Rc8 Ba6 Qa8 Ra1 Nb6 Qd1 Rc7 Bb5 Ra7 Rxa7 Nxa7 Bd3 Qc8 Bxg6 hxg6 Qd3 Qc4 Qxc4 Nxc4 N1d2 Nb5 Nxc4 dxc4 Bd2 f6 Kf1 g5 Ke2 Kf7 Kd1 Kg6 Kc2 Kf5 Ng1 Ke4 f3+ Kd5 Ne2 e5 dxe5 Bxe5 Be3 Nd6 Bd4 Bh2 Kb2 Nb5 Kc2 f5 Kd2 g6 Be3 g4 fxg4 fxg4 hxg4 Be5 Bf4 Bf6 Be3 Be7 g5 Bd8 Bf4 Be7 Be3 Bf8 Nf4+ Ke4 Nxg6 Bg7 Bd4 Bxd4 cxd4 Kxd4 Nf4 c3+ Kc1 Nd6 g6 Nf5 Ne2+ Kc4 Nxc3 Ng7 b5 Kxc3 b6 Ne6 b7 Nd4 b8=Q Ne2+ Kd1 Nd4 Ke1 Nb3 Qc7+ Kb2 Qb6 Ka2 Qxb3+ Ka1 g7',
-            ['b'],
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 138,
+                },
+            ],
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })

@@ -5,7 +5,7 @@ import { checkmateAtMoveNumber } from '../js/goals/checkmate-at-move-number'
 test('2 moves', () => {
     let moves = 'g4 e5 f3 Qh4#'
     let game = parse(moves, { startRule: 'game' })
-    expect(checkmateAtMoveNumber(game.moves, 2)).toStrictEqual(['b'])
+    expect(checkmateAtMoveNumber(game.moves, 2)).toStrictEqual([{ color: 'b', onMoveNumber: 4 }])
 })
 
 describe('test 3 moves', () => {
@@ -13,12 +13,12 @@ describe('test 3 moves', () => {
         [
             // for white
             'e4 f6 d4 g5 Qh5#',
-            ['w'],
+            [{ color: 'w', onMoveNumber: 5 }],
         ],
         [
             // for black
             'f4 e5 g3 exf4 gxf4 Qh4#',
-            ['b'],
+            [{ color: 'b', onMoveNumber: 6 }],
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
@@ -31,12 +31,12 @@ describe('test 4 moves', () => {
         [
             // for white
             'e4 f6 Nf3 g5 Nxg5 a6 Qh5#',
-            ['w'],
+            [{ color: 'w', onMoveNumber: 7 }],
         ],
         [
             // for black
             'h4 e5 g3 Bc5 b3 Qf6 Bb2 Qxf2#',
-            ['b'],
+            [{ color: 'b', onMoveNumber: 8 }],
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })

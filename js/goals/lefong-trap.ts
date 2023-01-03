@@ -1,7 +1,8 @@
 import { PgnMove } from 'chess-fetcher'
 import { Chess, Move } from 'chess.js'
+import { TrophyCheckResult } from '../types/types'
 
-export function lefongTrap(moves: PgnMove[]) {
+export function lefongTrap(moves: PgnMove[]): TrophyCheckResult {
     // game must contain a Bishop capture on 1 of the fianchetto squares
     if (!moves.some((move) => ['Bxg7', 'Bxg2', 'Bxb7', 'Bxb2'].includes(move.notation.notation))) {
         return []
@@ -42,7 +43,12 @@ export function lefongTrap(moves: PgnMove[]) {
                 chessJsMoves[moveNumber + 2].san === sequence[2] &&
                 (chessJsMoves[moveNumber + 3] === undefined || chessJsMoves[moveNumber + 3].to !== chessJsMoves[moveNumber + 2].to)
             ) {
-                return [chessJsMoves[moveNumber].color]
+                return [
+                    {
+                        color: chessJsMoves[moveNumber].color,
+                        onMoveNumber: moveNumber,
+                    },
+                ]
             }
         }
 
@@ -67,8 +73,15 @@ export function lefongTrap(moves: PgnMove[]) {
                 chessJsMoves[moveNumber + 3].san === sequence[2] &&
                 (chessJsMoves[moveNumber + 4] === undefined || chessJsMoves[moveNumber + 4].to !== chessJsMoves[moveNumber + 3].to)
             ) {
-                return [chessJsMoves[moveNumber + 1].color]
+                return [
+                    {
+                        color: chessJsMoves[moveNumber + 1].color,
+                        onMoveNumber: moveNumber + 1,
+                    },
+                ]
             }
         }
     }
+
+    return []
 }

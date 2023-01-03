@@ -1,165 +1,209 @@
+import { TrophyCheckResult } from '../types/types'
 import { fenToPosition, positionToFiles } from '../utils/fen-to-position'
 
-export function quadrupledPawns(fen: string) {
+export function quadrupledPawns(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
 
     for (let file of positionToFiles(position)) {
         if ((file.match(/P/g) || []).length >= 4) {
-            colors.push('white')
+            result.push({
+                color: 'w',
+            })
         } else if ((file.match(/p/g) || []).length >= 4) {
-            colors.push('black')
+            result.push({
+                color: 'b',
+            })
         }
     }
 
-    return colors
+    return result
 }
 
-export function sixPawnsInTheSameFile(fen: string) {
+export function sixPawnsInTheSameFile(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
     if (position.match(/p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p([A-Za-z\.]{7})p/i)) {
-        return ['white', 'black']
+        return [
+            {
+                color: 'w',
+            },
+            {
+                color: 'b',
+            },
+        ]
     }
 
     return []
 }
 
-export function pawnCube(fen: string) {
+export function pawnCube(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.match(/PP([A-Za-z\.]{6})PP/)
     if (match && match.index! % 8 < 7) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/pp([A-Za-z\.]{6})pp/)
     if (match && match.index! % 8 < 7) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function pawnCubeCenter(fen: string) {
+export function pawnCubeCenter(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
 
     if (position.match(/^([A-Za-z\.]{27})PP([A-Za-z\.]{6})PP/)) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     } else if (position.match(/^([A-Za-z\.]{27})pp([A-Za-z\.]{6})pp/)) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function pawnX(fen: string) {
+export function pawnX(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.match(/P([A-Za-z\.]{1})P([A-Za-z\.]{6})P([A-Za-z\.]{6})P([A-Za-z\.]{1})P/)
     if (match && match.index! % 8 < 6) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/p([A-Za-z\.]{1})p([A-Za-z\.]{6})p([A-Za-z\.]{6})p([A-Za-z\.]{1})p/)
     if (match && match.index! % 8 < 6) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function knightCube(fen: string) {
+export function knightCube(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.match(/NN([A-Za-z\.]{6})NN/)
     if (match && match.index! % 8 < 7) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/nn([A-Za-z\.]{6})nn/)
     if (match && match.index! % 8 < 7) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function knightRectangle(fen: string) {
+export function knightRectangle(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     // check for 3x2 rectangle
     match = position.match(/NNN([A-Za-z\.]{5})NNN/)
     if (match && match.index! % 8 < 6) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/nnn([A-Za-z\.]{5})nnn/)
     if (match && match.index! % 8 < 6) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
     // check for 2x3 rectangle
     match = position.match(/NN([A-Za-z\.]{6})NN([A-Za-z\.]{6})NN/)
     if (match && match.index! % 8 < 7) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/nn([A-Za-z\.]{6})nn([A-Za-z\.]{6})nn/)
     if (match && match.index! % 8 < 7) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function pawnDiamond(fen: string) {
+export function pawnDiamond(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.match(/P([A-Za-z\.]{6})P([A-Za-z\.]{1})P([A-Za-z\.]{6})P/)
     if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/p([A-Za-z\.]{6})p([A-Za-z\.]{1})p([A-Za-z\.]{6})p/)
     if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function pawnDiamondSolid(fen: string) {
+export function pawnDiamondSolid(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.match(/P([A-Za-z\.]{6})PPP([A-Za-z\.]{6})P/)
     if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.match(/p([A-Za-z\.]{6})ppp([A-Za-z\.]{6})p/)
     if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function doublePawnDiamond(fen: string) {
+export function doublePawnDiamond(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
     let matches
 
     for (let color of ['P', 'p']) {
@@ -175,40 +219,30 @@ export function doublePawnDiamond(fen: string) {
             diamonds[1].index! % 8 !== 0 &&
             diamonds[1].index! % 8 !== 7
         ) {
-            colors.push(color === 'P' ? 'white' : 'black')
+            result.push({
+                color: color === 'P' ? 'w' : 'b',
+            })
         }
     }
 
-    return colors
+    return result
 }
 
-function _connectEightOnRank(fen: string, rank: number) {
+export function connectEightOnRank(fen: string, rank: number): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
 
     if (position.substr(64 - 8 * rank, 8) === 'PPPPPPPP') {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     } else if (position.substr(8 * (rank - 1), 8) === 'pppppppp') {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
-}
-
-export function connectEightOnRank4(fen: string) {
-    return _connectEightOnRank(fen, 4)
-}
-
-export function connectEightOnRank5(fen: string) {
-    return _connectEightOnRank(fen, 5)
-}
-
-export function connectEightOnRank6(fen: string) {
-    return _connectEightOnRank(fen, 6)
-}
-
-export function connectEightOnRank7(fen: string) {
-    return _connectEightOnRank(fen, 7)
+    return result
 }
 
 function _convertPositionToDiagonalStringA1toH8(position: string) {
@@ -349,50 +383,50 @@ function _convertPositionToDiagonalStringH1toA8(position: string) {
     )
 }
 
-function _connectDiagonally(fen: string, times: number) {
+export function connectDiagonally(fen: string, times: number): TrophyCheckResult {
     const position = fenToPosition(fen)
-    let colors = []
+    let result: TrophyCheckResult = []
 
     if (_convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(times))) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     } else if (_convertPositionToDiagonalStringH1toA8(position).includes('P'.repeat(times))) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     } else if (_convertPositionToDiagonalStringA1toH8(position).includes('p'.repeat(times))) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     } else if (_convertPositionToDiagonalStringH1toA8(position).includes('p'.repeat(times))) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }
 
-export function connectFour(fen: string) {
-    return _connectDiagonally(fen, 4)
-}
-
-export function connectFive(fen: string) {
-    return _connectDiagonally(fen, 5)
-}
-
-export function connectSix(fen: string) {
-    return _connectDiagonally(fen, 6)
-}
-
-export function pawnTrapezoid(fen: string) {
+export function pawnTrapezoid(fen: string): TrophyCheckResult {
     const position = fenToPosition(fen)
 
-    let colors = []
+    let result: TrophyCheckResult = []
     let match
 
     match = position.substr(0, 40).match(/PP([A-Za-z\.]{5})P([A-Za-z\.]{2})P([A-Za-z\.]{3})P([A-Za-z\.]{4})P/)
     if (match && match.index! % 8 >= 2 && match.index! % 8 <= 4) {
-        colors.push('white')
+        result.push({
+            color: 'w',
+        })
     }
 
     match = position.substr(24, 64).match(/p([A-Za-z\.]{4})p([A-Za-z\.]{3})p([A-Za-z\.]{2})p([A-Za-z\.]{5})pp/)
     if (match && match.index! % 8 <= 2) {
-        colors.push('black')
+        result.push({
+            color: 'b',
+        })
     }
 
-    return colors
+    return result
 }

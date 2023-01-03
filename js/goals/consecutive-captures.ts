@@ -1,4 +1,5 @@
 import { PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
 /*
  * This basically converts all the moves in a game to a string
@@ -6,17 +7,26 @@ import { PgnMove } from 'chess-fetcher'
  * ex: .....xx.xx............xxxxxxxxxxx..
  */
 
-export function consecutiveCapturesAnySquare(moves: PgnMove[], count: number) {
+export function consecutiveCapturesAnySquare(moves: PgnMove[], count: number): TrophyCheckResult {
     let captures = moves.map((move) => (move.notation.strike === 'x' ? 'x' : '.')).join('')
 
     if (captures.includes('x'.repeat(count))) {
-        return ['w', 'b']
+        return [
+            {
+                color: 'w',
+                onMoveNumber: captures.indexOf('x'.repeat(count)),
+            },
+            {
+                color: 'b',
+                onMoveNumber: captures.indexOf('x'.repeat(count)),
+            },
+        ]
     }
 
     return []
 }
 
-export function consecutiveCapturesSameSquare(moves: PgnMove[], count: number) {
+export function consecutiveCapturesSameSquare(moves: PgnMove[], count: number): TrophyCheckResult {
     let captures = moves
         .map((move, index) => {
             let previousIndex = Math.max(index - 1, 0)
@@ -33,7 +43,16 @@ export function consecutiveCapturesSameSquare(moves: PgnMove[], count: number) {
         .join('')
 
     if (captures.includes('x'.repeat(count))) {
-        return ['w', 'b']
+        return [
+            {
+                color: 'w',
+                onMoveNumber: captures.indexOf('x'.repeat(count)),
+            },
+            {
+                color: 'b',
+                onMoveNumber: captures.indexOf('x'.repeat(count)),
+            },
+        ]
     }
 
     return []

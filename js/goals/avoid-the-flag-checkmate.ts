@@ -1,6 +1,7 @@
 import { Game, PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
-export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]) {
+export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]): TrophyCheckResult {
     // game must not have increment
     if (game.timeControl.increment !== 0) {
         return []
@@ -29,6 +30,13 @@ export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]) {
     let timeRemainingTwentyMovesAgo = parseInt(winnerClockTimes[0].replace(/\D/g, ''))
 
     if (timeRemainingTwentyMovesAgo <= 1) {
-        return [lastMove.turn]
+        return [
+            {
+                color: lastMove.turn,
+                onMoveNumber: moves.length - 1,
+            },
+        ]
     }
+
+    return []
 }

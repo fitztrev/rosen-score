@@ -31,27 +31,27 @@ describe('test no pawn cube', () => {
 
 describe('test pawn cubes', () => {
     test.each([
-        [['white'], 'rnbqkbnr/pppppppp/8/8/8/1PP5/1PP1PPPP/RNBQKBNR w KQkq - 0 1'],
-        [['black'], 'rnbqkbnr/pppp1pp1/5pp1/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
-        [['black'], '8/pp6/pp6/8/8/8/8/8 w - - 0 1'],
+        [[{ color: 'w' }], 'rnbqkbnr/pppppppp/8/8/8/1PP5/1PP1PPPP/RNBQKBNR w KQkq - 0 1'],
+        [[{ color: 'b' }], 'rnbqkbnr/pppp1pp1/5pp1/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1'],
+        [[{ color: 'b' }], '8/pp6/pp6/8/8/8/8/8 w - - 0 1'],
 
-        [['black'], 'k7/pp6/pp6/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/1pp5/1pp5/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/2pp4/2pp4/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/3pp3/3pp3/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/4pp2/4pp2/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/5pp1/5pp1/8/8/8/8/K7 w - - 0 1'],
-        [['black'], 'k7/6pp/6pp/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/pp6/pp6/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/1pp5/1pp5/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/2pp4/2pp4/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/3pp3/3pp3/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/4pp2/4pp2/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/5pp1/5pp1/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'b' }], 'k7/6pp/6pp/8/8/8/8/K7 w - - 0 1'],
 
-        [['white'], 'k7/PP6/PP6/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/1PP5/1PP5/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/2PP4/2PP4/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/3PP3/3PP3/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/4PP2/4PP2/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/5PP1/5PP1/8/8/8/8/K7 w - - 0 1'],
-        [['white'], 'k7/6PP/6PP/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/PP6/PP6/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/1PP5/1PP5/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/2PP4/2PP4/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/3PP3/3PP3/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/4PP2/4PP2/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/5PP1/5PP1/8/8/8/8/K7 w - - 0 1'],
+        [[{ color: 'w' }], 'k7/6PP/6PP/8/8/8/8/K7 w - - 0 1'],
 
-        [['white', 'black'], 'k7/8/4pp2/4pp2/8/2PP4/2PP4/K7 w - - 0 1'],
+        [[{ color: 'w' }, { color: 'b' }], 'k7/8/4pp2/4pp2/8/2PP4/2PP4/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
         expect(pawnCube(fen)).toStrictEqual(color)
         expect(pawnCubeCenter(fen)).toStrictEqual([])
@@ -60,8 +60,8 @@ describe('test pawn cubes', () => {
 
 describe('test center pawn cubes', () => {
     test.each([
-        ['white', 'k7/8/8/3PP3/3PP3/8/8/K7 w - - 0 1'],
-        ['black', 'k7/8/8/3pp3/3pp3/8/8/K7 w - - 0 1'],
+        [{ color: 'w' }, 'k7/8/8/3PP3/3PP3/8/8/K7 w - - 0 1'],
+        [{ color: 'b' }, 'k7/8/8/3pp3/3pp3/8/8/K7 w - - 0 1'],
     ])('test FEN: %p %p', (color, fen) => {
         expect(pawnCubeCenter(fen)).toStrictEqual([color])
     })

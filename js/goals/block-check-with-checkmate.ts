@@ -1,6 +1,7 @@
 import { PgnMove } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 
-export function blockCheckWithCheckmate(moves: PgnMove[]) {
+export function blockCheckWithCheckmate(moves: PgnMove[]): TrophyCheckResult {
     for (const moveNum in moves) {
         const moveNumber = parseInt(moveNum)
 
@@ -14,7 +15,12 @@ export function blockCheckWithCheckmate(moves: PgnMove[]) {
             moves[moveNumber].notation.fig !== 'K' &&
             moves[moveNumber].notation.strike !== 'x'
         ) {
-            return [moves[moveNumber].turn]
+            return [
+                {
+                    color: moves[moveNumber].turn,
+                    onMoveNumber: moveNumber,
+                },
+            ]
         }
     }
 

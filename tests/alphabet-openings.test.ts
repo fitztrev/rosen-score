@@ -28,7 +28,12 @@ describe('test alphabet openings', () => {
         ['egg', '1. e4 b6 2. g4 f5 3. gxf5'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual(['w'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual([
+            {
+                color: 'w',
+                onMoveNumber: word.length,
+            },
+        ])
     })
 
     test.each([
@@ -38,13 +43,21 @@ describe('test alphabet openings', () => {
         ['egg', '1. a3 e6 2. f4 g5 3. b3 gxf4'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual(['b'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual([
+            {
+                color: 'b',
+                onMoveNumber: word.length,
+            },
+        ])
     })
 })
 
 describe('test both colors play it', () => {
     test.each([['egg', '1. e3 e6 2. g3 g6 3. g4 g5']])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual(['w', 'b'])
+        expect(alphabetOpening(word, game.moves)).toStrictEqual([
+            { color: 'w', onMoveNumber: word.length },
+            { color: 'b', onMoveNumber: word.length },
+        ])
     })
 })
