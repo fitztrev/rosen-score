@@ -1,8 +1,9 @@
 import { Game } from 'chess-fetcher'
+import { TrophyCheckResult } from '../types/types'
 import { calculateMaterialImbalance } from '../utils/calculate-material-imbalance'
 import { fenToPosition } from '../utils/fen-to-position'
 
-export function winInsufficientMaterial(game: Game, fen: string): string[] {
+export function winInsufficientMaterial(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'timeout') {
         return []
     }
@@ -20,13 +21,17 @@ export function winInsufficientMaterial(game: Game, fen: string): string[] {
     piecesRemaining = piecesRemaining.toLowerCase()
 
     if (piecesRemaining === 'b' || piecesRemaining === 'n') {
-        return [game.result.winner === 'white' ? 'w' : 'b']
+        return [
+            {
+                color: game.result.winner === 'white' ? 'w' : 'b',
+            },
+        ]
     }
 
     return []
 }
 
-export function clutchPawn(game: Game, fen: string): string[] {
+export function clutchPawn(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'timeout') {
         return []
     }
@@ -49,7 +54,11 @@ export function clutchPawn(game: Game, fen: string): string[] {
     let materialImbalance = Math.abs(calculateMaterialImbalance(position))
 
     if (materialImbalance >= 10) {
-        return [game.result.winner === 'white' ? 'w' : 'b']
+        return [
+            {
+                color: game.result.winner === 'white' ? 'w' : 'b',
+            },
+        ]
     }
 
     return []

@@ -891,15 +891,15 @@ export default {
             })
 
             games(url, this.checkGameForTrophies, {
-                max: 5,
+                max: 200,
                 pgnInJson: true,
                 clocks: true,
             })
         },
 
-        checkForTrophy(game: Game, name: string, result: TrophyCheckResult) {
+        checkForTrophy(game: Game, name: string, result: TrophyCheckResult, onMoveNumber?: number) {
             for (const color of result) {
-                console.log(name, color, game)
+                console.log(name, color, game, onMoveNumber)
             }
         },
 
@@ -967,43 +967,43 @@ export default {
                 this.checkForTrophy(game, `alphabet:${word}`, alphabetOpening(word, game.moves))
             }
 
-            this.checkForTrophy(game, 'xxx', xxx(game.moves))
-            this.checkForTrophy(game, 'xxx', xxx(game.moves))
-
             let chessJs = new ChessJS()
 
-            for (const move of game.moves) {
-                chessJs.move(move.notation.notation)
+            for (const moveNum in game.moves) {
+                const moveNumber = parseInt(moveNum)
+                chessJs.move(game.moves[moveNumber].notation.notation)
                 const fen = chessJs.fen()
 
-                quadrupledPawns(fen)
-                pawnCube(fen)
-                pawnCubeCenter(fen)
-                pawnX(fen)
-                pawnDiamond(fen)
-                pawnDiamondSolid(fen)
-                doublePawnDiamond(fen)
-                knightCube(fen)
-                knightRectangle(fen)
-                connectEightOnRank(fen, 4)
-                connectEightOnRank(fen, 5)
-                connectEightOnRank(fen, 6)
-                connectEightOnRank(fen, 7)
-                connectDiagonally(fen, 5)
-                connectDiagonally(fen, 6)
-                pawnTrapezoid(fen)
-                sixPawnsInTheSameFile(fen)
-
-                stalemateTricks(game, fen)
-                bishopAndKnightMate(game, fen)
-                twoBishopMate(game, fen)
-                fourKnightMate(game, fen)
-                fourKnightCubeMate(game, fen)
-                sixKnightRectangleMate(game, fen)
-
-                winInsufficientMaterial(game, fen)
-                clutchPawn(game, fen)
+                this.checkForTrophy(game, 'quadrupledPawns', quadrupledPawns(fen), moveNumber)
+                this.checkForTrophy(game, 'pawnCube', pawnCube(fen), moveNumber)
+                this.checkForTrophy(game, 'pawnCubeCenter', pawnCubeCenter(fen), moveNumber)
+                this.checkForTrophy(game, 'pawnX', pawnX(fen), moveNumber)
+                this.checkForTrophy(game, 'pawnDiamond', pawnDiamond(fen), moveNumber)
+                this.checkForTrophy(game, 'pawnDiamondSolid', pawnDiamondSolid(fen), moveNumber)
+                this.checkForTrophy(game, 'doublePawnDiamond', doublePawnDiamond(fen), moveNumber)
+                this.checkForTrophy(game, 'knightCube', knightCube(fen), moveNumber)
+                this.checkForTrophy(game, 'knightRectangle', knightRectangle(fen), moveNumber)
+                this.checkForTrophy(game, 'connectEightOnRank:4', connectEightOnRank(fen, 4), moveNumber)
+                this.checkForTrophy(game, 'connectEightOnRank:5', connectEightOnRank(fen, 5), moveNumber)
+                this.checkForTrophy(game, 'connectEightOnRank:6', connectEightOnRank(fen, 6), moveNumber)
+                this.checkForTrophy(game, 'connectEightOnRank:7', connectEightOnRank(fen, 7), moveNumber)
+                this.checkForTrophy(game, 'connectDiagonally:5', connectDiagonally(fen, 5), moveNumber)
+                this.checkForTrophy(game, 'connectDiagonally:6', connectDiagonally(fen, 6), moveNumber)
+                this.checkForTrophy(game, 'pawnTrapezoid', pawnTrapezoid(fen), moveNumber)
+                this.checkForTrophy(game, 'sixPawnsInTheSameFile', sixPawnsInTheSameFile(fen), moveNumber)
             }
+
+            const fen = chessJs.fen()
+
+            this.checkForTrophy(game, 'stalemateTricks', stalemateTricks(game, fen))
+            this.checkForTrophy(game, 'bishopAndKnightMate', bishopAndKnightMate(game, fen))
+            this.checkForTrophy(game, 'twoBishopMate', twoBishopMate(game, fen))
+            this.checkForTrophy(game, 'fourKnightMate', fourKnightMate(game, fen))
+            this.checkForTrophy(game, 'fourKnightCubeMate', fourKnightCubeMate(game, fen))
+            this.checkForTrophy(game, 'sixKnightRectangleMate', sixKnightRectangleMate(game, fen))
+
+            this.checkForTrophy(game, 'winInsufficientMaterial', winInsufficientMaterial(game, fen))
+            this.checkForTrophy(game, 'clutchPawn', clutchPawn(game, fen))
         },
     },
 }

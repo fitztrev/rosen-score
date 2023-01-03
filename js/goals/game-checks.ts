@@ -2,8 +2,9 @@ import { Game } from 'chess-fetcher'
 import { knightCube, knightRectangle } from './piece-structures'
 import { fenToPosition } from '../utils/fen-to-position'
 import { calculateMaterialImbalance } from '../utils/calculate-material-imbalance'
+import { TrophyCheckResult } from '../types/types'
 
-export function stalemateTricks(game: Game, fen: string) {
+export function stalemateTricks(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'stalemate') {
         return []
     }
@@ -18,13 +19,17 @@ export function stalemateTricks(game: Game, fen: string) {
     let materialImbalance = Math.abs(calculateMaterialImbalance(position))
 
     if (materialImbalance >= 2) {
-        return [fen.split(' ')[1]]
+        return [
+            {
+                color: fen.split(' ')[1],
+            },
+        ]
     }
 
     return []
 }
 
-export function bishopAndKnightMate(game: Game, fen: string): string[] {
+export function bishopAndKnightMate(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -34,15 +39,23 @@ export function bishopAndKnightMate(game: Game, fen: string): string[] {
     let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
     if (piecesRemaining === 'BN') {
-        return ['white']
+        return [
+            {
+                color: 'w',
+            },
+        ]
     } else if (piecesRemaining === 'bn') {
-        return ['black']
+        return [
+            {
+                color: 'b',
+            },
+        ]
     }
 
     return []
 }
 
-export function twoBishopMate(game: Game, fen: string): string[] {
+export function twoBishopMate(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -53,14 +66,24 @@ export function twoBishopMate(game: Game, fen: string): string[] {
     let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
     let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
 
-    if ((whitePiecesRemaining === 'BB' && game.result.winner === 'white') || (blackPiecesRemaining === 'bb' && game.result.winner === 'black')) {
-        return [game.result.winner]
+    if (whitePiecesRemaining === 'BB' && game.result.winner === 'white') {
+        return [
+            {
+                color: 'w',
+            },
+        ]
+    } else if (blackPiecesRemaining === 'bb' && game.result.winner === 'black') {
+        return [
+            {
+                color: 'b',
+            },
+        ]
     }
 
     return []
 }
 
-export function fourKnightMate(game: Game, fen: string): string[] {
+export function fourKnightMate(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -70,15 +93,23 @@ export function fourKnightMate(game: Game, fen: string): string[] {
     let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
     if (piecesRemaining === 'NNNN') {
-        return ['white']
+        return [
+            {
+                color: 'w',
+            },
+        ]
     } else if (piecesRemaining === 'nnnn') {
-        return ['black']
+        return [
+            {
+                color: 'b',
+            },
+        ]
     }
 
     return []
 }
 
-export function fourKnightCubeMate(game: Game, fen: string): string[] {
+export function fourKnightCubeMate(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -89,16 +120,24 @@ export function fourKnightCubeMate(game: Game, fen: string): string[] {
         let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
         if (piecesRemaining === 'NNNN') {
-            return ['white']
+            return [
+                {
+                    color: 'w',
+                },
+            ]
         } else if (piecesRemaining === 'nnnn') {
-            return ['black']
+            return [
+                {
+                    color: 'b',
+                },
+            ]
         }
     }
 
     return []
 }
 
-export function sixKnightRectangleMate(game: Game, fen: string): string[] {
+export function sixKnightRectangleMate(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -109,9 +148,17 @@ export function sixKnightRectangleMate(game: Game, fen: string): string[] {
         let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
 
         if (piecesRemaining === 'NNNNNN') {
-            return ['white']
+            return [
+                {
+                    color: 'w',
+                },
+            ]
         } else if (piecesRemaining === 'nnnnnn') {
-            return ['black']
+            return [
+                {
+                    color: 'b',
+                },
+            ]
         }
     }
 

@@ -16,17 +16,17 @@ describe('test no stalemate tricks', () => {
 
 describe('test stalemate tricks', () => {
     test.each([
-        ['b', '7k/7P/5PK1/8/8/6P1/8/8 b - - 0 55'], // https://lichess.org/7SXEmbld/black#109
-        ['w', '3K4/q7/2q5/3k4/8/8/8/8 w - - 2 59'],
-        ['w', '5K2/6r1/6q1/8/8/8/4k3/8 w - - 2 90'],
-        ['b', '8/8/8/8/5P2/3QK3/8/4k3 b - - 8 71'],
-        ['w', '8/1kbK4/8/8/8/8/8/4q3 w - - 0 67'], // https://lichess.org/gH4J7oSg#132
-        ['w', '8/8/8/6k1/8/qp6/8/1K6 w - - 0 62'], // https://lichess.org/T5duSJA2#122
-        ['b', '8/8/8/5K2/k7/2B5/1Q6/8 b - - 1 75'], // https://lichess.org/7sRJGam2#149
-        ['b', '8/8/8/8/2N1K3/8/2Q5/k7 b - - 24 80'], // https://lichess.org/a0hS2yEI#159
-        ['b', '7k/5P2/6KP/8/8/8/8/8 b - - 0 86'], // https://lichess.org/nu7gNPvZ#171
-        ['w', '3K4/8/3kq3/8/8/8/8/8 w - - 17 91'], // https://lichess.org/oRsGcDax#180
-    ])('test FEN: %p %p', (color, fen) => {
-        expect(stalemateTricks({ result: { via: 'stalemate' } }, fen)).toStrictEqual([color])
+        [[{ color: 'b' }], '7k/7P/5PK1/8/8/6P1/8/8 b - - 0 55'], // https://lichess.org/7SXEmbld/black#109
+        [[{ color: 'w' }], '3K4/q7/2q5/3k4/8/8/8/8 w - - 2 59'],
+        [[{ color: 'w' }], '5K2/6r1/6q1/8/8/8/4k3/8 w - - 2 90'],
+        [[{ color: 'b' }], '8/8/8/8/5P2/3QK3/8/4k3 b - - 8 71'],
+        [[{ color: 'w' }], '8/1kbK4/8/8/8/8/8/4q3 w - - 0 67'], // https://lichess.org/gH4J7oSg#132
+        [[{ color: 'w' }], '8/8/8/6k1/8/qp6/8/1K6 w - - 0 62'], // https://lichess.org/T5duSJA2#122
+        [[{ color: 'b' }], '8/8/8/5K2/k7/2B5/1Q6/8 b - - 1 75'], // https://lichess.org/7sRJGam2#149
+        [[{ color: 'b' }], '8/8/8/8/2N1K3/8/2Q5/k7 b - - 24 80'], // https://lichess.org/a0hS2yEI#159
+        [[{ color: 'b' }], '7k/5P2/6KP/8/8/8/8/8 b - - 0 86'], // https://lichess.org/nu7gNPvZ#171
+        [[{ color: 'w' }], '3K4/8/3kq3/8/8/8/8/8 w - - 17 91'], // https://lichess.org/oRsGcDax#180
+    ])('test FEN: %p %p', (expected, fen) => {
+        expect(stalemateTricks({ result: { via: 'stalemate' } }, fen)).toStrictEqual(expected)
     })
 })
