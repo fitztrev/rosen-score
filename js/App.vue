@@ -51,12 +51,13 @@
                         />
 
                         <div class="text-sm">
-                            Or
-                            <span
-                                class="dotted-underline text-sky-900 cursor-pointer"
-                                @click.prevent="formFill(form.type === 'lichess' ? 'EricRosen' : 'IMRosen')"
-                            >
-                                click here to see Eric Rosen's
+                            Or see
+                            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
+                                Eric Rosen's Lichess
+                            </span>
+                            or
+                            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'imrosen')">
+                                his Chess.com
                             </span>
                         </div>
                     </div>
@@ -753,7 +754,7 @@ export default {
         return {
             form: {
                 type: 'lichess',
-                value: 'EricRosen',
+                value: '',
                 filters: {
                     sinceHoursAgo: 0,
                 },
@@ -850,7 +851,8 @@ export default {
             this.trophyTypeCount++
         },
 
-        formFill: function (value: string): void {
+        formFill: function (type: string, value: string): void {
+            this.form.type = type
             this.form.value = value
         },
 
