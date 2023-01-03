@@ -21,7 +21,7 @@ export function stalemateTricks(game: Game, fen: string): TrophyCheckResult {
     if (materialImbalance >= 2) {
         return [
             {
-                color: fen.split(' ')[1],
+                color: fen.split(' ')[1] as 'w' | 'b',
             },
         ]
     }
