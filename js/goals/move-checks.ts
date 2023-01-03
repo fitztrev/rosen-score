@@ -131,7 +131,12 @@ export function castleQueensideWithCheckmate(moves: PgnMove[]): TrophyCheckResul
 
 export function checkmateWithKing(moves: PgnMove[]): TrophyCheckResult {
     const lastMove = moves[moves.length - 1]
-    if (lastMove.notation.fig == 'K' && lastMove.notation.check === '#') {
+
+    if (lastMove.notation.check !== '#') {
+        return []
+    }
+
+    if (lastMove.notation.fig == 'K' || lastMove.notation.notation.endsWith('O-O#')) {
         return [
             {
                 color: lastMove.turn,

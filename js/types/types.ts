@@ -1,5 +1,5 @@
 type TrophyForColor = {
-    color: string
+    color: 'w' | 'b'
     onMoveNumber?: number
 }
 

@@ -9,7 +9,7 @@
         <span @click.prevent="isExpanded = !isExpanded" class="hover:underline cursor-pointer">{{ title }}</span>
 
         <div v-if="hasGames" @click.prevent="isExpanded = !isExpanded" class="cursor-pointer">
-            <trophy-collection :count="gamesArray.length"></trophy-collection>
+            <trophy-collection :count="trophies.length"></trophy-collection>
         </div>
 
         <template v-if="isExpanded">
@@ -45,15 +45,15 @@
 
             <template v-if="hasGames">
                 <h4 class="font-bold">
-                    {{ gamesArray.length }}
-                    <template v-if="gamesArray.length === 1"> {{ units[0] }} </template>
+                    {{ trophies.length }}
+                    <template v-if="trophies.length === 1"> {{ units[0] }} </template>
                     <template v-else> {{ units[1] }} </template>
                 </h4>
 
                 <div class="grid grid-cols-2 gap-x-2 text-left">
-                    <div v-for="game in gamesArray" class="overflow-hidden">
-                        <a :href="game.gameLink" class="hover:underline whitespace-nowrap" target="_blank">
-                            <lichess-username :title="game.opponent.title" :name="game.opponent.name"></lichess-username>
+                    <div v-for="trophy in trophies" class="overflow-hidden">
+                        <a :href="trophy.link" class="hover:underline whitespace-nowrap" target="_blank">
+                            <lichess-username :title="trophy.opponent.title" :name="trophy.opponent.username"></lichess-username>
                         </a>
                     </div>
                 </div>
@@ -73,20 +73,23 @@ export default {
             required: true,
         },
         desc: String,
-        games: Object,
+        trophies: {
+            type: Object,
+            required: true,
+        },
         gameLink: String,
+        youtubeLink: String,
         units: {
             type: Array,
             default: ['Game', 'Games'],
         },
-        youtubeLink: String,
     },
     components: {
         LichessUsername,
         TrophyCollection,
     },
     mounted: function () {
-        this.$emit('register-new-goal')
+        this.$emit('register-new-trophy')
     },
     data: function () {
         return {
@@ -94,11 +97,8 @@ export default {
         }
     },
     computed: {
-        gamesArray: function () {
-            return Object.values(this.games || {})
-        },
         hasGames: function () {
-            return this.gamesArray.length > 0
+            return Object.keys(this.trophies).length > 0
         },
         hasExpandableContent: function () {
             return Boolean(this.desc || this.gameLink || this.youtubeLink)

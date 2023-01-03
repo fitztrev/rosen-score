@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "https://lichess.org/game/export/Bc7Zyr8T",
-    "url": "https://lichess.org/game/export/Wi5bzNTB?pgnInJson=true&clocks=true",
+    "url": "https://lichess.org/game/export/JCR11y6i?pgnInJson=true&clocks=true",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-06T18:51:13.395Z",
-    "modified": "2023-01-01T18:23:10.980Z",
+    "modified": "2023-01-03T16:17:36.218Z",
     "headers": [
       {
         "name": "Accept",
