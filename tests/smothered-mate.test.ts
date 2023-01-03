@@ -11,7 +11,7 @@ describe('test smothered mate', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 58,
+                    onMoveNumber: 59,
                 },
             ],
         ],
@@ -21,7 +21,7 @@ describe('test smothered mate', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 55,
+                    onMoveNumber: 56,
                 },
             ],
         ],
@@ -50,7 +50,7 @@ describe('test smothered pork', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 46,
+                    onMoveNumber: 47,
                 },
             ],
         ],
@@ -61,7 +61,7 @@ describe('test smothered pork', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 42,
+                    onMoveNumber: 43,
                 },
             ],
         ],

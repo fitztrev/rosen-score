@@ -31,7 +31,7 @@ describe('test alphabet openings', () => {
         expect(alphabetOpening(word, game.moves)).toStrictEqual([
             {
                 color: 'w',
-                onMoveNumber: word.length,
+                onMoveNumber: word.length * 2,
             },
         ])
     })
@@ -46,7 +46,7 @@ describe('test alphabet openings', () => {
         expect(alphabetOpening(word, game.moves)).toStrictEqual([
             {
                 color: 'b',
-                onMoveNumber: word.length,
+                onMoveNumber: word.length * 2,
             },
         ])
     })
@@ -56,8 +56,8 @@ describe('test both colors play it', () => {
     test.each([['egg', '1. e3 e6 2. g3 g6 3. g4 g5']])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
         expect(alphabetOpening(word, game.moves)).toStrictEqual([
-            { color: 'w', onMoveNumber: word.length },
-            { color: 'b', onMoveNumber: word.length },
+            { color: 'w', onMoveNumber: word.length * 2 },
+            { color: 'b', onMoveNumber: word.length * 2 },
         ])
     })
 })

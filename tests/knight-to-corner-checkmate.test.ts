@@ -10,7 +10,7 @@ describe('knight to the corner checkmate', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 62,
+                    onMoveNumber: 63,
                 },
             ],
         ],
@@ -20,7 +20,7 @@ describe('knight to the corner checkmate', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 76,
+                    onMoveNumber: 77,
                 },
             ],
         ],
@@ -30,7 +30,7 @@ describe('knight to the corner checkmate', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 58,
+                    onMoveNumber: 59,
                 },
             ],
         ],

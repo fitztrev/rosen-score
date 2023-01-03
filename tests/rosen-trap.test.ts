@@ -10,7 +10,7 @@ describe('test rosen trap', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 87,
+                    onMoveNumber: 90,
                 },
             ],
         ],
@@ -20,7 +20,7 @@ describe('test rosen trap', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 138,
+                    onMoveNumber: 141,
                 },
             ],
         ],

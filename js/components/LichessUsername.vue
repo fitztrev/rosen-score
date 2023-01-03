@@ -1,10 +1,19 @@
 <template>
     <strong v-if="title" class="text-yellow-400">{{ title }}</strong>
-    {{ name }}
+    {{ username }}
 </template>
 
 <script lang="ts">
 export default {
-    props: ['title', 'name'],
+    props: {
+        title: {
+            type: String,
+            required: true,
+        },
+        username: {
+            type: String,
+            required: true,
+        },
+    },
 }
 </script>

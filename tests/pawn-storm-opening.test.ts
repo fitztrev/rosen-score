@@ -11,7 +11,7 @@ describe('pawn storm opening', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 89,
+                    onMoveNumber: 24,
                 },
             ],
         ],

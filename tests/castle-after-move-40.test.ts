@@ -11,7 +11,7 @@ describe('test castle after move 40', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 80,
+                    onMoveNumber: 81,
                 },
             ],
         ],
@@ -20,7 +20,7 @@ describe('test castle after move 40', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 80,
+                    onMoveNumber: 81,
                 },
             ],
         ],
@@ -29,7 +29,7 @@ describe('test castle after move 40', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 81,
+                    onMoveNumber: 82,
                 },
             ],
         ],

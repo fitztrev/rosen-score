@@ -40,7 +40,7 @@ export function rosenTrap(game: Game, moves: PgnMove[]): TrophyCheckResult {
                             return [
                                 {
                                     color: kingMove.color,
-                                    onMoveNumber: moveNumber,
+                                    onMoveNumber: moveNumber + 3,
                                 },
                             ]
                         }

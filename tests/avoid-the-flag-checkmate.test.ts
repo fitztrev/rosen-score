@@ -20,3 +20,17 @@ describe('avoid the flag', () => {
         expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } }, game.moves)).toStrictEqual([])
     })
 })
+
+describe('avoid the flag when no clock info is available', () => {
+    test.each([
+        [
+            // https://www.chess.com/game/daily/122454262
+            '[Event "Let\'s Play!"]\n[Site "Chess.com"]\n[Date "2015.11.18"]\n[Round "-"]\n[White "R_Doofus"]\n[Black "50BigDave50"]\n[Result "1-0"]\n[CurrentPosition "3r1rk1/ppp4Q/4b1p1/3pq3/8/2NB4/PPP3P1/2KR3R b - - 1 20"]\n[Timezone "UTC"]\n[ECO "C00"]\n[ECOUrl "https://www.chess.com/openings/French-Defense-Normal-Variation"]\n[UTCDate "2015.11.18"]\n[UTCTime "02:45:05"]\n[WhiteElo "1499"]\n[BlackElo "1097"]\n[TimeControl "1/432000"]\n[Termination "R_Doofus won by checkmate"]\n[StartTime "02:45:05"]\n[EndDate "2015.11.18"]\n[EndTime "18:06:44"]\n[Link "https://www.chess.com/game/daily/122454262"]\n\n1. e4 e6 2. d4 Ne7 3. Nf3 g6 4. Nc3 Bg7 5. Be3 d5 6. e5 Nbc6 7. Bd3 Nf5 8. Qd2 Ncxd4 9. Nxd4 Nxe3 10. fxe3 Bxe5 11. Nf3 Qf6 12. Nxe5 Qxe5 13. O-O-O O-O 14. e4 Bd7 15. h4 Rad8 16. exd5 exd5 17. h5 Bf5 18. Qh6 Be6 19. hxg6 fxg6 20. Qxh7# 1-0\n',
+            [],
+        ],
+    ])('test pgn: %p', (pgn, expected) => {
+        let game = parse(pgn, { startRule: 'game' })
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } }, game.moves)).toStrictEqual(expected)
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } }, game.moves)).toStrictEqual([])
+    })
+})

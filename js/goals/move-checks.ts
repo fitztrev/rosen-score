@@ -15,14 +15,14 @@ export function castleAfterMove40(moves: PgnMove[]): TrophyCheckResult {
     if (whiteCastle >= 40 * 2) {
         result.push({
             color: 'w',
-            onMoveNumber: whiteCastle,
+            onMoveNumber: whiteCastle + 1,
         })
     }
 
     if (blackCastle >= 40 * 2) {
         result.push({
             color: 'b',
-            onMoveNumber: blackCastle,
+            onMoveNumber: blackCastle + 1,
         })
     }
 
@@ -32,11 +32,11 @@ export function castleAfterMove40(moves: PgnMove[]): TrophyCheckResult {
 export function pawnCheckmate(moves: PgnMove[]): TrophyCheckResult {
     const lastMove = moves[moves.length - 1]
 
-    if (!lastMove.notation.fig && !lastMove.notation.promotion && lastMove.notation.check === '#') {
+    if (!lastMove.notation.fig && !lastMove.notation.promotion && lastMove.notation.check === '#' && !lastMove.notation.notation.includes('O-O')) {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -50,7 +50,7 @@ export function g5mate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -68,7 +68,7 @@ export function knightCornerMate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -93,7 +93,7 @@ export function enPassantCheckmate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -107,7 +107,7 @@ export function castleKingsideWithCheckmate(moves: PgnMove[]): TrophyCheckResult
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -121,7 +121,7 @@ export function castleQueensideWithCheckmate(moves: PgnMove[]): TrophyCheckResul
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -140,7 +140,7 @@ export function checkmateWithKing(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -154,7 +154,7 @@ export function promoteToBishopCheckmate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
@@ -168,7 +168,7 @@ export function promoteToKnightCheckmate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }

@@ -14,8 +14,16 @@ export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]): TrophyCheck
         return []
     }
 
+    // some older games don't have clk times in the PGN
+    if (!moves[0].commentDiag) {
+        return []
+    }
+
     const winnerClockTimes = moves
         .map((move) => {
+            if (!move.commentDiag || !move.commentDiag.clk) {
+                console.log('no clk', game)
+            }
             return move.turn + ' - ' + move.commentDiag.clk
         })
         .slice(-40)

@@ -15,6 +15,7 @@
 
         <div
             class="my-8 bg-indigo-100 border border-indigo-200 drop-shadow-2xl mx-auto p-4 rounded-lg shadow-indigo-500/50 shadow-lg text-sky-600 md:w-1/2"
+            v-if="!isDownloading && !isDownloadComplete"
         >
             <form @submit.prevent="startDownload">
                 <div class="flex flex-row mb-4">
@@ -118,27 +119,19 @@
             <!-- <RecentUpdates @form-fill="formFill" /> -->
         </div>
 
-        <!-- <download-progress
-            v-if="isDownloading && reportObject.data"
-            :title="reportObject.data.username || reportObject.data.fullName || reportObject.data.name"
+        <download-progress
+            v-if="isDownloading && !isDownloadComplete"
+            :title="player.username"
             :positions="counts.totalMoves"
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
-            :hideProgressBar="usingCachedData || filter.sinceHoursAgo"
+            :hideProgressBar="form.filters.sinceHoursAgo"
             @cancel-download="cancelFetch"
-        ></download-progress> -->
+        ></download-progress>
 
-        <!-- <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
+        <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
-                <template v-if="reportObject.type === 'user'">
-                    <lichess-username
-                        :title="reportObject.data.title"
-                        :name="reportObject.data.username"
-                    ></lichess-username>
-                </template>
-                <template v-else>
-                    {{ reportObject.data.fullName || reportObject.data.name }}
-                </template>
+                <lichess-username :title="player.title" :username="player.username"></lichess-username>
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
@@ -154,24 +147,17 @@
                 {{ trophyTypeCount }})
             </div>
 
-            <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div>
+            <!-- <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div> -->
 
             <trophy-collection :count="trophyCount" size="large"></trophy-collection>
 
             <div class="text-sm mt-2">
-                <template v-if="usingCachedData && isDownloadComplete">
-                    <strong>{{ counts.totalGames.toLocaleString() }}</strong>
-                    games analyzed
-                </template>
-
-                <template v-if="!usingCachedData">
-                    <strong>{{ counts.totalMoves.toLocaleString() }}</strong>
-                    positions and
-                    <strong>{{ counts.downloaded.toLocaleString() }}</strong>
-                    games analyzed
-                </template>
+                <strong>{{ counts.totalMoves.toLocaleString() }}</strong>
+                positions and
+                <strong>{{ counts.downloaded.toLocaleString() }}</strong>
+                games analyzed
             </div>
-        </div> -->
+        </div>
 
         <div class="md:flex md:flex-row md:space-x-4">
             <div class="basis-1/2">
@@ -695,7 +681,7 @@ import { Chess as ChessJS } from 'chess.js'
 
 // const wait = (timeToDelay: number) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
-import { games, player, Game, Profile } from 'chess-fetcher'
+import { games, player, Game, Profile, GamePlayer } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
@@ -751,7 +737,6 @@ import { lefongTrap } from './goals/lefong-trap'
 import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
 import { TrophyCheckResult } from './types/types'
-import { GamePlayer } from 'chess-fetcher/dist/types'
 
 export default {
     components: {
@@ -776,8 +761,8 @@ export default {
 
             // lichessOauthToken: null,
 
-            // isDownloading: false,
-            // isDownloadComplete: false,
+            player: <Profile>{},
+
             errorMsg: '',
 
             trophyTypeCount: 0,
@@ -792,11 +777,13 @@ export default {
                 }
             >{},
 
-            // counts: {
-            //     totalGames: 0,
-            //     downloaded: 0,
-            //     totalMoves: 0,
-            // },
+            isDownloading: false,
+            isDownloadComplete: false,
+            counts: {
+                totalGames: 0,
+                downloaded: 0,
+                totalMoves: 0,
+            },
         }
     },
 
@@ -815,17 +802,17 @@ export default {
         //         return formatSinceDate(this.sinceTimestamp)
         //     }
         // },
-        // totalAccomplishmentsCompleted: function () {
-        //     return Object.keys(this.playerTrophiesByType).length
-        // },
-        // totalAccomplishmentsCompletedPercentage: function () {
-        //     return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
-        // },
-        // trophyCount: function () {
-        //     return Object.values(this.playerTrophiesByType)
-        //         .map((o) => Object.values(o))
-        //         .flat().length
-        // },
+        totalAccomplishmentsCompleted: function () {
+            return Object.keys(this.playerTrophiesByType).length
+        },
+        totalAccomplishmentsCompletedPercentage: function () {
+            return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
+        },
+        trophyCount: function () {
+            return Object.values(this.playerTrophiesByType)
+                .map((o) => Object.values(o))
+                .flat().length
+        },
         // lichessOauthTokenString: function () {
         //     if (this.lichessOauthToken) {
         //         return this.lichessOauthToken.token.value
@@ -859,7 +846,7 @@ export default {
     // },
 
     methods: {
-        onRegisterNewTrophy: function (): void {
+        onRegisterNewTrophy(): void {
             this.trophyTypeCount++
         },
 
@@ -881,11 +868,17 @@ export default {
         //     this.lichessOauthToken = data
         // },
 
-        startDownload: function (): void {
+        cancelFetch(): void {
+            console.log('cancelFetch')
+        },
+
+        startDownload(): void {
             if (!this.username) {
-                this.errorMsg = 'Enter a username or arena URL in Step #1'
+                this.errorMsg = 'Enter a username in Step #1'
                 return
             }
+
+            this.isDownloading = true
 
             let url = ''
             if (this.form.type === 'lichess') {
@@ -895,16 +888,24 @@ export default {
             }
 
             player(url).then((player: Profile) => {
-                console.log(player)
+                this.player = player
                 window.document.title += ` - ${player.title} ${player.username}`
+
+                if (player.site === 'chess.com') {
+                    // Chess.com doesn't provide a reliable way to get the actual game count via the API.
+                    // Actual game count is higher than reported, so I'll just add 20%
+                    this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
+                } else {
+                    this.counts.totalGames = player.counts.all
+                }
             })
 
             games(url, this.checkGameForTrophies, {
-                max: 200,
+                since: this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0,
                 pgnInJson: true,
                 clocks: true,
             }).then(() => {
-                console.log('DONE ############################')
+                this.isDownloadComplete = true
             })
         },
 
@@ -914,7 +915,7 @@ export default {
                     (result.color === 'w' && game.players.white.username.toLowerCase() === this.username) ||
                     (result.color === 'b' && game.players.black.username.toLowerCase() === this.username)
                 ) {
-                    this.addTrophyForPlayer(name, game, result.onMoveNumber || onMoveNumber)
+                    this.addTrophyForPlayer(name, game, result.onMoveNumber || onMoveNumber || 0)
                 }
             }
         },
@@ -938,10 +939,10 @@ export default {
                 link = game.links.black
             }
 
-            if (game.site === 'lichess') {
+            if (game.site === 'lichess' && onMoveNumber) {
                 link += `#${onMoveNumber}`
-            } else {
-                link += onMoveNumber
+            } else if (onMoveNumber) {
+                link += onMoveNumber - 1
             }
 
             this.playerTrophiesByType[trophyName][game.id] = {
@@ -951,7 +952,7 @@ export default {
         },
 
         checkGameForTrophies: function (game: Game): void {
-            // console.log(game)
+            this.counts.downloaded++
 
             // only standard chess starting position games
             if (!game.isStandard) {
@@ -995,6 +996,7 @@ export default {
 
             this.checkForTrophy(game, 'rosenTrap', rosenTrap(game, game.moves))
             this.checkForTrophy(game, 'castleFork', castleFork(game.moves))
+
             this.checkForTrophy(game, 'avoidTheFlagCheckmate', avoidTheFlagCheckmate(game, game.moves))
             this.checkForTrophy(game, 'consecutiveCapturesSameSquare', consecutiveCapturesSameSquare(game.moves, 10))
             this.checkForTrophy(game, 'ohNoMyQueen', ohNoMyQueen(game.moves))
@@ -1016,27 +1018,29 @@ export default {
             let chessJs = new ChessJS()
 
             for (const moveNum in game.moves) {
+                this.counts.totalMoves++
+
                 const moveNumber = parseInt(moveNum)
                 chessJs.move(game.moves[moveNumber].notation.notation)
                 const fen = chessJs.fen()
 
-                this.checkForTrophy(game, 'quadrupledPawns', quadrupledPawns(fen), moveNumber)
-                this.checkForTrophy(game, 'pawnCube', pawnCube(fen), moveNumber)
-                this.checkForTrophy(game, 'pawnCubeCenter', pawnCubeCenter(fen), moveNumber)
-                this.checkForTrophy(game, 'pawnX', pawnX(fen), moveNumber)
-                this.checkForTrophy(game, 'pawnDiamond', pawnDiamond(fen), moveNumber)
-                this.checkForTrophy(game, 'pawnDiamondSolid', pawnDiamondSolid(fen), moveNumber)
-                this.checkForTrophy(game, 'doublePawnDiamond', doublePawnDiamond(fen), moveNumber)
-                this.checkForTrophy(game, 'knightCube', knightCube(fen), moveNumber)
-                this.checkForTrophy(game, 'knightRectangle', knightRectangle(fen), moveNumber)
-                this.checkForTrophy(game, 'connectEightOnRank:4', connectEightOnRank(fen, 4), moveNumber)
-                this.checkForTrophy(game, 'connectEightOnRank:5', connectEightOnRank(fen, 5), moveNumber)
-                this.checkForTrophy(game, 'connectEightOnRank:6', connectEightOnRank(fen, 6), moveNumber)
-                this.checkForTrophy(game, 'connectEightOnRank:7', connectEightOnRank(fen, 7), moveNumber)
-                this.checkForTrophy(game, 'connectDiagonally:5', connectDiagonally(fen, 5), moveNumber)
-                this.checkForTrophy(game, 'connectDiagonally:6', connectDiagonally(fen, 6), moveNumber)
-                this.checkForTrophy(game, 'pawnTrapezoid', pawnTrapezoid(fen), moveNumber)
-                this.checkForTrophy(game, 'sixPawnsInTheSameFile', sixPawnsInTheSameFile(fen), moveNumber)
+                this.checkForTrophy(game, 'quadrupledPawns', quadrupledPawns(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnCube', pawnCube(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnCubeCenter', pawnCubeCenter(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnX', pawnX(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnDiamond', pawnDiamond(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnDiamondSolid', pawnDiamondSolid(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'doublePawnDiamond', doublePawnDiamond(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'knightCube', knightCube(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'knightRectangle', knightRectangle(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:4', connectEightOnRank(fen, 4), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:5', connectEightOnRank(fen, 5), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:6', connectEightOnRank(fen, 6), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:7', connectEightOnRank(fen, 7), moveNumber + 1)
+                this.checkForTrophy(game, 'connectDiagonally:5', connectDiagonally(fen, 5), moveNumber + 1)
+                this.checkForTrophy(game, 'connectDiagonally:6', connectDiagonally(fen, 6), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnTrapezoid', pawnTrapezoid(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'sixPawnsInTheSameFile', sixPawnsInTheSameFile(fen), moveNumber + 1)
             }
 
             const fen = chessJs.fen()

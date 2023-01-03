@@ -9,9 +9,16 @@ describe('test pawn checkmate', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 98,
+                    onMoveNumber: 99,
                 },
             ],
+        ],
+        [
+            // https://lichess.org/BJvbtS9B
+            // castle mate, O-O#
+            // including this so that it's not incorrectly flagged as a pawn checkmate because the PgnMove doesn't have a `fig` property
+            'e4 d5 Nf3 dxe4 Ng5 e5 d3 exd3 Bxd3 h6 Qh5 Qf6 Nxf7 Be6 Nd6+ Kd7 Qe8+ Kxd6 Nc3 Bd5 Nb5+ Kc5 Be3+ Kb4 a3+ Ka4 Nxc7+ Bc6 Bb5+ Ka5 b4+ Bxb4+ axb4+ Kxb4 Ra4+ Kc3 Bd2+ Kxc2 Ra2+ Kb3 Qf8 Kxa2 Bc4+ Kb2 Qb4+ Kc2 Qc3+ Kb1 O-O#',
+            [],
         ],
     ])('test moves: %p', (moves, expected) => {
         let game = parse(moves, { startRule: 'game' })
@@ -28,7 +35,7 @@ describe('test g5#', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 69,
+                    onMoveNumber: 70,
                 },
             ],
         ],
@@ -38,7 +45,7 @@ describe('test g5#', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 22,
+                    onMoveNumber: 23,
                 },
             ],
         ],
@@ -48,7 +55,7 @@ describe('test g5#', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 22,
+                    onMoveNumber: 23,
                 },
             ],
         ],
@@ -66,7 +73,7 @@ describe('test en passant mate', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 71,
+                    onMoveNumber: 72,
                 },
             ],
         ],

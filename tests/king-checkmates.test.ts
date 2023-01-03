@@ -11,7 +11,7 @@ describe('test checkmate with king', () => {
             [
                 {
                     color: 'w',
-                    onMoveNumber: 48,
+                    onMoveNumber: 49,
                 },
             ],
         ],
@@ -22,7 +22,7 @@ describe('test checkmate with king', () => {
             [
                 {
                     color: 'b',
-                    onMoveNumber: 147,
+                    onMoveNumber: 148,
                 },
             ],
         ],

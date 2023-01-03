@@ -17,14 +17,14 @@ export function alphabetOpening(word: string, moves: PgnMove[]): TrophyCheckResu
     if (whitePieceMoves.indexOf(word) === 0) {
         result.push({
             color: 'w',
-            onMoveNumber: word.length,
+            onMoveNumber: word.length * 2,
         })
     }
 
     if (blackPieceMoves.indexOf(word) === 0) {
         result.push({
             color: 'b',
-            onMoveNumber: word.length,
+            onMoveNumber: word.length * 2,
         })
     }
 

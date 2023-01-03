@@ -2,14 +2,14 @@
     <div
         class="px-3 py-2 rounded text-center"
         :class="{
-            'bg-green-600': hasGames,
-            'bg-yellow-300 text-yellow-800  accomplishment-does-not-have-games': !hasGames,
+            'bg-green-600': hasTrophies,
+            'bg-yellow-300 text-yellow-800  accomplishment-does-not-have-games': !hasTrophies,
         }"
     >
         <span @click.prevent="isExpanded = !isExpanded" class="hover:underline cursor-pointer">{{ title }}</span>
 
-        <div v-if="hasGames" @click.prevent="isExpanded = !isExpanded" class="cursor-pointer">
-            <trophy-collection :count="trophies.length"></trophy-collection>
+        <div v-if="hasTrophies" @click.prevent="isExpanded = !isExpanded" class="cursor-pointer">
+            <trophy-collection :count="trophyCount"></trophy-collection>
         </div>
 
         <template v-if="isExpanded">
@@ -17,8 +17,8 @@
                 v-if="hasExpandableContent"
                 class="rounded p-2"
                 :class="{
-                    'bg-green-700': hasGames,
-                    'bg-yellow-200': !hasGames,
+                    'bg-green-700': hasTrophies,
+                    'bg-yellow-200': !hasTrophies,
                 }"
             >
                 {{ desc }}
@@ -43,17 +43,17 @@
                 </a>
             </div>
 
-            <template v-if="hasGames">
+            <template v-if="hasTrophies">
                 <h4 class="font-bold">
-                    {{ trophies.length }}
-                    <template v-if="trophies.length === 1"> {{ units[0] }} </template>
+                    {{ trophyCount }}
+                    <template v-if="trophyCount === 1"> {{ units[0] }} </template>
                     <template v-else> {{ units[1] }} </template>
                 </h4>
 
                 <div class="grid grid-cols-2 gap-x-2 text-left">
                     <div v-for="trophy in trophies" class="overflow-hidden">
                         <a :href="trophy.link" class="hover:underline whitespace-nowrap" target="_blank">
-                            <lichess-username :title="trophy.opponent.title" :name="trophy.opponent.username"></lichess-username>
+                            <lichess-username :title="trophy.opponent.title || ''" :username="trophy.opponent.username"></lichess-username>
                         </a>
                     </div>
                 </div>
@@ -88,19 +88,22 @@ export default {
         LichessUsername,
         TrophyCollection,
     },
-    mounted: function () {
+    mounted() {
         this.$emit('register-new-trophy')
     },
-    data: function () {
+    data() {
         return {
             isExpanded: false,
         }
     },
     computed: {
-        hasGames: function () {
-            return Object.keys(this.trophies).length > 0
+        trophyCount(): number {
+            return Object.keys(this.trophies).length
         },
-        hasExpandableContent: function () {
+        hasTrophies(): boolean {
+            return this.trophyCount > 0
+        },
+        hasExpandableContent(): boolean {
             return Boolean(this.desc || this.gameLink || this.youtubeLink)
         },
     },

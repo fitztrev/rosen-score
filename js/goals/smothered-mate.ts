@@ -53,7 +53,7 @@ export function smotheredMate(moves: PgnMove[]): TrophyCheckResult {
         return [
             {
                 color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                onMoveNumber: moves.length,
             },
         ]
     }
