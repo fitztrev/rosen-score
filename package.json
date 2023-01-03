@@ -16,7 +16,7 @@
     "autoprefixer": "^10.4.2",
     "chess-fetcher": "^0.3.0",
     "chess.js": "1.0.0-alpha.0",
-    "isepic-chess": "^8.4.6",
+    "chessops": "^0.12.5",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "postcss": "^8.4.5",

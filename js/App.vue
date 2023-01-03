@@ -686,9 +686,6 @@
 <script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-// import fenToPosition from './utils/fen-to-position'
-// import formatSinceDate from './utils/format-since-date'
-
 // const controller = new AbortController()
 // const { signal } = controller
 
@@ -891,7 +888,7 @@ export default {
             })
 
             games(url, this.checkGameForTrophies, {
-                max: 200,
+                max: 1000,
                 pgnInJson: true,
                 clocks: true,
             })
@@ -904,7 +901,7 @@ export default {
         },
 
         checkGameForTrophies: function (game: Game) {
-            console.log(game)
+            // console.log(game)
 
             // only standard chess starting position games
             if (!game.isStandard) {
@@ -944,7 +941,6 @@ export default {
 
             this.checkForTrophy(game, 'blockCheckWithCheckmate', blockCheckWithCheckmate(game.moves))
             this.checkForTrophy(game, 'royalFamilyFork', royalFamilyFork(game.moves))
-            this.checkForTrophy(game, 'doubleCheckCheckmate', doubleCheckCheckmate(game.moves))
             this.checkForTrophy(game, 'noCapturesBeforeMoveNumber', noCapturesBeforeMoveNumber(game.moves, 30))
 
             this.checkForTrophy(game, 'rosenTrap', rosenTrap(game, game.moves))
@@ -1004,6 +1000,7 @@ export default {
 
             this.checkForTrophy(game, 'winInsufficientMaterial', winInsufficientMaterial(game, fen))
             this.checkForTrophy(game, 'clutchPawn', clutchPawn(game, fen))
+            this.checkForTrophy(game, 'doubleCheckCheckmate', doubleCheckCheckmate(game, fen))
         },
     },
 }

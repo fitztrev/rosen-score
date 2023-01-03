@@ -1,23 +1,32 @@
-import { Ic } from 'isepic-chess'
-import { PgnMove } from 'chess-fetcher'
+import { Game } from 'chess-fetcher'
 import { TrophyCheckResult } from '../types/types'
+import { Chess } from 'chessops/chess'
+import { parseFen } from 'chessops/fen'
+import { defined, opposite } from 'chessops'
 
-export function doubleCheckCheckmate(moves: PgnMove[]): TrophyCheckResult {
-    const lastMove = moves[moves.length - 1]
-
-    if (lastMove.notation.check !== '#') {
+export function doubleCheckCheckmate(game: Game, fen: string): TrophyCheckResult {
+    if (game.result.via !== 'checkmate') {
         return []
     }
 
-    const pgn = moves.map((move) => move.notation.notation).join(' ')
+    const setup = parseFen(fen).unwrap()
+    const pos = Chess.fromSetup(setup).unwrap()
 
-    const board = Ic.initBoard({ pgn })
+    let winner = game.result.winner as 'white' | 'black'
 
-    if (board.isCheckmate && board.checks === 2) {
+    const king = pos.board.kingOf(opposite(winner))
+
+    if (!defined(king)) {
+        return []
+    }
+
+    let piecesAttackingKing = pos.kingAttackers(king, winner, pos.board.occupied)
+
+    if (piecesAttackingKing.size() === 2) {
         return [
             {
-                color: lastMove.turn,
-                onMoveNumber: moves.length - 1,
+                color: game.result.winner === 'white' ? 'w' : 'b',
+                onMoveNumber: game.moves.length,
             },
         ]
     }
