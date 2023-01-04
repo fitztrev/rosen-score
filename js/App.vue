@@ -21,17 +21,42 @@
                 <div class="flex flex-row mb-4">
                     <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        Select which site:
+                        <div>
+                            Select which site:
 
-                        <div class="text-sky-900 mt-1">
-                            <label class="cursor-pointer">
-                                <input type="radio" name="site" value="lichess" v-model="form.type" />
-                                Lichess
-                            </label>
-                            <label class="cursor-pointer ml-4">
-                                <input type="radio" name="site" value="chesscom" v-model="form.type" />
-                                Chess.com
-                            </label>
+                            <div class="text-sky-900">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="site" value="lichess" v-model="form.type" />
+                                    Lichess
+                                </label>
+                                <label class="cursor-pointer ml-4">
+                                    <input type="radio" name="site" value="chesscom" v-model="form.type" />
+                                    Chess.com
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            Enter username:
+
+                            <input
+                                type="text"
+                                class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                placeholder="Username here"
+                                spellcheck="false"
+                                data-lpignore="true"
+                                v-model="form.value"
+                            />
+
+                            <div class="text-sm">
+                                Or see
+                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
+                                    Eric Rosen's Lichess
+                                </span>
+                                or
+                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'imrosen')">
+                                    his Chess.com
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,39 +64,12 @@
                 <div class="flex flex-row mb-4">
                     <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">2 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        Enter username:
-
-                        <input
-                            type="text"
-                            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Username here"
-                            spellcheck="false"
-                            data-lpignore="true"
-                            v-model="form.value"
-                        />
-
-                        <div class="text-sm">
-                            Or see
-                            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
-                                Eric Rosen's Lichess
-                            </span>
-                            or
-                            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'imrosen')">
-                                his Chess.com
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">3 <ArrowIcon /></div>
-                    <div class="basis-3/4">
                         <!-- <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login> -->
                     </div>
                 </div>
 
                 <div class="flex flex-row">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">4 <ArrowIcon /></div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">3 <ArrowIcon /></div>
                     <div class="basis-3/4">
                         <div class="text-sm mt-1 mb-2">
                             Check games since
