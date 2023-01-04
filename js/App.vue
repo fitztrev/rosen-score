@@ -64,7 +64,7 @@
                 <div class="flex flex-row mb-4">
                     <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">2 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <!-- <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login> -->
+                        <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login>
                     </div>
                 </div>
 
@@ -670,7 +670,7 @@ import { Chess as ChessJS } from 'chess.js'
 // const controller = new AbortController()
 // const { signal } = controller
 
-import { games, player, Game, Profile, GamePlayer } from 'chess-fetcher'
+import { games, player, Game, Profile, GamePlayer, addLichessOauthToken } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
@@ -749,8 +749,6 @@ export default {
                 },
             },
 
-            // lichessOauthToken: null,
-
             player: <Profile>{},
 
             errorMsg: '',
@@ -798,13 +796,6 @@ export default {
                 .map((o) => Object.values(o))
                 .flat().length
         },
-        // lichessOauthTokenString: function () {
-        //     if (this.lichessOauthToken) {
-        //         return this.lichessOauthToken.token.value
-        //     } else {
-        //         return ''
-        //     }
-        // },
     },
 
     watch: {
@@ -842,19 +833,9 @@ export default {
             this.form.value = value
         },
 
-        // formInputValueEntered: function () {
-        //     this.formInputValue = cleanupLichessUsername(this.formInputValue)
-        //     /*
-        //      * Save the username form value to the session because
-        //      * if they "Login to Lichess" it will be gone when the
-        //      * page reloads.
-        //      */
-        //     window.sessionStorage.setItem('savedFormInputValue', this.formInputValue)
-        // },
-
-        // setLichessOauthToken: function (data) {
-        //     this.lichessOauthToken = data
-        // },
+        setLichessOauthToken: function (token: string) {
+            addLichessOauthToken(token)
+        },
 
         cancelFetch(): void {
             console.log('cancelFetch')

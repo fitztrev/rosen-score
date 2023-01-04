@@ -45,12 +45,10 @@
 </template>
 
 <script lang="ts">
-import Cookies from 'js-cookie'
-
-import { AccessContext, HttpClient, OAuth2AuthCodePKCE } from '@bity/oauth2-auth-code-pkce'
+import { OAuth2AuthCodePKCE } from '@bity/oauth2-auth-code-pkce'
 
 export const lichessHost = 'https://lichess.org'
-export const clientId = 'rosen-score'
+export const clientId = 'https://rosen-score.vercel.app/'
 export const clientUrl = (() => {
     const url = new URL(location.href)
     url.search = ''
@@ -58,10 +56,7 @@ export const clientUrl = (() => {
 })()
 
 export default {
-    template: `
-            `,
-
-    data: function () {
+    data() {
         return {
             oauth: new OAuth2AuthCodePKCE({
                 authorizationUrl: `${lichessHost}/oauth`,
@@ -73,27 +68,23 @@ export default {
                 onInvalidGrant: (_retry) => {},
             }),
 
-            error: null,
-
-            accessContext: null,
-            username: null,
+            username: '',
         }
     },
 
     computed: {
-        isLoggedIn: function () {
-            return !!this.username
+        isLoggedIn(): boolean {
+            return !!window.localStorage.getItem('lichessToken')
         },
     },
 
-    mounted: function () {
-        if (Cookies.get('lichessAccessContext')) {
-            this.accessContext = JSON.parse(Cookies.get('lichessAccessContext'))
-
-            this.$emit('set-lichess-oauth-token', this.accessContext)
+    mounted() {
+        const lichessToken = window.localStorage.getItem('lichessToken')
+        if (lichessToken) {
+            this.$emit('set-lichess-oauth-token', lichessToken)
         }
 
-        this.username = Cookies.get('lichessUsername') || null
+        this.username = window.localStorage.getItem('lichessUsername') || ''
 
         this.init()
     },
@@ -106,19 +97,18 @@ export default {
         init: async function () {
             try {
                 const hasAuthCode = await this.oauth.isReturningFromAuthServer()
-                if (hasAuthCode) {
-                    this.accessContext = await this.oauth.getAccessToken()
 
-                    Cookies.set('lichessAccessContext', JSON.stringify(this.accessContext), {
-                        expires: 30,
-                    })
+                if (hasAuthCode) {
+                    let accessContext = await this.oauth.getAccessToken()
+
+                    window.localStorage.setItem('lichessToken', accessContext.token!.value)
 
                     await this.getProfile()
 
-                    window.location = '/'
+                    window.location.assign('/')
                 }
-            } catch (err) {
-                this.error = err
+            } catch (error) {
+                // user probably hit "Cancel" on the auth server
             }
         },
 
@@ -128,15 +118,13 @@ export default {
             // or was revoked. Make sure to offer a chance to reauthenticate.
             const res = await fetch(`${lichessHost}/api/account`, {
                 headers: {
-                    Authorization: `Bearer ${this.accessContext.token.value}`,
+                    Authorization: `Bearer ${window.localStorage.getItem('lichessToken')}`,
                 },
             })
 
             let account = await res.json()
 
-            this.username = account.username
-
-            Cookies.set('lichessUsername', this.username, { expires: 30 })
+            window.localStorage.setItem('lichessUsername', account.username)
         },
 
         logout: async function () {
@@ -144,18 +132,13 @@ export default {
             await fetch(`${lichessHost}/api/token`, {
                 method: 'DELETE',
                 headers: {
-                    Authorization: `Bearer ${this.accessContext.token.value}`,
+                    Authorization: `Bearer ${window.localStorage.getItem('lichessToken')}`,
                 },
             })
 
-            this.token = null
-            this.error = null
-            this.username = null
+            window.localStorage.clear()
 
-            Cookies.remove('lichessUsername')
-            Cookies.remove('lichessAccessContext')
-
-            window.location = '/'
+            window.location.assign('/')
         },
     },
 }
