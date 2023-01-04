@@ -8,7 +8,7 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
 
     let result: TrophyCheckResult = []
 
-    for (const move of moves) {
+    moveLoop: for (const move of moves) {
         let destinationSquare = (move.notation.col + move.notation.row) as Square
 
         chessJS.move(move.notation.notation)
@@ -26,7 +26,7 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
         const legalMoves = chessJS.moves({ verbose: true }) as Move[]
         for (const legalMove of legalMoves) {
             if (legalMove.to === destinationSquare) {
-                continue
+                continue moveLoop
             }
         }
 
@@ -50,7 +50,7 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
         if (piecesAttacked.length >= 4 && piecesAttacked.includes('k') && piecesAttacked.includes('q') && piecesAttacked.includes('r')) {
             result.push({
                 color: move.turn,
-                onMoveNumber: moves.indexOf(move),
+                onMoveNumber: moves.indexOf(move) + 1,
             })
         }
     }
