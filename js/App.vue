@@ -204,7 +204,7 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 5"
                         desc="Connect 5 of your pawns diagonally"
-                        :trophies="playerTrophiesByType['connectFive'] || {}"
+                        :trophies="playerTrophiesByType['connectDiagonally:5'] || {}"
                         gameLink="https://lichess.org/FL2vDAZL#37"
                     ></accomplishment-score>
                     <accomplishment-score
@@ -219,7 +219,7 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 6"
                         desc="Connect 6 of your pawns diagonally"
-                        :trophies="playerTrophiesByType['connectSix'] || {}"
+                        :trophies="playerTrophiesByType['connectDiagonally:6'] || {}"
                         gameLink="https://lichess.org/CXvrZTzL#73"
                     ></accomplishment-score>
                     <accomplishment-score
@@ -277,28 +277,28 @@
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 4th Rank"
-                        :trophies="playerTrophiesByType['connectEightOnRank4'] || {}"
+                        :trophies="playerTrophiesByType['connectEightOnRank:4'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#87"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=537"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 5th Rank"
-                        :trophies="playerTrophiesByType['connectEightOnRank5'] || {}"
+                        :trophies="playerTrophiesByType['connectEightOnRank:5'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#109"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=594"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 6th Rank"
-                        :trophies="playerTrophiesByType['connectEightOnRank6'] || {}"
+                        :trophies="playerTrophiesByType['connectEightOnRank:6'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#129"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=612"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 7th Rank"
-                        :trophies="playerTrophiesByType['connectEightOnRank7'] || {}"
+                        :trophies="playerTrophiesByType['connectEightOnRank:7'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
                     ></accomplishment-score>
@@ -534,7 +534,7 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Avoid-the-Flag Checkmate"
                         desc="Make 20+ moves with 1 second left + checkmate"
-                        :trophies="playerTrophiesByType['premovesWithOneSecondLeft'] || {}"
+                        :trophies="playerTrophiesByType['avoidTheFlagCheckmate'] || {}"
                         gameLink="https://lichess.org/Wi5bzNTB#110"
                         youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
@@ -542,7 +542,7 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 2 Moves"
                         desc="Deliver checkmate in 2 moves"
-                        :trophies="playerTrophiesByType['quickCheckmate:2'] || {}"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:2'] || {}"
                         gameLink="https://lichess.org/Fnb8yHd2/black"
                         youtubeLink="https://www.youtube.com/watch?v=broDeIZMGto"
                     ></accomplishment-score>
@@ -550,14 +550,14 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 3 Moves"
                         desc="Deliver checkmate in 3 moves"
-                        :trophies="playerTrophiesByType['quickCheckmate:3'] || {}"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:3'] || {}"
                         gameLink="https://lichess.org/BIklhPjL"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 4 Moves"
                         desc="Deliver checkmate in 4 moves"
-                        :trophies="playerTrophiesByType['quickCheckmate:4'] || {}"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:4'] || {}"
                         gameLink="https://lichess.org/u0SKphmW/black"
                     ></accomplishment-score>
                 </div>
@@ -582,14 +582,14 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="No Captures before Move 30"
                         desc="All the pieces survive till move 30"
-                        :trophies="playerTrophiesByType['noCapturesBeforeMove:30'] || {}"
+                        :trophies="playerTrophiesByType['noCapturesBeforeMoveNumber'] || {}"
                         gameLink="https://lichess.org/iZCR89Dt#65"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="10+ Consecutive Captures on the Same Square"
                         desc="&ldquo;We have captures, captures, captures, captures, captures...&rdquo; &#8288;&#8211;&#8288;Agadmator"
-                        :trophies="playerTrophiesByType['consecutiveCaptures:sameSquare'] || {}"
+                        :trophies="playerTrophiesByType['consecutiveCapturesSameSquare'] || {}"
                         gameLink="https://lichess.org/UIMR4eJL/black#56"
                     ></accomplishment-score>
                     <accomplishment-score
@@ -604,7 +604,7 @@
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Royal Family Fork"
                         desc="Knight forks K+Q+R and 1 other piece"
-                        :trophies="playerTrophiesByType['megaFork'] || {}"
+                        :trophies="playerTrophiesByType['royalFamilyFork'] || {}"
                         gameLink="https://lichess.org/VNAD1RDx#47"
                     ></accomplishment-score>
                 </div>
