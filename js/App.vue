@@ -885,7 +885,7 @@ export default {
                     this.errors.api = e
                 })
 
-            games(url, () => {}, {
+            games(url, this.checkGameForTrophies, {
                 since: this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0,
                 pgnInJson: true,
                 clocks: true,
