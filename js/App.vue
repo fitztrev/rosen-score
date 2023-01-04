@@ -128,11 +128,13 @@
             @cancel-download="cancelDownload"
         ></download-progress>
 
-        <div v-if="errors.api" class="text-center bg-orange-800 p-3">
+        <div v-if="errors.api.message" class="text-center bg-orange-800 p-3">
             There was an error from the {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
             <strong>{{ errors.api }}</strong>
-            <br />
-            Try only running 1 Rosen Score report at a time. You may have to wait before trying again.
+
+            <div v-if="errors.api.message.includes('429')">
+                Try only running 1 Rosen Score report at a time. You may have to wait before trying again.
+            </div>
         </div>
 
         <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
@@ -757,7 +759,7 @@ export default {
 
             errors: {
                 form: '',
-                api: '',
+                api: <DOMException>{},
             },
 
             trophyTypeCount: 0,
@@ -786,19 +788,19 @@ export default {
         username() {
             return this.form.value.trim().toLowerCase()
         },
-        sinceDateFormatted: function () {
+        sinceDateFormatted() {
             if (this.form.filters.sinceHoursAgo) {
                 let now = new Date().getTime()
                 return formatSinceDate(now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000)
             }
         },
-        totalAccomplishmentsCompleted: function () {
+        totalAccomplishmentsCompleted() {
             return Object.keys(this.playerTrophiesByType).length
         },
-        totalAccomplishmentsCompletedPercentage: function () {
+        totalAccomplishmentsCompletedPercentage() {
             return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
         },
-        trophyCount: function () {
+        trophyCount() {
             return Object.values(this.playerTrophiesByType)
                 .map((o) => Object.values(o))
                 .flat().length
@@ -807,14 +809,14 @@ export default {
 
     watch: {
         form: {
-            handler: function (value) {
+            handler(value) {
                 window.localStorage.setItem('savedForm', JSON.stringify(value))
             },
             deep: true,
         },
     },
 
-    mounted: function () {
+    mounted() {
         let savedForm = JSON.parse(window.localStorage.getItem('savedForm') || '{}')
 
         if (savedForm.type) {
@@ -835,12 +837,12 @@ export default {
             this.trophyTypeCount++
         },
 
-        formFill: function (type: string, value: string): void {
+        formFill(type: string, value: string): void {
             this.form.type = type
             this.form.value = value
         },
 
-        setLichessOauthToken: function (token: string) {
+        setLichessOauthToken(token: string) {
             addLichessOauthToken(token)
         },
 
@@ -879,11 +881,11 @@ export default {
                         this.counts.totalGames = player.counts.all
                     }
                 })
-                .catch((err) => {
-                    this.errors.api = err
+                .catch((e: DOMException) => {
+                    this.errors.api = e
                 })
 
-            games(url, this.checkGameForTrophies, {
+            games(url, () => {}, {
                 since: this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0,
                 pgnInJson: true,
                 clocks: true,
@@ -891,8 +893,13 @@ export default {
                 .then(() => {
                     this.isDownloadComplete = true
                 })
-                .catch((err) => {
-                    this.errors.api = err
+                .catch((e: DOMException) => {
+                    // If the user cancels the download, don't show an error message
+                    if (e.message.includes('aborted')) {
+                        return
+                    }
+
+                    this.errors.api = e
                 })
         },
 
@@ -938,7 +945,7 @@ export default {
             }
         },
 
-        checkGameForTrophies: function (game: Game): void {
+        checkGameForTrophies(game: Game): void {
             this.counts.downloaded++
 
             // only standard chess starting position games
