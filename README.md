@@ -15,6 +15,8 @@ npm install
 npm run dev
 ```
 
+Will start a local server at http://localhost:5173/
+
 ```bash
 ## Run the test suite
 npm run test
