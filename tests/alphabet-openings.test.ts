@@ -9,7 +9,39 @@ describe('test not alphabet opening', () => {
         ['egg', '1. e3 a6 2. g4 b6 3. Bc4'], // "egB"
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual([])
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'white',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([])
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'black',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([])
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        outcome: 'draw',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([])
     })
 })
 
@@ -28,7 +60,17 @@ describe('test alphabet openings', () => {
         ['egg', '1. e4 b6 2. g4 f5 3. gxf5'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual([
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'white',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([
             {
                 color: 'w',
                 onMoveNumber: word.length * 2,
@@ -43,7 +85,17 @@ describe('test alphabet openings', () => {
         ['egg', '1. a3 e6 2. f4 g5 3. b3 gxf4'],
     ])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual([
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'black',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([
             {
                 color: 'b',
                 onMoveNumber: word.length * 2,
@@ -52,12 +104,47 @@ describe('test alphabet openings', () => {
     })
 })
 
-describe('test both colors play it', () => {
+describe('test both colors play it, but black wins', () => {
     test.each([['egg', '1. e3 e6 2. g3 g6 3. g4 g5']])('test alphabet opening: %p', (word, moves) => {
         let game = parse(moves, { startRule: 'game' })
-        expect(alphabetOpening(word, game.moves)).toStrictEqual([
-            { color: 'w', onMoveNumber: word.length * 2 },
-            { color: 'b', onMoveNumber: word.length * 2 },
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'black',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([{ color: 'b', onMoveNumber: word.length * 2 }])
+    })
+})
+
+describe('test alphabet opening from real game', () => {
+    test.each([
+        // https://lichess.org/5MQyXZJN#15
+        [
+            'cabbage',
+            'c4 c5 a3 Nf6 b3 g6 b4 Bg7 a4 cxb4 g3 O-O e3 d6 Bg2 Nc6 d4 Bg4 Ne2 e5 d5 Na5 Nd2 Rc8 h3 Bf5 e4 Bd7 Qc2 Qc7 Bb2 Nxc4 Rc1 b5 axb5 Bxb5 O-O Qb6 Nxc4 Rxc4 Qd2 Rfc8 g4 Nd7 h4 a5 h5 a4 Rb1 Rc2 Rfc1 Rxd2 Rxc8+ Bf8 Bc1 Rxe2 Bh6 Qxf2+ Kh1 Qxg2#',
+        ],
+    ])('test alphabet opening: %p', (word, moves) => {
+        let game = parse(moves, { startRule: 'game' })
+        expect(
+            alphabetOpening(
+                {
+                    result: {
+                        winner: 'white',
+                    },
+                },
+                word,
+                game.moves
+            )
+        ).toStrictEqual([
+            {
+                color: 'w',
+                onMoveNumber: word.length * 2,
+            },
         ])
     })
 })

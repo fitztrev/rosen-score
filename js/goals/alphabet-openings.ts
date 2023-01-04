@@ -1,32 +1,26 @@
-import { PgnMove } from 'chess-fetcher'
+import { Game, PgnMove } from 'chess-fetcher'
 import { TrophyCheckResult } from '../types/types'
 
-export function alphabetOpening(word: string, moves: PgnMove[]): TrophyCheckResult {
-    let whitePieceMoves = moves
-        .filter((move) => move.turn === 'w')
+export function alphabetOpening(game: Game, word: string, moves: PgnMove[]): TrophyCheckResult {
+    if (!game.result.winner) {
+        return []
+    }
+
+    const winningColor = game.result.winner[0] as 'w' | 'b'
+
+    const winnersPieceMoves = moves
+        .filter((move) => move.turn === winningColor)
         .map((move) => move.notation.notation[0])
         .join('')
 
-    let blackPieceMoves = moves
-        .filter((move) => move.turn === 'b')
-        .map((move) => move.notation.notation[0])
-        .join('')
-
-    let result: TrophyCheckResult = []
-
-    if (whitePieceMoves.indexOf(word) === 0) {
-        result.push({
-            color: 'w',
-            onMoveNumber: word.length * 2,
-        })
+    if (winnersPieceMoves.indexOf(word) === 0) {
+        return [
+            {
+                color: winningColor,
+                onMoveNumber: word.length * 2,
+            },
+        ]
     }
 
-    if (blackPieceMoves.indexOf(word) === 0) {
-        result.push({
-            color: 'b',
-            onMoveNumber: word.length * 2,
-        })
-    }
-
-    return result
+    return []
 }

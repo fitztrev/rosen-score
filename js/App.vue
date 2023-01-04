@@ -1014,7 +1014,7 @@ export default {
             this.checkForTrophy(game, 'adoptionMatch:20', adoptionMatch.checkForAdoption(game, 20))
 
             for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                this.checkForTrophy(game, `alphabet:${word}`, alphabetOpening(word, game.moves))
+                this.checkForTrophy(game, `alphabet:${word}`, alphabetOpening(game, word, game.moves))
             }
 
             let chessJs = new ChessJS()
