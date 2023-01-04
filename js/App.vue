@@ -100,7 +100,7 @@
                             Click here to analyze
                         </button>
 
-                        <div v-if="errorMsg" class="mt-2 font-bold text-red-500">
+                        <div v-if="errors.form" class="mt-2 font-bold text-red-500">
                             <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
@@ -109,7 +109,7 @@
                                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                                 />
                             </svg>
-                            {{ errorMsg }}
+                            {{ errors.form }}
                         </div>
                     </div>
                 </div>
@@ -127,6 +127,13 @@
             :hideProgressBar="form.filters.sinceHoursAgo"
             @cancel-download="cancelDownload"
         ></download-progress>
+
+        <div v-if="errors.api" class="text-center bg-orange-800 p-3">
+            There was an error from the {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
+            <strong>{{ errors.api }}</strong>
+            <br />
+            Try only running 1 Rosen Score report at a time. You may have to wait before trying again.
+        </div>
 
         <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
@@ -748,7 +755,10 @@ export default {
 
             player: <Profile>{},
 
-            errorMsg: '',
+            errors: {
+                form: '',
+                api: '',
+            },
 
             trophyTypeCount: 0,
             playerTrophiesByType: <
@@ -843,7 +853,7 @@ export default {
 
         startDownload(): void {
             if (!this.username) {
-                this.errorMsg = 'Enter a username in Step #1'
+                this.errors.form = 'Enter a username in Step #1'
                 return
             }
 
@@ -856,26 +866,34 @@ export default {
                 url = `https://www.chess.com/member/${this.username}`
             }
 
-            player(url).then((player: Profile) => {
-                this.player = player
-                window.document.title += ` - ${player.title} ${player.username}`
+            player(url)
+                .then((player: Profile) => {
+                    this.player = player
+                    window.document.title += ` - ${player.title} ${player.username}`
 
-                if (player.site === 'chess.com') {
-                    // Chess.com doesn't provide a reliable way to get the actual game count via the API.
-                    // Actual game count is higher than reported, so I'll just add 20%
-                    this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
-                } else {
-                    this.counts.totalGames = player.counts.all
-                }
-            })
+                    if (player.site === 'chess.com') {
+                        // Chess.com doesn't provide a reliable way to get the actual game count via the API.
+                        // Actual game count is higher than reported, so I'll just add 20%
+                        this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
+                    } else {
+                        this.counts.totalGames = player.counts.all
+                    }
+                })
+                .catch((err) => {
+                    this.errors.api = err
+                })
 
             games(url, this.checkGameForTrophies, {
                 since: this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0,
                 pgnInJson: true,
                 clocks: true,
-            }).then(() => {
-                this.isDownloadComplete = true
             })
+                .then(() => {
+                    this.isDownloadComplete = true
+                })
+                .catch((err) => {
+                    this.errors.api = err
+                })
         },
 
         checkForTrophy(game: Game, name: string, results: TrophyCheckResult, onMoveNumber?: number): void {
