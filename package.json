@@ -14,7 +14,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.26.2",
     "autoprefixer": "^10.4.2",
-    "chess-fetcher": "^0.3.0",
+    "chess-fetcher": "^0.4.1",
     "chess.js": "1.0.0-alpha.0",
     "chessops": "^0.12.5",
     "lodash": "^4.17.21",
