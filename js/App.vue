@@ -125,7 +125,7 @@
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
             :hideProgressBar="form.filters.sinceHoursAgo"
-            @cancel-download="cancelFetch"
+            @cancel-download="cancelDownload"
         ></download-progress>
 
         <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
@@ -667,10 +667,7 @@
 <script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-// const controller = new AbortController()
-// const { signal } = controller
-
-import { games, player, Game, Profile, GamePlayer, addLichessOauthToken } from 'chess-fetcher'
+import { games, player, Game, Profile, GamePlayer, addLichessOauthToken, cancelFetch } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
@@ -837,8 +834,11 @@ export default {
             addLichessOauthToken(token)
         },
 
-        cancelFetch(): void {
-            console.log('cancelFetch')
+        cancelDownload(): void {
+            cancelFetch()
+
+            this.isDownloading = false
+            this.isDownloadComplete = true
         },
 
         startDownload(): void {
