@@ -53,7 +53,7 @@
                                     Eric Rosen's Lichess
                                 </span>
                                 or
-                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'imrosen')">
+                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'IMRosen')">
                                     his Chess.com
                                 </span>
                             </div>
