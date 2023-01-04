@@ -148,7 +148,7 @@
                 {{ trophyTypeCount }})
             </div>
 
-            <!-- <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div> -->
+            <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div>
 
             <trophy-collection :count="trophyCount" size="large"></trophy-collection>
 
@@ -738,6 +738,7 @@ import { lefongTrap } from './goals/lefong-trap'
 import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
 import { TrophyCheckResult } from './types/types'
+import { formatSinceDate } from './utils/format-since-date'
 
 export default {
     components: {
@@ -792,17 +793,12 @@ export default {
         username() {
             return this.form.value.trim().toLowerCase()
         },
-        // sinceTimestamp: function () {
-        //     if (this.form.filters.sinceHoursAgo) {
-        //         let now = new Date().getTime()
-        //         return now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000
-        //     }
-        // },
-        // sinceDateFormatted: function () {
-        //     if (this.sinceTimestamp) {
-        //         return formatSinceDate(this.sinceTimestamp)
-        //     }
-        // },
+        sinceDateFormatted: function () {
+            if (this.form.filters.sinceHoursAgo) {
+                let now = new Date().getTime()
+                return formatSinceDate(now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000)
+            }
+        },
         totalAccomplishmentsCompleted: function () {
             return Object.keys(this.playerTrophiesByType).length
         },
