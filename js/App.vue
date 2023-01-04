@@ -663,10 +663,6 @@
             Find a bug? Have a comment? Fill out
             <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
         </div>
-
-        <!-- <div class="text-sm text-center text-slate-400 mt-8" v-if="isLocalEnv">
-            <a href="" @click.prevent="getCacheUpdateCommand">getCacheUpdateCommand</a>
-        </div> -->
     </div>
 </template>
 
@@ -675,12 +671,6 @@ import { Chess as ChessJS } from 'chess.js'
 
 // const controller = new AbortController()
 // const { signal } = controller
-
-// import ericCachedGames from '../cache/eric.json'
-// import ericLastUpdated from '../cache/eric-last-updated.json'
-// import tournamentCachedGames from '../cache/swiss-48jrx3m6.json'
-
-// const wait = (timeToDelay: number) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
 
 import { games, player, Game, Profile, GamePlayer } from 'chess-fetcher'
 
@@ -817,30 +807,32 @@ export default {
         //         return ''
         //     }
         // },
-        // usingCachedData: function () {
-        //     return this.reportObject.data.username === 'EricRosen' && this.form.filters.sinceHoursAgo === 0
-        // },
-        // isLocalEnv: function () {
-        //     return window.location.href.includes('localhost')
-        // },
     },
 
-    // watch: {
-    //     filter: {
-    //         handler: function (value) {
-    //             window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
-    //         },
-    //         deep: true,
-    //     },
-    // },
+    watch: {
+        form: {
+            handler: function (value) {
+                window.localStorage.setItem('savedForm', JSON.stringify(value))
+            },
+            deep: true,
+        },
+    },
 
-    // mounted: function () {
-    //     this.formInputValue = window.sessionStorage.getItem('savedFormInputValue') || ''
-    //     this.form.filters = {
-    //         sinceHoursAgo: 0,
-    //         ...JSON.parse(window.sessionStorage.getItem('savedFilter')),
-    //     }
-    // },
+    mounted: function () {
+        let savedForm = JSON.parse(window.localStorage.getItem('savedForm') || '{}')
+
+        if (savedForm.type) {
+            this.form.type = savedForm.type
+        }
+
+        if (savedForm.value) {
+            this.form.value = savedForm.value
+        }
+
+        if (savedForm.filters) {
+            this.form.filters = savedForm.filters
+        }
+    },
 
     methods: {
         onRegisterNewTrophy(): void {
