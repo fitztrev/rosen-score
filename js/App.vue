@@ -132,9 +132,7 @@
             There was an error from the {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
             <strong>{{ errors.api }}</strong>
 
-            <div v-if="errors.api.message.includes('429')">
-                Try only running 1 Rosen Score report at a time. You may have to wait before trying again.
-            </div>
+            <p>Try only running 1 Rosen Score report at a time. You may have to wait before trying again.</p>
         </div>
 
         <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
