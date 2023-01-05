@@ -3,7 +3,7 @@
         v-cloak
         class="container mx-auto my-8 w-11/12"
         :class="{
-            'is-download-complete': false,
+            'is-download-complete': isDownloadComplete,
         }"
     >
         <div class="text-center">
