@@ -948,9 +948,9 @@ export default {
         },
 
         async checkGameForTrophies(game: Game): Promise<void> {
-            // Add a 2ms wait to stop the process from blocking the page
+            // Add a 0ms setTimeout to stop the process from blocking the page
             // Without this, the page may become unresponsive as games are processed
-            await wait(2)
+            await wait(0)
 
             this.counts.downloaded++
 
