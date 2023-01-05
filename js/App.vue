@@ -734,6 +734,8 @@ import { alphabetOpening } from './goals/alphabet-openings'
 import { TrophyCheckResult } from './types/types'
 import { formatSinceDate } from './utils/format-since-date'
 
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
 export default {
     components: {
         AccomplishmentScore,
@@ -945,7 +947,11 @@ export default {
             }
         },
 
-        checkGameForTrophies(game: Game): void {
+        async checkGameForTrophies(game: Game): Promise<void> {
+            // Add a 2ms wait to stop the process from blocking the page
+            // Without this, the page may become unresponsive as games are processed
+            await wait(2)
+
             this.counts.downloaded++
 
             // only standard chess starting position games
