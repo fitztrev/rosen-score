@@ -787,22 +787,24 @@ export default {
     },
 
     computed: {
-        username() {
+        username(): string {
             return this.form.value.trim().toLowerCase()
         },
-        sinceDateFormatted() {
+        sinceDateFormatted(): string {
             if (this.form.filters.sinceHoursAgo) {
                 let now = new Date().getTime()
                 return formatSinceDate(now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000)
             }
+
+            return ''
         },
-        totalAccomplishmentsCompleted() {
+        totalAccomplishmentsCompleted(): number {
             return Object.keys(this.playerTrophiesByType).length
         },
-        totalAccomplishmentsCompletedPercentage() {
+        totalAccomplishmentsCompletedPercentage(): number {
             return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
         },
-        trophyCount() {
+        trophyCount(): number {
             return Object.values(this.playerTrophiesByType)
                 .map((o) => Object.values(o))
                 .flat().length
@@ -844,7 +846,7 @@ export default {
             this.form.value = value
         },
 
-        setLichessOauthToken(token: string) {
+        setLichessOauthToken(token: string): void {
             addLichessOauthToken(token)
         },
 
@@ -916,7 +918,7 @@ export default {
             }
         },
 
-        addTrophyForPlayer(trophyName: string, game: Game, onMoveNumber?: number) {
+        addTrophyForPlayer(trophyName: string, game: Game, onMoveNumber?: number): void {
             this.playerTrophiesByType[trophyName] = this.playerTrophiesByType[trophyName] || {}
 
             // if the player was already awarded this trophy for this game, don't add it again
