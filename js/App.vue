@@ -665,8 +665,9 @@
         <div class="text-sm text-center text-slate-400 mt-8">
             Not affiliated with Eric Rosen, Lichess, or Chess.com.
             <br />
-            Find a bug? Have a comment? Fill out
-            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
+            Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
+            | Find a bug? Have a comment? Fill out
+            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
         </div>
     </div>
 </template>
