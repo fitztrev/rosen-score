@@ -6,7 +6,7 @@ import { neighboringSquares } from '../utils/neighboring-squares'
 import { pawnCaptures } from '../utils/pawn-captures'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
-const get_piece_positions = (chessJs: Chess, piece: Piece) => {
+function get_piece_positions (chessJs: Chess, piece: Piece): Square[] {
     return chessJs
         .board()
         .flat()
@@ -20,7 +20,7 @@ const get_piece_positions = (chessJs: Chess, piece: Piece) => {
             const piece_index = index as number
             const row = 'abcdefgh'[piece_index % 8]
             const column = Math.ceil((64 - piece_index) / 8)
-            return row + column
+            return row + column as Square
         })
 }
 
@@ -39,7 +39,7 @@ export function smotheredMate(moves: PgnMove[]): TrophyCheckResult {
         let kingSquare = get_piece_positions(chessJs, {
             type: 'k',
             color: losingColor,
-        })[0] as Square
+        })[0]
 
         // all the neighbor squares must have same color pieces
         for (const neighborSquare of neighboringSquares(kingSquare)) {
