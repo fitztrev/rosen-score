@@ -6,8 +6,7 @@
             - Added support for <strong>Chess.com</strong>
             - See
             <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</a>,
-            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'DanielNaroditsky')">Daniel Naroditsky</a>,
-            and others
+            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'DanielNaroditsky')">Daniel Naroditsky</a>, and others
         </li>
     </ul>
 </template>
