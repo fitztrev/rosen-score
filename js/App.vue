@@ -664,19 +664,20 @@
             </div>
         </div>
 
-        <div class="text-sm text-center text-slate-400 mt-8" v-if="isDownloadComplete">
-            Download results as
-            <a href="#" @click.prevent="exportAsCsv" class="dotted-underline">CSV</a>
-            or
-            <a href="#" @click.prevent="exportAsJson" class="dotted-underline">JSON</a>
-        </div>
-
-        <div class="text-sm text-center text-slate-400 mt-8">
-            Not affiliated with Eric Rosen, Lichess, or Chess.com.
-            <br />
-            Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
-            | Find a bug? Have a comment? Fill out
-            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
+        <div class="mt-8 text-center text-sm">
+            <div class="text-slate-300" v-if="isDownloadComplete">
+                Download results as
+                <a href="#" @click.prevent="exportAsCsv" class="dotted-underline">CSV</a>
+                or
+                <a href="#" @click.prevent="exportAsJson" class="dotted-underline">JSON</a>
+            </div>
+            <div class="text-slate-400">
+                Not affiliated with Eric Rosen, Lichess, or Chess.com.
+                <br />
+                Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
+                | Find a bug? Have a comment? Fill out
+                <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
+            </div>
         </div>
     </div>
 </template>
@@ -931,26 +932,26 @@ export default {
 
             // caches.set('https://lichess.org/@/agadmator', '/cache/lichess/agadmator.json')
             // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            // caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
+            // caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
             // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
             // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
             // caches.set('https://lichess.org/@/Kingscrusher-YouTube', '/cache/lichess/Kingscrusher-YouTube.json')
             // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
-            caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
-            caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
-            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
+            // caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
-            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
-            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
-            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
-            caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
-            caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
-            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
-            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
-            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
-            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
-            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
-            caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
-            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            // caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            // caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            // caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            // caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
+            // caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
+            // caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            // caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            // caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            // caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            // caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            // caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
+            // caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
 
             if (!caches.has(url)) {
                 return
