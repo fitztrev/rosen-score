@@ -79,7 +79,7 @@ export default {
             }
         },
         percentDownloadedDisplay: function () {
-            return Math.min(Math.round(this.percentDownloaded), 100)
+            return Math.min(Math.round(this.percentDownloaded), 99)
         },
     },
 

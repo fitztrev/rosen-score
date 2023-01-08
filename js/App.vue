@@ -147,9 +147,9 @@
 
             <div class="mb-1">
                 on
-                {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }}
+                <strong>{{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
                 and has completed
-                <strong> {{ totalAccomplishmentsCompletedPercentage }}% </strong>
+                <strong> {{ totalAccomplishmentsCompletedPercentage }}%</strong>
                 of the goals ({{ totalAccomplishmentsCompleted }}
                 out of
                 {{ trophyTypeCount }})
@@ -930,28 +930,27 @@ export default {
         async getCachedGames(url: string) {
             const caches = new Map<string, string>()
 
-            // caches.set('https://lichess.org/@/agadmator', '/cache/lichess/agadmator.json')
-            // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
-            // caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
-            // caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
             // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
-            // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
-            // caches.set('https://lichess.org/@/Kingscrusher-YouTube', '/cache/lichess/Kingscrusher-YouTube.json')
-            // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
-            // caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
+            caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
+            caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
+            caches.set('https://lichess.org/@/fins', '/cache/lichess/fins.json')
+            caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
+            caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
+            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
-            // caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
-            // caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
-            // caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
-            // caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
-            // caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
-            // caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
-            // caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
-            // caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
-            // caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
-            // caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
-            // caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
-            // caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
+            caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
+            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
+            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
 
             if (!caches.has(url)) {
                 return
