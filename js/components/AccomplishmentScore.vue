@@ -53,7 +53,7 @@
                 <div class="grid grid-cols-2 gap-x-2 text-left">
                     <div v-for="trophy in trophies" class="overflow-hidden">
                         <a :href="trophy.link" class="hover:underline whitespace-nowrap" target="_blank">
-                            <lichess-username :title="trophy.opponent.title || ''" :username="trophy.opponent.username"></lichess-username>
+                            <username-formatter :title="trophy.opponent.title || ''" :username="trophy.opponent.username"></username-formatter>
                         </a>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts">
-import LichessUsername from './LichessUsername.vue'
+import UsernameFormatter from './UsernameFormatter.vue'
 import TrophyCollection from './TrophyCollection.vue'
 
 export default {
@@ -85,7 +85,7 @@ export default {
         },
     },
     components: {
-        LichessUsername,
+        UsernameFormatter,
         TrophyCollection,
     },
     mounted() {

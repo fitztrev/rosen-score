@@ -137,7 +137,7 @@
 
         <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
-                <lichess-username :title="player.title" :username="player.username"></lichess-username>
+                <username-formatter :title="player.title" :username="player.username"></username-formatter>
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
@@ -664,16 +664,19 @@
             </div>
         </div>
 
+        <div class="text-sm text-center text-slate-400 mt-8" v-if="isDownloadComplete">
+            Download results as
+            <a href="#" @click.prevent="exportAsCsv" class="dotted-underline">CSV</a>
+            or
+            <a href="#" @click.prevent="exportAsJson" class="dotted-underline">JSON</a>
+        </div>
+
         <div class="text-sm text-center text-slate-400 mt-8">
             Not affiliated with Eric Rosen, Lichess, or Chess.com.
             <br />
             Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
             | Find a bug? Have a comment? Fill out
             <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
-
-            <div v-if="isLocalEnv">
-                <a href="#" @click.prevent="generateCacheFile" class="dotted-underline">Download cache file {{ username }}.json</a>
-            </div>
         </div>
     </div>
 </template>
@@ -688,7 +691,7 @@ import ArrowIcon from './components/ArrowIcon.vue'
 import ChangelogDate from './components/ChangelogDate.vue'
 import DownloadProgress from './components/DownloadProgress.vue'
 import LichessLogin from './components/LichessLogin.vue'
-import LichessUsername from './components/LichessUsername.vue'
+import UsernameFormatter from './components/UsernameFormatter.vue'
 import RecentUpdates from './components/RecentUpdates.vue'
 import TrophyCollection from './components/TrophyCollection.vue'
 import { smotheredMate, smotheredPorkMate } from './goals/smothered-mate'
@@ -748,7 +751,7 @@ export default {
         ChangelogDate,
         DownloadProgress,
         LichessLogin,
-        LichessUsername,
+        UsernameFormatter,
         RecentUpdates,
         TrophyCollection,
     },
@@ -807,9 +810,6 @@ export default {
                 .map((o) => Object.values(o))
                 .flat().length
         },
-        isLocalEnv(): boolean {
-            return window.location.href.includes('localhost')
-        },
     },
 
     watch: {
@@ -862,6 +862,14 @@ export default {
             if (!this.username) {
                 this.errors.form = 'Enter a username in Step #1'
                 return
+            }
+
+            // Auto correct Eric's usernames in case someone is trying to toggle between his Lichess and Chess.com
+            // but forgets to change the username
+            if (this.username === 'ericrosen' && this.form.type === 'chesscom') {
+                this.form.value = 'IMRosen'
+            } else if (this.username === 'imrosen' && this.form.type === 'lichess') {
+                this.form.value = 'EricRosen'
             }
 
             this.isDownloading = true
@@ -925,6 +933,7 @@ export default {
             // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
             // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
+            // caches.set('https://lichess.org/@/Kingscrusher-YouTube', '/cache/lichess/Kingscrusher-YouTube.json')
             // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
@@ -957,7 +966,7 @@ export default {
                 })
         },
 
-        generateCacheFile(): void {
+        exportAsJson(): void {
             let contents: TrophyCacheFile = {
                 cache_updated_at: Date.now(),
                 games_analyzed: this.counts.downloaded,
@@ -965,9 +974,39 @@ export default {
                 trophies: this.playerTrophiesByType,
             }
 
+            this.downloadFile(`${this.username}.json`, JSON.stringify(contents, null, 2), 'application/json')
+        },
+
+        exportAsCsv(): void {
+            let rows: {
+                trophy: string
+                date: string
+                opponent: string
+                link: string
+            }[] = []
+
+            for (const [trophyName, accomplishment] of Object.entries(this.playerTrophiesByType)) {
+                for (const trophy of Object.values(accomplishment)) {
+                    rows.push({
+                        trophy: trophyName,
+                        date: trophy.date,
+                        opponent: (trophy.opponent.title + ' ' + trophy.opponent.username).trim(),
+                        link: trophy.link,
+                    })
+                }
+            }
+
+            const header = Object.keys(rows[0]).join(',')
+            const values = rows.map((o) => Object.values(o).join(',')).join('\n')
+            const csv = header + '\n' + values
+
+            this.downloadFile(`${this.username}.csv`, csv, 'text/csv')
+        },
+
+        downloadFile(filename: string, contents: string, contentType: string): void {
             let element = document.createElement('a')
-            element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(contents, null, 2)))
-            element.setAttribute('download', `${this.username}.json`)
+            element.setAttribute('href', 'data:' + contentType + ';charset=utf-8,' + encodeURIComponent(contents))
+            element.setAttribute('download', filename)
 
             element.style.display = 'none'
             document.body.appendChild(element)
@@ -1012,6 +1051,7 @@ export default {
             }
 
             this.playerTrophiesByType[trophyName][game.id] = {
+                date: new Date(game.timestamp).toISOString().split('T')[0], // YYYY-MM-DD format
                 opponent: {
                     username: opponent.username,
                     title: opponent.title || '',
