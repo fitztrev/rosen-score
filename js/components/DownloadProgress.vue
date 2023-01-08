@@ -73,13 +73,13 @@ export default {
     computed: {
         percentDownloaded: function () {
             if (this.downloaded && this.total) {
-                return (this.downloaded / this.total) * 100
+                return Math.min((this.downloaded / this.total) * 100, 100)
             } else {
                 return 0
             }
         },
         percentDownloadedDisplay: function () {
-            return Math.round(this.percentDownloaded)
+            return Math.min(Math.round(this.percentDownloaded), 100)
         },
     },
 

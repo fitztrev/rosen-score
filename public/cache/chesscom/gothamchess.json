@@ -1,0 +1,4242 @@
+{
+  "cache_updated_at": 1673158242420,
+  "games_analyzed": 26541,
+  "moves_analyzed": 2027049,
+  "trophies": {
+    "pawnCheckmate": {
+      "1997586962": {
+        "opponent": {
+          "username": "johndnazario",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/1997586962?tab=analysis&flip=true&move=061"
+      },
+      "1999058634": {
+        "opponent": {
+          "username": "Tyoma88888",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/1999058634?tab=analysis&flip=true&move=083"
+      },
+      "2019893616": {
+        "opponent": {
+          "username": "seppecena",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2019893616?tab=analysis&flip=true&move=0117"
+      },
+      "2119928862": {
+        "opponent": {
+          "username": "DrHazzi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2119928862?tab=analysis&flip=false&move=0102"
+      },
+      "2119938563": {
+        "opponent": {
+          "username": "blackcloudbg",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2119938563?tab=analysis&flip=true&move=067"
+      },
+      "2157649749": {
+        "opponent": {
+          "username": "Ustat",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2157649749?tab=analysis&flip=false&move=070"
+      },
+      "2401739375": {
+        "opponent": {
+          "username": "Julio_Becerra",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2401739375?tab=analysis&flip=false&move=080"
+      },
+      "2443936530": {
+        "opponent": {
+          "username": "CoffeeGM",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2443936530?tab=analysis&flip=true&move=087"
+      },
+      "2522749581": {
+        "opponent": {
+          "username": "chizhik98",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2522749581?tab=analysis&flip=true&move=079"
+      },
+      "2529832320": {
+        "opponent": {
+          "username": "NguyenXi",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2529832320?tab=analysis&flip=false&move=084"
+      },
+      "2539982250": {
+        "opponent": {
+          "username": "prepredeni",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2539982250?tab=analysis&flip=false&move=044"
+      },
+      "2593845743": {
+        "opponent": {
+          "username": "la_Vie_enrose",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2593845743?tab=analysis&flip=true&move=071"
+      },
+      "2787953701": {
+        "opponent": {
+          "username": "Rainmond",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2787953701?tab=analysis&flip=false&move=046"
+      },
+      "2894030245": {
+        "opponent": {
+          "username": "CMac214",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2894030245?tab=analysis&flip=true&move=057"
+      },
+      "2988629377": {
+        "opponent": {
+          "username": "KacperPolOK",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2988629377?tab=analysis&flip=false&move=088"
+      },
+      "3006769448": {
+        "opponent": {
+          "username": "Suren_Avetisyan",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3006769448?tab=analysis&flip=true&move=089"
+      },
+      "3034696891": {
+        "opponent": {
+          "username": "op99",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3034696891?tab=analysis&flip=false&move=038"
+      },
+      "3038037155": {
+        "opponent": {
+          "username": "Suomynoea",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3038037155?tab=analysis&flip=false&move=0112"
+      },
+      "3038075274": {
+        "opponent": {
+          "username": "RegretfulKnight",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3038075274?tab=analysis&flip=true&move=039"
+      },
+      "3088286589": {
+        "opponent": {
+          "username": "sh81",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3088286589?tab=analysis&flip=false&move=0148"
+      },
+      "3101970430": {
+        "opponent": {
+          "username": "ShadowGG1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3101970430?tab=analysis&flip=false&move=060"
+      },
+      "3124491929": {
+        "opponent": {
+          "username": "ShadowGG1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3124491929?tab=analysis&flip=false&move=030"
+      },
+      "3150553127": {
+        "opponent": {
+          "username": "DanielRensch",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3150553127?tab=analysis&flip=true&move=073"
+      },
+      "3183400450": {
+        "opponent": {
+          "username": "cool4chess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3183400450?tab=analysis&flip=false&move=044"
+      },
+      "3193365739": {
+        "opponent": {
+          "username": "cool4chess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3193365739?tab=analysis&flip=false&move=088"
+      },
+      "3206974178": {
+        "opponent": {
+          "username": "stevis5",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3206974178?tab=analysis&flip=false&move=066"
+      },
+      "3210190798": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3210190798?tab=analysis&flip=true&move=099"
+      },
+      "3221318500": {
+        "opponent": {
+          "username": "Antifish7",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3221318500?tab=analysis&flip=false&move=056"
+      },
+      "3347612603": {
+        "opponent": {
+          "username": "kevinboikshere",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3347612603?tab=analysis&flip=true&move=061"
+      },
+      "3358781856": {
+        "opponent": {
+          "username": "hanqi",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3358781856?tab=analysis&flip=true&move=087"
+      },
+      "3427297123": {
+        "opponent": {
+          "username": "DannyEcho",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3427297123?tab=analysis&flip=false&move=068"
+      },
+      "3427804332": {
+        "opponent": {
+          "username": "Zeralonde",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3427804332?tab=analysis&flip=true&move=063"
+      },
+      "3525040125": {
+        "opponent": {
+          "username": "Lying-Ted",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3525040125?tab=analysis&flip=true&move=083"
+      },
+      "3561923029": {
+        "opponent": {
+          "username": "Commander8565",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3561923029?tab=analysis&flip=false&move=086"
+      },
+      "4068102531": {
+        "opponent": {
+          "username": "econpower",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4068102531?tab=analysis&flip=false&move=078"
+      },
+      "4107999515": {
+        "opponent": {
+          "username": "juanrohl",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4107999515?tab=analysis&flip=false&move=056"
+      },
+      "4242119453": {
+        "opponent": {
+          "username": "SeltzerWaterBottle",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4242119453?tab=analysis&flip=false&move=0118"
+      },
+      "4270399777": {
+        "opponent": {
+          "username": "LePlusMortel",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4270399777?tab=analysis&flip=false&move=048"
+      },
+      "66854014229": {
+        "opponent": {
+          "username": "KHBR4",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/66854014229?tab=analysis&flip=false&move=088"
+      },
+      "64783422299": {
+        "opponent": {
+          "username": "Poniman1e",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/64783422299?tab=analysis&flip=true&move=075"
+      },
+      "51816587291": {
+        "opponent": {
+          "username": "FritzWalterSchach",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/51816587291?tab=analysis&flip=false&move=064"
+      },
+      "46526938131": {
+        "opponent": {
+          "username": "Biscuit",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/46526938131?tab=analysis&flip=true&move=081"
+      },
+      "46374532421": {
+        "opponent": {
+          "username": "ChessicallyInclined",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46374532421?tab=analysis&flip=true&move=091"
+      },
+      "44666973697": {
+        "opponent": {
+          "username": "BilicVladimir",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/44666973697?tab=analysis&flip=false&move=062"
+      },
+      "42768013431": {
+        "opponent": {
+          "username": "IAMELAD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/42768013431?tab=analysis&flip=true&move=061"
+      },
+      "40348789961": {
+        "opponent": {
+          "username": "Aleksei_Bykov",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/40348789961?tab=analysis&flip=true&move=057"
+      },
+      "34891881841": {
+        "opponent": {
+          "username": "RedDeath10",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/34891881841?tab=analysis&flip=false&move=098"
+      },
+      "31800019761": {
+        "opponent": {
+          "username": "iliachess2007",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/31800019761?tab=analysis&flip=true&move=095"
+      },
+      "15262433721": {
+        "opponent": {
+          "username": "Fantozzi86",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/15262433721?tab=analysis&flip=false&move=084"
+      },
+      "12336396759": {
+        "opponent": {
+          "username": "GamayevOleg",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12336396759?tab=analysis&flip=true&move=073"
+      },
+      "12324391491": {
+        "opponent": {
+          "username": "tda18",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/12324391491?tab=analysis&flip=true&move=089"
+      },
+      "11975023679": {
+        "opponent": {
+          "username": "CuzImBetter",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/11975023679?tab=analysis&flip=true&move=079"
+      },
+      "11282717627": {
+        "opponent": {
+          "username": "DylanJonz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/11282717627?tab=analysis&flip=true&move=065"
+      },
+      "10101061739": {
+        "opponent": {
+          "username": "MilosTB",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/10101061739?tab=analysis&flip=false&move=058"
+      },
+      "10077156495": {
+        "opponent": {
+          "username": "dacoooooo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/10077156495?tab=analysis&flip=false&move=046"
+      },
+      "9683771163": {
+        "opponent": {
+          "username": "warrior0506",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/9683771163?tab=analysis&flip=false&move=0118"
+      },
+      "9083801829": {
+        "opponent": {
+          "username": "Mango",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/9083801829?tab=analysis&flip=false&move=042"
+      },
+      "7691503455": {
+        "opponent": {
+          "username": "p_weaver",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/7691503455?tab=analysis&flip=true&move=059"
+      },
+      "6484203766": {
+        "opponent": {
+          "username": "chessmaxster1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6484203766?tab=analysis&flip=true&move=087"
+      },
+      "6399297532": {
+        "opponent": {
+          "username": "OneNightStanz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6399297532?tab=analysis&flip=true&move=045"
+      },
+      "6325808262": {
+        "opponent": {
+          "username": "Sanju_1996d-Incative",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6325808262?tab=analysis&flip=false&move=056"
+      },
+      "6195871286": {
+        "opponent": {
+          "username": "SinXyn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6195871286?tab=analysis&flip=true&move=0169"
+      },
+      "5956955472": {
+        "opponent": {
+          "username": "APSXeros",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5956955472?tab=analysis&flip=false&move=074"
+      },
+      "5919426279": {
+        "opponent": {
+          "username": "Jaaborok",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5919426279?tab=analysis&flip=false&move=070"
+      },
+      "5903362608": {
+        "opponent": {
+          "username": "DrPawn27",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5903362608?tab=analysis&flip=false&move=056"
+      },
+      "5902808933": {
+        "opponent": {
+          "username": "abdulhaseeb01",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5902808933?tab=analysis&flip=false&move=066"
+      },
+      "5821139902": {
+        "opponent": {
+          "username": "Alyaso",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5821139902?tab=analysis&flip=true&move=077"
+      },
+      "5797659280": {
+        "opponent": {
+          "username": "Y2King",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5797659280?tab=analysis&flip=true&move=063"
+      },
+      "5660381851": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660381851?tab=analysis&flip=false&move=096"
+      },
+      "5625099963": {
+        "opponent": {
+          "username": "MiningMathGamer",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5625099963?tab=analysis&flip=true&move=045"
+      },
+      "5621864029": {
+        "opponent": {
+          "username": "ClasbyD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5621864029?tab=analysis&flip=true&move=059"
+      },
+      "5620956637": {
+        "opponent": {
+          "username": "Maitreia",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5620956637?tab=analysis&flip=true&move=081"
+      },
+      "5586922976": {
+        "opponent": {
+          "username": "kontosnik",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5586922976?tab=analysis&flip=true&move=095"
+      },
+      "5547601642": {
+        "opponent": {
+          "username": "Unkreativ3",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5547601642?tab=analysis&flip=true&move=099"
+      },
+      "5516482561": {
+        "opponent": {
+          "username": "IMRosen",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5516482561?tab=analysis&flip=false&move=0150"
+      },
+      "5465734966": {
+        "opponent": {
+          "username": "Nor1lsk",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5465734966?tab=analysis&flip=true&move=027"
+      },
+      "5406747513": {
+        "opponent": {
+          "username": "kristofferSaltveit",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5406747513?tab=analysis&flip=false&move=060"
+      },
+      "5406419722": {
+        "opponent": {
+          "username": "camerondare",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5406419722?tab=analysis&flip=true&move=067"
+      },
+      "5388511213": {
+        "opponent": {
+          "username": "Kramich_Aliaksei",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5388511213?tab=analysis&flip=false&move=058"
+      },
+      "5259333477": {
+        "opponent": {
+          "username": "CoachJKane",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5259333477?tab=analysis&flip=false&move=088"
+      },
+      "5138230311": {
+        "opponent": {
+          "username": "EarniePaper",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5138230311?tab=analysis&flip=false&move=078"
+      },
+      "5026224865": {
+        "opponent": {
+          "username": "Rainz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5026224865?tab=analysis&flip=true&move=0105"
+      },
+      "5018499309": {
+        "opponent": {
+          "username": "Eterean",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5018499309?tab=analysis&flip=false&move=080"
+      },
+      "4991110570": {
+        "opponent": {
+          "username": "1nf3_0-2",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4991110570?tab=analysis&flip=true&move=0125"
+      },
+      "4988672711": {
+        "opponent": {
+          "username": "vprahara",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4988672711?tab=analysis&flip=true&move=079"
+      },
+      "4884682466": {
+        "opponent": {
+          "username": "infinite-student",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4884682466?tab=analysis&flip=true&move=0113"
+      },
+      "4884616969": {
+        "opponent": {
+          "username": "Lalarttu86",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4884616969?tab=analysis&flip=false&move=052"
+      },
+      "4776852373": {
+        "opponent": {
+          "username": "shrek4life02",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4776852373?tab=analysis&flip=false&move=060"
+      },
+      "4776806360": {
+        "opponent": {
+          "username": "shrek4life02",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4776806360?tab=analysis&flip=false&move=060"
+      },
+      "4646395129": {
+        "opponent": {
+          "username": "TheButcher",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4646395129?tab=analysis&flip=true&move=059"
+      },
+      "4588520543": {
+        "opponent": {
+          "username": "wong2011",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4588520543?tab=analysis&flip=false&move=050"
+      },
+      "4565644278": {
+        "opponent": {
+          "username": "vkc1865",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4565644278?tab=analysis&flip=true&move=049"
+      },
+      "4498487962": {
+        "opponent": {
+          "username": "GM_RobertoMogranzini",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4498487962?tab=analysis&flip=false&move=086"
+      },
+      "4483170470": {
+        "opponent": {
+          "username": "IMTominho",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4483170470?tab=analysis&flip=false&move=062"
+      },
+      "4470057483": {
+        "opponent": {
+          "username": "JulijanPlenca",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4470057483?tab=analysis&flip=false&move=082"
+      },
+      "4425783151": {
+        "opponent": {
+          "username": "nikola_stojsin",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4425783151?tab=analysis&flip=false&move=086"
+      },
+      "4383852133": {
+        "opponent": {
+          "username": "DanielNaroditsky",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4383852133?tab=analysis&flip=true&move=079"
+      }
+    },
+    "connectDiagonally:5": {
+      "1999080360": {
+        "opponent": {
+          "username": "SamF64",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/1999080360?tab=analysis&flip=true&move=075"
+      },
+      "2005727452": {
+        "opponent": {
+          "username": "BeneCyrill",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2005727452?tab=analysis&flip=false&move=020"
+      },
+      "2006127321": {
+        "opponent": {
+          "username": "Dhaydon19",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2006127321?tab=analysis&flip=true&move=023"
+      },
+      "2009297747": {
+        "opponent": {
+          "username": "MNVillanueva",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2009297747?tab=analysis&flip=false&move=054"
+      },
+      "2019717760": {
+        "opponent": {
+          "username": "123lt",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2019717760?tab=analysis&flip=true&move=055"
+      },
+      "2019815318": {
+        "opponent": {
+          "username": "Elgatillo7",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2019815318?tab=analysis&flip=false&move=024"
+      },
+      "2033015406": {
+        "opponent": {
+          "username": "Byniolus",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2033015406?tab=analysis&flip=false&move=022"
+      },
+      "2033297680": {
+        "opponent": {
+          "username": "MichaelBaron",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2033297680?tab=analysis&flip=false&move=026"
+      },
+      "2075935604": {
+        "opponent": {
+          "username": "Wormpaca",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2075935604?tab=analysis&flip=true&move=057"
+      },
+      "2077001570": {
+        "opponent": {
+          "username": "platy3",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2077001570?tab=analysis&flip=true&move=043"
+      },
+      "2118700953": {
+        "opponent": {
+          "username": "orestn",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2118700953?tab=analysis&flip=true&move=035"
+      },
+      "2136424966": {
+        "opponent": {
+          "username": "hugosoler",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2136424966?tab=analysis&flip=true&move=033"
+      },
+      "2289732454": {
+        "opponent": {
+          "username": "susanta70",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2289732454?tab=analysis&flip=true&move=031"
+      },
+      "2306202206": {
+        "opponent": {
+          "username": "Kirill_Klukin",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2306202206?tab=analysis&flip=false&move=018"
+      },
+      "2308315637": {
+        "opponent": {
+          "username": "APele",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2308315637?tab=analysis&flip=true&move=025"
+      },
+      "2308326780": {
+        "opponent": {
+          "username": "APele",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2308326780?tab=analysis&flip=false&move=014"
+      },
+      "2345422482": {
+        "opponent": {
+          "username": "Noukii",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2345422482?tab=analysis&flip=false&move=044"
+      },
+      "2416460045": {
+        "opponent": {
+          "username": "MasterLeif",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2416460045?tab=analysis&flip=false&move=038"
+      },
+      "2425865741": {
+        "opponent": {
+          "username": "jtayar88",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2425865741?tab=analysis&flip=false&move=024"
+      },
+      "2443926588": {
+        "opponent": {
+          "username": "seppecena",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2443926588?tab=analysis&flip=false&move=056"
+      },
+      "2459822856": {
+        "opponent": {
+          "username": "criistiianzapata",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2459822856?tab=analysis&flip=false&move=048"
+      },
+      "2479686112": {
+        "opponent": {
+          "username": "ChessPeople",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2479686112?tab=analysis&flip=false&move=050"
+      },
+      "2486425407": {
+        "opponent": {
+          "username": "Bubi6",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2486425407?tab=analysis&flip=false&move=036"
+      },
+      "2495286674": {
+        "opponent": {
+          "username": "Oneofmyturns",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2495286674?tab=analysis&flip=false&move=026"
+      },
+      "2501509241": {
+        "opponent": {
+          "username": "Pal2855",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2501509241?tab=analysis&flip=false&move=094"
+      },
+      "2502598158": {
+        "opponent": {
+          "username": "Micheliavelli",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2502598158?tab=analysis&flip=false&move=020"
+      },
+      "2509343981": {
+        "opponent": {
+          "username": "criistiianzapata",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2509343981?tab=analysis&flip=true&move=039"
+      },
+      "2518530819": {
+        "opponent": {
+          "username": "MFBorn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2518530819?tab=analysis&flip=true&move=039"
+      },
+      "2554745970": {
+        "opponent": {
+          "username": "ZapataCharlesS",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2554745970?tab=analysis&flip=true&move=099"
+      },
+      "2554941617": {
+        "opponent": {
+          "username": "amintabatabaei",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2554941617?tab=analysis&flip=false&move=050"
+      },
+      "2561883356": {
+        "opponent": {
+          "username": "Milber",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2561883356?tab=analysis&flip=false&move=024"
+      },
+      "2584975730": {
+        "opponent": {
+          "username": "muncettin",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2584975730?tab=analysis&flip=false&move=058"
+      },
+      "2588782796": {
+        "opponent": {
+          "username": "vitoria-gasteiz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2588782796?tab=analysis&flip=false&move=078"
+      },
+      "2737105194": {
+        "opponent": {
+          "username": "memer5334",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2737105194?tab=analysis&flip=true&move=047"
+      },
+      "2767416805": {
+        "opponent": {
+          "username": "djamir",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2767416805?tab=analysis&flip=false&move=060"
+      },
+      "2819486400": {
+        "opponent": {
+          "username": "MrBantz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2819486400?tab=analysis&flip=false&move=050"
+      },
+      "2828438496": {
+        "opponent": {
+          "username": "pultineviciuspaulius",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2828438496?tab=analysis&flip=true&move=047"
+      },
+      "2899367849": {
+        "opponent": {
+          "username": "killerayanda",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2899367849?tab=analysis&flip=false&move=060"
+      },
+      "2963657051": {
+        "opponent": {
+          "username": "peddleryumpi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2963657051?tab=analysis&flip=false&move=054"
+      },
+      "2995882563": {
+        "opponent": {
+          "username": "JohnnyDJ316",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2995882563?tab=analysis&flip=true&move=039"
+      },
+      "3006737438": {
+        "opponent": {
+          "username": "NTBT_DHS",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3006737438?tab=analysis&flip=false&move=018"
+      },
+      "3026910405": {
+        "opponent": {
+          "username": "Flippy130",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3026910405?tab=analysis&flip=false&move=046"
+      },
+      "3122997898": {
+        "opponent": {
+          "username": "Winchester64",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3122997898?tab=analysis&flip=false&move=044"
+      },
+      "3131029121": {
+        "opponent": {
+          "username": "chess_lover001",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3131029121?tab=analysis&flip=false&move=024"
+      },
+      "3146007094": {
+        "opponent": {
+          "username": "ChessicallyInclined",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3146007094?tab=analysis&flip=true&move=069"
+      },
+      "3169496520": {
+        "opponent": {
+          "username": "hallvardhf",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3169496520?tab=analysis&flip=true&move=043"
+      },
+      "3171772837": {
+        "opponent": {
+          "username": "profesordechess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3171772837?tab=analysis&flip=true&move=035"
+      },
+      "3193302481": {
+        "opponent": {
+          "username": "Zernix",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3193302481?tab=analysis&flip=true&move=039"
+      },
+      "3207156287": {
+        "opponent": {
+          "username": "Aculian",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3207156287?tab=analysis&flip=false&move=054"
+      },
+      "3215912627": {
+        "opponent": {
+          "username": "ISpiLLMyPee",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3215912627?tab=analysis&flip=false&move=052"
+      },
+      "3224970178": {
+        "opponent": {
+          "username": "DanielNaroditsky",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3224970178?tab=analysis&flip=false&move=042"
+      },
+      "3242601260": {
+        "opponent": {
+          "username": "thebeast23",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3242601260?tab=analysis&flip=false&move=052"
+      },
+      "3259667332": {
+        "opponent": {
+          "username": "Gr3egor",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3259667332?tab=analysis&flip=false&move=066"
+      },
+      "3277586632": {
+        "opponent": {
+          "username": "maalta7",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3277586632?tab=analysis&flip=true&move=065"
+      },
+      "3301702183": {
+        "opponent": {
+          "username": "Micki-taryan",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3301702183?tab=analysis&flip=false&move=052"
+      },
+      "3336374764": {
+        "opponent": {
+          "username": "Majesticness",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3336374764?tab=analysis&flip=false&move=032"
+      },
+      "3339798764": {
+        "opponent": {
+          "username": "Salem-AR",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3339798764?tab=analysis&flip=true&move=039"
+      },
+      "3347748711": {
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3347748711?tab=analysis&flip=false&move=024"
+      },
+      "3395629532": {
+        "opponent": {
+          "username": "JoseMaxin",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3395629532?tab=analysis&flip=true&move=027"
+      },
+      "3396386804": {
+        "opponent": {
+          "username": "Artur0208",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3396386804?tab=analysis&flip=true&move=043"
+      },
+      "3422596385": {
+        "opponent": {
+          "username": "rabbiteUK",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3422596385?tab=analysis&flip=true&move=049"
+      },
+      "3537781120": {
+        "opponent": {
+          "username": "WinningPokerHUD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3537781120?tab=analysis&flip=false&move=038"
+      },
+      "3828189653": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3828189653?tab=analysis&flip=false&move=076"
+      },
+      "4031335828": {
+        "opponent": {
+          "username": "Agent-JL",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4031335828?tab=analysis&flip=true&move=065"
+      },
+      "4059585032": {
+        "opponent": {
+          "username": "ericcharnesky",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4059585032?tab=analysis&flip=false&move=046"
+      },
+      "4067937605": {
+        "opponent": {
+          "username": "Anatolypascua999",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4067937605?tab=analysis&flip=false&move=050"
+      },
+      "4105283723": {
+        "opponent": {
+          "username": "Ostrovskiy-Marshalls",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4105283723?tab=analysis&flip=false&move=064"
+      },
+      "4127906531": {
+        "opponent": {
+          "username": "riconaipe",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4127906531?tab=analysis&flip=true&move=069"
+      },
+      "63767455279": {
+        "opponent": {
+          "username": "ChesssKnock",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/63767455279?tab=analysis&flip=true&move=051"
+      },
+      "59606360413": {
+        "opponent": {
+          "username": "BrilliantPenguin",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/59606360413?tab=analysis&flip=true&move=013"
+      },
+      "58656071651": {
+        "opponent": {
+          "username": "AsaHoffmann",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/58656071651?tab=analysis&flip=true&move=063"
+      },
+      "54578946571": {
+        "opponent": {
+          "username": "elisak43",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/54578946571?tab=analysis&flip=true&move=055"
+      },
+      "53971741381": {
+        "opponent": {
+          "username": "adapodadei",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/53971741381?tab=analysis&flip=true&move=035"
+      },
+      "52703356317": {
+        "opponent": {
+          "username": "Muradore",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/52703356317?tab=analysis&flip=false&move=048"
+      },
+      "47242887377": {
+        "opponent": {
+          "username": "bobbarker951",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/47242887377?tab=analysis&flip=false&move=074"
+      },
+      "43284544357": {
+        "opponent": {
+          "username": "KNVB",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/43284544357?tab=analysis&flip=true&move=075"
+      },
+      "42769167627": {
+        "opponent": {
+          "username": "wwgmlgmaster",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/42769167627?tab=analysis&flip=true&move=029"
+      },
+      "35156203839": {
+        "opponent": {
+          "username": "Aborigen_came",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/35156203839?tab=analysis&flip=false&move=034"
+      },
+      "30220827351": {
+        "opponent": {
+          "username": "GM_dmitrij",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/30220827351?tab=analysis&flip=false&move=030"
+      },
+      "22896625765": {
+        "opponent": {
+          "username": "IHateRookA4",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/22896625765?tab=analysis&flip=false&move=064"
+      },
+      "22276138155": {
+        "opponent": {
+          "username": "MrKingQueen",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/22276138155?tab=analysis&flip=true&move=031"
+      },
+      "16750528769": {
+        "opponent": {
+          "username": "rychessmaster1",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/16750528769?tab=analysis&flip=false&move=080"
+      },
+      "13996951513": {
+        "opponent": {
+          "username": "FritziSchach_Twitch",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/13996951513?tab=analysis&flip=true&move=033"
+      },
+      "13707198811": {
+        "opponent": {
+          "username": "EmbarrassmentSon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/13707198811?tab=analysis&flip=true&move=033"
+      },
+      "13640533451": {
+        "opponent": {
+          "username": "Tapuah",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/13640533451?tab=analysis&flip=true&move=049"
+      },
+      "13401067073": {
+        "opponent": {
+          "username": "Leon-Black",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/13401067073?tab=analysis&flip=true&move=033"
+      },
+      "12202643551": {
+        "opponent": {
+          "username": "Aliencowboy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12202643551?tab=analysis&flip=false&move=060"
+      },
+      "9240265033": {
+        "opponent": {
+          "username": "arminmusovic",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/9240265033?tab=analysis&flip=false&move=034"
+      },
+      "8873243935": {
+        "opponent": {
+          "username": "Tornesi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/8873243935?tab=analysis&flip=true&move=087"
+      },
+      "8723141481": {
+        "opponent": {
+          "username": "Mr_Penings",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8723141481?tab=analysis&flip=true&move=071"
+      },
+      "8487790505": {
+        "opponent": {
+          "username": "superchess02",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8487790505?tab=analysis&flip=false&move=032"
+      },
+      "8090648849": {
+        "opponent": {
+          "username": "SzMM19",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8090648849?tab=analysis&flip=true&move=069"
+      },
+      "7692706683": {
+        "opponent": {
+          "username": "eap2143",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/7692706683?tab=analysis&flip=false&move=044"
+      },
+      "6497899883": {
+        "opponent": {
+          "username": "GoltsevDmitry2000",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6497899883?tab=analysis&flip=false&move=030"
+      },
+      "6264793793": {
+        "opponent": {
+          "username": "jetblueee",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6264793793?tab=analysis&flip=false&move=040"
+      },
+      "6162225026": {
+        "opponent": {
+          "username": "dhruv_dy",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6162225026?tab=analysis&flip=false&move=044"
+      },
+      "6106200397": {
+        "opponent": {
+          "username": "Farzadzahedi28",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6106200397?tab=analysis&flip=true&move=029"
+      },
+      "5998821180": {
+        "opponent": {
+          "username": "Phriex",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5998821180?tab=analysis&flip=true&move=045"
+      },
+      "5870195024": {
+        "opponent": {
+          "username": "tacticbot1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5870195024?tab=analysis&flip=true&move=049"
+      },
+      "5670696758": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5670696758?tab=analysis&flip=true&move=025"
+      },
+      "5660288271": {
+        "opponent": {
+          "username": "Salem-AR",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660288271?tab=analysis&flip=true&move=025"
+      },
+      "5644014381": {
+        "opponent": {
+          "username": "FCChelsea14",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5644014381?tab=analysis&flip=false&move=064"
+      },
+      "5607979452": {
+        "opponent": {
+          "username": "Riley",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5607979452?tab=analysis&flip=true&move=063"
+      },
+      "5587014014": {
+        "opponent": {
+          "username": "amintabatabaei",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5587014014?tab=analysis&flip=true&move=063"
+      },
+      "5459076638": {
+        "opponent": {
+          "username": "vlad_Sid",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5459076638?tab=analysis&flip=false&move=070"
+      },
+      "5279676444": {
+        "opponent": {
+          "username": "Abood_Sari",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5279676444?tab=analysis&flip=true&move=041"
+      },
+      "5092822194": {
+        "opponent": {
+          "username": "canwedoit",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5092822194?tab=analysis&flip=true&move=091"
+      },
+      "4992501689": {
+        "opponent": {
+          "username": "mat_kolosowski",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4992501689?tab=analysis&flip=true&move=031"
+      },
+      "4885201908": {
+        "opponent": {
+          "username": "chessonado",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4885201908?tab=analysis&flip=false&move=036"
+      },
+      "4732319609": {
+        "opponent": {
+          "username": "DanielMieles1985",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4732319609?tab=analysis&flip=false&move=068"
+      },
+      "4732313250": {
+        "opponent": {
+          "username": "DanielMieles1985",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4732313250?tab=analysis&flip=true&move=029"
+      },
+      "4659194796": {
+        "opponent": {
+          "username": "Schwarzschidl",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4659194796?tab=analysis&flip=false&move=026"
+      },
+      "4642437176": {
+        "opponent": {
+          "username": "BM_on_ICC",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4642437176?tab=analysis&flip=true&move=025"
+      },
+      "4481740229": {
+        "opponent": {
+          "username": "Poccinator",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4481740229?tab=analysis&flip=true&move=049"
+      },
+      "4412551641": {
+        "opponent": {
+          "username": "Zubrrr",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4412551641?tab=analysis&flip=false&move=042"
+      },
+      "4382110113": {
+        "opponent": {
+          "username": "TomasKapitanchuk",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4382110113?tab=analysis&flip=true&move=053"
+      },
+      "4382101494": {
+        "opponent": {
+          "username": "Tonisub",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4382101494?tab=analysis&flip=false&move=026"
+      }
+    },
+    "lefongTrap": {
+      "2988741974": {
+        "opponent": {
+          "username": "DanielNaroditsky",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2988741974?tab=analysis&flip=false&move=01"
+      },
+      "2993613796": {
+        "opponent": {
+          "username": "metra93",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2993613796?tab=analysis&flip=true&move=02"
+      },
+      "3064014884": {
+        "opponent": {
+          "username": "Jovencitos33",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3064014884?tab=analysis&flip=false&move=03"
+      },
+      "3073588526": {
+        "opponent": {
+          "username": "Tigr86",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3073588526?tab=analysis&flip=false&move=03"
+      },
+      "3113899824": {
+        "opponent": {
+          "username": "ERG62",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3113899824?tab=analysis&flip=true&move=04"
+      },
+      "3127579180": {
+        "opponent": {
+          "username": "panicOttack",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3127579180?tab=analysis&flip=false&move=01"
+      },
+      "3127667286": {
+        "opponent": {
+          "username": "DesEsseintes",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3127667286?tab=analysis&flip=false&move=01"
+      },
+      "3127687517": {
+        "opponent": {
+          "username": "GMBenjaminFinegold",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3127687517?tab=analysis&flip=false&move=01"
+      },
+      "3127698528": {
+        "opponent": {
+          "username": "GMBenjaminFinegold",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3127698528?tab=analysis&flip=false&move=01"
+      },
+      "3139066953": {
+        "opponent": {
+          "username": "want2lose",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3139066953?tab=analysis&flip=false&move=05"
+      },
+      "3139069463": {
+        "opponent": {
+          "username": "want2lose",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3139069463?tab=analysis&flip=false&move=09"
+      },
+      "3141385491": {
+        "opponent": {
+          "username": "deusacn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3141385491?tab=analysis&flip=false&move=01"
+      },
+      "3141387543": {
+        "opponent": {
+          "username": "deusacn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3141387543?tab=analysis&flip=false&move=01"
+      },
+      "3143060468": {
+        "opponent": {
+          "username": "michaelq2d5",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3143060468?tab=analysis&flip=false&move=01"
+      },
+      "3145764742": {
+        "opponent": {
+          "username": "justantan",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3145764742?tab=analysis&flip=false&move=01"
+      },
+      "3148515294": {
+        "opponent": {
+          "username": "NowayJosey",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3148515294?tab=analysis&flip=false&move=05"
+      },
+      "3171859279": {
+        "opponent": {
+          "username": "cute_bunny95",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3171859279?tab=analysis&flip=true&move=06"
+      },
+      "3179115550": {
+        "opponent": {
+          "username": "fiostone",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3179115550?tab=analysis&flip=false&move=07"
+      },
+      "3188172708": {
+        "opponent": {
+          "username": "Myotic",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3188172708?tab=analysis&flip=false&move=01"
+      },
+      "3207156287": {
+        "opponent": {
+          "username": "Aculian",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3207156287?tab=analysis&flip=false&move=07"
+      },
+      "3222269636": {
+        "opponent": {
+          "username": "ichiban-misaka-simp",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3222269636?tab=analysis&flip=false&move=013"
+      },
+      "3232252963": {
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3232252963?tab=analysis&flip=false&move=03"
+      },
+      "3237132046": {
+        "opponent": {
+          "username": "joppie2",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3237132046?tab=analysis&flip=true&move=02"
+      },
+      "3260606095": {
+        "opponent": {
+          "username": "Tsoi_Dima",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3260606095?tab=analysis&flip=false&move=09"
+      },
+      "3268628192": {
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3268628192?tab=analysis&flip=false&move=01"
+      },
+      "3268641631": {
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3268641631?tab=analysis&flip=false&move=01"
+      },
+      "3270034509": {
+        "opponent": {
+          "username": "CaptainCasanova",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3270034509?tab=analysis&flip=false&move=01"
+      },
+      "3323521986": {
+        "opponent": {
+          "username": "Witik",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3323521986?tab=analysis&flip=false&move=01"
+      },
+      "3457769531": {
+        "opponent": {
+          "username": "Wandregisel",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3457769531?tab=analysis&flip=true&move=02"
+      },
+      "3627665248": {
+        "opponent": {
+          "username": "przemekpiotrowski",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3627665248?tab=analysis&flip=false&move=01"
+      },
+      "3627679572": {
+        "opponent": {
+          "username": "przemekpiotrowski",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3627679572?tab=analysis&flip=true&move=04"
+      },
+      "4068099501": {
+        "opponent": {
+          "username": "econpower",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4068099501?tab=analysis&flip=false&move=01"
+      },
+      "4270387516": {
+        "opponent": {
+          "username": "IMTominho",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4270387516?tab=analysis&flip=true&move=02"
+      },
+      "63222416407": {
+        "opponent": {
+          "username": "GUST_b",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/63222416407?tab=analysis&flip=false&move=01"
+      },
+      "8955958701": {
+        "opponent": {
+          "username": "Never_walk_alone",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/8955958701?tab=analysis&flip=false&move=05"
+      },
+      "5621909226": {
+        "opponent": {
+          "username": "ClasbyD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5621909226?tab=analysis&flip=false&move=03"
+      },
+      "5616971035": {
+        "opponent": {
+          "username": "Angry_Twin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5616971035?tab=analysis&flip=false&move=017"
+      },
+      "4980680922": {
+        "opponent": {
+          "username": "Soham0705",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4980680922?tab=analysis&flip=false&move=03"
+      },
+      "4816754872": {
+        "opponent": {
+          "username": "Agent-JL",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4816754872?tab=analysis&flip=true&move=06"
+      },
+      "4732399186": {
+        "opponent": {
+          "username": "mmmflatbread",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4732399186?tab=analysis&flip=true&move=012"
+      }
+    },
+    "clutchPawn": {
+      "2006011546": {
+        "opponent": {
+          "username": "IamSchrodingersCat",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2006011546?tab=analysis&flip=true&move=0107"
+      },
+      "2006120943": {
+        "opponent": {
+          "username": "Dhaydon19",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2006120943?tab=analysis&flip=false&move=0116"
+      },
+      "3167161309": {
+        "opponent": {
+          "username": "chessgirl94",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3167161309?tab=analysis&flip=false&move=0122"
+      },
+      "3167300024": {
+        "opponent": {
+          "username": "KNVB",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3167300024?tab=analysis&flip=false&move=0160"
+      },
+      "3170884326": {
+        "opponent": {
+          "username": "elm2007",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3170884326?tab=analysis&flip=true&move=0115"
+      },
+      "3260452246": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3260452246?tab=analysis&flip=false&move=0102"
+      },
+      "3268649059": {
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3268649059?tab=analysis&flip=false&move=092"
+      },
+      "3395635258": {
+        "opponent": {
+          "username": "chuddog",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3395635258?tab=analysis&flip=false&move=0120"
+      },
+      "62959761125": {
+        "opponent": {
+          "username": "ChessWeebs",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/62959761125?tab=analysis&flip=false&move=0188"
+      },
+      "62093984743": {
+        "opponent": {
+          "username": "Aborigen_came",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/62093984743?tab=analysis&flip=false&move=0132"
+      },
+      "5704028767": {
+        "opponent": {
+          "username": "Emeraldddd",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5704028767?tab=analysis&flip=false&move=0104"
+      },
+      "5660864213": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660864213?tab=analysis&flip=true&move=095"
+      },
+      "5660299001": {
+        "opponent": {
+          "username": "Salem-AR",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660299001?tab=analysis&flip=true&move=079"
+      },
+      "5621914537": {
+        "opponent": {
+          "username": "ClasbyD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5621914537?tab=analysis&flip=true&move=0127"
+      },
+      "5461129029": {
+        "opponent": {
+          "username": "Evandro_Barbosa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5461129029?tab=analysis&flip=true&move=0157"
+      },
+      "5279665006": {
+        "opponent": {
+          "username": "Ryan_426",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5279665006?tab=analysis&flip=false&move=0102"
+      },
+      "5279482715": {
+        "opponent": {
+          "username": "Rakesh",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5279482715?tab=analysis&flip=true&move=0113"
+      },
+      "4821118087": {
+        "opponent": {
+          "username": "HansCoolNiemann",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4821118087?tab=analysis&flip=true&move=0133"
+      },
+      "4775289726": {
+        "opponent": {
+          "username": "user238947239473295725",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4775289726?tab=analysis&flip=true&move=0121"
+      },
+      "4398402554": {
+        "opponent": {
+          "username": "grunge_rock",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4398402554?tab=analysis&flip=false&move=0122"
+      },
+      "4385351584": {
+        "opponent": {
+          "username": "Joshukid",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4385351584?tab=analysis&flip=true&move=0133"
+      },
+      "4356331677": {
+        "opponent": {
+          "username": "P-E-T-R-0",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4356331677?tab=analysis&flip=false&move=0138"
+      }
+    },
+    "pawnCube": {
+      "2915141636": {
+        "opponent": {
+          "username": "Fins0905",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2915141636?tab=analysis&flip=true&move=031"
+      },
+      "2993040487": {
+        "opponent": {
+          "username": "PaulfromSPb",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2993040487?tab=analysis&flip=true&move=023"
+      },
+      "3152918504": {
+        "opponent": {
+          "username": "Clown1985",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3152918504?tab=analysis&flip=true&move=033"
+      },
+      "3206987239": {
+        "opponent": {
+          "username": "newsuperjimmy",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3206987239?tab=analysis&flip=true&move=043"
+      },
+      "3422643143": {
+        "opponent": {
+          "username": "morfius",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3422643143?tab=analysis&flip=true&move=029"
+      },
+      "62093984743": {
+        "opponent": {
+          "username": "Aborigen_came",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/62093984743?tab=analysis&flip=false&move=026"
+      },
+      "46015749669": {
+        "opponent": {
+          "username": "MartinNeu",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46015749669?tab=analysis&flip=true&move=043"
+      },
+      "24196662973": {
+        "opponent": {
+          "username": "IMExcellent",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/24196662973?tab=analysis&flip=true&move=031"
+      },
+      "12976469745": {
+        "opponent": {
+          "username": "just_business",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12976469745?tab=analysis&flip=true&move=031"
+      },
+      "11983372961": {
+        "opponent": {
+          "username": "Bubi6",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/11983372961?tab=analysis&flip=true&move=027"
+      },
+      "11223183547": {
+        "opponent": {
+          "username": "DEARMIKE",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/11223183547?tab=analysis&flip=true&move=029"
+      },
+      "7660389163": {
+        "opponent": {
+          "username": "Petriashvili02",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/7660389163?tab=analysis&flip=true&move=025"
+      },
+      "6555342420": {
+        "opponent": {
+          "username": "Bernd_Stromberg",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6555342420?tab=analysis&flip=true&move=031"
+      },
+      "5854614009": {
+        "opponent": {
+          "username": "rabbiteUK",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5854614009?tab=analysis&flip=true&move=043"
+      },
+      "5638933092": {
+        "opponent": {
+          "username": "Selendic_Ivan95",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5638933092?tab=analysis&flip=true&move=025"
+      },
+      "5601665402": {
+        "opponent": {
+          "username": "Schberg",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5601665402?tab=analysis&flip=true&move=033"
+      },
+      "5348390207": {
+        "opponent": {
+          "username": "JakubPulpan",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5348390207?tab=analysis&flip=false&move=026"
+      },
+      "5279638116": {
+        "opponent": {
+          "username": "Krantss",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5279638116?tab=analysis&flip=true&move=035"
+      },
+      "4743288058": {
+        "opponent": {
+          "username": "realmadridfc123",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4743288058?tab=analysis&flip=true&move=025"
+      }
+    },
+    "stalemateTricks": {
+      "2007384705": {
+        "opponent": {
+          "username": "DrMelekess",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2007384705?tab=analysis&flip=true&move=0116"
+      },
+      "2022329186": {
+        "opponent": {
+          "username": "Byniolus",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2022329186?tab=analysis&flip=false&move=0127"
+      },
+      "2155308687": {
+        "opponent": {
+          "username": "hurricane7791",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2155308687?tab=analysis&flip=true&move=0150"
+      },
+      "2308309600": {
+        "opponent": {
+          "username": "APele",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2308309600?tab=analysis&flip=true&move=0118"
+      },
+      "2405247880": {
+        "opponent": {
+          "username": "Muradore",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2405247880?tab=analysis&flip=true&move=0100"
+      },
+      "2409000974": {
+        "opponent": {
+          "username": "kumaranbalaji98",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2409000974?tab=analysis&flip=false&move=0113"
+      },
+      "2415456293": {
+        "opponent": {
+          "username": "bobkaki",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2415456293?tab=analysis&flip=true&move=0112"
+      },
+      "2419015753": {
+        "opponent": {
+          "username": "sergoy",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2419015753?tab=analysis&flip=false&move=0129"
+      },
+      "2420910386": {
+        "opponent": {
+          "username": "Simon_1986",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2420910386?tab=analysis&flip=true&move=098"
+      },
+      "2422215050": {
+        "opponent": {
+          "username": "NIGWAPO",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2422215050?tab=analysis&flip=true&move=0116"
+      },
+      "2436117234": {
+        "opponent": {
+          "username": "fianchettoer",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2436117234?tab=analysis&flip=true&move=0158"
+      },
+      "2509603558": {
+        "opponent": {
+          "username": "SaySpade4VIP",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2509603558?tab=analysis&flip=false&move=0107"
+      },
+      "2554748888": {
+        "opponent": {
+          "username": "GoodMedicine",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2554748888?tab=analysis&flip=true&move=0140"
+      },
+      "2749429643": {
+        "opponent": {
+          "username": "Bikfoot",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2749429643?tab=analysis&flip=true&move=0120"
+      },
+      "2754832646": {
+        "opponent": {
+          "username": "penguingm1",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2754832646?tab=analysis&flip=true&move=0144"
+      },
+      "2944298658": {
+        "opponent": {
+          "username": "TampaChess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2944298658?tab=analysis&flip=true&move=0132"
+      },
+      "2978556733": {
+        "opponent": {
+          "username": "josiwales",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2978556733?tab=analysis&flip=true&move=086"
+      },
+      "2993526735": {
+        "opponent": {
+          "username": "MasterLeif",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2993526735?tab=analysis&flip=true&move=0130"
+      },
+      "3000082170": {
+        "opponent": {
+          "username": "ChessicallyInclined",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3000082170?tab=analysis&flip=true&move=088"
+      },
+      "3031072849": {
+        "opponent": {
+          "username": "StealthNight",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3031072849?tab=analysis&flip=false&move=0131"
+      },
+      "3123058984": {
+        "opponent": {
+          "username": "Tpros",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3123058984?tab=analysis&flip=false&move=0123"
+      },
+      "3141476524": {
+        "opponent": {
+          "username": "adypady02",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3141476524?tab=analysis&flip=false&move=0131"
+      },
+      "3143157627": {
+        "opponent": {
+          "username": "TrimitziosP7",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3143157627?tab=analysis&flip=true&move=080"
+      },
+      "3143160320": {
+        "opponent": {
+          "username": "TrimitziosP7",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3143160320?tab=analysis&flip=false&move=0107"
+      },
+      "3145486524": {
+        "opponent": {
+          "username": "ChessicallyInclined",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3145486524?tab=analysis&flip=true&move=0150"
+      },
+      "3148404072": {
+        "opponent": {
+          "username": "UshkoTheBear",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3148404072?tab=analysis&flip=false&move=0179"
+      },
+      "3157109428": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3157109428?tab=analysis&flip=false&move=097"
+      },
+      "3168615958": {
+        "opponent": {
+          "username": "MasterLeif",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3168615958?tab=analysis&flip=true&move=0154"
+      },
+      "3179118047": {
+        "opponent": {
+          "username": "fiostone",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3179118047?tab=analysis&flip=false&move=099"
+      },
+      "3183085152": {
+        "opponent": {
+          "username": "YOAJM",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3183085152?tab=analysis&flip=true&move=0152"
+      },
+      "3197071862": {
+        "opponent": {
+          "username": "Judas_Priest",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3197071862?tab=analysis&flip=true&move=0144"
+      },
+      "3206607452": {
+        "opponent": {
+          "username": "michaelq2d5",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3206607452?tab=analysis&flip=true&move=096"
+      },
+      "3246891875": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3246891875?tab=analysis&flip=true&move=0158"
+      },
+      "3326541278": {
+        "opponent": {
+          "username": "bocah_sakit",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3326541278?tab=analysis&flip=false&move=091"
+      },
+      "3347772815": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3347772815?tab=analysis&flip=true&move=0108"
+      },
+      "3396414256": {
+        "opponent": {
+          "username": "NTBT_DHS",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3396414256?tab=analysis&flip=true&move=0110"
+      },
+      "3433729709": {
+        "opponent": {
+          "username": "littleplotkin",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3433729709?tab=analysis&flip=true&move=0112"
+      },
+      "4127894212": {
+        "opponent": {
+          "username": "riconaipe",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4127894212?tab=analysis&flip=true&move=0130"
+      },
+      "4139062228": {
+        "opponent": {
+          "username": "morphy1949",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4139062228?tab=analysis&flip=true&move=0122"
+      },
+      "4242087176": {
+        "opponent": {
+          "username": "SeltzerWaterBottle",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4242087176?tab=analysis&flip=false&move=0141"
+      },
+      "60282673819": {
+        "opponent": {
+          "username": "BilicVladimir",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/60282673819?tab=analysis&flip=true&move=0120"
+      },
+      "52158046263": {
+        "opponent": {
+          "username": "Legendinunknown",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/52158046263?tab=analysis&flip=true&move=0146"
+      },
+      "51544786289": {
+        "opponent": {
+          "username": "knightmare7724",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/51544786289?tab=analysis&flip=true&move=0158"
+      },
+      "46373454141": {
+        "opponent": {
+          "username": "ChessicallyInclined",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46373454141?tab=analysis&flip=true&move=0110"
+      },
+      "45523287421": {
+        "opponent": {
+          "username": "Fengyun",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/45523287421?tab=analysis&flip=false&move=0143"
+      },
+      "44233505471": {
+        "opponent": {
+          "username": "Aborigen_came",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/44233505471?tab=analysis&flip=false&move=0153"
+      },
+      "41891968547": {
+        "opponent": {
+          "username": "lukas_111111",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/41891968547?tab=analysis&flip=true&move=0118"
+      },
+      "40231771991": {
+        "opponent": {
+          "username": "Anonimooose",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/40231771991?tab=analysis&flip=false&move=0137"
+      },
+      "25032714201": {
+        "opponent": {
+          "username": "Nf3c5",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/25032714201?tab=analysis&flip=false&move=0157"
+      },
+      "14055192701": {
+        "opponent": {
+          "username": "meafsdafs_scrambled",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/14055192701?tab=analysis&flip=true&move=0170"
+      },
+      "13996354305": {
+        "opponent": {
+          "username": "Boorchess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/13996354305?tab=analysis&flip=true&move=0126"
+      },
+      "12319649291": {
+        "opponent": {
+          "username": "serhanberat_ozdemir",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12319649291?tab=analysis&flip=false&move=0167"
+      },
+      "10508816633": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/10508816633?tab=analysis&flip=true&move=0134"
+      },
+      "10433320539": {
+        "opponent": {
+          "username": "MrKooshaChess_Twitch",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/10433320539?tab=analysis&flip=false&move=0103"
+      },
+      "7671136523": {
+        "opponent": {
+          "username": "Tatiana_and_Sergey",
+          "title": "WIM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/7671136523?tab=analysis&flip=true&move=0140"
+      },
+      "6507206615": {
+        "opponent": {
+          "username": "Mouse-Sleep",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6507206615?tab=analysis&flip=true&move=096"
+      },
+      "6437861341": {
+        "opponent": {
+          "username": "RedPanda1705",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6437861341?tab=analysis&flip=true&move=0156"
+      },
+      "6381192607": {
+        "opponent": {
+          "username": "fviana",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6381192607?tab=analysis&flip=true&move=0132"
+      },
+      "6368571352": {
+        "opponent": {
+          "username": "Loudian",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6368571352?tab=analysis&flip=true&move=0174"
+      },
+      "6244786077": {
+        "opponent": {
+          "username": "Time2Pretend",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6244786077?tab=analysis&flip=false&move=0165"
+      },
+      "6226203481": {
+        "opponent": {
+          "username": "GMCanty",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6226203481?tab=analysis&flip=false&move=0139"
+      },
+      "6205861029": {
+        "opponent": {
+          "username": "idiot-in-disguise",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6205861029?tab=analysis&flip=true&move=0116"
+      },
+      "5999178529": {
+        "opponent": {
+          "username": "Phriex",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5999178529?tab=analysis&flip=false&move=0143"
+      },
+      "5998727621": {
+        "opponent": {
+          "username": "Phriex",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5998727621?tab=analysis&flip=true&move=0114"
+      },
+      "5850630487": {
+        "opponent": {
+          "username": "KindaPinkJake",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5850630487?tab=analysis&flip=false&move=0141"
+      },
+      "5772796637": {
+        "opponent": {
+          "username": "DanielRensch",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5772796637?tab=analysis&flip=false&move=0101"
+      },
+      "5660395836": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660395836?tab=analysis&flip=true&move=0140"
+      },
+      "5636498352": {
+        "opponent": {
+          "username": "Until-Next-Time",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5636498352?tab=analysis&flip=false&move=0115"
+      },
+      "5617028770": {
+        "opponent": {
+          "username": "Riley",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5617028770?tab=analysis&flip=false&move=0113"
+      },
+      "5605749395": {
+        "opponent": {
+          "username": "Aakash-Dalvi7",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5605749395?tab=analysis&flip=true&move=0148"
+      },
+      "5570234884": {
+        "opponent": {
+          "username": "fm_magua",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5570234884?tab=analysis&flip=true&move=0128"
+      },
+      "5533730569": {
+        "opponent": {
+          "username": "ShahMatKanal",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5533730569?tab=analysis&flip=false&move=0143"
+      },
+      "5519463442": {
+        "opponent": {
+          "username": "Pultis",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5519463442?tab=analysis&flip=false&move=0121"
+      },
+      "5254565497": {
+        "opponent": {
+          "username": "aleksa74",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5254565497?tab=analysis&flip=true&move=0130"
+      },
+      "5168741720": {
+        "opponent": {
+          "username": "ChelsieMonica",
+          "title": "WIM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5168741720?tab=analysis&flip=false&move=0127"
+      },
+      "4781462169": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4781462169?tab=analysis&flip=false&move=0103"
+      },
+      "4367726730": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4367726730?tab=analysis&flip=true&move=0104"
+      }
+    },
+    "alphabet:egg": {
+      "1996259836": {
+        "opponent": {
+          "username": "NhatAnh11",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/1996259836?tab=analysis&flip=true&move=05"
+      },
+      "1999058634": {
+        "opponent": {
+          "username": "Tyoma88888",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/1999058634?tab=analysis&flip=true&move=05"
+      },
+      "2005688490": {
+        "opponent": {
+          "username": "IMcoach",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2005688490?tab=analysis&flip=true&move=05"
+      },
+      "2005863064": {
+        "opponent": {
+          "username": "seppecena",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2005863064?tab=analysis&flip=true&move=05"
+      },
+      "2006055260": {
+        "opponent": {
+          "username": "IamSchrodingersCat",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2006055260?tab=analysis&flip=true&move=05"
+      },
+      "2014365430": {
+        "opponent": {
+          "username": "MaksymBoldysh",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2014365430?tab=analysis&flip=true&move=05"
+      },
+      "2014377543": {
+        "opponent": {
+          "username": "MaksymBoldysh",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2014377543?tab=analysis&flip=true&move=05"
+      },
+      "2019887447": {
+        "opponent": {
+          "username": "seppecena",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2019887447?tab=analysis&flip=true&move=05"
+      },
+      "2021304966": {
+        "opponent": {
+          "username": "pKiLz5Rn9b",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2021304966?tab=analysis&flip=true&move=05"
+      },
+      "2027319096": {
+        "opponent": {
+          "username": "Tolya2",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2027319096?tab=analysis&flip=true&move=05"
+      },
+      "2031377263": {
+        "opponent": {
+          "username": "spectralsoul",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2031377263?tab=analysis&flip=true&move=05"
+      },
+      "2033040040": {
+        "opponent": {
+          "username": "DrVelja",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2033040040?tab=analysis&flip=true&move=05"
+      },
+      "2033303557": {
+        "opponent": {
+          "username": "MichaelBaron",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2033303557?tab=analysis&flip=true&move=05"
+      },
+      "2049846082": {
+        "opponent": {
+          "username": "bugsbunny444",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2049846082?tab=analysis&flip=true&move=05"
+      },
+      "2056853964": {
+        "opponent": {
+          "username": "ipad101568",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2056853964?tab=analysis&flip=true&move=05"
+      },
+      "2075963784": {
+        "opponent": {
+          "username": "LikeWater",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2075963784?tab=analysis&flip=true&move=05"
+      },
+      "2095844422": {
+        "opponent": {
+          "username": "Phyros",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2095844422?tab=analysis&flip=true&move=05"
+      },
+      "2152980223": {
+        "opponent": {
+          "username": "gm_aag",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2152980223?tab=analysis&flip=true&move=05"
+      },
+      "2153702295": {
+        "opponent": {
+          "username": "SuicidalTendencies",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2153702295?tab=analysis&flip=true&move=05"
+      },
+      "2155302608": {
+        "opponent": {
+          "username": "hurricane7791",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2155302608?tab=analysis&flip=true&move=05"
+      },
+      "2292909228": {
+        "opponent": {
+          "username": "timator",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2292909228?tab=analysis&flip=true&move=05"
+      },
+      "2292915408": {
+        "opponent": {
+          "username": "pultineviciuspaulius",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2292915408?tab=analysis&flip=true&move=05"
+      },
+      "2407691893": {
+        "opponent": {
+          "username": "Alexanderatack",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2407691893?tab=analysis&flip=true&move=05"
+      },
+      "2420830955": {
+        "opponent": {
+          "username": "pultineviciuspaulius",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2420830955?tab=analysis&flip=true&move=05"
+      },
+      "2514922164": {
+        "opponent": {
+          "username": "KhazarBabazada",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2514922164?tab=analysis&flip=true&move=05"
+      },
+      "2514925518": {
+        "opponent": {
+          "username": "KhazarBabazada",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2514925518?tab=analysis&flip=true&move=05"
+      },
+      "59606360413": {
+        "opponent": {
+          "username": "BrilliantPenguin",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/59606360413?tab=analysis&flip=true&move=05"
+      },
+      "39458328493": {
+        "opponent": {
+          "username": "bugsbunny444",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/39458328493?tab=analysis&flip=true&move=05"
+      },
+      "5999309828": {
+        "opponent": {
+          "username": "TigranMukhutdinov",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5999309828?tab=analysis&flip=true&move=05"
+      },
+      "5821260956": {
+        "opponent": {
+          "username": "fr3dm4nn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5821260956?tab=analysis&flip=false&move=05"
+      },
+      "4750248995": {
+        "opponent": {
+          "username": "isaiahdaniel",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4750248995?tab=analysis&flip=true&move=05"
+      }
+    },
+    "pawnDiamond": {
+      "2006120943": {
+        "opponent": {
+          "username": "Dhaydon19",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2006120943?tab=analysis&flip=false&move=044"
+      },
+      "2261741731": {
+        "opponent": {
+          "username": "Tiohoracio",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2261741731?tab=analysis&flip=true&move=029"
+      },
+      "2328965643": {
+        "opponent": {
+          "username": "Tiohoracio",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2328965643?tab=analysis&flip=true&move=053"
+      },
+      "2554727692": {
+        "opponent": {
+          "username": "Tonychess32",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2554727692?tab=analysis&flip=false&move=068"
+      },
+      "2816452852": {
+        "opponent": {
+          "username": "NorwegianGiant",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2816452852?tab=analysis&flip=true&move=053"
+      },
+      "2991369496": {
+        "opponent": {
+          "username": "NguyenXi",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2991369496?tab=analysis&flip=false&move=052"
+      },
+      "2997872803": {
+        "opponent": {
+          "username": "levski-sofia",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2997872803?tab=analysis&flip=true&move=035"
+      },
+      "3048396203": {
+        "opponent": {
+          "username": "SpewReeky",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3048396203?tab=analysis&flip=true&move=037"
+      },
+      "3183301426": {
+        "opponent": {
+          "username": "op99",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3183301426?tab=analysis&flip=true&move=033"
+      },
+      "3184750503": {
+        "opponent": {
+          "username": "JensenLynch",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3184750503?tab=analysis&flip=true&move=019"
+      },
+      "3206122252": {
+        "opponent": {
+          "username": "Flliry3",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3206122252?tab=analysis&flip=true&move=025"
+      },
+      "3237287600": {
+        "opponent": {
+          "username": "JK566482e",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3237287600?tab=analysis&flip=true&move=037"
+      },
+      "3246891875": {
+        "opponent": {
+          "username": "Raja3401",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3246891875?tab=analysis&flip=true&move=047"
+      },
+      "3249323273": {
+        "opponent": {
+          "username": "michaelq2d5",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3249323273?tab=analysis&flip=false&move=036"
+      },
+      "3422483354": {
+        "opponent": {
+          "username": "2018-10-04",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3422483354?tab=analysis&flip=false&move=020"
+      },
+      "3607390823": {
+        "opponent": {
+          "username": "nabukatnezarr",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3607390823?tab=analysis&flip=false&move=042"
+      },
+      "3627620109": {
+        "opponent": {
+          "username": "Arian_tamadono",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3627620109?tab=analysis&flip=true&move=043"
+      },
+      "3690709141": {
+        "opponent": {
+          "username": "thedukeofprunes69",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3690709141?tab=analysis&flip=true&move=045"
+      },
+      "3942476390": {
+        "opponent": {
+          "username": "SirStrateg",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3942476390?tab=analysis&flip=false&move=064"
+      },
+      "4017439313": {
+        "opponent": {
+          "username": "IamSchrodingersCat",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4017439313?tab=analysis&flip=true&move=039"
+      },
+      "47172647719": {
+        "opponent": {
+          "username": "grandmastergauri",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/47172647719?tab=analysis&flip=true&move=047"
+      },
+      "46966845835": {
+        "opponent": {
+          "username": "Tehni4arce",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46966845835?tab=analysis&flip=true&move=073"
+      },
+      "46881027863": {
+        "opponent": {
+          "username": "ExceptionallyDubious",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46881027863?tab=analysis&flip=true&move=033"
+      },
+      "46376378047": {
+        "opponent": {
+          "username": "Agoking701",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/46376378047?tab=analysis&flip=true&move=031"
+      },
+      "43289337253": {
+        "opponent": {
+          "username": "ODreamchess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/43289337253?tab=analysis&flip=false&move=082"
+      },
+      "42848432125": {
+        "opponent": {
+          "username": "baboon2023",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/42848432125?tab=analysis&flip=false&move=030"
+      },
+      "31965583611": {
+        "opponent": {
+          "username": "JamesG478",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/31965583611?tab=analysis&flip=false&move=054"
+      },
+      "16292689831": {
+        "opponent": {
+          "username": "Ajedrez_con_German",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/16292689831?tab=analysis&flip=false&move=054"
+      },
+      "12947754757": {
+        "opponent": {
+          "username": "ostredebiuty",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/12947754757?tab=analysis&flip=true&move=039"
+      },
+      "12942950915": {
+        "opponent": {
+          "username": "OlegKrivonosov",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12942950915?tab=analysis&flip=false&move=024"
+      },
+      "12800031331": {
+        "opponent": {
+          "username": "travelingfool",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/12800031331?tab=analysis&flip=true&move=039"
+      },
+      "10211536137": {
+        "opponent": {
+          "username": "Hypercar",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/10211536137?tab=analysis&flip=true&move=053"
+      },
+      "8667361355": {
+        "opponent": {
+          "username": "Marcan2b",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8667361355?tab=analysis&flip=false&move=028"
+      },
+      "8633128853": {
+        "opponent": {
+          "username": "OlegKrivonosov",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8633128853?tab=analysis&flip=false&move=022"
+      },
+      "6526205318": {
+        "opponent": {
+          "username": "ViralduS",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6526205318?tab=analysis&flip=true&move=035"
+      },
+      "6374624999": {
+        "opponent": {
+          "username": "henrik14",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6374624999?tab=analysis&flip=false&move=034"
+      },
+      "6318851977": {
+        "opponent": {
+          "username": "DamianoLew95",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6318851977?tab=analysis&flip=false&move=022"
+      },
+      "6285365280": {
+        "opponent": {
+          "username": "safelyresign",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6285365280?tab=analysis&flip=true&move=039"
+      },
+      "6112145100": {
+        "opponent": {
+          "username": "DanLowinger",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6112145100?tab=analysis&flip=true&move=057"
+      },
+      "5964803664": {
+        "opponent": {
+          "username": "Jordan2197",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5964803664?tab=analysis&flip=false&move=028"
+      },
+      "5861939298": {
+        "opponent": {
+          "username": "ladyleilei",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5861939298?tab=analysis&flip=false&move=054"
+      },
+      "5829933788": {
+        "opponent": {
+          "username": "stolencandy13",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5829933788?tab=analysis&flip=true&move=071"
+      },
+      "5650818154": {
+        "opponent": {
+          "username": "IMRosen",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5650818154?tab=analysis&flip=true&move=025"
+      },
+      "5550518037": {
+        "opponent": {
+          "username": "diokletian",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5550518037?tab=analysis&flip=false&move=068"
+      },
+      "5542785079": {
+        "opponent": {
+          "username": "TanitoluwaAps116",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5542785079?tab=analysis&flip=true&move=031"
+      },
+      "5411551237": {
+        "opponent": {
+          "username": "GMHikaruOnTwitch",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5411551237?tab=analysis&flip=true&move=079"
+      },
+      "5383060993": {
+        "opponent": {
+          "username": "psychokiller48",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5383060993?tab=analysis&flip=false&move=024"
+      },
+      "4975330717": {
+        "opponent": {
+          "username": "oskariot",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4975330717?tab=analysis&flip=true&move=029"
+      },
+      "4943370663": {
+        "opponent": {
+          "username": "Thipsay",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4943370663?tab=analysis&flip=false&move=024"
+      },
+      "4816763167": {
+        "opponent": {
+          "username": "Agent-JL",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4816763167?tab=analysis&flip=true&move=045"
+      },
+      "4481553066": {
+        "opponent": {
+          "username": "x-0811214128",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4481553066?tab=analysis&flip=true&move=051"
+      }
+    },
+    "adoptionMatch:10": {
+      "2909644897": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2909644897?tab=analysis&flip=false&move=0"
+      },
+      "2909671761": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2909671761?tab=analysis&flip=true&move=0"
+      },
+      "2940301575": {
+        "opponent": {
+          "username": "MorozevichECUxD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2940301575?tab=analysis&flip=false&move=0"
+      },
+      "3006789783": {
+        "opponent": {
+          "username": "prepredeni",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3006789783?tab=analysis&flip=true&move=0"
+      },
+      "3084769126": {
+        "opponent": {
+          "username": "TheBigBadChessDad",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3084769126?tab=analysis&flip=false&move=0"
+      },
+      "3139067132": {
+        "opponent": {
+          "username": "want2lose",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3139067132?tab=analysis&flip=true&move=0"
+      },
+      "3141375009": {
+        "opponent": {
+          "username": "deusacn",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3141375009?tab=analysis&flip=true&move=0"
+      },
+      "3150494131": {
+        "opponent": {
+          "username": "DanielRensch",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3150494131?tab=analysis&flip=false&move=0"
+      },
+      "3232256243": {
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3232256243?tab=analysis&flip=false&move=0"
+      },
+      "3259688516": {
+        "opponent": {
+          "username": "Gr3egor",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3259688516?tab=analysis&flip=true&move=0"
+      },
+      "3268651328": {
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3268651328?tab=analysis&flip=true&move=0"
+      },
+      "3586009123": {
+        "opponent": {
+          "username": "Togishere",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3586009123?tab=analysis&flip=false&move=0"
+      },
+      "4042785299": {
+        "opponent": {
+          "username": "UltraInstinct23",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4042785299?tab=analysis&flip=false&move=0"
+      },
+      "4105285464": {
+        "opponent": {
+          "username": "Ostrovskiy-Marshalls",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4105285464?tab=analysis&flip=true&move=0"
+      },
+      "4105321834": {
+        "opponent": {
+          "username": "Arketekt",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4105321834?tab=analysis&flip=false&move=0"
+      },
+      "4105376469": {
+        "opponent": {
+          "username": "Arketekt",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4105376469?tab=analysis&flip=true&move=0"
+      },
+      "4247775719": {
+        "opponent": {
+          "username": "joumax8",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4247775719?tab=analysis&flip=false&move=0"
+      },
+      "47167213911": {
+        "opponent": {
+          "username": "chronoknight",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/47167213911?tab=analysis&flip=false&move=0"
+      },
+      "43200599247": {
+        "opponent": {
+          "username": "jotarugr8",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/43200599247?tab=analysis&flip=false&move=0"
+      },
+      "12320318003": {
+        "opponent": {
+          "username": "Casablanca",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12320318003?tab=analysis&flip=true&move=0"
+      },
+      "9681258071": {
+        "opponent": {
+          "username": "warrior0506",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/9681258071?tab=analysis&flip=true&move=0"
+      },
+      "5957936110": {
+        "opponent": {
+          "username": "chess_fan123",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5957936110?tab=analysis&flip=true&move=0"
+      },
+      "5607963692": {
+        "opponent": {
+          "username": "Riley",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5607963692?tab=analysis&flip=true&move=0"
+      },
+      "5075598261": {
+        "opponent": {
+          "username": "Nemsko",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5075598261?tab=analysis&flip=true&move=0"
+      },
+      "5043031842": {
+        "opponent": {
+          "username": "GoodGuyGallo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5043031842?tab=analysis&flip=false&move=0"
+      },
+      "4980695099": {
+        "opponent": {
+          "username": "Soham0705",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4980695099?tab=analysis&flip=false&move=0"
+      },
+      "4949260231": {
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4949260231?tab=analysis&flip=false&move=0"
+      }
+    },
+    "ohNoMyQueen": {
+      "2289723363": {
+        "opponent": {
+          "username": "Alexander_Zubov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2289723363?tab=analysis&flip=false&move=042"
+      },
+      "2472431691": {
+        "opponent": {
+          "username": "Khcho111",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2472431691?tab=analysis&flip=true&move=079"
+      },
+      "2517820028": {
+        "opponent": {
+          "username": "vladimirminko",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2517820028?tab=analysis&flip=true&move=035"
+      },
+      "2529812631": {
+        "opponent": {
+          "username": "NguyenXi",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2529812631?tab=analysis&flip=false&move=058"
+      },
+      "2537944423": {
+        "opponent": {
+          "username": "Pistolero_Suarez",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2537944423?tab=analysis&flip=false&move=050"
+      },
+      "2816407083": {
+        "opponent": {
+          "username": "EskimoPirate",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2816407083?tab=analysis&flip=false&move=040"
+      },
+      "2821463423": {
+        "opponent": {
+          "username": "outie5000",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2821463423?tab=analysis&flip=false&move=038"
+      },
+      "2821556059": {
+        "opponent": {
+          "username": "xJulianC",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2821556059?tab=analysis&flip=true&move=031"
+      },
+      "2878502430": {
+        "opponent": {
+          "username": "angrybirds417",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2878502430?tab=analysis&flip=true&move=013"
+      },
+      "2878554660": {
+        "opponent": {
+          "username": "aquilaungula",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2878554660?tab=analysis&flip=false&move=046"
+      },
+      "3126471554": {
+        "opponent": {
+          "username": "Toyota_Land_Cruiser",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3126471554?tab=analysis&flip=false&move=054"
+      },
+      "3198100293": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3198100293?tab=analysis&flip=false&move=058"
+      },
+      "3222304855": {
+        "opponent": {
+          "username": "etiennelepro",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3222304855?tab=analysis&flip=false&move=070"
+      },
+      "3222375352": {
+        "opponent": {
+          "username": "TheDotingDonkey",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3222375352?tab=analysis&flip=false&move=010"
+      },
+      "3260449931": {
+        "opponent": {
+          "username": "AlexandraBotez",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3260449931?tab=analysis&flip=true&move=067"
+      },
+      "3358829946": {
+        "opponent": {
+          "username": "millenium19",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3358829946?tab=analysis&flip=true&move=065"
+      },
+      "3413852508": {
+        "opponent": {
+          "username": "d_priceisright",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3413852508?tab=analysis&flip=true&move=013"
+      },
+      "3511365068": {
+        "opponent": {
+          "username": "skiver1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3511365068?tab=analysis&flip=false&move=050"
+      },
+      "3932229715": {
+        "opponent": {
+          "username": "HopInTheDelorean",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3932229715?tab=analysis&flip=false&move=074"
+      },
+      "4068031796": {
+        "opponent": {
+          "username": "Legendarydante",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4068031796?tab=analysis&flip=true&move=069"
+      },
+      "45523839779": {
+        "opponent": {
+          "username": "MilosTB",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/45523839779?tab=analysis&flip=false&move=044"
+      },
+      "43289337253": {
+        "opponent": {
+          "username": "ODreamchess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/43289337253?tab=analysis&flip=false&move=092"
+      },
+      "23583071453": {
+        "opponent": {
+          "username": "IHateRookA4",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/23583071453?tab=analysis&flip=false&move=092"
+      },
+      "21655172745": {
+        "opponent": {
+          "username": "FMchesstrainer",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/21655172745?tab=analysis&flip=false&move=040"
+      },
+      "12741283953": {
+        "opponent": {
+          "username": "Chessmissile07",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/12741283953?tab=analysis&flip=true&move=049"
+      },
+      "9723552627": {
+        "opponent": {
+          "username": "Levys_lamp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/9723552627?tab=analysis&flip=false&move=064"
+      },
+      "7960476207": {
+        "opponent": {
+          "username": "sunda_colugo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/7960476207?tab=analysis&flip=true&move=081"
+      },
+      "6442110693": {
+        "opponent": {
+          "username": "saikrishnaReturns",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6442110693?tab=analysis&flip=false&move=042"
+      },
+      "6215802300": {
+        "opponent": {
+          "username": "want2lose",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6215802300?tab=analysis&flip=false&move=032"
+      },
+      "5985251219": {
+        "opponent": {
+          "username": "fightingteddybear",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5985251219?tab=analysis&flip=false&move=078"
+      },
+      "5934233181": {
+        "opponent": {
+          "username": "PotapovaM",
+          "title": "WIM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5934233181?tab=analysis&flip=false&move=058"
+      },
+      "5821049406": {
+        "opponent": {
+          "username": "goldenbuzzer",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5821049406?tab=analysis&flip=false&move=038"
+      },
+      "5690710071": {
+        "opponent": {
+          "username": "gm5OO",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5690710071?tab=analysis&flip=true&move=049"
+      },
+      "5521700765": {
+        "opponent": {
+          "username": "RivaresFelice",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5521700765?tab=analysis&flip=false&move=030"
+      },
+      "5411329336": {
+        "opponent": {
+          "username": "bp2004",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5411329336?tab=analysis&flip=false&move=084"
+      },
+      "5406858874": {
+        "opponent": {
+          "username": "Lakdinu007",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5406858874?tab=analysis&flip=true&move=073"
+      },
+      "5406822612": {
+        "opponent": {
+          "username": "timatec",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5406822612?tab=analysis&flip=false&move=038"
+      },
+      "5368308578": {
+        "opponent": {
+          "username": "Tdrive",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5368308578?tab=analysis&flip=false&move=062"
+      },
+      "5047438293": {
+        "opponent": {
+          "username": "Dumbnick",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5047438293?tab=analysis&flip=true&move=045"
+      },
+      "4971441065": {
+        "opponent": {
+          "username": "trashchessplayer76",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4971441065?tab=analysis&flip=false&move=040"
+      },
+      "4459929404": {
+        "opponent": {
+          "username": "BSWPaulsen",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4459929404?tab=analysis&flip=false&move=056"
+      }
+    },
+    "noCapturesBeforeMoveNumber": {
+      "42499825849": {
+        "opponent": {
+          "username": "LPSupi",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/42499825849?tab=analysis&flip=true&move=089"
+      }
+    },
+    "checkmateAtMoveNumber:4": {
+      "3307961674": {
+        "opponent": {
+          "username": "Blindovich",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3307961674?tab=analysis&flip=true&move=07"
+      },
+      "40231206353": {
+        "opponent": {
+          "username": "fu24",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/40231206353?tab=analysis&flip=false&move=06"
+      }
+    },
+    "royalFamilyFork": {
+      "2986544243": {
+        "opponent": {
+          "username": "Daniel_Moreno",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2986544243?tab=analysis&flip=false&move=066"
+      },
+      "3145360893": {
+        "opponent": {
+          "username": "gkchesstiger",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3145360893?tab=analysis&flip=false&move=048"
+      },
+      "33943294507": {
+        "opponent": {
+          "username": "ATShame",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/33943294507?tab=analysis&flip=false&move=074"
+      },
+      "6391260377": {
+        "opponent": {
+          "username": "QuinZ33",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6391260377?tab=analysis&flip=true&move=039"
+      },
+      "5943925903": {
+        "opponent": {
+          "username": "BoxCup",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5943925903?tab=analysis&flip=false&move=062"
+      },
+      "5842762544": {
+        "opponent": {
+          "username": "B-man",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5842762544?tab=analysis&flip=true&move=049"
+      }
+    },
+    "g5mate": {
+      "2894030245": {
+        "opponent": {
+          "username": "CMac214",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2894030245?tab=analysis&flip=true&move=057"
+      },
+      "3006769448": {
+        "opponent": {
+          "username": "Suren_Avetisyan",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3006769448?tab=analysis&flip=true&move=089"
+      },
+      "3358781856": {
+        "opponent": {
+          "username": "hanqi",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3358781856?tab=analysis&flip=true&move=087"
+      },
+      "4068102531": {
+        "opponent": {
+          "username": "econpower",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4068102531?tab=analysis&flip=false&move=078"
+      },
+      "31800019761": {
+        "opponent": {
+          "username": "iliachess2007",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/31800019761?tab=analysis&flip=true&move=095"
+      },
+      "7691503455": {
+        "opponent": {
+          "username": "p_weaver",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/7691503455?tab=analysis&flip=true&move=059"
+      },
+      "5903362608": {
+        "opponent": {
+          "username": "DrPawn27",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5903362608?tab=analysis&flip=false&move=056"
+      },
+      "5660381851": {
+        "opponent": {
+          "username": "AlexOstrovskiy",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5660381851?tab=analysis&flip=false&move=096"
+      },
+      "5586922976": {
+        "opponent": {
+          "username": "kontosnik",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5586922976?tab=analysis&flip=true&move=095"
+      },
+      "5406419722": {
+        "opponent": {
+          "username": "camerondare",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5406419722?tab=analysis&flip=true&move=067"
+      },
+      "5138230311": {
+        "opponent": {
+          "username": "EarniePaper",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5138230311?tab=analysis&flip=false&move=078"
+      }
+    },
+    "fourKnightMate": {
+      "3038044053": {
+        "opponent": {
+          "username": "RolloOrollo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3038044053?tab=analysis&flip=true&move=0157"
+      },
+      "17341329115": {
+        "opponent": {
+          "username": "billybishop51",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/17341329115?tab=analysis&flip=false&move=0236"
+      }
+    },
+    "doubleCheckCheckmate": {
+      "2504665306": {
+        "opponent": {
+          "username": "Joshukid",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2504665306?tab=analysis&flip=true&move=061"
+      },
+      "2828320648": {
+        "opponent": {
+          "username": "man_of_ai",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/2828320648?tab=analysis&flip=false&move=0102"
+      },
+      "2936084083": {
+        "opponent": {
+          "username": "Stunday",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2936084083?tab=analysis&flip=true&move=033"
+      },
+      "3089396087": {
+        "opponent": {
+          "username": "BloodyPatzer",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3089396087?tab=analysis&flip=false&move=076"
+      },
+      "3144961587": {
+        "opponent": {
+          "username": "Tal-Baron",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3144961587?tab=analysis&flip=false&move=080"
+      },
+      "3145557248": {
+        "opponent": {
+          "username": "Rashad_Zeynalli",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3145557248?tab=analysis&flip=false&move=088"
+      },
+      "3188105360": {
+        "opponent": {
+          "username": "joecormier",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3188105360?tab=analysis&flip=true&move=015"
+      },
+      "3279186967": {
+        "opponent": {
+          "username": "valera_rozuvan",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3279186967?tab=analysis&flip=true&move=043"
+      },
+      "3312132004": {
+        "opponent": {
+          "username": "chessdanjack",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3312132004?tab=analysis&flip=false&move=070"
+      },
+      "14478433541": {
+        "opponent": {
+          "username": "Artur0208",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/14478433541?tab=analysis&flip=false&move=058"
+      },
+      "11112852289": {
+        "opponent": {
+          "username": "Oneofmyturns",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/11112852289?tab=analysis&flip=false&move=0100"
+      },
+      "11082220289": {
+        "opponent": {
+          "username": "Nf3c5",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/11082220289?tab=analysis&flip=false&move=044"
+      },
+      "6215802300": {
+        "opponent": {
+          "username": "want2lose",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/6215802300?tab=analysis&flip=false&move=034"
+      },
+      "5973525432": {
+        "opponent": {
+          "username": "SenpaiNavid",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5973525432?tab=analysis&flip=false&move=046"
+      },
+      "5966183378": {
+        "opponent": {
+          "username": "CoachJKane",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5966183378?tab=analysis&flip=true&move=0127"
+      },
+      "5934233181": {
+        "opponent": {
+          "username": "PotapovaM",
+          "title": "WIM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5934233181?tab=analysis&flip=false&move=060"
+      },
+      "5690710071": {
+        "opponent": {
+          "username": "gm5OO",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5690710071?tab=analysis&flip=true&move=051"
+      },
+      "5607913959": {
+        "opponent": {
+          "username": "Riley",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5607913959?tab=analysis&flip=false&move=070"
+      },
+      "5449313752": {
+        "opponent": {
+          "username": "F1reFlash",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5449313752?tab=analysis&flip=true&move=043"
+      },
+      "5435352383": {
+        "opponent": {
+          "username": "superchthonic",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/5435352383?tab=analysis&flip=true&move=099"
+      },
+      "5358402988": {
+        "opponent": {
+          "username": "Kosc",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5358402988?tab=analysis&flip=true&move=049"
+      },
+      "5109536017": {
+        "opponent": {
+          "username": "BorjaSanz-Agero",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5109536017?tab=analysis&flip=false&move=044"
+      },
+      "4654859871": {
+        "opponent": {
+          "username": "Corbblah",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4654859871?tab=analysis&flip=false&move=048"
+      },
+      "4483786322": {
+        "opponent": {
+          "username": "Still_Waters11",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4483786322?tab=analysis&flip=true&move=059"
+      },
+      "4372611935": {
+        "opponent": {
+          "username": "AlcomedianBlobfish",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4372611935?tab=analysis&flip=false&move=042"
+      }
+    },
+    "connectDiagonally:6": {
+      "13707198811": {
+        "opponent": {
+          "username": "EmbarrassmentSon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/13707198811?tab=analysis&flip=true&move=059"
+      }
+    },
+    "smotheredMate": {
+      "2481685126": {
+        "opponent": {
+          "username": "BadBoyBarbour",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2481685126?tab=analysis&flip=true&move=053"
+      },
+      "3091477049": {
+        "opponent": {
+          "username": "jimis98",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3091477049?tab=analysis&flip=true&move=033"
+      },
+      "9723552627": {
+        "opponent": {
+          "username": "Levys_lamp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/9723552627?tab=analysis&flip=false&move=066"
+      },
+      "4949345129": {
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4949345129?tab=analysis&flip=true&move=053"
+      },
+      "4732471161": {
+        "opponent": {
+          "username": "Cryptal",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4732471161?tab=analysis&flip=true&move=059"
+      }
+    },
+    "pawnStormOpening": {
+      "3067208227": {
+        "opponent": {
+          "username": "Notevakabertoda",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3067208227?tab=analysis&flip=false&move=023"
+      },
+      "3171859472": {
+        "opponent": {
+          "username": "cute_bunny95",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3171859472?tab=analysis&flip=false&move=025"
+      },
+      "8028858147": {
+        "opponent": {
+          "username": "mwpchess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/8028858147?tab=analysis&flip=false&move=023"
+      },
+      "5654022187": {
+        "opponent": {
+          "username": "Dennis1008",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5654022187?tab=analysis&flip=false&move=041"
+      },
+      "5056160465": {
+        "opponent": {
+          "username": "scenry1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5056160465?tab=analysis&flip=false&move=023"
+      }
+    },
+    "rosenTrap": {
+      "7671136523": {
+        "opponent": {
+          "username": "Tatiana_and_Sergey",
+          "title": "WIM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/7671136523?tab=analysis&flip=true&move=0140"
+      }
+    },
+    "bishopAndKnightMate": {
+      "2986622609": {
+        "opponent": {
+          "username": "stevis5",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2986622609?tab=analysis&flip=true&move=0173"
+      },
+      "3034796211": {
+        "opponent": {
+          "username": "Bazinga00",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3034796211?tab=analysis&flip=true&move=0173"
+      },
+      "6264258483": {
+        "opponent": {
+          "username": "cool1990dude",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/6264258483?tab=analysis&flip=false&move=0156"
+      },
+      "5707677847": {
+        "opponent": {
+          "username": "Der_Nomad",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5707677847?tab=analysis&flip=false&move=0166"
+      },
+      "5343780083": {
+        "opponent": {
+          "username": "jacobbadger18",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5343780083?tab=analysis&flip=true&move=0191"
+      },
+      "5072167422": {
+        "opponent": {
+          "username": "NicholasJasper",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5072167422?tab=analysis&flip=false&move=0200"
+      }
+    },
+    "promotePawnBeforeMoveNumber": {
+      "3127642062": {
+        "opponent": {
+          "username": "adulcorante",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/3127642062?tab=analysis&flip=false&move=09"
+      },
+      "3433732649": {
+        "opponent": {
+          "username": "littleplotkin",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3433732649?tab=analysis&flip=true&move=012"
+      },
+      "5624654543": {
+        "opponent": {
+          "username": "KingslayerHD",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5624654543?tab=analysis&flip=true&move=012"
+      }
+    },
+    "promoteToKnightCheckmate": {
+      "5601527682": {
+        "opponent": {
+          "username": "MPAtheist",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5601527682?tab=analysis&flip=false&move=058"
+      }
+    },
+    "knightCube": {
+      "2969230653": {
+        "opponent": {
+          "username": "maxmlynek",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/2969230653?tab=analysis&flip=true&move=0175"
+      },
+      "5107093742": {
+        "opponent": {
+          "username": "ram158",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/5107093742?tab=analysis&flip=true&move=0201"
+      }
+    },
+    "smotheredPorkMate": {
+      "4949345129": {
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/4949345129?tab=analysis&flip=true&move=053"
+      }
+    },
+    "adoptionMatch:20": {
+      "4105360103": {
+        "opponent": {
+          "username": "Arketekt",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/4105360103?tab=analysis&flip=true&move=0"
+      }
+    },
+    "promoteToBishopCheckmate": {
+      "3358829946": {
+        "opponent": {
+          "username": "millenium19",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3358829946?tab=analysis&flip=true&move=067"
+      }
+    },
+    "pawnX": {
+      "3320301078": {
+        "opponent": {
+          "username": "Beltsychess",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/3320301078?tab=analysis&flip=true&move=039"
+      }
+    }
+  }
+}

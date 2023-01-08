@@ -146,6 +146,8 @@
             </h2>
 
             <div class="mb-1">
+                on
+                {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }}
                 and has completed
                 <strong> {{ totalAccomplishmentsCompletedPercentage }}% </strong>
                 of the goals ({{ totalAccomplishmentsCompleted }}
@@ -538,7 +540,7 @@
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Avoid-the-Flag Checkmate"
-                        desc="Make 20+ moves with 1 second left + checkmate"
+                        desc="Make 20+ moves with 1 second left + checkmate (Lichess only)"
                         :trophies="playerTrophiesByType['avoidTheFlagCheckmate'] || {}"
                         gameLink="https://lichess.org/Wi5bzNTB#110"
                         youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
@@ -645,7 +647,7 @@
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="Win with Insufficient Material"
-                        desc="Flag your opponent with only a knight or bishop"
+                        desc="Flag your opponent with only a knight or bishop (Lichess only)"
                         :trophies="playerTrophiesByType['winInsufficientMaterial'] || {}"
                         gameLink="https://lichess.org/nYz9xUgc#141"
                         youtubeLink="https://www.youtube.com/watch?v=vBf4rA4j8_w&t=15468s"
@@ -668,6 +670,10 @@
             Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
             | Find a bug? Have a comment? Fill out
             <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
+
+            <div v-if="isLocalEnv">
+                <a href="#" @click.prevent="generateCacheFile" class="dotted-underline">Download cache file {{ username }}.json</a>
+            </div>
         </div>
     </div>
 </template>
@@ -675,7 +681,7 @@
 <script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-import { games, player, Game, Profile, GamePlayer, addLichessOauthToken, cancelFetch } from 'chess-fetcher'
+import { games, player, Game, Profile, addLichessOauthToken, cancelFetch } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
 import ArrowIcon from './components/ArrowIcon.vue'
@@ -730,7 +736,7 @@ import { ohNoMyQueen } from './goals/oh-no-my-queen'
 import { lefongTrap } from './goals/lefong-trap'
 import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
-import { TrophyCheckResult } from './types/types'
+import { PlayerTrophiesByType, TrophyCacheFile, TrophyCheckResult } from './types/types'
 import { formatSinceDate } from './utils/format-since-date'
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
@@ -764,16 +770,7 @@ export default {
             },
 
             trophyTypeCount: 0,
-            playerTrophiesByType: <
-                {
-                    [key: string]: {
-                        [key: string]: {
-                            opponent: GamePlayer
-                            link: String
-                        }
-                    }
-                }
-            >{},
+            playerTrophiesByType: <PlayerTrophiesByType>{},
 
             isDownloading: false,
             isDownloadComplete: false,
@@ -782,6 +779,8 @@ export default {
                 downloaded: 0,
                 totalMoves: 0,
             },
+
+            usingCacheBeforeTimestamp: 0,
         }
     },
 
@@ -807,6 +806,9 @@ export default {
             return Object.values(this.playerTrophiesByType)
                 .map((o) => Object.values(o))
                 .flat().length
+        },
+        isLocalEnv(): boolean {
+            return window.location.href.includes('localhost')
         },
     },
 
@@ -856,7 +858,7 @@ export default {
             this.isDownloadComplete = true
         },
 
-        startDownload(): void {
+        async startDownload(): Promise<void> {
             if (!this.username) {
                 this.errors.form = 'Enter a username in Step #1'
                 return
@@ -888,8 +890,18 @@ export default {
                     this.errors.api = e
                 })
 
+            if (!this.form.filters.sinceHoursAgo) {
+                await this.getCachedGames(url)
+            }
+
+            let sinceTimestamp = this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
+
+            if (this.usingCacheBeforeTimestamp) {
+                sinceTimestamp = this.usingCacheBeforeTimestamp
+            }
+
             games(url, this.checkGameForTrophies, {
-                since: this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0,
+                since: sinceTimestamp,
                 pgnInJson: true,
                 clocks: true,
             })
@@ -904,6 +916,63 @@ export default {
 
                     this.errors.api = e
                 })
+        },
+
+        async getCachedGames(url: string) {
+            const caches = new Map<string, string>()
+
+            // caches.set('https://lichess.org/@/agadmator', '/cache/lichess/agadmator.json')
+            // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
+            // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
+            // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
+            caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
+            caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
+            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
+
+            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
+            caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
+            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
+            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+
+            if (!caches.has(url)) {
+                return
+            }
+
+            await fetch(caches.get(url)!)
+                .then((response) => response.json())
+                .then((result: TrophyCacheFile) => {
+                    this.usingCacheBeforeTimestamp = result.cache_updated_at
+                    this.counts.downloaded = result.games_analyzed
+                    this.counts.totalMoves = result.moves_analyzed
+                    this.playerTrophiesByType = result.trophies
+                })
+        },
+
+        generateCacheFile(): void {
+            let contents: TrophyCacheFile = {
+                cache_updated_at: Date.now(),
+                games_analyzed: this.counts.downloaded,
+                moves_analyzed: this.counts.totalMoves,
+                trophies: this.playerTrophiesByType,
+            }
+
+            let element = document.createElement('a')
+            element.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(contents, null, 2)))
+            element.setAttribute('download', `${this.username}.json`)
+
+            element.style.display = 'none'
+            document.body.appendChild(element)
+            element.click()
+            document.body.removeChild(element)
         },
 
         checkForTrophy(game: Game, name: string, results: TrophyCheckResult, onMoveNumber?: number): void {
@@ -943,7 +1012,10 @@ export default {
             }
 
             this.playerTrophiesByType[trophyName][game.id] = {
-                opponent,
+                opponent: {
+                    username: opponent.username,
+                    title: opponent.title || '',
+                },
                 link,
             }
         },

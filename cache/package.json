@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "prepend-file": "^2.0.1"
-  }
-}

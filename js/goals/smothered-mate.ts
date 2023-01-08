@@ -6,7 +6,7 @@ import { neighboringSquares } from '../utils/neighboring-squares'
 import { pawnCaptures } from '../utils/pawn-captures'
 
 // https://github.com/jhlywa/chess.js/issues/174#issuecomment-388633402
-function get_piece_positions (chessJs: Chess, piece: Piece): Square[] {
+function get_piece_positions(chessJs: Chess, piece: Piece): Square[] {
     return chessJs
         .board()
         .flat()
@@ -20,7 +20,7 @@ function get_piece_positions (chessJs: Chess, piece: Piece): Square[] {
             const piece_index = index as number
             const row = 'abcdefgh'[piece_index % 8]
             const column = Math.ceil((64 - piece_index) / 8)
-            return row + column as Square
+            return (row + column) as Square
         })
 }
 
