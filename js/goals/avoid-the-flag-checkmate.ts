@@ -26,9 +26,9 @@ export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]): TrophyCheck
             }
             return move.commentDiag.clk
         })
-        .slice(-20*2)
+        .slice(-20 * 2)
 
-    if (clockTimes.length !== 20*2) {
+    if (clockTimes.length !== 20 * 2) {
         return []
     }
 
