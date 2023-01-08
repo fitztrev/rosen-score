@@ -24,3 +24,17 @@ describe('insufficient material', () => {
         expect(winInsufficientMaterial({ result: { winner: 'white', via: 'timeout' } }, fen)).toStrictEqual(expected)
     })
 })
+
+describe('insufficient material with old chess.com game', () => {
+    test.each([
+        [
+            // https://www.chess.com/analysis/game/live/88723632?tab=analysis&flip=true&move=0153
+            // This trophy isn't usually available on Chess.com, but this is a game
+            // from 2011 where it must have been possible at the time.
+            '8/7P/8/8/4K3/8/1bk5/8 w - - 0 78',
+            [{ color: 'b' }],
+        ],
+    ])('test fen: %p', (fen, expected) => {
+        expect(winInsufficientMaterial({ result: { winner: 'black', via: 'timeout' } }, fen)).toStrictEqual(expected)
+    })
+})
