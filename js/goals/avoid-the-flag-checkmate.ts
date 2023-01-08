@@ -19,23 +19,20 @@ export function avoidTheFlagCheckmate(game: Game, moves: PgnMove[]): TrophyCheck
         return []
     }
 
-    const winnerClockTimes = moves
+    const clockTimes = moves
         .map((move) => {
             if (!move.commentDiag || !move.commentDiag.clk) {
-                console.log('no clk', game)
+                return ''
             }
-            return move.turn + ' - ' + move.commentDiag.clk
+            return move.commentDiag.clk
         })
-        .slice(-40)
-        .filter(function (_value, index) {
-            return index % 2 !== 0
-        })
+        .slice(-20*2)
 
-    if (winnerClockTimes.length !== 20) {
+    if (clockTimes.length !== 20*2) {
         return []
     }
 
-    let timeRemainingTwentyMovesAgo = parseInt(winnerClockTimes[0].replace(/\D/g, ''))
+    let timeRemainingTwentyMovesAgo = parseInt(clockTimes[1].replace(/\D/g, ''))
 
     if (timeRemainingTwentyMovesAgo <= 1) {
         return [
