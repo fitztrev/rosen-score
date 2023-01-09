@@ -891,7 +891,7 @@ export default {
 
                     if (player.site === 'chess.com') {
                         // Chess.com doesn't provide a reliable way to get the actual game count via the API.
-                        // Actual game count is higher than reported, so I'll just add 20%
+                        // Actual game count is higher than reported, so I'll add 20%
                         this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
                     } else {
                         this.counts.totalGames = player.counts.all
