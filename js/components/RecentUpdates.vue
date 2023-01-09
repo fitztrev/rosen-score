@@ -2,7 +2,7 @@
     <div class="border-t border-gray-300 mt-4 text-bold font-bold pt-2">Recent Updates</div>
     <ul class="text-sm">
         <li>
-            <changelog-date :year="2023" :month="1" :day="8"></changelog-date>
+            <changelog-date :year="2023" :month="1" :day="9"></changelog-date>
             - Added support for <strong>Chess.com</strong>
             - See
             <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</a>,

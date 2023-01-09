@@ -2,7 +2,7 @@
 
 https://rosen-score.vercel.app/
 
-This is entirely a frontend application (HTML/JS/CSS), so you can run it pretty easily on your own computer.
+This is entirely a frontend application, so you can run it pretty easily on your own computer.
 
 Your browser makes the request directly to the Lichess API to get the games. Then the games are analyzed with javascript (again, in your own browser). Each move from every game is played through and analyzed for specific positions or other criteria.
 
