@@ -930,11 +930,11 @@ export default {
         async getCachedGames(url: string) {
             const caches = new Map<string, string>()
 
-            // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
             caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
             caches.set('https://lichess.org/@/fins', '/cache/lichess/fins.json')
+            caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
             caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
             caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
             caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
@@ -951,6 +951,7 @@ export default {
             caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
             caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
             caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            caches.set('https://www.chess.com/member/wonderfultime', '/cache/chesscom/wonderfultime.json')
 
             if (!caches.has(url)) {
                 return
