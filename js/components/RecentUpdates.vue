@@ -7,8 +7,7 @@
             - See
             <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</a>,
             <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'DanielNaroditsky')">Daniel Naroditsky</a>,
-            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'AlexandraBotez')">Alexandra Botez</a>,
-            and others
+            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'AlexandraBotez')">Alexandra Botez</a>, and others
         </li>
     </ul>
 </template>
