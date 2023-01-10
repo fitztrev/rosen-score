@@ -885,7 +885,7 @@ export default {
             }
 
             player(url)
-                .then((player: Profile) => {
+                .then(async (player: Profile) => {
                     this.player = player
                     window.document.title += ` - ${player.title} ${player.username}`
 
@@ -896,35 +896,35 @@ export default {
                     } else {
                         this.counts.totalGames = player.counts.all
                     }
-                })
-                .catch((e: DOMException) => {
-                    this.errors.api = e
-                })
 
-            if (!this.form.filters.sinceHoursAgo) {
-                await this.getCachedGames(url)
-            }
-
-            let sinceTimestamp = this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
-
-            if (this.usingCacheBeforeTimestamp) {
-                sinceTimestamp = this.usingCacheBeforeTimestamp
-            }
-
-            games(url, this.checkGameForTrophies, {
-                since: sinceTimestamp,
-                pgnInJson: true,
-                clocks: true,
-            })
-                .then(() => {
-                    this.isDownloadComplete = true
-                })
-                .catch((e: DOMException) => {
-                    // If the user cancels the download, don't show an error message
-                    if (e.message.includes('aborted')) {
-                        return
+                    if (!this.form.filters.sinceHoursAgo) {
+                        await this.getCachedGames(url)
                     }
 
+                    let sinceTimestamp = this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
+
+                    if (this.usingCacheBeforeTimestamp) {
+                        sinceTimestamp = this.usingCacheBeforeTimestamp
+                    }
+
+                    games(url, this.checkGameForTrophies, {
+                        since: sinceTimestamp,
+                        pgnInJson: true,
+                        clocks: true,
+                    })
+                        .then(() => {
+                            this.isDownloadComplete = true
+                        })
+                        .catch((e: DOMException) => {
+                            // If the user cancels the download, don't show an error message
+                            if (e.message.includes('aborted')) {
+                                return
+                            }
+
+                            this.errors.api = e
+                        })
+                })
+                .catch((e: DOMException) => {
                     this.errors.api = e
                 })
         },
