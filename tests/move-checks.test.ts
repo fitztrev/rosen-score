@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { pawnCheckmate, g5mate, enPassantCheckmate } from '../js/goals/move-checks'
 
 describe('test pawn checkmate', () => {
@@ -21,7 +21,7 @@ describe('test pawn checkmate', () => {
             [],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(pawnCheckmate(game.moves)).toStrictEqual(expected)
     })
 })
@@ -60,7 +60,7 @@ describe('test g5#', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(pawnCheckmate(game.moves)).toStrictEqual(expected)
         expect(g5mate(game.moves)).toStrictEqual(expected)
     })
@@ -78,7 +78,7 @@ describe('test en passant mate', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(enPassantCheckmate(game.moves)).toStrictEqual(expected)
     })
 })
@@ -90,7 +90,7 @@ describe('test not en passant mate', () => {
         // pawn capture mate
         'e4 e5 Qe2 Ke7 Qe3 Kf6 Be2 Kg6 f4 Kh6 b3 g5 Bb2 a6 Bxe5 c6 a3 Qc7 Nf3 a5 Nh4 a4 fxg5#',
     ])('test moves', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(enPassantCheckmate(game.moves)).toStrictEqual([])
     })
 })

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { knightCornerMate } from '../js/goals/move-checks'
 
 describe('knight to the corner checkmate', () => {
@@ -35,7 +35,7 @@ describe('knight to the corner checkmate', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(knightCornerMate(game.moves)).toStrictEqual(expected)
     })
 })

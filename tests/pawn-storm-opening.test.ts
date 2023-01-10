@@ -1,7 +1,8 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 
 import { pawnStormOpening } from '../js/goals/pawn-storm-opening'
+import { Game } from 'chess-fetcher'
 
 describe('pawn storm opening', () => {
     test.each([
@@ -16,7 +17,7 @@ describe('pawn storm opening', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
-        expect(pawnStormOpening({ result: { winner: 'white' } }, game.moves)).toStrictEqual(expected)
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
+        expect(pawnStormOpening({ result: { winner: 'white' } } as Game, game.moves)).toStrictEqual(expected)
     })
 })

@@ -1,3 +1,4 @@
+import { Game } from 'chess-fetcher'
 import { expect, test } from 'vitest'
 
 import adoptionMatch from '../js/goals/adoption-match'
@@ -16,15 +17,13 @@ test('test adoption match (single adoption)', () => {
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'black' }, players: { white: { username: '_black' }, black: { username: '_white' } } },
-    ]
+    ] as Game[]
 
-    let game
-
-    for (game of games) {
+    games.forEach((game) => {
         adoptionMatch.processGame(game)
-    }
+    })
 
-    expect(adoptionMatch.checkForAdoption(game, 10)).toStrictEqual([
+    expect(adoptionMatch.checkForAdoption(games[games.length - 1], 10)).toStrictEqual([
         {
             color: 'b',
         },
@@ -55,15 +54,13 @@ test('test adoption match (double adoption)', () => {
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'black' }, players: { white: { username: '_black' }, black: { username: '_white' } } },
-    ]
+    ] as Game[]
 
-    let game
-
-    for (game of games) {
+    games.forEach((game) => {
         adoptionMatch.processGame(game)
-    }
+    })
 
-    expect(adoptionMatch.checkForAdoption(game, 20)).toStrictEqual([
+    expect(adoptionMatch.checkForAdoption(games[games.length - 1], 20)).toStrictEqual([
         {
             color: 'b',
         },
@@ -85,13 +82,11 @@ test('test with a draw in the middle', () => {
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
         { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-    ]
+    ] as Game[]
 
-    let game
-
-    for (game of games) {
+    games.forEach((game) => {
         adoptionMatch.processGame(game)
-    }
+    })
 
-    expect(adoptionMatch.checkForAdoption(game, 10)).toStrictEqual([])
+    expect(adoptionMatch.checkForAdoption(games[games.length - 1], 10)).toStrictEqual([])
 })

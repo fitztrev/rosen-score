@@ -1,3 +1,4 @@
+import { Game } from 'chess-fetcher'
 import { describe, expect, test } from 'vitest'
 import { clutchPawn, winInsufficientMaterial } from '../js/goals/dirty-wins'
 
@@ -9,7 +10,7 @@ describe('clutch pawn', () => {
             [{ color: 'w' }],
         ],
     ])('test fen: %p', (fen, expected) => {
-        expect(clutchPawn({ result: { winner: 'white', via: 'timeout' } }, fen)).toStrictEqual(expected)
+        expect(clutchPawn({ result: { winner: 'white', via: 'timeout' } } as Game, fen)).toStrictEqual(expected)
     })
 })
 
@@ -21,7 +22,7 @@ describe('insufficient material', () => {
             [{ color: 'w' }],
         ],
     ])('test fen: %p', (fen, expected) => {
-        expect(winInsufficientMaterial({ result: { winner: 'white', via: 'timeout' } }, fen)).toStrictEqual(expected)
+        expect(winInsufficientMaterial({ result: { winner: 'white', via: 'timeout' } } as Game, fen)).toStrictEqual(expected)
     })
 })
 
@@ -35,6 +36,6 @@ describe('insufficient material with old chess.com game', () => {
             [{ color: 'b' }],
         ],
     ])('test fen: %p', (fen, expected) => {
-        expect(winInsufficientMaterial({ result: { winner: 'black', via: 'timeout' } }, fen)).toStrictEqual(expected)
+        expect(winInsufficientMaterial({ result: { winner: 'black', via: 'timeout' } } as Game, fen)).toStrictEqual(expected)
     })
 })

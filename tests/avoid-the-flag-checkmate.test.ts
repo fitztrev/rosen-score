@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { avoidTheFlagCheckmate } from '../js/goals/avoid-the-flag-checkmate'
+import { Game } from 'chess-fetcher'
 
 describe('avoid the flag', () => {
     test.each([
@@ -15,9 +16,9 @@ describe('avoid the flag', () => {
             ],
         ],
     ])('test pgn: %p', (pgn, expected) => {
-        let game = parse(pgn, { startRule: 'game' })
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } }, game.moves)).toStrictEqual(expected)
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } }, game.moves)).toStrictEqual([])
+        let game = parse(pgn, { startRule: 'game' }) as ParseTree
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } } as Game, game.moves)).toStrictEqual(expected)
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } } as Game, game.moves)).toStrictEqual([])
     })
 })
 
@@ -35,8 +36,8 @@ describe('avoid the flag when no clock info is available', () => {
             [],
         ],
     ])('test pgn: %p', (pgn, expected) => {
-        let game = parse(pgn, { startRule: 'game' })
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } }, game.moves)).toStrictEqual(expected)
-        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } }, game.moves)).toStrictEqual([])
+        let game = parse(pgn, { startRule: 'game' }) as ParseTree
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 60, increment: 0 } } as Game, game.moves)).toStrictEqual(expected)
+        expect(avoidTheFlagCheckmate({ timeControl: { initial: 180, increment: 2 } } as Game, game.moves)).toStrictEqual([])
     })
 })

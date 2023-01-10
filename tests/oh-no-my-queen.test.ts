@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { ohNoMyQueen } from '../js/goals/oh-no-my-queen'
 
 describe('test oh-no-my-queen', () => {
@@ -25,7 +25,7 @@ describe('test oh-no-my-queen', () => {
             ],
         ],
     ])('test moves: %p', (moves, color) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(ohNoMyQueen(game.moves)).toStrictEqual(color)
     })
 })
@@ -39,7 +39,7 @@ describe('test not oh-no-my-queen', () => {
         // there was a promoted queen
         'e4 e5 f4 exf4 Nf3 g5 Nc3 g4 Ne5 Qh4+ g3 fxg3 Qxg4 g2+ Qxh4 gxh1=Q Nd5 Be7 Qf4 Bd6 Qxf7+ Kd8 d3 Ne7 Bg5 Re8 Nf6 Rh8 Qe8+ Rxe8 Nf7#',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(ohNoMyQueen(game.moves)).toStrictEqual([])
     })
 })

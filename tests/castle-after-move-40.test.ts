@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { castleAfterMove40 } from '../js/goals/move-checks'
 
 describe('test castle after move 40', () => {
@@ -34,7 +34,7 @@ describe('test castle after move 40', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(castleAfterMove40(game.moves)).toStrictEqual(expected)
     })
 })
@@ -44,7 +44,7 @@ describe('test not castle after move 40', () => {
         // each side castles on exactly move 40
         '1. a4 a5 2. b4 b5 3. c4 c5 4. d4 d5 5. e4 e5 6. f4 f5 7. g4 g5 8. h4 h5 9. Nc3 Nc6 10. Nf3 Nf6 11. Bb2 Bb7 12. Bg2 Bg7 13. Qc2 Qc7 14. Qd2 Qd7 15. Qc2 Qc7 16. Qd2 Qd7 17. Qc2 Qc7 18. Qd2 Qd7 19. Qc2 Qc7 20. Qd2 Qd7 21. Qc2 Qc7 22. Qd2 Qd7 23. Qc2 Qc7 24. Qd2 Qd7 25. Qc2 Qc7 26. Qd2 Qd7 27. Qc2 Qc7 28. Qd2 Qd7 29. Qc2 Qc7 30. Qd2 Qd7 31. Qc2 Qc7 32. Qd2 Qd7 33. Qc2 Qc7 34. Qd2 Qd7 35. Qc2 Qc7 36. Qd2 Qd7 37. Qc2 Qc7 38. Qd2 Qd7 39. Qc2 Qc7 40. O-O-O O-O',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(castleAfterMove40(game.moves)).toStrictEqual([])
     })
 })

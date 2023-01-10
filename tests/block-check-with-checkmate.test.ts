@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 
 import { blockCheckWithCheckmate } from '../js/goals/block-check-with-checkmate'
 
@@ -16,7 +16,7 @@ describe('block a check with checkmate', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(blockCheckWithCheckmate(game.moves)).toStrictEqual(expected)
     })
 })

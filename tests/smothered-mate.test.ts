@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 
 import { smotheredMate, smotheredPorkMate } from '../js/goals/smothered-mate'
 
@@ -26,7 +26,7 @@ describe('test smothered mate', () => {
             ],
         ],
     ])('test moves: %p', (moves, color) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(smotheredMate(game.moves)).toStrictEqual(color)
     })
 })
@@ -37,7 +37,7 @@ describe('test not smothered mate', () => {
         // king is not smothered
         'e4 e5 Nf3 Nc6 Bc4 Bc5 c3 d6 d4 Bb6 Ng5 Nh6 Qh5 Qe7 h3 O-O O-O Kh8 Kh1 f6 Nf3 Nd8 Nh4 Ne6 Bxh6 gxh6 f4 exd4 f5 dxc3 Nxc3 Ng5 Qxh6 Nxe4 Ng6#',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(smotheredMate(game.moves)).toStrictEqual([])
     })
 })
@@ -66,7 +66,7 @@ describe('test smothered pork', () => {
             ],
         ],
     ])('test moves: %p', (moves, color) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(smotheredMate(game.moves)).toStrictEqual(color)
         expect(smotheredPorkMate(game.moves)).toStrictEqual(color)
     })
@@ -86,7 +86,7 @@ describe('test no smothered pork', () => {
         // smothered, but no pin
         'd4 Nf6 Nc3 d5 Bf4 c6 e3 g6 Nf3 Bg7 a3 O-O b4 a5 Na2 Bf5 Bd3 Nbd7 Bxf5 gxf5 Qd3 e6 O-O Ne4 Bg3 Kh8 c3 a4 Nd2 b5 Nxe4 fxe4 Qe2 f5 f4 Qe8 Nc1 Nf6 Qf2 Qg6 Ne2 Rf7 Nc1 Rg8 Ne2 Bf8 Kh1 h5 Bh4 Ng4 Qg3 Rfg7 Bg5 Be7 Ng1 Bxg5 fxg5 Qxg5 Rfe1 h4 Qh3 Nf2#',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(smotheredPorkMate(game.moves)).toStrictEqual([])
     })
 })

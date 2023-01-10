@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 
 import { royalFamilyFork } from '../js/goals/royal-family-fork'
 
@@ -36,7 +36,7 @@ describe('royal family fork', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(royalFamilyFork(game.moves)).toStrictEqual(expected)
     })
 })
@@ -53,7 +53,7 @@ describe('not royal family fork', () => {
         // https://lichess.org/dN9toDCc/black#62
         'd4 e6 Bf4 b6 Nf3 Bb7 Nc3 h6 Nb5 d6 e3 g5 Bg3 Bg7 Nc3 Nd7 h4 g4 Nd2 f5 Be2 Ngf6 f3 Nh5 Bh2 g3 Bg1 Bf6 f4 Ng7 Bh5+ Kf8 Bf3 Qc8 Bxb7 Qxb7 Qf3 d5 O-O-O Ne8 Qxg3 Rg8 Qf3 Rg4 Rh3 h5 Rg3 Nd6 Rxg4 hxg4 Qe2 Ke7 g3 b5 Bf2 b4 Na4 Qc6 b3 Nb5 Kb1 Nc3+ Nxc3 bxc3 Nc4 dxc4 Qxc4 Qxc4 bxc4 Rb8+ Ka1 Nb6 Rb1 Nd7 Rxb8 Nxb8 c5 Nd7 Kb1 c6 h5 Kf7 h6 Kg6 a4 Kh7 Ka2 Kxh6 Kb3 Kg6 Kxc3 Nxc5 Kc4 Ne4 Be1 e5 Ba5 exf4 gxf4 g3 Be1 g2 Bf2 Nxf2 d5 g1=Q dxc6 Qf1+ Kd5 Qa6 Ke6 Qc8+',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(royalFamilyFork(game.moves)).toStrictEqual([])
     })
 })

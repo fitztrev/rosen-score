@@ -1,10 +1,10 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { checkmateAtMoveNumber } from '../js/goals/checkmate-at-move-number'
 
 test('2 moves', () => {
     let moves = 'g4 e5 f3 Qh4#'
-    let game = parse(moves, { startRule: 'game' })
+    let game = parse(moves, { startRule: 'game' }) as ParseTree
     expect(checkmateAtMoveNumber(game.moves, 2)).toStrictEqual([{ color: 'b', onMoveNumber: 4 }])
 })
 
@@ -21,7 +21,7 @@ describe('test 3 moves', () => {
             [{ color: 'b', onMoveNumber: 6 }],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(checkmateAtMoveNumber(game.moves, 3)).toStrictEqual(expected)
     })
 })
@@ -39,7 +39,7 @@ describe('test 4 moves', () => {
             [{ color: 'b', onMoveNumber: 8 }],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(checkmateAtMoveNumber(game.moves, 4)).toStrictEqual(expected)
     })
 })

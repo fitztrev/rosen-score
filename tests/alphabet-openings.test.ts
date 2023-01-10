@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { alphabetOpening } from '../js/goals/alphabet-openings'
+import { Game } from 'chess-fetcher'
 
 describe('test not alphabet opening', () => {
     test.each([
@@ -8,14 +9,14 @@ describe('test not alphabet opening', () => {
         ['egg', '1. a3 a6 2. e3 b6 3. g4 c6 4. g5'], // egg after move 1 ("aegg")
         ['egg', '1. e3 a6 2. g4 b6 3. Bc4'], // "egB"
     ])('test alphabet opening: %p', (word, moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(
             alphabetOpening(
                 {
                     result: {
                         winner: 'white',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -26,7 +27,7 @@ describe('test not alphabet opening', () => {
                     result: {
                         winner: 'black',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -37,7 +38,7 @@ describe('test not alphabet opening', () => {
                     result: {
                         outcome: 'draw',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -59,14 +60,14 @@ describe('test alphabet openings', () => {
         // captures
         ['egg', '1. e4 b6 2. g4 f5 3. gxf5'],
     ])('test alphabet opening: %p', (word, moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(
             alphabetOpening(
                 {
                     result: {
                         winner: 'white',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -84,14 +85,14 @@ describe('test alphabet openings', () => {
         // captures
         ['egg', '1. a3 e6 2. f4 g5 3. b3 gxf4'],
     ])('test alphabet opening: %p', (word, moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(
             alphabetOpening(
                 {
                     result: {
                         winner: 'black',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -106,14 +107,14 @@ describe('test alphabet openings', () => {
 
 describe('test both colors play it, but black wins', () => {
     test.each([['egg', '1. e3 e6 2. g3 g6 3. g4 g5']])('test alphabet opening: %p', (word, moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(
             alphabetOpening(
                 {
                     result: {
                         winner: 'black',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )
@@ -129,14 +130,14 @@ describe('test alphabet opening from real game', () => {
             'c4 c5 a3 Nf6 b3 g6 b4 Bg7 a4 cxb4 g3 O-O e3 d6 Bg2 Nc6 d4 Bg4 Ne2 e5 d5 Na5 Nd2 Rc8 h3 Bf5 e4 Bd7 Qc2 Qc7 Bb2 Nxc4 Rc1 b5 axb5 Bxb5 O-O Qb6 Nxc4 Rxc4 Qd2 Rfc8 g4 Nd7 h4 a5 h5 a4 Rb1 Rc2 Rfc1 Rxd2 Rxc8+ Bf8 Bc1 Rxe2 Bh6 Qxf2+ Kh1 Qxg2#',
         ],
     ])('test alphabet opening: %p', (word, moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(
             alphabetOpening(
                 {
                     result: {
                         winner: 'white',
                     },
-                },
+                } as Game,
                 word,
                 game.moves
             )

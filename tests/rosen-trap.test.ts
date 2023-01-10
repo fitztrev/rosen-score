@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { rosenTrap } from '../js/goals/rosen-trap'
+import { Game } from 'chess-fetcher'
 
 describe('test rosen trap', () => {
     test.each([
@@ -25,10 +26,10 @@ describe('test rosen trap', () => {
             ],
         ],
     ])('test moves: %p', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
 
-        expect(rosenTrap({ result: { via: 'stalemate' } }, game.moves)).toStrictEqual(expected)
-        expect(rosenTrap({ result: { via: 'checkmate' } }, game.moves)).toStrictEqual([])
+        expect(rosenTrap({ result: { via: 'stalemate' } } as Game, game.moves)).toStrictEqual(expected)
+        expect(rosenTrap({ result: { via: 'checkmate' } } as Game, game.moves)).toStrictEqual([])
     })
 })
 
@@ -42,8 +43,8 @@ describe('test no rosen trap', () => {
         // king cannot capture queen
         'e4 Nf6 Nc3 d5 exd5 Nxd5 Bc4 Nxc3 bxc3 g6 Nf3 Bg7 O-O O-O d4 c5 Qe2 Nc6 Rd1 Bg4 d5 Ne5 Bf4 Nxf3+ gxf3 Bf5 Qe3 b6 Re1 Bf6 Be5 Bxc2 Re2 Bf5 Rae1 Qd7 Kh1 Rad8 Qf4 Qa4 d6 Bxe5 Bxf7+ Rxf7 Qxa4 exd6 f4 Bxc3 Re8+ Rxe8 Rxe8+ Kg7 h4 h5 Qb3 Bf6 Qg3 d5 a4 d4 Qf3 d3 Qa8 c4 Rg8+ Kh7 Rc8 Bxc8 Qxc8 d2 Qd8 Bxd8 Kg2 d1=Q a5 Qd4 a6 Qxf4 Kg1 Qf3 Kh2 Qxf2+ Kh1 Qg3',
     ])('test moves: %p', (moves) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
 
-        expect(rosenTrap({ result: { via: 'stalemate' } }, game.moves)).toStrictEqual([])
+        expect(rosenTrap({ result: { via: 'stalemate' } } as Game, game.moves)).toStrictEqual([])
     })
 })

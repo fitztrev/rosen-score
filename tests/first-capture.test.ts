@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 
 import { getMoveNumberOfFirstCapture, noCapturesBeforeMoveNumber } from '../js/goals/first-capture'
 
@@ -76,7 +76,7 @@ describe('test first capture on move number', () => {
             [],
         ],
     ])('test moves: %p', (moves, captureOnMove, beforeMove30) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
 
         expect(getMoveNumberOfFirstCapture(game.moves)).toBe(captureOnMove)
         expect(noCapturesBeforeMoveNumber(game.moves, 30)).toStrictEqual(beforeMove30)

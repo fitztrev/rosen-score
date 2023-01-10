@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { parse } from '@mliebelt/pgn-parser'
+import { parse, ParseTree } from '@mliebelt/pgn-parser'
 import { consecutiveCapturesAnySquare, consecutiveCapturesSameSquare } from '../js/goals/consecutive-captures'
 
 describe('test consecutive captures - any square', () => {
@@ -29,7 +29,7 @@ describe('test consecutive captures - any square', () => {
             [],
         ],
     ])('test', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(consecutiveCapturesAnySquare(game.moves, 10)).toStrictEqual(expected)
     })
 })
@@ -68,7 +68,7 @@ describe('test consecutive captures - same square', () => {
             [],
         ],
     ])('test', (moves, expected) => {
-        let game = parse(moves, { startRule: 'game' })
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(consecutiveCapturesSameSquare(game.moves, 12)).toStrictEqual(expected)
     })
 })

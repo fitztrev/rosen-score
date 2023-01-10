@@ -1,3 +1,4 @@
+import { Game } from 'chess-fetcher'
 import { describe, expect, test } from 'vitest'
 import { doubleCheckCheckmate } from '../js/goals/double-check-checkmate'
 
@@ -14,6 +15,6 @@ describe('test double-check checkmate', () => {
             ],
         ],
     ])('test fen: %p', (fen, expected) => {
-        expect(doubleCheckCheckmate({ result: { winner: 'white', via: 'checkmate' }, moves: [1, 2, 3] }, fen)).toStrictEqual(expected)
+        expect(doubleCheckCheckmate({ result: { winner: 'white', via: 'checkmate' }, moves: [{}, {}, {}] } as Game, fen)).toStrictEqual(expected)
     })
 })
