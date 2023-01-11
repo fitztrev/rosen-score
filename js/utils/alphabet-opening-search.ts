@@ -11,7 +11,7 @@ export function alphabetOpeningSearch(moves: Move[]) {
 
         let upto = moveString.indexOf('.')
         if (upto > -1) {
-            return moveString.substr(0, upto)
+            return moveString.substring(0, upto)
         }
 
         return moveString

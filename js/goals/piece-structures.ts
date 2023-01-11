@@ -232,11 +232,14 @@ export function connectEightOnRank(fen: string, rank: number): TrophyCheckResult
     const position = fenToPosition(fen)
     let result: TrophyCheckResult = []
 
-    if (position.substr(64 - 8 * rank, 8) === 'PPPPPPPP') {
+    const startingSquareForWhite = 64 - 8 * rank
+    const startingSquareForBlack = 8 * (rank - 1)
+
+    if (position.substring(startingSquareForWhite, startingSquareForWhite + 8) === 'PPPPPPPP') {
         result.push({
             color: 'w',
         })
-    } else if (position.substr(8 * (rank - 1), 8) === 'pppppppp') {
+    } else if (position.substring(startingSquareForBlack, startingSquareForBlack + 8) === 'pppppppp') {
         result.push({
             color: 'b',
         })
@@ -414,14 +417,14 @@ export function pawnTrapezoid(fen: string): TrophyCheckResult {
     let result: TrophyCheckResult = []
     let match
 
-    match = position.substr(0, 40).match(/PP([A-Za-z\.]{5})P([A-Za-z\.]{2})P([A-Za-z\.]{3})P([A-Za-z\.]{4})P/)
+    match = position.substring(0, 40).match(/PP([A-Za-z\.]{5})P([A-Za-z\.]{2})P([A-Za-z\.]{3})P([A-Za-z\.]{4})P/)
     if (match && match.index! % 8 >= 2 && match.index! % 8 <= 4) {
         result.push({
             color: 'w',
         })
     }
 
-    match = position.substr(24, 64).match(/p([A-Za-z\.]{4})p([A-Za-z\.]{3})p([A-Za-z\.]{2})p([A-Za-z\.]{5})pp/)
+    match = position.substring(24, 64).match(/p([A-Za-z\.]{4})p([A-Za-z\.]{3})p([A-Za-z\.]{2})p([A-Za-z\.]{5})pp/)
     if (match && match.index! % 8 <= 2) {
         result.push({
             color: 'b',
