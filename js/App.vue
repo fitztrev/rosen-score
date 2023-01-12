@@ -674,8 +674,6 @@
             <div class="text-slate-400">
                 Not affiliated with Eric Rosen, Lichess, or Chess.com.
                 <br />
-                Join the <a href="https://discord.gg/Es59G5Sms6" target="_blank" class="dotted-underline">Discord server</a>
-                |
                 <a href="https://github.com/rosen-score" target="_blank" class="dotted-underline">Github</a>
                 | Find a bug? Have a comment? Fill out
                 <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
