@@ -22,6 +22,25 @@ describe('2-bishop mate', () => {
             )
         ).toStrictEqual([expected])
     })
+})
+
+describe('not 2-bishop mate', () => {
+    test.each([
+        ['white', 'k7/8/1KBB4/8/8/8/6P1/8 b - - 0 1'], // has an extra pawn
+        ['black', 'K7/8/1kbb4/8/8/8/6p1/8 w - - 0 1'], // has an extra pawn
+    ])('test FEN: %p %p', (winner, fen) => {
+        expect(
+            twoBishopMate(
+                {
+                    result: {
+                        via: 'checkmate',
+                        winner: winner,
+                    },
+                } as Game,
+                fen
+            )
+        ).toStrictEqual([])
+    })
 
     test('game did not end in checkmate', () => {
         expect(twoBishopMate({ result: { outcome: 'draw' } } as Game, '8/1P6/8/4b3/4b3/1k6/8/K7 w - - 0 1')).toStrictEqual([])

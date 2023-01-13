@@ -6,6 +6,11 @@ test('2 moves', () => {
     let moves = 'g4 e5 f3 Qh4#'
     let game = parse(moves, { startRule: 'game' }) as ParseTree
     expect(checkmateAtMoveNumber(game.moves, 2)).toStrictEqual([{ color: 'b', onMoveNumber: 4 }])
+
+    expect(checkmateAtMoveNumber(game.moves, 0)).toStrictEqual([])
+    expect(checkmateAtMoveNumber(game.moves, 1)).toStrictEqual([])
+    expect(checkmateAtMoveNumber(game.moves, 3)).toStrictEqual([])
+    expect(checkmateAtMoveNumber(game.moves, 4)).toStrictEqual([])
 })
 
 describe('test 3 moves', () => {

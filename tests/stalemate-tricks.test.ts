@@ -12,6 +12,7 @@ describe('test no stalemate tricks', () => {
         // '8/8/8/8/8/5p2/5K1p/7k b - - 1 61', // https://lichess.org/iaGKskaV#121
     ])('test FEN: %p', (fen) => {
         expect(stalemateTricks({ result: { via: 'stalemate' } } as Game, fen)).toStrictEqual([])
+        expect(stalemateTricks({ result: { via: 'repetition' } } as Game, fen)).toStrictEqual([])
     })
 })
 

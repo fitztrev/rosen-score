@@ -34,26 +34,26 @@ test('test adoption match (double adoption)', () => {
     adoptionMatch.reset()
 
     let games = [
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'white' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
-        { result: { winner: 'black' }, players: { white: { username: '_black' }, black: { username: '_white' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'black' }, players: { white: { username: '_white' }, black: { username: '_black' } } },
+        { result: { winner: 'white' }, players: { white: { username: '_black' }, black: { username: '_white' } } },
     ] as Game[]
 
     games.forEach((game) => {
@@ -62,7 +62,7 @@ test('test adoption match (double adoption)', () => {
 
     expect(adoptionMatch.checkForAdoption(games[games.length - 1], 20)).toStrictEqual([
         {
-            color: 'b',
+            color: 'w',
         },
     ])
 })
