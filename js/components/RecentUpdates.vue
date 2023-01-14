@@ -5,9 +5,12 @@
             <changelog-date :year="2023" :month="1" :day="9"></changelog-date>
             - Added support for <strong>Chess.com</strong>
             - See
-            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</a>,
-            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'DanielNaroditsky')">Daniel Naroditsky</a>,
-            <a href="#" class="dotted-underline" @click.prevent="formFill('chesscom', 'AlexandraBotez')">Alexandra Botez</a>, and others
+            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</span>,
+            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'DanielNaroditsky')"
+                >Daniel Naroditsky</span
+            >,
+            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'AlexandraBotez')">Alexandra Botez</span>,
+            and others
         </li>
     </ul>
 </template>
