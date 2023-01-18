@@ -21,7 +21,7 @@
                 <div class="flex flex-row mb-4">
                     <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <div>
+                        <!-- <div>
                             Select which site:
 
                             <div class="text-sky-900">
@@ -34,9 +34,9 @@
                                     Chess.com
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="mt-2">
-                            Enter username:
+                            Enter Lichess username:
 
                             <input
                                 type="text"
@@ -48,14 +48,14 @@
                             />
 
                             <div class="text-sm">
-                                Or see
+                                Or
                                 <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
-                                    Eric Rosen's Lichess
+                                    click here to see EricRosen's
                                 </span>
-                                or
+                                <!-- or
                                 <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'IMRosen')">
                                     his Chess.com
-                                </span>
+                                </span> -->
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                 </div>
             </form>
 
-            <RecentUpdates @form-fill="formFill" />
+            <!-- <RecentUpdates @form-fill="formFill" /> -->
         </div>
 
         <download-progress
@@ -672,10 +672,9 @@
                 <a href="#" @click.prevent="exportAsJson" class="dotted-underline">JSON</a>
             </div>
             <div class="text-slate-400">
-                Not affiliated with Eric Rosen, Lichess, or Chess.com.
+                Not affiliated with Eric Rosen.
                 <br />
-                <a href="https://github.com/rosen-score" target="_blank" class="dotted-underline">Github</a>
-                | Find a bug? Have a comment? Fill out
+                Find a bug? Have a comment? Fill out
                 <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
             </div>
         </div>
