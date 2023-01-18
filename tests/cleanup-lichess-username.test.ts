@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest'
-
-import cleanupLichessUsername from '../js/utils/cleanup-lichess-username'
+import { cleanupInput } from '../js/utils/cleanup-input'
 
 describe('test cleanup usernames', () => {
     test.each([
@@ -10,17 +9,17 @@ describe('test cleanup usernames', () => {
         ['https://lichess.org/@/EricRosen', 'EricRosen'],
         ['https://lichess.org/EricRosen', 'EricRosen'],
         ['https://lichess.org/EricRosen', 'EricRosen'],
+        ['https://www.chess.com/member/imrosen', 'imrosen'],
     ])('test input: %p', (input, expected) => {
-        expect(cleanupLichessUsername(input)).toBe(expected)
+        expect(cleanupInput(input)).toBe(expected)
     })
 })
 
 describe('keep arena links unchanged', () => {
-    test.each([
-        'https://lichess.org/swiss/48jrx3m6',
-        'https://lichess.org/tournament/winter21',
-        'https://lichess.org/tournament/2oEh6hZw',
-    ])('test input: %p', (input) => {
-        expect(cleanupLichessUsername(input)).toBe(input)
-    })
+    test.each(['https://lichess.org/swiss/48jrx3m6', 'https://lichess.org/tournament/winter21', 'https://lichess.org/tournament/2oEh6hZw'])(
+        'test input: %p',
+        (input) => {
+            expect(cleanupInput(input)).toBe(input)
+        }
+    )
 })

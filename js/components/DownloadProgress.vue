@@ -6,12 +6,7 @@
         </div>
 
         <template v-if="hideProgressBar">
-            <svg
-                class="animate-spin my-2 mx-auto h-10 w-10 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-            >
+            <svg class="animate-spin my-2 mx-auto h-10 w-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path
                     class="opacity-75"
@@ -56,13 +51,7 @@
                     type="button"
                     class="px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="inline h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -84,13 +73,13 @@ export default {
     computed: {
         percentDownloaded: function () {
             if (this.downloaded && this.total) {
-                return (this.downloaded / this.total) * 100
+                return Math.min((this.downloaded / this.total) * 100, 100)
             } else {
                 return 0
             }
         },
         percentDownloadedDisplay: function () {
-            return Math.round(this.percentDownloaded)
+            return Math.min(Math.round(this.percentDownloaded), 99)
         },
     },
 

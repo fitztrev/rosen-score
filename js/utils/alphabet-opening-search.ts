@@ -1,6 +1,6 @@
 import { Color, Move } from 'chess.js'
 
-export default function (moves: Move[]) {
+export function alphabetOpeningSearch(moves: Move[]) {
     let getPawnPushes = function (moves: Move[], color: Color) {
         let moveString = moves
             .filter((move) => move.color === color)
@@ -11,7 +11,7 @@ export default function (moves: Move[]) {
 
         let upto = moveString.indexOf('.')
         if (upto > -1) {
-            return moveString.substr(0, upto)
+            return moveString.substring(0, upto)
         }
 
         return moveString

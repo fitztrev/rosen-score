@@ -2,7 +2,7 @@
 
 https://rosen-score.vercel.app/
 
-This is entirely a frontend application (HTML/JS/CSS), so you can run it pretty easily on your own computer.
+This is entirely a frontend application, so you can run it pretty easily on your own computer.
 
 Your browser makes the request directly to the Lichess API to get the games. Then the games are analyzed with javascript (again, in your own browser). Each move from every game is played through and analyzed for specific positions or other criteria.
 
@@ -15,9 +15,13 @@ npm install
 npm run dev
 ```
 
+Will start a local server at http://localhost:5173/
+
 ```bash
 ## Run the test suite
 npm run test
+## or
+npm run watch
 
 ## Check code coverage
 npm run coverage

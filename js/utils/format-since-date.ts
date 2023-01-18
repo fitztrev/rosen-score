@@ -1,4 +1,4 @@
-export default function (timestamp: number) {
+export function formatSinceDate(timestamp: number) {
     let dateInstance = new Date(timestamp)
 
     let date = dateInstance.toLocaleDateString(undefined, {

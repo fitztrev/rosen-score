@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "https://lichess.org/game/export/Bc7Zyr8T",
-    "url": "https://lichess.org/game/export/aqBxshGS",
+    "url": "https://lichess.org/game/export/FyVJGl1j?pgnInJson=true&clocks=true",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-11-06T18:51:13.395Z",
-    "modified": "2022-12-29T02:01:40.679Z",
+    "modified": "2023-01-08T22:12:52.388Z",
     "headers": [
       {
         "name": "Accept",
@@ -20,7 +20,18 @@
         "isDisabled": true
       }
     ],
-    "params": [],
+    "params": [
+      {
+        "name": "pgnInJson",
+        "value": "true",
+        "isPath": false
+      },
+      {
+        "name": "clocks",
+        "value": "true",
+        "isPath": false
+      }
+    ],
     "tests": []
   }
 ]

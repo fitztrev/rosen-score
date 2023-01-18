@@ -43,12 +43,6 @@ Looking for contributors who can...
         1. suggestion: crazy time scramble: both players have less than 1 second and after 30 moves I win by time
         1. "Setup for the next game" trophy - 1st rank is restored late in the game?
 
-1. Improve development process
-
-    - I keep a local copy of all of Eric's games as well as other notable players (Chess-Network, etc)
-    - When a new trophy is added, I test it by running the app against this local copy instead of fetching from Lichess API
-    - How can I make this easier instead of changing the `url` of where it fetches from?
-
 1. Incorrect Trophies
 
     1. "Stalemate Tricks"
@@ -62,8 +56,6 @@ Looking for contributors who can...
 1. Add an "update results" button after the report has been run
 
     - If someone is speedrunning, let them download only the new games and add to existing report instead of re-running the entire report
-
-1. Make it quicker and easier to run on popular players (Magnus, Naroditsky, Agadmator, etc). Cache the results.
 
 1. Find YouTube examples for trophies that are missing a YouTube link
 

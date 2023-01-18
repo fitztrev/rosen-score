@@ -1,6 +1,5 @@
 import { expect, test } from 'vitest'
-
-import pawnCaptures from '../js/utils/pawn-captures'
+import { pawnCaptures } from '../js/utils/pawn-captures'
 
 test('test pawn captures', () => {
     expect(pawnCaptures('b', 'g6')).toStrictEqual(['f7', 'h7'])

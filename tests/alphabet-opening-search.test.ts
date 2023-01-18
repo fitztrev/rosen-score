@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { Chess, Move } from 'chess.js'
-
-import alphabetOpeningSearch from '../js/utils/alphabet-opening-search'
+import { alphabetOpeningSearch } from '../js/utils/alphabet-opening-search'
 
 describe('test alphabet opening search', () => {
     test.each([

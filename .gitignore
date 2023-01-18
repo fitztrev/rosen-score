@@ -1,10 +1,7 @@
 TODO.md
+
 node_modules
 
-/.parcel-cache
-/dist
-
 /cache/*.txt
-
 /coverage
-/data/*
+/dist

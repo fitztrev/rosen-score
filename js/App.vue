@@ -15,102 +15,70 @@
 
         <div
             class="my-8 bg-indigo-100 border border-indigo-200 drop-shadow-2xl mx-auto p-4 rounded-lg shadow-indigo-500/50 shadow-lg text-sky-600 md:w-1/2"
-            v-if="!isDownloading && !reportObject.data"
+            v-if="!isDownloading && !isDownloadComplete"
         >
             <form @submit.prevent="startDownload">
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        1
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        Enter Lichess.org username or arena URL:
+                        <div>
+                            Select which site:
 
-                        <input
-                            type="text"
-                            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            placeholder="Lichess username or arena URL here"
-                            spellcheck="false"
-                            data-lpignore="true"
-                            v-model="formInputValue"
-                            @change="formInputValueEntered"
-                        />
+                            <div class="text-sky-900">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="site" value="lichess" v-model="form.type" />
+                                    Lichess
+                                </label>
+                                <label class="cursor-pointer ml-4">
+                                    <input type="radio" name="site" value="chesscom" v-model="form.type" />
+                                    Chess.com
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            Enter username:
 
-                        <div class="text-sm">
-                            Or
-                            <span
-                                class="dotted-underline text-sky-900 cursor-pointer"
-                                @click.prevent="formFill('EricRosen')"
-                            >
-                                click here to see EricRosen's
-                            </span>
+                            <input
+                                type="text"
+                                class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                placeholder="Username here"
+                                spellcheck="false"
+                                data-lpignore="true"
+                                v-model="form.value"
+                            />
+
+                            <div class="text-sm">
+                                Or see
+                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
+                                    Eric Rosen's Lichess
+                                </span>
+                                or
+                                <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'IMRosen')">
+                                    his Chess.com
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        2
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">2 <ArrowIcon /></div>
                     <div class="basis-3/4">
                         <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login>
                     </div>
                 </div>
 
                 <div class="flex flex-row">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
-                        3
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="inline h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                        </svg>
-                    </div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">3 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <div class="text-sm mt-1 mb-2" v-if="!formInputValue.includes('lichess.org')">
+                        <div class="text-sm mt-1 mb-2">
                             Check games since
                             <select
-                                v-model.number="filter.sinceHoursAgo"
+                                v-model.number="form.filters.sinceHoursAgo"
                                 class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 md:w-28"
                             >
                                 <option :value="6">6 hours ago</option>
-                                <option :value="24">yesterday</option>
+                                <option :value="24">24 hours ago</option>
                                 <option :value="24 * 7">last week</option>
                                 <option :value="24 * 31">last month</option>
                                 <option :value="0">forever</option>
@@ -121,13 +89,7 @@
                             type="submit"
                             class="px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="inline h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -138,14 +100,8 @@
                             Click here to analyze
                         </button>
 
-                        <div v-if="errorMsg" class="mt-2 font-bold text-red-500">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="inline h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
+                        <div v-if="errors.form" class="mt-2 font-bold text-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -153,7 +109,7 @@
                                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                                 />
                             </svg>
-                            {{ errorMsg }}
+                            {{ errors.form }}
                         </div>
                     </div>
                 </div>
@@ -163,26 +119,25 @@
         </div>
 
         <download-progress
-            v-if="isDownloading && reportObject.data"
-            :title="reportObject.data.username || reportObject.data.fullName || reportObject.data.name"
+            v-if="isDownloading && !isDownloadComplete"
+            :title="player.username"
             :positions="counts.totalMoves"
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
-            :hideProgressBar="usingCachedData || filter.sinceHoursAgo"
-            @cancel-download="cancelFetch"
+            :hideProgressBar="form.filters.sinceHoursAgo"
+            @cancel-download="cancelDownload"
         ></download-progress>
 
-        <div v-if="reportObject.data" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
+        <div v-if="errors.api.message" class="text-center bg-orange-800 p-3">
+            There was an error from the {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
+            <strong>{{ errors.api }}</strong>
+
+            <p>Try only running 1 Rosen Score report at a time. You may have to wait before trying again.</p>
+        </div>
+
+        <div v-if="player.username" class="mt-8 bg-sky-800 p-4 text-center rounded-lg">
             <h2 class="text-2xl">
-                <template v-if="reportObject.type === 'user'">
-                    <lichess-username
-                        :title="reportObject.data.title"
-                        :name="reportObject.data.username"
-                    ></lichess-username>
-                </template>
-                <template v-else>
-                    {{ reportObject.data.fullName || reportObject.data.name }}
-                </template>
+                <username-formatter :title="player.title" :username="player.username"></username-formatter>
                 has
                 <strong class="font-bold">{{ trophyCount.toLocaleString() }}</strong>
                 Rosen
@@ -191,11 +146,13 @@
             </h2>
 
             <div class="mb-1">
+                on
+                <strong>{{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
                 and has completed
-                <strong> {{ totalAccomplishmentsCompletedPercentage }}% </strong>
+                <strong> {{ totalAccomplishmentsCompletedPercentage }}%</strong>
                 of the goals ({{ totalAccomplishmentsCompleted }}
                 out of
-                {{ totalAccomplishmentsPossible }})
+                {{ trophyTypeCount }})
             </div>
 
             <div class="mb-1" v-if="sinceDateFormatted">since {{ sinceDateFormatted }}</div>
@@ -203,17 +160,10 @@
             <trophy-collection :count="trophyCount" size="large"></trophy-collection>
 
             <div class="text-sm mt-2">
-                <template v-if="usingCachedData && isDownloadComplete">
-                    <strong>{{ counts.totalGames.toLocaleString() }}</strong>
-                    games analyzed
-                </template>
-
-                <template v-if="!usingCachedData">
-                    <strong>{{ counts.totalMoves.toLocaleString() }}</strong>
-                    positions and
-                    <strong>{{ counts.downloaded.toLocaleString() }}</strong>
-                    games analyzed
-                </template>
+                <strong>{{ counts.totalMoves.toLocaleString() }}</strong>
+                positions and
+                <strong>{{ counts.downloaded.toLocaleString() }}</strong>
+                games analyzed
             </div>
         </div>
 
@@ -222,34 +172,34 @@
                 <h2 class="heading">Make Eric Proud</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Oh No My Queen"
                         desc="Sacrifice your Queen for mate"
-                        :games="pointsByAccomplishment['ohNoMyQueen']"
+                        :trophies="playerTrophiesByType['ohNoMyQueen'] || {}"
                         gameLink="https://lichess.org/heNcmap1#39"
                         youtubeLink="https://youtu.be/x24BFszZ5Zw?t=189"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Stalemate Tricks"
                         desc="Stalemate from a losing position"
-                        :games="pointsByAccomplishment['stalemateTricks']"
+                        :trophies="playerTrophiesByType['stalemateTricks'] || {}"
                         gameLink="https://lichess.org/LahQPSJt#134"
                         youtubeLink="https://www.youtube.com/watch?v=aNDNwB2nruA"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Rosen Trap"
                         desc="King goes to the corner instead of capturing the queen"
-                        :games="pointsByAccomplishment['rosenTrap']"
+                        :trophies="playerTrophiesByType['rosenTrap'] || {}"
                         gameLink="https://lichess.org/fBcFhVs4#90"
                         youtubeLink="https://youtu.be/ixAw0ED-Sfs"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Castle Fork"
                         desc="Castle with check and then your king captures a piece"
-                        :games="pointsByAccomplishment['castleFork']"
+                        :trophies="playerTrophiesByType['castleFork'] || {}"
                         gameLink="https://lichess.org/xEjSVeYp#41"
                         youtubeLink="https://www.youtube.com/watch?v=_nvoEbgzsb0"
                     ></accomplishment-score>
@@ -258,111 +208,111 @@
                 <h2 class="heading">Pawn Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 5"
                         desc="Connect 5 of your pawns diagonally"
-                        :games="pointsByAccomplishment['connectFive']"
+                        :trophies="playerTrophiesByType['connectDiagonally:5'] || {}"
                         gameLink="https://lichess.org/FL2vDAZL#37"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Pawn Diamond"
                         desc="Does your pawn diamond last forever?"
-                        :games="pointsByAccomplishment['pawnDiamond']"
+                        :trophies="playerTrophiesByType['pawnDiamond'] || {}"
                         gameLink="https://lichess.org/d43FgnVj/black#32"
                         youtubeLink="https://youtu.be/J3TSlTZpBfc?t=456"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 6"
                         desc="Connect 6 of your pawns diagonally"
-                        :games="pointsByAccomplishment['connectSix']"
+                        :trophies="playerTrophiesByType['connectDiagonally:6'] || {}"
                         gameLink="https://lichess.org/CXvrZTzL#73"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Double Pawn Diamond"
-                        :games="pointsByAccomplishment['doublePawnDiamond']"
+                        :trophies="playerTrophiesByType['doublePawnDiamond'] || {}"
                         gameLink="https://lichess.org/V0NGitnD/black#66"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Pawn X"
                         desc="X-formation with pawns"
-                        :games="pointsByAccomplishment['pawnX']"
+                        :trophies="playerTrophiesByType['pawnX'] || {}"
                         gameLink="https://lichess.org/2gQ8HOw1#65"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Solid Pawn Diamond"
                         desc="A 5 carat pawn diamond"
-                        :games="pointsByAccomplishment['pawnDiamondSolid']"
+                        :trophies="playerTrophiesByType['pawnDiamondSolid'] || {}"
                         gameLink="https://lichess.org/Ak0Bhmx8/black#46"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Pawn Cube"
                         desc="Is your pawn cube indestructible?"
-                        :games="pointsByAccomplishment['pawnCube']"
+                        :trophies="playerTrophiesByType['pawnCube'] || {}"
                         gameLink="https://lichess.org/lhkF3hJB/black#22"
                         youtubeLink="https://www.youtube.com/watch?v=Q7fQQB1bgxQ"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Center Pawn Cube"
                         desc="Pawn cube in the exact center of the board"
-                        :games="pointsByAccomplishment['pawnCubeCenter']"
+                        :trophies="playerTrophiesByType['pawnCubeCenter'] || {}"
                         gameLink="https://lichess.org/EXwOWSu5/black#48"
                         youtubeLink="https://youtu.be/x8t-MlIWE3w?t=573"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Quadrupled Pawns"
                         desc="4 pawns on the same file"
-                        :games="pointsByAccomplishment['quadrupledPawns']"
+                        :trophies="playerTrophiesByType['quadrupledPawns'] || {}"
                         gameLink="https://lichess.org/aqADXuJT#85"
                         youtubeLink="https://youtu.be/3jyX_8JX9xg?t=9581"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Pawn Trapezoid"
                         desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :games="pointsByAccomplishment['pawnTrapezoid']"
+                        :trophies="playerTrophiesByType['pawnTrapezoid'] || {}"
                         gameLink="https://lichess.org/38zR9IeJ#57"
                         youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 4th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank4']"
+                        :trophies="playerTrophiesByType['connectEightOnRank:4'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#87"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=537"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 5th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank5']"
+                        :trophies="playerTrophiesByType['connectEightOnRank:5'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#109"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=594"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 6th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank6']"
+                        :trophies="playerTrophiesByType['connectEightOnRank:6'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#129"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=612"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 7th Rank"
-                        :games="pointsByAccomplishment['connectEightOnRank7']"
+                        :trophies="playerTrophiesByType['connectEightOnRank:7'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#149"
                         youtubeLink="https://youtu.be/AuIElYfxrEk?t=687"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="6 Pawns on the Same File"
-                        :games="pointsByAccomplishment['sixPawnsInTheSameFile']"
+                        :trophies="playerTrophiesByType['sixPawnsInTheSameFile'] || {}"
                         gameLink="https://lichess.org/JCD2jmRs#91"
                     ></accomplishment-score>
                 </div>
@@ -370,16 +320,16 @@
                 <h2 class="heading">Piece Structures</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Knight Cube"
-                        :games="pointsByAccomplishment['knightCube']"
+                        :trophies="playerTrophiesByType['knightCube'] || {}"
                         gameLink="https://lichess.org/KFZm4x4A/black#176"
                         youtubeLink="https://www.youtube.com/watch?v=FqAako5iZN4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Knight Rectangle"
-                        :games="pointsByAccomplishment['knightRectangle']"
+                        :trophies="playerTrophiesByType['knightRectangle'] || {}"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5587"
                     ></accomplishment-score>
@@ -388,66 +338,66 @@
                 <h2 class="heading">Alphabet Openings</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Egg"
                         desc="Win after spelling &ldquo;egg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:egg']"
+                        :trophies="playerTrophiesByType['alphabet:egg'] || {}"
                         gameLink="https://lichess.org/1SHm5hr6/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Double Egg (EggEgg)"
                         desc="Win after spelling &ldquo;eggegg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:eggegg']"
+                        :trophies="playerTrophiesByType['alphabet:eggegg'] || {}"
                         gameLink="https://lichess.org/f2zcFx6P/black"
                         youtubeLink="https://www.youtube.com/watch?v=J6G3cP991Yc"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Bad Egg"
                         desc="Win after spelling &ldquo;badegg&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:badegg']"
+                        :trophies="playerTrophiesByType['alphabet:badegg'] || {}"
                         gameLink="https://lichess.org/mu679bhr/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1472"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="BeachCaf&eacute;"
                         desc="Win after spelling &ldquo;beachcafe&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:beachcafe']"
+                        :trophies="playerTrophiesByType['alphabet:beachcafe'] || {}"
                         gameLink="https://lichess.org/p5Ldb6wA"
                         youtubeLink="https://www.youtube.com/watch?v=kGYOzdBsjcg"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Beef"
                         desc="Win after spelling &ldquo;beef&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:beef']"
+                        :trophies="playerTrophiesByType['alphabet:beef'] || {}"
                         gameLink="https://lichess.org/dUkHbvOR"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1583"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Cabbage"
                         desc="Win after spelling &ldquo;cabbage&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:cabbage']"
+                        :trophies="playerTrophiesByType['alphabet:cabbage'] || {}"
                         gameLink="https://lichess.org/LMpwnmLz"
                         youtubeLink="https://www.youtube.com/watch?v=GDhtMqBk9M4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Chad"
                         desc="Win after spelling &ldquo;chad&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:chad']"
+                        :trophies="playerTrophiesByType['alphabet:chad'] || {}"
                         gameLink="https://lichess.org/AaNGZKcj/black"
                         youtubeLink="https://youtu.be/jH3pPDnoqnU?t=1305"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Headache"
                         desc="Win after spelling &ldquo;headache&rdquo; with pawn moves in the opening"
-                        :games="pointsByAccomplishment['alphabet:headache']"
+                        :trophies="playerTrophiesByType['alphabet:headache'] || {}"
                         gameLink="https://lichess.org/SdbD4znE"
                     ></accomplishment-score>
                 </div>
@@ -456,165 +406,165 @@
                 <h2 class="heading">Checkmates</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate with a Pawn"
                         desc="A pawn delivers mate"
-                        :games="pointsByAccomplishment['pawnCheckmate']"
+                        :trophies="playerTrophiesByType['pawnCheckmate'] || {}"
                         gameLink="https://lichess.org/52RAfF6v#99"
                         youtubeLink="https://www.youtube.com/watch?v=mx9SCz4yDdE"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate with King"
                         desc="Move your king with a discovery or by castling"
-                        :games="pointsByAccomplishment['checkmateWithKing']"
+                        :trophies="playerTrophiesByType['checkmateWithKing'] || {}"
                         gameLink="https://lichess.org/JCR11y6i/black#148"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Smothered Mate"
-                        :games="pointsByAccomplishment['smotheredMate']"
+                        :trophies="playerTrophiesByType['smotheredMate'] || {}"
                         gameLink="https://lichess.org/YOdmkxyk#59"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Smothered Pork Checkmate"
                         desc="Smother + Pin + Fork"
-                        :games="pointsByAccomplishment['smotheredPorkMate']"
+                        :trophies="playerTrophiesByType['smotheredPorkMate'] || {}"
                         gameLink="https://lichess.org/39vtGApM#47"
                         youtubeLink="https://www.youtube.com/watch?v=OAnC3gt_DqE"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="En Passant Checkmate"
                         desc="Checkmate by capturing en passant"
-                        :games="pointsByAccomplishment['enPassantCheckmate']"
+                        :trophies="playerTrophiesByType['enPassantCheckmate'] || {}"
                         gameLink="https://lichess.org/LY5WQjXL/black#72"
                         youtubeLink="https://youtu.be/6zT83p6pMHg?t=390"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="g5#"
                         desc="Pawn checkmate on g5"
-                        :games="pointsByAccomplishment['g5mate']"
+                        :trophies="playerTrophiesByType['g5mate'] || {}"
                         gameLink="https://lichess.org/UbOofpwX/black#74"
                         youtubeLink="https://youtu.be/3l6BeM45ay8?t=898"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Double-Check Checkmate"
                         desc="2 pieces are attacking the king and it's checkmate"
-                        :games="pointsByAccomplishment['doubleCheckCheckmate']"
+                        :trophies="playerTrophiesByType['doubleCheckCheckmate'] || {}"
                         gameLink="https://lichess.org/OtlF3AfG#27"
                         youtubeLink="https://youtu.be/8ly5yA6tiEY?t=1082"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Block a Check with Checkmate"
                         desc="Call an ambulance... but not for me"
-                        :games="pointsByAccomplishment['blockCheckWithCheckmate']"
+                        :trophies="playerTrophiesByType['blockCheckWithCheckmate'] || {}"
                         gameLink="https://lichess.org/DrC87aK3#81"
                         youtubeLink="https://youtu.be/kDGY77nkZHc?t=276"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="O-O#"
                         desc="Castle kingside with mate"
-                        :games="pointsByAccomplishment['castleKingsideWithCheckmate']"
+                        :trophies="playerTrophiesByType['castleKingsideWithCheckmate'] || {}"
                         gameLink="https://lichess.org/BJvbtS9B#49"
                         youtubeLink="https://youtu.be/UxZc7ZF2uOY?t=207"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="O-O-O#"
                         desc="Castle queenside with mate"
-                        :games="pointsByAccomplishment['castleQueensideWithCheckmate']"
+                        :trophies="playerTrophiesByType['castleQueensideWithCheckmate'] || {}"
                         gameLink="https://lichess.org/7fmGBmKz/black#28"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Promote to Bishop Checkmate"
-                        :games="pointsByAccomplishment['promoteToBishopCheckmate']"
+                        :trophies="playerTrophiesByType['promoteToBishopCheckmate'] || {}"
                         gameLink="https://lichess.org/9jkxqDKV#95"
                         youtubeLink="https://youtu.be/vSPxtspv57Q?t=11974"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Promote to Knight Checkmate"
-                        :games="pointsByAccomplishment['promoteToKnightCheckmate']"
+                        :trophies="playerTrophiesByType['promoteToKnightCheckmate'] || {}"
                         gameLink="https://lichess.org/USOysGtc#77"
                         youtubeLink="https://youtu.be/RUJk3N6yF4g?t=3055"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Bishop + Knight Checkmate"
-                        :games="pointsByAccomplishment['bishopAndKnightMate']"
+                        :trophies="playerTrophiesByType['bishopAndKnightMate'] || {}"
                         gameLink="https://lichess.org/PDfvROnh#205"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Knight-to-the-Corner Checkmate"
                         desc="Knight moves to a corner of the board with checkmate"
-                        :games="pointsByAccomplishment['knightCornerMate']"
+                        :trophies="playerTrophiesByType['knightCornerMate'] || {}"
                         gameLink="https://lichess.org/s01MVu7c/black#82"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="2-Bishop Checkmate"
                         desc="Checkmate when you only have 2 bishops"
-                        :games="pointsByAccomplishment['twoBishopMate']"
+                        :trophies="playerTrophiesByType['twoBishopMate'] || {}"
                         gameLink="https://lichess.org/FuPe9gyS/black#128"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="4-Knight Checkmate"
-                        :games="pointsByAccomplishment['fourKnightMate']"
+                        :trophies="playerTrophiesByType['fourKnightMate'] || {}"
                         gameLink="https://lichess.org/KFZm4x4A/black#180"
                         youtubeLink="https://www.youtube.com/watch?v=FqAako5iZN4"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="4-Knight Cube Checkmate"
                         desc="You have 4 knights and checkmate from a cube"
-                        :games="pointsByAccomplishment['fourKnightCubeMate']"
+                        :trophies="playerTrophiesByType['fourKnightCubeMate'] || {}"
                         gameLink="https://lichess.org/Rggdy0rY/black#152"
                         youtubeLink="https://youtu.be/FqAako5iZN4?t=50"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="6-Knight Rectangle Checkmate"
-                        :games="pointsByAccomplishment['sixKnightRectangleMate']"
+                        :trophies="playerTrophiesByType['sixKnightRectangleMate'] || {}"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5611"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Avoid-the-Flag Checkmate"
-                        desc="Make 20+ moves with 1 second left + checkmate"
-                        :games="pointsByAccomplishment['premovesWithOneSecondLeft']"
+                        desc="Make 20+ moves with 1 second left + checkmate (Lichess only)"
+                        :trophies="playerTrophiesByType['avoidTheFlagCheckmate'] || {}"
                         gameLink="https://lichess.org/Wi5bzNTB#110"
                         youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 2 Moves"
                         desc="Deliver checkmate in 2 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:2']"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:2'] || {}"
                         gameLink="https://lichess.org/Fnb8yHd2/black"
                         youtubeLink="https://www.youtube.com/watch?v=broDeIZMGto"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 3 Moves"
                         desc="Deliver checkmate in 3 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:3']"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:3'] || {}"
                         gameLink="https://lichess.org/BIklhPjL"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Checkmate in 4 Moves"
                         desc="Deliver checkmate in 4 moves"
-                        :games="pointsByAccomplishment['quickCheckmate:4']"
+                        :trophies="playerTrophiesByType['checkmateAtMoveNumber:4'] || {}"
                         gameLink="https://lichess.org/u0SKphmW/black"
                     ></accomplishment-score>
                 </div>
@@ -622,46 +572,46 @@
                 <h2 class="heading">There's a Funny Line</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Castle after Move 40"
                         desc="It's never too late to castle"
-                        :games="pointsByAccomplishment['castleAfterMove40']"
+                        :trophies="playerTrophiesByType['castleAfterMove40'] || {}"
                         gameLink="https://lichess.org/o2rO7Vcj#95"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Promote a Pawn within 8 Moves"
-                        :games="pointsByAccomplishment['promotePawnBeforeMoveNumber']"
+                        :trophies="playerTrophiesByType['promotePawnBeforeMoveNumber'] || {}"
                         gameLink="https://lichess.org/jBC2lZJt#13"
                         youtubeLink="https://youtu.be/F-UG_xAJmPo?t=47"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="No Captures before Move 30"
                         desc="All the pieces survive till move 30"
-                        :games="pointsByAccomplishment['noCapturesBeforeMove:30']"
+                        :trophies="playerTrophiesByType['noCapturesBeforeMoveNumber'] || {}"
                         gameLink="https://lichess.org/iZCR89Dt#65"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="10+ Consecutive Captures on the Same Square"
                         desc="&ldquo;We have captures, captures, captures, captures, captures...&rdquo; &#8288;&#8211;&#8288;Agadmator"
-                        :games="pointsByAccomplishment['consecutiveCaptures:sameSquare']"
+                        :trophies="playerTrophiesByType['consecutiveCapturesSameSquare'] || {}"
                         gameLink="https://lichess.org/UIMR4eJL/black#56"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="12 Pawn Move Opening Win"
                         desc="Win a game after 12+ consecutive pawn moves in the opening"
-                        :games="pointsByAccomplishment['pawnStormOpening']"
+                        :trophies="playerTrophiesByType['pawnStormOpening'] || {}"
                         gameLink="https://lichess.org/eplysicB"
                         youtubeLink="https://www.youtube.com/watch?v=jr-r-0UU-WQ"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Royal Family Fork"
                         desc="Knight forks K+Q+R and 1 other piece"
-                        :games="pointsByAccomplishment['megaFork']"
+                        :trophies="playerTrophiesByType['royalFamilyFork'] || {}"
                         gameLink="https://lichess.org/VNAD1RDx#47"
                     ></accomplishment-score>
                 </div>
@@ -669,44 +619,44 @@
                 <h2 class="heading">Adoption Matches</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Adoption"
                         desc="Win 10 consecutive games against the same opponent"
                         :units="['Match', 'Matches']"
-                        :games="pointsByAccomplishment['adoptionMatch:10']"
+                        :trophies="playerTrophiesByType['adoptionMatch:10'] || {}"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Double Adoption"
                         desc="Win 20 consecutive games against the same opponent"
                         :units="['Match', 'Matches']"
-                        :games="pointsByAccomplishment['adoptionMatch:20']"
+                        :trophies="playerTrophiesByType['adoptionMatch:20'] || {}"
                     ></accomplishment-score>
                 </div>
 
                 <h2 class="heading">I feel so dirty</h2>
                 <div class="grid grid-cols-2 gap-2">
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Clutch Pawn"
                         desc="Win with 1 pawn while down 10+ points in material"
-                        :games="pointsByAccomplishment['clutchPawn']"
+                        :trophies="playerTrophiesByType['clutchPawn'] || {}"
                         gameLink="https://lichess.org/tgMQgOSk#149"
                         youtubeLink="https://youtu.be/ihBnAuO7AtM?t=459"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Win with Insufficient Material"
-                        desc="Flag your opponent with only a knight or bishop"
-                        :games="pointsByAccomplishment['winInsufficientMaterial']"
+                        desc="Flag your opponent with only a knight or bishop (Lichess only)"
+                        :trophies="playerTrophiesByType['winInsufficientMaterial'] || {}"
                         gameLink="https://lichess.org/nYz9xUgc#141"
                         youtubeLink="https://www.youtube.com/watch?v=vBf4rA4j8_w&t=15468s"
                     ></accomplishment-score>
                     <accomplishment-score
-                        @register-new-goal="onRegisterNewGoal"
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Lefong"
                         desc="Capture a premoved fianchettoed bishop"
-                        :games="pointsByAccomplishment['lefongTrap']"
+                        :trophies="playerTrophiesByType['lefongTrap'] || {}"
                         gameLink="https://lichess.org/ix4lZu8Q/black#6"
                         youtubeLink="https://youtu.be/vBf4rA4j8_w?t=2671"
                     ></accomplishment-score>
@@ -714,746 +664,511 @@
             </div>
         </div>
 
-        <div class="text-sm text-center text-slate-400 mt-8">
-            Not affiliated with Eric Rosen. Find a bug? Have a comment? Fill out
-            <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>.
-        </div>
-
-        <div class="text-sm text-center text-slate-400 mt-8" v-if="isLocalEnv">
-            <a href="" @click.prevent="getCacheUpdateCommand">getCacheUpdateCommand</a>
+        <div class="mt-8 text-center text-sm">
+            <div class="text-slate-300" v-if="isDownloadComplete">
+                Download results as
+                <a href="#" @click.prevent="exportAsCsv" class="dotted-underline">CSV</a>
+                or
+                <a href="#" @click.prevent="exportAsJson" class="dotted-underline">JSON</a>
+            </div>
+            <div class="text-slate-400">
+                Not affiliated with Eric Rosen, Lichess, or Chess.com.
+                <br />
+                <a href="https://github.com/rosen-score" target="_blank" class="dotted-underline">Github</a>
+                | Find a bug? Have a comment? Fill out
+                <a href="https://forms.gle/N1EnqmygRqo3sAMs5" target="_blank" class="dotted-underline">this form</a>
+            </div>
         </div>
     </div>
 </template>
 
-<script>
-import readStream from './browser-ndjson-stream-reader'
+<script lang="ts">
 import { Chess as ChessJS } from 'chess.js'
 
-import cleanupLichessUsername from './utils/cleanup-lichess-username'
-import fenToPosition from './utils/fen-to-position'
-import formatSinceDate from './utils/format-since-date'
-import getPiecesOnFiles from './utils/position-to-files'
-import pgnFormatter from './utils/pgn-formatter'
-
-import adoptionMatch from './goals/adoption-match'
-import alphabetOpenings from './goals/alphabet-openings'
-import blockCheckWithCheckmate from './goals/block-check-with-checkmate'
-import castleFork from './goals/castle-fork'
-import consecutiveCaptures from './goals/consecutive-captures'
-import dirtyWins from './goals/dirty-wins'
-import doubleCheckCheckmate from './goals/double-check-checkmate'
-import firstCapture from './goals/first-capture'
-import gameChecks from './goals/game-checks'
-import lefongTrap from './goals/lefong-trap'
-import megaFork from './goals/mega-fork'
-import moveChecks from './goals/move-checks'
-import ohNoMyQueen from './goals/oh-no-my-queen'
-import pawnStormOpening from './goals/pawn-storm-opening'
-import pieceStructures from './goals/piece-structures'
-import premovesWithOneSecondLeft from './goals/premoves-with-one-second-left'
-import rosenTrap from './goals/rosen-trap'
-import smotheredMate from './goals/smothered-mate'
-import smotheredPorkMate from './goals/smothered-pork-mate'
-
-const controller = new AbortController()
-const { signal } = controller
-
-import ericCachedGames from '../cache/eric.json'
-import ericLastUpdated from '../cache/eric-last-updated.json'
-import tournamentCachedGames from '../cache/swiss-48jrx3m6.json'
-
-const wait = (timeToDelay) => new Promise((resolve) => setTimeout(resolve, timeToDelay))
+import { games, player, Game, Profile, addLichessOauthToken, cancelFetch } from 'chess-fetcher'
 
 import AccomplishmentScore from './components/AccomplishmentScore.vue'
+import ArrowIcon from './components/ArrowIcon.vue'
 import ChangelogDate from './components/ChangelogDate.vue'
 import DownloadProgress from './components/DownloadProgress.vue'
 import LichessLogin from './components/LichessLogin.vue'
-import LichessUsername from './components/LichessUsername.vue'
+import UsernameFormatter from './components/UsernameFormatter.vue'
 import RecentUpdates from './components/RecentUpdates.vue'
 import TrophyCollection from './components/TrophyCollection.vue'
+import { smotheredMate, smotheredPorkMate } from './goals/smothered-mate'
+import adoptionMatch from './goals/adoption-match'
+import { blockCheckWithCheckmate } from './goals/block-check-with-checkmate'
+import { checkmateAtMoveNumber } from './goals/checkmate-at-move-number'
+import { doubleCheckCheckmate } from './goals/double-check-checkmate'
+import {
+    quadrupledPawns,
+    pawnCube,
+    pawnCubeCenter,
+    pawnX,
+    pawnDiamond,
+    pawnDiamondSolid,
+    doublePawnDiamond,
+    knightCube,
+    knightRectangle,
+    pawnTrapezoid,
+    sixPawnsInTheSameFile,
+    connectEightOnRank,
+    connectDiagonally,
+} from './goals/piece-structures'
+import { royalFamilyFork } from './goals/royal-family-fork'
+import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
+import { winInsufficientMaterial, clutchPawn } from './goals/dirty-wins'
+import { noCapturesBeforeMoveNumber } from './goals/first-capture'
+import {
+    castleAfterMove40,
+    pawnCheckmate,
+    g5mate,
+    knightCornerMate,
+    enPassantCheckmate,
+    castleKingsideWithCheckmate,
+    castleQueensideWithCheckmate,
+    checkmateWithKing,
+    promoteToBishopCheckmate,
+    promoteToKnightCheckmate,
+    promotePawnBeforeMoveNumber,
+} from './goals/move-checks'
+import { pawnStormOpening } from './goals/pawn-storm-opening'
+import { castleFork } from './goals/castle-fork'
+import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
+import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'
+import { ohNoMyQueen } from './goals/oh-no-my-queen'
+import { lefongTrap } from './goals/lefong-trap'
+import { rosenTrap } from './goals/rosen-trap'
+import { alphabetOpening } from './goals/alphabet-openings'
+import { PlayerTrophiesByType, TrophyCacheFile, TrophyCheckResult } from './types/types'
+import { formatSinceDate } from './utils/format-since-date'
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export default {
     components: {
         AccomplishmentScore,
+        ArrowIcon,
         ChangelogDate,
         DownloadProgress,
         LichessLogin,
-        LichessUsername,
+        UsernameFormatter,
         RecentUpdates,
         TrophyCollection,
     },
     data() {
         return {
-            lichessOauthToken: null,
+            form: {
+                type: 'lichess',
+                value: '',
+                filters: {
+                    sinceHoursAgo: 0,
+                },
+            },
 
-            formInputValue: '',
-            filter: {},
-            reportObject: {},
+            player: <Profile>{},
+
+            errors: {
+                form: '',
+                api: <DOMException>{},
+            },
+
+            trophyTypeCount: 0,
+            playerTrophiesByType: <PlayerTrophiesByType>{},
 
             isDownloading: false,
             isDownloadComplete: false,
-            errorMsg: '',
-
-            totalAccomplishmentsPossible: 0,
-            pointsByAccomplishment: {},
-
             counts: {
                 totalGames: 0,
                 downloaded: 0,
                 totalMoves: 0,
             },
+
+            usingCacheBeforeTimestamp: 0,
         }
     },
 
     computed: {
-        sinceTimestamp: function () {
-            if (this.filter.sinceHoursAgo) {
+        username(): string {
+            return this.form.value.trim().toLowerCase()
+        },
+        sinceDateFormatted(): string {
+            if (this.form.filters.sinceHoursAgo) {
                 let now = new Date().getTime()
-                return now - this.filter.sinceHoursAgo * 60 * 60 * 1000
+                return formatSinceDate(now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000)
             }
-        },
 
-        sinceDateFormatted: function () {
-            if (this.sinceTimestamp) {
-                return formatSinceDate(this.sinceTimestamp)
-            }
+            return ''
         },
-
-        totalAccomplishmentsCompleted: function () {
-            return Object.keys(this.pointsByAccomplishment).length
+        totalAccomplishmentsCompleted(): number {
+            return Object.keys(this.playerTrophiesByType).length
         },
-
-        totalAccomplishmentsCompletedPercentage: function () {
-            return Math.round((this.totalAccomplishmentsCompleted / this.totalAccomplishmentsPossible) * 100)
+        totalAccomplishmentsCompletedPercentage(): number {
+            return Math.round((this.totalAccomplishmentsCompleted / this.trophyTypeCount) * 100)
         },
-
-        trophyCount: function () {
-            return Object.values(this.pointsByAccomplishment)
+        trophyCount(): number {
+            return Object.values(this.playerTrophiesByType)
                 .map((o) => Object.values(o))
                 .flat().length
-        },
-
-        lichessOauthTokenString: function () {
-            if (this.lichessOauthToken) {
-                return this.lichessOauthToken.token.value
-            } else {
-                return ''
-            }
-        },
-
-        usingCachedData: function () {
-            return this.reportObject.data.username === 'EricRosen' && this.filter.sinceHoursAgo === 0
-        },
-
-        isLocalEnv: function () {
-            return window.location.href.includes('localhost')
         },
     },
 
     watch: {
-        filter: {
-            handler: function (value) {
-                window.sessionStorage.setItem('savedFilter', JSON.stringify(value))
+        form: {
+            handler(value) {
+                window.localStorage.setItem('savedForm', JSON.stringify(value))
             },
             deep: true,
         },
     },
 
-    mounted: function () {
-        this.formInputValue = window.sessionStorage.getItem('savedFormInputValue') || ''
-        this.filter = {
-            sinceHoursAgo: 0,
-            ...JSON.parse(window.sessionStorage.getItem('savedFilter')),
+    mounted() {
+        let savedForm = JSON.parse(window.localStorage.getItem('savedForm') || '{}')
+
+        if (savedForm.type) {
+            this.form.type = savedForm.type
+        }
+
+        if (savedForm.value) {
+            this.form.value = savedForm.value
+        }
+
+        if (savedForm.filters) {
+            this.form.filters = savedForm.filters
         }
     },
 
     methods: {
-        onRegisterNewGoal: function () {
-            this.totalAccomplishmentsPossible++
+        onRegisterNewTrophy(): void {
+            this.trophyTypeCount++
         },
 
-        formFill: function (value) {
-            this.formInputValue = value
-            this.formInputValueEntered()
+        formFill(type: string, value: string): void {
+            this.form.type = type
+            this.form.value = value
         },
 
-        formInputValueEntered: function () {
-            this.formInputValue = cleanupLichessUsername(this.formInputValue)
-
-            /*
-             * Save the username form value to the session because
-             * if they "Login to Lichess" it will be gone when the
-             * page reloads.
-             */
-            window.sessionStorage.setItem('savedFormInputValue', this.formInputValue)
+        setLichessOauthToken(token: string): void {
+            addLichessOauthToken(token)
         },
 
-        setLichessOauthToken: function (data) {
-            this.lichessOauthToken = data
-        },
+        cancelDownload(): void {
+            cancelFetch()
 
-        fetchJsonEndpoint: function (url) {
-            return fetch(url, {
-                headers: {
-                    Authorization: `Bearer ${this.lichessOauthTokenString}`,
-                },
-            }).then((response) => response.json())
-        },
-
-        startDownload: function () {
-            if (!this.formInputValue) {
-                this.errorMsg = 'Enter a username or arena URL in Step #1'
-                return
-            }
-
-            if (this.formInputValue.includes('/tournament/')) {
-                // Arena tournament
-                this.reportObject.type = 'arena'
-                let tournamentId = this.formInputValue.split('/').pop()
-                this.fetchJsonEndpoint(`https://lichess.org/api/tournament/${tournamentId}`)
-                    .then(
-                        function (data) {
-                            if (!data.isFinished) {
-                                this.errorMsg = 'Tournament not over yet.'
-                                return
-                            }
-
-                            if (data.stats.games > 50000) {
-                                this.errorMsg = 'Marathon tournaments are a little too big.'
-                                return
-                            }
-
-                            this.counts.totalGames = data.stats.games
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.fullName}`
-
-                            let url = `https://lichess.org/api/tournament/${tournamentId}/games?pgnInJson=true&clocks=true`
-
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Tournament not found.'
-                    })
-            } else if (this.formInputValue.includes('/swiss/')) {
-                // Swiss tournament
-                this.reportObject.type = 'swiss'
-                let tournamentId = this.formInputValue.split('/').pop()
-                this.fetchJsonEndpoint(`https://lichess.org/api/swiss/${tournamentId}`)
-                    .then(
-                        async function (data) {
-                            if (data.status !== 'finished') {
-                                this.errorMsg = 'Tournament not over yet.'
-                                return
-                            }
-
-                            this.counts.totalGames = data.stats.games
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.name}`
-
-                            // The example tournament is cached so we don't
-                            // have to request from the Lichess API
-                            if (tournamentId === '48jrx3m6') {
-                                this.isDownloading = true
-
-                                for (const gameJson of tournamentCachedGames) {
-                                    this.processGame(gameJson)
-                                    await wait(2)
-                                }
-
-                                this.streamComplete()
-
-                                return
-                            }
-
-                            let url = `https://lichess.org/api/swiss/${tournamentId}/games?pgnInJson=true&clocks=true`
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Tournament not found.'
-                    })
-            } else {
-                // User
-                this.reportObject.type = 'user'
-
-                this.fetchJsonEndpoint(`https://lichess.org/api/user/${this.formInputValue}`)
-                    .then(
-                        async function (data) {
-                            this.counts.totalGames = data.count.all
-                            this.reportObject.data = data
-
-                            window.document.title = `${window.document.title} - ${data.username}`
-
-                            let url = `https://lichess.org/api/games/user/${data.id}?pgnInJson=true&clocks=true`
-
-                            // EricRosen's games are pre-downloaded and filtered to only include matching games
-                            if (this.usingCachedData) {
-                                this.isDownloading = true
-
-                                for (const gameJson of ericCachedGames) {
-                                    this.processGame(gameJson)
-                                    await wait(2)
-                                }
-
-                                url += '&since=' + ericLastUpdated
-                            } else {
-                                url += '&since=' + this.sinceTimestamp
-                            }
-
-                            // url = new URL('../cache/ericrosen.txt', import.meta.url)
-
-                            this.fetchGames(url)
-                        }.bind(this)
-                    )
-                    .catch((e) => {
-                        this.errorMsg = 'Lichess user not found'
-                    })
-            }
-        },
-
-        addTrophyForColor: function (color, label, game, onMoveNumber) {
-            if (color === 'w') {
-                color = 'white'
-            } else if (color === 'b') {
-                color = 'black'
-            }
-
-            // console.log(`${label}: adding for ${color}`, `https://lichess.org/${game.id}`)
-
-            let logRecord = {}
-
-            let anchorLink
-            if (onMoveNumber) {
-                onMoveNumber = parseInt(onMoveNumber) + 1
-                anchorLink = '#' + onMoveNumber
-            } else {
-                anchorLink = ''
-            }
-
-            if (this.reportObject.type === 'user') {
-                if (this.reportObject.data.id !== game.players[color].user.id) {
-                    return
-                }
-
-                if (this.reportObject.data.id === game.players.white.user.id) {
-                    logRecord.opponent = game.players.black.user
-                    logRecord.gameLink = `https://lichess.org/${game.id}${anchorLink}`
-                } else {
-                    logRecord.opponent = game.players.white.user
-                    logRecord.gameLink = `https://lichess.org/${game.id}/black${anchorLink}`
-                }
-            } else {
-                logRecord.opponent = game.players[color].user
-                logRecord.gameLink = `https://lichess.org/${game.id}/${color}${anchorLink}`
-            }
-
-            if (!this.pointsByAccomplishment[label]) {
-                this.pointsByAccomplishment[label] = {}
-            }
-
-            // console.log(`${label}: adding for ${color}`, logRecord.link, logRecord)
-
-            if (!this.pointsByAccomplishment[label][game.id]) {
-                this.pointsByAccomplishment[label][game.id] = logRecord
-            }
-        },
-
-        checkForAccomplishment: function (color, label, game, onMoveNumber) {
-            if (typeof color === 'object') {
-                for (const c of color) {
-                    this.addTrophyForColor(c, label, game, onMoveNumber)
-                }
-            } else if (color) {
-                this.addTrophyForColor(color, label, game, onMoveNumber)
-            }
-        },
-
-        cancelFetch: function () {
-            controller.abort()
-
-            this.isDownloading = false
-        },
-
-        fetchGames: function (url) {
-            this.isDownloading = true
-
-            const stream = fetch(url, {
-                headers: {
-                    Accept: 'application/x-ndjson',
-                    Authorization: `Bearer ${this.lichessOauthTokenString}`,
-                },
-                signal,
-            })
-
-            stream.then(readStream(this.processGame)).then(this.streamComplete)
-        },
-
-        streamComplete: function () {
             this.isDownloading = false
             this.isDownloadComplete = true
         },
 
-        processGame: function (gameInfoJson) {
-            this.counts.downloaded++
-
-            // only standard chess starting position games
-            if (gameInfoJson.variant !== 'standard') {
+        async startDownload(): Promise<void> {
+            if (!this.username) {
+                this.errors.form = 'Enter a username in Step #1'
                 return
             }
 
-            // ignore games against stockfish or anonymous users
-            if (
-                typeof gameInfoJson.players.white.user === 'undefined' ||
-                typeof gameInfoJson.players.black.user === 'undefined'
-            ) {
+            // Auto correct Eric's usernames in case someone is trying to toggle between his Lichess and Chess.com
+            // but forgets to change the username
+            if (this.username === 'ericrosen' && this.form.type === 'chesscom') {
+                this.form.value = 'IMRosen'
+            } else if (this.username === 'imrosen' && this.form.type === 'lichess') {
+                this.form.value = 'EricRosen'
+            }
+
+            this.isDownloading = true
+
+            let url = ''
+            if (this.form.type === 'lichess') {
+                url = `https://lichess.org/@/${this.username}`
+            } else if (this.form.type === 'chesscom') {
+                url = `https://www.chess.com/member/${this.username}`
+            }
+
+            player(url)
+                .then(async (player: Profile) => {
+                    this.player = player
+                    window.document.title += ` - ${player.title} ${player.username}`
+
+                    if (player.site === 'chess.com') {
+                        // Chess.com doesn't provide a reliable way to get the actual game count via the API.
+                        // Actual game count is higher than reported, so I'll add 20%
+                        this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
+                    } else {
+                        this.counts.totalGames = player.counts.all
+                    }
+
+                    if (!this.form.filters.sinceHoursAgo) {
+                        await this.getCachedGames(url)
+                    }
+
+                    let sinceTimestamp = this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
+
+                    if (this.usingCacheBeforeTimestamp) {
+                        sinceTimestamp = this.usingCacheBeforeTimestamp
+                    }
+
+                    games(url, this.checkGameForTrophies, {
+                        since: sinceTimestamp,
+                        pgnInJson: true,
+                        clocks: true,
+                    })
+                        .then(() => {
+                            this.isDownloadComplete = true
+                        })
+                        .catch((e: DOMException) => {
+                            // If the user cancels the download, don't show an error message
+                            if (e.message.includes('aborted')) {
+                                return
+                            }
+
+                            this.errors.api = e
+                        })
+                })
+                .catch((e: DOMException) => {
+                    this.errors.api = e
+                })
+        },
+
+        async getCachedGames(url: string) {
+            const caches = new Map<string, string>()
+
+            caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
+            caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
+            caches.set('https://lichess.org/@/fins', '/cache/lichess/fins.json')
+            caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
+            caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
+            caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
+            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
+
+            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
+            caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
+            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
+            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            caches.set('https://www.chess.com/member/wonderfultime', '/cache/chesscom/wonderfultime.json')
+
+            if (!caches.has(url)) {
                 return
             }
 
-            // ignore games against bots
-            if (gameInfoJson.players.white.user.title === 'BOT' || gameInfoJson.players.black.user.title === 'BOT') {
-                return
+            await fetch(caches.get(url)!)
+                .then((response) => response.json())
+                .then((result: TrophyCacheFile) => {
+                    this.usingCacheBeforeTimestamp = result.cache_updated_at
+                    this.counts.downloaded = result.games_analyzed
+                    this.counts.totalMoves = result.moves_analyzed
+                    this.playerTrophiesByType = result.trophies
+                })
+        },
+
+        exportAsJson(): void {
+            let contents: TrophyCacheFile = {
+                cache_updated_at: Date.now(),
+                games_analyzed: this.counts.downloaded,
+                moves_analyzed: this.counts.totalMoves,
+                trophies: this.playerTrophiesByType,
             }
 
-            let moves = pgnFormatter(gameInfoJson.moves).split(' ').filter(Boolean)
+            this.downloadFile(`${this.username}.json`, JSON.stringify(contents, null, 2), 'application/json')
+        },
 
-            if (!moves.length) {
-                return
+        exportAsCsv(): void {
+            let rows: {
+                trophy: string
+                date: string
+                opponent: string
+                link: string
+            }[] = []
+
+            for (const [trophyName, accomplishment] of Object.entries(this.playerTrophiesByType)) {
+                for (const trophy of Object.values(accomplishment)) {
+                    rows.push({
+                        trophy: trophyName,
+                        date: trophy.date,
+                        opponent: (trophy.opponent.title + ' ' + trophy.opponent.username).trim(),
+                        link: trophy.link,
+                    })
+                }
             }
 
-            let chessJS = new ChessJS()
-            let position
+            const header = Object.keys(rows[0]).join(',')
+            const values = rows.map((o) => Object.values(o).join(',')).join('\n')
+            const csv = header + '\n' + values
 
-            this.counts.totalMoves += moves.length
+            this.downloadFile(`${this.username}.csv`, csv, 'text/csv')
+        },
 
-            for (const move in moves) {
-                let moveInfo = chessJS.move(moves[move])
-                position = fenToPosition(chessJS.fen())
-                let piecesOnFiles = getPiecesOnFiles(position)
+        downloadFile(filename: string, contents: string, contentType: string): void {
+            let element = document.createElement('a')
+            element.setAttribute('href', 'data:' + contentType + ';charset=utf-8,' + encodeURIComponent(contents))
+            element.setAttribute('download', filename)
 
-                this.checkForAccomplishment(
-                    moveChecks.castleAfterMove40(moveInfo, move),
-                    'castleAfterMove40',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.pawnCheckmate(moveInfo, move),
-                    'pawnCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(moveChecks.g5mate(moveInfo), 'g5mate', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    moveChecks.knightCornerMate(moveInfo, move),
-                    'knightCornerMate',
-                    gameInfoJson,
-                    move
-                )
+            element.style.display = 'none'
+            document.body.appendChild(element)
+            element.click()
+            document.body.removeChild(element)
+        },
 
-                this.checkForAccomplishment(
-                    moveChecks.enPassantCheckmate(moveInfo, move, true),
-                    'enPassantCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.castleKingsideWithCheckmate(moveInfo, move),
-                    'castleKingsideWithCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.castleQueensideWithCheckmate(moveInfo, move),
-                    'castleQueensideWithCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.checkmateWithKing(moveInfo, move),
-                    'checkmateWithKing',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.promoteToBishopCheckmate(moveInfo, move),
-                    'promoteToBishopCheckmate',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    moveChecks.promoteToKnightCheckmate(moveInfo, move),
-                    'promoteToKnightCheckmate',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(
-                    moveChecks.promotePawnBeforeMoveNumber(moveInfo, move, 8),
-                    'promotePawnBeforeMoveNumber',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(
-                    pieceStructures.quadrupledPawns(piecesOnFiles),
-                    'quadrupledPawns',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.pawnCube(position), 'pawnCube', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnCubeCenter(position),
-                    'pawnCubeCenter',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.pawnX(position), 'pawnX', gameInfoJson, move)
-
-                this.checkForAccomplishment(pieceStructures.pawnDiamond(position), 'pawnDiamond', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnDiamondSolid(position),
-                    'pawnDiamondSolid',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.doublePawnDiamond(position),
-                    'doublePawnDiamond',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(pieceStructures.knightCube(position), 'knightCube', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.knightRectangle(position),
-                    'knightRectangle',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank4(position),
-                    'connectEightOnRank4',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank5(position),
-                    'connectEightOnRank5',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank6(position),
-                    'connectEightOnRank6',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.connectEightOnRank7(position),
-                    'connectEightOnRank7',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(pieceStructures.connectFive(position), 'connectFive', gameInfoJson, move)
-                this.checkForAccomplishment(pieceStructures.connectSix(position), 'connectSix', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    pieceStructures.pawnTrapezoid(position),
-                    'pawnTrapezoid',
-                    gameInfoJson,
-                    move
-                )
-                this.checkForAccomplishment(
-                    pieceStructures.sixPawnsInTheSameFile(position),
-                    'sixPawnsInTheSameFile',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(smotheredMate(chessJS, moveInfo), 'smotheredMate', gameInfoJson, move)
-                this.checkForAccomplishment(
-                    smotheredPorkMate(chessJS, moveInfo),
-                    'smotheredPorkMate',
-                    gameInfoJson,
-                    move
-                )
-
-                this.checkForAccomplishment(megaFork(chessJS, moveInfo, gameInfoJson), 'megaFork', gameInfoJson, move)
-            }
-
-            for (let word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
-                this.checkForAccomplishment(
-                    alphabetOpenings.checkWord(word, moves).filter((color) => gameInfoJson.winner === color),
-                    `alphabet:${word}`,
-                    gameInfoJson
-                )
-            }
-
-            this.checkForAccomplishment(
-                doubleCheckCheckmate(chessJS.fen(), gameInfoJson),
-                'doubleCheckCheckmate',
-                gameInfoJson,
-                moves.length
-            )
-
-            this.checkForAccomplishment(
-                gameChecks.stalemateTricks(gameInfoJson, position, moves.length % 2 ? 'black' : 'white'),
-                'stalemateTricks',
-                gameInfoJson,
-                moves.length
-            )
-
-            this.checkForAccomplishment(
-                gameChecks.bishopAndKnightMate(gameInfoJson, position),
-                'bishopAndKnightMate',
-                gameInfoJson,
-                moves.length
-            )
-            this.checkForAccomplishment(
-                gameChecks.twoBishopMate(gameInfoJson, position),
-                'twoBishopMate',
-                gameInfoJson,
-                moves.length
-            )
-
-            this.checkForAccomplishment(
-                gameChecks.fourKnightMate(gameInfoJson, position),
-                'fourKnightMate',
-                gameInfoJson,
-                moves.length
-            )
-
-            this.checkForAccomplishment(
-                gameChecks.fourKnightCubeMate(gameInfoJson, position),
-                'fourKnightCubeMate',
-                gameInfoJson,
-                moves.length
-            )
-            this.checkForAccomplishment(
-                gameChecks.sixKnightRectangleMate(gameInfoJson, position),
-                'sixKnightRectangleMate',
-                gameInfoJson,
-                moves.length
-            )
-
-            let allMoves = chessJS.history({ verbose: true })
-
-            let firstCaptureAfterMove30 = firstCapture.noCapturesBeforeMoveNumber(allMoves, 30)
-            if (firstCaptureAfterMove30) {
-                this.addTrophyForColor('white', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
-                this.addTrophyForColor('black', 'noCapturesBeforeMove:30', gameInfoJson, firstCaptureAfterMove30)
-            }
-
-            this.checkForAccomplishment(rosenTrap(gameInfoJson, allMoves), 'rosenTrap', gameInfoJson, allMoves.length)
-
-            this.checkForAccomplishment(lefongTrap(allMoves), 'lefongTrap', gameInfoJson)
-
-            this.checkForAccomplishment(
-                dirtyWins.winInsufficientMaterial(gameInfoJson, position),
-                'winInsufficientMaterial',
-                gameInfoJson,
-                allMoves.length
-            )
-
-            this.checkForAccomplishment(
-                dirtyWins.clutchPawn(gameInfoJson, position),
-                'clutchPawn',
-                gameInfoJson,
-                allMoves.length
-            )
-
-            this.checkForAccomplishment(castleFork(allMoves), 'castleFork', gameInfoJson)
-
-            this.checkForAccomplishment(ohNoMyQueen.checkMoves(allMoves, position), 'ohNoMyQueen', gameInfoJson)
-
-            this.checkForAccomplishment(
-                blockCheckWithCheckmate(allMoves, gameInfoJson),
-                'blockCheckWithCheckmate',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(
-                premovesWithOneSecondLeft(gameInfoJson),
-                'premovesWithOneSecondLeft',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(pawnStormOpening(allMoves, gameInfoJson), 'pawnStormOpening', gameInfoJson)
-
-            let consecutiveCapturesResult = consecutiveCaptures.sameSquare(allMoves)
-            if (consecutiveCapturesResult.consecutiveCaptures >= 10) {
-                this.addTrophyForColor(
-                    'white',
-                    'consecutiveCaptures:sameSquare',
-                    gameInfoJson,
-                    consecutiveCapturesResult.onMoveNumber
-                )
-                this.addTrophyForColor(
-                    'black',
-                    'consecutiveCaptures:sameSquare',
-                    gameInfoJson,
-                    consecutiveCapturesResult.onMoveNumber
-                )
-            }
-
-            adoptionMatch.processGame(gameInfoJson)
-
-            this.checkForAccomplishment(
-                adoptionMatch.checkForAdoption(gameInfoJson, 10),
-                'adoptionMatch:10',
-                gameInfoJson
-            )
-
-            this.checkForAccomplishment(
-                adoptionMatch.checkForAdoption(gameInfoJson, 20),
-                'adoptionMatch:20',
-                gameInfoJson
-            )
-
-            if (gameInfoJson.status === 'mate') {
-                let numberOfMovesForWinningSide = Math.ceil(moves.length / 2)
-
-                if (numberOfMovesForWinningSide === 2) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:2', gameInfoJson)
-                } else if (numberOfMovesForWinningSide === 3) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:3', gameInfoJson)
-                } else if (numberOfMovesForWinningSide === 4) {
-                    this.addTrophyForColor(gameInfoJson.winner, 'quickCheckmate:4', gameInfoJson)
+        checkForTrophy(game: Game, name: string, results: TrophyCheckResult, onMoveNumber?: number): void {
+            for (const result of results) {
+                if (
+                    (result.color === 'w' && game.players.white.username.toLowerCase() === this.username) ||
+                    (result.color === 'b' && game.players.black.username.toLowerCase() === this.username)
+                ) {
+                    this.addTrophyForPlayer(name, game, result.onMoveNumber || onMoveNumber || 0)
                 }
             }
         },
 
-        getCacheUpdateCommand: function () {
-            let gameIds = adoptionMatch.allAdoptionMatchGameids
+        addTrophyForPlayer(trophyName: string, game: Game, onMoveNumber?: number): void {
+            this.playerTrophiesByType[trophyName] = this.playerTrophiesByType[trophyName] || {}
 
-            for (const accomplishment in this.pointsByAccomplishment) {
-                gameIds.push(Object.keys(this.pointsByAccomplishment[accomplishment]))
+            // if the player was already awarded this trophy for this game, don't add it again
+            if (this.playerTrophiesByType[trophyName][game.id]) {
+                return
             }
 
-            let uniqueGameIds = [...new Set(gameIds.flat().sort())]
+            let opponent
+            let link
 
-            let chunks = []
-
-            var i,
-                j,
-                chunk = 250
-            for (i = 0, j = uniqueGameIds.length; i < j; i += chunk) {
-                chunks.push(uniqueGameIds.slice(i, i + chunk))
+            if (game.players.white.username.toLowerCase() === this.username) {
+                opponent = game.players.black
+                link = game.links.white
+            } else {
+                opponent = game.players.white
+                link = game.links.black
             }
 
-            let curls = chunks.map(function (chunk) {
-                return `curl -X POST -H "Accept: application/x-ndjson" "https://lichess.org/games/export/_ids?pgnInJson=true&clocks=true" -d '${chunk.join(
-                    ','
-                )}'`
-            })
+            if (game.site === 'lichess' && onMoveNumber) {
+                link += `#${onMoveNumber}`
+            } else if (onMoveNumber) {
+                link += onMoveNumber - 1
+            }
 
-            let cmd = `rm -f cache/eric.txt && (${curls.join(' && ')}) >> cache/eric.txt`
+            this.playerTrophiesByType[trophyName][game.id] = {
+                date: new Date(game.timestamp).toISOString().split('T')[0], // YYYY-MM-DD format
+                opponent: {
+                    username: opponent.username,
+                    title: opponent.title || '',
+                },
+                link,
+            }
+        },
 
-            console.log(cmd)
+        async checkGameForTrophies(game: Game): Promise<void> {
+            // Add a 0ms setTimeout to stop the process from blocking the page
+            // Without this, the page may become unresponsive as games are processed
+            await wait(0)
+
+            this.counts.downloaded++
+
+            // only standard chess starting position games
+            if (!game.isStandard) {
+                return
+            }
+
+            // ignore games against stockfish, anonymous users, and bots
+            if (
+                typeof game.players.white.username === 'undefined' ||
+                typeof game.players.black.username === 'undefined' ||
+                game.players.white.title === 'BOT' ||
+                game.players.black.title === 'BOT'
+            ) {
+                return
+            }
+
+            if (game.moves.length === 0) {
+                return
+            }
+
+            this.checkForTrophy(game, 'castleAfterMove40', castleAfterMove40(game.moves))
+            this.checkForTrophy(game, 'pawnCheckmate', pawnCheckmate(game.moves))
+            this.checkForTrophy(game, 'g5mate', g5mate(game.moves))
+
+            this.checkForTrophy(game, 'knightCornerMate', knightCornerMate(game.moves))
+            this.checkForTrophy(game, 'enPassantCheckmate', enPassantCheckmate(game.moves))
+
+            this.checkForTrophy(game, 'castleKingsideWithCheckmate', castleKingsideWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'castleQueensideWithCheckmate', castleQueensideWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'checkmateWithKing', checkmateWithKing(game.moves))
+            this.checkForTrophy(game, 'promoteToBishopCheckmate', promoteToBishopCheckmate(game.moves))
+            this.checkForTrophy(game, 'promoteToKnightCheckmate', promoteToKnightCheckmate(game.moves))
+            this.checkForTrophy(game, 'promotePawnBeforeMoveNumber', promotePawnBeforeMoveNumber(game.moves, 8))
+
+            this.checkForTrophy(game, 'smotheredMate', smotheredMate(game.moves))
+            this.checkForTrophy(game, 'smotheredPorkMate', smotheredPorkMate(game.moves))
+
+            this.checkForTrophy(game, 'blockCheckWithCheckmate', blockCheckWithCheckmate(game.moves))
+            this.checkForTrophy(game, 'royalFamilyFork', royalFamilyFork(game.moves))
+            this.checkForTrophy(game, 'noCapturesBeforeMoveNumber', noCapturesBeforeMoveNumber(game.moves, 30))
+
+            this.checkForTrophy(game, 'rosenTrap', rosenTrap(game, game.moves))
+            this.checkForTrophy(game, 'castleFork', castleFork(game.moves))
+
+            this.checkForTrophy(game, 'avoidTheFlagCheckmate', avoidTheFlagCheckmate(game, game.moves))
+            this.checkForTrophy(game, 'consecutiveCapturesSameSquare', consecutiveCapturesSameSquare(game.moves, 10))
+            this.checkForTrophy(game, 'ohNoMyQueen', ohNoMyQueen(game.moves))
+            this.checkForTrophy(game, 'lefongTrap', lefongTrap(game.moves))
+            this.checkForTrophy(game, 'pawnStormOpening', pawnStormOpening(game, game.moves))
+
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:2', checkmateAtMoveNumber(game.moves, 2))
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:3', checkmateAtMoveNumber(game.moves, 3))
+            this.checkForTrophy(game, 'checkmateAtMoveNumber:4', checkmateAtMoveNumber(game.moves, 4))
+
+            adoptionMatch.processGame(game)
+            this.checkForTrophy(game, 'adoptionMatch:10', adoptionMatch.checkForAdoption(game, 10))
+            this.checkForTrophy(game, 'adoptionMatch:20', adoptionMatch.checkForAdoption(game, 20))
+
+            for (const word of ['badegg', 'beachcafe', 'beef', 'cabbage', 'chad', 'egg', 'eggegg', 'headache']) {
+                this.checkForTrophy(game, `alphabet:${word}`, alphabetOpening(game, word, game.moves))
+            }
+
+            let chessJs = new ChessJS()
+
+            for (const moveNum in game.moves) {
+                this.counts.totalMoves++
+
+                const moveNumber = parseInt(moveNum)
+                chessJs.move(game.moves[moveNumber].notation.notation)
+                const fen = chessJs.fen()
+
+                this.checkForTrophy(game, 'quadrupledPawns', quadrupledPawns(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnCube', pawnCube(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnCubeCenter', pawnCubeCenter(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnX', pawnX(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnDiamond', pawnDiamond(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnDiamondSolid', pawnDiamondSolid(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'doublePawnDiamond', doublePawnDiamond(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'knightCube', knightCube(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'knightRectangle', knightRectangle(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:4', connectEightOnRank(fen, 4), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:5', connectEightOnRank(fen, 5), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:6', connectEightOnRank(fen, 6), moveNumber + 1)
+                this.checkForTrophy(game, 'connectEightOnRank:7', connectEightOnRank(fen, 7), moveNumber + 1)
+                this.checkForTrophy(game, 'connectDiagonally:5', connectDiagonally(fen, 5), moveNumber + 1)
+                this.checkForTrophy(game, 'connectDiagonally:6', connectDiagonally(fen, 6), moveNumber + 1)
+                this.checkForTrophy(game, 'pawnTrapezoid', pawnTrapezoid(fen), moveNumber + 1)
+                this.checkForTrophy(game, 'sixPawnsInTheSameFile', sixPawnsInTheSameFile(fen), moveNumber + 1)
+            }
+
+            const fen = chessJs.fen()
+
+            this.checkForTrophy(game, 'stalemateTricks', stalemateTricks(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'bishopAndKnightMate', bishopAndKnightMate(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'twoBishopMate', twoBishopMate(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'fourKnightMate', fourKnightMate(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'fourKnightCubeMate', fourKnightCubeMate(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'sixKnightRectangleMate', sixKnightRectangleMate(game, fen), game.moves.length)
+
+            this.checkForTrophy(game, 'winInsufficientMaterial', winInsufficientMaterial(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'clutchPawn', clutchPawn(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'doubleCheckCheckmate', doubleCheckCheckmate(game, fen), game.moves.length)
         },
     },
 }

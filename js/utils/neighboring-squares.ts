@@ -1,6 +1,6 @@
 import { Square } from 'chess.js'
 
-export default function (square: Square) {
+export function neighboringSquares(square: Square): Square[] {
     let neighbors = [
         [-1, -1],
         [-1, 0],
@@ -29,5 +29,7 @@ export default function (square: Square) {
         }
     }
 
-    return neighborSquares.sort()
+    neighborSquares = neighborSquares.sort()
+
+    return neighborSquares as Square[]
 }
