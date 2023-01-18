@@ -15,7 +15,7 @@
     "@vitest/coverage-c8": "^0.27.0",
     "autoprefixer": "^10.4.2",
     "chess-fetcher": "^0.4.3",
-    "chess.js": "1.0.0-beta.0",
+    "chess.js": "1.0.0-beta.1",
     "chessops": "^0.12.5",
     "lodash": "^4.17.21",
     "postcss": "^8.4.5",
