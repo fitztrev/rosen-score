@@ -3,8 +3,8 @@ import { Chess, Move } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 
 export function lefongTrap(moves: PgnMove[]): TrophyCheckResult {
-    // game must contain a Bishop capture on 1 of the fianchetto squares
-    if (!moves.some((move) => ['Bxg7', 'Bxg2', 'Bxb7', 'Bxb2'].includes(move.notation.notation))) {
+    // game must contain a Bishop capture on 1 of the fianchetto squares within the first 10 moves
+    if (!moves.slice(0, 10 * 2).some((move) => ['Bxg7', 'Bxg2', 'Bxb7', 'Bxb2'].includes(move.notation.notation))) {
         return []
     }
 
@@ -15,11 +15,6 @@ export function lefongTrap(moves: PgnMove[]): TrophyCheckResult {
 
     for (let moveNum in chessJsMoves) {
         const moveNumber = parseInt(moveNum)
-
-        // only consider the first 10 moves
-        if (moveNumber > 10 * 2) {
-            return []
-        }
 
         if (chessJsMoves[moveNumber + 2] === undefined) {
             return []
