@@ -1,6 +1,6 @@
 ## Rosen Score
 
-https://rosen-score.vercel.app/
+https://rosenscore.com/
 
 This is entirely a frontend application, so you can run it pretty easily on your own computer.
 
