@@ -1,6 +1,14 @@
 import { describe, expect, test } from 'vitest'
 import { parse, ParseTree } from '@mliebelt/pgn-parser'
-import { pawnCheckmate, g5mate, enPassantCheckmate } from '../js/goals/move-checks'
+import {
+    pawnCheckmate,
+    g5mate,
+    enPassantCheckmate,
+    promoteToBishopCheckmate,
+    promoteToKnightCheckmate,
+    castleKingsideWithCheckmate,
+    castleQueensideWithCheckmate,
+} from '../js/goals/move-checks'
 
 describe('test pawn checkmate', () => {
     test.each([
@@ -92,5 +100,73 @@ describe('test not en passant mate', () => {
     ])('test moves', (moves) => {
         let game = parse(moves, { startRule: 'game' }) as ParseTree
         expect(enPassantCheckmate(game.moves)).toStrictEqual([])
+    })
+})
+
+describe('test O-O#', () => {
+    test.each([
+        [
+            'e4 d5 Nf3 dxe4 Ng5 e5 d3 exd3 Bxd3 h6 Qh5 Qf6 Nxf7 Be6 Nd6+ Kd7 Qe8+ Kxd6 Nc3 Bd5 Nb5+ Kc5 Be3+ Kb4 a3+ Ka4 Nxc7+ Bc6 Bb5+ Ka5 b4+ Bxb4+ axb4+ Kxb4 Ra4+ Kc3 Bd2+ Kxc2 Ra2+ Kb3 Qf8 Kxa2 Bc4+ Kb2 Qb4+ Kc2 Qc3+ Kb1 O-O#',
+            [
+                {
+                    color: 'w',
+                    onMoveNumber: 49,
+                },
+            ],
+        ],
+    ])('test moves: %p', (moves, expected) => {
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
+        expect(castleKingsideWithCheckmate(game.moves)).toStrictEqual(expected)
+    })
+})
+
+describe('test O-O-O#', () => {
+    test.each([
+        [
+            'b3 e5 Bb2 Nc6 Nf3 e4 Nd4 Nxd4 Bxd4 d5 e3 Bf5 c4 c5 Bb2 d4 exd4 cxd4 d3 Bb4+ Ke2 exd3+ Kf3 Nf6 Kg3 Ne4+ Kf4 Qg5+ Ke5 f6+ Kxd4 O-O-O#',
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 32,
+                },
+            ],
+        ],
+    ])('test moves: %p', (moves, expected) => {
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
+        expect(castleQueensideWithCheckmate(game.moves)).toStrictEqual(expected)
+    })
+})
+
+describe('test promote to bishop mate', () => {
+    test.each([
+        [
+            'e4 e5 Nf3 Nf6 Nxe5 Nc6 Nxc6 dxc6 d3 Bc5 Be2 h5 c3 Ng4 d4 Qh4 g3 Qf6 Bf3 Bd6 e5 Bxe5 dxe5 Nxe5 Bf4 Nxf3+ Qxf3 Bg4 Qe4+ Qe7 Qxe7+ Kxe7 O-O Rhc8 Nd2 Kf8 Be3 b6 Kg2 Re8 h3 Be6 Rae1 Rad8 Kg1 Bxa2 Nf3 Bc4 Nd2 Bxf1 Kxf1 Rxe3 fxe3 Rxd2 b3 Rh2 c4 Rxh3 Kf2 Rh2+ Kf1 Rh1+ Kf2 Rxe1 Kxe1 Ke7 Ke2 Kd6 Kd2 Kc5 Kc2 Kb4 Kb2 a5 Kc2 a4 Kb2 a3+ Ka2 g5 e4 h4 e5 hxg3 e6 fxe6 Ka1 Kxb3 c5 bxc5 Kb1 g2 Kc1 g1=N Kd2 e5 Ke1 a2 Kd2 Nh3 Ke1 g4 Kd2 g3 Ke3 g2 Ke4 g1=Q Kf5 Qg6+ Kxe5 a1=B#',
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 112,
+                },
+            ],
+        ],
+    ])('test moves: %p', (moves, expected) => {
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
+        expect(promoteToBishopCheckmate(game.moves)).toStrictEqual(expected)
+    })
+})
+
+describe('test promote to knight mate', () => {
+    test.each([
+        [
+            'd4 d5 c4 e6 Nc3 Nf6 Bg5 Be7 e3 O-O Nf3 a6 Rc1 Nbd7 cxd5 exd5 Bd3 Re8 O-O Nf8 h3 Ng6 Ne5 c6 f4 Nd7 Bxe7 Qxe7 Qh5 Ndf8 Rce1 a5 a3 Bd7 Na4 Nxe5 fxe5 Ng6 Rf3 Be6 Ref1 Rf8 g4 Rab8 Bf5 b6 Rc1 c5 Nc3 b5 Ne2 Rfc8 Rcf1 Rf8 Nf4 b4 a4 c4 Bxe6 fxe6 Nxg6 hxg6 Rxf8+ Rxf8 Rxf8+ Kxf8 Qxg6 c3 Qc2 Qc7 Kf2 b3 Qc1 c2 Ke2 Qc4+ Kd2 Qb4+ Kd3 Qc4+ Kd2 Qb4+ Kd3 Qxa4 Qf1+ Ke7 Qe1 Qc4+ Kd2 Qb4+ Kd3 Qxe1 e4 c1=N#',
+            [
+                {
+                    color: 'b',
+                    onMoveNumber: 94,
+                },
+            ],
+        ],
+    ])('test moves: %p', (moves, expected) => {
+        let game = parse(moves, { startRule: 'game' }) as ParseTree
+        expect(promoteToKnightCheckmate(game.moves)).toStrictEqual(expected)
     })
 })
