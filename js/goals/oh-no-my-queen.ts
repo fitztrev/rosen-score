@@ -28,26 +28,28 @@ export function ohNoMyQueen(moves: PgnMove[]): TrophyCheckResult {
         // and you checkmate within the next 3 moves
         // and your opponent still has their queen
 
-        if (chessJsMoves[moveNum].captured === 'q') {
-            if (
-                (chessJsMoves[moveNumber + 1] && chessJsMoves[moveNumber + 1].san.endsWith('#')) ||
-                (chessJsMoves[moveNumber + 3] && chessJsMoves[moveNumber + 3].san.endsWith('#')) ||
-                (chessJsMoves[moveNumber + 5] && chessJsMoves[moveNumber + 5].san.endsWith('#'))
-            ) {
-                const position = fenToPosition(chessJs.fen())
+        if (chessJsMoves[moveNum].captured !== 'q') {
+            continue
+        }
 
-                // the loser must still have their Queen
-                let whiteHasQueen = position.includes('Q')
-                let blackHasQueen = position.includes('q')
+        if (
+            (chessJsMoves[moveNumber + 1] && chessJsMoves[moveNumber + 1].san.endsWith('#')) ||
+            (chessJsMoves[moveNumber + 3] && chessJsMoves[moveNumber + 3].san.endsWith('#')) ||
+            (chessJsMoves[moveNumber + 5] && chessJsMoves[moveNumber + 5].san.endsWith('#'))
+        ) {
+            const position = fenToPosition(chessJs.fen())
 
-                if ((lastMove.turn === 'w' && !whiteHasQueen && blackHasQueen) || (lastMove.turn === 'b' && whiteHasQueen && !blackHasQueen)) {
-                    return [
-                        {
-                            color: lastMove.turn,
-                            onMoveNumber: moveNumber,
-                        },
-                    ]
-                }
+            // the loser must still have their Queen
+            let whiteHasQueen = position.includes('Q')
+            let blackHasQueen = position.includes('q')
+
+            if ((lastMove.turn === 'w' && !whiteHasQueen && blackHasQueen) || (lastMove.turn === 'b' && whiteHasQueen && !blackHasQueen)) {
+                return [
+                    {
+                        color: lastMove.turn,
+                        onMoveNumber: moveNumber,
+                    },
+                ]
             }
         }
     }
