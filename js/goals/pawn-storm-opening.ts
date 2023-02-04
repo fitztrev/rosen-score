@@ -1,4 +1,5 @@
-import { Game, PgnMove } from 'chess-fetcher'
+import { PgnMove } from '@mliebelt/pgn-types'
+import { Game } from 'chess-fetcher'
 import { TrophyCheckResult } from '../types/types'
 
 export function pawnStormOpening(game: Game, moves: PgnMove[]): TrophyCheckResult {

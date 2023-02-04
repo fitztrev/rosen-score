@@ -1,4 +1,4 @@
-import { PgnMove } from 'chess-fetcher'
+import { PgnMove } from '@mliebelt/pgn-types'
 import { TrophyCheckResult } from '../types/types'
 
 export function blockCheckWithCheckmate(moves: PgnMove[]): TrophyCheckResult {

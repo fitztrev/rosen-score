@@ -11,10 +11,11 @@
   "dependencies": {
     "@bity/oauth2-auth-code-pkce": "^2.13.0",
     "@mliebelt/pgn-parser": "^1.4.5",
+    "@mliebelt/pgn-types": "^1.0.3",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/coverage-c8": "^0.28.0",
     "autoprefixer": "^10.4.2",
-    "chess-fetcher": "^0.5.0",
+    "chess-fetcher": "^0.6.0",
     "chess.js": "1.0.0-beta.3",
     "chessops": "^0.12.5",
     "lodash": "^4.17.21",

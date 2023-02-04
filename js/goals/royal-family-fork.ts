@@ -1,4 +1,4 @@
-import { PgnMove } from 'chess-fetcher'
+import { PgnMove } from '@mliebelt/pgn-types'
 import { Chess, Move, Square } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 import { knightMoves } from '../utils/knight-moves'
