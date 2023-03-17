@@ -1,5 +1,5 @@
 {
-  "cache_updated_at": 1673197748119,
+  "cache_updated_at": 1679019250290,
   "games_analyzed": 10215,
   "moves_analyzed": 855142,
   "trophies": {
@@ -1357,6 +1357,40 @@
           "title": "GM"
         },
         "link": "https://lichess.org/X2fDCPAl#51"
+      }
+    },
+    "flagOpponentWhoHadMateInOne": {
+      "npiTCW34": {
+        "date": "2021-04-12",
+        "opponent": {
+          "username": "RebeccaHarris",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/npiTCW34#75"
+      },
+      "eJiSt44Y": {
+        "date": "2020-04-08",
+        "opponent": {
+          "username": "Zhigalko_Sergei",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/eJiSt44Y#81"
+      },
+      "Dg0tp1dx": {
+        "date": "2020-04-02",
+        "opponent": {
+          "username": "Zhigalko_Sergei",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/Dg0tp1dx/black#114"
+      },
+      "mWhcdgTc": {
+        "date": "2019-01-31",
+        "opponent": {
+          "username": "Zhigalko_Sergei",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/mWhcdgTc#113"
       }
     },
     "adoptionMatch:20": {
