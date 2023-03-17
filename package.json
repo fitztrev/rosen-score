@@ -6,6 +6,7 @@
     "format": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest run",
+    "tsc": "tsc --noemit",
     "watch": "vitest"
   },
   "dependencies": {

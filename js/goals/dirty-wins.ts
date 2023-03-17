@@ -1,6 +1,6 @@
 import { PgnMove } from '@mliebelt/pgn-types'
 import { Game } from 'chess-fetcher'
-import { Chess, Move } from 'chess.js'
+import { Chess } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 import { calculateMaterialImbalance } from '../utils/calculate-material-imbalance'
 import { fenToPosition } from '../utils/fen-to-position'
