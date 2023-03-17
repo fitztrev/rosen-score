@@ -1,7 +1,30 @@
+import { PgnMove } from '@mliebelt/pgn-types'
 import { Game } from 'chess-fetcher'
+import { Chess, Move } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 import { calculateMaterialImbalance } from '../utils/calculate-material-imbalance'
 import { fenToPosition } from '../utils/fen-to-position'
+
+export function flagOpponentWhoHadMateInOne(game: Game, moves: PgnMove[]): TrophyCheckResult {
+    if (!game.result.winner || game.result.via !== 'timeout') {
+        return []
+    }
+
+    const chessJs = new Chess()
+    chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
+
+    let matingMoves = chessJs.moves({ verbose: true }).filter((move) => move.san.endsWith('#'))
+
+    if (matingMoves.length > 0) {
+        return [
+            {
+                color: game.result.winner === 'white' ? 'w' : 'b',
+            },
+        ]
+    }
+
+    return []
+}
 
 export function winInsufficientMaterial(game: Game, fen: string): TrophyCheckResult {
     if (game.result.via !== 'timeout') {

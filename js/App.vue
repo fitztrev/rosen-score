@@ -115,7 +115,7 @@
                 </div>
             </form>
 
-            <!-- <RecentUpdates @form-fill="formFill" /> -->
+            <RecentUpdates @form-fill="formFill" />
         </div>
 
         <download-progress
@@ -654,6 +654,13 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
+                        title="Flag Opponent Who Had Mate in 1"
+                        desc="Young children, close your eyes"
+                        :trophies="playerTrophiesByType['flagOpponentWhoHadMateInOne'] || {}"
+                        gameLink="https://lichess.org/VwNKF7ie#121"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-trophy="onRegisterNewTrophy"
                         title="Lefong"
                         desc="Capture a premoved fianchettoed bishop"
                         :trophies="playerTrophiesByType['lefongTrap'] || {}"
@@ -716,7 +723,7 @@ import {
 } from './goals/piece-structures'
 import { royalFamilyFork } from './goals/royal-family-fork'
 import { stalemateTricks, bishopAndKnightMate, twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate } from './goals/game-checks'
-import { winInsufficientMaterial, clutchPawn } from './goals/dirty-wins'
+import { winInsufficientMaterial, clutchPawn, flagOpponentWhoHadMateInOne } from './goals/dirty-wins'
 import { noCapturesBeforeMoveNumber } from './goals/first-capture'
 import {
     castleAfterMove40,
@@ -929,28 +936,28 @@ export default {
         async getCachedGames(url: string) {
             const caches = new Map<string, string>()
 
-            caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
             caches.set('https://lichess.org/@/fins', '/cache/lichess/fins.json')
-            caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
-            caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
-            caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
-            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
+            // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
+            // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
+            // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
+            // caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
-            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
-            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
-            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
-            caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
-            caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
-            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
-            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
-            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
-            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
-            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
-            caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
-            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
-            caches.set('https://www.chess.com/member/wonderfultime', '/cache/chesscom/wonderfultime.json')
+            // caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            // caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            // caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            // caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
+            // caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
+            // caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            // caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            // caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            // caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            // caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            // caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
+            // caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            // caches.set('https://www.chess.com/member/wonderfultime', '/cache/chesscom/wonderfultime.json')
 
             if (!caches.has(url)) {
                 return
@@ -1114,6 +1121,7 @@ export default {
             this.checkForTrophy(game, 'consecutiveCapturesSameSquare', consecutiveCapturesSameSquare(game.moves, 10))
             this.checkForTrophy(game, 'ohNoMyQueen', ohNoMyQueen(game.moves))
             this.checkForTrophy(game, 'lefongTrap', lefongTrap(game.moves))
+            this.checkForTrophy(game, 'flagOpponentWhoHadMateInOne', flagOpponentWhoHadMateInOne(game, game.moves), game.moves.length)
             this.checkForTrophy(game, 'pawnStormOpening', pawnStormOpening(game, game.moves))
 
             this.checkForTrophy(game, 'checkmateAtMoveNumber:2', checkmateAtMoveNumber(game.moves, 2))
