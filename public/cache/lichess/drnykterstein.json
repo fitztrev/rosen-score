@@ -1,5 +1,5 @@
 {
-  "cache_updated_at": 1679019250290,
+  "cache_updated_at": 1682277127304,
   "games_analyzed": 10215,
   "moves_analyzed": 855142,
   "trophies": {
@@ -1611,6 +1611,32 @@
           "title": "GM"
         },
         "link": "https://lichess.org/o2M2xSxO#139"
+      }
+    },
+    "checkmateWithTenthSecondLeft": {
+      "RG8fDR7b": {
+        "date": "2020-05-12",
+        "opponent": {
+          "username": "RebeccaHarris",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/RG8fDR7b/black#144"
+      },
+      "f0PUwomA": {
+        "date": "2020-04-06",
+        "opponent": {
+          "username": "BabaRamdev",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/f0PUwomA#155"
+      },
+      "XweJaWS2": {
+        "date": "2020-04-05",
+        "opponent": {
+          "username": "RebeccaHarris",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/XweJaWS2/black#142"
       }
     },
     "pawnCube": {

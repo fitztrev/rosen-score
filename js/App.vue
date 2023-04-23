@@ -21,7 +21,7 @@
                 <div class="flex flex-row mb-4">
                     <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
                     <div class="basis-3/4">
-                        <!-- <div>
+                        <div>
                             Select which site:
 
                             <div class="text-sky-900">
@@ -34,9 +34,9 @@
                                     Chess.com
                                 </label>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="mt-2">
-                            Enter Lichess username:
+                            Enter username:
 
                             <input
                                 type="text"
@@ -50,12 +50,12 @@
                             <div class="text-sm">
                                 Or
                                 <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
-                                    click here to see EricRosen's
+                                    click here to see EricRosen's on Lichess
                                 </span>
-                                <!-- or
+                                or
                                 <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'IMRosen')">
                                     his Chess.com
-                                </span> -->
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -503,13 +503,6 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
-                        title="Knight-to-the-Corner Checkmate"
-                        desc="Knight moves to a corner of the board with checkmate"
-                        :trophies="playerTrophiesByType['knightCornerMate'] || {}"
-                        gameLink="https://lichess.org/s01MVu7c/black#82"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-trophy="onRegisterNewTrophy"
                         title="2-Bishop Checkmate"
                         desc="Checkmate when you only have 2 bishops"
                         :trophies="playerTrophiesByType['twoBishopMate'] || {}"
@@ -536,14 +529,6 @@
                         :trophies="playerTrophiesByType['sixKnightRectangleMate'] || {}"
                         gameLink="https://lichess.org/zqOlQeBs#207"
                         youtubeLink="https://youtu.be/m_ZKrW0FVZM?t=5611"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-trophy="onRegisterNewTrophy"
-                        title="Avoid-the-Flag Checkmate"
-                        desc="Make 20+ moves with 1 second left + checkmate (Lichess only)"
-                        :trophies="playerTrophiesByType['avoidTheFlagCheckmate'] || {}"
-                        gameLink="https://lichess.org/Wi5bzNTB#110"
-                        youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
@@ -613,6 +598,25 @@
                         desc="Knight forks K+Q+R and 1 other piece"
                         :trophies="playerTrophiesByType['royalFamilyFork'] || {}"
                         gameLink="https://lichess.org/VNAD1RDx#47"
+                    ></accomplishment-score>
+                </div>
+
+                <h2 class="heading">Speed</h2>
+                <div class="grid grid-cols-2 gap-2">
+                    <accomplishment-score
+                        @register-new-trophy="onRegisterNewTrophy"
+                        title="Checkmate with 0.1 seconds"
+                        desc="Checkmate with &#8530; second left (non-increment games)"
+                        :trophies="playerTrophiesByType['checkmateWithTenthSecondLeft'] || {}"
+                        gameLink="https://lichess.org/g9MdhRYy/black#126"
+                    ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-trophy="onRegisterNewTrophy"
+                        title="Avoid-the-Flag Checkmate"
+                        desc="Make 20+ moves with 1 second left + checkmate (Lichess only)"
+                        :trophies="playerTrophiesByType['avoidTheFlagCheckmate'] || {}"
+                        gameLink="https://lichess.org/Wi5bzNTB#110"
+                        youtubeLink="https://www.youtube.com/watch?v=KZ6ANZK44no"
                     ></accomplishment-score>
                 </div>
 
@@ -729,7 +733,6 @@ import {
     castleAfterMove40,
     pawnCheckmate,
     g5mate,
-    knightCornerMate,
     enPassantCheckmate,
     castleKingsideWithCheckmate,
     castleQueensideWithCheckmate,
@@ -740,7 +743,7 @@ import {
 } from './goals/move-checks'
 import { pawnStormOpening } from './goals/pawn-storm-opening'
 import { castleFork } from './goals/castle-fork'
-import { avoidTheFlagCheckmate } from './goals/avoid-the-flag-checkmate'
+import { avoidTheFlagCheckmate, checkmateWithTenthSecondLeft } from './goals/avoid-the-flag-checkmate'
 import { consecutiveCapturesSameSquare } from './goals/consecutive-captures'
 import { ohNoMyQueen } from './goals/oh-no-my-queen'
 import { lefongTrap } from './goals/lefong-trap'
@@ -936,28 +939,19 @@ export default {
         async getCachedGames(url: string) {
             const caches = new Map<string, string>()
 
-            // caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
+            caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
-            caches.set('https://lichess.org/@/fins', '/cache/lichess/fins.json')
-            // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
-            // caches.set('https://lichess.org/@/grandmastergauri', '/cache/lichess/grandmastergauri.json')
-            // caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
-            // caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
-            // caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
-            // caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
-            // caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
-            // caches.set('https://www.chess.com/member/gmbenjaminfinegold', '/cache/chesscom/gmbenjaminfinegold.json')
-            // caches.set('https://www.chess.com/member/gmcanty', '/cache/chesscom/gmcanty.json')
-            // caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
-            // caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
-            // caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
-            // caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
-            // caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
-            // caches.set('https://www.chess.com/member/mobamba604', '/cache/chesscom/mobamba604.json')
-            // caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
-            // caches.set('https://www.chess.com/member/wonderfultime', '/cache/chesscom/wonderfultime.json')
+            caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
+            caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
+            caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
+            caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
+            caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
+            caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
+            caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
 
             if (!caches.has(url)) {
                 return
@@ -1097,7 +1091,6 @@ export default {
             this.checkForTrophy(game, 'pawnCheckmate', pawnCheckmate(game.moves))
             this.checkForTrophy(game, 'g5mate', g5mate(game.moves))
 
-            this.checkForTrophy(game, 'knightCornerMate', knightCornerMate(game.moves))
             this.checkForTrophy(game, 'enPassantCheckmate', enPassantCheckmate(game.moves))
 
             this.checkForTrophy(game, 'castleKingsideWithCheckmate', castleKingsideWithCheckmate(game.moves))
@@ -1117,7 +1110,9 @@ export default {
             this.checkForTrophy(game, 'rosenTrap', rosenTrap(game, game.moves))
             this.checkForTrophy(game, 'castleFork', castleFork(game.moves))
 
-            this.checkForTrophy(game, 'avoidTheFlagCheckmate', avoidTheFlagCheckmate(game, game.moves))
+            this.checkForTrophy(game, 'avoidTheFlagCheckmate', avoidTheFlagCheckmate(game))
+            this.checkForTrophy(game, 'checkmateWithTenthSecondLeft', checkmateWithTenthSecondLeft(game))
+
             this.checkForTrophy(game, 'consecutiveCapturesSameSquare', consecutiveCapturesSameSquare(game.moves, 10))
             this.checkForTrophy(game, 'ohNoMyQueen', ohNoMyQueen(game.moves))
             this.checkForTrophy(game, 'lefongTrap', lefongTrap(game.moves))
