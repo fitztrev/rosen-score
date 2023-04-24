@@ -2,6 +2,6 @@ TODO.md
 
 node_modules
 
-/cache/*.txt
+/cache/*.ndjson
 /coverage
 /dist
