@@ -943,6 +943,7 @@ export default {
             caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
+            caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
             caches.set('https://www.chess.com/member/alexandrabotez', '/cache/chesscom/alexandrabotez.json')
             caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
@@ -952,6 +953,7 @@ export default {
             caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
             caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
             caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
+            caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
 
             if (!caches.has(url)) {
                 return
