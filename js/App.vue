@@ -676,7 +676,7 @@
         </div>
 
         <div class="mt-8 text-center text-sm">
-            <div class="text-slate-300" v-if="isDownloadComplete">
+            <div class="text-slate-200 mb-2" v-if="isDownloadComplete && trophyCount > 0">
                 Download results as
                 <a href="#" @click.prevent="exportAsCsv" class="dotted-underline">CSV</a>
                 or
