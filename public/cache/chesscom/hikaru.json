@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682275375297,
-  "games_analyzed": 47565,
-  "moves_analyzed": 3881727,
+  "cache_updated_at": 1682864808446,
+  "games_analyzed": 47766,
+  "moves_analyzed": 3896687,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -355,6 +355,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4571617515?tab=analysis&flip=false&move=020"
+      },
+      "76528968515": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76528968515?tab=analysis&flip=false&move=018"
       }
     },
     "connectDiagonally:5": {
@@ -5639,6 +5647,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/4297928436?tab=analysis&flip=false&move=0"
+      },
+      "76274469697": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "Martial2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76274469697?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -6345,6 +6361,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4517851102?tab=analysis&flip=false&move=062"
+      },
+      "76527617911": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "Nicolas_DeLaColina",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76527617911?tab=analysis&flip=true&move=073"
+      },
+      "76267888629": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "Aryan_Tamadon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76267888629?tab=analysis&flip=false&move=0120"
+      },
+      "76260834799": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76260834799?tab=analysis&flip=false&move=094"
       }
     },
     "pawnDiamond": {
@@ -8143,6 +8183,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/7673458847?tab=analysis&flip=true&move=071"
+      },
+      "76260834799": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76260834799?tab=analysis&flip=false&move=094"
       }
     },
     "adoptionMatch:20": {

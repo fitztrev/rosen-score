@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682275966611,
-  "games_analyzed": 27510,
-  "moves_analyzed": 2107253,
+  "cache_updated_at": 1682864787529,
+  "games_analyzed": 27569,
+  "moves_analyzed": 2111820,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -1011,6 +1011,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4382101494?tab=analysis&flip=false&move=026"
+      },
+      "76081994559": {
+        "date": "2023-04-24",
+        "opponent": {
+          "username": "Anton_Demchenko",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76081994559?tab=analysis&flip=true&move=031"
       }
     },
     "pawnStormOpening": {

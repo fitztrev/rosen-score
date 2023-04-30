@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682275594291,
-  "games_analyzed": 13163,
-  "moves_analyzed": 1128403,
+  "cache_updated_at": 1682864822125,
+  "games_analyzed": 13192,
+  "moves_analyzed": 1131471,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -731,6 +731,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4761335838?tab=analysis&flip=false&move=0113"
+      },
+      "76199494953": {
+        "date": "2023-04-25",
+        "opponent": {
+          "username": "Kielinkei",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76199494953?tab=analysis&flip=false&move=0241"
       }
     },
     "rosenTrap": {

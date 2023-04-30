@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682274434150,
-  "games_analyzed": 83156,
-  "moves_analyzed": 7414455,
+  "cache_updated_at": 1682864773725,
+  "games_analyzed": 83645,
+  "moves_analyzed": 7458335,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -3861,6 +3861,46 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4308024952?tab=analysis&flip=true&move=0"
+      },
+      "76484384477": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "Semen_Khanin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76484384477?tab=analysis&flip=false&move=0"
+      },
+      "76393259321": {
+        "date": "2023-04-28",
+        "opponent": {
+          "username": "lionchess20069",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76393259321?tab=analysis&flip=false&move=0"
+      },
+      "76229460825": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76229460825?tab=analysis&flip=true&move=0"
+      },
+      "76228884887": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "Mykola-Bortnyk",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76228884887?tab=analysis&flip=true&move=0"
+      },
+      "76226386611": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76226386611?tab=analysis&flip=true&move=0"
       }
     },
     "clutchPawn": {
@@ -8069,6 +8109,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4314103897?tab=analysis&flip=false&move=024"
+      },
+      "76489161535": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "jacky72",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76489161535?tab=analysis&flip=true&move=065"
       }
     },
     "pawnCheckmate": {
@@ -9343,6 +9391,30 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/4298613628?tab=analysis&flip=false&move=0146"
+      },
+      "76531798531": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "thechesscorner64",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76531798531?tab=analysis&flip=false&move=062"
+      },
+      "76313489853": {
+        "date": "2023-04-27",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76313489853?tab=analysis&flip=false&move=054"
+      },
+      "76230123689": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76230123689?tab=analysis&flip=true&move=093"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -10459,6 +10531,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4421978541?tab=analysis&flip=true&move=0111"
+      },
+      "76317089715": {
+        "date": "2023-04-27",
+        "opponent": {
+          "username": "Semen_Khanin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76317089715?tab=analysis&flip=false&move=034"
       }
     },
     "rosenTrap": {

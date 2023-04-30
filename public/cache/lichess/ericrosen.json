@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682272439590,
-  "games_analyzed": 32390,
-  "moves_analyzed": 2542950,
+  "cache_updated_at": 1682864644162,
+  "games_analyzed": 32438,
+  "moves_analyzed": 2546532,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1611,6 +1611,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/k9Ps8RXE#165"
+      },
+      "fHrBdmGX": {
+        "date": "2023-04-30",
+        "opponent": {
+          "username": "ttrv",
+          "title": ""
+        },
+        "link": "https://lichess.org/fHrBdmGX#69"
       }
     },
     "winInsufficientMaterial": {
@@ -9539,6 +9547,14 @@
           "title": ""
         },
         "link": "https://lichess.org/LY5WQjXL/black#72"
+      },
+      "fHrBdmGX": {
+        "date": "2023-04-30",
+        "opponent": {
+          "username": "ttrv",
+          "title": ""
+        },
+        "link": "https://lichess.org/fHrBdmGX#69"
       }
     },
     "pawnTrapezoid": {

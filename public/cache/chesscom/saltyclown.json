@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682313419814,
-  "games_analyzed": 44954,
-  "moves_analyzed": 2969697,
+  "cache_updated_at": 1682864726545,
+  "games_analyzed": 45128,
+  "moves_analyzed": 2979865,
   "trophies": {
     "lefongTrap": {
       "76048876873": {
@@ -5795,6 +5795,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/5502505199?tab=analysis&flip=true&move=02"
+      },
+      "76275160585": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "SanjayGorur2001",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76275160585?tab=analysis&flip=true&move=02"
+      },
+      "76272783601": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "mamcabh",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76272783601?tab=analysis&flip=false&move=03"
+      },
+      "76057278471": {
+        "date": "2023-04-24",
+        "opponent": {
+          "username": "Cutting_Blade",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76057278471?tab=analysis&flip=false&move=01"
       }
     },
     "adoptionMatch:10": {
@@ -8769,6 +8793,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4667078734?tab=analysis&flip=false&move=058"
+      },
+      "76275199137": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "PrestonCh3ss",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76275199137?tab=analysis&flip=false&move=036"
+      },
+      "76063941501": {
+        "date": "2023-04-24",
+        "opponent": {
+          "username": "HannahSayce",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76063941501?tab=analysis&flip=true&move=039"
       }
     },
     "pawnDiamond": {
@@ -10141,6 +10181,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4660040211?tab=analysis&flip=true&move=075"
+      },
+      "76267201813": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "Luiz-fla-biscoito",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76267201813?tab=analysis&flip=false&move=046"
+      },
+      "76067570975": {
+        "date": "2023-04-24",
+        "opponent": {
+          "username": "TheChessTina",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76067570975?tab=analysis&flip=true&move=047"
       }
     },
     "royalFamilyFork": {
@@ -10801,6 +10857,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4705840316?tab=analysis&flip=true&move=063"
+      },
+      "76275090537": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "GamesBoard",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76275090537?tab=analysis&flip=false&move=030"
       }
     },
     "connectDiagonally:5": {
@@ -12085,6 +12149,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4667335257?tab=analysis&flip=true&move=0122"
+      },
+      "76269021947": {
+        "date": "2023-04-26",
+        "opponent": {
+          "username": "lashamez",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76269021947?tab=analysis&flip=false&move=0133"
       }
     },
     "flagOpponentWhoHadMateInOne": {

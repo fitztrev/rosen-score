@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682276371650,
-  "games_analyzed": 2596,
-  "moves_analyzed": 235116,
+  "cache_updated_at": 1682864837453,
+  "games_analyzed": 2664,
+  "moves_analyzed": 241554,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -169,6 +169,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/70503155441?tab=analysis&flip=true&move=0156"
+      },
+      "76204293263": {
+        "date": "2023-04-25",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76204293263?tab=analysis&flip=true&move=0124"
       }
     },
     "pawnDiamond": {
@@ -221,6 +229,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/69546924613?tab=analysis&flip=true&move=045"
+      },
+      "76460411461": {
+        "date": "2023-04-28",
+        "opponent": {
+          "username": "Bulldog167",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76460411461?tab=analysis&flip=false&move=046"
       }
     },
     "castleAfterMove40": {

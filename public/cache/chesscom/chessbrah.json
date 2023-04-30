@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682276782027,
-  "games_analyzed": 26600,
-  "moves_analyzed": 2042996,
+  "cache_updated_at": 1682864756054,
+  "games_analyzed": 26684,
+  "moves_analyzed": 2048886,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1091,6 +1091,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/4306906913?tab=analysis&flip=false&move=0"
+      },
+      "76488004461": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "RyzenM",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76488004461?tab=analysis&flip=false&move=0"
       }
     },
     "stalemateTricks": {
@@ -2817,6 +2825,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4412407983?tab=analysis&flip=true&move=067"
+      },
+      "76490545601": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "Bad_left_hook",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76490545601?tab=analysis&flip=false&move=060"
+      },
+      "76473716581": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "aquilaungula",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
       }
     },
     "g5mate": {
@@ -2907,6 +2931,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/11304834221?tab=analysis&flip=true&move=039"
+      },
+      "76473716581": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "aquilaungula",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
       }
     },
     "doubleCheckCheckmate": {
@@ -3117,6 +3149,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4303441338?tab=analysis&flip=false&move=050"
+      },
+      "76473716581": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "aquilaungula",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
       }
     },
     "pawnDiamond": {
