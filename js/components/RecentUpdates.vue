@@ -6,10 +6,11 @@
             - Added support for <strong>Chess.com</strong>
             - See
             <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'Hikaru')">Hikaru</span>,
+            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'GothamChess')">GothamChess</span>,
             <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'DanielNaroditsky')"
-                >Daniel Naroditsky</span
+                >DanielNaroditsky</span
             >,
-            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'AlexandraBotez')">Alexandra Botez</span>,
+            <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'AlexandraBotez')">AlexandraBotez</span>,
             and others
         </li>
         <li>

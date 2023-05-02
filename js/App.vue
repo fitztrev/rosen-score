@@ -855,6 +855,7 @@ export default {
         formFill(type: string, value: string): void {
             this.form.type = type
             this.form.value = value
+            this.form.filters.sinceHoursAgo = 0
         },
 
         setLichessOauthToken(token: string): void {
