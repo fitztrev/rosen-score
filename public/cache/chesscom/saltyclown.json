@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682864726545,
-  "games_analyzed": 45128,
-  "moves_analyzed": 2979865,
+  "cache_updated_at": 1683156929752,
+  "games_analyzed": 45221,
+  "moves_analyzed": 2985583,
   "trophies": {
     "lefongTrap": {
       "76048876873": {
@@ -5819,6 +5819,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76057278471?tab=analysis&flip=false&move=01"
+      },
+      "76893074655": {
+        "date": "2023-05-03",
+        "opponent": {
+          "username": "rb10s",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76893074655?tab=analysis&flip=false&move=03"
+      },
+      "76746620159": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "TheChessTina",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76746620159?tab=analysis&flip=false&move=03"
       }
     },
     "adoptionMatch:10": {
@@ -6789,6 +6805,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4875841777?tab=analysis&flip=true&move=0"
+      },
+      "76745510547": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "TheChessTina",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76745510547?tab=analysis&flip=true&move=0"
       }
     },
     "knightCube": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682277644434,
-  "games_analyzed": 54185,
-  "moves_analyzed": 4710772,
+  "cache_updated_at": 1683156881566,
+  "games_analyzed": 54457,
+  "moves_analyzed": 4736331,
   "trophies": {
     "adoptionMatch:10": {
       "76677619": {
@@ -3641,6 +3641,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4436010752?tab=analysis&flip=false&move=048"
+      },
+      "76372938965": {
+        "date": "2023-04-27",
+        "opponent": {
+          "username": "aa175",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76372938965?tab=analysis&flip=true&move=065"
       }
     },
     "ohNoMyQueen": {
@@ -4579,6 +4587,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4432687090?tab=analysis&flip=false&move=016"
+      },
+      "76555323083": {
+        "date": "2023-04-30",
+        "opponent": {
+          "username": "saltyclown",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76555323083?tab=analysis&flip=true&move=055"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -4749,6 +4765,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/5191163822?tab=analysis&flip=true&move=060"
+      },
+      "76530058899": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "12teen",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76530058899?tab=analysis&flip=false&move=065"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -7209,6 +7233,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4432687090?tab=analysis&flip=false&move=018"
+      },
+      "76116088825": {
+        "date": "2023-04-24",
+        "opponent": {
+          "username": "SzendoO",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76116088825?tab=analysis&flip=true&move=075"
       }
     },
     "clutchPawn": {
@@ -8727,6 +8759,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4415964245?tab=analysis&flip=true&move=031"
+      },
+      "76527827865": {
+        "date": "2023-04-29",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76527827865?tab=analysis&flip=false&move=078"
       }
     },
     "rosenTrap": {
@@ -9799,6 +9839,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4714328873?tab=analysis&flip=true&move=0395"
+      },
+      "76300806793": {
+        "date": "2023-04-27",
+        "opponent": {
+          "username": "Huasko",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76300806793?tab=analysis&flip=true&move=0177"
       }
     },
     "knightCube": {
@@ -10259,6 +10307,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4438684273?tab=analysis&flip=false&move=0108"
+      },
+      "76300211569": {
+        "date": "2023-04-27",
+        "opponent": {
+          "username": "GianmarcoVaR",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76300211569?tab=analysis&flip=false&move=0144"
       }
     },
     "g5mate": {

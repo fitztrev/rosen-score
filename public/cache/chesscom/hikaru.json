@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682864808446,
-  "games_analyzed": 47766,
-  "moves_analyzed": 3896687,
+  "cache_updated_at": 1683156841428,
+  "games_analyzed": 47930,
+  "moves_analyzed": 3904780,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -5655,6 +5655,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/76274469697?tab=analysis&flip=false&move=0"
+      },
+      "76864454323": {
+        "date": "2023-05-03",
+        "opponent": {
+          "username": "icecreamiscream",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/76864454323?tab=analysis&flip=true&move=0"
       }
     },
     "pawnCheckmate": {

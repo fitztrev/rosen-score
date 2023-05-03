@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1682864773725,
-  "games_analyzed": 83645,
-  "moves_analyzed": 7458335,
+  "cache_updated_at": 1683156807668,
+  "games_analyzed": 83953,
+  "moves_analyzed": 7486354,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -1115,6 +1115,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4371003265?tab=analysis&flip=true&move=033"
+      },
+      "76745419783": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "penguingm1",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76745419783?tab=analysis&flip=true&move=033"
+      },
+      "76657761123": {
+        "date": "2023-05-01",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76657761123?tab=analysis&flip=false&move=046"
       }
     },
     "adoptionMatch:10": {
@@ -3901,6 +3917,38 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/76226386611?tab=analysis&flip=true&move=0"
+      },
+      "76807929537": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76807929537?tab=analysis&flip=false&move=0"
+      },
+      "76747209653": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76747209653?tab=analysis&flip=true&move=0"
+      },
+      "76657778505": {
+        "date": "2023-05-01",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76657778505?tab=analysis&flip=true&move=0"
+      },
+      "76617625541": {
+        "date": "2023-04-30",
+        "opponent": {
+          "username": "Maitreia",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76617625541?tab=analysis&flip=false&move=0"
       }
     },
     "clutchPawn": {
@@ -6865,6 +6913,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4313326960?tab=analysis&flip=false&move=0145"
+      },
+      "76744267821": {
+        "date": "2023-05-02",
+        "opponent": {
+          "username": "Arysya",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76744267821?tab=analysis&flip=false&move=0135"
+      },
+      "76659555489": {
+        "date": "2023-05-01",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76659555489?tab=analysis&flip=true&move=082"
       }
     },
     "pawnCube": {
@@ -10539,6 +10603,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76317089715?tab=analysis&flip=false&move=034"
+      },
+      "76658995513": {
+        "date": "2023-05-01",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76658995513?tab=analysis&flip=false&move=068"
       }
     },
     "rosenTrap": {
@@ -10589,6 +10661,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/33020949623?tab=analysis&flip=false&move=0101"
+      },
+      "76659555489": {
+        "date": "2023-05-01",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76659555489?tab=analysis&flip=true&move=082"
       }
     },
     "smotheredMate": {
