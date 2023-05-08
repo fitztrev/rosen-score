@@ -1078,10 +1078,11 @@ export default {
 
             // ignore games against stockfish, anonymous users, and bots
             if (
-                typeof game.players.white.username === 'undefined' ||
-                typeof game.players.black.username === 'undefined' ||
-                game.players.white.title === 'BOT' ||
-                game.players.black.title === 'BOT'
+                this.player.title !== 'BOT' &&
+                (typeof game.players.white.username === 'undefined' ||
+                    typeof game.players.black.username === 'undefined' ||
+                    game.players.white.title === 'BOT' ||
+                    game.players.black.title === 'BOT')
             ) {
                 return
             }
