@@ -897,12 +897,14 @@ export default {
                     this.player = player
                     window.document.title += ` - ${player.title} ${player.username}`
 
+                    const playerGameCount: number = player.counts?.all || 0
+
                     if (player.site === 'chess.com') {
                         // Chess.com doesn't provide a reliable way to get the actual game count via the API.
                         // Actual game count is higher than reported, so I'll add 20%
-                        this.counts.totalGames = Math.ceil(player.counts.all * 1.2)
+                        this.counts.totalGames = Math.ceil(playerGameCount * 1.2)
                     } else {
-                        this.counts.totalGames = player.counts.all
+                        this.counts.totalGames = playerGameCount
                     }
 
                     if (!this.form.filters.sinceHoursAgo) {
