@@ -26,11 +26,11 @@
 
                             <div class="text-sky-900">
                                 <label class="cursor-pointer">
-                                    <input type="radio" name="site" value="lichess" v-model="form.type" />
+                                    <input type="radio" name="site" value="lichess" v-model="inputs.type" />
                                     Lichess
                                 </label>
                                 <label class="cursor-pointer ml-4">
-                                    <input type="radio" name="site" value="chesscom" v-model="form.type" />
+                                    <input type="radio" name="site" value="chesscom" v-model="inputs.type" />
                                     Chess.com
                                 </label>
                             </div>
@@ -44,7 +44,7 @@
                                 placeholder="Username here"
                                 spellcheck="false"
                                 data-lpignore="true"
-                                v-model="form.value"
+                                v-model="inputs.value"
                             />
 
                             <div class="text-sm">
@@ -74,7 +74,7 @@
                         <div class="text-sm mt-1 mb-2">
                             Check games since
                             <select
-                                v-model.number="form.filters.sinceHoursAgo"
+                                v-model.number="inputs.filters.sinceHoursAgo"
                                 class="bg-transparent border-b border-dotted border-sky-900 focus:outline-0 hover:border-dashed text-sky-900 md:w-28"
                             >
                                 <option :value="6">6 hours ago</option>
@@ -124,12 +124,12 @@
             :positions="counts.totalMoves"
             :downloaded="counts.downloaded"
             :total="counts.totalGames"
-            :hideProgressBar="form.filters.sinceHoursAgo"
+            :hideProgressBar="inputs.filters.sinceHoursAgo"
             @cancel-download="cancelDownload"
         ></download-progress>
 
         <div v-if="errors.api.message" class="text-center bg-orange-800 p-3">
-            There was an error from the {{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
+            There was an error from the {{ inputs.type === 'lichess' ? 'Lichess' : 'Chess.com' }} API:
             <strong>{{ errors.api }}</strong>
 
             <p>Try only running 1 Rosen Score report at a time. You may have to wait before trying again.</p>
@@ -147,7 +147,7 @@
 
             <div class="mb-1">
                 on
-                <strong>{{ form.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
+                <strong>{{ inputs.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
                 and has completed
                 <strong> {{ totalAccomplishmentsCompletedPercentage }}%</strong>
                 of the goals ({{ totalAccomplishmentsCompleted }}
@@ -767,7 +767,7 @@ export default {
     },
     data() {
         return {
-            form: {
+            inputs: {
                 type: 'lichess',
                 value: '',
                 filters: {
@@ -799,12 +799,12 @@ export default {
 
     computed: {
         username(): string {
-            return this.form.value.trim().toLowerCase()
+            return this.inputs.value.trim().toLowerCase()
         },
         sinceDateFormatted(): string {
-            if (this.form.filters.sinceHoursAgo) {
+            if (this.inputs.filters.sinceHoursAgo) {
                 let now = new Date().getTime()
-                return formatSinceDate(now - this.form.filters.sinceHoursAgo * 60 * 60 * 1000)
+                return formatSinceDate(now - this.inputs.filters.sinceHoursAgo * 60 * 60 * 1000)
             }
 
             return ''
@@ -823,7 +823,7 @@ export default {
     },
 
     watch: {
-        form: {
+        inputs: {
             handler(value) {
                 window.localStorage.setItem('savedForm', JSON.stringify(value))
             },
@@ -835,15 +835,15 @@ export default {
         let savedForm = JSON.parse(window.localStorage.getItem('savedForm') || '{}')
 
         if (savedForm.type) {
-            this.form.type = savedForm.type
+            this.inputs.type = savedForm.type
         }
 
         if (savedForm.value) {
-            this.form.value = savedForm.value
+            this.inputs.value = savedForm.value
         }
 
         if (savedForm.filters) {
-            this.form.filters = savedForm.filters
+            this.inputs.filters = savedForm.filters
         }
     },
 
@@ -853,9 +853,9 @@ export default {
         },
 
         formFill(type: string, value: string): void {
-            this.form.type = type
-            this.form.value = value
-            this.form.filters.sinceHoursAgo = 0
+            this.inputs.type = type
+            this.inputs.value = value
+            this.inputs.filters.sinceHoursAgo = 0
         },
 
         setLichessOauthToken(token: string): void {
@@ -877,18 +877,18 @@ export default {
 
             // Auto correct Eric's usernames in case someone is trying to toggle between his Lichess and Chess.com
             // but forgets to change the username
-            if (this.username === 'ericrosen' && this.form.type === 'chesscom') {
-                this.form.value = 'IMRosen'
-            } else if (this.username === 'imrosen' && this.form.type === 'lichess') {
-                this.form.value = 'EricRosen'
+            if (this.username === 'ericrosen' && this.inputs.type === 'chesscom') {
+                this.inputs.value = 'IMRosen'
+            } else if (this.username === 'imrosen' && this.inputs.type === 'lichess') {
+                this.inputs.value = 'EricRosen'
             }
 
             this.isDownloading = true
 
             let url = ''
-            if (this.form.type === 'lichess') {
+            if (this.inputs.type === 'lichess') {
                 url = `https://lichess.org/@/${this.username}`
-            } else if (this.form.type === 'chesscom') {
+            } else if (this.inputs.type === 'chesscom') {
                 url = `https://www.chess.com/member/${this.username}`
             }
 
@@ -907,11 +907,13 @@ export default {
                         this.counts.totalGames = playerGameCount
                     }
 
-                    if (!this.form.filters.sinceHoursAgo) {
+                    if (!this.inputs.filters.sinceHoursAgo) {
                         await this.getCachedGames(url)
                     }
 
-                    let sinceTimestamp = this.form.filters.sinceHoursAgo ? new Date().getTime() - this.form.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
+                    let sinceTimestamp = this.inputs.filters.sinceHoursAgo
+                        ? new Date().getTime() - this.inputs.filters.sinceHoursAgo * 60 * 60 * 1000
+                        : 0
 
                     if (this.usingCacheBeforeTimestamp) {
                         sinceTimestamp = this.usingCacheBeforeTimestamp
