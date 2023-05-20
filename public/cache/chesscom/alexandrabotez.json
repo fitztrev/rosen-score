@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156772178,
-  "games_analyzed": 20299,
-  "moves_analyzed": 1632508,
+  "cache_updated_at": 1684554849663,
+  "games_analyzed": 20942,
+  "moves_analyzed": 1692256,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -131,6 +131,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/4898023008?tab=analysis&flip=true&move=067"
+      },
+      "77671845821": {
+        "date": "2023-05-12",
+        "opponent": {
+          "username": "oxygenwasterenjoyer",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77671845821?tab=analysis&flip=true&move=055"
+      },
+      "77666482301": {
+        "date": "2023-05-12",
+        "opponent": {
+          "username": "Baronizback",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77666482301?tab=analysis&flip=false&move=066"
       }
     },
     "stalemateTricks": {
@@ -629,6 +645,46 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4638871107?tab=analysis&flip=false&move=089"
+      },
+      "77831637063": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "ShikshaWithPraveen",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77831637063?tab=analysis&flip=true&move=0128"
+      },
+      "77666599165": {
+        "date": "2023-05-12",
+        "opponent": {
+          "username": "Baronizback",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77666599165?tab=analysis&flip=false&move=085"
+      },
+      "77397909615": {
+        "date": "2023-05-09",
+        "opponent": {
+          "username": "Cocolino31",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77397909615?tab=analysis&flip=true&move=0166"
+      },
+      "77397777493": {
+        "date": "2023-05-09",
+        "opponent": {
+          "username": "MeesvanOsch",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77397777493?tab=analysis&flip=true&move=0122"
+      },
+      "77322627393": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "Zgorl",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77322627393?tab=analysis&flip=false&move=0111"
       }
     },
     "pawnCheckmate": {
@@ -1909,6 +1965,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/4303434416?tab=analysis&flip=true&move=069"
+      },
+      "77327601321": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "Sheriix",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77327601321?tab=analysis&flip=false&move=044"
       }
     },
     "clutchPawn": {
@@ -2391,6 +2455,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4364463098?tab=analysis&flip=false&move=098"
+      },
+      "77390727669": {
+        "date": "2023-05-09",
+        "opponent": {
+          "username": "TrashyDude",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77390727669?tab=analysis&flip=true&move=0117"
       }
     },
     "twoBishopMate": {

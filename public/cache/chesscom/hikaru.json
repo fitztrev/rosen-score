@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156841428,
-  "games_analyzed": 47930,
-  "moves_analyzed": 3904780,
+  "cache_updated_at": 1684554777946,
+  "games_analyzed": 48274,
+  "moves_analyzed": 3934741,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -1621,6 +1621,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4393478971?tab=analysis&flip=true&move=053"
+      },
+      "77569488335": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "yavrukurt40",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77569488335?tab=analysis&flip=true&move=095"
       }
     },
     "adoptionMatch:10": {
@@ -5663,6 +5671,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76864454323?tab=analysis&flip=true&move=0"
+      },
+      "77468541415": {
+        "date": "2023-05-10",
+        "opponent": {
+          "username": "Martial2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77468541415?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -6393,6 +6409,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76260834799?tab=analysis&flip=false&move=094"
+      },
+      "76945427865": {
+        "date": "2023-05-04",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76945427865?tab=analysis&flip=true&move=065"
       }
     },
     "pawnDiamond": {
@@ -7139,6 +7163,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4355352722?tab=analysis&flip=true&move=035"
+      },
+      "77632470533": {
+        "date": "2023-05-12",
+        "opponent": {
+          "username": "Dyadya81",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77632470533?tab=analysis&flip=true&move=087"
       }
     },
     "doubleCheckCheckmate": {
@@ -8199,6 +8231,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76260834799?tab=analysis&flip=false&move=094"
+      },
+      "76945427865": {
+        "date": "2023-05-04",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/76945427865?tab=analysis&flip=true&move=065"
       }
     },
     "adoptionMatch:20": {

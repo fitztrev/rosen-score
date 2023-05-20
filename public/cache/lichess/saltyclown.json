@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683157105421,
-  "games_analyzed": 35602,
-  "moves_analyzed": 2235322,
+  "cache_updated_at": 1684554659673,
+  "games_analyzed": 35751,
+  "moves_analyzed": 2245393,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -483,6 +483,14 @@
           "title": ""
         },
         "link": "https://lichess.org/9FWByMWm/black"
+      },
+      "tHhbrjb7": {
+        "date": "2023-05-17",
+        "opponent": {
+          "username": "quoixdexneuf",
+          "title": ""
+        },
+        "link": "https://lichess.org/tHhbrjb7"
       }
     },
     "ohNoMyQueen": {
@@ -2815,6 +2823,14 @@
           "title": ""
         },
         "link": "https://lichess.org/zhPyc4O2#33"
+      },
+      "AM6QfIJV": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "quoixdexneuf",
+          "title": ""
+        },
+        "link": "https://lichess.org/AM6QfIJV/black#64"
       }
     },
     "royalFamilyFork": {
@@ -6763,6 +6779,14 @@
           "title": ""
         },
         "link": "https://lichess.org/Z2brRaka#4"
+      },
+      "XMSYvoiZ": {
+        "date": "2023-05-10",
+        "opponent": {
+          "username": "shokrfan",
+          "title": ""
+        },
+        "link": "https://lichess.org/XMSYvoiZ#4"
       }
     },
     "g5mate": {
@@ -6869,6 +6893,14 @@
           "title": ""
         },
         "link": "https://lichess.org/zhPyc4O2#33"
+      },
+      "AM6QfIJV": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "quoixdexneuf",
+          "title": ""
+        },
+        "link": "https://lichess.org/AM6QfIJV/black#64"
       }
     },
     "clutchPawn": {

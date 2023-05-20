@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156807668,
-  "games_analyzed": 83953,
-  "moves_analyzed": 7486354,
+  "cache_updated_at": 1684554818466,
+  "games_analyzed": 84919,
+  "moves_analyzed": 7573493,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -1131,6 +1131,38 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/76657761123?tab=analysis&flip=false&move=046"
+      },
+      "77478768465": {
+        "date": "2023-05-10",
+        "opponent": {
+          "username": "MITerryble",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77478768465?tab=analysis&flip=false&move=040"
+      },
+      "77269901619": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "bubeliang",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77269901619?tab=analysis&flip=false&move=072"
+      },
+      "77177534951": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77177534951?tab=analysis&flip=false&move=046"
+      },
+      "77176298171": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77176298171?tab=analysis&flip=false&move=044"
       }
     },
     "adoptionMatch:10": {
@@ -3949,6 +3981,70 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/76617625541?tab=analysis&flip=false&move=0"
+      },
+      "78201069577": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78201069577?tab=analysis&flip=true&move=0"
+      },
+      "77445065199": {
+        "date": "2023-05-10",
+        "opponent": {
+          "username": "Sokoloco",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77445065199?tab=analysis&flip=true&move=0"
+      },
+      "77269901619": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "bubeliang",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77269901619?tab=analysis&flip=false&move=0"
+      },
+      "77266866995": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "BadChimp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77266866995?tab=analysis&flip=true&move=0"
+      },
+      "77199629731": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77199629731?tab=analysis&flip=true&move=0"
+      },
+      "77180495249": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77180495249?tab=analysis&flip=true&move=0"
+      },
+      "77178124043": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77178124043?tab=analysis&flip=false&move=0"
+      },
+      "77176336369": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77176336369?tab=analysis&flip=true&move=0"
       }
     },
     "clutchPawn": {
@@ -6929,6 +7025,30 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/76659555489?tab=analysis&flip=true&move=082"
+      },
+      "78200502349": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78200502349?tab=analysis&flip=false&move=0143"
+      },
+      "77184015221": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77184015221?tab=analysis&flip=false&move=0103"
+      },
+      "77182241367": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77182241367?tab=analysis&flip=true&move=0112"
       }
     },
     "pawnCube": {
@@ -8181,6 +8301,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/76489161535?tab=analysis&flip=true&move=065"
+      },
+      "77199742689": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77199742689?tab=analysis&flip=false&move=052"
       }
     },
     "pawnCheckmate": {
@@ -9479,6 +9607,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76230123689?tab=analysis&flip=true&move=093"
+      },
+      "77278215445": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "MrTattaglia",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77278215445?tab=analysis&flip=true&move=0121"
+      },
+      "77265645087": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "baby_Cacodemon",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77265645087?tab=analysis&flip=false&move=0126"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -10611,6 +10755,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/76658995513?tab=analysis&flip=false&move=068"
+      },
+      "77186496807": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "spicycaterpillar",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77186496807?tab=analysis&flip=true&move=031"
       }
     },
     "rosenTrap": {
@@ -11175,6 +11327,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4371247250?tab=analysis&flip=false&move=036"
+      },
+      "78199789483": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78199789483?tab=analysis&flip=true&move=073"
       }
     },
     "adoptionMatch:20": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683157080259,
-  "games_analyzed": 32467,
-  "moves_analyzed": 2548720,
+  "cache_updated_at": 1684554683152,
+  "games_analyzed": 32583,
+  "moves_analyzed": 2558584,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1619,6 +1619,14 @@
           "title": ""
         },
         "link": "https://lichess.org/fHrBdmGX#69"
+      },
+      "eC868W3A": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "toyoshima",
+          "title": ""
+        },
+        "link": "https://lichess.org/eC868W3A/black#92"
       }
     },
     "winInsufficientMaterial": {
@@ -2479,6 +2487,14 @@
           "title": ""
         },
         "link": "https://lichess.org/G155QxTA#90"
+      },
+      "WSH4hcT4": {
+        "date": "2023-05-06",
+        "opponent": {
+          "username": "Saqochess",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/WSH4hcT4/black#99"
       }
     },
     "stalemateTricks": {
@@ -4145,6 +4161,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ACWAkGoV/black#93"
+      },
+      "WSH4hcT4": {
+        "date": "2023-05-06",
+        "opponent": {
+          "username": "Saqochess",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/WSH4hcT4/black#99"
       }
     },
     "castleAfterMove40": {
@@ -4929,6 +4953,14 @@
           "title": ""
         },
         "link": "https://lichess.org/jfxfPUqR#131"
+      },
+      "ouxmU5vd": {
+        "date": "2023-05-04",
+        "opponent": {
+          "username": "NoSpaghetti",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/ouxmU5vd#145"
       }
     },
     "connectDiagonally:5": {
@@ -6421,6 +6453,22 @@
           "title": ""
         },
         "link": "https://lichess.org/enCs2Aei#37"
+      },
+      "hkdosX4p": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "Tutu1949",
+          "title": ""
+        },
+        "link": "https://lichess.org/hkdosX4p#47"
+      },
+      "5ArLGep5": {
+        "date": "2023-05-04",
+        "opponent": {
+          "username": "CTAJIIH",
+          "title": ""
+        },
+        "link": "https://lichess.org/5ArLGep5#57"
       }
     },
     "pawnDiamond": {
@@ -8949,6 +8997,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/jPI1TCXP#12"
+      },
+      "IkDG3mje": {
+        "date": "2023-05-06",
+        "opponent": {
+          "username": "Painajainen",
+          "title": ""
+        },
+        "link": "https://lichess.org/IkDG3mje#12"
       }
     },
     "promoteToKnightCheckmate": {
@@ -9157,6 +9213,14 @@
           "title": ""
         },
         "link": "https://lichess.org/9jkxqDKV#95"
+      },
+      "3FMfkzlV": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "caballotuerto14",
+          "title": ""
+        },
+        "link": "https://lichess.org/3FMfkzlV/black#84"
       }
     },
     "connectEightOnRank:4": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156783664,
-  "games_analyzed": 26684,
-  "moves_analyzed": 2048886,
+  "cache_updated_at": 1684554867765,
+  "games_analyzed": 26720,
+  "moves_analyzed": 2051709,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -2841,6 +2841,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
+      },
+      "77776871169": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "mansanjamsinghbhatia",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77776871169?tab=analysis&flip=true&move=073"
+      },
+      "77776827423": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "obimoe",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77776827423?tab=analysis&flip=false&move=024"
       }
     },
     "g5mate": {
@@ -2939,6 +2955,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
+      },
+      "77776827423": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "obimoe",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77776827423?tab=analysis&flip=false&move=024"
       }
     },
     "doubleCheckCheckmate": {
@@ -3383,6 +3407,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4403935108?tab=analysis&flip=true&move=045"
+      },
+      "77071346709": {
+        "date": "2023-05-06",
+        "opponent": {
+          "username": "zidianleiguang",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77071346709?tab=analysis&flip=true&move=073"
       }
     },
     "connectDiagonally:5": {

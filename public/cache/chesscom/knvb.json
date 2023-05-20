@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156881566,
-  "games_analyzed": 54457,
-  "moves_analyzed": 4736331,
+  "cache_updated_at": 1684554887682,
+  "games_analyzed": 54678,
+  "moves_analyzed": 4755189,
   "trophies": {
     "adoptionMatch:10": {
       "76677619": {
@@ -1907,6 +1907,14 @@
           "title": "WFM"
         },
         "link": "https://www.chess.com/analysis/game/live/4322500654?tab=analysis&flip=false&move=0"
+      },
+      "77510530555": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "Omranalhosani21",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77510530555?tab=analysis&flip=true&move=0"
       }
     },
     "bishopAndKnightMate": {
@@ -2005,6 +2013,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/5234349148?tab=analysis&flip=true&move=0239"
+      },
+      "77988823005": {
+        "date": "2023-05-16",
+        "opponent": {
+          "username": "FunnyDuck66",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77988823005?tab=analysis&flip=false&move=0204"
       }
     },
     "pawnCube": {
@@ -2183,6 +2199,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4483595007?tab=analysis&flip=true&move=031"
+      },
+      "78204049707": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "evilcooper",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78204049707?tab=analysis&flip=true&move=023"
       }
     },
     "connectDiagonally:5": {
@@ -4595,6 +4619,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76555323083?tab=analysis&flip=true&move=055"
+      },
+      "77920383117": {
+        "date": "2023-05-15",
+        "opponent": {
+          "username": "Tulk04",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77920383117?tab=analysis&flip=true&move=061"
+      },
+      "77587821529": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "liltimitri",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77587821529?tab=analysis&flip=true&move=037"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -7241,6 +7281,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76116088825?tab=analysis&flip=true&move=075"
+      },
+      "78100330831": {
+        "date": "2023-05-17",
+        "opponent": {
+          "username": "rhudson1987",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78100330831?tab=analysis&flip=false&move=058"
+      },
+      "77500306617": {
+        "date": "2023-05-10",
+        "opponent": {
+          "username": "Semen_Khanin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77500306617?tab=analysis&flip=false&move=084"
       }
     },
     "clutchPawn": {
@@ -9847,6 +9903,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76300806793?tab=analysis&flip=true&move=0177"
+      },
+      "78197431801": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "Ligotti2006",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78197431801?tab=analysis&flip=false&move=0178"
       }
     },
     "knightCube": {
@@ -10919,6 +10983,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4438625500?tab=analysis&flip=true&move=037"
+      },
+      "77589187049": {
+        "date": "2023-05-12",
+        "opponent": {
+          "username": "Tigger_The_Tiger",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77589187049?tab=analysis&flip=false&move=042"
       }
     },
     "lefongTrap": {
@@ -11315,6 +11387,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4432726834?tab=analysis&flip=true&move=012"
+      },
+      "77586038479": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "mastershake16",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/77586038479?tab=analysis&flip=true&move=012"
       }
     },
     "connectDiagonally:6": {

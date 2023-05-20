@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683156855090,
-  "games_analyzed": 13215,
-  "moves_analyzed": 1133409,
+  "cache_updated_at": 1684554761413,
+  "games_analyzed": 13278,
+  "moves_analyzed": 1140033,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -2231,6 +2231,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4473738700?tab=analysis&flip=true&move=057"
+      },
+      "77404995455": {
+        "date": "2023-05-09",
+        "opponent": {
+          "username": "Smiechu",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/77404995455?tab=analysis&flip=false&move=050"
       }
     },
     "pawnCube": {

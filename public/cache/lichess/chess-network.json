@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1683157093234,
-  "games_analyzed": 116717,
-  "moves_analyzed": 10048456,
+  "cache_updated_at": 1684554720703,
+  "games_analyzed": 117393,
+  "moves_analyzed": 10112006,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -6971,6 +6971,30 @@
           "title": "GM"
         },
         "link": "https://lichess.org/IRbgq1qE#29"
+      },
+      "UNJJXCPv": {
+        "date": "2023-05-18",
+        "opponent": {
+          "username": "lobouno",
+          "title": ""
+        },
+        "link": "https://lichess.org/UNJJXCPv/black#36"
+      },
+      "6b0At6ne": {
+        "date": "2023-05-13",
+        "opponent": {
+          "username": "SiroglanTalibov",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/6b0At6ne/black#32"
+      },
+      "MVtBWw04": {
+        "date": "2023-05-07",
+        "opponent": {
+          "username": "KokaKakoka",
+          "title": ""
+        },
+        "link": "https://lichess.org/MVtBWw04/black#40"
       }
     },
     "pawnCheckmate": {
@@ -13943,6 +13967,86 @@
           "title": ""
         },
         "link": "https://lichess.org/bFfGyunT#75"
+      },
+      "XEE8NLTu": {
+        "date": "2023-05-19",
+        "opponent": {
+          "username": "Nozdrachev_Vladislav",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/XEE8NLTu#49"
+      },
+      "8aqkcwdO": {
+        "date": "2023-05-18",
+        "opponent": {
+          "username": "chessajedrezz2020",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/8aqkcwdO#69"
+      },
+      "uuRqqrl9": {
+        "date": "2023-05-18",
+        "opponent": {
+          "username": "KAPUTVSEMU",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/uuRqqrl9#55"
+      },
+      "WmAnzBg3": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "Ellaijio",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/WmAnzBg3/black#50"
+      },
+      "DlqcqGPj": {
+        "date": "2023-05-13",
+        "opponent": {
+          "username": "TheEminance",
+          "title": ""
+        },
+        "link": "https://lichess.org/DlqcqGPj#43"
+      },
+      "Hh7vnM4j": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "Mirakel05",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/Hh7vnM4j#55"
+      },
+      "ZGNkvxFh": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "Mirakel05",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/ZGNkvxFh#43"
+      },
+      "kyfpUCGt": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "Mirakel05",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/kyfpUCGt#59"
+      },
+      "JKX7pLCw": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "ilqar_7474",
+          "title": ""
+        },
+        "link": "https://lichess.org/JKX7pLCw#65"
+      },
+      "zp1tVCYw": {
+        "date": "2023-05-04",
+        "opponent": {
+          "username": "Anwesh9792",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/zp1tVCYw#73"
       }
     },
     "stalemateTricks": {
@@ -15497,6 +15601,14 @@
           "title": ""
         },
         "link": "https://lichess.org/79UBUCcE#166"
+      },
+      "E2KvxAwQ": {
+        "date": "2023-05-13",
+        "opponent": {
+          "username": "Yuriy_Ayrapetyan",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/E2KvxAwQ#128"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -18469,6 +18581,30 @@
           "title": ""
         },
         "link": "https://lichess.org/WiRZ5w1s#121"
+      },
+      "DVSe9rHm": {
+        "date": "2023-05-15",
+        "opponent": {
+          "username": "Weetik",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/DVSe9rHm/black#146"
+      },
+      "PxhHyt3f": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "okriak",
+          "title": ""
+        },
+        "link": "https://lichess.org/PxhHyt3f/black#146"
+      },
+      "V2euxpKm": {
+        "date": "2023-05-08",
+        "opponent": {
+          "username": "MasterAssasin123",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/V2euxpKm#197"
       }
     },
     "pawnX": {
@@ -19835,6 +19971,14 @@
           "title": ""
         },
         "link": "https://lichess.org/8wxKK0RJ#49"
+      },
+      "K8WG8eFr": {
+        "date": "2023-05-11",
+        "opponent": {
+          "username": "iNeedAMouse",
+          "title": ""
+        },
+        "link": "https://lichess.org/K8WG8eFr/black#34"
       }
     },
     "ohNoMyQueen": {
@@ -20781,6 +20925,14 @@
           "title": ""
         },
         "link": "https://lichess.org/tpK8AH2F/black#16"
+      },
+      "u04fQa5E": {
+        "date": "2023-05-18",
+        "opponent": {
+          "username": "chessajedrezz2020",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/u04fQa5E#89"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -21015,6 +21167,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/IFrbSnG9/black#103"
+      },
+      "dNt6zQbL": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "Ellaijio",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/dNt6zQbL#142"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -23093,6 +23253,22 @@
           "title": ""
         },
         "link": "https://lichess.org/sHEzwKqQ/black#18"
+      },
+      "4vDgssuv": {
+        "date": "2023-05-15",
+        "opponent": {
+          "username": "Kelevra317",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/4vDgssuv/black#22"
+      },
+      "elbBsLeR": {
+        "date": "2023-05-14",
+        "opponent": {
+          "username": "okriak",
+          "title": ""
+        },
+        "link": "https://lichess.org/elbBsLeR/black#24"
       }
     },
     "connectDiagonally:6": {
