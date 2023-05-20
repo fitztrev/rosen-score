@@ -51,10 +51,21 @@
                 </h4>
 
                 <div class="grid grid-cols-2 gap-x-2 text-left">
-                    <div v-for="trophy in trophies" class="overflow-hidden">
+                    <div
+                        v-for="trophy in trophies"
+                        class="overflow-hidden"
+                        :title="`Appears ${
+                            trophyCountByUsername(trophy.opponent.username) > 1
+                                ? trophyCountByUsername(trophy.opponent.username) + ' times'
+                                : '1 time'
+                        } in this category`"
+                    >
                         <a :href="trophy.link" class="hover:underline whitespace-nowrap" target="_blank">
                             <username-formatter :title="trophy.opponent.title || ''" :username="trophy.opponent.username"></username-formatter>
                         </a>
+                        <span v-if="trophyCountByUsername(trophy.opponent.username) > 1" class="pl-2 text-sm text-gray-100 cursor-help"
+                            >x{{ trophyCountByUsername(trophy.opponent.username) }}</span
+                        >
                     </div>
                 </div>
             </template>
@@ -65,6 +76,7 @@
 <script lang="ts">
 import UsernameFormatter from './UsernameFormatter.vue'
 import TrophyCollection from './TrophyCollection.vue'
+import { TrophyForGame } from '../types/types'
 
 export default {
     props: {
@@ -105,6 +117,19 @@ export default {
         },
         hasExpandableContent(): boolean {
             return Boolean(this.desc || this.gameLink || this.youtubeLink)
+        },
+        usernameCount(): Map<string, number> {
+            let usernames = Object.values(this.trophies as TrophyForGame).map((trophy) => trophy.opponent.username)
+
+            return usernames.reduce((map, username) => {
+                map.set(username, (map.get(username) || 0) + 1)
+                return map
+            }, new Map<string, number>())
+        },
+    },
+    methods: {
+        trophyCountByUsername(username: string): number {
+            return this.usernameCount.get(username) || 0
         },
     },
 }

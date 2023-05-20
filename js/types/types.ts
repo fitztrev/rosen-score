@@ -12,15 +12,17 @@ export type TrophyCacheFile = {
     trophies: PlayerTrophiesByType
 }
 
-export type PlayerTrophiesByType = {
+export type TrophyForGame = {
     [key: string]: {
-        [key: string]: {
-            date: string
-            opponent: {
-                username: string
-                title: string
-            }
-            link: string
+        date: string
+        opponent: {
+            username: string
+            title: string
         }
+        link: string
     }
+}
+
+export type PlayerTrophiesByType = {
+    [key: string]: TrophyForGame
 }
