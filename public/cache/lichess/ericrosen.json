@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554683152,
-  "games_analyzed": 32583,
-  "moves_analyzed": 2558584,
+  "cache_updated_at": 1687006101329,
+  "games_analyzed": 32995,
+  "moves_analyzed": 2594071,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1627,6 +1627,14 @@
           "title": ""
         },
         "link": "https://lichess.org/eC868W3A/black#92"
+      },
+      "vJ4rf6Rx": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "CosmicVision",
+          "title": ""
+        },
+        "link": "https://lichess.org/vJ4rf6Rx/black#90"
       }
     },
     "winInsufficientMaterial": {
@@ -2053,6 +2061,14 @@
           "title": ""
         },
         "link": "https://lichess.org/Q032WUPJ#97"
+      },
+      "0HcpA5xM": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "Belyakov_Bogdan",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/0HcpA5xM#139"
       }
     },
     "rosenTrap": {
@@ -2495,6 +2511,30 @@
           "title": "FM"
         },
         "link": "https://lichess.org/WSH4hcT4/black#99"
+      },
+      "LCzqFpkl": {
+        "date": "2023-06-03",
+        "opponent": {
+          "username": "MartinLorenzini",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/LCzqFpkl#104"
+      },
+      "wC7abG1R": {
+        "date": "2023-05-31",
+        "opponent": {
+          "username": "SaraciNderim",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/wC7abG1R/black#99"
+      },
+      "2sDMCUz7": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "Kidefence",
+          "title": ""
+        },
+        "link": "https://lichess.org/2sDMCUz7/black#105"
       }
     },
     "stalemateTricks": {
@@ -4169,6 +4209,38 @@
           "title": "FM"
         },
         "link": "https://lichess.org/WSH4hcT4/black#99"
+      },
+      "LCzqFpkl": {
+        "date": "2023-06-03",
+        "opponent": {
+          "username": "MartinLorenzini",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/LCzqFpkl#104"
+      },
+      "wC7abG1R": {
+        "date": "2023-05-31",
+        "opponent": {
+          "username": "SaraciNderim",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/wC7abG1R/black#99"
+      },
+      "zn8mZBcG": {
+        "date": "2023-05-31",
+        "opponent": {
+          "username": "Toxicguy89",
+          "title": ""
+        },
+        "link": "https://lichess.org/zn8mZBcG#132"
+      },
+      "2sDMCUz7": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "Kidefence",
+          "title": ""
+        },
+        "link": "https://lichess.org/2sDMCUz7/black#105"
       }
     },
     "castleAfterMove40": {
@@ -4501,6 +4573,14 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#48"
+      },
+      "PNxsP49u": {
+        "date": "2023-05-22",
+        "opponent": {
+          "username": "KonMarios2010",
+          "title": ""
+        },
+        "link": "https://lichess.org/PNxsP49u#35"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -5475,6 +5555,14 @@
           "title": ""
         },
         "link": "https://lichess.org/iCAMgm9R/black#60"
+      },
+      "Asrxsry7": {
+        "date": "2023-05-22",
+        "opponent": {
+          "username": "KonMarios2010",
+          "title": ""
+        },
+        "link": "https://lichess.org/Asrxsry7#67"
       }
     },
     "ohNoMyQueen": {
@@ -7327,6 +7415,30 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#46"
+      },
+      "2iLWuxXE": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "marshal67",
+          "title": ""
+        },
+        "link": "https://lichess.org/2iLWuxXE/black#66"
+      },
+      "UlMXKyHj": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "Kidefence",
+          "title": ""
+        },
+        "link": "https://lichess.org/UlMXKyHj/black#26"
+      },
+      "PNxsP49u": {
+        "date": "2023-05-22",
+        "opponent": {
+          "username": "KonMarios2010",
+          "title": ""
+        },
+        "link": "https://lichess.org/PNxsP49u#27"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -7385,6 +7497,14 @@
           "title": ""
         },
         "link": "https://lichess.org/1iCssLZ8#121"
+      },
+      "KaJxm7ni": {
+        "date": "2023-05-20",
+        "opponent": {
+          "username": "championreeve",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/KaJxm7ni/black#140"
       }
     },
     "g5mate": {
@@ -7587,6 +7707,14 @@
           "title": ""
         },
         "link": "https://lichess.org/Bi7DCXfU#43"
+      },
+      "vJ4rf6Rx": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "CosmicVision",
+          "title": ""
+        },
+        "link": "https://lichess.org/vJ4rf6Rx/black#90"
       }
     },
     "castleQueensideWithCheckmate": {
@@ -9727,6 +9855,14 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#48"
+      },
+      "PNxsP49u": {
+        "date": "2023-05-22",
+        "opponent": {
+          "username": "KonMarios2010",
+          "title": ""
+        },
+        "link": "https://lichess.org/PNxsP49u#35"
       }
     },
     "checkmateAtMoveNumber:3": {

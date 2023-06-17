@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554793172,
-  "games_analyzed": 27636,
-  "moves_analyzed": 2117818,
+  "cache_updated_at": 1687006345685,
+  "games_analyzed": 27831,
+  "moves_analyzed": 2133566,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -1335,6 +1335,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4750248995?tab=analysis&flip=true&move=05"
+      },
+      "79889995317": {
+        "date": "2023-06-07",
+        "opponent": {
+          "username": "Warre",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79889995317?tab=analysis&flip=true&move=05"
       }
     },
     "ohNoMyQueen": {
@@ -1673,6 +1681,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4459929404?tab=analysis&flip=false&move=056"
+      },
+      "80580087669": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "HSH1987",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80580087669?tab=analysis&flip=true&move=061"
       }
     },
     "pawnDiamond": {
@@ -2091,6 +2107,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4481553066?tab=analysis&flip=true&move=051"
+      },
+      "78414233289": {
+        "date": "2023-05-21",
+        "opponent": {
+          "username": "VslyMrzv",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78414233289?tab=analysis&flip=true&move=033"
       }
     },
     "pawnCube": {
@@ -2253,6 +2277,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4743288058?tab=analysis&flip=true&move=025"
+      },
+      "78347617053": {
+        "date": "2023-05-20",
+        "opponent": {
+          "username": "rend1987",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78347617053?tab=analysis&flip=true&move=027"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -4659,6 +4691,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/4949260231?tab=analysis&flip=false&move=0"
+      },
+      "79543864677": {
+        "date": "2023-06-03",
+        "opponent": {
+          "username": "JackRodgers",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79543864677?tab=analysis&flip=true&move=0"
       }
     },
     "checkmateAtMoveNumber:4": {
@@ -5037,6 +5077,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4372611935?tab=analysis&flip=false&move=042"
+      },
+      "78437482039": {
+        "date": "2023-05-21",
+        "opponent": {
+          "username": "Mops_2004",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78437482039?tab=analysis&flip=true&move=0117"
       }
     },
     "connectDiagonally:6": {

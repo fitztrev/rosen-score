@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554849663,
-  "games_analyzed": 20942,
-  "moves_analyzed": 1692256,
+  "cache_updated_at": 1687006281644,
+  "games_analyzed": 21067,
+  "moves_analyzed": 1703116,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -1973,6 +1973,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/77327601321?tab=analysis&flip=false&move=044"
+      },
+      "79145527947": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "INLOVEWITHF",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79145527947?tab=analysis&flip=true&move=021"
       }
     },
     "clutchPawn": {

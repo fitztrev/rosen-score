@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554777946,
-  "games_analyzed": 48274,
-  "moves_analyzed": 3934741,
+  "cache_updated_at": 1687006366286,
+  "games_analyzed": 48638,
+  "moves_analyzed": 3967777,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -1629,6 +1629,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/77569488335?tab=analysis&flip=true&move=095"
+      },
+      "80587779383": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "NikoTheodorou",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80587779383?tab=analysis&flip=false&move=028"
       }
     },
     "adoptionMatch:10": {
@@ -5679,6 +5687,38 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/77468541415?tab=analysis&flip=false&move=0"
+      },
+      "80685217575": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "MKRasljechess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80685217575?tab=analysis&flip=false&move=0"
+      },
+      "80682797847": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "Denis_Makhnyov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80682797847?tab=analysis&flip=false&move=0"
+      },
+      "80598133211": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "SantoBlue",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80598133211?tab=analysis&flip=true&move=0"
+      },
+      "80489543105": {
+        "date": "2023-06-14",
+        "opponent": {
+          "username": "Griffinragon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80489543105?tab=analysis&flip=true&move=0"
       }
     },
     "pawnCheckmate": {
@@ -7171,6 +7211,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77632470533?tab=analysis&flip=true&move=087"
+      },
+      "80682093507": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "Denis_Makhnyov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80682093507?tab=analysis&flip=true&move=063"
       }
     },
     "doubleCheckCheckmate": {

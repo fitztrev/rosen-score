@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554659673,
-  "games_analyzed": 35751,
-  "moves_analyzed": 2245393,
+  "cache_updated_at": 1687006119877,
+  "games_analyzed": 35802,
+  "moves_analyzed": 2248635,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -1797,6 +1797,14 @@
           "title": ""
         },
         "link": "https://lichess.org/u3b6gks4#49"
+      },
+      "UpjcJYdq": {
+        "date": "2023-06-13",
+        "opponent": {
+          "username": "Migliore321",
+          "title": ""
+        },
+        "link": "https://lichess.org/UpjcJYdq/black#52"
       }
     },
     "pawnCheckmate": {
@@ -6787,6 +6795,30 @@
           "title": ""
         },
         "link": "https://lichess.org/XMSYvoiZ#4"
+      },
+      "JTz1P05y": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "wacasudu",
+          "title": ""
+        },
+        "link": "https://lichess.org/JTz1P05y#4"
+      },
+      "pJ3TdhZ6": {
+        "date": "2023-06-13",
+        "opponent": {
+          "username": "Sergo97",
+          "title": ""
+        },
+        "link": "https://lichess.org/pJ3TdhZ6/black#3"
+      },
+      "xpt6k4KS": {
+        "date": "2023-06-11",
+        "opponent": {
+          "username": "Watsonchenney",
+          "title": ""
+        },
+        "link": "https://lichess.org/xpt6k4KS/black#9"
       }
     },
     "g5mate": {
@@ -7925,6 +7957,14 @@
           "title": ""
         },
         "link": "https://lichess.org/sVlM2Srp/black#137"
+      },
+      "ONEtmKU6": {
+        "date": "2023-06-13",
+        "opponent": {
+          "username": "The_hindu",
+          "title": ""
+        },
+        "link": "https://lichess.org/ONEtmKU6#120"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -8545,6 +8585,14 @@
           "title": ""
         },
         "link": "https://lichess.org/XZ2Geltc/black#136"
+      },
+      "pMUme2wg": {
+        "date": "2023-06-14",
+        "opponent": {
+          "username": "arat1988",
+          "title": ""
+        },
+        "link": "https://lichess.org/pMUme2wg#87"
       }
     },
     "connectDiagonally:5": {
@@ -9519,6 +9567,14 @@
           "title": ""
         },
         "link": "https://lichess.org/l9cGyTns#49"
+      },
+      "3JXsDO8D": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "FroggyX16",
+          "title": ""
+        },
+        "link": "https://lichess.org/3JXsDO8D/black#38"
       }
     },
     "knightCube": {

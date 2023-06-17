@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554887682,
-  "games_analyzed": 54678,
-  "moves_analyzed": 4755189,
+  "cache_updated_at": 1687006445753,
+  "games_analyzed": 55034,
+  "moves_analyzed": 4787693,
   "trophies": {
     "adoptionMatch:10": {
       "76677619": {
@@ -2207,6 +2207,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78204049707?tab=analysis&flip=true&move=023"
+      },
+      "78883359595": {
+        "date": "2023-05-26",
+        "opponent": {
+          "username": "saltyclown",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78883359595?tab=analysis&flip=true&move=037"
       }
     },
     "connectDiagonally:5": {
@@ -3673,6 +3681,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/76372938965?tab=analysis&flip=true&move=065"
+      },
+      "78895976397": {
+        "date": "2023-05-27",
+        "opponent": {
+          "username": "GCFrabbitslyr",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78895976397?tab=analysis&flip=false&move=050"
       }
     },
     "ohNoMyQueen": {
@@ -4635,6 +4651,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/77587821529?tab=analysis&flip=true&move=037"
+      },
+      "80091667973": {
+        "date": "2023-06-09",
+        "opponent": {
+          "username": "applejewz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80091667973?tab=analysis&flip=false&move=034"
+      },
+      "79909186993": {
+        "date": "2023-06-07",
+        "opponent": {
+          "username": "Coffeehouse2402",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79909186993?tab=analysis&flip=true&move=057"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -4813,6 +4845,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/76530058899?tab=analysis&flip=false&move=065"
+      },
+      "78896458291": {
+        "date": "2023-05-27",
+        "opponent": {
+          "username": "GCFrabbitslyr",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78896458291?tab=analysis&flip=true&move=059"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -7297,6 +7337,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77500306617?tab=analysis&flip=false&move=084"
+      },
+      "79206909665": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "Viomedium",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/79206909665?tab=analysis&flip=true&move=063"
       }
     },
     "clutchPawn": {
@@ -7627,6 +7675,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/4954602972?tab=analysis&flip=false&move=0134"
+      },
+      "79309826471": {
+        "date": "2023-05-31",
+        "opponent": {
+          "username": "IwishIwasTDPeddy",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/79309826471?tab=analysis&flip=false&move=0108"
       }
     },
     "smotheredMate": {
@@ -9483,6 +9539,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4409803278?tab=analysis&flip=true&move=0130"
+      },
+      "78895325113": {
+        "date": "2023-05-27",
+        "opponent": {
+          "username": "Bondau",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78895325113?tab=analysis&flip=true&move=0124"
       }
     },
     "checkmateAtMoveNumber:4": {
@@ -11549,6 +11613,16 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/88723632?tab=analysis&flip=true&move=0153"
+      }
+    },
+    "castleFork": {
+      "78939853505": {
+        "date": "2023-05-27",
+        "opponent": {
+          "username": "ahote",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78939853505?tab=analysis&flip=false&move=023"
       }
     }
   }

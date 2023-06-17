@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554918692,
-  "games_analyzed": 2740,
-  "moves_analyzed": 248801,
+  "cache_updated_at": 1687006460585,
+  "games_analyzed": 2907,
+  "moves_analyzed": 263875,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -227,6 +227,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/56920297335?tab=analysis&flip=true&move=037"
+      },
+      "79999966665": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "nihalsarin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79999966665?tab=analysis&flip=false&move=054"
       }
     },
     "ohNoMyQueen": {
@@ -301,6 +309,16 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/55560014431?tab=analysis&flip=false&move=086"
+      }
+    },
+    "royalFamilyFork": {
+      "78863710491": {
+        "date": "2023-05-26",
+        "opponent": {
+          "username": "mishanick",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78863710491?tab=analysis&flip=true&move=035"
       }
     }
   }

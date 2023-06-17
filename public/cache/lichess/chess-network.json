@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554720703,
-  "games_analyzed": 117393,
-  "moves_analyzed": 10112006,
+  "cache_updated_at": 1687006176358,
+  "games_analyzed": 118654,
+  "moves_analyzed": 10216659,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -6995,6 +6995,54 @@
           "title": ""
         },
         "link": "https://lichess.org/MVtBWw04/black#40"
+      },
+      "7pleMDmN": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "brisachess1",
+          "title": ""
+        },
+        "link": "https://lichess.org/7pleMDmN#23"
+      },
+      "9PFMZMlb": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "Can52k99",
+          "title": ""
+        },
+        "link": "https://lichess.org/9PFMZMlb/black#64"
+      },
+      "028NBw1s": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "RonflEX63",
+          "title": ""
+        },
+        "link": "https://lichess.org/028NBw1s/black#60"
+      },
+      "TvUeFT2n": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "subbugct",
+          "title": ""
+        },
+        "link": "https://lichess.org/TvUeFT2n/black#46"
+      },
+      "RZ00XRGa": {
+        "date": "2023-05-25",
+        "opponent": {
+          "username": "kapilchesser",
+          "title": ""
+        },
+        "link": "https://lichess.org/RZ00XRGa/black#20"
+      },
+      "AxQnwmNd": {
+        "date": "2023-05-23",
+        "opponent": {
+          "username": "Shannow",
+          "title": ""
+        },
+        "link": "https://lichess.org/AxQnwmNd#85"
       }
     },
     "pawnCheckmate": {
@@ -10469,6 +10517,14 @@
           "title": ""
         },
         "link": "https://lichess.org/fKYrCPq7/black#76"
+      },
+      "PY2B7mov": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "Puankare",
+          "title": ""
+        },
+        "link": "https://lichess.org/PY2B7mov/black#116"
       }
     },
     "connectDiagonally:5": {
@@ -14047,6 +14103,54 @@
           "title": "IM"
         },
         "link": "https://lichess.org/zp1tVCYw#73"
+      },
+      "qmbX75n2": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "xawnyof884",
+          "title": ""
+        },
+        "link": "https://lichess.org/qmbX75n2/black#74"
+      },
+      "nVkUwQg8": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "jessehf",
+          "title": ""
+        },
+        "link": "https://lichess.org/nVkUwQg8/black#56"
+      },
+      "kHGFLfd5": {
+        "date": "2023-06-06",
+        "opponent": {
+          "username": "condansator3",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/kHGFLfd5#43"
+      },
+      "Z3P8ICgD": {
+        "date": "2023-06-05",
+        "opponent": {
+          "username": "Kirill_Klyukin",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/Z3P8ICgD#35"
+      },
+      "khx8fPdO": {
+        "date": "2023-06-01",
+        "opponent": {
+          "username": "Raul_Chapablanca",
+          "title": ""
+        },
+        "link": "https://lichess.org/khx8fPdO#29"
+      },
+      "iPrsr7sQ": {
+        "date": "2023-05-23",
+        "opponent": {
+          "username": "mating_positions",
+          "title": ""
+        },
+        "link": "https://lichess.org/iPrsr7sQ#63"
       }
     },
     "stalemateTricks": {
@@ -15609,6 +15713,22 @@
           "title": "GM"
         },
         "link": "https://lichess.org/E2KvxAwQ#128"
+      },
+      "ifWdnF73": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "Vaccaria2022",
+          "title": ""
+        },
+        "link": "https://lichess.org/ifWdnF73/black#97"
+      },
+      "LMPVSiPh": {
+        "date": "2023-06-07",
+        "opponent": {
+          "username": "QuarterPawn",
+          "title": ""
+        },
+        "link": "https://lichess.org/LMPVSiPh/black#155"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -18605,6 +18725,22 @@
           "title": "GM"
         },
         "link": "https://lichess.org/V2euxpKm#197"
+      },
+      "wegiCX5s": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "anonymouslogin111",
+          "title": ""
+        },
+        "link": "https://lichess.org/wegiCX5s/black#178"
+      },
+      "WokYTuEF": {
+        "date": "2023-05-26",
+        "opponent": {
+          "username": "Dostoyevsky99",
+          "title": ""
+        },
+        "link": "https://lichess.org/WokYTuEF#137"
       }
     },
     "pawnX": {
@@ -18839,6 +18975,14 @@
           "title": ""
         },
         "link": "https://lichess.org/8PxVLCWY/black#60"
+      },
+      "iIU01VIS": {
+        "date": "2023-06-14",
+        "opponent": {
+          "username": "dmitrijiiiGM",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/iIU01VIS/black#46"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -19385,6 +19529,14 @@
           "title": ""
         },
         "link": "https://lichess.org/oBbObecA#58"
+      },
+      "7ATQf1R9": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "arne1988",
+          "title": ""
+        },
+        "link": "https://lichess.org/7ATQf1R9/black#62"
       }
     },
     "doubleCheckCheckmate": {
@@ -21313,6 +21465,14 @@
           "title": ""
         },
         "link": "https://lichess.org/8plGPhbI/black#136"
+      },
+      "WpiQF3qG": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "Tonyforpresident",
+          "title": ""
+        },
+        "link": "https://lichess.org/WpiQF3qG#137"
       }
     },
     "clutchPawn": {
@@ -22365,6 +22525,14 @@
           "title": ""
         },
         "link": "https://lichess.org/NrhCRqJ4/black#42"
+      },
+      "kY2pPHuE": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "Happiness64",
+          "title": ""
+        },
+        "link": "https://lichess.org/kY2pPHuE#69"
       }
     },
     "royalFamilyFork": {
@@ -23269,6 +23437,22 @@
           "title": ""
         },
         "link": "https://lichess.org/elbBsLeR/black#24"
+      },
+      "u4Ovw1iY": {
+        "date": "2023-06-12",
+        "opponent": {
+          "username": "okriak",
+          "title": ""
+        },
+        "link": "https://lichess.org/u4Ovw1iY/black#26"
+      },
+      "ZfXrkqDI": {
+        "date": "2023-05-23",
+        "opponent": {
+          "username": "banknotehouse",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZfXrkqDI#49"
       }
     },
     "connectDiagonally:6": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554867765,
-  "games_analyzed": 26720,
-  "moves_analyzed": 2051709,
+  "cache_updated_at": 1687006295741,
+  "games_analyzed": 26861,
+  "moves_analyzed": 2063623,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1099,6 +1099,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/76488004461?tab=analysis&flip=false&move=0"
+      },
+      "79593058759": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "kreonx",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79593058759?tab=analysis&flip=false&move=0"
+      },
+      "78988919463": {
+        "date": "2023-05-28",
+        "opponent": {
+          "username": "superchess02",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78988919463?tab=analysis&flip=false&move=0"
       }
     },
     "stalemateTricks": {
@@ -3859,6 +3875,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/22742400565?tab=analysis&flip=false&move=0"
+      },
+      "79591862771": {
+        "date": "2023-06-04",
+        "opponent": {
+          "username": "kreonx",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79591862771?tab=analysis&flip=false&move=0"
       }
     },
     "clutchPawn": {

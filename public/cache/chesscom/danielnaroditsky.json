@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554818466,
-  "games_analyzed": 84919,
-  "moves_analyzed": 7573493,
+  "cache_updated_at": 1687006328493,
+  "games_analyzed": 85887,
+  "moves_analyzed": 7662324,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -1163,6 +1163,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77176298171?tab=analysis&flip=false&move=044"
+      },
+      "80551828747": {
+        "date": "2023-06-15",
+        "opponent": {
+          "username": "Obsidian-Destroyer",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80551828747?tab=analysis&flip=false&move=068"
+      },
+      "79937424021": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79937424021?tab=analysis&flip=true&move=069"
       }
     },
     "adoptionMatch:10": {
@@ -4045,6 +4061,70 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77176336369?tab=analysis&flip=true&move=0"
+      },
+      "80725375191": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "KostyaKornienko",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80725375191?tab=analysis&flip=false&move=0"
+      },
+      "80723563533": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "vi_pranav",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80723563533?tab=analysis&flip=false&move=0"
+      },
+      "80722852129": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "vi_pranav",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80722852129?tab=analysis&flip=true&move=0"
+      },
+      "80715739647": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "I_am_Javi",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80715739647?tab=analysis&flip=true&move=0"
+      },
+      "80639567623": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80639567623?tab=analysis&flip=false&move=0"
+      },
+      "80375395261": {
+        "date": "2023-06-13",
+        "opponent": {
+          "username": "KostyaKornienko",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80375395261?tab=analysis&flip=true&move=0"
+      },
+      "79344165911": {
+        "date": "2023-06-01",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79344165911?tab=analysis&flip=true&move=0"
+      },
+      "78626471791": {
+        "date": "2023-05-24",
+        "opponent": {
+          "username": "Irakli_Akhvlediani",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78626471791?tab=analysis&flip=true&move=0"
       }
     },
     "clutchPawn": {
@@ -7049,6 +7129,30 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77182241367?tab=analysis&flip=true&move=0112"
+      },
+      "79937466521": {
+        "date": "2023-06-08",
+        "opponent": {
+          "username": "artooon",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79937466521?tab=analysis&flip=false&move=0141"
+      },
+      "78452504267": {
+        "date": "2023-05-22",
+        "opponent": {
+          "username": "platy3",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/78452504267?tab=analysis&flip=true&move=0114"
+      },
+      "78369661529": {
+        "date": "2023-05-21",
+        "opponent": {
+          "username": "MKRasljechess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78369661529?tab=analysis&flip=false&move=0115"
       }
     },
     "pawnCube": {
@@ -9623,6 +9727,38 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/77265645087?tab=analysis&flip=false&move=0126"
+      },
+      "80725375191": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "KostyaKornienko",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80725375191?tab=analysis&flip=false&move=084"
+      },
+      "80638867833": {
+        "date": "2023-06-16",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80638867833?tab=analysis&flip=false&move=086"
+      },
+      "80029170991": {
+        "date": "2023-06-09",
+        "opponent": {
+          "username": "Sina_Movahed",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80029170991?tab=analysis&flip=false&move=068"
+      },
+      "78369128287": {
+        "date": "2023-05-21",
+        "opponent": {
+          "username": "MKRasljechess",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/78369128287?tab=analysis&flip=true&move=0125"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -10763,6 +10899,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/77186496807?tab=analysis&flip=true&move=031"
+      },
+      "80721742645": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "vi_pranav",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80721742645?tab=analysis&flip=false&move=040"
       }
     },
     "rosenTrap": {
@@ -11335,6 +11479,22 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/78199789483?tab=analysis&flip=true&move=073"
+      },
+      "80457622297": {
+        "date": "2023-06-14",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80457622297?tab=analysis&flip=false&move=086"
+      },
+      "80022600701": {
+        "date": "2023-06-09",
+        "opponent": {
+          "username": "Griffinragon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80022600701?tab=analysis&flip=true&move=057"
       }
     },
     "adoptionMatch:20": {
@@ -11529,6 +11689,14 @@
           "title": "WFM"
         },
         "link": "https://www.chess.com/analysis/game/live/4384094265?tab=analysis&flip=false&move=0"
+      },
+      "80374814693": {
+        "date": "2023-06-13",
+        "opponent": {
+          "username": "KostyaKornienko",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80374814693?tab=analysis&flip=true&move=0"
       }
     },
     "bishopAndKnightMate": {

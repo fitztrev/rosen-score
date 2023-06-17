@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1684554761413,
-  "games_analyzed": 13278,
-  "moves_analyzed": 1140033,
+  "cache_updated_at": 1687006381609,
+  "games_analyzed": 13350,
+  "moves_analyzed": 1146749,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -2239,6 +2239,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/77404995455?tab=analysis&flip=false&move=050"
+      },
+      "79219387877": {
+        "date": "2023-05-30",
+        "opponent": {
+          "username": "szefru",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/79219387877?tab=analysis&flip=false&move=024"
       }
     },
     "pawnCube": {
