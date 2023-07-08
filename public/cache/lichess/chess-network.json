@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006176358,
-  "games_analyzed": 118654,
-  "moves_analyzed": 10216659,
+  "cache_updated_at": 1688823989477,
+  "games_analyzed": 119404,
+  "moves_analyzed": 10271619,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -10525,6 +10525,14 @@
           "title": ""
         },
         "link": "https://lichess.org/PY2B7mov/black#116"
+      },
+      "Fyu6HcrK": {
+        "date": "2023-06-22",
+        "opponent": {
+          "username": "Carobee",
+          "title": ""
+        },
+        "link": "https://lichess.org/Fyu6HcrK/black#120"
       }
     },
     "connectDiagonally:5": {
@@ -14151,6 +14159,38 @@
           "title": ""
         },
         "link": "https://lichess.org/iPrsr7sQ#63"
+      },
+      "ltNMZHAx": {
+        "date": "2023-06-24",
+        "opponent": {
+          "username": "tp_21",
+          "title": ""
+        },
+        "link": "https://lichess.org/ltNMZHAx#23"
+      },
+      "vJG07obf": {
+        "date": "2023-06-22",
+        "opponent": {
+          "username": "IvarTheBoneless11",
+          "title": ""
+        },
+        "link": "https://lichess.org/vJG07obf#41"
+      },
+      "Kc0HBUYS": {
+        "date": "2023-06-20",
+        "opponent": {
+          "username": "zRivencx",
+          "title": ""
+        },
+        "link": "https://lichess.org/Kc0HBUYS/black#66"
+      },
+      "b6H2OnX8": {
+        "date": "2023-06-18",
+        "opponent": {
+          "username": "tornike_sanikidze",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/b6H2OnX8#59"
       }
     },
     "stalemateTricks": {
@@ -18741,6 +18781,14 @@
           "title": ""
         },
         "link": "https://lichess.org/WokYTuEF#137"
+      },
+      "Lt526ihs": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "superchess2002",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/Lt526ihs#155"
       }
     },
     "pawnX": {
@@ -19537,6 +19585,14 @@
           "title": ""
         },
         "link": "https://lichess.org/7ATQf1R9/black#62"
+      },
+      "GYPH6Tlf": {
+        "date": "2023-07-07",
+        "opponent": {
+          "username": "anonymous61596",
+          "title": ""
+        },
+        "link": "https://lichess.org/GYPH6Tlf#62"
       }
     },
     "doubleCheckCheckmate": {
@@ -21085,6 +21141,22 @@
           "title": "IM"
         },
         "link": "https://lichess.org/u04fQa5E#89"
+      },
+      "gdikBq4e": {
+        "date": "2023-06-24",
+        "opponent": {
+          "username": "bigbootycaribbean",
+          "title": ""
+        },
+        "link": "https://lichess.org/gdikBq4e#45"
+      },
+      "0EuloVG8": {
+        "date": "2023-06-18",
+        "opponent": {
+          "username": "Brave_spirit12",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/0EuloVG8#65"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -22235,6 +22307,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/lPrlWGye#163"
+      },
+      "2od8622I": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "superchess2002",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/2od8622I#143"
       }
     },
     "smotheredMate": {

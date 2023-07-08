@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006119877,
-  "games_analyzed": 35802,
-  "moves_analyzed": 2248635,
+  "cache_updated_at": 1688824032310,
+  "games_analyzed": 36004,
+  "moves_analyzed": 2261506,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -491,6 +491,14 @@
           "title": ""
         },
         "link": "https://lichess.org/tHhbrjb7"
+      },
+      "XhiIGrz3": {
+        "date": "2023-06-25",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://lichess.org/XhiIGrz3"
       }
     },
     "ohNoMyQueen": {
@@ -1805,6 +1813,22 @@
           "title": ""
         },
         "link": "https://lichess.org/UpjcJYdq/black#52"
+      },
+      "iIkuazp4": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "Aburiz4l",
+          "title": ""
+        },
+        "link": "https://lichess.org/iIkuazp4/black#48"
+      },
+      "601FszTe": {
+        "date": "2023-06-27",
+        "opponent": {
+          "username": "ArslanMH",
+          "title": ""
+        },
+        "link": "https://lichess.org/601FszTe/black#44"
       }
     },
     "pawnCheckmate": {
@@ -6819,6 +6843,38 @@
           "title": ""
         },
         "link": "https://lichess.org/xpt6k4KS/black#9"
+      },
+      "HmWNf3VQ": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "SofiyaMeri",
+          "title": ""
+        },
+        "link": "https://lichess.org/HmWNf3VQ/black#3"
+      },
+      "DtCSPzfY": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "tareqsalman",
+          "title": ""
+        },
+        "link": "https://lichess.org/DtCSPzfY#4"
+      },
+      "6ZPDyU8q": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "Circassian17",
+          "title": ""
+        },
+        "link": "https://lichess.org/6ZPDyU8q#4"
+      },
+      "4FkZI2KE": {
+        "date": "2023-06-27",
+        "opponent": {
+          "username": "Attackloaded",
+          "title": ""
+        },
+        "link": "https://lichess.org/4FkZI2KE#4"
       }
     },
     "g5mate": {
@@ -8463,6 +8519,14 @@
           "title": ""
         },
         "link": "https://lichess.org/FKou1UiK#73"
+      },
+      "N7eZwwH9": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "amkrishnan63",
+          "title": ""
+        },
+        "link": "https://lichess.org/N7eZwwH9#89"
       }
     },
     "winInsufficientMaterial": {
@@ -9165,6 +9229,14 @@
           "title": ""
         },
         "link": "https://lichess.org/u3b6gks4#51"
+      },
+      "gVVWG9as": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "PauloBolildo",
+          "title": ""
+        },
+        "link": "https://lichess.org/gVVWG9as#29"
       }
     },
     "doubleCheckCheckmate": {
@@ -9907,6 +9979,16 @@
           "title": ""
         },
         "link": "https://lichess.org/Rggdy0rY/black#152"
+      }
+    },
+    "checkmateWithKing": {
+      "Ik5Cykhl": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "Sidar2001",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ik5Cykhl/black#56"
       }
     }
   }

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006328493,
-  "games_analyzed": 85887,
-  "moves_analyzed": 7662324,
+  "cache_updated_at": 1688824108613,
+  "games_analyzed": 86954,
+  "moves_analyzed": 7763456,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -1179,6 +1179,30 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/79937424021?tab=analysis&flip=true&move=069"
+      },
+      "82193421969": {
+        "date": "2023-07-04",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82193421969?tab=analysis&flip=false&move=046"
+      },
+      "81672857625": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81672857625?tab=analysis&flip=true&move=039"
+      },
+      "81648787691": {
+        "date": "2023-06-27",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81648787691?tab=analysis&flip=true&move=027"
       }
     },
     "adoptionMatch:10": {
@@ -4125,6 +4149,62 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/78626471791?tab=analysis&flip=true&move=0"
+      },
+      "82193388567": {
+        "date": "2023-07-04",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82193388567?tab=analysis&flip=true&move=0"
+      },
+      "82102862771": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "Somalianwarrior2006",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82102862771?tab=analysis&flip=true&move=0"
+      },
+      "82099841131": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82099841131?tab=analysis&flip=false&move=0"
+      },
+      "82012197105": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82012197105?tab=analysis&flip=true&move=0"
+      },
+      "81923980323": {
+        "date": "2023-07-01",
+        "opponent": {
+          "username": "Mops_2004",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81923980323?tab=analysis&flip=false&move=0"
+      },
+      "81920432561": {
+        "date": "2023-07-01",
+        "opponent": {
+          "username": "lucasmito",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81920432561?tab=analysis&flip=false&move=0"
+      },
+      "81822255659": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81822255659?tab=analysis&flip=true&move=0"
       }
     },
     "clutchPawn": {
@@ -4647,6 +4727,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4426332895?tab=analysis&flip=true&move=0147"
+      },
+      "81647602345": {
+        "date": "2023-06-27",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81647602345?tab=analysis&flip=true&move=0163"
       }
     },
     "stalemateTricks": {
@@ -7153,6 +7241,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78369661529?tab=analysis&flip=false&move=0115"
+      },
+      "81828290459": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "Njal28",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81828290459?tab=analysis&flip=false&move=0137"
+      },
+      "81648230979": {
+        "date": "2023-06-27",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81648230979?tab=analysis&flip=false&move=087"
       }
     },
     "pawnCube": {
@@ -9759,6 +9863,38 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78369128287?tab=analysis&flip=true&move=0125"
+      },
+      "82362586087": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "Cryptochess",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82362586087?tab=analysis&flip=false&move=094"
+      },
+      "81750876243": {
+        "date": "2023-06-29",
+        "opponent": {
+          "username": "Obsidian-Destroyer",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81750876243?tab=analysis&flip=false&move=0106"
+      },
+      "81673997117": {
+        "date": "2023-06-28",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81673997117?tab=analysis&flip=false&move=0116"
+      },
+      "80804537383": {
+        "date": "2023-06-18",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80804537383?tab=analysis&flip=false&move=0134"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -11309,6 +11445,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4782193318?tab=analysis&flip=true&move=057"
+      },
+      "82096806945": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "alexrustemov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82096806945?tab=analysis&flip=false&move=036"
       }
     },
     "doubleCheckCheckmate": {
@@ -11495,6 +11639,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/80022600701?tab=analysis&flip=true&move=057"
+      },
+      "81750181821": {
+        "date": "2023-06-29",
+        "opponent": {
+          "username": "Obsidian-Destroyer",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81750181821?tab=analysis&flip=false&move=056"
       }
     },
     "adoptionMatch:20": {

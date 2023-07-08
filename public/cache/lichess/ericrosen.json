@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006101329,
-  "games_analyzed": 32995,
-  "moves_analyzed": 2594071,
+  "cache_updated_at": 1688823940162,
+  "games_analyzed": 33243,
+  "moves_analyzed": 2616524,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1635,6 +1635,14 @@
           "title": ""
         },
         "link": "https://lichess.org/vJ4rf6Rx/black#90"
+      },
+      "oldpCRz7": {
+        "date": "2023-07-01",
+        "opponent": {
+          "username": "khaledYousef22",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/oldpCRz7/black#104"
       }
     },
     "winInsufficientMaterial": {
@@ -4241,6 +4249,14 @@
           "title": ""
         },
         "link": "https://lichess.org/2sDMCUz7/black#105"
+      },
+      "25OCyOc4": {
+        "date": "2023-06-17",
+        "opponent": {
+          "username": "PchelkinVK",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/25OCyOc4#112"
       }
     },
     "castleAfterMove40": {
@@ -4283,6 +4299,14 @@
           "title": ""
         },
         "link": "https://lichess.org/cbCyEDUf#81"
+      },
+      "A4zZOCdA": {
+        "date": "2023-06-29",
+        "opponent": {
+          "username": "Gduffy100",
+          "title": ""
+        },
+        "link": "https://lichess.org/A4zZOCdA#81"
       }
     },
     "pawnCube": {
@@ -5563,6 +5587,14 @@
           "title": ""
         },
         "link": "https://lichess.org/Asrxsry7#67"
+      },
+      "po2YeVaO": {
+        "date": "2023-06-29",
+        "opponent": {
+          "username": "Molurus",
+          "title": ""
+        },
+        "link": "https://lichess.org/po2YeVaO#63"
       }
     },
     "ohNoMyQueen": {
@@ -7439,6 +7471,14 @@
           "title": ""
         },
         "link": "https://lichess.org/PNxsP49u#27"
+      },
+      "soVrS5od": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "UltraTerry",
+          "title": ""
+        },
+        "link": "https://lichess.org/soVrS5od/black#24"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -8787,6 +8827,14 @@
           "title": ""
         },
         "link": "https://lichess.org/RROyTpXt/black#50"
+      },
+      "pBVKu9GJ": {
+        "date": "2023-06-26",
+        "opponent": {
+          "username": "littleplotkin",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/pBVKu9GJ/black#74"
       }
     },
     "adoptionMatch:10": {

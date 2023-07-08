@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006281644,
-  "games_analyzed": 21067,
-  "moves_analyzed": 1703116,
+  "cache_updated_at": 1688824063553,
+  "games_analyzed": 21114,
+  "moves_analyzed": 1705847,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -1981,6 +1981,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/79145527947?tab=analysis&flip=true&move=021"
+      },
+      "81217921161": {
+        "date": "2023-06-23",
+        "opponent": {
+          "username": "thechessnerd",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81217921161?tab=analysis&flip=false&move=034"
       }
     },
     "clutchPawn": {

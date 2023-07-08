@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006295741,
-  "games_analyzed": 26861,
-  "moves_analyzed": 2063623,
+  "cache_updated_at": 1688824077197,
+  "games_analyzed": 26955,
+  "moves_analyzed": 2070724,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1115,6 +1115,30 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/78988919463?tab=analysis&flip=false&move=0"
+      },
+      "82078899235": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "UnknownMagician",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82078899235?tab=analysis&flip=false&move=0"
+      },
+      "81901794355": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "Speed-O-Sonic",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81901794355?tab=analysis&flip=false&move=0"
+      },
+      "81372831441": {
+        "date": "2023-06-24",
+        "opponent": {
+          "username": "LlambiPasku",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/81372831441?tab=analysis&flip=false&move=0"
       }
     },
     "stalemateTricks": {

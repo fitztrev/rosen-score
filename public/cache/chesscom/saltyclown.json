@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006497717,
-  "games_analyzed": 47564,
-  "moves_analyzed": 3136113,
+  "cache_updated_at": 1688824254853,
+  "games_analyzed": 47981,
+  "moves_analyzed": 3163999,
   "trophies": {
     "lefongTrap": {
       "76048876873": {
@@ -5971,6 +5971,38 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78305566281?tab=analysis&flip=false&move=03"
+      },
+      "82413041571": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "Aalst7",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82413041571?tab=analysis&flip=true&move=04"
+      },
+      "82348791879": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "erikmaye",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82348791879?tab=analysis&flip=false&move=03"
+      },
+      "82094445175": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "miretchin",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82094445175?tab=analysis&flip=true&move=02"
+      },
+      "82092104627": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "digilawls",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82092104627?tab=analysis&flip=true&move=06"
       }
     },
     "adoptionMatch:10": {
@@ -7013,6 +7045,46 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78308420545?tab=analysis&flip=false&move=0"
+      },
+      "82416601873": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82416601873?tab=analysis&flip=true&move=0"
+      },
+      "82151007109": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "delliv23",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82151007109?tab=analysis&flip=false&move=0"
+      },
+      "82149758543": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "boro98",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82149758543?tab=analysis&flip=true&move=0"
+      },
+      "82093229153": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "Someone7834",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82093229153?tab=analysis&flip=true&move=0"
+      },
+      "82091498679": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "digilawls",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82091498679?tab=analysis&flip=true&move=0"
       }
     },
     "knightCube": {
@@ -9169,6 +9241,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78310318435?tab=analysis&flip=true&move=043"
+      },
+      "82411360551": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "Thinkitthrough19",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82411360551?tab=analysis&flip=true&move=065"
+      },
+      "82220494473": {
+        "date": "2023-07-04",
+        "opponent": {
+          "username": "lucsrlima",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82220494473?tab=analysis&flip=false&move=050"
+      },
+      "82150193261": {
+        "date": "2023-07-03",
+        "opponent": {
+          "username": "boro98",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82150193261?tab=analysis&flip=true&move=031"
       }
     },
     "pawnDiamond": {
@@ -9427,6 +9523,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76998624487?tab=analysis&flip=true&move=057"
+      },
+      "82353075227": {
+        "date": "2023-07-06",
+        "opponent": {
+          "username": "WISEWARRIOR",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82353075227?tab=analysis&flip=true&move=035"
+      },
+      "82057244403": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "MarMar2121",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82057244403?tab=analysis&flip=false&move=094"
       }
     },
     "pawnCheckmate": {
@@ -10629,6 +10741,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78306634697?tab=analysis&flip=false&move=022"
+      },
+      "82254017679": {
+        "date": "2023-07-05",
+        "opponent": {
+          "username": "aniv29",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82254017679?tab=analysis&flip=false&move=078"
+      },
+      "82056094399": {
+        "date": "2023-07-02",
+        "opponent": {
+          "username": "dudierental",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82056094399?tab=analysis&flip=true&move=091"
+      },
+      "81090243403": {
+        "date": "2023-06-21",
+        "opponent": {
+          "username": "kulhoo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81090243403?tab=analysis&flip=true&move=071"
       }
     },
     "royalFamilyFork": {
@@ -12669,6 +12805,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/80407338477?tab=analysis&flip=false&move=0123"
+      },
+      "80875896985": {
+        "date": "2023-06-19",
+        "opponent": {
+          "username": "mvsatya",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/80875896985?tab=analysis&flip=true&move=0126"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -14347,6 +14491,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/80102406149?tab=analysis&flip=true&move=0161"
+      },
+      "82222825757": {
+        "date": "2023-07-04",
+        "opponent": {
+          "username": "Fancy2020",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/82222825757?tab=analysis&flip=false&move=098"
       }
     },
     "smotheredMate": {
@@ -15053,6 +15205,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4968493248?tab=analysis&flip=false&move=013"
+      },
+      "81874251461": {
+        "date": "2023-06-30",
+        "opponent": {
+          "username": "d1smas27",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81874251461?tab=analysis&flip=false&move=09"
       }
     },
     "blockCheckWithCheckmate": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006381609,
-  "games_analyzed": 13350,
-  "moves_analyzed": 1146749,
+  "cache_updated_at": 1688824198917,
+  "games_analyzed": 13414,
+  "moves_analyzed": 1152578,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -1279,6 +1279,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4445271817?tab=analysis&flip=true&move=041"
+      },
+      "81540859521": {
+        "date": "2023-06-26",
+        "opponent": {
+          "username": "VacheH009",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81540859521?tab=analysis&flip=false&move=072"
       }
     },
     "clutchPawn": {
@@ -1719,6 +1727,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/4749054339?tab=analysis&flip=false&move=046"
+      },
+      "82243331437": {
+        "date": "2023-07-04",
+        "opponent": {
+          "username": "Thormento16",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82243331437?tab=analysis&flip=true&move=033"
       }
     },
     "connectDiagonally:5": {
@@ -2347,6 +2363,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/50090373703?tab=analysis&flip=false&move=059"
+      },
+      "81540154765": {
+        "date": "2023-06-26",
+        "opponent": {
+          "username": "EthanNorris2006",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81540154765?tab=analysis&flip=false&move=057"
       }
     },
     "blockCheckWithCheckmate": {
@@ -2661,6 +2685,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/35683622221?tab=analysis&flip=false&move=020"
+      },
+      "81538477033": {
+        "date": "2023-06-26",
+        "opponent": {
+          "username": "ndamixes",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/81538477033?tab=analysis&flip=true&move=049"
       }
     },
     "royalFamilyFork": {

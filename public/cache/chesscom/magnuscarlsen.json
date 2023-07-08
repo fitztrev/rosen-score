@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1687006460585,
-  "games_analyzed": 2907,
-  "moves_analyzed": 263875,
+  "cache_updated_at": 1688824231965,
+  "games_analyzed": 3121,
+  "moves_analyzed": 281176,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -115,6 +115,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76976377447?tab=analysis&flip=false&move=0"
+      },
+      "80955064469": {
+        "date": "2023-06-19",
+        "opponent": {
+          "username": "GM_dmitrij",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/80955064469?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
