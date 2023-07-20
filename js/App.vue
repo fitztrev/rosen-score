@@ -580,7 +580,6 @@
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
                         title="10+ Consecutive Captures on the Same Square"
-                        desc="&ldquo;We have captures, captures, captures, captures, captures...&rdquo; &#8288;&#8211;&#8288;Agadmator"
                         :trophies="playerTrophiesByType['consecutiveCapturesSameSquare'] || {}"
                         gameLink="https://lichess.org/UIMR4eJL/black#56"
                     ></accomplishment-score>
