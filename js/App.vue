@@ -81,6 +81,9 @@
                                 <option :value="24">24 hours ago</option>
                                 <option :value="24 * 7">last week</option>
                                 <option :value="24 * 31">last month</option>
+                                <option :value="24 * 31 * 3">last 3 months</option>
+                                <option :value="24 * 31 * 6">last 6 months</option>
+                                <option :value="24 * 365">last 12 months</option>
                                 <option :value="0">forever</option>
                             </select>
                         </div>
