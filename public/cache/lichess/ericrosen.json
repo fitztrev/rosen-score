@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688823940162,
-  "games_analyzed": 33243,
-  "moves_analyzed": 2616524,
+  "cache_updated_at": 1690938399326,
+  "games_analyzed": 33246,
+  "moves_analyzed": 2616996,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -4257,6 +4257,14 @@
           "title": "CM"
         },
         "link": "https://lichess.org/25OCyOc4#112"
+      },
+      "rB04VJwM": {
+        "date": "2023-08-01",
+        "opponent": {
+          "username": "Mandarlad17",
+          "title": ""
+        },
+        "link": "https://lichess.org/rB04VJwM#174"
       }
     },
     "castleAfterMove40": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688823989477,
-  "games_analyzed": 119404,
-  "moves_analyzed": 10271619,
+  "cache_updated_at": 1690938376177,
+  "games_analyzed": 120348,
+  "moves_analyzed": 10347100,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -7043,6 +7043,38 @@
           "title": ""
         },
         "link": "https://lichess.org/AxQnwmNd#85"
+      },
+      "IULRxSUk": {
+        "date": "2023-07-31",
+        "opponent": {
+          "username": "YEMEN_2",
+          "title": ""
+        },
+        "link": "https://lichess.org/IULRxSUk#39"
+      },
+      "egsMkqtx": {
+        "date": "2023-07-31",
+        "opponent": {
+          "username": "Newerwon",
+          "title": ""
+        },
+        "link": "https://lichess.org/egsMkqtx/black#28"
+      },
+      "0uHWTuws": {
+        "date": "2023-07-27",
+        "opponent": {
+          "username": "nobodycares2373",
+          "title": ""
+        },
+        "link": "https://lichess.org/0uHWTuws/black#64"
+      },
+      "HIrmQdrk": {
+        "date": "2023-07-15",
+        "opponent": {
+          "username": "PlayForWinAlways",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/HIrmQdrk/black#32"
       }
     },
     "pawnCheckmate": {
@@ -10533,6 +10565,30 @@
           "title": ""
         },
         "link": "https://lichess.org/Fyu6HcrK/black#120"
+      },
+      "iVYZliT0": {
+        "date": "2023-07-30",
+        "opponent": {
+          "username": "UelrjdFylhtq1",
+          "title": ""
+        },
+        "link": "https://lichess.org/iVYZliT0/black#74"
+      },
+      "NKjwl55h": {
+        "date": "2023-07-18",
+        "opponent": {
+          "username": "JFA_LX_PT",
+          "title": ""
+        },
+        "link": "https://lichess.org/NKjwl55h#53"
+      },
+      "lZi7n7aW": {
+        "date": "2023-07-13",
+        "opponent": {
+          "username": "N_13",
+          "title": ""
+        },
+        "link": "https://lichess.org/lZi7n7aW/black#112"
       }
     },
     "connectDiagonally:5": {
@@ -14191,6 +14247,38 @@
           "title": "GM"
         },
         "link": "https://lichess.org/b6H2OnX8#59"
+      },
+      "Oz4SuG8o": {
+        "date": "2023-07-31",
+        "opponent": {
+          "username": "SenorNadie",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/Oz4SuG8o/black#60"
+      },
+      "wB6HDs6H": {
+        "date": "2023-07-25",
+        "opponent": {
+          "username": "Bykov_Misha",
+          "title": ""
+        },
+        "link": "https://lichess.org/wB6HDs6H#55"
+      },
+      "bjXkcYlH": {
+        "date": "2023-07-20",
+        "opponent": {
+          "username": "GuiPivoto",
+          "title": ""
+        },
+        "link": "https://lichess.org/bjXkcYlH#51"
+      },
+      "lZi7n7aW": {
+        "date": "2023-07-13",
+        "opponent": {
+          "username": "N_13",
+          "title": ""
+        },
+        "link": "https://lichess.org/lZi7n7aW/black#28"
       }
     },
     "stalemateTricks": {
@@ -15769,6 +15857,30 @@
           "title": ""
         },
         "link": "https://lichess.org/LMPVSiPh/black#155"
+      },
+      "eU0asoXm": {
+        "date": "2023-07-29",
+        "opponent": {
+          "username": "doreality1991",
+          "title": ""
+        },
+        "link": "https://lichess.org/eU0asoXm#128"
+      },
+      "e3ia3DeJ": {
+        "date": "2023-07-18",
+        "opponent": {
+          "username": "Garoy",
+          "title": ""
+        },
+        "link": "https://lichess.org/e3ia3DeJ#106"
+      },
+      "gFIWkntV": {
+        "date": "2023-07-13",
+        "opponent": {
+          "username": "SomeMightSay",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/gFIWkntV/black#157"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -16467,6 +16579,14 @@
           "title": ""
         },
         "link": "https://lichess.org/SJRiEbtR#69"
+      },
+      "8OjSlxFY": {
+        "date": "2023-08-01",
+        "opponent": {
+          "username": "MindlessDisorder",
+          "title": ""
+        },
+        "link": "https://lichess.org/8OjSlxFY/black#104"
       }
     },
     "winInsufficientMaterial": {
@@ -18789,6 +18909,22 @@
           "title": "GM"
         },
         "link": "https://lichess.org/Lt526ihs#155"
+      },
+      "DtCAEkBt": {
+        "date": "2023-07-23",
+        "opponent": {
+          "username": "Ferarri123",
+          "title": ""
+        },
+        "link": "https://lichess.org/DtCAEkBt#163"
+      },
+      "pJ0iblqL": {
+        "date": "2023-07-11",
+        "opponent": {
+          "username": "Gvein",
+          "title": ""
+        },
+        "link": "https://lichess.org/pJ0iblqL#121"
       }
     },
     "pawnX": {
@@ -23921,6 +24057,14 @@
           "title": ""
         },
         "link": "https://lichess.org/QmV9emc9#73"
+      },
+      "NKjwl55h": {
+        "date": "2023-07-18",
+        "opponent": {
+          "username": "JFA_LX_PT",
+          "title": ""
+        },
+        "link": "https://lichess.org/NKjwl55h#53"
       }
     },
     "checkmateAtMoveNumber:4": {

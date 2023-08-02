@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688824231965,
-  "games_analyzed": 3121,
-  "moves_analyzed": 281176,
+  "cache_updated_at": 1690938586870,
+  "games_analyzed": 3484,
+  "moves_analyzed": 314401,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -123,6 +123,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/80955064469?tab=analysis&flip=false&move=0"
+      },
+      "83355509911": {
+        "date": "2023-07-17",
+        "opponent": {
+          "username": "hansen",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/83355509911?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -165,6 +173,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/7583023949?tab=analysis&flip=false&move=054"
+      },
+      "84148130983": {
+        "date": "2023-07-26",
+        "opponent": {
+          "username": "hansen",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/84148130983?tab=analysis&flip=true&move=075"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -193,6 +209,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76204293263?tab=analysis&flip=true&move=0124"
+      },
+      "82851061695": {
+        "date": "2023-07-11",
+        "opponent": {
+          "username": "Fandorine",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/82851061695?tab=analysis&flip=false&move=0127"
       }
     },
     "pawnDiamond": {
@@ -243,6 +267,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/79999966665?tab=analysis&flip=false&move=054"
+      },
+      "83527616905": {
+        "date": "2023-07-19",
+        "opponent": {
+          "username": "Firouzja2003",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/83527616905?tab=analysis&flip=true&move=061"
       }
     },
     "ohNoMyQueen": {

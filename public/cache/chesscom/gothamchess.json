@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688824120337,
-  "games_analyzed": 27859,
-  "moves_analyzed": 2135910,
+  "cache_updated_at": 1690938521830,
+  "games_analyzed": 27954,
+  "moves_analyzed": 2144290,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -1343,6 +1343,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/79889995317?tab=analysis&flip=true&move=05"
+      },
+      "83282171553": {
+        "date": "2023-07-16",
+        "opponent": {
+          "username": "AtomicBanana27",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/83282171553?tab=analysis&flip=false&move=05"
       }
     },
     "ohNoMyQueen": {

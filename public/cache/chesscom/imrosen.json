@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688824198917,
-  "games_analyzed": 13414,
-  "moves_analyzed": 1152578,
+  "cache_updated_at": 1690938554470,
+  "games_analyzed": 13443,
+  "moves_analyzed": 1155380,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -2263,6 +2263,14 @@
           "title": "WFM"
         },
         "link": "https://www.chess.com/analysis/game/live/79219387877?tab=analysis&flip=false&move=024"
+      },
+      "84300588241": {
+        "date": "2023-07-28",
+        "opponent": {
+          "username": "braceletboro",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84300588241?tab=analysis&flip=false&move=022"
       }
     },
     "pawnCube": {

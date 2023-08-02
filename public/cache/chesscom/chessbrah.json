@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1688824077197,
-  "games_analyzed": 26955,
-  "moves_analyzed": 2070724,
+  "cache_updated_at": 1690938471500,
+  "games_analyzed": 27412,
+  "moves_analyzed": 2111328,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1139,6 +1139,22 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/81372831441?tab=analysis&flip=false&move=0"
+      },
+      "83961108825": {
+        "date": "2023-07-24",
+        "opponent": {
+          "username": "aljopeljhan",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/83961108825?tab=analysis&flip=true&move=0"
+      },
+      "83872215147": {
+        "date": "2023-07-23",
+        "opponent": {
+          "username": "Leonid_Starozhilov",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/83872215147?tab=analysis&flip=true&move=0"
       }
     },
     "stalemateTricks": {
@@ -3221,6 +3237,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/76473716581?tab=analysis&flip=true&move=065"
+      },
+      "84591166191": {
+        "date": "2023-08-01",
+        "opponent": {
+          "username": "DaenerysT",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/84591166191?tab=analysis&flip=false&move=072"
       }
     },
     "pawnDiamond": {
@@ -3455,6 +3479,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/77071346709?tab=analysis&flip=true&move=073"
+      },
+      "83870533301": {
+        "date": "2023-07-23",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/83870533301?tab=analysis&flip=true&move=061"
       }
     },
     "connectDiagonally:5": {
