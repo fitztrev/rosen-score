@@ -950,6 +950,7 @@ export default {
             caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
+            caches.set('https://lichess.org/@/massterofmayhem', '/cache/lichess/massterofmayhem.json')
             caches.set('https://lichess.org/@/penguingim1', '/cache/lichess/penguingim1.json')
             caches.set('https://lichess.org/@/saltyclown', '/cache/lichess/saltyclown.json')
 
