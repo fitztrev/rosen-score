@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938376177,
-  "games_analyzed": 120348,
-  "moves_analyzed": 10347100,
+  "cache_updated_at": 1693658773906,
+  "games_analyzed": 121178,
+  "moves_analyzed": 10419138,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -7075,6 +7075,38 @@
           "title": "CM"
         },
         "link": "https://lichess.org/HIrmQdrk/black#32"
+      },
+      "XD0tfmI6": {
+        "date": "2023-09-01",
+        "opponent": {
+          "username": "maciek_92",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/XD0tfmI6/black#46"
+      },
+      "NAJ1UJwD": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "samidescalona2002",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/NAJ1UJwD#93"
+      },
+      "uD28bCMT": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "oruro",
+          "title": ""
+        },
+        "link": "https://lichess.org/uD28bCMT/black#34"
+      },
+      "HezvRAKx": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "Skillfulness",
+          "title": ""
+        },
+        "link": "https://lichess.org/HezvRAKx#49"
       }
     },
     "pawnCheckmate": {
@@ -10589,6 +10621,14 @@
           "title": ""
         },
         "link": "https://lichess.org/lZi7n7aW/black#112"
+      },
+      "u9uIdrUJ": {
+        "date": "2023-08-10",
+        "opponent": {
+          "username": "Vittovirgo",
+          "title": ""
+        },
+        "link": "https://lichess.org/u9uIdrUJ/black#90"
       }
     },
     "connectDiagonally:5": {
@@ -14279,6 +14319,46 @@
           "title": ""
         },
         "link": "https://lichess.org/lZi7n7aW/black#28"
+      },
+      "DComl52A": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "barilla1",
+          "title": ""
+        },
+        "link": "https://lichess.org/DComl52A/black#80"
+      },
+      "KRk3KcF1": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "Kiril12345",
+          "title": ""
+        },
+        "link": "https://lichess.org/KRk3KcF1#51"
+      },
+      "pqeqY5yf": {
+        "date": "2023-08-10",
+        "opponent": {
+          "username": "AVAVAVA",
+          "title": ""
+        },
+        "link": "https://lichess.org/pqeqY5yf#43"
+      },
+      "T1tbMIGb": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "Danila_07",
+          "title": ""
+        },
+        "link": "https://lichess.org/T1tbMIGb/black#78"
+      },
+      "pPmHdlcj": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "tim1277",
+          "title": ""
+        },
+        "link": "https://lichess.org/pPmHdlcj#41"
       }
     },
     "stalemateTricks": {
@@ -15881,6 +15961,22 @@
           "title": "IM"
         },
         "link": "https://lichess.org/gFIWkntV/black#157"
+      },
+      "k2u9t6qt": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "youremopunk",
+          "title": ""
+        },
+        "link": "https://lichess.org/k2u9t6qt#130"
+      },
+      "e0g8M5HU": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "piotrek212",
+          "title": ""
+        },
+        "link": "https://lichess.org/e0g8M5HU#116"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -16587,6 +16683,14 @@
           "title": ""
         },
         "link": "https://lichess.org/8OjSlxFY/black#104"
+      },
+      "8LVF6WNA": {
+        "date": "2023-08-10",
+        "opponent": {
+          "username": "varunvar",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/8LVF6WNA#105"
       }
     },
     "winInsufficientMaterial": {
@@ -18925,6 +19029,22 @@
           "title": ""
         },
         "link": "https://lichess.org/pJ0iblqL#121"
+      },
+      "kjdfAb2G": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "coffeechessclub2023",
+          "title": ""
+        },
+        "link": "https://lichess.org/kjdfAb2G#131"
+      },
+      "MJBqueZI": {
+        "date": "2023-08-15",
+        "opponent": {
+          "username": "Chesssplayer21",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/MJBqueZI#143"
       }
     },
     "pawnX": {
@@ -19729,6 +19849,14 @@
           "title": ""
         },
         "link": "https://lichess.org/GYPH6Tlf#62"
+      },
+      "WwfMNQxK": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "drdrunckenstein",
+          "title": ""
+        },
+        "link": "https://lichess.org/WwfMNQxK/black#82"
       }
     },
     "doubleCheckCheckmate": {
@@ -20323,6 +20451,14 @@
           "title": ""
         },
         "link": "https://lichess.org/K8WG8eFr/black#34"
+      },
+      "GT0Qf9ra": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "popelmann520",
+          "title": ""
+        },
+        "link": "https://lichess.org/GT0Qf9ra/black#82"
       }
     },
     "ohNoMyQueen": {
@@ -22749,6 +22885,14 @@
           "title": ""
         },
         "link": "https://lichess.org/kY2pPHuE#69"
+      },
+      "fgi79voX": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "TheLastKn1ght",
+          "title": ""
+        },
+        "link": "https://lichess.org/fgi79voX/black#46"
       }
     },
     "royalFamilyFork": {

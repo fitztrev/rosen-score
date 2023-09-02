@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690943286250,
-  "games_analyzed": 33662,
-  "moves_analyzed": 2572448,
+  "cache_updated_at": 1693658830110,
+  "games_analyzed": 34315,
+  "moves_analyzed": 2626195,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -411,6 +411,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/TdST84eC#154"
+      },
+      "0ucH3ENC": {
+        "date": "2023-08-15",
+        "opponent": {
+          "username": "forshmakoff",
+          "title": ""
+        },
+        "link": "https://lichess.org/0ucH3ENC/black#153"
       }
     },
     "pawnCheckmate": {
@@ -1293,6 +1301,14 @@
           "title": ""
         },
         "link": "https://lichess.org/oo4KQBu7#41"
+      },
+      "ukURLMU4": {
+        "date": "2023-08-17",
+        "opponent": {
+          "username": "econpower",
+          "title": ""
+        },
+        "link": "https://lichess.org/ukURLMU4/black#54"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -1375,6 +1391,14 @@
           "title": ""
         },
         "link": "https://lichess.org/VT95OOJc/black#124"
+      },
+      "HlnirvGN": {
+        "date": "2023-08-17",
+        "opponent": {
+          "username": "madcap_tr",
+          "title": ""
+        },
+        "link": "https://lichess.org/HlnirvGN/black#102"
       }
     },
     "ohNoMyQueen": {
@@ -2241,6 +2265,30 @@
           "title": ""
         },
         "link": "https://lichess.org/HYq79GkP/black#36"
+      },
+      "qSdBv6VP": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "TITOV_ALEXANDER",
+          "title": ""
+        },
+        "link": "https://lichess.org/qSdBv6VP#63"
+      },
+      "nLOcpPlL": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "Zero_tolerance",
+          "title": ""
+        },
+        "link": "https://lichess.org/nLOcpPlL/black#64"
+      },
+      "ukURLMU4": {
+        "date": "2023-08-17",
+        "opponent": {
+          "username": "econpower",
+          "title": ""
+        },
+        "link": "https://lichess.org/ukURLMU4/black#48"
       }
     },
     "connectDiagonally:5": {
@@ -2811,6 +2859,22 @@
           "title": ""
         },
         "link": "https://lichess.org/SUutEwax#57"
+      },
+      "IjjumKRX": {
+        "date": "2023-08-28",
+        "opponent": {
+          "username": "shahinlorpari",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/IjjumKRX/black#62"
+      },
+      "cCYyhRJZ": {
+        "date": "2023-08-07",
+        "opponent": {
+          "username": "mPgLaDyS",
+          "title": ""
+        },
+        "link": "https://lichess.org/cCYyhRJZ#45"
       }
     },
     "pawnDiamond": {
@@ -3607,6 +3671,22 @@
           "title": ""
         },
         "link": "https://lichess.org/KHr6gc4b#145"
+      },
+      "vpfZ8qoI": {
+        "date": "2023-09-01",
+        "opponent": {
+          "username": "notrashopenings",
+          "title": ""
+        },
+        "link": "https://lichess.org/vpfZ8qoI/black#130"
+      },
+      "4BBbHgH8": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "yanekirillshubin",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/4BBbHgH8/black#122"
       }
     },
     "pawnCube": {
@@ -4097,6 +4177,14 @@
           "title": ""
         },
         "link": "https://lichess.org/4D7ezOtf#25"
+      },
+      "nLOcpPlL": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "Zero_tolerance",
+          "title": ""
+        },
+        "link": "https://lichess.org/nLOcpPlL/black#66"
       }
     },
     "adoptionMatch:10": {

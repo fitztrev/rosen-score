@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938521830,
-  "games_analyzed": 27954,
-  "moves_analyzed": 2144290,
+  "cache_updated_at": 1693659000197,
+  "games_analyzed": 27976,
+  "moves_analyzed": 2146104,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -2293,6 +2293,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/78347617053?tab=analysis&flip=true&move=027"
+      },
+      "85437167771": {
+        "date": "2023-08-10",
+        "opponent": {
+          "username": "emilio26250",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85437167771?tab=analysis&flip=false&move=018"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -5349,6 +5357,16 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/3320301078?tab=analysis&flip=true&move=039"
+      }
+    },
+    "pawnCubeCenter": {
+      "85437167771": {
+        "date": "2023-08-10",
+        "opponent": {
+          "username": "emilio26250",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85437167771?tab=analysis&flip=false&move=018"
       }
     }
   }

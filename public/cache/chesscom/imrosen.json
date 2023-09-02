@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938554470,
-  "games_analyzed": 13443,
-  "moves_analyzed": 1155380,
+  "cache_updated_at": 1693659039981,
+  "games_analyzed": 13513,
+  "moves_analyzed": 1161937,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -739,6 +739,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/76199494953?tab=analysis&flip=false&move=0241"
+      },
+      "87244219393": {
+        "date": "2023-08-31",
+        "opponent": {
+          "username": "AdrianaNikolova",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87244219393?tab=analysis&flip=false&move=0161"
       }
     },
     "rosenTrap": {
@@ -877,6 +885,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4761335838?tab=analysis&flip=false&move=0113"
+      },
+      "87244219393": {
+        "date": "2023-08-31",
+        "opponent": {
+          "username": "AdrianaNikolova",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87244219393?tab=analysis&flip=false&move=0161"
       }
     },
     "pawnCheckmate": {
@@ -1287,6 +1303,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/81540859521?tab=analysis&flip=false&move=072"
+      },
+      "86461217373": {
+        "date": "2023-08-22",
+        "opponent": {
+          "username": "tandaleo",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/86461217373?tab=analysis&flip=true&move=065"
       }
     },
     "clutchPawn": {
@@ -2009,6 +2033,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/5115084214?tab=analysis&flip=false&move=060"
+      },
+      "87340918011": {
+        "date": "2023-09-01",
+        "opponent": {
+          "username": "Bilan_Danila",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87340918011?tab=analysis&flip=true&move=067"
       }
     },
     "promoteToKnightCheckmate": {

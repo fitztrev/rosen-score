@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938451238,
-  "games_analyzed": 21210,
-  "moves_analyzed": 1712740,
+  "cache_updated_at": 1693658871750,
+  "games_analyzed": 21335,
+  "moves_analyzed": 1724365,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -693,6 +693,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/83114086231?tab=analysis&flip=false&move=093"
+      },
+      "86652607651": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "SebaGiacomelli",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86652607651?tab=analysis&flip=false&move=0149"
       }
     },
     "pawnCheckmate": {

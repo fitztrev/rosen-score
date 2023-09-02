@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938399326,
-  "games_analyzed": 33246,
-  "moves_analyzed": 2616996,
+  "cache_updated_at": 1693658723657,
+  "games_analyzed": 34104,
+  "moves_analyzed": 2681648,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1643,6 +1643,62 @@
           "title": "CM"
         },
         "link": "https://lichess.org/oldpCRz7/black#104"
+      },
+      "KK0edbZq": {
+        "date": "2023-09-01",
+        "opponent": {
+          "username": "format-64",
+          "title": ""
+        },
+        "link": "https://lichess.org/KK0edbZq/black#102"
+      },
+      "6pwY6rIF": {
+        "date": "2023-08-26",
+        "opponent": {
+          "username": "led_zeppelin93",
+          "title": ""
+        },
+        "link": "https://lichess.org/6pwY6rIF/black#52"
+      },
+      "AYXUjYx4": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "Levon_2008",
+          "title": ""
+        },
+        "link": "https://lichess.org/AYXUjYx4/black#54"
+      },
+      "BiGnuvit": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "ISOVAKO",
+          "title": ""
+        },
+        "link": "https://lichess.org/BiGnuvit#55"
+      },
+      "iAcACaNf": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "SpartakMos",
+          "title": ""
+        },
+        "link": "https://lichess.org/iAcACaNf/black#40"
+      },
+      "1PjmcMHQ": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "dariustanz",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/1PjmcMHQ/black#70"
+      },
+      "jK1uzy2v": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "Chess_Attack_Juras",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/jK1uzy2v/black#54"
       }
     },
     "winInsufficientMaterial": {
@@ -2077,6 +2133,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/0HcpA5xM#139"
+      },
+      "s7a3T7d8": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "DominikDerBoss",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/s7a3T7d8/black#84"
       }
     },
     "rosenTrap": {
@@ -2543,6 +2607,14 @@
           "title": ""
         },
         "link": "https://lichess.org/2sDMCUz7/black#105"
+      },
+      "YsKq2Jyo": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/YsKq2Jyo/black#109"
       }
     },
     "stalemateTricks": {
@@ -4265,6 +4337,38 @@
           "title": ""
         },
         "link": "https://lichess.org/rB04VJwM#174"
+      },
+      "TlfHfBXU": {
+        "date": "2023-08-31",
+        "opponent": {
+          "username": "T-Stevenson",
+          "title": ""
+        },
+        "link": "https://lichess.org/TlfHfBXU/black#69"
+      },
+      "YsKq2Jyo": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/YsKq2Jyo/black#109"
+      },
+      "UYSmhHe0": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "Ellaijio",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/UYSmhHe0/black#137"
+      },
+      "HrA9eaDd": {
+        "date": "2023-08-07",
+        "opponent": {
+          "username": "BoardDemon",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/HrA9eaDd/black#107"
       }
     },
     "castleAfterMove40": {
@@ -4315,6 +4419,14 @@
           "title": ""
         },
         "link": "https://lichess.org/A4zZOCdA#81"
+      },
+      "xvPW8l1S": {
+        "date": "2023-08-30",
+        "opponent": {
+          "username": "ttrv",
+          "title": ""
+        },
+        "link": "https://lichess.org/xvPW8l1S/black#82"
       }
     },
     "pawnCube": {
@@ -4613,6 +4725,22 @@
           "title": ""
         },
         "link": "https://lichess.org/PNxsP49u#35"
+      },
+      "E0zgdvOx": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/E0zgdvOx/black#34"
+      },
+      "DNbDfWMp": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "samidescalona2002",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/DNbDfWMp#105"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -5073,6 +5201,14 @@
           "title": "NM"
         },
         "link": "https://lichess.org/ouxmU5vd#145"
+      },
+      "63UIQR97": {
+        "date": "2023-08-07",
+        "opponent": {
+          "username": "Iran-first",
+          "title": ""
+        },
+        "link": "https://lichess.org/63UIQR97#127"
       }
     },
     "connectDiagonally:5": {
@@ -5603,6 +5739,14 @@
           "title": ""
         },
         "link": "https://lichess.org/po2YeVaO#63"
+      },
+      "v71aaRf2": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "goose_chess",
+          "title": ""
+        },
+        "link": "https://lichess.org/v71aaRf2#23"
       }
     },
     "ohNoMyQueen": {
@@ -6597,6 +6741,14 @@
           "title": ""
         },
         "link": "https://lichess.org/5ArLGep5#57"
+      },
+      "kYbED6h1": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/kYbED6h1#53"
       }
     },
     "pawnDiamond": {
@@ -7487,6 +7639,38 @@
           "title": ""
         },
         "link": "https://lichess.org/soVrS5od/black#24"
+      },
+      "56tmC2Pb": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/56tmC2Pb/black#36"
+      },
+      "MNcbfUiX": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "mikripetalouda",
+          "title": ""
+        },
+        "link": "https://lichess.org/MNcbfUiX/black#30"
+      },
+      "CHeJvagT": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "impogthefunnyfrog",
+          "title": ""
+        },
+        "link": "https://lichess.org/CHeJvagT#51"
+      },
+      "o24hsxVB": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "Magnus_Carlson1234",
+          "title": ""
+        },
+        "link": "https://lichess.org/o24hsxVB/black#56"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -7553,6 +7737,14 @@
           "title": "CM"
         },
         "link": "https://lichess.org/KaJxm7ni/black#140"
+      },
+      "rvSGSySn": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "ISOVAKO",
+          "title": ""
+        },
+        "link": "https://lichess.org/rvSGSySn/black#80"
       }
     },
     "g5mate": {
@@ -8103,6 +8295,14 @@
           "title": ""
         },
         "link": "https://lichess.org/oH5DMzh1/black#104"
+      },
+      "IqW26pMR": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "Turboplombir",
+          "title": ""
+        },
+        "link": "https://lichess.org/IqW26pMR/black#128"
       }
     },
     "smotheredMate": {
@@ -8433,6 +8633,14 @@
           "title": ""
         },
         "link": "https://lichess.org/OiRhckmw#15"
+      },
+      "kYbED6h1": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/kYbED6h1#55"
       }
     },
     "doubleCheckCheckmate": {
@@ -8843,6 +9051,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/pBVKu9GJ/black#74"
+      },
+      "VV5owWYU": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/VV5owWYU#47"
       }
     },
     "adoptionMatch:10": {
@@ -8949,6 +9165,54 @@
           "title": ""
         },
         "link": "https://lichess.org/JDexLRVL"
+      },
+      "t05o0WVz": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/t05o0WVz/black"
+      },
+      "w8ZHm3yD": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/w8ZHm3yD/black"
+      },
+      "juUuFyGm": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "Levon_2008",
+          "title": ""
+        },
+        "link": "https://lichess.org/juUuFyGm/black"
+      },
+      "uCNUDb6h": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "ISOVAKO",
+          "title": ""
+        },
+        "link": "https://lichess.org/uCNUDb6h"
+      },
+      "nowfqK7h": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "FARES_1000",
+          "title": ""
+        },
+        "link": "https://lichess.org/nowfqK7h/black"
+      },
+      "Lp7CJZMu": {
+        "date": "2023-08-23",
+        "opponent": {
+          "username": "Magnus_Carlson1234",
+          "title": ""
+        },
+        "link": "https://lichess.org/Lp7CJZMu/black"
       }
     },
     "pawnX": {
@@ -8999,6 +9263,14 @@
           "title": "LM"
         },
         "link": "https://lichess.org/7M3fQHWU#31"
+      },
+      "56tmC2Pb": {
+        "date": "2023-08-25",
+        "opponent": {
+          "username": "cartelane",
+          "title": ""
+        },
+        "link": "https://lichess.org/56tmC2Pb/black#44"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -9189,6 +9461,14 @@
           "title": ""
         },
         "link": "https://lichess.org/IkDG3mje#12"
+      },
+      "z5qnjTpL": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "bubeliang",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/z5qnjTpL/black#11"
       }
     },
     "promoteToKnightCheckmate": {
@@ -9777,6 +10057,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/P4LF7Qs9/black#63"
+      },
+      "mZzDglp4": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "xasid",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/mZzDglp4/black#60"
       }
     },
     "enPassantCheckmate": {
@@ -9995,6 +10283,16 @@
           "title": "GM"
         },
         "link": "https://lichess.org/JCD2jmRs#91"
+      }
+    },
+    "twoBishopMate": {
+      "IqW26pMR": {
+        "date": "2023-08-21",
+        "opponent": {
+          "username": "Turboplombir",
+          "title": ""
+        },
+        "link": "https://lichess.org/IqW26pMR/black#128"
       }
     }
   }

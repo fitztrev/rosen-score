@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690892498034,
-  "games_analyzed": 71136,
-  "moves_analyzed": 4768121,
+  "cache_updated_at": 1693658843338,
+  "games_analyzed": 71240,
+  "moves_analyzed": 4776843,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -3803,6 +3803,14 @@
           "title": ""
         },
         "link": "https://lichess.org/jbB3Mh2J#55"
+      },
+      "jVAOqNCh": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "Atans",
+          "title": ""
+        },
+        "link": "https://lichess.org/jVAOqNCh/black#60"
       }
     },
     "adoptionMatch:10": {
@@ -7545,6 +7553,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/GwEApcGr/black#72"
+      },
+      "FqSBpHrP": {
+        "date": "2023-08-05",
+        "opponent": {
+          "username": "Suleyman_Chess06",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/FqSBpHrP/black#62"
       }
     },
     "winInsufficientMaterial": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1690938671987,
-  "games_analyzed": 48973,
-  "moves_analyzed": 3230583,
+  "cache_updated_at": 1693659122244,
+  "games_analyzed": 50695,
+  "moves_analyzed": 3340996,
   "trophies": {
     "lefongTrap": {
       "76048876873": {
@@ -6107,6 +6107,166 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/82861831637?tab=analysis&flip=true&move=02"
+      },
+      "87394236701": {
+        "date": "2023-09-02",
+        "opponent": {
+          "username": "kreamonz",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87394236701?tab=analysis&flip=false&move=03"
+      },
+      "87392560737": {
+        "date": "2023-09-02",
+        "opponent": {
+          "username": "liamdylan",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87392560737?tab=analysis&flip=false&move=03"
+      },
+      "86878700987": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "drleo-73x",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86878700987?tab=analysis&flip=true&move=02"
+      },
+      "86856017505": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "Slickprod",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86856017505?tab=analysis&flip=true&move=02"
+      },
+      "86603394163": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "QueenRevolution",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86603394163?tab=analysis&flip=true&move=02"
+      },
+      "86207313071": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "iicp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86207313071?tab=analysis&flip=true&move=02"
+      },
+      "86150365637": {
+        "date": "2023-08-19",
+        "opponent": {
+          "username": "AllCapNoBottle",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86150365637?tab=analysis&flip=false&move=05"
+      },
+      "86119134441": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "MUSHIBA44",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86119134441?tab=analysis&flip=false&move=03"
+      },
+      "86116726565": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "parhamvakhshour",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86116726565?tab=analysis&flip=true&move=02"
+      },
+      "86116251073": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "LunaSabellano",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86116251073?tab=analysis&flip=false&move=03"
+      },
+      "86109632229": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "houssni1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86109632229?tab=analysis&flip=false&move=03"
+      },
+      "85633833433": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "ElMataCampeon",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85633833433?tab=analysis&flip=false&move=03"
+      },
+      "85630208187": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "Soda_Pizza",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85630208187?tab=analysis&flip=false&move=03"
+      },
+      "85630169635": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "MannyT8",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85630169635?tab=analysis&flip=true&move=02"
+      },
+      "85627801603": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "Princess_Athena",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85627801603?tab=analysis&flip=false&move=05"
+      },
+      "85627227711": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "Seevoparite",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85627227711?tab=analysis&flip=false&move=05"
+      },
+      "84901935119": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "grandgator",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84901935119?tab=analysis&flip=true&move=02"
+      },
+      "84891761443": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "HakimTavassoli",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84891761443?tab=analysis&flip=true&move=02"
+      },
+      "84851647263": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "MaksiuCheesPlayer",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84851647263?tab=analysis&flip=false&move=03"
+      },
+      "84779653797": {
+        "date": "2023-08-03",
+        "opponent": {
+          "username": "toti100",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84779653797?tab=analysis&flip=true&move=02"
       }
     },
     "adoptionMatch:10": {
@@ -7189,6 +7349,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/82091498679?tab=analysis&flip=true&move=0"
+      },
+      "85718381559": {
+        "date": "2023-08-14",
+        "opponent": {
+          "username": "ChessMaster21306",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85718381559?tab=analysis&flip=true&move=0"
+      },
+      "85649378995": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "Vgugcg",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85649378995?tab=analysis&flip=false&move=0"
       }
     },
     "knightCube": {
@@ -9441,6 +9617,70 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/83387761321?tab=analysis&flip=true&move=065"
+      },
+      "86101823521": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "Furionster",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86101823521?tab=analysis&flip=true&move=037"
+      },
+      "85882740987": {
+        "date": "2023-08-15",
+        "opponent": {
+          "username": "evilcooper",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85882740987?tab=analysis&flip=true&move=039"
+      },
+      "85654151307": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "bishsaywa",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85654151307?tab=analysis&flip=true&move=037"
+      },
+      "85637954687": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "shanks4130Twitch",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85637954687?tab=analysis&flip=true&move=057"
+      },
+      "84895280229": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84895280229?tab=analysis&flip=false&move=050"
+      },
+      "84894787667": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84894787667?tab=analysis&flip=false&move=038"
+      },
+      "84889318443": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "vinh1505",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84889318443?tab=analysis&flip=false&move=034"
+      },
+      "84723789405": {
+        "date": "2023-08-02",
+        "opponent": {
+          "username": "sicetsu",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84723789405?tab=analysis&flip=false&move=038"
       }
     },
     "pawnDiamond": {
@@ -9723,6 +9963,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/83245517463?tab=analysis&flip=false&move=046"
+      },
+      "86962851887": {
+        "date": "2023-08-28",
+        "opponent": {
+          "username": "alaskagelaska24",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86962851887?tab=analysis&flip=false&move=054"
+      },
+      "86112547377": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "ioiive",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86112547377?tab=analysis&flip=true&move=043"
       }
     },
     "pawnCheckmate": {
@@ -10997,6 +11253,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/82966795701?tab=analysis&flip=true&move=037"
+      },
+      "86879444295": {
+        "date": "2023-08-27",
+        "opponent": {
+          "username": "xinwang6662",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86879444295?tab=analysis&flip=false&move=028"
+      },
+      "84854608271": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "Osteosit",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84854608271?tab=analysis&flip=false&move=092"
       }
     },
     "royalFamilyFork": {
@@ -12011,6 +12283,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78313390447?tab=analysis&flip=true&move=057"
+      },
+      "85653062341": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "chessman2122",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85653062341?tab=analysis&flip=false&move=050"
+      },
+      "85624847373": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "preintel",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85624847373?tab=analysis&flip=true&move=047"
       }
     },
     "stalemateTricks": {
@@ -14111,6 +14399,62 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/82971044227?tab=analysis&flip=true&move=073"
+      },
+      "87385936053": {
+        "date": "2023-09-02",
+        "opponent": {
+          "username": "cosmicshrine",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87385936053?tab=analysis&flip=false&move=052"
+      },
+      "86964691719": {
+        "date": "2023-08-28",
+        "opponent": {
+          "username": "mboett",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86964691719?tab=analysis&flip=true&move=0103"
+      },
+      "86959747185": {
+        "date": "2023-08-28",
+        "opponent": {
+          "username": "hoytouchmove",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86959747185?tab=analysis&flip=true&move=0121"
+      },
+      "85635544705": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "ny-",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85635544705?tab=analysis&flip=false&move=064"
+      },
+      "85632597481": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "viser1983",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85632597481?tab=analysis&flip=true&move=0103"
+      },
+      "85625344467": {
+        "date": "2023-08-13",
+        "opponent": {
+          "username": "preintel",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85625344467?tab=analysis&flip=false&move=0100"
+      },
+      "84895900511": {
+        "date": "2023-08-04",
+        "opponent": {
+          "username": "Aacash",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/84895900511?tab=analysis&flip=false&move=092"
       }
     },
     "g5mate": {
@@ -14803,6 +15147,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/83731183327?tab=analysis&flip=false&move=0116"
+      },
+      "86959747185": {
+        "date": "2023-08-28",
+        "opponent": {
+          "username": "hoytouchmove",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86959747185?tab=analysis&flip=true&move=0121"
+      },
+      "86614724893": {
+        "date": "2023-08-24",
+        "opponent": {
+          "username": "Haitham_KM",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86614724893?tab=analysis&flip=true&move=087"
+      },
+      "86108420841": {
+        "date": "2023-08-18",
+        "opponent": {
+          "username": "dkdinu",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/86108420841?tab=analysis&flip=true&move=077"
       }
     },
     "smotheredMate": {
@@ -15021,6 +15389,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78040953423?tab=analysis&flip=false&move=052"
+      },
+      "85720139363": {
+        "date": "2023-08-14",
+        "opponent": {
+          "username": "Daniel21-21",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/85720139363?tab=analysis&flip=false&move=022"
       }
     },
     "twoBishopMate": {
