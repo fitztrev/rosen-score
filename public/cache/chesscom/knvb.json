@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693659066602,
-  "games_analyzed": 56348,
-  "moves_analyzed": 4915487,
+  "cache_updated_at": 1696161546416,
+  "games_analyzed": 57149,
+  "moves_analyzed": 4986405,
   "trophies": {
     "adoptionMatch:10": {
       "76677619": {
@@ -1971,6 +1971,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/84777819433?tab=analysis&flip=true&move=0"
+      },
+      "89869782125": {
+        "date": "2023-10-01",
+        "opponent": {
+          "username": "GYG",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89869782125?tab=analysis&flip=false&move=0"
+      },
+      "89261393411": {
+        "date": "2023-09-24",
+        "opponent": {
+          "username": "ZoomKerchoo",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89261393411?tab=analysis&flip=false&move=0"
+      },
+      "87878535623": {
+        "date": "2023-09-08",
+        "opponent": {
+          "username": "TheyStoleMySanity",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87878535623?tab=analysis&flip=true&move=0"
       }
     },
     "bishopAndKnightMate": {
@@ -3809,6 +3833,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/86153975997?tab=analysis&flip=false&move=050"
+      },
+      "88534371875": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "johncitotototo23",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/88534371875?tab=analysis&flip=false&move=038"
+      },
+      "88043358361": {
+        "date": "2023-09-10",
+        "opponent": {
+          "username": "ukchessbomber",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88043358361?tab=analysis&flip=false&move=066"
       }
     },
     "ohNoMyQueen": {
@@ -7545,6 +7585,30 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/84777152309?tab=analysis&flip=false&move=076"
+      },
+      "88536194531": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "LordPenguinDestroyer",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/88536194531?tab=analysis&flip=false&move=026"
+      },
+      "88535501091": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "j_adi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/88535501091?tab=analysis&flip=true&move=0113"
+      },
+      "87433897145": {
+        "date": "2023-09-02",
+        "opponent": {
+          "username": "kosherkielbasa",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87433897145?tab=analysis&flip=false&move=098"
       }
     },
     "clutchPawn": {
@@ -7891,6 +7955,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/85176685469?tab=analysis&flip=true&move=0123"
+      },
+      "88542182765": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "TrimitziosP7",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88542182765?tab=analysis&flip=false&move=0124"
       }
     },
     "smotheredMate": {
@@ -9103,6 +9175,22 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/85027260595?tab=analysis&flip=false&move=052"
+      },
+      "88540906899": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "TrimitziosP7",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88540906899?tab=analysis&flip=true&move=067"
+      },
+      "88029012709": {
+        "date": "2023-09-09",
+        "opponent": {
+          "username": "TintinUndercover",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88029012709?tab=analysis&flip=true&move=047"
       }
     },
     "rosenTrap": {
@@ -9803,6 +9891,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/85973965411?tab=analysis&flip=false&move=0127"
+      },
+      "89534982563": {
+        "date": "2023-09-27",
+        "opponent": {
+          "username": "srwhippa",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89534982563?tab=analysis&flip=false&move=0117"
+      },
+      "89047908819": {
+        "date": "2023-09-21",
+        "opponent": {
+          "username": "Willixm",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89047908819?tab=analysis&flip=false&move=0127"
       }
     },
     "checkmateAtMoveNumber:4": {
@@ -10287,6 +10391,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/85027843075?tab=analysis&flip=true&move=0189"
+      },
+      "89869199909": {
+        "date": "2023-10-01",
+        "opponent": {
+          "username": "GYG",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89869199909?tab=analysis&flip=false&move=0142"
+      },
+      "88029048701": {
+        "date": "2023-09-09",
+        "opponent": {
+          "username": "TintinUndercover",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88029048701?tab=analysis&flip=true&move=0169"
       }
     },
     "knightCube": {
@@ -10803,6 +10923,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/85000829315?tab=analysis&flip=false&move=0154"
+      },
+      "89870325373": {
+        "date": "2023-10-01",
+        "opponent": {
+          "username": "GYG",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89870325373?tab=analysis&flip=true&move=0181"
       }
     },
     "g5mate": {
@@ -11641,6 +11769,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/8242389087?tab=analysis&flip=false&move=0"
+      },
+      "89869184323": {
+        "date": "2023-10-01",
+        "opponent": {
+          "username": "GYG",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/89869184323?tab=analysis&flip=false&move=0"
       }
     },
     "castleAfterMove40": {

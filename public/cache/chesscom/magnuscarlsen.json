@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693659079346,
-  "games_analyzed": 3573,
-  "moves_analyzed": 322991,
+  "cache_updated_at": 1696161561968,
+  "games_analyzed": 3912,
+  "moves_analyzed": 354455,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -139,6 +139,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/85349032227?tab=analysis&flip=false&move=0"
+      },
+      "89420453239": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "NikoTheodorou",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89420453239?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -309,6 +317,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76460411461?tab=analysis&flip=false&move=046"
+      },
+      "88628573103": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "Nikita_Klepikov",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88628573103?tab=analysis&flip=false&move=052"
       }
     },
     "castleAfterMove40": {

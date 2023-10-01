@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658854266,
-  "games_analyzed": 36037,
-  "moves_analyzed": 2262781,
+  "cache_updated_at": 1696161327476,
+  "games_analyzed": 36125,
+  "moves_analyzed": 2269137,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -6875,6 +6875,22 @@
           "title": ""
         },
         "link": "https://lichess.org/4FkZI2KE#4"
+      },
+      "XREa5nyz": {
+        "date": "2023-09-20",
+        "opponent": {
+          "username": "piyushsoni53",
+          "title": ""
+        },
+        "link": "https://lichess.org/XREa5nyz/black#3"
+      },
+      "ybSIhURo": {
+        "date": "2023-09-18",
+        "opponent": {
+          "username": "michajoh6",
+          "title": ""
+        },
+        "link": "https://lichess.org/ybSIhURo#4"
       }
     },
     "g5mate": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658931127,
-  "games_analyzed": 27742,
-  "moves_analyzed": 2140578,
+  "cache_updated_at": 1696161415312,
+  "games_analyzed": 28123,
+  "moves_analyzed": 2174684,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1179,6 +1179,30 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/84957730561?tab=analysis&flip=true&move=0"
+      },
+      "89004696045": {
+        "date": "2023-09-21",
+        "opponent": {
+          "username": "ChessSwole",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89004696045?tab=analysis&flip=false&move=0"
+      },
+      "88755727069": {
+        "date": "2023-09-18",
+        "opponent": {
+          "username": "chess123456s",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88755727069?tab=analysis&flip=false&move=0"
+      },
+      "87524443049": {
+        "date": "2023-09-03",
+        "opponent": {
+          "username": "chessajedrezz2020",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87524443049?tab=analysis&flip=false&move=0"
       }
     },
     "stalemateTricks": {
@@ -2953,6 +2977,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/77776827423?tab=analysis&flip=false&move=024"
+      },
+      "89353813411": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "youngKID",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89353813411?tab=analysis&flip=true&move=0111"
+      },
+      "87503578559": {
+        "date": "2023-09-03",
+        "opponent": {
+          "username": "mishanick",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87503578559?tab=analysis&flip=true&move=0107"
       }
     },
     "g5mate": {
@@ -3059,6 +3099,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/77776827423?tab=analysis&flip=false&move=024"
+      },
+      "87503578559": {
+        "date": "2023-09-03",
+        "opponent": {
+          "username": "mishanick",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/87503578559?tab=analysis&flip=true&move=0107"
       }
     },
     "doubleCheckCheckmate": {
@@ -3937,6 +3985,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4303262155?tab=analysis&flip=true&move=037"
+      },
+      "87617527357": {
+        "date": "2023-09-05",
+        "opponent": {
+          "username": "From0-Hero",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/87617527357?tab=analysis&flip=false&move=054"
       }
     },
     "adoptionMatch:20": {
@@ -4069,6 +4125,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/4790337709?tab=analysis&flip=true&move=0155"
+      },
+      "89354353865": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "youngKID",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89354353865?tab=analysis&flip=true&move=0137"
       }
     },
     "pawnCube": {

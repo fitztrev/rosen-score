@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658830110,
-  "games_analyzed": 34315,
-  "moves_analyzed": 2626195,
+  "cache_updated_at": 1696161289755,
+  "games_analyzed": 35331,
+  "moves_analyzed": 2709308,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -419,6 +419,54 @@
           "title": ""
         },
         "link": "https://lichess.org/0ucH3ENC/black#153"
+      },
+      "Ir9nybWJ": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "RedWarrior-25",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ir9nybWJ/black#121"
+      },
+      "ntm6ASYV": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "Ch5ssPlayer",
+          "title": ""
+        },
+        "link": "https://lichess.org/ntm6ASYV/black#135"
+      },
+      "MriKNIAm": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "TheDayThatNeverCome",
+          "title": ""
+        },
+        "link": "https://lichess.org/MriKNIAm#140"
+      },
+      "gOZxccVE": {
+        "date": "2023-09-22",
+        "opponent": {
+          "username": "LXMD",
+          "title": ""
+        },
+        "link": "https://lichess.org/gOZxccVE/black#143"
+      },
+      "COWKTUtS": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "Ch1llax",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/COWKTUtS#120"
+      },
+      "FFRZ7MsN": {
+        "date": "2023-09-13",
+        "opponent": {
+          "username": "YaYestGrut",
+          "title": ""
+        },
+        "link": "https://lichess.org/FFRZ7MsN/black#103"
       }
     },
     "pawnCheckmate": {
@@ -1309,6 +1357,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ukURLMU4/black#54"
+      },
+      "WcKwzO5a": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "Sportik_Shark",
+          "title": ""
+        },
+        "link": "https://lichess.org/WcKwzO5a#37"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -2289,6 +2345,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ukURLMU4/black#48"
+      },
+      "LqbuADKG": {
+        "date": "2023-09-29",
+        "opponent": {
+          "username": "mrtoxic88",
+          "title": ""
+        },
+        "link": "https://lichess.org/LqbuADKG#57"
       }
     },
     "connectDiagonally:5": {
@@ -2875,6 +2939,22 @@
           "title": ""
         },
         "link": "https://lichess.org/cCYyhRJZ#45"
+      },
+      "vsIq2OFe": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "Morphy2023",
+          "title": ""
+        },
+        "link": "https://lichess.org/vsIq2OFe#53"
+      },
+      "uoLkZKM4": {
+        "date": "2023-09-12",
+        "opponent": {
+          "username": "sutcunuri",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/uoLkZKM4/black#44"
       }
     },
     "pawnDiamond": {
@@ -3133,6 +3213,30 @@
           "title": ""
         },
         "link": "https://lichess.org/h9JS1bHu#41"
+      },
+      "2cdiIFjD": {
+        "date": "2023-09-29",
+        "opponent": {
+          "username": "Darkmaul11",
+          "title": ""
+        },
+        "link": "https://lichess.org/2cdiIFjD/black#54"
+      },
+      "idE8xZRR": {
+        "date": "2023-09-14",
+        "opponent": {
+          "username": "Jero_el_siniestro",
+          "title": ""
+        },
+        "link": "https://lichess.org/idE8xZRR#81"
+      },
+      "WPuh9nXI": {
+        "date": "2023-09-11",
+        "opponent": {
+          "username": "Hard-Training",
+          "title": ""
+        },
+        "link": "https://lichess.org/WPuh9nXI/black#62"
       }
     },
     "winInsufficientMaterial": {
@@ -3687,6 +3791,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/4BBbHgH8/black#122"
+      },
+      "0qAKXRvL": {
+        "date": "2023-09-15",
+        "opponent": {
+          "username": "SherlockHomles",
+          "title": ""
+        },
+        "link": "https://lichess.org/0qAKXRvL#147"
       }
     },
     "pawnCube": {
@@ -4021,6 +4133,22 @@
           "title": ""
         },
         "link": "https://lichess.org/FMhFSJVq#45"
+      },
+      "Wt7wF5lw": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "AlmasChampion1",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/Wt7wF5lw#59"
+      },
+      "Ln6Cvvow": {
+        "date": "2023-09-18",
+        "opponent": {
+          "username": "Litigator94",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ln6Cvvow/black#60"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -4339,6 +4467,14 @@
           "title": "NM"
         },
         "link": "https://lichess.org/zqbBC3Kg"
+      },
+      "rIrOgSt9": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "Morphy2023",
+          "title": ""
+        },
+        "link": "https://lichess.org/rIrOgSt9"
       }
     },
     "royalFamilyFork": {
@@ -5003,6 +5139,26 @@
           "title": ""
         },
         "link": "https://lichess.org/lQGquN01/black#6"
+      }
+    },
+    "pawnX": {
+      "q1nDTh9X": {
+        "date": "2023-09-25",
+        "opponent": {
+          "username": "LSGeneraal",
+          "title": ""
+        },
+        "link": "https://lichess.org/q1nDTh9X#63"
+      }
+    },
+    "quadrupledPawns": {
+      "uwALa7HI": {
+        "date": "2023-09-12",
+        "opponent": {
+          "username": "vaynetop",
+          "title": ""
+        },
+        "link": "https://lichess.org/uwALa7HI#35"
       }
     }
   }

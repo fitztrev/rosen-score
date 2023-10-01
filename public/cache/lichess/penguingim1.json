@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658843338,
-  "games_analyzed": 71240,
-  "moves_analyzed": 4776843,
+  "cache_updated_at": 1696161314136,
+  "games_analyzed": 71289,
+  "moves_analyzed": 4780058,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -11221,6 +11221,14 @@
           "title": ""
         },
         "link": "https://lichess.org/bOJvs9jC/black#79"
+      },
+      "MteipsAe": {
+        "date": "2023-09-30",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/MteipsAe/black#93"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -15087,6 +15095,14 @@
           "title": ""
         },
         "link": "https://lichess.org/xs9zq4ic#47"
+      },
+      "2eYHh2e9": {
+        "date": "2023-09-30",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/2eYHh2e9#59"
       }
     },
     "castleKingsideWithCheckmate": {
@@ -15581,6 +15597,14 @@
           "title": "LM"
         },
         "link": "https://lichess.org/AEPlwbsr/black#70"
+      },
+      "MteipsAe": {
+        "date": "2023-09-30",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/MteipsAe/black#134"
       }
     },
     "bishopAndKnightMate": {

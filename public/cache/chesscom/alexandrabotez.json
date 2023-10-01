@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658871750,
-  "games_analyzed": 21335,
-  "moves_analyzed": 1724365,
+  "cache_updated_at": 1696161388296,
+  "games_analyzed": 21471,
+  "moves_analyzed": 1737414,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -701,6 +701,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/86652607651?tab=analysis&flip=false&move=0149"
+      },
+      "89586704697": {
+        "date": "2023-09-27",
+        "opponent": {
+          "username": "joppie2",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89586704697?tab=analysis&flip=false&move=0183"
       }
     },
     "pawnCheckmate": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693659000197,
-  "games_analyzed": 27976,
-  "moves_analyzed": 2146104,
+  "cache_updated_at": 1696161469604,
+  "games_analyzed": 28057,
+  "moves_analyzed": 2153092,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -2123,6 +2123,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/78414233289?tab=analysis&flip=true&move=033"
+      },
+      "89508577275": {
+        "date": "2023-09-26",
+        "opponent": {
+          "username": "rquery98",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89508577275?tab=analysis&flip=false&move=076"
       }
     },
     "pawnCube": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693659022134,
-  "games_analyzed": 50625,
-  "moves_analyzed": 4134713,
+  "cache_updated_at": 1696161494285,
+  "games_analyzed": 51402,
+  "moves_analyzed": 4201817,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -411,6 +411,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/86203824159?tab=analysis&flip=false&move=060"
+      },
+      "88270917533": {
+        "date": "2023-09-12",
+        "opponent": {
+          "username": "Iball95",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88270917533?tab=analysis&flip=true&move=063"
       }
     },
     "connectDiagonally:5": {
@@ -1709,6 +1717,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/82579943789?tab=analysis&flip=true&move=043"
+      },
+      "89232021775": {
+        "date": "2023-09-23",
+        "opponent": {
+          "username": "Jospem",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89232021775?tab=analysis&flip=true&move=057"
       }
     },
     "adoptionMatch:10": {
@@ -5895,6 +5911,38 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/86710197985?tab=analysis&flip=true&move=0"
+      },
+      "89674265445": {
+        "date": "2023-09-28",
+        "opponent": {
+          "username": "UnknownxArmy",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89674265445?tab=analysis&flip=true&move=0"
+      },
+      "89650286101": {
+        "date": "2023-09-28",
+        "opponent": {
+          "username": "djokovic74",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89650286101?tab=analysis&flip=true&move=0"
+      },
+      "89602740099": {
+        "date": "2023-09-28",
+        "opponent": {
+          "username": "Khusenkhojaev",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89602740099?tab=analysis&flip=true&move=0"
+      },
+      "88617128965": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "amintabatabaei",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88617128965?tab=analysis&flip=true&move=0"
       }
     },
     "pawnCheckmate": {
@@ -6657,6 +6705,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/81369106883?tab=analysis&flip=true&move=0105"
+      },
+      "89227803107": {
+        "date": "2023-09-23",
+        "opponent": {
+          "username": "Riku-gan",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89227803107?tab=analysis&flip=true&move=075"
+      },
+      "88889439815": {
+        "date": "2023-09-19",
+        "opponent": {
+          "username": "WK_WillianHille",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88889439815?tab=analysis&flip=true&move=0121"
       }
     },
     "pawnDiamond": {
@@ -7451,6 +7515,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/85862362341?tab=analysis&flip=true&move=039"
+      },
+      "89232121851": {
+        "date": "2023-09-23",
+        "opponent": {
+          "username": "Vlad_Lukiianchuk",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89232121851?tab=analysis&flip=true&move=051"
       }
     },
     "doubleCheckCheckmate": {
@@ -7815,6 +7887,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/4298403624?tab=analysis&flip=false&move=0151"
+      },
+      "88639237591": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "NikoTheodorou",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/88639237591?tab=analysis&flip=false&move=0123"
       }
     },
     "smotheredMate": {
@@ -9073,6 +9153,22 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/83358403691?tab=analysis&flip=false&move=0"
+      },
+      "89666510265": {
+        "date": "2023-09-28",
+        "opponent": {
+          "username": "UnknownxArmy",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89666510265?tab=analysis&flip=true&move=0"
+      },
+      "89647152817": {
+        "date": "2023-09-28",
+        "opponent": {
+          "username": "djokovic74",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/89647152817?tab=analysis&flip=true&move=0"
       }
     },
     "promotePawnBeforeMoveNumber": {

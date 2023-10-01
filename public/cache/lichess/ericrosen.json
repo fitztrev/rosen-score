@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1693658723657,
-  "games_analyzed": 34104,
-  "moves_analyzed": 2681648,
+  "cache_updated_at": 1696161245404,
+  "games_analyzed": 34517,
+  "moves_analyzed": 2716793,
   "trophies": {
     "pawnCheckmate": {
       "dSATPJpk": {
@@ -1699,6 +1699,22 @@
           "title": "FM"
         },
         "link": "https://lichess.org/jK1uzy2v/black#54"
+      },
+      "qPrDjiQl": {
+        "date": "2023-09-18",
+        "opponent": {
+          "username": "MuzammiL_RCK",
+          "title": ""
+        },
+        "link": "https://lichess.org/qPrDjiQl/black#106"
+      },
+      "frMcMFpn": {
+        "date": "2023-09-08",
+        "opponent": {
+          "username": "alexonsar",
+          "title": ""
+        },
+        "link": "https://lichess.org/frMcMFpn/black#60"
       }
     },
     "winInsufficientMaterial": {
@@ -2141,6 +2157,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/s7a3T7d8/black#84"
+      },
+      "OE76yCui": {
+        "date": "2023-09-23",
+        "opponent": {
+          "username": "Kostik_Mostik",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/OE76yCui/black#170"
       }
     },
     "rosenTrap": {
@@ -4369,6 +4393,22 @@
           "title": "IM"
         },
         "link": "https://lichess.org/HrA9eaDd/black#107"
+      },
+      "COmhpFYS": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "zszss",
+          "title": ""
+        },
+        "link": "https://lichess.org/COmhpFYS/black#137"
+      },
+      "lOAqFO1b": {
+        "date": "2023-09-13",
+        "opponent": {
+          "username": "middlegame_expert",
+          "title": ""
+        },
+        "link": "https://lichess.org/lOAqFO1b#148"
       }
     },
     "castleAfterMove40": {
@@ -4741,6 +4781,38 @@
           "title": "CM"
         },
         "link": "https://lichess.org/DNbDfWMp#105"
+      },
+      "1by2uAUN": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "RafaelCorado",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/1by2uAUN/black#46"
+      },
+      "xe2LYDaz": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "RafaelCorado",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/xe2LYDaz/black#40"
+      },
+      "58vsoBpv": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "ilnamco",
+          "title": ""
+        },
+        "link": "https://lichess.org/58vsoBpv/black#80"
+      },
+      "42XeV0jv": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "rasulovchess",
+          "title": ""
+        },
+        "link": "https://lichess.org/42XeV0jv/black#38"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -5747,6 +5819,30 @@
           "title": ""
         },
         "link": "https://lichess.org/v71aaRf2#23"
+      },
+      "NWYoGdrF": {
+        "date": "2023-09-29",
+        "opponent": {
+          "username": "knightvuillaume",
+          "title": ""
+        },
+        "link": "https://lichess.org/NWYoGdrF#45"
+      },
+      "pkSkRKX2": {
+        "date": "2023-09-23",
+        "opponent": {
+          "username": "danesz2014",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/pkSkRKX2/black#52"
+      },
+      "eldaqhja": {
+        "date": "2023-09-02",
+        "opponent": {
+          "username": "FA_Pavan_Rathi",
+          "title": ""
+        },
+        "link": "https://lichess.org/eldaqhja#31"
       }
     },
     "ohNoMyQueen": {
@@ -6749,6 +6845,14 @@
           "title": ""
         },
         "link": "https://lichess.org/kYbED6h1#53"
+      },
+      "BC4xF8V1": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "jaykarokaro",
+          "title": ""
+        },
+        "link": "https://lichess.org/BC4xF8V1#51"
       }
     },
     "pawnDiamond": {
@@ -7671,6 +7775,38 @@
           "title": ""
         },
         "link": "https://lichess.org/o24hsxVB/black#56"
+      },
+      "ZqgiMLr4": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "Blitzek",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZqgiMLr4/black#70"
+      },
+      "YF6Yc9Gd": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "Nenadvladisavljevic",
+          "title": ""
+        },
+        "link": "https://lichess.org/YF6Yc9Gd#99"
+      },
+      "42XeV0jv": {
+        "date": "2023-09-16",
+        "opponent": {
+          "username": "rasulovchess",
+          "title": ""
+        },
+        "link": "https://lichess.org/42XeV0jv/black#44"
+      },
+      "sgwmjipo": {
+        "date": "2023-09-14",
+        "opponent": {
+          "username": "Manyamis_Manyak",
+          "title": ""
+        },
+        "link": "https://lichess.org/sgwmjipo/black#30"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -9213,6 +9349,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Lp7CJZMu/black"
+      },
+      "Z5oG8S58": {
+        "date": "2023-09-14",
+        "opponent": {
+          "username": "Cristhian16",
+          "title": ""
+        },
+        "link": "https://lichess.org/Z5oG8S58/black"
+      },
+      "OK56Rcej": {
+        "date": "2023-09-14",
+        "opponent": {
+          "username": "Cristhian16",
+          "title": ""
+        },
+        "link": "https://lichess.org/OK56Rcej/black"
       }
     },
     "pawnX": {
