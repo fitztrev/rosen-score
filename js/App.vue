@@ -118,7 +118,7 @@
                 </div>
             </form>
 
-            <RecentUpdates @form-fill="formFill" />
+            <!-- <RecentUpdates @form-fill="formFill" /> -->
         </div>
 
         <download-progress
