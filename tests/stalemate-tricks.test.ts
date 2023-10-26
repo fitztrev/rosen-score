@@ -28,6 +28,7 @@ describe('test stalemate tricks', () => {
         [[{ color: 'b' }], '8/8/8/8/2N1K3/8/2Q5/k7 b - - 24 80'], // https://lichess.org/a0hS2yEI#159
         [[{ color: 'b' }], '7k/5P2/6KP/8/8/8/8/8 b - - 0 86'], // https://lichess.org/nu7gNPvZ#171
         [[{ color: 'w' }], '3K4/8/3kq3/8/8/8/8/8 w - - 17 91'], // https://lichess.org/oRsGcDax#180
+        [[{ color: 'w' }], '8/3b4/8/8/p7/Kpk5/8/8 w - - 4 70'], // https://lichess.org/yHiqPFBq/white#138
     ])('test FEN: %p %p', (expected, fen) => {
         expect(stalemateTricks({ result: { via: 'stalemate' } } as Game, fen)).toStrictEqual(expected)
     })

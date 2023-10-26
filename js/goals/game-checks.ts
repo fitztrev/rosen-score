@@ -10,13 +10,20 @@ export function stalemateTricks(game: Game, fen: string): TrophyCheckResult {
     }
 
     let position = fenToPosition(fen)
+    let materialImbalance = Math.abs(calculateMaterialImbalance(position))
+
+    if (materialImbalance >= 4) {
+        return [
+            {
+                color: fen.split(' ')[1] as 'w' | 'b',
+            },
+        ]
+    }
 
     // if there was only a bishop, call it a draw
     if (position.match(/b/i) && position.replace(/[kbp\.]/gi, '') === '') {
         return []
     }
-
-    let materialImbalance = Math.abs(calculateMaterialImbalance(position))
 
     if (materialImbalance >= 2) {
         return [
