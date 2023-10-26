@@ -4,7 +4,7 @@
 
     1. Crazy Rook
     1. "Windmill" trophy
-    2. 2 knight vs pawn mate
+    1. 2 knight vs pawn mate
 
 2. Shareable links
 
