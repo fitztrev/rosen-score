@@ -278,14 +278,6 @@
                     ></accomplishment-score>
                     <accomplishment-score
                         @register-new-trophy="onRegisterNewTrophy"
-                        title="Pawn Trapezoid"
-                        desc="Make a pawn trapezoid with the base on your 4th or 5th rank"
-                        :trophies="playerTrophiesByType['pawnTrapezoid'] || {}"
-                        gameLink="https://lichess.org/38zR9IeJ#57"
-                        youtubeLink="https://youtu.be/Nuv_7hc7NSA?t=729"
-                    ></accomplishment-score>
-                    <accomplishment-score
-                        @register-new-trophy="onRegisterNewTrophy"
                         title="Connect 8 on 4th Rank"
                         :trophies="playerTrophiesByType['connectEightOnRank:4'] || {}"
                         gameLink="https://lichess.org/ZRXFIlZI#87"
@@ -1167,7 +1159,6 @@ export default {
                 this.checkForTrophy(game, 'connectEightOnRank:7', connectEightOnRank(fen, 7), moveNumber + 1)
                 this.checkForTrophy(game, 'connectDiagonally:5', connectDiagonally(fen, 5), moveNumber + 1)
                 this.checkForTrophy(game, 'connectDiagonally:6', connectDiagonally(fen, 6), moveNumber + 1)
-                this.checkForTrophy(game, 'pawnTrapezoid', pawnTrapezoid(fen), moveNumber + 1)
                 this.checkForTrophy(game, 'sixPawnsInTheSameFile', sixPawnsInTheSameFile(fen), moveNumber + 1)
             }
 
