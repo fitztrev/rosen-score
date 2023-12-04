@@ -19,7 +19,10 @@
         >
             <form @submit.prevent="startDownload">
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">1 <ArrowIcon /></div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
+                        1
+                        <ArrowIcon />
+                    </div>
                     <div class="basis-3/4">
                         <div>
                             Select which site:
@@ -62,14 +65,20 @@
                 </div>
 
                 <div class="flex flex-row mb-4">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">2 <ArrowIcon /></div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
+                        2
+                        <ArrowIcon />
+                    </div>
                     <div class="basis-3/4">
                         <lichess-login v-on:set-lichess-oauth-token="setLichessOauthToken"></lichess-login>
                     </div>
                 </div>
 
                 <div class="flex flex-row">
-                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">3 <ArrowIcon /></div>
+                    <div class="basis-1/4 text-2xl md:text-5xl text-center font-bold italic">
+                        3
+                        <ArrowIcon />
+                    </div>
                     <div class="basis-3/4">
                         <div class="text-sm mt-1 mb-2">
                             Check games since
@@ -714,7 +723,6 @@ import {
     doublePawnDiamond,
     knightCube,
     knightRectangle,
-    pawnTrapezoid,
     sixPawnsInTheSameFile,
     connectEightOnRank,
     connectDiagonally,
