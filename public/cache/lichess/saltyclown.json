@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161327476,
-  "games_analyzed": 36125,
-  "moves_analyzed": 2269137,
+  "cache_updated_at": 1701660247189,
+  "games_analyzed": 36460,
+  "moves_analyzed": 2291431,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -499,6 +499,30 @@
           "title": ""
         },
         "link": "https://lichess.org/XhiIGrz3"
+      },
+      "yZ3QRvvp": {
+        "date": "2023-10-13",
+        "opponent": {
+          "username": "trashl0rd3",
+          "title": ""
+        },
+        "link": "https://lichess.org/yZ3QRvvp"
+      },
+      "40qTcxwp": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "DOMINANTCRAB",
+          "title": ""
+        },
+        "link": "https://lichess.org/40qTcxwp/black"
+      },
+      "0M42WYbz": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "DOMINANTCRAB",
+          "title": ""
+        },
+        "link": "https://lichess.org/0M42WYbz/black"
       }
     },
     "ohNoMyQueen": {
@@ -1829,6 +1853,14 @@
           "title": ""
         },
         "link": "https://lichess.org/601FszTe/black#44"
+      },
+      "r81EOvJR": {
+        "date": "2023-12-03",
+        "opponent": {
+          "username": "polou70",
+          "title": ""
+        },
+        "link": "https://lichess.org/r81EOvJR/black#44"
       }
     },
     "pawnCheckmate": {
@@ -6891,6 +6923,46 @@
           "title": ""
         },
         "link": "https://lichess.org/ybSIhURo#4"
+      },
+      "75JSnBWa": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "Alphalfa0",
+          "title": ""
+        },
+        "link": "https://lichess.org/75JSnBWa#4"
+      },
+      "MQAztpZR": {
+        "date": "2023-10-25",
+        "opponent": {
+          "username": "Alphalfa0",
+          "title": ""
+        },
+        "link": "https://lichess.org/MQAztpZR/black#3"
+      },
+      "5NaWpsbx": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "Chancherox",
+          "title": ""
+        },
+        "link": "https://lichess.org/5NaWpsbx#2"
+      },
+      "3zrl6yCs": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "vlad4454",
+          "title": ""
+        },
+        "link": "https://lichess.org/3zrl6yCs/black#3"
+      },
+      "pH3ntp7D": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "KonnorGwyn",
+          "title": ""
+        },
+        "link": "https://lichess.org/pH3ntp7D#6"
       }
     },
     "g5mate": {
@@ -7287,6 +7359,22 @@
           "title": ""
         },
         "link": "https://lichess.org/gkaZEV3O/black#90"
+      },
+      "bbKMv6Ni": {
+        "date": "2023-10-13",
+        "opponent": {
+          "username": "miranchuk",
+          "title": ""
+        },
+        "link": "https://lichess.org/bbKMv6Ni#131"
+      },
+      "psXdz67M": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "oceendeep",
+          "title": ""
+        },
+        "link": "https://lichess.org/psXdz67M/black#116"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -8037,6 +8125,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ONEtmKU6#120"
+      },
+      "W4XuWQxe": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "cytos01",
+          "title": ""
+        },
+        "link": "https://lichess.org/W4XuWQxe/black#131"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -8543,6 +8639,22 @@
           "title": ""
         },
         "link": "https://lichess.org/N7eZwwH9#89"
+      },
+      "7o8i57Eu": {
+        "date": "2023-10-31",
+        "opponent": {
+          "username": "LiGr8",
+          "title": ""
+        },
+        "link": "https://lichess.org/7o8i57Eu/black#84"
+      },
+      "bbKMv6Ni": {
+        "date": "2023-10-13",
+        "opponent": {
+          "username": "miranchuk",
+          "title": ""
+        },
+        "link": "https://lichess.org/bbKMv6Ni#131"
       }
     },
     "winInsufficientMaterial": {
@@ -9253,6 +9365,14 @@
           "title": ""
         },
         "link": "https://lichess.org/gVVWG9as#29"
+      },
+      "g1drJQXK": {
+        "date": "2023-10-13",
+        "opponent": {
+          "username": "trashl0rd3",
+          "title": ""
+        },
+        "link": "https://lichess.org/g1drJQXK#25"
       }
     },
     "doubleCheckCheckmate": {
@@ -9663,6 +9783,14 @@
           "title": ""
         },
         "link": "https://lichess.org/3JXsDO8D/black#38"
+      },
+      "5NaWpsbx": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "Chancherox",
+          "title": ""
+        },
+        "link": "https://lichess.org/5NaWpsbx#95"
       }
     },
     "knightCube": {
@@ -9913,6 +10041,14 @@
           "title": ""
         },
         "link": "https://lichess.org/vr81Les2"
+      },
+      "3Ot70VAI": {
+        "date": "2023-10-11",
+        "opponent": {
+          "username": "DOMINANTCRAB",
+          "title": ""
+        },
+        "link": "https://lichess.org/3Ot70VAI/black"
       }
     },
     "checkmateAtMoveNumber:4": {

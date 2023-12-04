@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1698355601094,
-  "games_analyzed": 34609,
-  "moves_analyzed": 2725669,
+  "cache_updated_at": 1701660056565,
+  "games_analyzed": 35501,
+  "moves_analyzed": 2795158,
   "trophies": {
     "connectDiagonally:5": {
       "EdEXhZF1": {
@@ -571,6 +571,54 @@
           "title": ""
         },
         "link": "https://lichess.org/iCAMgm9R/black#60"
+      },
+      "pEKiu4h8": {
+        "date": "2023-11-30",
+        "opponent": {
+          "username": "GRC2020",
+          "title": ""
+        },
+        "link": "https://lichess.org/pEKiu4h8/black#26"
+      },
+      "wuZwYnUB": {
+        "date": "2023-11-30",
+        "opponent": {
+          "username": "Magico_romantico",
+          "title": ""
+        },
+        "link": "https://lichess.org/wuZwYnUB#61"
+      },
+      "iiN05b5x": {
+        "date": "2023-11-28",
+        "opponent": {
+          "username": "HiDay-CMC",
+          "title": ""
+        },
+        "link": "https://lichess.org/iiN05b5x/black#26"
+      },
+      "wjh0Acxm": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Rawnsdale",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/wjh0Acxm/black#66"
+      },
+      "F19ejAG5": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Rawnsdale",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/F19ejAG5/black#60"
+      },
+      "vLqH3tb9": {
+        "date": "2023-10-28",
+        "opponent": {
+          "username": "xudia",
+          "title": ""
+        },
+        "link": "https://lichess.org/vLqH3tb9#39"
       }
     },
     "winInsufficientMaterial": {
@@ -1021,6 +1069,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Q032WUPJ#97"
+      },
+      "TpvTkNxe": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "ALEN_05",
+          "title": ""
+        },
+        "link": "https://lichess.org/TpvTkNxe/black#88"
+      },
+      "iCD8aeLG": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "MohammadAayanKhan",
+          "title": ""
+        },
+        "link": "https://lichess.org/iCD8aeLG#113"
       }
     },
     "pawnCheckmate": {
@@ -2735,6 +2799,54 @@
           "title": "GM"
         },
         "link": "https://lichess.org/k9Ps8RXE#165"
+      },
+      "kxPkHZ8s": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "Da4rk_Hu7nter",
+          "title": ""
+        },
+        "link": "https://lichess.org/kxPkHZ8s/black#22"
+      },
+      "5FWL5NSL": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "bbinla",
+          "title": ""
+        },
+        "link": "https://lichess.org/5FWL5NSL#91"
+      },
+      "afE7cFpE": {
+        "date": "2023-11-09",
+        "opponent": {
+          "username": "lemar012",
+          "title": ""
+        },
+        "link": "https://lichess.org/afE7cFpE/black#98"
+      },
+      "Ywj1kofs": {
+        "date": "2023-11-06",
+        "opponent": {
+          "username": "KarlisBergs",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ywj1kofs#67"
+      },
+      "8CrnJORQ": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "Devil_fish",
+          "title": ""
+        },
+        "link": "https://lichess.org/8CrnJORQ/black#70"
+      },
+      "DIrJrdQb": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "WealthyPharaoh",
+          "title": ""
+        },
+        "link": "https://lichess.org/DIrJrdQb/black#68"
       }
     },
     "pawnCube": {
@@ -3081,6 +3193,14 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#48"
+      },
+      "XMwGA5qs": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "torovirgo",
+          "title": ""
+        },
+        "link": "https://lichess.org/XMwGA5qs/black#38"
       }
     },
     "stalemateTricks": {
@@ -4979,6 +5099,38 @@
           "title": ""
         },
         "link": "https://lichess.org/ACWAkGoV/black#93"
+      },
+      "VJGXR94a": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "Zu_Cho_Chi",
+          "title": ""
+        },
+        "link": "https://lichess.org/VJGXR94a#98"
+      },
+      "fUzWNskM": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "ChessWarrior7070",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/fUzWNskM/black#153"
+      },
+      "mc9EebRG": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "Da4rk_Hu7nter",
+          "title": ""
+        },
+        "link": "https://lichess.org/mc9EebRG/black#115"
+      },
+      "OPaEIy3n": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "Volleybot",
+          "title": ""
+        },
+        "link": "https://lichess.org/OPaEIy3n/black#73"
       }
     },
     "pawnDiamond": {
@@ -5933,6 +6085,22 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#46"
+      },
+      "K0CcdZUV": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "ALEN_05",
+          "title": ""
+        },
+        "link": "https://lichess.org/K0CcdZUV/black#60"
+      },
+      "TswaFeTw": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Rawnsdale",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/TswaFeTw/black#60"
       }
     },
     "ohNoMyQueen": {
@@ -6943,6 +7111,14 @@
           "title": ""
         },
         "link": "https://lichess.org/enCs2Aei#37"
+      },
+      "2B1vuuHq": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "Mennonite",
+          "title": ""
+        },
+        "link": "https://lichess.org/2B1vuuHq/black#72"
       }
     },
     "adoptionMatch:10": {
@@ -7113,6 +7289,30 @@
           "title": ""
         },
         "link": "https://lichess.org/JDexLRVL"
+      },
+      "jdoA913W": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "obelisk30",
+          "title": ""
+        },
+        "link": "https://lichess.org/jdoA913W/black"
+      },
+      "h459IhYJ": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "obelisk30",
+          "title": ""
+        },
+        "link": "https://lichess.org/h459IhYJ/black"
+      },
+      "vXws0zER": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "obelisk30",
+          "title": ""
+        },
+        "link": "https://lichess.org/vXws0zER"
       }
     },
     "castleAfterMove40": {
@@ -7509,6 +7709,30 @@
           "title": ""
         },
         "link": "https://lichess.org/OiRhckmw#15"
+      },
+      "S9HHwHBk": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "Zu_Cho_Chi",
+          "title": ""
+        },
+        "link": "https://lichess.org/S9HHwHBk/black#48"
+      },
+      "Y5cEv8df": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "ChessWarrior7070",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/Y5cEv8df#27"
+      },
+      "ToCS3kEp": {
+        "date": "2023-10-28",
+        "opponent": {
+          "username": "cytoplasm0",
+          "title": ""
+        },
+        "link": "https://lichess.org/ToCS3kEp#19"
       }
     },
     "pawnX": {
@@ -8459,6 +8683,14 @@
           "title": ""
         },
         "link": "https://lichess.org/RROyTpXt/black#50"
+      },
+      "382xM6DW": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "MohammadAayanKhan",
+          "title": ""
+        },
+        "link": "https://lichess.org/382xM6DW/black#42"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -9753,6 +9985,14 @@
           "title": ""
         },
         "link": "https://lichess.org/hyV3fQzg#133"
+      },
+      "v0Ly89MV": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "Da4rk_Hu7nter",
+          "title": ""
+        },
+        "link": "https://lichess.org/v0Ly89MV/black#90"
       }
     },
     "castleQueensideWithCheckmate": {
@@ -9919,6 +10159,14 @@
           "title": ""
         },
         "link": "https://lichess.org/MBCQSDYm#6"
+      },
+      "Vty14pTp": {
+        "date": "2023-11-20",
+        "opponent": {
+          "username": "AnShen",
+          "title": ""
+        },
+        "link": "https://lichess.org/Vty14pTp/black#6"
       }
     },
     "promoteToKnightCheckmate": {

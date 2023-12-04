@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161561968,
-  "games_analyzed": 3912,
-  "moves_analyzed": 354455,
+  "cache_updated_at": 1701660540648,
+  "games_analyzed": 4140,
+  "moves_analyzed": 373681,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -147,6 +147,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/89420453239?tab=analysis&flip=false&move=0"
+      },
+      "93658154927": {
+        "date": "2023-11-13",
+        "opponent": {
+          "username": "Elsa167",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93658154927?tab=analysis&flip=false&move=0"
+      },
+      "92697789539": {
+        "date": "2023-11-02",
+        "opponent": {
+          "username": "Rud_Makarian",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/92697789539?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -391,6 +407,16 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/78863710491?tab=analysis&flip=true&move=035"
+      }
+    },
+    "alphabet:egg": {
+      "91408187161": {
+        "date": "2023-10-18",
+        "opponent": {
+          "username": "NikoTheodorou",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/91408187161?tab=analysis&flip=false&move=05"
       }
     }
   }

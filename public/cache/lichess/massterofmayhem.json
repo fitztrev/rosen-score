@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161289755,
-  "games_analyzed": 35331,
-  "moves_analyzed": 2709308,
+  "cache_updated_at": 1701660201905,
+  "games_analyzed": 36880,
+  "moves_analyzed": 2839401,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -467,6 +467,30 @@
           "title": ""
         },
         "link": "https://lichess.org/FFRZ7MsN/black#103"
+      },
+      "yZ4aZZDG": {
+        "date": "2023-12-03",
+        "opponent": {
+          "username": "gogetto",
+          "title": ""
+        },
+        "link": "https://lichess.org/yZ4aZZDG#158"
+      },
+      "A58eOsrk": {
+        "date": "2023-11-07",
+        "opponent": {
+          "username": "onenan",
+          "title": ""
+        },
+        "link": "https://lichess.org/A58eOsrk#120"
+      },
+      "yG0e2NoC": {
+        "date": "2023-10-10",
+        "opponent": {
+          "username": "maroski999",
+          "title": ""
+        },
+        "link": "https://lichess.org/yG0e2NoC#128"
       }
     },
     "pawnCheckmate": {
@@ -1365,6 +1389,54 @@
           "title": ""
         },
         "link": "https://lichess.org/WcKwzO5a#37"
+      },
+      "1ucYQ5ZP": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "Darderismo",
+          "title": ""
+        },
+        "link": "https://lichess.org/1ucYQ5ZP/black#94"
+      },
+      "BlMXBAtD": {
+        "date": "2023-12-01",
+        "opponent": {
+          "username": "DaGo24",
+          "title": ""
+        },
+        "link": "https://lichess.org/BlMXBAtD#105"
+      },
+      "VVKCneeo": {
+        "date": "2023-11-18",
+        "opponent": {
+          "username": "qus1",
+          "title": ""
+        },
+        "link": "https://lichess.org/VVKCneeo#99"
+      },
+      "3ZhIniV9": {
+        "date": "2023-11-17",
+        "opponent": {
+          "username": "General_Zod_01",
+          "title": ""
+        },
+        "link": "https://lichess.org/3ZhIniV9/black#70"
+      },
+      "Gzx9dC2R": {
+        "date": "2023-11-17",
+        "opponent": {
+          "username": "Tanatov_2006",
+          "title": ""
+        },
+        "link": "https://lichess.org/Gzx9dC2R#69"
+      },
+      "fexnmVCL": {
+        "date": "2023-10-15",
+        "opponent": {
+          "username": "AMR25",
+          "title": ""
+        },
+        "link": "https://lichess.org/fexnmVCL#55"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -2353,6 +2425,30 @@
           "title": ""
         },
         "link": "https://lichess.org/LqbuADKG#57"
+      },
+      "hbqxQqut": {
+        "date": "2023-10-24",
+        "opponent": {
+          "username": "HelloItsDmitri",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/hbqxQqut#55"
+      },
+      "9YUqqtSr": {
+        "date": "2023-10-13",
+        "opponent": {
+          "username": "Mrlucky2100",
+          "title": ""
+        },
+        "link": "https://lichess.org/9YUqqtSr#59"
+      },
+      "16vxvTzN": {
+        "date": "2023-10-10",
+        "opponent": {
+          "username": "Darkmaul11",
+          "title": ""
+        },
+        "link": "https://lichess.org/16vxvTzN/black#82"
       }
     },
     "connectDiagonally:5": {
@@ -2955,6 +3051,14 @@
           "title": "CM"
         },
         "link": "https://lichess.org/uoLkZKM4/black#44"
+      },
+      "7G1NgWOd": {
+        "date": "2023-11-08",
+        "opponent": {
+          "username": "drdrunckenstein",
+          "title": ""
+        },
+        "link": "https://lichess.org/7G1NgWOd#57"
       }
     },
     "pawnDiamond": {
@@ -3237,6 +3341,22 @@
           "title": ""
         },
         "link": "https://lichess.org/WPuh9nXI/black#62"
+      },
+      "UE2r56hq": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "wb779",
+          "title": ""
+        },
+        "link": "https://lichess.org/UE2r56hq#81"
+      },
+      "Sx2yq2gX": {
+        "date": "2023-10-01",
+        "opponent": {
+          "username": "AllGunsBlazing22",
+          "title": ""
+        },
+        "link": "https://lichess.org/Sx2yq2gX/black#50"
       }
     },
     "winInsufficientMaterial": {
@@ -3799,6 +3919,78 @@
           "title": ""
         },
         "link": "https://lichess.org/0qAKXRvL#147"
+      },
+      "hI0B6jrR": {
+        "date": "2023-12-03",
+        "opponent": {
+          "username": "PopMilan95",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/hI0B6jrR#129"
+      },
+      "kHFJ7Jzm": {
+        "date": "2023-12-03",
+        "opponent": {
+          "username": "caropawn10",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/kHFJ7Jzm#191"
+      },
+      "6MbHrRzZ": {
+        "date": "2023-12-03",
+        "opponent": {
+          "username": "Grishp06",
+          "title": ""
+        },
+        "link": "https://lichess.org/6MbHrRzZ#177"
+      },
+      "7XOAmgEx": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "Greifax",
+          "title": ""
+        },
+        "link": "https://lichess.org/7XOAmgEx/black#126"
+      },
+      "ygtj2hVc": {
+        "date": "2023-11-23",
+        "opponent": {
+          "username": "DenQ",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/ygtj2hVc#147"
+      },
+      "aqpPCj5m": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Jlucena6",
+          "title": ""
+        },
+        "link": "https://lichess.org/aqpPCj5m/black#146"
+      },
+      "BtMO6eUK": {
+        "date": "2023-11-08",
+        "opponent": {
+          "username": "sutcunuri",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/BtMO6eUK#147"
+      },
+      "PRGVD0iG": {
+        "date": "2023-10-17",
+        "opponent": {
+          "username": "cn_ua",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/PRGVD0iG/black#142"
+      },
+      "ItdGu1Wg": {
+        "date": "2023-10-15",
+        "opponent": {
+          "username": "capablancaz",
+          "title": ""
+        },
+        "link": "https://lichess.org/ItdGu1Wg/black#188"
       }
     },
     "pawnCube": {
@@ -3849,6 +4041,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/qOuSLLPg#23"
+      },
+      "ZLjY0hxJ": {
+        "date": "2023-11-23",
+        "opponent": {
+          "username": "ffl0",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZLjY0hxJ/black#76"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -4199,6 +4399,14 @@
           "title": ""
         },
         "link": "https://lichess.org/iU6vJ0f4#96"
+      },
+      "fBZRQ14k": {
+        "date": "2023-11-30",
+        "opponent": {
+          "username": "GolfeDuMorbihan",
+          "title": ""
+        },
+        "link": "https://lichess.org/fBZRQ14k#140"
       }
     },
     "smotheredMate": {
@@ -4663,6 +4871,22 @@
           "title": ""
         },
         "link": "https://lichess.org/GcI3jqTc/black#150"
+      },
+      "52fa9CwG": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "Ww0727",
+          "title": ""
+        },
+        "link": "https://lichess.org/52fa9CwG/black#126"
+      },
+      "XezbPHHm": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "pressive",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/XezbPHHm#109"
       }
     },
     "clutchPawn": {
@@ -4907,6 +5131,22 @@
           "title": ""
         },
         "link": "https://lichess.org/hpS2TUxa#77"
+      },
+      "1ucYQ5ZP": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "Darderismo",
+          "title": ""
+        },
+        "link": "https://lichess.org/1ucYQ5ZP/black#94"
+      },
+      "Gzx9dC2R": {
+        "date": "2023-11-17",
+        "opponent": {
+          "username": "Tanatov_2006",
+          "title": ""
+        },
+        "link": "https://lichess.org/Gzx9dC2R#69"
       }
     },
     "bishopAndKnightMate": {
@@ -5159,6 +5399,16 @@
           "title": ""
         },
         "link": "https://lichess.org/uwALa7HI#35"
+      }
+    },
+    "promotePawnBeforeMoveNumber": {
+      "Fp4j9Huc": {
+        "date": "2023-11-03",
+        "opponent": {
+          "username": "ListenHere",
+          "title": ""
+        },
+        "link": "https://lichess.org/Fp4j9Huc/black#13"
       }
     }
   }

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161494285,
-  "games_analyzed": 51402,
-  "moves_analyzed": 4201817,
+  "cache_updated_at": 1701660428837,
+  "games_analyzed": 52480,
+  "moves_analyzed": 4294061,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -419,6 +419,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/88270917533?tab=analysis&flip=true&move=063"
+      },
+      "94926051473": {
+        "date": "2023-11-28",
+        "opponent": {
+          "username": "anemih",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94926051473?tab=analysis&flip=true&move=037"
+      },
+      "94414453739": {
+        "date": "2023-11-22",
+        "opponent": {
+          "username": "rusal_ochka",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/94414453739?tab=analysis&flip=false&move=036"
       }
     },
     "connectDiagonally:5": {
@@ -1725,6 +1741,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/89232021775?tab=analysis&flip=true&move=057"
+      },
+      "91651775565": {
+        "date": "2023-10-21",
+        "opponent": {
+          "username": "Haykoooo0o",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/91651775565?tab=analysis&flip=false&move=036"
       }
     },
     "adoptionMatch:10": {
@@ -5943,6 +5967,54 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/88617128965?tab=analysis&flip=true&move=0"
+      },
+      "94513946331": {
+        "date": "2023-11-23",
+        "opponent": {
+          "username": "Adar_07",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94513946331?tab=analysis&flip=false&move=0"
+      },
+      "94500839611": {
+        "date": "2023-11-23",
+        "opponent": {
+          "username": "JaloliddinIlkhomi",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94500839611?tab=analysis&flip=false&move=0"
+      },
+      "93642583745": {
+        "date": "2023-11-13",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93642583745?tab=analysis&flip=false&move=0"
+      },
+      "93637883195": {
+        "date": "2023-11-13",
+        "opponent": {
+          "username": "artin10862",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93637883195?tab=analysis&flip=false&move=0"
+      },
+      "90006629653": {
+        "date": "2023-10-02",
+        "opponent": {
+          "username": "GMKrikor",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/90006629653?tab=analysis&flip=false&move=0"
+      },
+      "90003555733": {
+        "date": "2023-10-02",
+        "opponent": {
+          "username": "artin10862",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/90003555733?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -6721,6 +6793,22 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/88889439815?tab=analysis&flip=true&move=0121"
+      },
+      "93469806149": {
+        "date": "2023-11-11",
+        "opponent": {
+          "username": "stollenmonster",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93469806149?tab=analysis&flip=false&move=062"
+      },
+      "91651775565": {
+        "date": "2023-10-21",
+        "opponent": {
+          "username": "Haykoooo0o",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/91651775565?tab=analysis&flip=false&move=072"
       }
     },
     "pawnDiamond": {
@@ -7985,6 +8073,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4745256076?tab=analysis&flip=true&move=037"
+      },
+      "94926051473": {
+        "date": "2023-11-28",
+        "opponent": {
+          "username": "anemih",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94926051473?tab=analysis&flip=true&move=039"
       }
     },
     "promoteToKnightCheckmate": {
@@ -8093,6 +8189,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/81675286021?tab=analysis&flip=true&move=058"
+      },
+      "90286192339": {
+        "date": "2023-10-05",
+        "opponent": {
+          "username": "torchvshikaru",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90286192339?tab=analysis&flip=false&move=064"
       }
     },
     "checkmateWithKing": {
@@ -8509,6 +8613,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4298485045?tab=analysis&flip=true&move=023"
+      },
+      "95280606091": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "dropstoneDP",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95280606091?tab=analysis&flip=true&move=045"
       }
     },
     "g5mate": {
@@ -9367,6 +9479,136 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/981626964?tab=analysis&flip=true&move=0144"
+      }
+    },
+    "pawnCubeCenter": {
+      "95280606091": {
+        "date": "2023-12-02",
+        "opponent": {
+          "username": "dropstoneDP",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95280606091?tab=analysis&flip=true&move=045"
+      }
+    },
+    "castleFork": {
+      "93466847901": {
+        "date": "2023-11-11",
+        "opponent": {
+          "username": "hsd2016",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93466847901?tab=analysis&flip=false&move=029"
+      }
+    },
+    "connectEightOnRank:5": {
+      "90349894209": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "HenrikChess37",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90349894209?tab=analysis&flip=true&move=0113"
+      }
+    },
+    "connectEightOnRank:6": {
+      "90349894209": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "HenrikChess37",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90349894209?tab=analysis&flip=true&move=0133"
+      }
+    },
+    "alphabet:beachcafe": {
+      "90349290445": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "Fe243",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90349290445?tab=analysis&flip=true&move=017"
+      }
+    },
+    "alphabet:headache": {
+      "90349254821": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "ttah1444",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90349254821?tab=analysis&flip=false&move=015"
+      }
+    },
+    "pawnStormOpening": {
+      "90348623125": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "123456789qaywsx",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90348623125?tab=analysis&flip=true&move=025"
+      }
+    },
+    "alphabet:beef": {
+      "90348016493": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "Biregina",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90348016493?tab=analysis&flip=false&move=07"
+      }
+    },
+    "alphabet:cabbage": {
+      "90347934143": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "wearyflake",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90347934143?tab=analysis&flip=false&move=013"
+      }
+    },
+    "alphabet:badegg": {
+      "90347509639": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "sammydaddyy",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90347509639?tab=analysis&flip=false&move=011"
+      }
+    },
+    "alphabet:egg": {
+      "90347423073": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "firebolt8xp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90347423073?tab=analysis&flip=true&move=05"
+      }
+    },
+    "alphabet:eggegg": {
+      "90347423073": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "firebolt8xp",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/90347423073?tab=analysis&flip=true&move=011"
+      }
+    },
+    "alphabet:chad": {
+      "90346871361": {
+        "date": "2023-10-06",
+        "opponent": {
+          "username": "SaqoChess_Twitch",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/90346871361?tab=analysis&flip=true&move=07"
       }
     }
   }

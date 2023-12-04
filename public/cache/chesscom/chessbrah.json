@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161415312,
-  "games_analyzed": 28123,
-  "moves_analyzed": 2174684,
+  "cache_updated_at": 1701660322496,
+  "games_analyzed": 28351,
+  "moves_analyzed": 2193811,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1203,6 +1203,38 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/87524443049?tab=analysis&flip=false&move=0"
+      },
+      "94445511061": {
+        "date": "2023-11-23",
+        "opponent": {
+          "username": "Nicolas_DeLaColina",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94445511061?tab=analysis&flip=true&move=0"
+      },
+      "94126933037": {
+        "date": "2023-11-19",
+        "opponent": {
+          "username": "INZLF",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94126933037?tab=analysis&flip=false&move=0"
+      },
+      "91515573427": {
+        "date": "2023-10-20",
+        "opponent": {
+          "username": "Ligotti2006",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/91515573427?tab=analysis&flip=false&move=0"
+      },
+      "90629313501": {
+        "date": "2023-10-09",
+        "opponent": {
+          "username": "crazy_but_lazy",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/90629313501?tab=analysis&flip=true&move=0"
       }
     },
     "stalemateTricks": {
@@ -4215,6 +4247,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/4736624990?tab=analysis&flip=true&move=033"
+      },
+      "91177694261": {
+        "date": "2023-10-16",
+        "opponent": {
+          "username": "Siemba",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/91177694261?tab=analysis&flip=true&move=045"
       }
     },
     "royalFamilyFork": {

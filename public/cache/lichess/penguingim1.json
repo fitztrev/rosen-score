@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161314136,
-  "games_analyzed": 71289,
-  "moves_analyzed": 4780058,
+  "cache_updated_at": 1701660225401,
+  "games_analyzed": 71696,
+  "moves_analyzed": 4815393,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -3811,6 +3811,46 @@
           "title": ""
         },
         "link": "https://lichess.org/jVAOqNCh/black#60"
+      },
+      "f5GFhFUw": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/f5GFhFUw#39"
+      },
+      "ujxTWzc6": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "chessmaster2006",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/ujxTWzc6#71"
+      },
+      "RiV24FC5": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "ShadowKing78",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/RiV24FC5#105"
+      },
+      "2Epmnnxz": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "Wu_Kong",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/2Epmnnxz#119"
+      },
+      "nJAWpMLr": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "Wu_Kong",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/nJAWpMLr/black#86"
       }
     },
     "adoptionMatch:10": {
@@ -6453,6 +6493,22 @@
           "title": "CM"
         },
         "link": "https://lichess.org/kHDt7OVF/black"
+      },
+      "n9yhUKws": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/n9yhUKws/black"
+      },
+      "9iYCM8DU": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "The_Void_Which_Binds",
+          "title": ""
+        },
+        "link": "https://lichess.org/9iYCM8DU/black"
       }
     },
     "adoptionMatch:20": {
@@ -7561,6 +7617,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/FqSBpHrP/black#62"
+      },
+      "rokxjtQW": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "Ragehunter",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/rokxjtQW/black#52"
       }
     },
     "winInsufficientMaterial": {
@@ -8091,6 +8155,14 @@
           "title": ""
         },
         "link": "https://lichess.org/YKnGghTg/black#142"
+      },
+      "Jr8SNuUj": {
+        "date": "2023-10-07",
+        "opponent": {
+          "username": "Fisher_The_Galactic",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/Jr8SNuUj/black#202"
       }
     },
     "stalemateTricks": {
@@ -8853,6 +8925,22 @@
           "title": ""
         },
         "link": "https://lichess.org/ltKxRy3U/black#109"
+      },
+      "FrOrgtAL": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/FrOrgtAL#100"
+      },
+      "FdrMWVV3": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "chessmaster2006",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/FdrMWVV3/black#109"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -10659,6 +10747,22 @@
           "title": "IM"
         },
         "link": "https://lichess.org/ImZIBBba/black#3"
+      },
+      "8IEKh4D7": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/8IEKh4D7#6"
+      },
+      "Xdz5CBGD": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/Xdz5CBGD#6"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -14341,6 +14445,22 @@
           "title": ""
         },
         "link": "https://lichess.org/2yI5QRao#67"
+      },
+      "AdqPgmmd": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "anhghOst24",
+          "title": ""
+        },
+        "link": "https://lichess.org/AdqPgmmd#87"
+      },
+      "aJXZ4J13": {
+        "date": "2023-10-07",
+        "opponent": {
+          "username": "gmspideribarra",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/aJXZ4J13#25"
       }
     },
     "doubleCheckCheckmate": {
@@ -15605,6 +15725,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/MteipsAe/black#134"
+      },
+      "K6QktbvH": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "Wu_Kong",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/K6QktbvH/black#118"
       }
     },
     "bishopAndKnightMate": {
@@ -15801,6 +15929,14 @@
           "title": ""
         },
         "link": "https://lichess.org/NF09najT#43"
+      },
+      "AkQziX9z": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "Happy_Duck12",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/AkQziX9z/black#24"
       }
     },
     "g5mate": {
@@ -16387,6 +16523,22 @@
           "title": ""
         },
         "link": "https://lichess.org/sdWwv7vs/black#58"
+      },
+      "ujxTWzc6": {
+        "date": "2023-11-05",
+        "opponent": {
+          "username": "chessmaster2006",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/ujxTWzc6#71"
+      },
+      "RiV24FC5": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "ShadowKing78",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/RiV24FC5#105"
       }
     },
     "pawnStormOpening": {
@@ -17857,6 +18009,14 @@
           "title": ""
         },
         "link": "https://lichess.org/s2yiNXLZ/black#24"
+      },
+      "ypm0W3y2": {
+        "date": "2023-10-29",
+        "opponent": {
+          "username": "Wu_Kong",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/ypm0W3y2#61"
       }
     },
     "pawnCube": {

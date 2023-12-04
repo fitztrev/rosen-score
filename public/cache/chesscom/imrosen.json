@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1696161507660,
-  "games_analyzed": 13568,
-  "moves_analyzed": 1167804,
+  "cache_updated_at": 1701660445473,
+  "games_analyzed": 13919,
+  "moves_analyzed": 1202937,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -747,6 +747,62 @@
           "title": "WGM"
         },
         "link": "https://www.chess.com/analysis/game/live/87244219393?tab=analysis&flip=false&move=0161"
+      },
+      "94949409781": {
+        "date": "2023-11-28",
+        "opponent": {
+          "username": "Staudenhocker43",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94949409781?tab=analysis&flip=true&move=0158"
+      },
+      "94636136171": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "GABUZYAN_CHESSMOOD",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94636136171?tab=analysis&flip=false&move=0103"
+      },
+      "94344158243": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Hongjin",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94344158243?tab=analysis&flip=false&move=0171"
+      },
+      "93565143073": {
+        "date": "2023-11-12",
+        "opponent": {
+          "username": "VitaliyBernadskiy",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93565143073?tab=analysis&flip=false&move=0107"
+      },
+      "93118281893": {
+        "date": "2023-11-07",
+        "opponent": {
+          "username": "Speshka",
+          "title": "WFM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93118281893?tab=analysis&flip=true&move=0164"
+      },
+      "92859047069": {
+        "date": "2023-11-04",
+        "opponent": {
+          "username": "Rubinstein_Akiba",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/92859047069?tab=analysis&flip=true&move=080"
+      },
+      "92857900671": {
+        "date": "2023-11-04",
+        "opponent": {
+          "username": "mind1mover",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/92857900671?tab=analysis&flip=true&move=0102"
       }
     },
     "rosenTrap": {
@@ -893,6 +949,46 @@
           "title": "WGM"
         },
         "link": "https://www.chess.com/analysis/game/live/87244219393?tab=analysis&flip=false&move=0161"
+      },
+      "94949409781": {
+        "date": "2023-11-28",
+        "opponent": {
+          "username": "Staudenhocker43",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94949409781?tab=analysis&flip=true&move=0158"
+      },
+      "94636136171": {
+        "date": "2023-11-25",
+        "opponent": {
+          "username": "GABUZYAN_CHESSMOOD",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94636136171?tab=analysis&flip=false&move=0103"
+      },
+      "94344158243": {
+        "date": "2023-11-21",
+        "opponent": {
+          "username": "Hongjin",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/94344158243?tab=analysis&flip=false&move=0171"
+      },
+      "93565143073": {
+        "date": "2023-11-12",
+        "opponent": {
+          "username": "VitaliyBernadskiy",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/93565143073?tab=analysis&flip=false&move=0107"
+      },
+      "92857900671": {
+        "date": "2023-11-04",
+        "opponent": {
+          "username": "mind1mover",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/92857900671?tab=analysis&flip=true&move=0102"
       }
     },
     "pawnCheckmate": {
@@ -1759,6 +1855,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/82243331437?tab=analysis&flip=true&move=033"
+      },
+      "92457114319": {
+        "date": "2023-10-31",
+        "opponent": {
+          "username": "RedDeath10",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/92457114319?tab=analysis&flip=false&move=026"
       }
     },
     "connectDiagonally:5": {
