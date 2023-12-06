@@ -958,6 +958,7 @@ export default {
             caches.set('https://www.chess.com/member/chessbrah', '/cache/chesscom/chessbrah.json')
             caches.set('https://www.chess.com/member/danielnaroditsky', '/cache/chesscom/danielnaroditsky.json')
             caches.set('https://www.chess.com/member/gothamchess', '/cache/chesscom/gothamchess.json')
+            caches.set('https://www.chess.com/member/hannahsayce', '/cache/chesscom/hannahsayce.json')
             caches.set('https://www.chess.com/member/hikaru', '/cache/chesscom/hikaru.json')
             caches.set('https://www.chess.com/member/imrosen', '/cache/chesscom/imrosen.json')
             caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
