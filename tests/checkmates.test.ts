@@ -1,6 +1,14 @@
 import { Game } from 'chess-fetcher'
 import { describe, expect, test } from 'vitest'
-import { twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate, bishopAndKnightMate, singleBishopMate, singleKnightMate } from '../js/goals/game-checks'
+import {
+    twoBishopMate,
+    fourKnightMate,
+    fourKnightCubeMate,
+    sixKnightRectangleMate,
+    bishopAndKnightMate,
+    singleBishopMate,
+    singleKnightMate,
+} from '../js/goals/game-checks'
 
 describe('single knight mate', () => {
     test.each([
