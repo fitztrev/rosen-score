@@ -62,7 +62,7 @@ export function bishopAndKnightMate(game: Game, fen: string): TrophyCheckResult 
     return []
 }
 
-export function twoBishopMate(game: Game, fen: string): TrophyCheckResult {
+function specificPieceComboMate(game: Game, fen: string, pieces: string): TrophyCheckResult {
     if (game.result.via !== 'checkmate') {
         return []
     }
@@ -73,13 +73,13 @@ export function twoBishopMate(game: Game, fen: string): TrophyCheckResult {
     let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
     let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
 
-    if (whitePiecesRemaining === 'BB' && game.result.winner === 'white') {
+    if (whitePiecesRemaining === pieces.toUpperCase() && game.result.winner === 'white') {
         return [
             {
                 color: 'w',
             },
         ]
-    } else if (blackPiecesRemaining === 'bb' && game.result.winner === 'black') {
+    } else if (blackPiecesRemaining === pieces.toLowerCase() && game.result.winner === 'black') {
         return [
             {
                 color: 'b',
@@ -90,30 +90,20 @@ export function twoBishopMate(game: Game, fen: string): TrophyCheckResult {
     return []
 }
 
+export function singleBishopMate(game: Game, fen: string): TrophyCheckResult {
+    return specificPieceComboMate(game, fen, 'B')
+}
+
+export function singleKnightMate(game: Game, fen: string): TrophyCheckResult {
+    return specificPieceComboMate(game, fen, 'N')
+}
+
+export function twoBishopMate(game: Game, fen: string): TrophyCheckResult {
+    return specificPieceComboMate(game, fen, 'BB')
+}
+
 export function fourKnightMate(game: Game, fen: string): TrophyCheckResult {
-    if (game.result.via !== 'checkmate') {
-        return []
-    }
-
-    let position = fenToPosition(fen)
-
-    let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
-
-    if (piecesRemaining === 'NNNN') {
-        return [
-            {
-                color: 'w',
-            },
-        ]
-    } else if (piecesRemaining === 'nnnn') {
-        return [
-            {
-                color: 'b',
-            },
-        ]
-    }
-
-    return []
+    return specificPieceComboMate(game, fen, 'NNNN')
 }
 
 export function fourKnightCubeMate(game: Game, fen: string): TrophyCheckResult {
@@ -121,24 +111,8 @@ export function fourKnightCubeMate(game: Game, fen: string): TrophyCheckResult {
         return []
     }
 
-    let position = fenToPosition(fen)
-
     if (knightCube(fen).length) {
-        let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
-
-        if (piecesRemaining === 'NNNN') {
-            return [
-                {
-                    color: 'w',
-                },
-            ]
-        } else if (piecesRemaining === 'nnnn') {
-            return [
-                {
-                    color: 'b',
-                },
-            ]
-        }
+        return specificPieceComboMate(game, fen, 'NNNN')
     }
 
     return []
@@ -149,24 +123,8 @@ export function sixKnightRectangleMate(game: Game, fen: string): TrophyCheckResu
         return []
     }
 
-    let position = fenToPosition(fen)
-
     if (knightRectangle(fen).length) {
-        let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
-
-        if (piecesRemaining === 'NNNNNN') {
-            return [
-                {
-                    color: 'w',
-                },
-            ]
-        } else if (piecesRemaining === 'nnnnnn') {
-            return [
-                {
-                    color: 'b',
-                },
-            ]
-        }
+        return specificPieceComboMate(game, fen, 'NNNNNN')
     }
 
     return []

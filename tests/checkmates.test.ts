@@ -1,6 +1,44 @@
 import { Game } from 'chess-fetcher'
 import { describe, expect, test } from 'vitest'
-import { twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate, bishopAndKnightMate } from '../js/goals/game-checks'
+import { twoBishopMate, fourKnightMate, fourKnightCubeMate, sixKnightRectangleMate, bishopAndKnightMate, singleBishopMate, singleKnightMate } from '../js/goals/game-checks'
+
+describe('single knight mate', () => {
+    test.each([
+        ['white', { color: 'w' }, '8/8/8/8/8/8/p1N5/k1K5 b - - 0 1'],
+        ['black', { color: 'b' }, 'K1k5/P1n5/8/8/8/8/8/8 w - - 0 1'],
+    ])('test FEN: %p %p', (winner, expected, fen) => {
+        expect(
+            singleKnightMate(
+                {
+                    result: {
+                        via: 'checkmate',
+                        winner: winner,
+                    },
+                } as Game,
+                fen
+            )
+        ).toStrictEqual([expected])
+    })
+})
+
+describe('single bishop mate', () => {
+    test.each([
+        ['white', { color: 'w' }, '8/8/8/4B3/8/8/p7/k1K5 b - - 0 1'],
+        ['black', { color: 'b' }, 'K1k5/P7/8/8/4b3/8/8/8 w - - 0 1'],
+    ])('test FEN: %p %p', (winner, expected, fen) => {
+        expect(
+            singleBishopMate(
+                {
+                    result: {
+                        via: 'checkmate',
+                        winner: winner,
+                    },
+                } as Game,
+                fen
+            )
+        ).toStrictEqual([expected])
+    })
+})
 
 describe('2-bishop mate', () => {
     test.each([
@@ -49,12 +87,12 @@ describe('not 2-bishop mate', () => {
 
 describe('test 4-knight mate', () => {
     test.each([
-        [[{ color: 'w' }], '8/8/8/6K1/4NN2/3NN3/8/4k3 w - - 16 91'],
-        [[{ color: 'b' }], '8/8/8/6k1/4nn2/3nn3/8/4K3 w - - 16 91'],
-    ])('test FEN: %p %p', (result, fen) => {
-        expect(fourKnightMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual(result)
-        expect(fourKnightCubeMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual([])
-        expect(sixKnightRectangleMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual([])
+        ['white', [{ color: 'w' }], '8/8/8/6K1/4NN2/3NN3/8/4k3 w - - 16 91'],
+        ['black', [{ color: 'b' }], '8/8/8/6k1/4nn2/3nn3/8/4K3 w - - 16 91'],
+    ])('test FEN: %p %p', (winner, result, fen) => {
+        expect(fourKnightMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual(result)
+        expect(fourKnightCubeMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual([])
+        expect(sixKnightRectangleMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual([])
 
         expect(fourKnightMate({ result: { outcome: 'draw' } } as Game, fen)).toStrictEqual([])
     })
@@ -62,13 +100,13 @@ describe('test 4-knight mate', () => {
 
 describe('test 4-knight cube mate', () => {
     test.each([
-        [[{ color: 'w' }], 'k7/8/1NN5/1NN5/8/8/8/K7 w - - 0 1'],
-        [[{ color: 'b' }], 'K7/8/1nn5/1nn5/8/8/8/k7 w - - 0 1'],
-    ])('test FEN: %p %p', (result, fen) => {
-        expect(fourKnightMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual(result)
-        expect(fourKnightCubeMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual(result)
+        ['white', [{ color: 'w' }], 'k7/8/1NN5/1NN5/8/8/8/K7 b - - 0 1'],
+        ['black', [{ color: 'b' }], 'K7/8/1nn5/1nn5/8/8/8/k7 w - - 0 1'],
+    ])('test FEN: %p %p', (winner, result, fen) => {
+        expect(fourKnightMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual(result)
+        expect(fourKnightCubeMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual(result)
 
-        expect(sixKnightRectangleMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual([])
+        expect(sixKnightRectangleMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual([])
 
         expect(fourKnightMate({ result: { outcome: 'draw' } } as Game, fen)).toStrictEqual([])
         expect(fourKnightCubeMate({ result: { outcome: 'draw' } } as Game, fen)).toStrictEqual([])
@@ -89,16 +127,16 @@ describe('test not 4-knight cube mate', () => {
 describe('test 6-knight rectangle mate', () => {
     test.each([
         // 3x2
-        [[{ color: 'w' }], '3k4/8/2NNN3/2NNN3/8/8/8/3K4 w - - 0 1'],
-        [[{ color: 'b' }], '3K4/8/2nnn3/2nnn3/8/8/8/3k4 w - - 0 1'],
+        ['white', [{ color: 'w' }], '3k4/8/2NNN3/2NNN3/8/8/8/3K4 w - - 0 1'],
+        ['black', [{ color: 'b' }], '3K4/8/2nnn3/2nnn3/8/8/8/3k4 w - - 0 1'],
 
         // 2x3
-        [[{ color: 'w' }], '8/8/4NN2/4NN1k/4NN2/8/8/3K4 w - - 0 1'],
-        [[{ color: 'b' }], '8/8/4nn2/4nn1K/4nn2/8/8/3k4 w - - 0 1'],
-    ])('test FEN: %p %p', (result, fen) => {
-        expect(fourKnightMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual([])
-        expect(fourKnightCubeMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual([])
-        expect(sixKnightRectangleMate({ result: { via: 'checkmate' } } as Game, fen)).toStrictEqual(result)
+        ['white', [{ color: 'w' }], '8/8/4NN2/4NN1k/4NN2/8/8/3K4 w - - 0 1'],
+        ['black', [{ color: 'b' }], '8/8/4nn2/4nn1K/4nn2/8/8/3k4 w - - 0 1'],
+    ])('test FEN: %p %p', (winner, result, fen) => {
+        expect(fourKnightMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual([])
+        expect(fourKnightCubeMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual([])
+        expect(sixKnightRectangleMate({ result: { via: 'checkmate', winner } } as Game, fen)).toStrictEqual(result)
 
         expect(sixKnightRectangleMate({ result: { outcome: 'draw' } } as Game, fen)).toStrictEqual([])
     })
