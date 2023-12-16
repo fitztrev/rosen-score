@@ -1,6 +1,6 @@
 <template>
     <div class="my-8 bg-orange-400 drop-shadow-2xl p-4 rounded-lg text-orange-800 mx-auto">
-        <div class="text-lg font-medium dark:text-white text-center">
+        <div class="text-lg font-medium text-center">
             Downloading and analyzing
             {{ title }}&rsquo;s games
         </div>
