@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660306963,
-  "games_analyzed": 21865,
-  "moves_analyzed": 1773024,
+  "cache_updated_at": 1705179509215,
+  "games_analyzed": 22132,
+  "moves_analyzed": 1798094,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -717,6 +717,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/90020996161?tab=analysis&flip=true&move=0118"
+      },
+      "97451443533": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "David2536",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/97451443533?tab=analysis&flip=true&move=0114"
       }
     },
     "pawnCheckmate": {
@@ -2053,6 +2061,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/83116564011?tab=analysis&flip=true&move=027"
+      },
+      "97539091449": {
+        "date": "2023-12-28",
+        "opponent": {
+          "username": "stroopwafelen",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/97539091449?tab=analysis&flip=false&move=070"
+      },
+      "97536624963": {
+        "date": "2023-12-28",
+        "opponent": {
+          "username": "EdgarALeonE",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/97536624963?tab=analysis&flip=false&move=036"
       }
     },
     "clutchPawn": {

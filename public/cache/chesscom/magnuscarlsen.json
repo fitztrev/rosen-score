@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660540648,
-  "games_analyzed": 4140,
-  "moves_analyzed": 373681,
+  "cache_updated_at": 1705179746242,
+  "games_analyzed": 4329,
+  "moves_analyzed": 390799,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -163,6 +163,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/92697789539?tab=analysis&flip=false&move=0"
+      },
+      "96256981625": {
+        "date": "2023-12-14",
+        "opponent": {
+          "username": "Zizooooo98",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96256981625?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {

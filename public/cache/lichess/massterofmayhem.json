@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660201905,
-  "games_analyzed": 36880,
-  "moves_analyzed": 2839401,
+  "cache_updated_at": 1705179422570,
+  "games_analyzed": 38005,
+  "moves_analyzed": 2927850,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -491,6 +491,14 @@
           "title": ""
         },
         "link": "https://lichess.org/yG0e2NoC#128"
+      },
+      "Hwpgfvrs": {
+        "date": "2023-12-14",
+        "opponent": {
+          "username": "ThePatrick27",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/Hwpgfvrs/black#161"
       }
     },
     "pawnCheckmate": {
@@ -1437,6 +1445,30 @@
           "title": ""
         },
         "link": "https://lichess.org/fexnmVCL#55"
+      },
+      "CYLI43hi": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "ajedrez2021",
+          "title": ""
+        },
+        "link": "https://lichess.org/CYLI43hi#61"
+      },
+      "C9D5sNG1": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "dwfi0w",
+          "title": ""
+        },
+        "link": "https://lichess.org/C9D5sNG1/black#122"
+      },
+      "oF1eQFAl": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "Lingchi",
+          "title": ""
+        },
+        "link": "https://lichess.org/oF1eQFAl#51"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -3059,6 +3091,30 @@
           "title": ""
         },
         "link": "https://lichess.org/7G1NgWOd#57"
+      },
+      "Y8NpevwL": {
+        "date": "2024-01-05",
+        "opponent": {
+          "username": "Cerdifixer",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/Y8NpevwL/black#34"
+      },
+      "4SS3v9Su": {
+        "date": "2024-01-03",
+        "opponent": {
+          "username": "Consent_to_treatment",
+          "title": ""
+        },
+        "link": "https://lichess.org/4SS3v9Su/black#66"
+      },
+      "C9D5sNG1": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "dwfi0w",
+          "title": ""
+        },
+        "link": "https://lichess.org/C9D5sNG1/black#36"
       }
     },
     "pawnDiamond": {
@@ -4349,6 +4405,30 @@
           "title": ""
         },
         "link": "https://lichess.org/Ln6Cvvow/black#60"
+      },
+      "k2Xl0nQc": {
+        "date": "2023-12-24",
+        "opponent": {
+          "username": "LovelySicilian",
+          "title": ""
+        },
+        "link": "https://lichess.org/k2Xl0nQc#55"
+      },
+      "gU9mtH7e": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "jimmydeeznuts",
+          "title": ""
+        },
+        "link": "https://lichess.org/gU9mtH7e#41"
+      },
+      "oZgJLmwo": {
+        "date": "2023-12-05",
+        "opponent": {
+          "username": "Whalla_2023",
+          "title": ""
+        },
+        "link": "https://lichess.org/oZgJLmwo#37"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -4683,6 +4763,22 @@
           "title": ""
         },
         "link": "https://lichess.org/rIrOgSt9"
+      },
+      "lLzw89XY": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "fedya_m",
+          "title": ""
+        },
+        "link": "https://lichess.org/lLzw89XY/black"
+      },
+      "tuUrXAWw": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "jimmydeeznuts",
+          "title": ""
+        },
+        "link": "https://lichess.org/tuUrXAWw/black"
       }
     },
     "royalFamilyFork": {
@@ -4887,6 +4983,30 @@
           "title": "IM"
         },
         "link": "https://lichess.org/XezbPHHm#109"
+      },
+      "qUr8tC2f": {
+        "date": "2023-12-28",
+        "opponent": {
+          "username": "JosueAraujok",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/qUr8tC2f#103"
+      },
+      "r1ECg8fa": {
+        "date": "2023-12-26",
+        "opponent": {
+          "username": "Los_animales_perruno",
+          "title": ""
+        },
+        "link": "https://lichess.org/r1ECg8fa#125"
+      },
+      "bggTOrK6": {
+        "date": "2023-12-19",
+        "opponent": {
+          "username": "YearOfWhiteRabbit",
+          "title": ""
+        },
+        "link": "https://lichess.org/bggTOrK6#133"
       }
     },
     "clutchPawn": {
@@ -5025,6 +5145,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/T1ewB7WP/black#156"
+      },
+      "bggTOrK6": {
+        "date": "2023-12-19",
+        "opponent": {
+          "username": "YearOfWhiteRabbit",
+          "title": ""
+        },
+        "link": "https://lichess.org/bggTOrK6#133"
       }
     },
     "g5mate": {
@@ -5245,6 +5373,14 @@
           "title": ""
         },
         "link": "https://lichess.org/13xjoTcy/black#196"
+      },
+      "6VOXPL1P": {
+        "date": "2024-01-04",
+        "opponent": {
+          "username": "ZhohoFF",
+          "title": ""
+        },
+        "link": "https://lichess.org/6VOXPL1P/black#138"
       }
     },
     "adoptionMatch:20": {

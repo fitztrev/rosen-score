@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1702734932377,
-  "games_analyzed": 35705,
-  "moves_analyzed": 2808454,
+  "cache_updated_at": 1705179264902,
+  "games_analyzed": 36098,
+  "moves_analyzed": 2844982,
   "trophies": {
     "ohNoMyQueen": {
       "PKw4SGkk": {
@@ -1027,6 +1027,14 @@
           "title": ""
         },
         "link": "https://lichess.org/enCs2Aei#37"
+      },
+      "ULX8kdaK": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "RodriFK",
+          "title": ""
+        },
+        "link": "https://lichess.org/ULX8kdaK/black#68"
       }
     },
     "adoptionMatch:10": {
@@ -2395,6 +2403,14 @@
           "title": ""
         },
         "link": "https://lichess.org/iCAMgm9R/black#60"
+      },
+      "YvCdnyJ3": {
+        "date": "2024-01-05",
+        "opponent": {
+          "username": "yousef1388",
+          "title": ""
+        },
+        "link": "https://lichess.org/YvCdnyJ3/black#32"
       }
     },
     "pawnCube": {
@@ -2749,6 +2765,14 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#48"
+      },
+      "gwKKC8vi": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "Chin34",
+          "title": ""
+        },
+        "link": "https://lichess.org/gwKKC8vi/black#24"
       }
     },
     "stalemateTricks": {
@@ -4679,6 +4703,22 @@
           "title": ""
         },
         "link": "https://lichess.org/ACWAkGoV/black#93"
+      },
+      "08pSxZtl": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "BlueGreensun",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/08pSxZtl#112"
+      },
+      "cCf2fuEq": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "FARMVlLLE",
+          "title": ""
+        },
+        "link": "https://lichess.org/cCf2fuEq#160"
       }
     },
     "smotheredMate": {
@@ -5041,6 +5081,14 @@
           "title": ""
         },
         "link": "https://lichess.org/OiRhckmw#15"
+      },
+      "eeprxLiW": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "Schachkind",
+          "title": ""
+        },
+        "link": "https://lichess.org/eeprxLiW#25"
       }
     },
     "pawnDiamond": {
@@ -6011,6 +6059,30 @@
           "title": ""
         },
         "link": "https://lichess.org/EXwOWSu5/black#46"
+      },
+      "rvW8YWQb": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "KING_OF_CS2",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/rvW8YWQb#57"
+      },
+      "SOG8hDWs": {
+        "date": "2024-01-01",
+        "opponent": {
+          "username": "Luis1261",
+          "title": ""
+        },
+        "link": "https://lichess.org/SOG8hDWs/black#32"
+      },
+      "2I4pbXTY": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "Fortniteplayer94",
+          "title": ""
+        },
+        "link": "https://lichess.org/2I4pbXTY/black#64"
       }
     },
     "doubleCheckCheckmate": {
@@ -8199,6 +8271,46 @@
           "title": "GM"
         },
         "link": "https://lichess.org/k9Ps8RXE#165"
+      },
+      "anLv8Ta8": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "Nikita_Shandrygin",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/anLv8Ta8#97"
+      },
+      "5CUb0eeU": {
+        "date": "2023-12-31",
+        "opponent": {
+          "username": "TheDesolated",
+          "title": ""
+        },
+        "link": "https://lichess.org/5CUb0eeU#91"
+      },
+      "Z8ttlHA9": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "Stepashka_83",
+          "title": ""
+        },
+        "link": "https://lichess.org/Z8ttlHA9#39"
+      },
+      "4qlIT9O5": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "coachraven",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/4qlIT9O5#99"
+      },
+      "RXjtp5KH": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "wooden_head",
+          "title": ""
+        },
+        "link": "https://lichess.org/RXjtp5KH/black#84"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -9071,6 +9183,14 @@
           "title": ""
         },
         "link": "https://lichess.org/G155QxTA#90"
+      },
+      "08pSxZtl": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "BlueGreensun",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/08pSxZtl#112"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -9403,6 +9523,14 @@
           "title": ""
         },
         "link": "https://lichess.org/oH5DMzh1/black#104"
+      },
+      "0wZeNIsJ": {
+        "date": "2023-12-31",
+        "opponent": {
+          "username": "wahbi79",
+          "title": ""
+        },
+        "link": "https://lichess.org/0wZeNIsJ#69"
       }
     },
     "twoBishopMate": {
@@ -9593,6 +9721,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/jPI1TCXP#12"
+      },
+      "FScAvDGL": {
+        "date": "2023-12-29",
+        "opponent": {
+          "username": "Fotty_1338",
+          "title": ""
+        },
+        "link": "https://lichess.org/FScAvDGL#12"
       }
     },
     "clutchPawn": {
@@ -10181,6 +10317,14 @@
           "title": ""
         },
         "link": "https://lichess.org/7fmGBmKz/black#28"
+      },
+      "0wZeNIsJ": {
+        "date": "2023-12-31",
+        "opponent": {
+          "username": "wahbi79",
+          "title": ""
+        },
+        "link": "https://lichess.org/0wZeNIsJ#69"
       }
     },
     "avoidTheFlagCheckmate": {

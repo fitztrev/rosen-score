@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660322496,
-  "games_analyzed": 28351,
-  "moves_analyzed": 2193811,
+  "cache_updated_at": 1705179524480,
+  "games_analyzed": 28614,
+  "moves_analyzed": 2215545,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1235,6 +1235,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/90629313501?tab=analysis&flip=true&move=0"
+      },
+      "97814462853": {
+        "date": "2024-01-01",
+        "opponent": {
+          "username": "di4i4t4o4",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/97814462853?tab=analysis&flip=true&move=0"
+      },
+      "95491817607": {
+        "date": "2023-12-05",
+        "opponent": {
+          "username": "mmgbestia",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/95491817607?tab=analysis&flip=false&move=0"
       }
     },
     "stalemateTricks": {
@@ -3607,6 +3623,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/83870533301?tab=analysis&flip=true&move=061"
+      },
+      "98404575773": {
+        "date": "2024-01-07",
+        "opponent": {
+          "username": "profedechess93",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98404575773?tab=analysis&flip=true&move=075"
       }
     },
     "connectDiagonally:5": {

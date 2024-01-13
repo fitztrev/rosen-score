@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660398768,
-  "games_analyzed": 28199,
-  "moves_analyzed": 2166463,
+  "cache_updated_at": 1705179590448,
+  "games_analyzed": 28266,
+  "moves_analyzed": 2172202,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -1697,6 +1697,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/80580087669?tab=analysis&flip=true&move=061"
+      },
+      "96741141299": {
+        "date": "2023-12-19",
+        "opponent": {
+          "username": "Nechitaylo_Nikita",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96741141299?tab=analysis&flip=true&move=045"
       }
     },
     "pawnDiamond": {

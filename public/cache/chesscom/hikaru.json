@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660428837,
-  "games_analyzed": 52480,
-  "moves_analyzed": 4294061,
+  "cache_updated_at": 1705179666150,
+  "games_analyzed": 53526,
+  "moves_analyzed": 4388472,
   "trophies": {
     "ohNoMyQueen": {
       "1125341079": {
@@ -435,6 +435,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/94414453739?tab=analysis&flip=false&move=036"
+      },
+      "98668537943": {
+        "date": "2024-01-10",
+        "opponent": {
+          "username": "alexrustemov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98668537943?tab=analysis&flip=true&move=057"
+      },
+      "98561176173": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "Salem-AR",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98561176173?tab=analysis&flip=true&move=081"
       }
     },
     "connectDiagonally:5": {
@@ -1749,6 +1765,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/91651775565?tab=analysis&flip=false&move=036"
+      },
+      "98039399043": {
+        "date": "2024-01-03",
+        "opponent": {
+          "username": "Bagrat1on",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98039399043?tab=analysis&flip=true&move=049"
+      },
+      "97431049313": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Bagrat1on",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/97431049313?tab=analysis&flip=false&move=032"
       }
     },
     "adoptionMatch:10": {
@@ -6015,6 +6047,54 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/90003555733?tab=analysis&flip=false&move=0"
+      },
+      "98665598137": {
+        "date": "2024-01-10",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98665598137?tab=analysis&flip=false&move=0"
+      },
+      "98047371521": {
+        "date": "2024-01-03",
+        "opponent": {
+          "username": "I_am_Javi",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98047371521?tab=analysis&flip=false&move=0"
+      },
+      "97965597119": {
+        "date": "2024-01-02",
+        "opponent": {
+          "username": "Maitreia",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/97965597119?tab=analysis&flip=true&move=0"
+      },
+      "97959132609": {
+        "date": "2024-01-02",
+        "opponent": {
+          "username": "Martial2008",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/97959132609?tab=analysis&flip=false&move=0"
+      },
+      "96820189743": {
+        "date": "2023-12-20",
+        "opponent": {
+          "username": "IM_ArthurDW08",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96820189743?tab=analysis&flip=false&move=0"
+      },
+      "96083657557": {
+        "date": "2023-12-12",
+        "opponent": {
+          "username": "ricky8632200",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/96083657557?tab=analysis&flip=true&move=0"
       }
     },
     "pawnCheckmate": {
@@ -6809,6 +6889,22 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/91651775565?tab=analysis&flip=false&move=072"
+      },
+      "98222214065": {
+        "date": "2024-01-05",
+        "opponent": {
+          "username": "Bagrat1on",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98222214065?tab=analysis&flip=true&move=095"
+      },
+      "97366889313": {
+        "date": "2023-12-26",
+        "opponent": {
+          "username": "Road2GM3000",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/97366889313?tab=analysis&flip=false&move=086"
       }
     },
     "pawnDiamond": {
@@ -7611,6 +7707,38 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/89232121851?tab=analysis&flip=true&move=051"
+      },
+      "98230001583": {
+        "date": "2024-01-05",
+        "opponent": {
+          "username": "artin10862",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98230001583?tab=analysis&flip=false&move=050"
+      },
+      "96576498581": {
+        "date": "2023-12-17",
+        "opponent": {
+          "username": "PacingRope",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96576498581?tab=analysis&flip=true&move=025"
+      },
+      "96074660631": {
+        "date": "2023-12-11",
+        "opponent": {
+          "username": "BeWaterBL",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96074660631?tab=analysis&flip=false&move=026"
+      },
+      "95628100281": {
+        "date": "2023-12-06",
+        "opponent": {
+          "username": "Rymuselmun07",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95628100281?tab=analysis&flip=true&move=037"
       }
     },
     "doubleCheckCheckmate": {
@@ -7983,6 +8111,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/88639237591?tab=analysis&flip=false&move=0123"
+      },
+      "98644586193": {
+        "date": "2024-01-10",
+        "opponent": {
+          "username": "KazakhFighter04",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/98644586193?tab=analysis&flip=true&move=0144"
+      },
+      "95625666163": {
+        "date": "2023-12-06",
+        "opponent": {
+          "username": "Kacparov",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95625666163?tab=analysis&flip=false&move=0163"
       }
     },
     "smotheredMate": {
@@ -9281,6 +9425,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/89647152817?tab=analysis&flip=true&move=0"
+      },
+      "97962727839": {
+        "date": "2024-01-02",
+        "opponent": {
+          "username": "Maitreia",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/97962727839?tab=analysis&flip=true&move=0"
       }
     },
     "promotePawnBeforeMoveNumber": {

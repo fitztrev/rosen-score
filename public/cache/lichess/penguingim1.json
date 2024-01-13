@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660225401,
-  "games_analyzed": 71696,
-  "moves_analyzed": 4815393,
+  "cache_updated_at": 1705179448562,
+  "games_analyzed": 72090,
+  "moves_analyzed": 4842229,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -3851,6 +3851,22 @@
           "title": "NM"
         },
         "link": "https://lichess.org/nJAWpMLr/black#86"
+      },
+      "4N0hGlFA": {
+        "date": "2023-12-25",
+        "opponent": {
+          "username": "RodriFK",
+          "title": ""
+        },
+        "link": "https://lichess.org/4N0hGlFA#67"
+      },
+      "CWylz1LK": {
+        "date": "2023-12-07",
+        "opponent": {
+          "username": "impogthefunnyfrog",
+          "title": ""
+        },
+        "link": "https://lichess.org/CWylz1LK#57"
       }
     },
     "adoptionMatch:10": {
@@ -6509,6 +6525,38 @@
           "title": ""
         },
         "link": "https://lichess.org/9iYCM8DU/black"
+      },
+      "V306yD29": {
+        "date": "2023-12-10",
+        "opponent": {
+          "username": "Dvinik63",
+          "title": ""
+        },
+        "link": "https://lichess.org/V306yD29"
+      },
+      "bTJu3gU6": {
+        "date": "2023-12-10",
+        "opponent": {
+          "username": "Volleybot",
+          "title": ""
+        },
+        "link": "https://lichess.org/bTJu3gU6/black"
+      },
+      "YKVO00R8": {
+        "date": "2023-12-10",
+        "opponent": {
+          "username": "Volleybot",
+          "title": ""
+        },
+        "link": "https://lichess.org/YKVO00R8/black"
+      },
+      "z0HFi2Oy": {
+        "date": "2023-12-07",
+        "opponent": {
+          "username": "impogthefunnyfrog",
+          "title": ""
+        },
+        "link": "https://lichess.org/z0HFi2Oy"
       }
     },
     "adoptionMatch:20": {
@@ -7625,6 +7673,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/rokxjtQW/black#52"
+      },
+      "LdsFQ4Ea": {
+        "date": "2023-12-10",
+        "opponent": {
+          "username": "Volleybot",
+          "title": ""
+        },
+        "link": "https://lichess.org/LdsFQ4Ea#49"
       }
     },
     "winInsufficientMaterial": {
@@ -8163,6 +8219,22 @@
           "title": "FM"
         },
         "link": "https://lichess.org/Jr8SNuUj/black#202"
+      },
+      "cjkuxHQ3": {
+        "date": "2023-12-30",
+        "opponent": {
+          "username": "SindarovGM",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/cjkuxHQ3/black#146"
+      },
+      "s97jfYlP": {
+        "date": "2023-12-30",
+        "opponent": {
+          "username": "SindarovGM",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/s97jfYlP/black#138"
       }
     },
     "stalemateTricks": {
@@ -8941,6 +9013,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/FdrMWVV3/black#109"
+      },
+      "GsJg4SxK": {
+        "date": "2023-12-30",
+        "opponent": {
+          "username": "pultis12",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/GsJg4SxK#170"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -13243,6 +13323,22 @@
           "title": "GM"
         },
         "link": "https://lichess.org/yw7CsFMe/black#46"
+      },
+      "MnhRTcWR": {
+        "date": "2023-12-25",
+        "opponent": {
+          "username": "MasterJYR",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/MnhRTcWR#43"
+      },
+      "BUdodJFs": {
+        "date": "2023-12-17",
+        "opponent": {
+          "username": "Wafwhij02",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/BUdodJFs#45"
       }
     },
     "connectDiagonally:5": {
@@ -14461,6 +14557,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/aJXZ4J13#25"
+      },
+      "BA47zsA9": {
+        "date": "2023-12-17",
+        "opponent": {
+          "username": "Wafwhij02",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/BA47zsA9/black#32"
       }
     },
     "doubleCheckCheckmate": {
@@ -15223,6 +15327,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/2eYHh2e9#59"
+      },
+      "esf8JLpa": {
+        "date": "2023-12-05",
+        "opponent": {
+          "username": "AnonForever",
+          "title": ""
+        },
+        "link": "https://lichess.org/esf8JLpa/black#64"
       }
     },
     "castleKingsideWithCheckmate": {
@@ -17917,6 +18029,14 @@
           "title": ""
         },
         "link": "https://lichess.org/lCmOG3Qn/black#18"
+      },
+      "h9vd7rEq": {
+        "date": "2023-12-25",
+        "opponent": {
+          "username": "mr_lolipop",
+          "title": ""
+        },
+        "link": "https://lichess.org/h9vd7rEq/black#86"
       }
     },
     "smotheredPorkMate": {

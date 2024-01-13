@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660445473,
-  "games_analyzed": 13919,
-  "moves_analyzed": 1202937,
+  "cache_updated_at": 1705179680534,
+  "games_analyzed": 14024,
+  "moves_analyzed": 1212103,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -803,6 +803,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/92857900671?tab=analysis&flip=true&move=0102"
+      },
+      "95559579595": {
+        "date": "2023-12-06",
+        "opponent": {
+          "username": "DishonorOnYourCow",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95559579595?tab=analysis&flip=false&move=091"
       }
     },
     "rosenTrap": {
@@ -989,6 +997,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/92857900671?tab=analysis&flip=true&move=0102"
+      },
+      "95559579595": {
+        "date": "2023-12-06",
+        "opponent": {
+          "username": "DishonorOnYourCow",
+          "title": "WGM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/95559579595?tab=analysis&flip=false&move=091"
       }
     },
     "pawnCheckmate": {
@@ -2407,6 +2423,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/84300588241?tab=analysis&flip=false&move=022"
+      },
+      "96505747623": {
+        "date": "2023-12-16",
+        "opponent": {
+          "username": "BM_on_ICC",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/96505747623?tab=analysis&flip=true&move=077"
       }
     },
     "pawnCube": {

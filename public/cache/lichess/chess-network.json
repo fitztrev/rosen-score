@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1701660131244,
-  "games_analyzed": 123869,
-  "moves_analyzed": 10681181,
+  "cache_updated_at": 1705179345103,
+  "games_analyzed": 125837,
+  "moves_analyzed": 10866820,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -7267,6 +7267,134 @@
           "title": "GM"
         },
         "link": "https://lichess.org/MjMTZoOu/black#38"
+      },
+      "Ek3RrhGL": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "ChessUBBChillan",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ek3RrhGL/black#74"
+      },
+      "a28RoegN": {
+        "date": "2024-01-06",
+        "opponent": {
+          "username": "KrugerIndSmoothing",
+          "title": ""
+        },
+        "link": "https://lichess.org/a28RoegN#27"
+      },
+      "ZettoVmU": {
+        "date": "2024-01-06",
+        "opponent": {
+          "username": "KrugerIndSmoothing",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZettoVmU/black#34"
+      },
+      "oyHsiJLm": {
+        "date": "2024-01-06",
+        "opponent": {
+          "username": "CarlesMurusevich",
+          "title": ""
+        },
+        "link": "https://lichess.org/oyHsiJLm/black#38"
+      },
+      "qY092dY3": {
+        "date": "2024-01-05",
+        "opponent": {
+          "username": "rasulovchess",
+          "title": ""
+        },
+        "link": "https://lichess.org/qY092dY3#29"
+      },
+      "qFkGMs4f": {
+        "date": "2023-12-30",
+        "opponent": {
+          "username": "Erebuni91",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/qFkGMs4f#53"
+      },
+      "Dx8mAlVz": {
+        "date": "2023-12-28",
+        "opponent": {
+          "username": "arne1988",
+          "title": ""
+        },
+        "link": "https://lichess.org/Dx8mAlVz/black#66"
+      },
+      "FFi0XqR2": {
+        "date": "2023-12-18",
+        "opponent": {
+          "username": "liczner",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/FFi0XqR2#107"
+      },
+      "TMQ2h4AX": {
+        "date": "2023-12-17",
+        "opponent": {
+          "username": "altol1669",
+          "title": ""
+        },
+        "link": "https://lichess.org/TMQ2h4AX#43"
+      },
+      "yZo9TA6d": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "Cresswell",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/yZo9TA6d/black#48"
+      },
+      "HmT1hStW": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "Hooligan64",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/HmT1hStW#29"
+      },
+      "pX6kMWae": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "ChessDarkForce",
+          "title": ""
+        },
+        "link": "https://lichess.org/pX6kMWae#43"
+      },
+      "ws5W5cwg": {
+        "date": "2023-12-14",
+        "opponent": {
+          "username": "SANTANA_LUIS",
+          "title": ""
+        },
+        "link": "https://lichess.org/ws5W5cwg/black#66"
+      },
+      "UK1QxCWy": {
+        "date": "2023-12-13",
+        "opponent": {
+          "username": "ZigZagBB",
+          "title": ""
+        },
+        "link": "https://lichess.org/UK1QxCWy/black#36"
+      },
+      "ZWeprICh": {
+        "date": "2023-12-13",
+        "opponent": {
+          "username": "cyhnsnc",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZWeprICh/black#70"
+      },
+      "UpHhIsi1": {
+        "date": "2023-12-08",
+        "opponent": {
+          "username": "meter",
+          "title": ""
+        },
+        "link": "https://lichess.org/UpHhIsi1/black#48"
       }
     },
     "pawnCheckmate": {
@@ -10869,6 +10997,54 @@
           "title": ""
         },
         "link": "https://lichess.org/a2CGwpRQ/black#72"
+      },
+      "p8qosXOx": {
+        "date": "2024-01-11",
+        "opponent": {
+          "username": "nikiilesh",
+          "title": ""
+        },
+        "link": "https://lichess.org/p8qosXOx/black#66"
+      },
+      "NS7QZRt0": {
+        "date": "2024-01-10",
+        "opponent": {
+          "username": "Roi-Georges",
+          "title": ""
+        },
+        "link": "https://lichess.org/NS7QZRt0/black#84"
+      },
+      "ZQwFMgwR": {
+        "date": "2024-01-04",
+        "opponent": {
+          "username": "SlowGrinder",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/ZQwFMgwR/black#112"
+      },
+      "eIFQ6SjI": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "ManuDavid2910",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/eIFQ6SjI#99"
+      },
+      "xYuplnqy": {
+        "date": "2023-12-20",
+        "opponent": {
+          "username": "Violet_Pride",
+          "title": ""
+        },
+        "link": "https://lichess.org/xYuplnqy/black#106"
+      },
+      "TZiNYscU": {
+        "date": "2023-12-09",
+        "opponent": {
+          "username": "Kavaliro",
+          "title": ""
+        },
+        "link": "https://lichess.org/TZiNYscU#77"
       }
     },
     "connectDiagonally:5": {
@@ -14703,6 +14879,102 @@
           "title": "FM"
         },
         "link": "https://lichess.org/bWgkrNgU#51"
+      },
+      "ZQwFMgwR": {
+        "date": "2024-01-04",
+        "opponent": {
+          "username": "SlowGrinder",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/ZQwFMgwR/black#78"
+      },
+      "Fi2rHoGX": {
+        "date": "2024-01-01",
+        "opponent": {
+          "username": "JakaRacman",
+          "title": ""
+        },
+        "link": "https://lichess.org/Fi2rHoGX/black#52"
+      },
+      "N75nWmUT": {
+        "date": "2023-12-30",
+        "opponent": {
+          "username": "Felini21",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/N75nWmUT#89"
+      },
+      "rGn4GLEG": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Newchempion2011",
+          "title": ""
+        },
+        "link": "https://lichess.org/rGn4GLEG#35"
+      },
+      "lTPo3oV4": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Newchempion2011",
+          "title": ""
+        },
+        "link": "https://lichess.org/lTPo3oV4#31"
+      },
+      "DrDG0vUI": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Close_eyes2023",
+          "title": ""
+        },
+        "link": "https://lichess.org/DrDG0vUI/black#32"
+      },
+      "RcjwWjjK": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "doreality",
+          "title": ""
+        },
+        "link": "https://lichess.org/RcjwWjjK#39"
+      },
+      "chOXEVo9": {
+        "date": "2023-12-18",
+        "opponent": {
+          "username": "nikhar1991",
+          "title": ""
+        },
+        "link": "https://lichess.org/chOXEVo9/black#48"
+      },
+      "pahO6EvD": {
+        "date": "2023-12-15",
+        "opponent": {
+          "username": "dr_E",
+          "title": ""
+        },
+        "link": "https://lichess.org/pahO6EvD/black#26"
+      },
+      "VJowcCb2": {
+        "date": "2023-12-13",
+        "opponent": {
+          "username": "karimovic-gn",
+          "title": ""
+        },
+        "link": "https://lichess.org/VJowcCb2#31"
+      },
+      "HxEELfDq": {
+        "date": "2023-12-09",
+        "opponent": {
+          "username": "HomelessCamel",
+          "title": ""
+        },
+        "link": "https://lichess.org/HxEELfDq#37"
+      },
+      "2WgDr7Kc": {
+        "date": "2023-12-09",
+        "opponent": {
+          "username": "HomelessCamel",
+          "title": ""
+        },
+        "link": "https://lichess.org/2WgDr7Kc#37"
       }
     },
     "stalemateTricks": {
@@ -16393,6 +16665,54 @@
           "title": "GM"
         },
         "link": "https://lichess.org/lY2ucqZL#130"
+      },
+      "XCez0VyQ": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "ekaterinasas",
+          "title": ""
+        },
+        "link": "https://lichess.org/XCez0VyQ/black#127"
+      },
+      "4zPg4gPe": {
+        "date": "2023-12-31",
+        "opponent": {
+          "username": "San-001",
+          "title": ""
+        },
+        "link": "https://lichess.org/4zPg4gPe#136"
+      },
+      "YEn9GCCJ": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Pickanninny",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/YEn9GCCJ/black#131"
+      },
+      "6FtdzcF0": {
+        "date": "2023-12-24",
+        "opponent": {
+          "username": "Magek",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/6FtdzcF0#150"
+      },
+      "mrKRxguo": {
+        "date": "2023-12-20",
+        "opponent": {
+          "username": "Violet_Pride",
+          "title": ""
+        },
+        "link": "https://lichess.org/mrKRxguo#204"
+      },
+      "LJr39LS4": {
+        "date": "2023-12-18",
+        "opponent": {
+          "username": "nikto_ne_dolzhenznat",
+          "title": ""
+        },
+        "link": "https://lichess.org/LJr39LS4/black#151"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -17123,6 +17443,14 @@
           "title": ""
         },
         "link": "https://lichess.org/p1S30Egn#133"
+      },
+      "cKHgdvxW": {
+        "date": "2023-12-24",
+        "opponent": {
+          "username": "Narkotik_Kal",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/cKHgdvxW/black#124"
       }
     },
     "winInsufficientMaterial": {
@@ -19581,6 +19909,62 @@
           "title": ""
         },
         "link": "https://lichess.org/YhJSvlz0#125"
+      },
+      "ct5rlOfg": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "Majmunovsky",
+          "title": ""
+        },
+        "link": "https://lichess.org/ct5rlOfg#97"
+      },
+      "dmKod4Ab": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "Oganian_Miran",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/dmKod4Ab/black#132"
+      },
+      "MbqkmkNx": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "Abuev_Roman",
+          "title": ""
+        },
+        "link": "https://lichess.org/MbqkmkNx#139"
+      },
+      "FtAvbNCb": {
+        "date": "2024-01-04",
+        "opponent": {
+          "username": "Klessyhdra",
+          "title": ""
+        },
+        "link": "https://lichess.org/FtAvbNCb/black#170"
+      },
+      "3Q7w2kaI": {
+        "date": "2024-01-01",
+        "opponent": {
+          "username": "Hanskai",
+          "title": ""
+        },
+        "link": "https://lichess.org/3Q7w2kaI/black#122"
+      },
+      "s3UhB5Kq": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "BrittaBagels",
+          "title": ""
+        },
+        "link": "https://lichess.org/s3UhB5Kq/black#144"
+      },
+      "OxLTZ6qG": {
+        "date": "2023-12-21",
+        "opponent": {
+          "username": "Niksss2023",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/OxLTZ6qG#163"
       }
     },
     "pawnX": {
@@ -19847,6 +20231,14 @@
           "title": ""
         },
         "link": "https://lichess.org/vPTX595i/black#32"
+      },
+      "JfKfuqnM": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "lqevsll",
+          "title": ""
+        },
+        "link": "https://lichess.org/JfKfuqnM/black#68"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -20425,6 +20817,22 @@
           "title": ""
         },
         "link": "https://lichess.org/IRsR9okb#58"
+      },
+      "rGn4GLEG": {
+        "date": "2023-12-27",
+        "opponent": {
+          "username": "Newchempion2011",
+          "title": ""
+        },
+        "link": "https://lichess.org/rGn4GLEG#65"
+      },
+      "RcjwWjjK": {
+        "date": "2023-12-22",
+        "opponent": {
+          "username": "doreality",
+          "title": ""
+        },
+        "link": "https://lichess.org/RcjwWjjK#58"
       }
     },
     "doubleCheckCheckmate": {
@@ -22005,6 +22413,14 @@
           "title": ""
         },
         "link": "https://lichess.org/AADcYv6J#77"
+      },
+      "VvzBQlbc": {
+        "date": "2023-12-21",
+        "opponent": {
+          "username": "chess_study_174",
+          "title": ""
+        },
+        "link": "https://lichess.org/VvzBQlbc#47"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -23203,6 +23619,14 @@
           "title": ""
         },
         "link": "https://lichess.org/AtftebDU/black#116"
+      },
+      "Xk3t3oJX": {
+        "date": "2024-01-09",
+        "opponent": {
+          "username": "SlimWilliam",
+          "title": ""
+        },
+        "link": "https://lichess.org/Xk3t3oJX/black#128"
       }
     },
     "smotheredMate": {
@@ -23647,6 +24071,14 @@
           "title": ""
         },
         "link": "https://lichess.org/FpKUbPSS/black#50"
+      },
+      "D491iPTS": {
+        "date": "2024-01-03",
+        "opponent": {
+          "username": "Prs-JeFFersON-DAVIS",
+          "title": ""
+        },
+        "link": "https://lichess.org/D491iPTS#43"
       }
     },
     "castleQueensideWithCheckmate": {
@@ -24477,6 +24909,14 @@
           "title": ""
         },
         "link": "https://lichess.org/KQj6q34c/black#36"
+      },
+      "FfVC340f": {
+        "date": "2023-12-13",
+        "opponent": {
+          "username": "Gocegorgiev421",
+          "title": ""
+        },
+        "link": "https://lichess.org/FfVC340f/black#24"
       }
     },
     "connectDiagonally:6": {
@@ -24897,6 +25337,14 @@
           "title": ""
         },
         "link": "https://lichess.org/a2CGwpRQ/black#72"
+      },
+      "xYuplnqy": {
+        "date": "2023-12-20",
+        "opponent": {
+          "username": "Violet_Pride",
+          "title": ""
+        },
+        "link": "https://lichess.org/xYuplnqy/black#106"
       }
     },
     "checkmateAtMoveNumber:4": {
