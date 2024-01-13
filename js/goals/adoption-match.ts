@@ -18,6 +18,11 @@ export default {
         let winningUsername = game.players[game.result.winner].username
         let losingUsername = game.players[this.oppositeColor(game.result.winner)].username
 
+        if (!winningUsername || !losingUsername) {
+            this.reset()
+            return
+        }
+
         if (this.winner === winningUsername && this.loser === losingUsername) {
             this.winStreak++
             this.currentMatchGameIds.push(game.id)
