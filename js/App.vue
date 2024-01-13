@@ -1030,8 +1030,8 @@ export default {
         checkForTrophy(game: Game, name: string, results: TrophyCheckResult, onMoveNumber?: number): void {
             for (const result of results) {
                 if (
-                    (result.color === 'w' && game.players.white.username.toLowerCase() === this.username) ||
-                    (result.color === 'b' && game.players.black.username.toLowerCase() === this.username)
+                    (result.color === 'w' && game.players.white.username?.toLowerCase() === this.username) ||
+                    (result.color === 'b' && game.players.black.username?.toLowerCase() === this.username)
                 ) {
                     this.addTrophyForPlayer(name, game, result.onMoveNumber || onMoveNumber || 0)
                 }
@@ -1049,7 +1049,7 @@ export default {
             let opponent
             let link
 
-            if (game.players.white.username.toLowerCase() === this.username) {
+            if (game.players.white.username?.toLowerCase() === this.username) {
                 opponent = game.players.black
                 link = game.links.white
             } else {
@@ -1061,6 +1061,10 @@ export default {
                 link += `#${onMoveNumber}`
             } else if (onMoveNumber) {
                 link += onMoveNumber - 1
+            }
+
+            if (!opponent.username) {
+                return
             }
 
             this.playerTrophiesByType[trophyName][game.id] = {
