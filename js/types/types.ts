@@ -26,3 +26,5 @@ export type TrophyForGame = {
 export type PlayerTrophiesByType = {
     [key: string]: TrophyForGame
 }
+
+export type ReportSource = 'lichess' | 'chesscom'

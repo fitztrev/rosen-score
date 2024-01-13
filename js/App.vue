@@ -751,7 +751,7 @@ import { ohNoMyQueen } from './goals/oh-no-my-queen'
 import { lefongTrap } from './goals/lefong-trap'
 import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
-import { PlayerTrophiesByType, TrophyCacheFile, TrophyCheckResult } from './types/types'
+import { PlayerTrophiesByType, ReportSource, TrophyCacheFile, TrophyCheckResult } from './types/types'
 import { formatSinceDate } from './utils/format-since-date'
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
@@ -770,7 +770,7 @@ export default {
     data() {
         return {
             inputs: {
-                type: 'lichess',
+                type: <ReportSource>'lichess',
                 value: '',
                 filters: {
                     sinceHoursAgo: 0,
@@ -854,7 +854,7 @@ export default {
             this.trophyTypeCount++
         },
 
-        formFill(type: string, value: string): void {
+        formFill(type: ReportSource, value: string): void {
             this.inputs.type = type
             this.inputs.value = value
             this.inputs.filters.sinceHoursAgo = 0
