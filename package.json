@@ -6,7 +6,7 @@
     "format": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest run",
-    "tsc": "tsc --noemit",
+    "tsc": "vue-tsc --noemit",
     "watch": "vitest"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "tailwindcss": "^3.0.18",
     "typescript": "^5.0.0",
     "vitest": "^1.0.4",
-    "vue": "^3.2.31"
+    "vue": "^3.2.31",
+    "vue-tsc": "^1.0.8"
   }
 }
