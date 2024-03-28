@@ -29,7 +29,7 @@ export function neighboringSquares(square: Square): Square[] {
         }
     }
 
-    neighborSquares = neighborSquares.sort()
+    neighborSquares = neighborSquares.sort((a, b) => a.localeCompare(b))
 
     return neighborSquares as Square[]
 }

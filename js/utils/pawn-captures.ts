@@ -32,7 +32,7 @@ export function pawnCaptures(colorToMove: Color, squareToAttack: Square): Square
         }
     }
 
-    destinations = destinations.sort()
+    destinations = destinations.sort((a, b) => a.localeCompare(b))
 
     return destinations as Square[]
 }

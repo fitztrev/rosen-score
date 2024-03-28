@@ -29,7 +29,7 @@ export function knightMoves(square: Square): Square[] {
         }
     }
 
-    destinations = destinations.sort()
+    destinations = destinations.sort((a, b) => a.localeCompare(b))
 
     return destinations as Square[]
 }
