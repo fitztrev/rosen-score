@@ -84,7 +84,7 @@ export default {
             this.$emit('set-lichess-oauth-token', lichessToken)
         }
 
-        this.username = window.localStorage.getItem('lichessUsername') || ''
+        this.username = window.localStorage.getItem('lichessUsername') ?? ''
 
         this.init()
     },

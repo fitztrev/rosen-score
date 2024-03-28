@@ -834,7 +834,7 @@ export default {
     },
 
     mounted() {
-        let savedForm = JSON.parse(window.localStorage.getItem('savedForm') || '{}')
+        let savedForm = JSON.parse(window.localStorage.getItem('savedForm') ?? '{}')
 
         if (savedForm.type) {
             this.inputs.type = savedForm.type
@@ -899,7 +899,7 @@ export default {
                     this.player = player
                     window.document.title += ` - ${player.title} ${player.username}`
 
-                    const playerGameCount: number = player.counts?.all || 0
+                    const playerGameCount: number = player.counts?.all ?? 0
 
                     if (player.site === 'chess.com') {
                         // Chess.com doesn't provide a reliable way to get the actual game count via the API.
@@ -1033,7 +1033,7 @@ export default {
                     (result.color === 'w' && game.players.white.username?.toLowerCase() === this.username) ||
                     (result.color === 'b' && game.players.black.username?.toLowerCase() === this.username)
                 ) {
-                    this.addTrophyForPlayer(name, game, result.onMoveNumber || onMoveNumber || 0)
+                    this.addTrophyForPlayer(name, game, result.onMoveNumber ?? onMoveNumber ?? 0)
                 }
             }
         },
@@ -1071,7 +1071,7 @@ export default {
                 date: new Date(game.timestamp).toISOString().split('T')[0], // YYYY-MM-DD format
                 opponent: {
                     username: opponent.username,
-                    title: opponent.title || '',
+                    title: opponent.title ?? '',
                 },
                 link,
             }

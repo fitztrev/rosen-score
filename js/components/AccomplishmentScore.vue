@@ -122,7 +122,7 @@ export default {
             let usernames = Object.values(this.trophies as TrophyForGame).map((trophy) => trophy.opponent.username)
 
             return usernames.reduce((map, username) => {
-                map.set(username, (map.get(username) || 0) + 1)
+                map.set(username, (map.get(username) ?? 0) + 1)
                 return map
             }, new Map<string, number>())
         },
