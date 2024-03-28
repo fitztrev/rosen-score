@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179590448,
-  "games_analyzed": 28266,
-  "moves_analyzed": 2172202,
+  "cache_updated_at": 1711666705982,
+  "games_analyzed": 28486,
+  "moves_analyzed": 2190292,
   "trophies": {
     "connectDiagonally:5": {
       "1999080360": {
@@ -1019,6 +1019,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/76081994559?tab=analysis&flip=true&move=031"
+      },
+      "103504344379": {
+        "date": "2024-03-06",
+        "opponent": {
+          "username": "blefer66",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103504344379?tab=analysis&flip=false&move=066"
       }
     },
     "pawnStormOpening": {
@@ -3739,6 +3747,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4383852133?tab=analysis&flip=true&move=079"
+      },
+      "100641777973": {
+        "date": "2024-02-02",
+        "opponent": {
+          "username": "Snacqk",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/100641777973?tab=analysis&flip=false&move=050"
       }
     },
     "lefongTrap": {

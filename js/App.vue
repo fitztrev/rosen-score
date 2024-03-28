@@ -948,6 +948,7 @@ export default {
 
             // caches.set('https://lichess.org/@/german11', '/cache/lichess/german11.json')
             caches.set('https://lichess.org/@/chess-network', '/cache/lichess/chess-network.json')
+            caches.set('https://lichess.org/@/dianamirza', '/cache/lichess/dianamirza.json')
             caches.set('https://lichess.org/@/drnykterstein', '/cache/lichess/drnykterstein.json')
             caches.set('https://lichess.org/@/ericrosen', '/cache/lichess/ericrosen.json')
             caches.set('https://lichess.org/@/massterofmayhem', '/cache/lichess/massterofmayhem.json')

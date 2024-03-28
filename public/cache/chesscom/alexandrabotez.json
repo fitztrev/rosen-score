@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179509215,
-  "games_analyzed": 22132,
-  "moves_analyzed": 1798094,
+  "cache_updated_at": 1711666689885,
+  "games_analyzed": 22162,
+  "moves_analyzed": 1801013,
   "trophies": {
     "ohNoMyQueen": {
       "2905682553": {
@@ -725,6 +725,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/97451443533?tab=analysis&flip=true&move=0114"
+      },
+      "105233451807": {
+        "date": "2024-03-26",
+        "opponent": {
+          "username": "miarpa",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105233451807?tab=analysis&flip=true&move=086"
       }
     },
     "pawnCheckmate": {

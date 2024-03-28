@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179577174,
-  "games_analyzed": 97383,
-  "moves_analyzed": 8694807,
+  "cache_updated_at": 1711666587569,
+  "games_analyzed": 101854,
+  "moves_analyzed": 9107724,
   "trophies": {
     "connectDiagonally:5": {
       "94881573": {
@@ -1339,6 +1339,70 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/95886803865?tab=analysis&flip=true&move=039"
+      },
+      "104629881461": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104629881461?tab=analysis&flip=false&move=026"
+      },
+      "104629814227": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104629814227?tab=analysis&flip=false&move=032"
+      },
+      "104303423671": {
+        "date": "2024-03-16",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104303423671?tab=analysis&flip=false&move=034"
+      },
+      "103784447319": {
+        "date": "2024-03-10",
+        "opponent": {
+          "username": "superchess02",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103784447319?tab=analysis&flip=true&move=031"
+      },
+      "103247488473": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "Philippians46",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103247488473?tab=analysis&flip=true&move=049"
+      },
+      "103002030585": {
+        "date": "2024-03-01",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103002030585?tab=analysis&flip=false&move=048"
+      },
+      "99443532609": {
+        "date": "2024-01-19",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99443532609?tab=analysis&flip=true&move=053"
+      },
+      "99443475595": {
+        "date": "2024-01-19",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99443475595?tab=analysis&flip=true&move=057"
       }
     },
     "adoptionMatch:10": {
@@ -4837,6 +4901,254 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/95407198309?tab=analysis&flip=true&move=0"
+      },
+      "105376343745": {
+        "date": "2024-03-28",
+        "opponent": {
+          "username": "Philippians46",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105376343745?tab=analysis&flip=true&move=0"
+      },
+      "105348659963": {
+        "date": "2024-03-28",
+        "opponent": {
+          "username": "RaunakSadhwani2005",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105348659963?tab=analysis&flip=false&move=0"
+      },
+      "105338438149": {
+        "date": "2024-03-28",
+        "opponent": {
+          "username": "Philippians46",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105338438149?tab=analysis&flip=false&move=0"
+      },
+      "105062484925": {
+        "date": "2024-03-24",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105062484925?tab=analysis&flip=false&move=0"
+      },
+      "104914859119": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "RaunakSadhwani2005",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104914859119?tab=analysis&flip=false&move=0"
+      },
+      "104650193137": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104650193137?tab=analysis&flip=false&move=0"
+      },
+      "104563196349": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104563196349?tab=analysis&flip=true&move=0"
+      },
+      "104558422407": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104558422407?tab=analysis&flip=false&move=0"
+      },
+      "104556596645": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "aa175",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104556596645?tab=analysis&flip=false&move=0"
+      },
+      "104554264389": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104554264389?tab=analysis&flip=true&move=0"
+      },
+      "104485269711": {
+        "date": "2024-03-18",
+        "opponent": {
+          "username": "RaunakSadhwani2005",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104485269711?tab=analysis&flip=false&move=0"
+      },
+      "104392770553": {
+        "date": "2024-03-17",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104392770553?tab=analysis&flip=true&move=0"
+      },
+      "103173043913": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "Philippians46",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103173043913?tab=analysis&flip=false&move=0"
+      },
+      "103159367681": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103159367681?tab=analysis&flip=true&move=0"
+      },
+      "103150952063": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103150952063?tab=analysis&flip=false&move=0"
+      },
+      "103107699517": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "rezamahdavi2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103107699517?tab=analysis&flip=false&move=0"
+      },
+      "102828621907": {
+        "date": "2024-02-28",
+        "opponent": {
+          "username": "Fever_Code",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102828621907?tab=analysis&flip=true&move=0"
+      },
+      "102393862355": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "Bagrat1on",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102393862355?tab=analysis&flip=true&move=0"
+      },
+      "102392654709": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102392654709?tab=analysis&flip=false&move=0"
+      },
+      "102317702479": {
+        "date": "2024-02-22",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102317702479?tab=analysis&flip=false&move=0"
+      },
+      "102313430895": {
+        "date": "2024-02-22",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102313430895?tab=analysis&flip=false&move=0"
+      },
+      "102229469989": {
+        "date": "2024-02-21",
+        "opponent": {
+          "username": "ChessSharkz",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102229469989?tab=analysis&flip=true&move=0"
+      },
+      "101745186535": {
+        "date": "2024-02-15",
+        "opponent": {
+          "username": "S1mpleTheBest",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/101745186535?tab=analysis&flip=false&move=0"
+      },
+      "101280755245": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101280755245?tab=analysis&flip=true&move=0"
+      },
+      "101275301909": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101275301909?tab=analysis&flip=false&move=0"
+      },
+      "100503747309": {
+        "date": "2024-02-01",
+        "opponent": {
+          "username": "littleplotkin",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100503747309?tab=analysis&flip=true&move=0"
+      },
+      "100326140443": {
+        "date": "2024-01-30",
+        "opponent": {
+          "username": "NovakCabarkapa",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100326140443?tab=analysis&flip=true&move=0"
+      },
+      "100075378725": {
+        "date": "2024-01-27",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100075378725?tab=analysis&flip=false&move=0"
+      },
+      "100074695481": {
+        "date": "2024-01-27",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100074695481?tab=analysis&flip=false&move=0"
+      },
+      "100067528937": {
+        "date": "2024-01-27",
+        "opponent": {
+          "username": "Bagrat1on",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100067528937?tab=analysis&flip=false&move=0"
+      },
+      "100045286977": {
+        "date": "2024-01-26",
+        "opponent": {
+          "username": "Snowflake",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100045286977?tab=analysis&flip=false&move=0"
       }
     },
     "clutchPawn": {
@@ -5575,6 +5887,70 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/96702499837?tab=analysis&flip=false&move=0116"
+      },
+      "104877712091": {
+        "date": "2024-03-22",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104877712091?tab=analysis&flip=true&move=0131"
+      },
+      "104877625481": {
+        "date": "2024-03-22",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104877625481?tab=analysis&flip=true&move=0133"
+      },
+      "104398247593": {
+        "date": "2024-03-17",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104398247593?tab=analysis&flip=false&move=0132"
+      },
+      "104154647545": {
+        "date": "2024-03-14",
+        "opponent": {
+          "username": "mitrabhaa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104154647545?tab=analysis&flip=true&move=0105"
+      },
+      "103001987013": {
+        "date": "2024-03-01",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103001987013?tab=analysis&flip=false&move=0112"
+      },
+      "101027564751": {
+        "date": "2024-02-07",
+        "opponent": {
+          "username": "Jospem",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101027564751?tab=analysis&flip=false&move=0122"
+      },
+      "100905779465": {
+        "date": "2024-02-05",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100905779465?tab=analysis&flip=true&move=0121"
+      },
+      "100722108371": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "DonkyDonkyDonkey",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100722108371?tab=analysis&flip=true&move=0185"
       }
     },
     "stalemateTricks": {
@@ -8425,6 +8801,158 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/96441590603?tab=analysis&flip=false&move=0181"
+      },
+      "105063060209": {
+        "date": "2024-03-24",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105063060209?tab=analysis&flip=true&move=0130"
+      },
+      "104630471901": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104630471901?tab=analysis&flip=false&move=0131"
+      },
+      "104562049351": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104562049351?tab=analysis&flip=false&move=097"
+      },
+      "104478584853": {
+        "date": "2024-03-18",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104478584853?tab=analysis&flip=true&move=0178"
+      },
+      "104478001015": {
+        "date": "2024-03-18",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104478001015?tab=analysis&flip=true&move=0132"
+      },
+      "104301592497": {
+        "date": "2024-03-16",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104301592497?tab=analysis&flip=true&move=0144"
+      },
+      "104153381061": {
+        "date": "2024-03-14",
+        "opponent": {
+          "username": "mitrabhaa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104153381061?tab=analysis&flip=false&move=0105"
+      },
+      "103143063777": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "RaunakSadhwani2005",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103143063777?tab=analysis&flip=true&move=0108"
+      },
+      "103098089385": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103098089385?tab=analysis&flip=true&move=0126"
+      },
+      "102928875057": {
+        "date": "2024-02-29",
+        "opponent": {
+          "username": "nihalsarin",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102928875057?tab=analysis&flip=true&move=0118"
+      },
+      "102391510499": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102391510499?tab=analysis&flip=true&move=088"
+      },
+      "102141893305": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "0gZPanda",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102141893305?tab=analysis&flip=false&move=0135"
+      },
+      "101286767459": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101286767459?tab=analysis&flip=true&move=0140"
+      },
+      "101272301537": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "Mops_2004",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101272301537?tab=analysis&flip=false&move=0151"
+      },
+      "101255011137": {
+        "date": "2024-02-09",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101255011137?tab=analysis&flip=true&move=0120"
+      },
+      "101113422571": {
+        "date": "2024-02-08",
+        "opponent": {
+          "username": "Hrant_ChessMood",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101113422571?tab=analysis&flip=false&move=0147"
+      },
+      "101028109393": {
+        "date": "2024-02-07",
+        "opponent": {
+          "username": "Jospem",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101028109393?tab=analysis&flip=true&move=0136"
+      },
+      "99918743149": {
+        "date": "2024-01-25",
+        "opponent": {
+          "username": "ChessLover0108",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99918743149?tab=analysis&flip=true&move=0158"
+      },
+      "99441057589": {
+        "date": "2024-01-19",
+        "opponent": {
+          "username": "Msb2",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99441057589?tab=analysis&flip=false&move=0147"
       }
     },
     "pawnCube": {
@@ -9805,6 +10333,46 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/95410182411?tab=analysis&flip=false&move=052"
+      },
+      "104564996319": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "Blackmind96",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104564996319?tab=analysis&flip=true&move=047"
+      },
+      "103097507613": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103097507613?tab=analysis&flip=false&move=058"
+      },
+      "100725754475": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "j_coca",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100725754475?tab=analysis&flip=true&move=045"
+      },
+      "100722859155": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "CarlMagnuson",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100722859155?tab=analysis&flip=false&move=040"
+      },
+      "100720932851": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "Galileo22",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100720932851?tab=analysis&flip=false&move=066"
       }
     },
     "pawnCheckmate": {
@@ -11415,6 +11983,46 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/95503223491?tab=analysis&flip=false&move=0102"
+      },
+      "104875886843": {
+        "date": "2024-03-22",
+        "opponent": {
+          "username": "Jospem",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104875886843?tab=analysis&flip=true&move=0101"
+      },
+      "104697100465": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104697100465?tab=analysis&flip=true&move=093"
+      },
+      "102535204459": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "chess123456s",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102535204459?tab=analysis&flip=false&move=022"
+      },
+      "101135536411": {
+        "date": "2024-02-08",
+        "opponent": {
+          "username": "DonkyDonkyDonkey",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101135536411?tab=analysis&flip=false&move=078"
+      },
+      "100719328173": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "KazakhFighter04",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100719328173?tab=analysis&flip=false&move=088"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -12017,6 +12625,30 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/97470645011?tab=analysis&flip=false&move=0122"
+      },
+      "104562593511": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104562593511?tab=analysis&flip=true&move=0123"
+      },
+      "104154647545": {
+        "date": "2024-03-14",
+        "opponent": {
+          "username": "mitrabhaa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104154647545?tab=analysis&flip=true&move=0105"
+      },
+      "100846361841": {
+        "date": "2024-02-05",
+        "opponent": {
+          "username": "wonderfultime",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100846361841?tab=analysis&flip=false&move=0156"
       }
     },
     "pawnDiamond": {
@@ -12739,6 +13371,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/97545034763?tab=analysis&flip=false&move=032"
+      },
+      "103144276853": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "RaunakSadhwani2005",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103144276853?tab=analysis&flip=true&move=033"
       }
     },
     "rosenTrap": {
@@ -12845,6 +13485,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/96441590603?tab=analysis&flip=false&move=0181"
+      },
+      "104153381061": {
+        "date": "2024-03-14",
+        "opponent": {
+          "username": "mitrabhaa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104153381061?tab=analysis&flip=false&move=0105"
+      },
+      "99918743149": {
+        "date": "2024-01-25",
+        "opponent": {
+          "username": "ChessLover0108",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99918743149?tab=analysis&flip=true&move=0158"
       }
     },
     "smotheredMate": {
@@ -12943,6 +13599,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/95336457171?tab=analysis&flip=false&move=068"
+      },
+      "100722859155": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "CarlMagnuson",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100722859155?tab=analysis&flip=false&move=042"
+      },
+      "100720932851": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "Galileo22",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100720932851?tab=analysis&flip=false&move=068"
       }
     },
     "g5mate": {
@@ -13161,6 +13833,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/98671555853?tab=analysis&flip=false&move=084"
+      },
+      "104697100465": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104697100465?tab=analysis&flip=true&move=093"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -13285,6 +13965,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/90656312765?tab=analysis&flip=true&move=047"
+      },
+      "103785037049": {
+        "date": "2024-03-10",
+        "opponent": {
+          "username": "superchess02",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103785037049?tab=analysis&flip=true&move=057"
       }
     },
     "doubleCheckCheckmate": {
@@ -13487,6 +14175,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/89869804383?tab=analysis&flip=true&move=019"
+      },
+      "104127594059": {
+        "date": "2024-03-14",
+        "opponent": {
+          "username": "WK_WillianHille",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104127594059?tab=analysis&flip=false&move=046"
+      },
+      "99928339569": {
+        "date": "2024-01-25",
+        "opponent": {
+          "username": "HansOnTwitch",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99928339569?tab=analysis&flip=false&move=0104"
       }
     },
     "adoptionMatch:20": {
@@ -13745,6 +14449,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/97909761241?tab=analysis&flip=true&move=0"
+      },
+      "102392085515": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "ChessBrainiacOnTwitch",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102392085515?tab=analysis&flip=false&move=0"
       }
     },
     "bishopAndKnightMate": {
@@ -13779,6 +14491,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/5003641383?tab=analysis&flip=true&move=0191"
+      },
+      "104244678707": {
+        "date": "2024-03-15",
+        "opponent": {
+          "username": "mitrabhaa",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104244678707?tab=analysis&flip=true&move=0181"
       }
     },
     "promotePawnBeforeMoveNumber": {
@@ -14189,6 +14909,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/4516723670?tab=analysis&flip=true&move=02"
+      },
+      "103159940625": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "LiamPutnam2008",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/103159940625?tab=analysis&flip=true&move=02"
       }
     },
     "checkmateAtMoveNumber:2": {

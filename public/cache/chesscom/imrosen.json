@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179680534,
-  "games_analyzed": 14024,
-  "moves_analyzed": 1212103,
+  "cache_updated_at": 1711666724893,
+  "games_analyzed": 14404,
+  "moves_analyzed": 1248018,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -811,6 +811,54 @@
           "title": "WGM"
         },
         "link": "https://www.chess.com/analysis/game/live/95559579595?tab=analysis&flip=false&move=091"
+      },
+      "104602313223": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "andrzej",
+          "title": "CM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/104602313223?tab=analysis&flip=true&move=0146"
+      },
+      "101746409369": {
+        "date": "2024-02-15",
+        "opponent": {
+          "username": "BilicVladimir",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101746409369?tab=analysis&flip=false&move=0145"
+      },
+      "100350712317": {
+        "date": "2024-01-30",
+        "opponent": {
+          "username": "Arek_pacitan",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100350712317?tab=analysis&flip=true&move=0140"
+      },
+      "100181611913": {
+        "date": "2024-01-28",
+        "opponent": {
+          "username": "Aplecons",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/100181611913?tab=analysis&flip=false&move=0147"
+      },
+      "100159366637": {
+        "date": "2024-01-28",
+        "opponent": {
+          "username": "simantoff",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100159366637?tab=analysis&flip=true&move=0110"
+      },
+      "99166501893": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "krzyzan94",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99166501893?tab=analysis&flip=true&move=0134"
       }
     },
     "rosenTrap": {
@@ -1005,6 +1053,30 @@
           "title": "WGM"
         },
         "link": "https://www.chess.com/analysis/game/live/95559579595?tab=analysis&flip=false&move=091"
+      },
+      "100350712317": {
+        "date": "2024-01-30",
+        "opponent": {
+          "username": "Arek_pacitan",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100350712317?tab=analysis&flip=true&move=0140"
+      },
+      "100159366637": {
+        "date": "2024-01-28",
+        "opponent": {
+          "username": "simantoff",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100159366637?tab=analysis&flip=true&move=0110"
+      },
+      "99166501893": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "krzyzan94",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99166501893?tab=analysis&flip=true&move=0134"
       }
     },
     "pawnCheckmate": {
@@ -1423,6 +1495,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/86461217373?tab=analysis&flip=true&move=065"
+      },
+      "100464847699": {
+        "date": "2024-01-31",
+        "opponent": {
+          "username": "Ana_Coluthe",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/100464847699?tab=analysis&flip=false&move=064"
       }
     },
     "clutchPawn": {
@@ -2161,6 +2241,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/87340918011?tab=analysis&flip=true&move=067"
+      },
+      "101671369139": {
+        "date": "2024-02-14",
+        "opponent": {
+          "username": "CarlosjPineror",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101671369139?tab=analysis&flip=false&move=046"
       }
     },
     "promoteToKnightCheckmate": {
@@ -2431,6 +2519,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/96505747623?tab=analysis&flip=true&move=077"
+      },
+      "100461738911": {
+        "date": "2024-01-31",
+        "opponent": {
+          "username": "Stouuf",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100461738911?tab=analysis&flip=false&move=050"
       }
     },
     "pawnCube": {
@@ -2957,6 +3053,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/1535081878?tab=analysis&flip=false&move=080"
+      },
+      "101671369139": {
+        "date": "2024-02-14",
+        "opponent": {
+          "username": "CarlosjPineror",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/101671369139?tab=analysis&flip=false&move=078"
       }
     },
     "pawnStormOpening": {
@@ -2977,6 +3081,16 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/1385709752?tab=analysis&flip=false&move=05"
+      }
+    },
+    "castleFork": {
+      "100460635343": {
+        "date": "2024-01-31",
+        "opponent": {
+          "username": "Stouuf",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100460635343?tab=analysis&flip=false&move=047"
       }
     }
   }

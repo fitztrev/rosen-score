@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179524480,
-  "games_analyzed": 28614,
-  "moves_analyzed": 2215545,
+  "cache_updated_at": 1711666677329,
+  "games_analyzed": 29155,
+  "moves_analyzed": 2258934,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1251,6 +1251,86 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/95491817607?tab=analysis&flip=false&move=0"
+      },
+      "104748060673": {
+        "date": "2024-03-21",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104748060673?tab=analysis&flip=false&move=0"
+      },
+      "104661059169": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104661059169?tab=analysis&flip=true&move=0"
+      },
+      "104659879651": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104659879651?tab=analysis&flip=false&move=0"
+      },
+      "104658681197": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "speedtricks1",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104658681197?tab=analysis&flip=false&move=0"
+      },
+      "104658010925": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104658010925?tab=analysis&flip=true&move=0"
+      },
+      "103165944015": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "ImSorry411",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/103165944015?tab=analysis&flip=false&move=0"
+      },
+      "103165314625": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "AnonForever",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/103165314625?tab=analysis&flip=false&move=0"
+      },
+      "101518355509": {
+        "date": "2024-02-12",
+        "opponent": {
+          "username": "Macmasterr",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/101518355509?tab=analysis&flip=true&move=0"
+      },
+      "101517759457": {
+        "date": "2024-02-12",
+        "opponent": {
+          "username": "KwikPhoenix",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/101517759457?tab=analysis&flip=true&move=0"
+      },
+      "99123874823": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "liukaiyi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/99123874823?tab=analysis&flip=true&move=0"
       }
     },
     "stalemateTricks": {
@@ -1341,6 +1421,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/86041306395?tab=analysis&flip=true&move=0106"
+      },
+      "104659808445": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104659808445?tab=analysis&flip=true&move=0116"
       }
     },
     "ohNoMyQueen": {
@@ -3041,6 +3129,38 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/87503578559?tab=analysis&flip=true&move=0107"
+      },
+      "104747476831": {
+        "date": "2024-03-21",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104747476831?tab=analysis&flip=true&move=083"
+      },
+      "104661572663": {
+        "date": "2024-03-20",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104661572663?tab=analysis&flip=false&move=056"
+      },
+      "100053750607": {
+        "date": "2024-01-27",
+        "opponent": {
+          "username": "Alamzhi21",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100053750607?tab=analysis&flip=true&move=0101"
+      },
+      "99124489409": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "liukaiyi",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/99124489409?tab=analysis&flip=false&move=082"
       }
     },
     "g5mate": {
@@ -3381,6 +3501,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/84591166191?tab=analysis&flip=false&move=072"
+      },
+      "103166485593": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "ImSorry411",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/103166485593?tab=analysis&flip=true&move=097"
       }
     },
     "pawnDiamond": {
@@ -3631,6 +3759,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/98404575773?tab=analysis&flip=true&move=075"
+      },
+      "99966140219": {
+        "date": "2024-01-26",
+        "opponent": {
+          "username": "zvonokchess1996",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/99966140219?tab=analysis&flip=true&move=053"
       }
     },
     "connectDiagonally:5": {
@@ -4049,6 +4185,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/87617527357?tab=analysis&flip=false&move=054"
+      },
+      "101518372597": {
+        "date": "2024-02-12",
+        "opponent": {
+          "username": "Macmasterr",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/101518372597?tab=analysis&flip=false&move=032"
       }
     },
     "adoptionMatch:20": {
@@ -4091,6 +4235,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/79591862771?tab=analysis&flip=false&move=0"
+      },
+      "104747443821": {
+        "date": "2024-03-21",
+        "opponent": {
+          "username": "joshuagarry",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104747443821?tab=analysis&flip=false&move=0"
       }
     },
     "clutchPawn": {
@@ -4345,6 +4497,14 @@
           "title": "NM"
         },
         "link": "https://www.chess.com/analysis/game/live/4750276845?tab=analysis&flip=true&move=061"
+      },
+      "104738468497": {
+        "date": "2024-03-21",
+        "opponent": {
+          "username": "Marchgin",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/104738468497?tab=analysis&flip=true&move=027"
       }
     },
     "checkmateWithTenthSecondLeft": {

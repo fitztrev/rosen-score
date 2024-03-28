@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179746242,
-  "games_analyzed": 4329,
-  "moves_analyzed": 390799,
+  "cache_updated_at": 1711666786993,
+  "games_analyzed": 4632,
+  "moves_analyzed": 417856,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -387,6 +387,22 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/60825582611?tab=analysis&flip=true&move=025"
+      },
+      "102726023233": {
+        "date": "2024-02-26",
+        "opponent": {
+          "username": "Rud_Makarian",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/102726023233?tab=analysis&flip=true&move=067"
+      },
+      "100296261155": {
+        "date": "2024-01-29",
+        "opponent": {
+          "username": "Sina_Movahed",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/100296261155?tab=analysis&flip=true&move=055"
       }
     },
     "g5mate": {
