@@ -36,9 +36,9 @@ export function winInsufficientMaterial(game: Game, fen: string): TrophyCheckRes
     let piecesRemaining = ''
 
     if (game.result.winner === 'white') {
-        piecesRemaining = position.replace(/[Kk\.a-z]/g, '')
+        piecesRemaining = position.replace(/[.Ka-z]/g, '')
     } else if (game.result.winner === 'black') {
-        piecesRemaining = position.replace(/[Kk\.A-Z]/g, '')
+        piecesRemaining = position.replace(/[.kA-Z]/g, '')
     }
 
     piecesRemaining = piecesRemaining.toLowerCase()
@@ -64,9 +64,9 @@ export function clutchPawn(game: Game, fen: string): TrophyCheckResult {
     let winnerPiecesRemaining = ''
 
     if (game.result.winner === 'white') {
-        winnerPiecesRemaining = position.replace(/[\.Ka-z]/g, '')
+        winnerPiecesRemaining = position.replace(/[.Ka-z]/g, '')
     } else if (game.result.winner === 'black') {
-        winnerPiecesRemaining = position.replace(/[\.kA-Z]/g, '')
+        winnerPiecesRemaining = position.replace(/[.kA-Z]/g, '')
     }
 
     // the winner can only have exactly 1 pawn remaining

@@ -2,5 +2,5 @@
 // ex: `1.d4 d5 2.c4` => `d4 d5 c4`
 
 export function pgnFormatter(pgn: string) {
-    return pgn.replace(/([0-9]+\. ?)/g, '')
+    return pgn.replace(/(\d+\. ?)/g, '')
 }

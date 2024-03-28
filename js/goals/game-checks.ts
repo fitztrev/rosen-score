@@ -21,7 +21,7 @@ export function stalemateTricks(game: Game, fen: string): TrophyCheckResult {
     }
 
     // if there was only a bishop, call it a draw
-    if (position.match(/b/i) && position.replace(/[kbp\.]/gi, '') === '') {
+    if (/b/i.exec(position) && position.replace(/[kbp.]/gi, '') === '') {
         return []
     }
 
@@ -43,7 +43,7 @@ export function bishopAndKnightMate(game: Game, fen: string): TrophyCheckResult 
 
     let position = fenToPosition(fen)
 
-    let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
+    let piecesRemaining = position.replace(/[k.]/gi, '').split('').sort().join('')
 
     if (piecesRemaining === 'BN') {
         return [
@@ -69,7 +69,7 @@ function specificPieceComboMate(game: Game, fen: string, pieces: string): Trophy
 
     let position = fenToPosition(fen)
 
-    let piecesRemaining = position.replace(/[k\.]/gi, '').split('').sort().join('')
+    let piecesRemaining = position.replace(/[k.]/gi, '').split('').sort().join('')
     let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
     let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
 

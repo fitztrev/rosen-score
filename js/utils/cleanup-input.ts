@@ -1,5 +1,5 @@
 export function cleanupInput(input: string): string {
-    if (input.match(/swiss|tournament/)) {
+    if (/swiss|tournament/.exec(input)) {
         return input.trim()
     }
 
