@@ -14,7 +14,7 @@ export function alphabetOpening(game: Game, word: string, moves: PgnMove[]): Tro
         .map((move) => move.notation.notation[0])
         .join('')
 
-    if (winnersPieceMoves.indexOf(word) === 0) {
+    if (winnersPieceMoves.startsWith(word)) {
         return [
             {
                 color: winningColor,
