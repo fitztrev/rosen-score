@@ -390,19 +390,17 @@ export function connectDiagonally(fen: string, times: number): TrophyCheckResult
     const position = fenToPosition(fen)
     let result: TrophyCheckResult = []
 
-    if (_convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(times))) {
+    if (
+        _convertPositionToDiagonalStringA1toH8(position).includes('P'.repeat(times)) ||
+        _convertPositionToDiagonalStringH1toA8(position).includes('P'.repeat(times))
+    ) {
         result.push({
             color: 'w',
         })
-    } else if (_convertPositionToDiagonalStringH1toA8(position).includes('P'.repeat(times))) {
-        result.push({
-            color: 'w',
-        })
-    } else if (_convertPositionToDiagonalStringA1toH8(position).includes('p'.repeat(times))) {
-        result.push({
-            color: 'b',
-        })
-    } else if (_convertPositionToDiagonalStringH1toA8(position).includes('p'.repeat(times))) {
+    } else if (
+        _convertPositionToDiagonalStringA1toH8(position).includes('p'.repeat(times)) ||
+        _convertPositionToDiagonalStringH1toA8(position).includes('p'.repeat(times))
+    ) {
         result.push({
             color: 'b',
         })
