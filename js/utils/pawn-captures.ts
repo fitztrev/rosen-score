@@ -3,7 +3,7 @@ import { Color, Square } from 'chess.js'
 export function pawnCaptures(colorToMove: Color, squareToAttack: Square): Square[] {
     let pawnsAttackFrom
 
-    if (colorToMove[0] === 'w') {
+    if (colorToMove.startsWith('w')) {
         pawnsAttackFrom = [
             [-1, -1],
             [+1, -1],
