@@ -42,14 +42,14 @@ export function pawnCube(fen: string): TrophyCheckResult {
     let match
 
     match = /PP([A-Za-z.]{6})PP/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'w',
         })
     }
 
     match = /pp([A-Za-z.]{6})pp/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'b',
         })
@@ -81,14 +81,14 @@ export function pawnX(fen: string): TrophyCheckResult {
     let match
 
     match = /P([A-Za-z.])P([A-Za-z.]{6})P([A-Za-z.]{6})P([A-Za-z.])P/.exec(position)
-    if (match && match.index! % 8 < 6) {
+    if (match && match.index % 8 < 6) {
         result.push({
             color: 'w',
         })
     }
 
     match = /p([A-Za-z.])p([A-Za-z.]{6})p([A-Za-z.]{6})p([A-Za-z.])p/.exec(position)
-    if (match && match.index! % 8 < 6) {
+    if (match && match.index % 8 < 6) {
         result.push({
             color: 'b',
         })
@@ -103,14 +103,14 @@ export function knightCube(fen: string): TrophyCheckResult {
     let match
 
     match = /NN([A-Za-z.]{6})NN/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'w',
         })
     }
 
     match = /nn([A-Za-z.]{6})nn/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'b',
         })
@@ -126,14 +126,14 @@ export function knightRectangle(fen: string): TrophyCheckResult {
 
     // check for 3x2 rectangle
     match = /NNN([A-Za-z.]{5})NNN/.exec(position)
-    if (match && match.index! % 8 < 6) {
+    if (match && match.index % 8 < 6) {
         result.push({
             color: 'w',
         })
     }
 
     match = /nnn([A-Za-z.]{5})nnn/.exec(position)
-    if (match && match.index! % 8 < 6) {
+    if (match && match.index % 8 < 6) {
         result.push({
             color: 'b',
         })
@@ -141,14 +141,14 @@ export function knightRectangle(fen: string): TrophyCheckResult {
 
     // check for 2x3 rectangle
     match = /NN([A-Za-z.]{6})NN([A-Za-z.]{6})NN/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'w',
         })
     }
 
     match = /nn([A-Za-z.]{6})nn([A-Za-z.]{6})nn/.exec(position)
-    if (match && match.index! % 8 < 7) {
+    if (match && match.index % 8 < 7) {
         result.push({
             color: 'b',
         })
@@ -163,14 +163,14 @@ export function pawnDiamond(fen: string): TrophyCheckResult {
     let match
 
     match = /P([A-Za-z.]{6})P([A-Za-z.])P([A-Za-z.]{6})P/.exec(position)
-    if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
+    if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
         result.push({
             color: 'w',
         })
     }
 
     match = /p([A-Za-z.]{6})p([A-Za-z.])p([A-Za-z.]{6})p/.exec(position)
-    if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
+    if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
         result.push({
             color: 'b',
         })
@@ -185,14 +185,14 @@ export function pawnDiamondSolid(fen: string): TrophyCheckResult {
     let match
 
     match = /P([A-Za-z.]{6})PPP([A-Za-z.]{6})P/.exec(position)
-    if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
+    if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
         result.push({
             color: 'w',
         })
     }
 
     match = /p([A-Za-z.]{6})ppp([A-Za-z.]{6})p/.exec(position)
-    if (match && match.index! % 8 !== 0 && match.index! % 8 !== 7) {
+    if (match && match.index % 8 !== 0 && match.index % 8 !== 7) {
         result.push({
             color: 'b',
         })
@@ -416,14 +416,14 @@ export function pawnTrapezoid(fen: string): TrophyCheckResult {
     let match
 
     match = /PP([A-Za-z.]{5})P([A-Za-z.]{2})P([A-Za-z.]{3})P([A-Za-z.]{4})P/.exec(position.substring(0, 40))
-    if (match && match.index! % 8 >= 2 && match.index! % 8 <= 4) {
+    if (match && match.index % 8 >= 2 && match.index % 8 <= 4) {
         result.push({
             color: 'w',
         })
     }
 
     match = /p([A-Za-z.]{4})p([A-Za-z.]{3})p([A-Za-z.]{2})p([A-Za-z.]{5})pp/.exec(position.substring(24, 64))
-    if (match && match.index! % 8 <= 2) {
+    if (match && match.index % 8 <= 2) {
         result.push({
             color: 'b',
         })
