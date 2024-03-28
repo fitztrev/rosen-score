@@ -8,7 +8,7 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
 
     let result: TrophyCheckResult = []
 
-    moveLoop: for (const move of moves) {
+    for (const move of moves) {
         let destinationSquare = (move.notation.col + move.notation.row) as Square
 
         chessJS.move(move.notation.notation)
@@ -23,11 +23,8 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
         }
 
         // the knight cannot be captured
-        const legalMoves = chessJS.moves({ verbose: true })
-        for (const legalMove of legalMoves) {
-            if (legalMove.to === destinationSquare) {
-                continue moveLoop
-            }
+        if (pieceCanBeCaptured(chessJS, destinationSquare)) {
+            continue
         }
 
         // find what pieces the knight is attacking
@@ -56,4 +53,15 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
     }
 
     return result
+}
+
+function pieceCanBeCaptured(chessJS: Chess, square: Square): boolean {
+    const legalMoves = chessJS.moves({ verbose: true })
+    for (const legalMove of legalMoves) {
+        if (legalMove.to === square) {
+            return true
+        }
+    }
+
+    return false
 }
