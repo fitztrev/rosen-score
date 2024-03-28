@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179448562,
-  "games_analyzed": 72090,
-  "moves_analyzed": 4842229,
+  "cache_updated_at": 1711666334209,
+  "games_analyzed": 72458,
+  "moves_analyzed": 4868136,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -3867,6 +3867,22 @@
           "title": ""
         },
         "link": "https://lichess.org/CWylz1LK#57"
+      },
+      "9AyZImKO": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "KamranShirazi",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/9AyZImKO#51"
+      },
+      "RI2XDCHh": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "Xjurkmaster",
+          "title": ""
+        },
+        "link": "https://lichess.org/RI2XDCHh#39"
       }
     },
     "adoptionMatch:10": {
@@ -6557,6 +6573,30 @@
           "title": ""
         },
         "link": "https://lichess.org/z0HFi2Oy"
+      },
+      "NWTW3LPJ": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/NWTW3LPJ/black"
+      },
+      "UoV0Azd0": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/UoV0Azd0/black"
+      },
+      "XleNdmxx": {
+        "date": "2024-01-15",
+        "opponent": {
+          "username": "Hikaru_KBR",
+          "title": ""
+        },
+        "link": "https://lichess.org/XleNdmxx/black"
       }
     },
     "adoptionMatch:20": {
@@ -6983,6 +7023,14 @@
           "title": ""
         },
         "link": "https://lichess.org/FKGQuBjO"
+      },
+      "zh0OHqvc": {
+        "date": "2024-01-15",
+        "opponent": {
+          "username": "Hikaru_KBR",
+          "title": ""
+        },
+        "link": "https://lichess.org/zh0OHqvc/black"
       }
     },
     "pawnDiamond": {
@@ -10843,6 +10891,30 @@
           "title": ""
         },
         "link": "https://lichess.org/Xdz5CBGD#6"
+      },
+      "MLl8SQIa": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/MLl8SQIa#12"
+      },
+      "dvasyn28": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "Damian444",
+          "title": ""
+        },
+        "link": "https://lichess.org/dvasyn28/black#3"
+      },
+      "iwnDQUuX": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "fEndYyInChesS",
+          "title": ""
+        },
+        "link": "https://lichess.org/iwnDQUuX/black#3"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -11413,6 +11485,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/MteipsAe/black#93"
+      },
+      "iVqJoArp": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "Pikachu_420",
+          "title": ""
+        },
+        "link": "https://lichess.org/iVqJoArp/black#127"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -13339,6 +13419,38 @@
           "title": "IM"
         },
         "link": "https://lichess.org/BUdodJFs#45"
+      },
+      "BDUW6rtd": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "RebeccaHarris",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/BDUW6rtd#67"
+      },
+      "bYQFD6W8": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/bYQFD6W8/black#54"
+      },
+      "uKGGHbBw": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "lightning_user_12345",
+          "title": ""
+        },
+        "link": "https://lichess.org/uKGGHbBw/black#16"
+      },
+      "AfiKGMRH": {
+        "date": "2024-01-15",
+        "opponent": {
+          "username": "oanda",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/AfiKGMRH/black#36"
       }
     },
     "connectDiagonally:5": {
@@ -15845,6 +15957,14 @@
           "title": "NM"
         },
         "link": "https://lichess.org/K6QktbvH/black#118"
+      },
+      "aZGp58pU": {
+        "date": "2024-02-20",
+        "opponent": {
+          "username": "Slivoviy",
+          "title": ""
+        },
+        "link": "https://lichess.org/aZGp58pU/black#128"
       }
     },
     "bishopAndKnightMate": {
@@ -18293,6 +18413,16 @@
           "title": ""
         },
         "link": "https://lichess.org/H5CyhVQk/black#148"
+      }
+    },
+    "promoteToKnightCheckmate": {
+      "DtC4Ii4B": {
+        "date": "2024-02-03",
+        "opponent": {
+          "username": "r1ceeeee",
+          "title": ""
+        },
+        "link": "https://lichess.org/DtC4Ii4B#43"
       }
     }
   }

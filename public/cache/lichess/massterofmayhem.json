@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179422570,
-  "games_analyzed": 38005,
-  "moves_analyzed": 2927850,
+  "cache_updated_at": 1711666308517,
+  "games_analyzed": 40208,
+  "moves_analyzed": 3099482,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -499,6 +499,70 @@
           "title": "FM"
         },
         "link": "https://lichess.org/Hwpgfvrs/black#161"
+      },
+      "Umfidi9Y": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "varunvar",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/Umfidi9Y#128"
+      },
+      "hm4ZnuJ7": {
+        "date": "2024-03-19",
+        "opponent": {
+          "username": "Andrey_Klymchuk",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/hm4ZnuJ7#136"
+      },
+      "0BtYONFr": {
+        "date": "2024-03-03",
+        "opponent": {
+          "username": "DmitryAkimov",
+          "title": ""
+        },
+        "link": "https://lichess.org/0BtYONFr/black#123"
+      },
+      "sqBmQUyl": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "are_you_tilted",
+          "title": ""
+        },
+        "link": "https://lichess.org/sqBmQUyl#124"
+      },
+      "Q25REs4x": {
+        "date": "2024-02-22",
+        "opponent": {
+          "username": "DiabloDiabloDiablo",
+          "title": ""
+        },
+        "link": "https://lichess.org/Q25REs4x/black#123"
+      },
+      "gEB42EDU": {
+        "date": "2024-02-10",
+        "opponent": {
+          "username": "peradetlic83",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/gEB42EDU#104"
+      },
+      "Q31vrSHw": {
+        "date": "2024-01-30",
+        "opponent": {
+          "username": "General_Zod_01",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/Q31vrSHw#102"
+      },
+      "CZZQbzrJ": {
+        "date": "2024-01-18",
+        "opponent": {
+          "username": "chesstutgood",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/CZZQbzrJ/black#197"
       }
     },
     "pawnCheckmate": {
@@ -1469,6 +1533,54 @@
           "title": ""
         },
         "link": "https://lichess.org/oF1eQFAl#51"
+      },
+      "5GO0RXOJ": {
+        "date": "2024-03-27",
+        "opponent": {
+          "username": "bigmaster24",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/5GO0RXOJ#83"
+      },
+      "VYVy272r": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "Darderismo",
+          "title": ""
+        },
+        "link": "https://lichess.org/VYVy272r/black#48"
+      },
+      "byiq10Oh": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "chessiando",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/byiq10Oh#63"
+      },
+      "OSEyfkdv": {
+        "date": "2024-02-05",
+        "opponent": {
+          "username": "SF-46",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/OSEyfkdv/black#60"
+      },
+      "GSROigKa": {
+        "date": "2024-01-30",
+        "opponent": {
+          "username": "Feel_Special",
+          "title": ""
+        },
+        "link": "https://lichess.org/GSROigKa/black#74"
+      },
+      "mnqP27Kn": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "sahlacretzu",
+          "title": ""
+        },
+        "link": "https://lichess.org/mnqP27Kn/black#104"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -1559,6 +1671,14 @@
           "title": ""
         },
         "link": "https://lichess.org/HlnirvGN/black#102"
+      },
+      "V7Vdck6M": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "OtpravlyauKPraotsam",
+          "title": ""
+        },
+        "link": "https://lichess.org/V7Vdck6M#123"
       }
     },
     "ohNoMyQueen": {
@@ -2481,6 +2601,38 @@
           "title": ""
         },
         "link": "https://lichess.org/16vxvTzN/black#82"
+      },
+      "vysbOHnY": {
+        "date": "2024-03-02",
+        "opponent": {
+          "username": "MMM_Zhukovskiy",
+          "title": ""
+        },
+        "link": "https://lichess.org/vysbOHnY#41"
+      },
+      "cpG0GjwK": {
+        "date": "2024-02-01",
+        "opponent": {
+          "username": "mysterious_expert",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/cpG0GjwK#57"
+      },
+      "yNgWl5GU": {
+        "date": "2024-01-29",
+        "opponent": {
+          "username": "TellMeYourRating",
+          "title": ""
+        },
+        "link": "https://lichess.org/yNgWl5GU#43"
+      },
+      "mO0jwZHD": {
+        "date": "2024-01-23",
+        "opponent": {
+          "username": "Dragso",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/mO0jwZHD#53"
       }
     },
     "connectDiagonally:5": {
@@ -3115,6 +3267,46 @@
           "title": ""
         },
         "link": "https://lichess.org/C9D5sNG1/black#36"
+      },
+      "fs3NCor6": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "Sbeerfish",
+          "title": ""
+        },
+        "link": "https://lichess.org/fs3NCor6#35"
+      },
+      "MM0daOL6": {
+        "date": "2024-02-26",
+        "opponent": {
+          "username": "StoicismPhilosophy",
+          "title": ""
+        },
+        "link": "https://lichess.org/MM0daOL6/black#36"
+      },
+      "ZCCwBxqs": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "Uvall",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/ZCCwBxqs/black#32"
+      },
+      "iX1adsww": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "huangjiafangdan",
+          "title": ""
+        },
+        "link": "https://lichess.org/iX1adsww/black#40"
+      },
+      "TO2OULyi": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "cramor",
+          "title": ""
+        },
+        "link": "https://lichess.org/TO2OULyi#63"
       }
     },
     "pawnDiamond": {
@@ -3413,6 +3605,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Sx2yq2gX/black#50"
+      },
+      "EnDL0I4p": {
+        "date": "2024-01-19",
+        "opponent": {
+          "username": "zgzg1234",
+          "title": ""
+        },
+        "link": "https://lichess.org/EnDL0I4p/black#32"
+      },
+      "JBzso9IA": {
+        "date": "2024-01-18",
+        "opponent": {
+          "username": "BLITZ16",
+          "title": ""
+        },
+        "link": "https://lichess.org/JBzso9IA/black#50"
       }
     },
     "winInsufficientMaterial": {
@@ -4105,6 +4313,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ZLjY0hxJ/black#76"
+      },
+      "IAHZLBCU": {
+        "date": "2024-02-13",
+        "opponent": {
+          "username": "Kidefence",
+          "title": ""
+        },
+        "link": "https://lichess.org/IAHZLBCU/black#22"
       }
     },
     "noCapturesBeforeMoveNumber": {
@@ -4235,6 +4451,14 @@
           "title": "GM"
         },
         "link": "https://lichess.org/U6HPdtrb#84"
+      },
+      "PormYkZH": {
+        "date": "2024-03-11",
+        "opponent": {
+          "username": "PapaTroll24",
+          "title": ""
+        },
+        "link": "https://lichess.org/PormYkZH/black#65"
       }
     },
     "doubleCheckCheckmate": {
@@ -4429,6 +4653,14 @@
           "title": ""
         },
         "link": "https://lichess.org/oZgJLmwo#37"
+      },
+      "FwqNT4vb": {
+        "date": "2024-02-29",
+        "opponent": {
+          "username": "iakov98",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/FwqNT4vb#57"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -4779,6 +5011,14 @@
           "title": ""
         },
         "link": "https://lichess.org/tuUrXAWw/black"
+      },
+      "DcHYpfIF": {
+        "date": "2024-03-11",
+        "opponent": {
+          "username": "PapaTroll24",
+          "title": ""
+        },
+        "link": "https://lichess.org/DcHYpfIF"
       }
     },
     "royalFamilyFork": {
@@ -5007,6 +5247,14 @@
           "title": ""
         },
         "link": "https://lichess.org/bggTOrK6#133"
+      },
+      "OmCzU0fD": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "Scarlet_dawn",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/OmCzU0fD/black#92"
       }
     },
     "clutchPawn": {
@@ -5275,6 +5523,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Gzx9dC2R#69"
+      },
+      "VYVy272r": {
+        "date": "2024-02-24",
+        "opponent": {
+          "username": "Darderismo",
+          "title": ""
+        },
+        "link": "https://lichess.org/VYVy272r/black#48"
+      },
+      "mnqP27Kn": {
+        "date": "2024-01-16",
+        "opponent": {
+          "username": "sahlacretzu",
+          "title": ""
+        },
+        "link": "https://lichess.org/mnqP27Kn/black#104"
       }
     },
     "bishopAndKnightMate": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1705179264902,
-  "games_analyzed": 36098,
-  "moves_analyzed": 2844982,
+  "cache_updated_at": 1711666002285,
+  "games_analyzed": 36311,
+  "moves_analyzed": 2860650,
   "trophies": {
     "ohNoMyQueen": {
       "PKw4SGkk": {
@@ -1035,6 +1035,14 @@
           "title": ""
         },
         "link": "https://lichess.org/ULX8kdaK/black#68"
+      },
+      "ty1w68e7": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "Moy_twink12",
+          "title": ""
+        },
+        "link": "https://lichess.org/ty1w68e7#61"
       }
     },
     "adoptionMatch:10": {
@@ -1785,6 +1793,14 @@
           "title": ""
         },
         "link": "https://lichess.org/MBCQSDYm#6"
+      },
+      "ty1w68e7": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "Moy_twink12",
+          "title": ""
+        },
+        "link": "https://lichess.org/ty1w68e7#6"
       }
     },
     "connectDiagonally:5": {
@@ -2773,6 +2789,14 @@
           "title": ""
         },
         "link": "https://lichess.org/gwKKC8vi/black#24"
+      },
+      "yV10qybv": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "Bardyk01",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/yV10qybv/black#26"
       }
     },
     "stalemateTricks": {
@@ -4719,6 +4743,30 @@
           "title": ""
         },
         "link": "https://lichess.org/cCf2fuEq#160"
+      },
+      "H05Ee2Fr": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "srihari241105",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/H05Ee2Fr/black#113"
+      },
+      "9K3K1tXh": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "ansvnt7",
+          "title": ""
+        },
+        "link": "https://lichess.org/9K3K1tXh/black#125"
+      },
+      "GXx9ICo7": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "manneredmonkey",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/GXx9ICo7/black#111"
       }
     },
     "smotheredMate": {
@@ -8311,6 +8359,46 @@
           "title": ""
         },
         "link": "https://lichess.org/RXjtp5KH/black#84"
+      },
+      "A0PA7Oyd": {
+        "date": "2024-03-07",
+        "opponent": {
+          "username": "DAGGER61",
+          "title": ""
+        },
+        "link": "https://lichess.org/A0PA7Oyd/black#62"
+      },
+      "UCBARAJU": {
+        "date": "2024-03-01",
+        "opponent": {
+          "username": "ProfessorFinesse",
+          "title": ""
+        },
+        "link": "https://lichess.org/UCBARAJU/black#84"
+      },
+      "6g6MTZfN": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "slipsten",
+          "title": ""
+        },
+        "link": "https://lichess.org/6g6MTZfN#65"
+      },
+      "4zYoGfVX": {
+        "date": "2024-02-18",
+        "opponent": {
+          "username": "zaqar22",
+          "title": ""
+        },
+        "link": "https://lichess.org/4zYoGfVX/black#30"
+      },
+      "TQUDUb4H": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "Barrsik007",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/TQUDUb4H/black#94"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -9191,6 +9279,30 @@
           "title": "GM"
         },
         "link": "https://lichess.org/08pSxZtl#112"
+      },
+      "H05Ee2Fr": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "srihari241105",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/H05Ee2Fr/black#113"
+      },
+      "9K3K1tXh": {
+        "date": "2024-03-23",
+        "opponent": {
+          "username": "ansvnt7",
+          "title": ""
+        },
+        "link": "https://lichess.org/9K3K1tXh/black#125"
+      },
+      "GXx9ICo7": {
+        "date": "2024-01-13",
+        "opponent": {
+          "username": "manneredmonkey",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/GXx9ICo7/black#111"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -9531,6 +9643,14 @@
           "title": ""
         },
         "link": "https://lichess.org/0wZeNIsJ#69"
+      },
+      "N0WlYQU3": {
+        "date": "2024-02-23",
+        "opponent": {
+          "username": "Sultai",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/N0WlYQU3/black#188"
       }
     },
     "twoBishopMate": {
@@ -10845,6 +10965,14 @@
           "title": ""
         },
         "link": "https://lichess.org/xrwyxTny#24"
+      },
+      "dbSP51B1": {
+        "date": "2024-02-29",
+        "opponent": {
+          "username": "vasazh",
+          "title": ""
+        },
+        "link": "https://lichess.org/dbSP51B1/black#38"
       }
     },
     "blockCheckWithCheckmate": {
