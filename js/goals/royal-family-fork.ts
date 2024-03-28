@@ -1,5 +1,5 @@
 import { PgnMove } from '@mliebelt/pgn-types'
-import { Chess, Move, Square } from 'chess.js'
+import { Chess, Square } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 import { knightMoves } from '../utils/knight-moves'
 
@@ -23,7 +23,7 @@ export function royalFamilyFork(moves: PgnMove[]): TrophyCheckResult {
         }
 
         // the knight cannot be captured
-        const legalMoves = chessJS.moves({ verbose: true }) as Move[]
+        const legalMoves = chessJS.moves({ verbose: true })
         for (const legalMove of legalMoves) {
             if (legalMove.to === destinationSquare) {
                 continue moveLoop

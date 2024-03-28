@@ -1,5 +1,5 @@
 import { PgnMove } from '@mliebelt/pgn-types'
-import { Chess, Move } from 'chess.js'
+import { Chess } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 
 export function castleAfterMove40(moves: PgnMove[]): TrophyCheckResult {
@@ -87,7 +87,7 @@ export function enPassantCheckmate(moves: PgnMove[]): TrophyCheckResult {
     const chessJs = new Chess()
     chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
 
-    const chessJsLastMove = chessJs.history({ verbose: true })[moves.length - 1] as Move
+    const chessJsLastMove = chessJs.history({ verbose: true })[moves.length - 1]
 
     if (chessJsLastMove.flags.includes('e')) {
         return [

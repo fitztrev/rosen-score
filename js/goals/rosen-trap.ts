@@ -1,6 +1,6 @@
 import { PgnMove } from '@mliebelt/pgn-types'
 import { Game } from 'chess-fetcher'
-import { Chess, Move } from 'chess.js'
+import { Chess } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 
 export function rosenTrap(game: Game, moves: PgnMove[]): TrophyCheckResult {
@@ -33,7 +33,7 @@ export function rosenTrap(game: Game, moves: PgnMove[]): TrophyCheckResult {
 
                     let chessJs = new Chess()
                     chessJs.loadPgn(movesUntilKingGoesToCorner)
-                    const chessJsMoves = chessJs.moves({ verbose: true }) as Move[]
+                    const chessJsMoves = chessJs.moves({ verbose: true })
 
                     for (const kingMove of chessJsMoves) {
                         // if king could move to the square the queen captured on...

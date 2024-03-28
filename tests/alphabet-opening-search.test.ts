@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { Chess, Move } from 'chess.js'
+import { Chess } from 'chess.js'
 import { alphabetOpeningSearch } from '../js/utils/alphabet-opening-search'
 
 describe('test alphabet opening search', () => {
@@ -45,7 +45,7 @@ describe('test alphabet opening search', () => {
         let chessJsInstance = new Chess()
         chessJsInstance.loadPgn(moves)
 
-        let allMoves = chessJsInstance.history({ verbose: true }) as Move[]
+        let allMoves = chessJsInstance.history({ verbose: true })
 
         expect(alphabetOpeningSearch(allMoves)).toStrictEqual(expected)
     })

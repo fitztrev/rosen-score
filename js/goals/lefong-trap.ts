@@ -1,5 +1,5 @@
 import { PgnMove } from '@mliebelt/pgn-types'
-import { Chess, Move } from 'chess.js'
+import { Chess } from 'chess.js'
 import { TrophyCheckResult } from '../types/types'
 
 export function lefongTrap(moves: PgnMove[]): TrophyCheckResult {
@@ -11,7 +11,7 @@ export function lefongTrap(moves: PgnMove[]): TrophyCheckResult {
     const chessJs = new Chess()
     chessJs.loadPgn(moves.map((move) => move.notation.notation).join(' '))
 
-    const chessJsMoves = chessJs.history({ verbose: true }) as Move[]
+    const chessJsMoves = chessJs.history({ verbose: true })
 
     for (let moveNum in chessJsMoves) {
         const moveNumber = parseInt(moveNum)
