@@ -43,7 +43,11 @@ export function bishopAndKnightMate(game: Game, fen: string): TrophyCheckResult 
 
     let position = fenToPosition(fen)
 
-    let piecesRemaining = position.replace(/[k.]/gi, '').split('').sort((a, b) => a.localeCompare(b)).join('')
+    let piecesRemaining = position
+        .replace(/[k.]/gi, '')
+        .split('')
+        .sort((a, b) => a.localeCompare(b))
+        .join('')
 
     if (piecesRemaining === 'BN') {
         return [
@@ -69,7 +73,11 @@ function specificPieceComboMate(game: Game, fen: string, pieces: string): Trophy
 
     let position = fenToPosition(fen)
 
-    let piecesRemaining = position.replace(/[k.]/gi, '').split('').sort((a, b) => a.localeCompare(b)).join('')
+    let piecesRemaining = position
+        .replace(/[k.]/gi, '')
+        .split('')
+        .sort((a, b) => a.localeCompare(b))
+        .join('')
     let whitePiecesRemaining = piecesRemaining.replace(/[a-z]/g, '')
     let blackPiecesRemaining = piecesRemaining.replace(/[A-Z]/g, '')
 
