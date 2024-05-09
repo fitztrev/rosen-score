@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666892241,
-  "games_analyzed": 45748,
-  "moves_analyzed": 3560704,
+  "cache_updated_at": 1715290593846,
+  "games_analyzed": 46834,
+  "moves_analyzed": 3650876,
   "trophies": {
     "checkmateAtMoveNumber:3": {
       "95570410095": {
@@ -501,6 +501,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/95751214103?tab=analysis&flip=false&move=032"
+      },
+      "105440969749": {
+        "date": "2024-03-29",
+        "opponent": {
+          "username": "akira9008",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105440969749?tab=analysis&flip=false&move=034"
       }
     },
     "pawnStormOpening": {
@@ -2709,6 +2717,46 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/95675443529?tab=analysis&flip=true&move=094"
+      },
+      "108526186303": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "Shirojk1000",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108526186303?tab=analysis&flip=true&move=0104"
+      },
+      "108522030691": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "TheKnightBefore",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/108522030691?tab=analysis&flip=false&move=0103"
+      },
+      "108475299209": {
+        "date": "2024-05-03",
+        "opponent": {
+          "username": "PMorphy2024",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108475299209?tab=analysis&flip=false&move=0107"
+      },
+      "107435563931": {
+        "date": "2024-04-21",
+        "opponent": {
+          "username": "Gambito-de-rey9",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/107435563931?tab=analysis&flip=false&move=087"
+      },
+      "105673732977": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "julius_alfonzo21",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105673732977?tab=analysis&flip=false&move=0163"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -3687,6 +3735,38 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/95844171557?tab=analysis&flip=false&move=0124"
+      },
+      "108526799661": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "arnoldpetra",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108526799661?tab=analysis&flip=true&move=093"
+      },
+      "107686949973": {
+        "date": "2024-04-24",
+        "opponent": {
+          "username": "Raskolnikovkaramazov",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/107686949973?tab=analysis&flip=true&move=085"
+      },
+      "106921823121": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "kas_la_menace",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/106921823121?tab=analysis&flip=false&move=088"
+      },
+      "105406187951": {
+        "date": "2024-03-28",
+        "opponent": {
+          "username": "MarkusNuttus",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105406187951?tab=analysis&flip=true&move=0107"
       }
     },
     "doubleCheckCheckmate": {
@@ -3833,6 +3913,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/22576847341?tab=analysis&flip=true&move=041"
+      },
+      "108474615775": {
+        "date": "2024-05-03",
+        "opponent": {
+          "username": "DiegoRG91",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108474615775?tab=analysis&flip=true&move=081"
       }
     },
     "pawnCheckmate": {
@@ -4563,6 +4651,22 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/97122627517?tab=analysis&flip=true&move=085"
+      },
+      "106806017271": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "sherman204",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/106806017271?tab=analysis&flip=false&move=070"
+      },
+      "105686420711": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "WhaTheFiretruck",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105686420711?tab=analysis&flip=false&move=048"
       }
     },
     "ohNoMyQueen": {
@@ -5029,6 +5133,14 @@
           "title": "CM"
         },
         "link": "https://www.chess.com/analysis/game/live/95597402201?tab=analysis&flip=false&move=050"
+      },
+      "106573580829": {
+        "date": "2024-04-11",
+        "opponent": {
+          "username": "Veganlaw",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/106573580829?tab=analysis&flip=true&move=047"
       }
     },
     "adoptionMatch:10": {
@@ -5167,6 +5279,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/99624153557?tab=analysis&flip=false&move=0"
+      },
+      "105686343417": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "WhaTheFiretruck",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105686343417?tab=analysis&flip=true&move=0"
       }
     },
     "pawnDiamond": {
@@ -5373,6 +5493,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/35866770519?tab=analysis&flip=false&move=038"
+      },
+      "105668985449": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "kiransure",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/105668985449?tab=analysis&flip=false&move=044"
       }
     },
     "pawnX": {
@@ -5707,6 +5835,16 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/95572178145?tab=analysis&flip=false&move=086"
+      }
+    },
+    "knightCube": {
+      "106799406319": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "notfranChise",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/106799406319?tab=analysis&flip=false&move=0136"
       }
     }
   }

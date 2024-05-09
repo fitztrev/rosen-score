@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666786993,
-  "games_analyzed": 4632,
-  "moves_analyzed": 417856,
+  "cache_updated_at": 1715290669580,
+  "games_analyzed": 4808,
+  "moves_analyzed": 434259,
   "trophies": {
     "adoptionMatch:10": {
       "1627822853": {
@@ -171,6 +171,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/96256981625?tab=analysis&flip=false&move=0"
+      },
+      "105892871851": {
+        "date": "2024-04-03",
+        "opponent": {
+          "username": "alexrustemov",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105892871851?tab=analysis&flip=false&move=0"
       }
     },
     "pawnCheckmate": {
@@ -323,6 +331,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/83527616905?tab=analysis&flip=true&move=061"
+      },
+      "105748760553": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "Njal28",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105748760553?tab=analysis&flip=false&move=024"
       }
     },
     "ohNoMyQueen": {
@@ -403,6 +419,14 @@
           "title": "FM"
         },
         "link": "https://www.chess.com/analysis/game/live/100296261155?tab=analysis&flip=true&move=055"
+      },
+      "105486085517": {
+        "date": "2024-03-29",
+        "opponent": {
+          "username": "Oleksandr_Bortnyk",
+          "title": "GM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105486085517?tab=analysis&flip=true&move=041"
       }
     },
     "g5mate": {

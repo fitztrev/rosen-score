@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666002285,
-  "games_analyzed": 36311,
-  "moves_analyzed": 2860650,
+  "cache_updated_at": 1715290361765,
+  "games_analyzed": 36667,
+  "moves_analyzed": 2892931,
   "trophies": {
     "ohNoMyQueen": {
       "PKw4SGkk": {
@@ -1735,6 +1735,14 @@
           "title": ""
         },
         "link": "https://lichess.org/Q032WUPJ#97"
+      },
+      "VKhp2is4": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "quick_Mate",
+          "title": ""
+        },
+        "link": "https://lichess.org/VKhp2is4#227"
       }
     },
     "alphabet:egg": {
@@ -2797,6 +2805,14 @@
           "title": "CM"
         },
         "link": "https://lichess.org/yV10qybv/black#26"
+      },
+      "dBbH9j57": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "DmitriyBiryuk777",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/dBbH9j57/black#28"
       }
     },
     "stalemateTricks": {
@@ -4767,6 +4783,54 @@
           "title": "NM"
         },
         "link": "https://lichess.org/GXx9ICo7/black#111"
+      },
+      "nOlN9eOb": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "Ali_rastbod",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/nOlN9eOb/black#113"
+      },
+      "S8dDOvf6": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "Americanchampion",
+          "title": ""
+        },
+        "link": "https://lichess.org/S8dDOvf6#148"
+      },
+      "QagSekOj": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "Kastorcito",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/QagSekOj#122"
+      },
+      "ca7Js78I": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "kapaccino",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/ca7Js78I#120"
+      },
+      "49oyM9Si": {
+        "date": "2024-04-13",
+        "opponent": {
+          "username": "skif134",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/49oyM9Si/black#115"
+      },
+      "FUGF6mZ9": {
+        "date": "2024-04-13",
+        "opponent": {
+          "username": "Makham21",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/FUGF6mZ9/black#93"
       }
     },
     "smotheredMate": {
@@ -6131,6 +6195,14 @@
           "title": ""
         },
         "link": "https://lichess.org/2I4pbXTY/black#64"
+      },
+      "8pDgbhGO": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "harsha15",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/8pDgbhGO#89"
       }
     },
     "doubleCheckCheckmate": {
@@ -8399,6 +8471,22 @@
           "title": "IM"
         },
         "link": "https://lichess.org/TQUDUb4H/black#94"
+      },
+      "8kiErWbM": {
+        "date": "2024-04-13",
+        "opponent": {
+          "username": "oppenaimer",
+          "title": ""
+        },
+        "link": "https://lichess.org/8kiErWbM#45"
+      },
+      "eh2pCUuC": {
+        "date": "2024-04-10",
+        "opponent": {
+          "username": "WildBurns",
+          "title": ""
+        },
+        "link": "https://lichess.org/eh2pCUuC/black#116"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -9303,6 +9391,22 @@
           "title": "NM"
         },
         "link": "https://lichess.org/GXx9ICo7/black#111"
+      },
+      "nOlN9eOb": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "Ali_rastbod",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/nOlN9eOb/black#113"
+      },
+      "FUGF6mZ9": {
+        "date": "2024-04-13",
+        "opponent": {
+          "username": "Makham21",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/FUGF6mZ9/black#93"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -10043,6 +10147,14 @@
           "title": ""
         },
         "link": "https://lichess.org/jfxfPUqR#131"
+      },
+      "rloJdkNQ": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "ivanrojo",
+          "title": "CM"
+        },
+        "link": "https://lichess.org/rloJdkNQ#97"
       }
     },
     "g5mate": {

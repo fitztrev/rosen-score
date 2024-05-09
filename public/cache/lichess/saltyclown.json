@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666345609,
-  "games_analyzed": 36502,
-  "moves_analyzed": 2294205,
+  "cache_updated_at": 1715290851186,
+  "games_analyzed": 37295,
+  "moves_analyzed": 2351851,
   "trophies": {
     "adoptionMatch:10": {
       "gXDwJkvn": {
@@ -523,6 +523,38 @@
           "title": ""
         },
         "link": "https://lichess.org/0M42WYbz/black"
+      },
+      "UioaBdIR": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://lichess.org/UioaBdIR/black"
+      },
+      "AUeAbLa2": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "MollzBollz",
+          "title": ""
+        },
+        "link": "https://lichess.org/AUeAbLa2"
+      },
+      "k70Oubpi": {
+        "date": "2024-04-22",
+        "opponent": {
+          "username": "davidallison2013",
+          "title": ""
+        },
+        "link": "https://lichess.org/k70Oubpi/black"
+      },
+      "4NtuB0Hl": {
+        "date": "2024-04-19",
+        "opponent": {
+          "username": "MOUTHBREATHERLOWLIFE",
+          "title": ""
+        },
+        "link": "https://lichess.org/4NtuB0Hl/black"
       }
     },
     "ohNoMyQueen": {
@@ -1861,6 +1893,38 @@
           "title": ""
         },
         "link": "https://lichess.org/r81EOvJR/black#44"
+      },
+      "YKtjx6ij": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "genaegoista",
+          "title": ""
+        },
+        "link": "https://lichess.org/YKtjx6ij/black#60"
+      },
+      "W66FppFL": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "J2001537413",
+          "title": ""
+        },
+        "link": "https://lichess.org/W66FppFL/black#60"
+      },
+      "O2TXrnKB": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "Kapitan_Vroongel",
+          "title": ""
+        },
+        "link": "https://lichess.org/O2TXrnKB/black#58"
+      },
+      "nDXrSUyR": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "SoloLeveller",
+          "title": ""
+        },
+        "link": "https://lichess.org/nDXrSUyR#67"
       }
     },
     "pawnCheckmate": {
@@ -2895,6 +2959,14 @@
           "title": ""
         },
         "link": "https://lichess.org/AM6QfIJV/black#64"
+      },
+      "upbZBecs": {
+        "date": "2024-04-19",
+        "opponent": {
+          "username": "MOUTHBREATHERLOWLIFE",
+          "title": ""
+        },
+        "link": "https://lichess.org/upbZBecs#49"
       }
     },
     "royalFamilyFork": {
@@ -7375,6 +7447,22 @@
           "title": ""
         },
         "link": "https://lichess.org/psXdz67M/black#116"
+      },
+      "urdmY0dh": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "makpearlson",
+          "title": ""
+        },
+        "link": "https://lichess.org/urdmY0dh#99"
+      },
+      "bupIrzUU": {
+        "date": "2024-05-03",
+        "opponent": {
+          "username": "lourd00",
+          "title": ""
+        },
+        "link": "https://lichess.org/bupIrzUU/black#112"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -7659,6 +7747,14 @@
           "title": ""
         },
         "link": "https://lichess.org/gDTLOWbT#33"
+      },
+      "HUrPV80B": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "Grishin_Maxim",
+          "title": ""
+        },
+        "link": "https://lichess.org/HUrPV80B#35"
       }
     },
     "stalemateTricks": {
@@ -8133,6 +8229,46 @@
           "title": ""
         },
         "link": "https://lichess.org/W4XuWQxe/black#131"
+      },
+      "F9d7Dz0M": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "clumsyrook",
+          "title": ""
+        },
+        "link": "https://lichess.org/F9d7Dz0M/black#143"
+      },
+      "ZPqzQYu7": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "Suarez1511",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZPqzQYu7#110"
+      },
+      "KgqZ4TXZ": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "tonyrealist",
+          "title": ""
+        },
+        "link": "https://lichess.org/KgqZ4TXZ#110"
+      },
+      "ZhsotApv": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "pyroduck",
+          "title": ""
+        },
+        "link": "https://lichess.org/ZhsotApv#102"
+      },
+      "rcpRcGrC": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "wildhacks",
+          "title": ""
+        },
+        "link": "https://lichess.org/rcpRcGrC#132"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -8655,6 +8791,54 @@
           "title": ""
         },
         "link": "https://lichess.org/bbKMv6Ni#131"
+      },
+      "YzbGZbTJ": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "nielswint",
+          "title": ""
+        },
+        "link": "https://lichess.org/YzbGZbTJ#103"
+      },
+      "48uRlGmq": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "L-akyn",
+          "title": ""
+        },
+        "link": "https://lichess.org/48uRlGmq#103"
+      },
+      "sYjGBmus": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "kochichess",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/sYjGBmus#65"
+      },
+      "sYZWutHp": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "poval",
+          "title": ""
+        },
+        "link": "https://lichess.org/sYZWutHp#89"
+      },
+      "rrIHXpFn": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "dyrdyr",
+          "title": ""
+        },
+        "link": "https://lichess.org/rrIHXpFn/black#84"
+      },
+      "atHhKA0I": {
+        "date": "2024-04-20",
+        "opponent": {
+          "username": "davidallison2013",
+          "title": ""
+        },
+        "link": "https://lichess.org/atHhKA0I/black#100"
       }
     },
     "winInsufficientMaterial": {
@@ -8785,6 +8969,14 @@
           "title": ""
         },
         "link": "https://lichess.org/pMUme2wg#87"
+      },
+      "eDcDyxad": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "freefoodguy",
+          "title": ""
+        },
+        "link": "https://lichess.org/eDcDyxad#99"
       }
     },
     "connectDiagonally:5": {
@@ -9373,6 +9565,22 @@
           "title": ""
         },
         "link": "https://lichess.org/g1drJQXK#25"
+      },
+      "O2TXrnKB": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "Kapitan_Vroongel",
+          "title": ""
+        },
+        "link": "https://lichess.org/O2TXrnKB/black#60"
+      },
+      "zqJTjlrO": {
+        "date": "2024-04-22",
+        "opponent": {
+          "username": "davidallison2013",
+          "title": ""
+        },
+        "link": "https://lichess.org/zqJTjlrO#37"
       }
     },
     "doubleCheckCheckmate": {
@@ -9791,6 +9999,14 @@
           "title": ""
         },
         "link": "https://lichess.org/5NaWpsbx#95"
+      },
+      "r4eD4uWg": {
+        "date": "2024-04-22",
+        "opponent": {
+          "username": "davidallison2013",
+          "title": ""
+        },
+        "link": "https://lichess.org/r4eD4uWg#43"
       }
     },
     "knightCube": {
@@ -10141,6 +10357,16 @@
           "title": ""
         },
         "link": "https://lichess.org/Ik5Cykhl/black#56"
+      }
+    },
+    "avoidTheFlagCheckmate": {
+      "gs0iPqs7": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "Quepaseelquesigue",
+          "title": ""
+        },
+        "link": "https://lichess.org/gs0iPqs7#86"
       }
     }
   }

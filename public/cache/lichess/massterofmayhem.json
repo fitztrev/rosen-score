@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666308517,
-  "games_analyzed": 40208,
-  "moves_analyzed": 3099482,
+  "cache_updated_at": 1715290414787,
+  "games_analyzed": 41535,
+  "moves_analyzed": 3202448,
   "trophies": {
     "stalemateTricks": {
       "XIfP4XTt": {
@@ -563,6 +563,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/CZZQbzrJ/black#197"
+      },
+      "GyBImsoz": {
+        "date": "2024-05-07",
+        "opponent": {
+          "username": "Subhayan_1",
+          "title": ""
+        },
+        "link": "https://lichess.org/GyBImsoz#86"
       }
     },
     "pawnCheckmate": {
@@ -1581,6 +1589,22 @@
           "title": ""
         },
         "link": "https://lichess.org/mnqP27Kn/black#104"
+      },
+      "Tu4yS7xo": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "filipos05",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/Tu4yS7xo/black#74"
+      },
+      "ekNhECeo": {
+        "date": "2024-04-22",
+        "opponent": {
+          "username": "GILBERTOHDEZ",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/ekNhECeo/black#96"
       }
     },
     "checkmateWithTenthSecondLeft": {
@@ -2633,6 +2657,30 @@
           "title": "GM"
         },
         "link": "https://lichess.org/mO0jwZHD#53"
+      },
+      "x1gHu3uf": {
+        "date": "2024-04-28",
+        "opponent": {
+          "username": "gjgur",
+          "title": ""
+        },
+        "link": "https://lichess.org/x1gHu3uf#55"
+      },
+      "aQBPJ0XJ": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "protohumanist",
+          "title": ""
+        },
+        "link": "https://lichess.org/aQBPJ0XJ#33"
+      },
+      "GzaZelWq": {
+        "date": "2024-04-11",
+        "opponent": {
+          "username": "Pliukha_Mikhail",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/GzaZelWq/black#52"
       }
     },
     "connectDiagonally:5": {
@@ -3307,6 +3355,22 @@
           "title": ""
         },
         "link": "https://lichess.org/TO2OULyi#63"
+      },
+      "CYLeNh76": {
+        "date": "2024-04-19",
+        "opponent": {
+          "username": "paapro",
+          "title": ""
+        },
+        "link": "https://lichess.org/CYLeNh76/black#70"
+      },
+      "hmXMv2gc": {
+        "date": "2024-04-18",
+        "opponent": {
+          "username": "EminovOrkhan",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/hmXMv2gc/black#30"
       }
     },
     "pawnDiamond": {
@@ -4255,6 +4319,22 @@
           "title": ""
         },
         "link": "https://lichess.org/ItdGu1Wg/black#188"
+      },
+      "54q9ucVb": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "varunvar",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/54q9ucVb#153"
+      },
+      "4GQMNhtr": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "Dictator02",
+          "title": ""
+        },
+        "link": "https://lichess.org/4GQMNhtr/black#172"
       }
     },
     "pawnCube": {
@@ -4661,6 +4741,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/FwqNT4vb#57"
+      },
+      "0eFwhgiF": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "Chillimag",
+          "title": ""
+        },
+        "link": "https://lichess.org/0eFwhgiF#41"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -4719,6 +4807,14 @@
           "title": ""
         },
         "link": "https://lichess.org/fBZRQ14k#140"
+      },
+      "2OIxUBO5": {
+        "date": "2024-04-18",
+        "opponent": {
+          "username": "Darkmaul11",
+          "title": ""
+        },
+        "link": "https://lichess.org/2OIxUBO5/black#135"
       }
     },
     "smotheredMate": {
@@ -5019,6 +5115,22 @@
           "title": ""
         },
         "link": "https://lichess.org/DcHYpfIF"
+      },
+      "Ok1Gp0Q9": {
+        "date": "2024-04-30",
+        "opponent": {
+          "username": "Andromeda3",
+          "title": ""
+        },
+        "link": "https://lichess.org/Ok1Gp0Q9/black"
+      },
+      "36jqN9eH": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "jimmydeeznuts",
+          "title": ""
+        },
+        "link": "https://lichess.org/36jqN9eH/black"
       }
     },
     "royalFamilyFork": {
@@ -5255,6 +5367,22 @@
           "title": "FM"
         },
         "link": "https://lichess.org/OmCzU0fD/black#92"
+      },
+      "0bmVtPyW": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "Medvedpoint",
+          "title": ""
+        },
+        "link": "https://lichess.org/0bmVtPyW/black#118"
+      },
+      "6OwWB9qJ": {
+        "date": "2024-03-30",
+        "opponent": {
+          "username": "sergolvz",
+          "title": ""
+        },
+        "link": "https://lichess.org/6OwWB9qJ#119"
       }
     },
     "clutchPawn": {
@@ -5401,6 +5529,14 @@
           "title": ""
         },
         "link": "https://lichess.org/bggTOrK6#133"
+      },
+      "mtPQ0jLW": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "Anonymous_Beast",
+          "title": ""
+        },
+        "link": "https://lichess.org/mtPQ0jLW#141"
       }
     },
     "g5mate": {

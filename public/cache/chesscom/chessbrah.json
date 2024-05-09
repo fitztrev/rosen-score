@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666677329,
-  "games_analyzed": 29155,
-  "moves_analyzed": 2258934,
+  "cache_updated_at": 1715290489077,
+  "games_analyzed": 29244,
+  "moves_analyzed": 2267210,
   "trophies": {
     "adoptionMatch:10": {
       "1700633640": {
@@ -1331,6 +1331,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/99123874823?tab=analysis&flip=true&move=0"
+      },
+      "105747644717": {
+        "date": "2024-04-01",
+        "opponent": {
+          "username": "removsky",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/105747644717?tab=analysis&flip=true&move=0"
       }
     },
     "stalemateTricks": {
@@ -3161,6 +3169,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/99124489409?tab=analysis&flip=false&move=082"
+      },
+      "108204593457": {
+        "date": "2024-04-30",
+        "opponent": {
+          "username": "WFAFAF",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108204593457?tab=analysis&flip=false&move=080"
       }
     },
     "g5mate": {
@@ -3767,6 +3783,14 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/99966140219?tab=analysis&flip=true&move=053"
+      },
+      "107836366455": {
+        "date": "2024-04-26",
+        "opponent": {
+          "username": "stolencandy13",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/107836366455?tab=analysis&flip=true&move=043"
       }
     },
     "connectDiagonally:5": {

@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666207377,
-  "games_analyzed": 129969,
-  "moves_analyzed": 11211124,
+  "cache_updated_at": 1715290317261,
+  "games_analyzed": 131196,
+  "moves_analyzed": 11301088,
   "trophies": {
     "pawnDiamond": {
       "1s7ymtS5": {
@@ -7531,6 +7531,62 @@
           "title": ""
         },
         "link": "https://lichess.org/rOlhzcqN/black#38"
+      },
+      "pmj34oDr": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "PROFESSOR_M_N",
+          "title": ""
+        },
+        "link": "https://lichess.org/pmj34oDr/black#56"
+      },
+      "WrI0Iw5v": {
+        "date": "2024-05-04",
+        "opponent": {
+          "username": "Balmdogg",
+          "title": ""
+        },
+        "link": "https://lichess.org/WrI0Iw5v/black#36"
+      },
+      "zFQ9VjAD": {
+        "date": "2024-04-29",
+        "opponent": {
+          "username": "ArenaMasterOnly",
+          "title": ""
+        },
+        "link": "https://lichess.org/zFQ9VjAD/black#34"
+      },
+      "4nEXgNQ1": {
+        "date": "2024-04-24",
+        "opponent": {
+          "username": "David_B0wie",
+          "title": ""
+        },
+        "link": "https://lichess.org/4nEXgNQ1/black#30"
+      },
+      "PaGmTUoj": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "stratovalius",
+          "title": ""
+        },
+        "link": "https://lichess.org/PaGmTUoj/black#22"
+      },
+      "aZ1iK3VE": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "Niksss2023",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/aZ1iK3VE#25"
+      },
+      "3QWnX1o3": {
+        "date": "2024-04-15",
+        "opponent": {
+          "username": "Niksss2023",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/3QWnX1o3#27"
       }
     },
     "pawnCheckmate": {
@@ -11253,6 +11309,38 @@
           "title": ""
         },
         "link": "https://lichess.org/T3KFoYQO/black#72"
+      },
+      "JHxpxmEN": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "chess2022chess2022",
+          "title": ""
+        },
+        "link": "https://lichess.org/JHxpxmEN#43"
+      },
+      "vN323heT": {
+        "date": "2024-04-17",
+        "opponent": {
+          "username": "Nozdrachev_Vladislav",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/vN323heT/black#132"
+      },
+      "NW7LG8wG": {
+        "date": "2024-04-10",
+        "opponent": {
+          "username": "STAS12",
+          "title": ""
+        },
+        "link": "https://lichess.org/NW7LG8wG#89"
+      },
+      "wWXg3lab": {
+        "date": "2024-04-10",
+        "opponent": {
+          "username": "nevenaleksic",
+          "title": ""
+        },
+        "link": "https://lichess.org/wWXg3lab/black#80"
       }
     },
     "connectDiagonally:5": {
@@ -15367,6 +15455,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Wo8Cqufw#27"
+      },
+      "1i5OvEB6": {
+        "date": "2024-04-30",
+        "opponent": {
+          "username": "QuCq",
+          "title": ""
+        },
+        "link": "https://lichess.org/1i5OvEB6#47"
+      },
+      "BhUDEqiD": {
+        "date": "2024-04-17",
+        "opponent": {
+          "username": "Nozdrachev_Vladislav",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/BhUDEqiD#51"
       }
     },
     "stalemateTricks": {
@@ -17185,6 +17289,22 @@
           "title": ""
         },
         "link": "https://lichess.org/Gb2LUE1T#112"
+      },
+      "f2v5kVIp": {
+        "date": "2024-04-19",
+        "opponent": {
+          "username": "DrIanDuncan",
+          "title": ""
+        },
+        "link": "https://lichess.org/f2v5kVIp#142"
+      },
+      "zwtFw8qq": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "ruslan1541",
+          "title": "FM"
+        },
+        "link": "https://lichess.org/zwtFw8qq/black#177"
       }
     },
     "flagOpponentWhoHadMateInOne": {
@@ -20541,6 +20661,30 @@
           "title": "IM"
         },
         "link": "https://lichess.org/P07R3qQL#133"
+      },
+      "GloU8BBT": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "DoloresCrotal",
+          "title": ""
+        },
+        "link": "https://lichess.org/GloU8BBT#133"
+      },
+      "nYedRZf4": {
+        "date": "2024-04-22",
+        "opponent": {
+          "username": "Smoking_Samra",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/nYedRZf4#155"
+      },
+      "q11IY965": {
+        "date": "2024-04-17",
+        "opponent": {
+          "username": "Wman0231",
+          "title": ""
+        },
+        "link": "https://lichess.org/q11IY965#157"
       }
     },
     "pawnX": {
@@ -21417,6 +21561,30 @@
           "title": ""
         },
         "link": "https://lichess.org/5K2H35Wf#72"
+      },
+      "kT4OPX2u": {
+        "date": "2024-05-07",
+        "opponent": {
+          "username": "Beatz60",
+          "title": ""
+        },
+        "link": "https://lichess.org/kT4OPX2u/black#68"
+      },
+      "ub6T9SJH": {
+        "date": "2024-05-07",
+        "opponent": {
+          "username": "AdriDem",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/ub6T9SJH/black#74"
+      },
+      "ozb6z1Yn": {
+        "date": "2024-03-29",
+        "opponent": {
+          "username": "Murzillka",
+          "title": ""
+        },
+        "link": "https://lichess.org/ozb6z1Yn#81"
       }
     },
     "doubleCheckCheckmate": {
@@ -23053,6 +23221,14 @@
           "title": "IM"
         },
         "link": "https://lichess.org/h8dIgekL/black#50"
+      },
+      "ujmDPHXF": {
+        "date": "2024-04-18",
+        "opponent": {
+          "username": "FerdRcndl",
+          "title": ""
+        },
+        "link": "https://lichess.org/ujmDPHXF#55"
       }
     },
     "avoidTheFlagCheckmate": {
@@ -24307,6 +24483,14 @@
           "title": ""
         },
         "link": "https://lichess.org/I7VDlKjv/black#116"
+      },
+      "dSFPu2qR": {
+        "date": "2024-05-06",
+        "opponent": {
+          "username": "DoloresCrotal",
+          "title": ""
+        },
+        "link": "https://lichess.org/dSFPu2qR#123"
       }
     },
     "smotheredMate": {

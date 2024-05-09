@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666724893,
-  "games_analyzed": 14404,
-  "moves_analyzed": 1248018,
+  "cache_updated_at": 1715290629529,
+  "games_analyzed": 14606,
+  "moves_analyzed": 1267913,
   "trophies": {
     "stalemateTricks": {
       "702999566": {
@@ -859,6 +859,30 @@
           "title": "GM"
         },
         "link": "https://www.chess.com/analysis/game/live/99166501893?tab=analysis&flip=true&move=0134"
+      },
+      "108686374839": {
+        "date": "2024-05-05",
+        "opponent": {
+          "username": "MihaiKondort",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/108686374839?tab=analysis&flip=true&move=0100"
+      },
+      "106864286491": {
+        "date": "2024-04-14",
+        "opponent": {
+          "username": "Mikedannnn",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/106864286491?tab=analysis&flip=false&move=0155"
+      },
+      "106430776419": {
+        "date": "2024-04-09",
+        "opponent": {
+          "username": "buffos",
+          "title": ""
+        },
+        "link": "https://www.chess.com/analysis/game/live/106430776419?tab=analysis&flip=true&move=0122"
       }
     },
     "rosenTrap": {
@@ -2249,6 +2273,22 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/101671369139?tab=analysis&flip=false&move=046"
+      },
+      "108855695411": {
+        "date": "2024-05-07",
+        "opponent": {
+          "username": "YouShallNotPass001",
+          "title": "FM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/108855695411?tab=analysis&flip=false&move=048"
+      },
+      "108854481241": {
+        "date": "2024-05-07",
+        "opponent": {
+          "username": "IraZyne",
+          "title": "NM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/108854481241?tab=analysis&flip=false&move=056"
       }
     },
     "promoteToKnightCheckmate": {
@@ -2527,6 +2567,14 @@
           "title": "IM"
         },
         "link": "https://www.chess.com/analysis/game/live/100461738911?tab=analysis&flip=false&move=050"
+      },
+      "106373859749": {
+        "date": "2024-04-09",
+        "opponent": {
+          "username": "Cryptochess",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/106373859749?tab=analysis&flip=false&move=054"
       }
     },
     "pawnCube": {
@@ -2635,6 +2683,14 @@
           "title": ""
         },
         "link": "https://www.chess.com/analysis/game/live/81540154765?tab=analysis&flip=false&move=057"
+      },
+      "106444650975": {
+        "date": "2024-04-09",
+        "opponent": {
+          "username": "Hunninn",
+          "title": "IM"
+        },
+        "link": "https://www.chess.com/analysis/game/live/106444650975?tab=analysis&flip=false&move=060"
       }
     },
     "blockCheckWithCheckmate": {

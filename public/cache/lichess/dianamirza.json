@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711667481774,
-  "games_analyzed": 16861,
-  "moves_analyzed": 1103121,
+  "cache_updated_at": 1715290334153,
+  "games_analyzed": 16969,
+  "moves_analyzed": 1109426,
   "trophies": {
     "connectDiagonally:5": {
       "j4JN3g3N": {
@@ -437,6 +437,14 @@
           "title": ""
         },
         "link": "https://lichess.org/LGO9GIRa/black"
+      },
+      "pECvNI3Z": {
+        "date": "2024-04-17",
+        "opponent": {
+          "username": "Lamprokles",
+          "title": ""
+        },
+        "link": "https://lichess.org/pECvNI3Z"
       }
     },
     "adoptionMatch:20": {
@@ -1471,6 +1479,14 @@
           "title": ""
         },
         "link": "https://lichess.org/TC3GYFGa#41"
+      },
+      "ih50dEBQ": {
+        "date": "2024-04-18",
+        "opponent": {
+          "username": "Eliehaddad2",
+          "title": ""
+        },
+        "link": "https://lichess.org/ih50dEBQ#43"
       }
     },
     "connectEightOnRank:7": {
@@ -2471,6 +2487,14 @@
           "title": ""
         },
         "link": "https://lichess.org/0AfUPaA9#25"
+      },
+      "6wg92jam": {
+        "date": "2024-05-09",
+        "opponent": {
+          "username": "omniwinner",
+          "title": ""
+        },
+        "link": "https://lichess.org/6wg92jam#27"
       }
     },
     "pawnCubeCenter": {

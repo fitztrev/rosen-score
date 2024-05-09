@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1711666334209,
-  "games_analyzed": 72458,
-  "moves_analyzed": 4868136,
+  "cache_updated_at": 1715290425724,
+  "games_analyzed": 72572,
+  "moves_analyzed": 4877188,
   "trophies": {
     "pawnCheckmate": {
       "b6HNoQWr": {
@@ -6597,6 +6597,14 @@
           "title": ""
         },
         "link": "https://lichess.org/XleNdmxx/black"
+      },
+      "zD71mcZX": {
+        "date": "2024-05-01",
+        "opponent": {
+          "username": "chess-art-us",
+          "title": "IM"
+        },
+        "link": "https://lichess.org/zD71mcZX"
       }
     },
     "adoptionMatch:20": {
@@ -15991,6 +15999,14 @@
           "title": "FM"
         },
         "link": "https://lichess.org/21Jo2FIq#175"
+      },
+      "iQsMbRZ7": {
+        "date": "2024-04-27",
+        "opponent": {
+          "username": "Andrey11976",
+          "title": "NM"
+        },
+        "link": "https://lichess.org/iQsMbRZ7/black#198"
       }
     },
     "royalFamilyFork": {
