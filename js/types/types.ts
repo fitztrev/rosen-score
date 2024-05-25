@@ -12,6 +12,10 @@ export type TrophyCacheFile = {
     trophies: PlayerTrophiesByType
 }
 
+export type PlayerTrophiesByType = {
+    [key: string]: TrophyForGame
+}
+
 export type TrophyForGame = {
     [key: string]: {
         date: string
@@ -21,10 +25,6 @@ export type TrophyForGame = {
         }
         link: string
     }
-}
-
-export type PlayerTrophiesByType = {
-    [key: string]: TrophyForGame
 }
 
 export type ReportSource = 'lichess' | 'chesscom'
