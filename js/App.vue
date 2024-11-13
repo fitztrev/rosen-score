@@ -561,7 +561,7 @@
                         title="Mona Lisa Checkmate"
                         desc="Checkmate the opponent with all your pieces on their original squares"
                         :trophies="playerTrophiesByType['monaLisaCheckmate'] || {}"
-                        gameLink="https://www.chess.com/analysis/game/live/121711253019?tab=analysis&flip=false"
+                        gameLink="https://www.chess.com/analysis/game/live/121711253019?tab=analysis&flip=false&move=0300"
                         youtubeLink="https://youtu.be/XAlcDWQ6iTM?t=387"
                     ></accomplishment-score>
                 </div>
