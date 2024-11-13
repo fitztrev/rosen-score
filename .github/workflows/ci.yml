@@ -8,21 +8,27 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
-            - run: npm ci
-            - run: npm test
+            - uses: pnpm/action-setup@v4
+              with:
+                  run_install: true
+            - run: pnpm test
 
     check-formatting:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
-            - run: npm ci
-            - run: npx prettier --check .
+            - uses: pnpm/action-setup@v4
+              with:
+                  run_install: true
+            - run: pnpx prettier --check .
 
     check-typescript:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
-            - run: npm ci
-            - run: npm run tsc
+            - uses: pnpm/action-setup@v4
+              with:
+                  run_install: true
+            - run: pnpm tsc

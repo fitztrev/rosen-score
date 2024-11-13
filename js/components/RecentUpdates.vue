@@ -4,7 +4,7 @@
         <li>
             <changelog-date :year="2024" :month="11" :day="13"></changelog-date>
             - Added <strong>Mona Lisa Checkmate</strong> trophy
-            <br>
+            <br />
             &nbsp; Credit to
             <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'KNVB')">GM Aman Hambleton</span>
             from Chessbrah. <a href="https://youtu.be/XAlcDWQ6iTM?t=387" class="dotted-underline text-sky-900" target="_blank">See video here</a>
