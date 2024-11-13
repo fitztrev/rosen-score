@@ -1,7 +1,7 @@
 {
-  "cache_updated_at": 1715290341897,
-  "games_analyzed": 10341,
-  "moves_analyzed": 866224,
+  "cache_updated_at": 1731470741075,
+  "games_analyzed": 10364,
+  "moves_analyzed": 868152,
   "trophies": {
     "adoptionMatch:10": {
       "rd7S4Am9": {
@@ -16,7 +16,7 @@
         "date": "2022-06-29",
         "opponent": {
           "username": "Blazinq",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/7jOdKNXh"
       },
@@ -24,7 +24,7 @@
         "date": "2022-06-27",
         "opponent": {
           "username": "Blazinq",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/m6FxXZ5S/black"
       },
@@ -40,7 +40,7 @@
         "date": "2022-04-01",
         "opponent": {
           "username": "Blazinq",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/UXGTjSqv"
       },
@@ -160,7 +160,7 @@
         "date": "2021-04-12",
         "opponent": {
           "username": "Patetico",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/Qdj8gORU/black"
       },
@@ -176,7 +176,7 @@
         "date": "2021-03-28",
         "opponent": {
           "username": "Erow",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/vYVv7DC8"
       },
@@ -216,7 +216,7 @@
         "date": "2021-01-10",
         "opponent": {
           "username": "MeneerMandje",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/BIR5HgvB"
       },
@@ -392,7 +392,7 @@
         "date": "2020-04-17",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/izz4QcOR/black"
       },
@@ -408,7 +408,7 @@
         "date": "2020-04-07",
         "opponent": {
           "username": "Patetico",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/glLMgUJC"
       },
@@ -578,7 +578,7 @@
         "date": "2022-04-01",
         "opponent": {
           "username": "Blazinq",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/BG8LulEt#41"
       },
@@ -690,7 +690,7 @@
         "date": "2020-04-07",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/9KxAaLfD/black#22"
       },
@@ -870,7 +870,7 @@
         "date": "2021-04-12",
         "opponent": {
           "username": "Patetico",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/hgnByGfY#63"
       },
@@ -1022,7 +1022,7 @@
         "date": "2020-04-17",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/hQM40lXm#87"
       },
@@ -1030,7 +1030,7 @@
         "date": "2020-04-07",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/nSrvB8mA/black#52"
       },
@@ -1224,7 +1224,7 @@
         "date": "2020-04-17",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/KsChhImP/black#150"
       },
@@ -1282,7 +1282,7 @@
         "date": "2021-03-28",
         "opponent": {
           "username": "Erow",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/W2KnDDTB/black#28"
       },
@@ -1338,7 +1338,7 @@
         "date": "2020-04-13",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/LtXiYzFm/black#54"
       },
@@ -1346,7 +1346,7 @@
         "date": "2020-04-07",
         "opponent": {
           "username": "Satranc_Youtube",
-          "title": "IM"
+          "title": "GM"
         },
         "link": "https://lichess.org/jj5sDFgi#39"
       },
@@ -1414,7 +1414,7 @@
         "date": "2020-04-07",
         "opponent": {
           "username": "Patetico",
-          "title": "FM"
+          "title": "IM"
         },
         "link": "https://lichess.org/cv3PdMnw"
       },
@@ -1561,6 +1561,30 @@
           "title": "GM"
         },
         "link": "https://lichess.org/yPbgf6VL/black#165"
+      },
+      "VtaI4eVW": {
+        "date": "2020-04-22",
+        "opponent": {
+          "username": "Zhigalko_Sergei",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/VtaI4eVW/black#143"
+      },
+      "W9BDHZJS": {
+        "date": "2020-03-21",
+        "opponent": {
+          "username": "Esssquire",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/W9BDHZJS/black#185"
+      },
+      "tOHBckjl": {
+        "date": "2019-02-05",
+        "opponent": {
+          "username": "penguingim1",
+          "title": "GM"
+        },
+        "link": "https://lichess.org/tOHBckjl#132"
       }
     },
     "pawnX": {

@@ -11,20 +11,20 @@ Your browser makes the request directly to the Lichess API to get the games. The
 ```bash
 git clone https://github.com/fitztrev/rosen-score.git
 cd rosen-score
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 Will start a local server at http://localhost:5173/
 
 ```bash
 ## Run the test suite
-npm run test
+pnpm run test
 ## or
-npm run watch
+pnpm run test:watch
 
 ## Check code coverage
-npm run coverage
+pnpm run coverage
 open coverage/index.html
 ```
 

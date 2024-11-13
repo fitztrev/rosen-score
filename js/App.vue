@@ -127,7 +127,7 @@
                 </div>
             </form>
 
-            <!-- <RecentUpdates @form-fill="formFill" /> -->
+            <RecentUpdates @form-fill="formFill" />
         </div>
 
         <download-progress
@@ -556,6 +556,14 @@
                         :trophies="playerTrophiesByType['checkmateAtMoveNumber:4'] || {}"
                         gameLink="https://lichess.org/u0SKphmW/black"
                     ></accomplishment-score>
+                    <accomplishment-score
+                        @register-new-trophy="onRegisterNewTrophy"
+                        title="Mona Lisa Checkmate"
+                        desc="Checkmate the opponent with all your pieces on their original squares"
+                        :trophies="playerTrophiesByType['monaLisaCheckmate'] || {}"
+                        gameLink="https://www.chess.com/analysis/game/live/121711253019?tab=analysis&flip=false"
+                        youtubeLink="https://www.youtube.com/watch?v=XAlcDWQ6iTM"
+                    ></accomplishment-score>
                 </div>
 
                 <h2 class="heading">There's a Funny Line</h2>
@@ -753,6 +761,7 @@ import { rosenTrap } from './goals/rosen-trap'
 import { alphabetOpening } from './goals/alphabet-openings'
 import { PlayerTrophiesByType, ReportSource, TrophyCacheFile, TrophyCheckResult } from './types/types'
 import { formatSinceDate } from './utils/format-since-date'
+import { monaLisaCheckmate } from './goals/mona-lisa-checkmate'
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -965,6 +974,7 @@ export default {
             caches.set('https://www.chess.com/member/knvb', '/cache/chesscom/knvb.json')
             caches.set('https://www.chess.com/member/magnuscarlsen', '/cache/chesscom/magnuscarlsen.json')
             caches.set('https://www.chess.com/member/saltyclown', '/cache/chesscom/saltyclown.json')
+            caches.set('https://www.chess.com/member/witty_alien', '/cache/chesscom/witty_alien.json')
 
             if (!caches.has(url)) {
                 return
@@ -1188,6 +1198,7 @@ export default {
             this.checkForTrophy(game, 'winInsufficientMaterial', winInsufficientMaterial(game, fen), game.moves.length)
             this.checkForTrophy(game, 'clutchPawn', clutchPawn(game, fen), game.moves.length)
             this.checkForTrophy(game, 'doubleCheckCheckmate', doubleCheckCheckmate(game, fen), game.moves.length)
+            this.checkForTrophy(game, 'monaLisaCheckmate', monaLisaCheckmate(game, fen), game.moves.length)
         },
     },
 }
