@@ -562,7 +562,7 @@
                         desc="Checkmate the opponent with all your pieces on their original squares"
                         :trophies="playerTrophiesByType['monaLisaCheckmate'] || {}"
                         gameLink="https://www.chess.com/analysis/game/live/121711253019?tab=analysis&flip=false"
-                        youtubeLink="https://www.youtube.com/watch?v=XAlcDWQ6iTM"
+                        youtubeLink="https://youtu.be/XAlcDWQ6iTM?t=387"
                     ></accomplishment-score>
                 </div>
 

@@ -7,7 +7,7 @@
             <br>
             &nbsp; Credit to
             <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('chesscom', 'KNVB')">GM Aman Hambleton</span>
-            from Chessbrah. <a href="https://www.youtube.com/watch?v=XAlcDWQ6iTM" class="dotted-underline text-sky-900" target="_blank">See video here</a>
+            from Chessbrah. <a href="https://youtu.be/XAlcDWQ6iTM?t=387" class="dotted-underline text-sky-900" target="_blank">See video here</a>
         </li>
     </ul>
 </template>
