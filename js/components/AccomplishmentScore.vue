@@ -3,7 +3,7 @@
         class="px-3 py-2 rounded text-center"
         :class="{
             'bg-green-600': hasTrophies,
-            'bg-yellow-400 text-yellow-800  accomplishment-does-not-have-games': !hasTrophies,
+            'bg-yellow-300 text-yellow-800  accomplishment-does-not-have-games': !hasTrophies,
         }"
     >
         <span @click.prevent="isExpanded = !isExpanded" class="hover:underline cursor-pointer">{{ title }}</span>
