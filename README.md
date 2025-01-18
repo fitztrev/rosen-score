@@ -30,9 +30,9 @@ open coverage/index.html
 
 ### Frameworks/Libraries Used
 
--   [chess.js](https://github.com/jhlywa/chess.js), [chessops](https://github.com/niklasf/chessops), [pgn-parser](https://github.com/mliebelt/pgn-parser) - JS chess libraries to handle chess logic
--   Vue.js - Framework for building the app
--   Tailwind - CSS framework for the UI
+- [chess.js](https://github.com/jhlywa/chess.js), [chessops](https://github.com/niklasf/chessops), [pgn-parser](https://github.com/mliebelt/pgn-parser) - JS chess libraries to handle chess logic
+- Vue.js - Framework for building the app
+- Tailwind - CSS framework for the UI
 
 ## Want to contribute?
 
