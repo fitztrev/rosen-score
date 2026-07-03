@@ -36,20 +36,34 @@
                   <input type="radio" name="site" value="chesscom" v-model="inputs.type" />
                   Chess.com
                 </label>
+                <label class="cursor-pointer ml-4">
+                  <input type="radio" name="site" value="both" v-model="inputs.type" />
+                  Both
+                </label>
               </div>
             </div>
             <div class="mt-2">
-              Enter username:
+              {{ inputs.type === 'both' ? 'Enter Lichess username:' : 'Enter username:' }}
 
               <input
                 type="text"
                 class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                placeholder="Username here"
+                :placeholder="inputs.type === 'both' ? 'Lichess username here' : 'Username here'"
                 spellcheck="false"
                 data-lpignore="true"
                 v-model="inputs.value"
               />
-
+              <div class="mt-4" v-if="inputs.type === 'both'">
+                Enter Chess.com username:
+                <input
+                  type="text"
+                  class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  placeholder="Chess.com Username here"
+                  spellcheck="false"
+                  data-lpignore="true"
+                  v-model="inputs.valueChesscom"
+                />
+              </div>
               <div class="text-sm">
                 Or
                 <span class="dotted-underline text-sky-900 cursor-pointer" @click.prevent="formFill('lichess', 'EricRosen')">
@@ -157,7 +171,7 @@
 
       <div class="mb-1">
         on
-        <strong>{{ inputs.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
+        <strong>{{ inputs.type === 'both' ? 'both platforms' : inputs.type === 'lichess' ? 'Lichess' : 'Chess.com' }}</strong>
         and has completed
         <strong> {{ totalAccomplishmentsCompletedPercentage }}%</strong>
         of the goals ({{ totalAccomplishmentsCompleted }}
@@ -777,8 +791,9 @@ export default {
   data() {
     return {
       inputs: {
-        type: <ReportSource>'lichess',
+        type: <ReportSource | 'both'>'lichess',
         value: '',
+        valueChesscom: '',
         filters: {
           sinceHoursAgo: 0,
         },
@@ -809,6 +824,9 @@ export default {
   computed: {
     username(): string {
       return this.inputs.value.trim().toLowerCase()
+    },
+    usernameChesscom(): string {
+      return this.inputs.valueChesscom.trim().toLowerCase()
     },
     sinceDateFormatted(): string {
       if (this.inputs.filters.sinceHoursAgo) {
@@ -895,9 +913,13 @@ export default {
         this.errors.form = 'Enter a username in Step #1'
         return
       }
+      // Check if "Both" is selected but the second box is empty
+      if (this.inputs.type === 'both' && !this.usernameChesscom) {
+        this.errors.form = 'Enter both usernames in Step #1'
+        return
+      }
 
-      // Auto correct Eric's usernames in case someone is trying to toggle between his Lichess and Chess.com
-      // but forgets to change the username
+      // Auto correct Eric's usernames
       if (this.username === 'ericrosen' && this.inputs.type === 'chesscom') {
         this.inputs.value = 'IMRosen'
       } else if (this.username === 'imrosen' && this.inputs.type === 'lichess') {
@@ -905,59 +927,86 @@ export default {
       }
 
       this.isDownloading = true
+      this.counts.totalGames = 0 // Reset to 0 so we can safely add them together
 
-      let url = ''
-      if (this.inputs.type === 'lichess') {
-        url = `https://lichess.org/@/${this.username}`
-      } else if (this.inputs.type === 'chesscom') {
-        url = `https://www.chess.com/member/${this.username}`
+      // 1. Build an array of URLs to fetch
+      let urls: string[] = []
+
+      if (this.inputs.type === 'lichess' || this.inputs.type === 'both') {
+        urls.push(`https://lichess.org/@/${this.username}`)
       }
 
-      player(url)
-        .then(async (player: Profile) => {
-          this.player = player
-          window.document.title += ` - ${player.title} ${player.username}`
+      if (this.inputs.type === 'chesscom') {
+        urls.push(`https://www.chess.com/member/${this.username}`)
+      } else if (this.inputs.type === 'both') {
+        urls.push(`https://www.chess.com/member/${this.usernameChesscom}`) // Use the second box!
+      }
 
-          const playerGameCount: number = player.counts?.all ?? 0
+      let completedFetches = 0
 
-          if (player.site === 'chess.com') {
-            // Chess.com doesn't provide a reliable way to get the actual game count via the API.
-            // Actual game count is higher than reported, so I'll add 20%
-            this.counts.totalGames = Math.ceil(playerGameCount * 1.2)
-          } else {
-            this.counts.totalGames = playerGameCount
-          }
+      // 2. Loop through our URLs and fetch them
+      urls.forEach((url) => {
+        player(url)
+          .then(async (player: Profile) => {
+            this.player = player
 
-          if (!this.inputs.filters.sinceHoursAgo) {
-            await this.getCachedGames(url)
-          }
-
-          let sinceTimestamp = this.inputs.filters.sinceHoursAgo ? new Date().getTime() - this.inputs.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
-
-          if (this.usingCacheBeforeTimestamp) {
-            sinceTimestamp = this.usingCacheBeforeTimestamp
-          }
-
-          games(url, this.checkGameForTrophies, {
-            since: sinceTimestamp,
-            pgnInJson: true,
-            clocks: true,
-          })
-            .then(() => {
-              this.isDownloadComplete = true
-            })
-            .catch((e: DOMException) => {
-              // If the user cancels the download, don't show an error message
-              if (e.message.includes('aborted')) {
-                return
+            // Format display names with their respective platforms
+            if (this.inputs.type === 'both') {
+              if (this.username !== this.usernameChesscom) {
+                // Different usernames: Ghost(Lichess) & Ghost2(Chess.com)
+                this.player.username = `${this.inputs.value} (Lichess) & ${this.inputs.valueChesscom} (Chess.com)`
+                this.player.title = ''
+              } else {
+                // Same username on both
+                this.player.username = `${this.inputs.value} (Both Platforms)`
               }
+            } else {
+              // Normal behavior for single platform
+              window.document.title += ` - ${player.title || ''} ${player.username}`
+            }
 
-              this.errors.api = e
+            const playerGameCount: number = player.counts?.all ?? 0
+
+            // Use += instead of = so the games add up from both accounts
+            if (player.site === 'chess.com') {
+              this.counts.totalGames += Math.ceil(playerGameCount * 1.2)
+            } else {
+              this.counts.totalGames += playerGameCount
+            }
+
+            if (!this.inputs.filters.sinceHoursAgo) {
+              await this.getCachedGames(url)
+            }
+
+            let sinceTimestamp = this.inputs.filters.sinceHoursAgo ? new Date().getTime() - this.inputs.filters.sinceHoursAgo * 60 * 60 * 1000 : 0
+
+            if (this.usingCacheBeforeTimestamp) {
+              sinceTimestamp = this.usingCacheBeforeTimestamp
+            }
+
+            games(url, this.checkGameForTrophies, {
+              since: sinceTimestamp,
+              pgnInJson: true,
+              clocks: true,
             })
-        })
-        .catch((e: DOMException) => {
-          this.errors.api = e
-        })
+              .then(() => {
+                completedFetches++
+                // 3. Only finish the download when ALL urls are done
+                if (completedFetches === urls.length) {
+                  this.isDownloadComplete = true
+                }
+              })
+              .catch((e: DOMException) => {
+                if (e.message.includes('aborted')) {
+                  return
+                }
+                this.errors.api = e
+              })
+          })
+          .catch((e: DOMException) => {
+            this.errors.api = e
+          })
+      })
     },
 
     async getCachedGames(url: string) {
